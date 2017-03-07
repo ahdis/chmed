@@ -1,0 +1,614 @@
+<ValueSet 
+	xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-valueset-cdtyp9" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2017-02-23T16:49:49.653+11:00" />
+	</meta>
+	<url value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-cdtyp9" />
+	<version value="Release 2011-11" />
+	<name value="UnitCodes" />
+	<status value="active" />
+	<publisher value="HCI Solutions AG" />
+	<contact>
+		<name value="Hotline" />
+		<telecom>
+			<system value="email" />
+			<value value="hotline@hcisolutions.ch" />
+		</telecom>
+	</contact>
+	<description value="UnitCodes" />
+	<compose>
+		<include>
+			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
+			<concept>
+				<code value="E" />
+				<display value="Einheit" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Einheit" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Unité" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="g" />
+				<display value="Gramm" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Gramm" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Gramme" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="LA" />
+				<display value="Lamelle" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Lamelle" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Lamelle" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="LS" />
+				<display value="Lipoprotein-Lipase-Rel.Einheit" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Lipoprotein-Lipase-Rel.Einheit" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Lipoproteine-Lipase-Rel.Unité" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="mcg" />
+				<display value="Mikrogramm" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Mikrogramm" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Microgramme" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="mg" />
+				<display value="Milligramm" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Milligramm" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Milligramme" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="ml" />
+				<display value="Milliliter" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Milliliter" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Millilitre" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="mmol" />
+				<display value="Millimol" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Millimol" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Millimol" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="MU" />
+				<display value="Millionen Einheiten" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Millionen Einheiten" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Millions d'unités" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="tablet" />
+				<display value="Tablette" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Tablette" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Comprimé" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="TU" />
+				<display value="Tausend Einheiten" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Tausend Einheiten" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Millier d'unités" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="U" />
+				<display value="Einheit" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Einheit" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Unité" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Blist" />
+				<display value="Blister" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Blister" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="blister" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Btl" />
+				<display value="Beutel" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Beutel" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="sachet" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Dos" />
+				<display value="Dosis" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Dosis" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="dose" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Dosierpip" />
+				<display value="Dosierpipette" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Dosierpipette" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="pipette graduée" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Dosierspr" />
+				<display value="Dosierspritze" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Dosierspritze" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="seringue graduée" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="EL" />
+				<display value="Esslöffel" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Esslöffel" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="cuillère à soupe" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Fl" />
+				<display value="Flasche" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Flasche" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="flacon" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="gML" />
+				<display value="Messlöffel gross" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Messlöffel gross" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="grande cuillère graduée" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="gtt" />
+				<display value="Tropfen" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Tropfen" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="gouttes" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Hub" />
+				<display value="Hub" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Hub" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="pression" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="kcal" />
+				<display value="Kilokalorie" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Kilokalorie" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="kilocalorie" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="kJ" />
+				<display value="Kilojoule" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Kilojoule" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="kilojoule" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="KL" />
+				<display value="Kaffeelöffel" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Kaffeelöffel" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="cuillère à café" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="kML" />
+				<display value="Messlöffel klein" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Messlöffel klein" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="petite cuillère graduée" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="MB" />
+				<display value="Messbecher" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Messbecher" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="gobelet gradué" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="MK" />
+				<display value="Messkappe" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Messkappe" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="mesurette" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="N/A" />
+				<display value="Unbekannt" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Unbekannt" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="inconnu" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="nML" />
+				<display value="Messlöffel" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Messlöffel" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="cuillère graduée" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Patr" />
+				<display value="Patrone" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Patrone" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="cartouche" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Pck" />
+				<display value="Packung" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Packung" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="emballage" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Pfl" />
+				<display value="Pflaster" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Pflaster" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="patch" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Pip" />
+				<display value="Pipette" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Pipette" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="pipette" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="SDU" />
+				<display value="Single Dose Unit" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Single Dose Unit" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Single Dose Unit" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Stk" />
+				<display value="Stück" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Stück" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="pièce" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Tb" />
+				<display value="Tube" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Tube" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="tube" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Teilpck" />
+				<display value="Teilpackung" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Teilpackung" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="emballage individuel" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Topf" />
+				<display value="Topf" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Topf" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="pot" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="%" />
+				<display value="%" />
+				<designation>
+					<language value="de-CH" />
+					<value value="%" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="%" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="GBq" />
+				<display value="GBq" />
+				<designation>
+					<language value="de-CH" />
+					<value value="GBq" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="GBq" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="kBq" />
+				<display value="kBq" />
+				<designation>
+					<language value="de-CH" />
+					<value value="kBq" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="kBq" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="L" />
+				<display value="L" />
+				<designation>
+					<language value="de-CH" />
+					<value value="L" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="L" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="MBq" />
+				<display value="MBq" />
+				<designation>
+					<language value="de-CH" />
+					<value value="MBq" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="MBq" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="mcmol" />
+				<display value="mcmol" />
+				<designation>
+					<language value="de-CH" />
+					<value value="mcmol" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="mcmol" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Mio U" />
+				<display value="Mio U" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Mio U" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Mio U" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="Mio UI" />
+				<display value="Mio UI" />
+				<designation>
+					<language value="de-CH" />
+					<value value="Mio UI" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="Mio UI" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="UI" />
+				<display value="UI" />
+				<designation>
+					<language value="de-CH" />
+					<value value="UI" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="UI" />
+				</designation>
+			</concept>
+			<concept>
+				<code value="LSU" />
+				<display value="LSU" />
+				<designation>
+					<language value="de-CH" />
+					<value value="LSU" />
+				</designation>
+				<designation>
+					<language value="fr-CH" />
+					<value value="LSU" />
+				</designation>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

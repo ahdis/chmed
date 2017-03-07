@@ -1,0 +1,100 @@
+<Composition xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-composition-s01" />
+	<meta>
+		<lastUpdated value="2017-02-08T13:17:28Z" />
+		<profile
+			value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition" />
+	</meta>
+	<extension url="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver">
+		<valueReference>
+			<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+		</valueReference>
+	</extension>
+	<identifier>
+		<system value="http://emediplan.ch/chmed16af/id" />
+		<value value="26d3dff7-ab05-4737-a49c-5eccd33595f6" />
+	</identifier>
+	<status value="final" />
+	<type>
+		<coding>
+			<system value="http://loinc.org" />
+			<code value="56445-0" />
+		</coding>
+		<text value="Medication summary Document" />
+	</type>
+	<subject>
+		<reference value="Patient/chmed16af-mp-patient-s01" />
+	</subject>
+	<date value="2016-09-12T11:46:09+02:00" />
+	<author>
+		<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+	</author>
+	<title value="MedicationPlan" />
+	<attester>
+		<mode value="professional" />
+		<time value="2016-09-12T11:46:09+02:00" />
+		<party>
+			<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+		</party>
+	</attester>
+	<section>
+		<title value="Aktuelle Medikation" />
+		<code>
+			<coding>
+				<system value="http://loinc.org" />
+				<code value="77604-7" />
+				<display value="History of medication use" />
+			</coding>
+		</code>
+		<entry>
+			<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-1" />
+		</entry>
+		<entry>
+			<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-2" />
+		</entry>
+		<entry>
+			<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-3" />
+		</entry>
+		<entry>
+			<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-4" />
+		</entry>
+	</section>
+	<section>
+		<title value="Gesundheitsbelange" />
+		<code>
+			<coding>
+				<system value="http://loinc.org" />
+				<code value="75310-3" />
+				<display value="Health Concerns" />
+			</coding>
+		</code>
+		<entry>
+			<reference value="Observation/chmed16af-mp-observation-s01-bodyweight" />
+		</entry>
+		<entry>
+			<reference value="Observation/chmed16af-mp-observation-s01-bodyheight" />
+		</entry>		
+		<entry>
+			<reference value="Observation/chmed16af-observation-s01-dateoflastmenustration" />
+		</entry>
+		<entry>
+			<reference value="Observation/chmed16af-observation-s01-prematurebaby" />
+		</entry>
+	</section>
+	<section>
+		<title value="Bemerkungen" />
+		<code>
+			<coding>
+				<system value="http://loinc.org" />
+				<code value="48767-8" />
+				<display value="ANNOTATION COMMENT" />
+			</coding>
+		</code>
+		<text>
+			<status value="additional" />
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				Bemerkung
+			</div>
+		</text>
+	</section>
+</Composition>

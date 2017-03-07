@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-bundle" />
+	<meta>
+		<lastUpdated value="2016-10-14T11:57:39.211+02:00" />
+	</meta>
+	<url
+		value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-bundle" />
+	<name value="MedicationPlan" />
+	<status value="draft" />
+	<fhirVersion value="1.9.0" />
+    <mapping>
+		<identity value="CHMED16A"/>
+		<uri value="http://emediplan.ch/chmed16a"/>
+		<name value="Mapping to CHMED16A"/>
+	</mapping>
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="Bundle" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="chmed16af-mp-bundle.Bundle">
+			<path value="Bundle" />
+			<min value="1" />
+			<max value="1" />
+		</element>
+		<element id="chmed16af-mp-bundle.Bundle.type">
+			<path value="Bundle.type" />
+			<fixedCode value="document" />
+		</element>
+		<element id="chmed16af-mp-bundle.Bundle.entry">
+			<path value="Bundle.entry" />
+ 			<slicing>
+				<discriminator>
+					<type value="type" />
+					<path value="resource.type" />
+				</discriminator>
+				<ordered value="true" />
+				<rules value="openAtEnd" />
+			</slicing>
+			<min value="1" />
+			<max value="*" />
+		</element>
+		<element id="chmed16af-mp-bundle.Bundle.entry.resource:Composition">
+			<path value="Bundle.entry.resource" /> 
+ 		  <sliceName value="Composition" />
+ 			<min value="1" />
+			<max value="1" />
+			<type>
+				<code value="Composition" />
+ 				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition"/> 
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>

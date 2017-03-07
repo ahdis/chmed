@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition 
+	xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-medicationstatement" />
+	<meta>
+		<lastUpdated value="2016-10-14T11:57:39.211+02:00" />
+	</meta>
+	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
+	<name value="MedicationStatement (MedicationPlan)" />
+	<status value="draft" />
+	<fhirVersion value="1.9.0" />
+	<mapping>
+		<identity value="CHMED16A"/>
+		<uri value="http://emediplan.ch/chmed16a"/>
+		<name value="Mapping to CHMED16A"/>
+	</mapping>
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="MedicationStatement" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement">
+			<path value="MedicationStatement"/>
+			<short value="Record of medication being taken by a patient"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.identifier">
+			<path value="MedicationStatement.identifier"/>
+			<short value="External identifier"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.basedOn">
+			<path value="MedicationStatement.basedOn"/>
+			<short value="Fulfils plan, proposal or order"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.partOf">
+			<path value="MedicationStatement.partOf"/>
+			<short value="Part of referenced event"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.context">
+			<path value="MedicationStatement.context"/>
+			<short value="Encounter / Episode associated with MedicationStatement"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.status">
+			<path value="MedicationStatement.status"/>
+			<short value="active | completed | entered-in-error | intended | stopped | on-hold"/>
+			<definition value="A code representing the patient or other source&#39;s judgment about the state of the medication used that this statement is about.  Generally this will be active or completed."/>
+			<comment value="MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error)."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<isModifier value="true"/>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationStatementStatus"/>
+				</extension>
+				<strength value="required"/>
+				<description value="A coded concept indicating the current status of a MedicationStatement."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-statement-status"/>
+				</valueSetReference>
+			</binding>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.category">
+			<path value="MedicationStatement.category"/>
+			<short value="Type of medication usage"/>
+			<definition value="Indicates where type of medication statement and where the medication is expected to be consumed or administered."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.medication[x]">
+			<path value="MedicationStatement.medication[x]"/>
+			<short value="What medication was taken"/>
+			<definition value="Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications."/>
+			<comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example if you require form or lot number, then you must reference the Medication resource. ."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationCode"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept identifying the substance or product being taken."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-codes"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="…code"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".participation[typeCode=CSM].role[classCode=ADMM or MANU]"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="what"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.effective[x]">
+			<path value="MedicationStatement.effective[x]"/>
+			<short value="The date/time or interval when the medication was taken"/>
+			<definition value="The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true)."/>
+			<comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<type>
+				<code value="Period"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="…occurrence[x]"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".effectiveTime"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="when.done"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dateAsserted">
+			<path value="MedicationStatement.dateAsserted"/>
+			<short value="When the statement was asserted?"/>
+			<definition value="The date when the medication statement was asserted by the information source."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".participation[typeCode=AUT].time"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="when.recorded"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.informationSource">
+			<path value="MedicationStatement.informationSource"/>
+			<short value="Person or organization that provided the information about the taking of this medication"/>
+			<definition value="The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g Claim or MedicationRequest."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+			</type>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".participation[typeCode=INF].role[classCode=PAT, or codes for Practioner or Related Person (if PAT is the informer, then syntax for self-reported =true)"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="who.source"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.subject">
+			<path value="MedicationStatement.subject"/>
+			<short value="Who is/was taking  the medication"/>
+			<definition value="The person, animal or group who is/was taking the medication."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="…subject"/>
+			</mapping>
+			<mapping>
+				<identity value="v2"/>
+				<map value="PID-3-Patient ID List"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".participation[typeCode=SBJ].role[classCode=PAT]"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="who"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.derivedFrom">
+			<path value="MedicationStatement.derivedFrom"/>
+			<short value="Additional supporting information"/>
+			<definition value="Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement."/>
+			<comment value="Likely references would be to MedicationRequest, MedicationDispense, Claim, Observation or QuestionnaireAnswers.  The most common use cases for deriving a MedicationStatement comes from creating a MedicationStatement from a MedicationRequest or from a lab observation or a claim.  it should be noted that the amount of information that is available varies from the type resource that you derive the MedicationStatement from."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+			</type>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".outboundRelationship[typeCode=SPRT]/target[classCode=ACT,moodCode=EVN]"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.taken">
+			<path value="MedicationStatement.taken"/>
+			<short value="y | n | unk | na"/>
+			<definition value="Indicator of the certainty of whether the medication was taken by the patient."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<isModifier value="true"/>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationStatementTaken"/>
+				</extension>
+				<strength value="required"/>
+				<description value="A coded concept identifying level of certainty if patient has taken or has not taken the medication"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-statement-taken"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="…notDone"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".actionNegationInd"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.reasonNotTaken">
+			<path value="MedicationStatement.reasonNotTaken"/>
+			<short value="True if asserting medication was not given"/>
+			<definition value="A code indicating why the medication was not taken."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<condition value="mst-1"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationStatementNotTakenReason"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept indicating the reason why the medication was not taken"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/reason-medication-not-taken-codes"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;reason not taken&quot;].value"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.reasonCode">
+			<path value="MedicationStatement.reasonCode"/>
+			<short value="Reason for why the medication is being/was taken"/>
+			<definition value="A reason for why the medication is being/was taken."/>
+			<comment value="This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonForUseReference."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.TkgRsn (Taking Reason)"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.reasonReference">
+			<path value="MedicationStatement.reasonReference"/>
+			<short value="Condition or observation that supports why the medication is being/was taken"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.note">
+			<path value="MedicationStatement.note"/>
+			<short value="Application Instructions"/>
+			<definition value="Application Instructions"/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Annotation"/>
+			</type>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage">
+			<path value="MedicationStatement.dosage"/>
+			<short value="Details of how medication is/was taken or should be taken"/>
+			<definition value="Indicates how the medication is/was or should be taken by the patient."/>
+			<comment value="The dates included in the dosage on a Medication Statement reflect the dates for a given dose.  For example, &quot;from November 1, 2016 to November 3, 2016, take one tablet daily and from November 4, 2016 to November 7, 2016, take two tablets daily.&quot;  It is expected that this specificity may only be populated where the patient brings in their labelled container or where the Medication Statement is derived from a MedicationRequest."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Dosage"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.Pos (list of Posology)"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.sequence">
+			<path value="MedicationStatement.dosage.sequence"/>
+			<short value="The order of the dosage instructions"/>
+			<definition value="Indicates the order in which the dosage instructions should be applied or interpreted."/>
+			<requirements value="If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="integer"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.text">
+			<path value="MedicationStatement.dosage.text"/>
+			<short value="Free text dosage instructions e.g. SIG"/>
+			<definition value="Free text dosage instructions e.g. SIG."/>
+			<requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".text"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.additionalInstruction">
+			<path value="MedicationStatement.dosage.additionalInstruction"/>
+			<short value="Supplemental instruction - e.g. &quot;with meals&quot;"/>
+			<definition value="Supplemental instruction - e.g. &quot;with meals&quot;."/>
+			<requirements value="Additional instruction such as &quot;Swallow with plenty of water&quot; which may or may not be coded."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="AdditionalInstruction"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept identifying additional instructions such as &quot;take with water&quot; or &quot;avoid operating heavy machinery&quot;."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/additional-instruction-codes"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.AppInstr"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.patientInstruction">
+			<path value="MedicationStatement.dosage.patientInstruction"/>
+			<short value="Patient or consumer oriented instructions"/>
+			<definition value="Instructions in terms that are understood by the patient or consumer."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.timing">
+			<path value="MedicationStatement.dosage.timing"/>
+			<short value="When medication should be administered"/>
+			<definition value="When medication should be administered."/>
+			<comment value="This attribute may not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing."/>
+			<requirements value="The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example: &quot;Every 8 hours&quot;; &quot;Three times a day&quot;; &quot;1/2 an hour before breakfast for 10 days from 23-Dec 2011:&quot;; &quot;15 Oct 2013, 17 Oct 2013 and 1 Nov 2013&quot;.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn&#39;t imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Timing"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".effectiveTime"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.asNeeded[x]">
+			<path value="MedicationStatement.dosage.asNeeded[x]"/>
+			<short value="Take &quot;as needed&quot; (for x)"/>
+			<definition value="Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept)."/>
+			<comment value="Can express &quot;as needed&quot; without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express &quot;as needed&quot; with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not &quot;prn&quot; or &quot;as needed&quot;."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="boolean"/>
+			</type>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationAsNeededReason"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example &quot;pain&quot;, &quot;30 minutes prior to sexual intercourse&quot;, &quot;on flare-up&quot; etc."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-as-needed-reason"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".outboundRelationship[typeCode=PRCN].target[classCode=OBS, moodCode=EVN, code=&quot;as needed&quot;].value=boolean or codable concept"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.site">
+			<path value="MedicationStatement.dosage.site"/>
+			<short value="Body site to administer to"/>
+			<definition value="Body site to administer to."/>
+			<comment value="If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both."/>
+			<requirements value="A coded specification of the anatomic site where the medication first enters the body."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationAdministrationSite"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept describing the site location the medicine enters into or onto the body."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/approach-site-codes"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".approachSiteCode"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.route">
+			<path value="MedicationStatement.dosage.route"/>
+			<short value="How drug should enter body"/>
+			<definition value="How drug should enter body."/>
+			<requirements value="A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient&#39;s body."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="RouteOfAdministration"/>
+				</extension>
+				<strength value="required"/>
+				<description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."/>
+				<valueSetReference>
+					<reference value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-cdtyp26"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.Roa"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.method">
+			<path value="MedicationStatement.dosage.method"/>
+			<short value="Technique for administering medication"/>
+			<definition value="Technique for administering medication."/>
+			<comment value="Terminologies used often pre-coordinate this term with the route and or form of administration."/>
+			<requirements value="A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  For examples, Slow Push; Deep IV."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+	<!--	
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.dose[x]">
+			<path value="MedicationStatement.dosage.dose[x]"/>
+			<short value="Amount of medication per dose"/>
+			<definition value="Amount of medication per dose."/>
+			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
+			<requirements value="The amount of therapeutic or other substance given at one administration event."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Range"/>
+			</type>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".doseQuantity"/>
+			</mapping>
+		</element>		-->
+			<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity">
+			<path value="MedicationStatement.dosage.doseQuantity"/>
+			<short value="Amount of medication per dose"/>
+			<definition value="Amount of medication per dose."/>
+			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
+			<requirements value="The amount of therapeutic or other substance given at one administration event."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".doseQuantity"/>
+			</mapping>
+		</element>		
+		
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity.system">
+			<path value="MedicationStatement.dosage.doseQuantity.system" />
+			<min value="1" />
+			<max value="1" />
+			<type>
+				<code value="uri" />
+			</type>
+			<fixedUri value="https://index.hcisolutions.ch/codes/codetyp9" />
+		</element>
+
+<!--
+		<element id="chmed16af-mp-medicationstatement.Composition.section.code.coding.code:sectionmed">
+			<path value="Composition.section.code.coding.code" />
+			<min value="1" />
+			<max value="1" />
+			<type>
+				<code value="code" />
+			</type>
+			<fixedCode value="77604-7" />
+		</element>
+-->
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerPeriod">
+			<path value="MedicationStatement.dosage.maxDosePerPeriod"/>
+			<short value="Upper limit on medication per unit of time"/>
+			<definition value="Upper limit on medication per unit of time."/>
+			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example &quot;2 tablets every 4 hours to a maximum of 8/day&quot;."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Ratio"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".maxDoseQuantity"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerAdministration">
+			<path value="MedicationStatement.dosage.maxDosePerAdministration"/>
+			<short value="Upper limit on medication per administration"/>
+			<definition value="Upper limit on medication per administration."/>
+			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject per administration."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value="not supported"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerLifetime">
+			<path value="MedicationStatement.dosage.maxDosePerLifetime"/>
+			<short value="Upper limit on medication per lifetime of the patient"/>
+			<definition value="Upper limit on medication per lifetime of the patient."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value="not supported"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.rate[x]">
+			<path value="MedicationStatement.dosage.rate[x]"/>
+			<short value="Amount of medication per unit of time"/>
+			<definition value="Amount of medication per unit of time."/>
+			<comment value="It is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate."/>
+			<requirements value="Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn&#39;t imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Ratio"/>
+			</type>
+			<type>
+				<code value="Range"/>
+			</type>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".rateQuantity"/>
+			</mapping>
+		</element>
+	</differential>
+</StructureDefinition>

@@ -1,0 +1,135 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-medicationstatement-s01-3" />
+	<meta>
+		<lastUpdated value="2017-02-23T13:17:28Z" />
+		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
+	</meta>
+	<text>
+		<status value="generated" />
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			TODO
+		</div>
+	</text>
+	<contained>
+		<Medication xmlns="http://hl7.org/fhir">
+			<id value="cont3" />
+			<code>
+				<!-- <coding> <system value="urn:oid:2.51.1.1"/> <code value="GTIN"/> 
+					<display value="name of medication"/> </coding> -->
+				<coding>
+					<!-- pharmacode -->
+					<system value="urn:oid:2.16.756.5.30.2.6.1" />
+					<code value="2355687" />
+				</coding>
+			</code>
+		</Medication>
+	</contained>
+	<status value="active" />
+	<medicationReference>
+		<reference value="#cont3" />
+	</medicationReference>
+	<effectivePeriod>
+		 <start value="2016-02-10" />
+	</effectivePeriod>
+	<informationSource>
+		<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+	</informationSource>
+	<subject>
+		<reference value="Patient/chmed16af-mp-patient-s01" />
+	</subject>
+	<taken value="unk" />
+	<reasonCode>
+		<text value="Bluthochdruck/Herz" />
+	</reasonCode>
+	<dosage>
+		<additionalInstruction>
+			<text value="-" />
+		</additionalInstruction>
+		<timing>
+			<repeat>
+				<when value="PCM" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
+				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="1" />
+			<unit value="Stk" />
+			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<code value="Stk" />
+		</doseQuantity>
+	</dosage>
+	<dosage>
+		<timing>
+			<repeat>
+				<when value="PCD" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
+				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="0" />
+			<unit value="Stk" />
+			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<code value="Stk" />
+		</doseQuantity>
+	</dosage>
+	<dosage>
+		<timing>
+			<repeat>
+				<when value="PCV" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
+				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="1" />
+			<unit value="Stk" />
+			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<code value="Stk" />
+		</doseQuantity>
+	</dosage>
+	<dosage>
+		<timing>
+			<repeat>
+				<when value="HS" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
+				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="0" />
+			<unit value="Stk" />
+			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<code value="Stk" />
+		</doseQuantity>
+	</dosage>
+</MedicationStatement>
+
+
+
+

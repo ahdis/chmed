@@ -127,7 +127,7 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-mp-medicationstatement" />
 			</exampleFor>
-		</resource>		
+		</resource>
 		<resource>
 			<example value="true" />
 			<name value="Bodyheight" />
@@ -138,7 +138,7 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-mp-composition" />
 			</exampleFor>
-		</resource>		
+		</resource>
 		<resource>
 			<example value="true" />
 			<name value="Bodyweight" />
@@ -149,7 +149,7 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-mp-composition" />
 			</exampleFor>
-		</resource>		
+		</resource>
 		<resource>
 			<example value="false" />
 			<sourceReference>
@@ -166,7 +166,7 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-obs-dateoflastmenstruation" />
 			</exampleFor>
-		</resource>		
+		</resource>
 		<resource>
 			<example value="false" />
 			<sourceReference>
@@ -183,7 +183,7 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-obs-prematurebaby" />
 			</exampleFor>
-		</resource>		
+		</resource>
 		<resource>
 			<example value="false" />
 			<sourceReference>
@@ -200,7 +200,79 @@
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-obs-timeofgestation" />
 			</exampleFor>
-		</resource>		
+		</resource>
+		<resource>
+			<example value="false" />
+			<sourceReference>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskRenealInsufficiencyLeight" />
+			<description value=">Rsik Renal Insufficiency Leight" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-1" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskLiverInsufficiencyExcluded" />
+			<description value=">Risk Liver Insufficiency Excluded" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-2" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskReproduction" />
+			<description value=">Risk Reproduction" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-3" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskCompetitiveAthleteExcluded" />
+			<description value=">Risk Competitive Athlete Excluded" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-4" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskDriverExcluded" />
+			<description value=">Risk Driver Excluded" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-5" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="RiskAllergies" />
+			<description value=">Risk Allergies" />
+			<sourceReference>
+				<reference value="Condition/chmed16af-mp-condition-s01-6" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-condition-risks" />
+			</exampleFor>
+		</resource>
 		<resource>
 			<example value="false" />
 			<sourceReference>
@@ -225,10 +297,18 @@
 		</resource>
 		<resource>
 			<example value="false" />
-			<name value="ValueSet CDTYP50" />
-			<description value="CHA (Clinical Check Allergie)" />
+			<name value="ValueSet Risks CDSCODE" />
+			<description value="ValueSet Risks CDSCODE" />
 			<sourceReference>
-				<reference value="ValueSet/chmed16af-valueset-cdtyp50" />
+				<reference value="ValueSet/chmed16af-valueset-risks-cdscode" />
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false" />
+			<name value="ValueSet Risks Category" />
+			<description value="ValueSet Risks Category" />
+			<sourceReference>
+				<reference value="ValueSet/chmed16af-valueset-risks-category" />
 			</sourceReference>
 		</resource>
 	</package>

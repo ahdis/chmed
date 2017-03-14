@@ -516,6 +516,22 @@
 				<map value="MedicalData.ToG"/>
 			</mapping>
 		</element>
+		<element id="chmed16af-mp-composition.Composition.section.entry:risks">
+			<path value="Composition.section.entry"/>
+			<sliceName value="risks" />
+			<short value="Risks"/>
+			<definition value="Possible risks for a patient"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks" />
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.RG"/>
+			</mapping>
+		</element>
 		<!-- sectionnote -->
 		<element id="chmed16af-mp-composition.Composition.section:sectionnote">
 			<path value="Composition.section" />

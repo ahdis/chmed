@@ -80,6 +80,24 @@
 		<entry>
 			<reference value="Observation/chmed16af-observation-s01-prematurebaby" />
 		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-1" />
+		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-2" />
+		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-3" />
+		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-4" />
+		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-5" />
+		</entry>
+		<entry>
+			<reference value="Condition/chmed16af-mp-condition-s01-6" />
+		</entry>
 	</section>
 	<section>
 		<title value="Bemerkungen" />

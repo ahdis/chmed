@@ -53,7 +53,7 @@
 		<route>
 			<coding>
 			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
-				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<system value="https://index.hcisolutions.ch/codes/codetyp26" />
 				<code value="PO" />
 				<display value="per oral" />
 			</coding>
@@ -61,7 +61,7 @@
 		<doseQuantity>
 			<value value="1" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>
@@ -74,7 +74,7 @@
 		<route>
 			<coding>
 			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
-				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<system value="https://index.hcisolutions.ch/codes/codetyp26" />
 				<code value="PO" />
 				<display value="per oral" />
 			</coding>
@@ -82,7 +82,7 @@
 		<doseQuantity>
 			<value value="1" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>
@@ -95,7 +95,7 @@
 		<route>
 			<coding>
 			  <!--  Code 26  https://index.hcisolutions.ch/codes/codetyp26  oid to register -->
-				<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
+				<system value="https://index.hcisolutions.ch/codes/codetyp26" />
 				<code value="PO" />
 				<display value="per oral" />
 			</coding>
@@ -103,7 +103,7 @@
 		<doseQuantity>
 			<value value="0" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>
@@ -124,7 +124,7 @@
 		<doseQuantity>
 			<value value="0" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>

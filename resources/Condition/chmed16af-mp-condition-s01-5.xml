@@ -1,0 +1,22 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="chmed16af-mp-condition-s01-5"/> 
+	<meta>
+		<profile
+			value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks" />
+	</meta>
+  <text> 
+    <status value="generated"/> 
+    <div xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded</div> 
+  </text> 
+  <clinicalStatus value="active"/> 
+  <category> 
+    <coding> 
+      <system value="https://index.hcisolutions.ch/codes/riskcategory"/> 
+      <code value="5"/> 
+      <display value="Driver"/> 
+    </coding> 
+  </category> 
+  <subject> 
+    <reference value="Patient/chmed16af-mp-patient-s01"/> 
+  </subject> 
+</Condition> 

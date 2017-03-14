@@ -27,6 +27,19 @@
   "source": "ImplementationGuide/chmed16af-ig.xml",
   "sct-edition": "http://snomed.info/sct/7900000000000207008",
   "resources": {
+    "Condition/chmed16af-mp-condition-s01-1": {
+      "base": "Condition-chmed16af-mp-condition-s01-1.html"
+    },    "Condition/chmed16af-mp-condition-s01-2": {
+      "base": "Condition-chmed16af-mp-condition-s01-2.html"
+    },    "Condition/chmed16af-mp-condition-s01-3": {
+      "base": "Condition-chmed16af-mp-condition-s01-3.html"
+    },    "Condition/chmed16af-mp-condition-s01-4": {
+      "base": "Condition-chmed16af-mp-condition-s01-4.html"
+    },    "Condition/chmed16af-mp-condition-s01-5": {
+      "base": "Condition-chmed16af-mp-condition-s01-5.html"
+    },    "Condition/chmed16af-mp-condition-s01-6": {
+      "base": "Condition-chmed16af-mp-condition-s01-6.html"
+    },
     "StructureDefinition/chmed16af-receiver": {
       "base": "StructureDefinition-chmed16af-receiver.html"
     },
@@ -62,6 +75,9 @@
     },
     "Practitioner/chmed16af-mp-practitioner-s01": {
       "base": "Practitioner-chmed16af-mp-practitioner-s01.html"
+    },
+   "StructureDefinition/chmed16af-condition-risks": {
+      "base": "StructureDefinition-chmed16af-condition-risks.html"
     },
     "StructureDefinition/chmed16af-mp-medicationstatement": {
       "base": "StructureDefinition-chmed16af-mp-medicationstatement.html"
@@ -99,8 +115,11 @@
     "ValueSet/chmed16af-valueset-cdtyp26": {
       "base": "ValueSet-chmed16af-valueset-cdtyp26.html"
     },
-    "ValueSet/chmed16af-valueset-cdtyp50": {
-      "base": "ValueSet-chmed16af-valueset-cdtyp50.html"
+    "ValueSet/chmed16af-valueset-risks-cdscode": {
+      "base": "ValueSet-chmed16af-valueset-risks-cdscode.html"
+    },
+    "ValueSet/chmed16af-valueset-risks-category": {
+      "base": "ValueSet-chmed16af-valueset-risks-category.html"
     }
   },
   "logging": [

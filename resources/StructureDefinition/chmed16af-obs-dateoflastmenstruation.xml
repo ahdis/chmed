@@ -55,9 +55,8 @@
       <type>
         <code value="code"/>
       </type>
-      <fixedCode value="21840007"/>
+      <fixedCode value="161713000"/>
     </element>
-    
     <element id="Observation:chmed16af-obs-dateoflastmenstruation.value[x]">
       <path value="Observation.value[x]"/>
       <min value="1"/>

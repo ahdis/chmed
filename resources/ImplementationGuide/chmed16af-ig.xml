@@ -191,6 +191,12 @@
 			</sourceReference>
 		</resource>
 		<resource>
+			<example value="false" />
+			<sourceReference>
+				<reference value="StructureDefinition/chmed16af-medication" />
+			</sourceReference>
+		</resource>
+		<resource>
 			<example value="true" />
 			<name value="Premature baby" />
 			<description value="Premature baby (&lt;=18 months)" />

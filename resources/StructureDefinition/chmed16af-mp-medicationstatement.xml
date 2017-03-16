@@ -124,7 +124,7 @@
 			<definition value="The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true)."/>
 			<comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="dateTime"/>
 			</type>
@@ -132,37 +132,17 @@
 				<code value="Period"/>
 			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="workflow"/>
-				<map value="…occurrence[x]"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".effectiveTime"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="when.done"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dateAsserted">
 			<path value="MedicationStatement.dateAsserted"/>
 			<short value="When the statement was asserted?"/>
 			<definition value="The date when the medication statement was asserted by the information source."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="dateTime"/>
 			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".participation[typeCode=AUT].time"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="when.recorded"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.informationSource">
 			<path value="MedicationStatement.informationSource"/>
@@ -178,21 +158,9 @@
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
 			</type>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-			</type>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-			</type>
 			<mapping>
-				<identity value="rim"/>
-				<map value=".participation[typeCode=INF].role[classCode=PAT, or codes for Practioner or Related Person (if PAT is the informer, then syntax for self-reported =true)"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="who.source"/>
+				<identity value="CHEMED16A"/>
+				<map value="Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner"/>
 			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.subject">
@@ -205,27 +173,7 @@
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
 			</type>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
-			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="workflow"/>
-				<map value="…subject"/>
-			</mapping>
-			<mapping>
-				<identity value="v2"/>
-				<map value="PID-3-Patient ID List"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".participation[typeCode=SBJ].role[classCode=PAT]"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="who"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.derivedFrom">
 			<path value="MedicationStatement.derivedFrom"/>
@@ -233,15 +181,11 @@
 			<definition value="Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement."/>
 			<comment value="Likely references would be to MedicationRequest, MedicationDispense, Claim, Observation or QuestionnaireAnswers.  The most common use cases for deriving a MedicationStatement comes from creating a MedicationStatement from a MedicationRequest or from a lab observation or a claim.  it should be noted that the amount of information that is available varies from the type resource that you derive the MedicationStatement from."/>
 			<min value="0"/>
-			<max value="*"/>
+			<max value="0"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
 			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".outboundRelationship[typeCode=SPRT]/target[classCode=ACT,moodCode=EVN]"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.taken">
 			<path value="MedicationStatement.taken"/>
@@ -264,39 +208,16 @@
 					<reference value="http://hl7.org/fhir/ValueSet/medication-statement-taken"/>
 				</valueSetReference>
 			</binding>
-			<mapping>
-				<identity value="workflow"/>
-				<map value="…notDone"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".actionNegationInd"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.reasonNotTaken">
 			<path value="MedicationStatement.reasonNotTaken"/>
 			<short value="True if asserting medication was not given"/>
 			<definition value="A code indicating why the medication was not taken."/>
 			<min value="0"/>
-			<max value="*"/>
+			<max value="0"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-			<condition value="mst-1"/>
-			<binding>
-				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="MedicationStatementNotTakenReason"/>
-				</extension>
-				<strength value="example"/>
-				<description value="A coded concept indicating the reason why the medication was not taken"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/reason-medication-not-taken-codes"/>
-				</valueSetReference>
-			</binding>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".outboundRelationship[typeCode=RSON]/target[classCode=OBS,moodCode=EVN, code=&quot;reason not taken&quot;].value"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.reasonCode">
 			<path value="MedicationStatement.reasonCode"/>
@@ -324,10 +245,14 @@
 			<short value="Application Instructions"/>
 			<definition value="Application Instructions"/>
 			<min value="0"/>
-			<max value="0"/>
+			<max value="1"/>
 			<type>
 				<code value="Annotation"/>
 			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.AppInstr"/>
+			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage">
 			<path value="MedicationStatement.dosage"/>
@@ -378,7 +303,7 @@
 			<definition value="Supplemental instruction - e.g. &quot;with meals&quot;."/>
 			<requirements value="Additional instruction such as &quot;Swallow with plenty of water&quot; which may or may not be coded."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
@@ -393,10 +318,6 @@
 					<reference value="http://hl7.org/fhir/ValueSet/additional-instruction-codes"/>
 				</valueSetReference>
 			</binding>
-			<mapping>
-				<identity value="CHMED16A"/>
-				<map value="Medication.AppInstr"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.patientInstruction">
 			<path value="MedicationStatement.dosage.patientInstruction"/>
@@ -422,8 +343,8 @@
 			</type>
 			<isSummary value="true"/>
 			<mapping>
-				<identity value="rim"/>
-				<map value=".effectiveTime"/>
+				<identity value="CHMED16A"/>
+				<map value="Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys"/>
 			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.asNeeded[x]">
@@ -432,7 +353,7 @@
 			<definition value="Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept)."/>
 			<comment value="Can express &quot;as needed&quot; without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express &quot;as needed&quot; with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not &quot;prn&quot; or &quot;as needed&quot;."/>
 			<min value="0"/>
-			<max value="0"/>
+			<max value="1"/>
 			<type>
 				<code value="boolean"/>
 			</type>

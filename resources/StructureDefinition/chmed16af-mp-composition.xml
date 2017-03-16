@@ -522,7 +522,7 @@
 			<short value="Risks"/>
 			<definition value="Possible risks for a patient"/>
 			<min value="0"/>
-			<max value="*"/>
+			<max value="6"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks" />

@@ -40,6 +40,9 @@
     },    "Condition/chmed16af-mp-condition-s01-6": {
       "base": "Condition-chmed16af-mp-condition-s01-6.html"
     },
+    "StructureDefinition/chmed16af-medication": {
+      "base": "StructureDefinition-chmed16af-medication.html"
+    },
     "StructureDefinition/chmed16af-receiver": {
       "base": "StructureDefinition-chmed16af-receiver.html"
     },

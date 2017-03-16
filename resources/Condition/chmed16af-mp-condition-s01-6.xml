@@ -6,7 +6,7 @@
 	</meta>
   <text> 
     <status value="generated"/> 
-    <div xmlns="http://www.w3.org/1999/xhtml">Allergies -TODO</div> 
+    <div xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie</div> 
   </text> 
   <clinicalStatus value="active"/> 
   <category> 
@@ -20,12 +20,12 @@
     <coding> 
       <system value="https://index.hcisolutions.ch/codes/cdscode"/> 
       <code value="555"/> 
-      <display value="TODO"/> 
+      <display value="Betablocker-Allergie (Propranolol-Typ)"/> 
     </coding> 
     <coding> 
       <system value="https://index.hcisolutions.ch/codes/cdscode"/> 
       <code value="571"/> 
-      <display value="TODO"/> 
+      <display value="Penicillin-Allergie"/> 
     </coding> 
   </code> 
   <subject> 

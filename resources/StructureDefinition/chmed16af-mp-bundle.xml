@@ -8,7 +8,7 @@
 		value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-bundle" />
 	<name value="MedicationPlan" />
 	<status value="draft" />
-	<fhirVersion value="1.9.0" />
+	<fhirVersion value="3.0.0" />
     <mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>

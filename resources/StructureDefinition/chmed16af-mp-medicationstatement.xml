@@ -8,7 +8,7 @@
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
 	<name value="MedicationStatement (MedicationPlan)" />
 	<status value="draft" />
-	<fhirVersion value="1.9.0" />
+	<fhirVersion value="3.0.0" />
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
@@ -438,7 +438,6 @@
 			<min value="0"/>
 			<max value="0"/>
 		</element>
-	<!--	
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.dose[x]">
 			<path value="MedicationStatement.dosage.dose[x]"/>
 			<short value="Amount of medication per dose"/>
@@ -456,30 +455,12 @@
 			</type>
 			<isSummary value="true"/>
 			<mapping>
-				<identity value="rim"/>
-				<map value=".doseQuantity"/>
+				<identity value="CHMED16A"/>
+				<map value="doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo"/>
 			</mapping>
-		</element>		-->
-			<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity">
-			<path value="MedicationStatement.dosage.doseQuantity"/>
-			<short value="Amount of medication per dose"/>
-			<definition value="Amount of medication per dose."/>
-			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
-			<requirements value="The amount of therapeutic or other substance given at one administration event."/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Quantity"/>
-				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
-			</type>
-			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".doseQuantity"/>
-			</mapping>
-		</element>		
-		
-		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity.system">
+		</element>
+<!--		
+				<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity.system">
 			<path value="MedicationStatement.dosage.doseQuantity.system" />
 			<min value="1" />
 			<max value="1" />
@@ -488,18 +469,7 @@
 			</type>
 			<fixedUri value="https://index.hcisolutions.ch/codes/codetyp9" />
 		</element>
-
-<!--
-		<element id="chmed16af-mp-medicationstatement.Composition.section.code.coding.code:sectionmed">
-			<path value="Composition.section.code.coding.code" />
-			<min value="1" />
-			<max value="1" />
-			<type>
-				<code value="code" />
-			</type>
-			<fixedCode value="77604-7" />
-		</element>
--->
+-->		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerPeriod">
 			<path value="MedicationStatement.dosage.maxDosePerPeriod"/>
 			<short value="Upper limit on medication per unit of time"/>
@@ -513,8 +483,8 @@
 			</type>
 			<isSummary value="true"/>
 			<mapping>
-				<identity value="rim"/>
-				<map value=".maxDoseQuantity"/>
+				<identity value="CHMED16A"/>
+				<map value="TakingTime.MA"/>
 			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerAdministration">
@@ -524,16 +494,12 @@
 			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg."/>
 			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject per administration."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="Quantity"/>
 				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
 			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="not supported"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerLifetime">
 			<path value="MedicationStatement.dosage.maxDosePerLifetime"/>
@@ -541,16 +507,12 @@
 			<definition value="Upper limit on medication per lifetime of the patient."/>
 			<requirements value="The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="Quantity"/>
 				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
 			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="not supported"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.rate[x]">
 			<path value="MedicationStatement.dosage.rate[x]"/>
@@ -559,7 +521,7 @@
 			<comment value="It is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate."/>
 			<requirements value="Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn&#39;t imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
 			<min value="0"/>
-			<max value="1"/>
+			<max value="0"/>
 			<type>
 				<code value="Ratio"/>
 			</type>

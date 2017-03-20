@@ -125,7 +125,9 @@
                 "-ig",
                 "${workspaceRoot}/chmed16af.json",
                 "-spec",
-                "${workspaceRoot}/validator/igpack.zip"
+                "${workspaceRoot}/validator/igpack.zip",
+                "-tx",
+                "n/a"
             ]
         }
     ]

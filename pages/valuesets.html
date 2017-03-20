@@ -1,0 +1,68 @@
+---
+category: Value Sets
+---
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Value Sets and Code Systems</title>
+
+  {% include header.html %}
+
+</head>
+<body>
+{% include navbar.html %}
+
+ <div id="segment-content" class="segment">  <!-- segment-content -->
+ <div class="container">  <!-- container -->
+            <div class="row">
+             <div class="inner-wrapper">
+  <!-- CONTENT CONTENT -->
+
+    <div class="col-12">
+        
+                        <h1>ValueSets</h1>
+                            <table> 
+                                <tr>
+                            <th>Name</th>
+                            <th>Code</th>
+                            <th>ValueSet</th>
+                            </tr>
+                            <tr>
+                                <td>UnitCodes</td>
+                                <td>CDTYP9</td>
+                                <td><a href="ValueSet-chmed16af-valueset-cdtyp9.html">ValueSet</a></td>
+                            </tr>
+                            <tr>
+                                <td>Route Of Adminstration</td>
+                                <td>CDTYP26</td>
+                                <td><a href="ValueSet-chmed16af-valueset-cdtyp26.html">ValueSet</a></td>
+                            </tr>
+                            <tr>
+                                <td>Risks Categories</td>
+                                <td>Codes CHMED16A</td>
+                                <td><a href="ValueSet-chmed16af-valueset-risks-category.html">ValueSet</a></td>
+                            </tr>
+                            <tr>
+                                <td>Risks CDSCODE</td>
+                                <td>CDSCODE</td>
+                                <td><a href="ValueSet-chmed16af-valueset-risks-cdscode.html">ValueSet</a></td>
+                            </tr>
+                            </table>
+
+        {% capture my-include %}{% include valuesets.md %}{% endcapture %}{{ my-include | markdownify }}
+
+     </div>
+
+
+</div>
+
+    </div>  <!-- /inner-wrapper -->
+            </div>  <!-- /row -->
+        </div>  <!-- /container -->
+
+    </div>  <!-- /segment-content -->
+
+{% include footer.html %}
+</body>
+</html>

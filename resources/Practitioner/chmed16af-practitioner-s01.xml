@@ -1,8 +1,8 @@
 <Practitioner xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-mp-practitioner-s01" />
+	<id value="chmed16af-practitioner-s01" />
     <meta>
 		<lastUpdated value="2017-02-08T13:17:28Z" />
-		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-practitioner" />
+		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner" />
 	</meta>
 	<text>
 		<status value="generated" />

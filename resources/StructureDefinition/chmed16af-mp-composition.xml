@@ -58,9 +58,9 @@
 		</element>
 		<element id="chmed16af-mp-composition.Composition.identifier">
 			<path value="Composition.identifier"/>
-			<short value="Logical identifier of composition (version-independent)"/>
-			<definition value="Logical identifier for the composition, assigned when created. This identifier stays constant as the composition is changed over time."/>
-			<comment value="See discussion in resource definition for how these relate."/>
+			<short value="Logical identifier for document (GUID)"/>
+			<definition value="Logical identifier for document (GUID)"/>
+			<comment value=" "/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -74,9 +74,9 @@
 		</element>
 		<element id="chmed16af-mp-composition.Composition.subject">
 			<path value="Composition.subject"/>
-			<short value="Who and/or what the composition is about"/>
-			<definition value="Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."/>
-			<comment value="For clinical documents, this is usually the patient."/>
+			<short value="Reference to the Patient"/>
+			<definition value="Reference to the Patient."/>
+			<comment value=" "/>
 			<requirements value="Essential metadata for searching for the composition. Identifies who and/or what the composition/document is about."/>
 			<min value="1"/>
 			<max value="1"/>
@@ -117,14 +117,14 @@
 		</element>
 		<element id="chmed16af-mp-composition.Composition.author">
 			<path value="Composition.author"/>
-			<short value="Who and/or what authored the composition"/>
-			<definition value="Identifies who is responsible for the information in the composition, not necessarily who typed it in."/>
+			<short value="Author (Gln if available, otherwise name)"/>
+			<definition value="Author (Gln if available, otherwise name)"/>
 			<requirements value="Identifies who is responsible for the content."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-practitioner"/>
+				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner"/>
 			</type>
 			<isSummary value="true"/>
 			<mapping>
@@ -143,14 +143,6 @@
 				<code value="string"/>
 			</type>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="./title"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value=".title"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-composition.Composition.confidentiality">
 			<path value="Composition.confidentiality"/>
@@ -176,28 +168,11 @@
 			<type>
 				<code value="BackboneElement"/>
 			</type>
-			<constraint>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<expression value="children().count() &gt; id.count()"/>
-				<xpath value="@value|f:*|h:div"/>
-				<source value="Element"/>
-			</constraint>
-			<isSummary value="true"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value=".participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
-			</mapping>
-			<mapping>
-				<identity value="cda"/>
-				<map value=".authenticator/.legalAuthenticator"/>
-			</mapping>
 		</element>
 		<element id="chmed16af-mp-composition.Composition.attester.time">
 			<path value="Composition.attester.time"/>
-			<short value="When composition attested"/>
-			<definition value="When composition was attested by the party."/>
+			<short value="validate date: Date of validation"/>
+			<definition value="When composition was attested by the party, Validate date: Date of validation"/>
 			<requirements value="Identifies when the information in the composition was deemed accurate.  (Things may have changed since then.)."/>
 			<min value="0"/>
 			<max value="1"/>
@@ -213,13 +188,12 @@
 		<element id="chmed16af-mp-composition.Composition.attester.party">
 			<path value="Composition.attester.party"/>
 			<short value="Who attested the composition"/>
-			<definition value="Who attested the composition in the specified way."/>
-			<requirements value="Identifies who has taken on the responsibility for accuracy of the composition content."/>
+			<definition value="Validated by : The Gln of the pharmacist who has validated the medication plan"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-practitioner"/>
+				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner"/>
 			</type>
 			<isSummary value="true"/>
 			<mapping>

@@ -69,7 +69,7 @@
       </type>
       <mapping>
 				<identity value="CHMED16A" />
-				<map value="DLstMen" />
+				<map value="MedicalData.DLstMen" />
 			</mapping>
     </element>
   </differential>

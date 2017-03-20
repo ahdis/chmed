@@ -1,88 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle 
 	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-mp-bundle-s01" />
+	<id value="chmed16af-mp-bundle-s01"/>
 	<meta>
-		<lastUpdated value="2017-02-08T13:17:28Z" />
 		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-bundle" />
 	</meta>
 	<identifier>
-		<system value="urn:ietf:rfc:3986" />
-		<value value="urn:uuid:4c29edb6-b319-4e41-b353-36366c9e2dba" />
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:d97fc25a-c808-42fd-acaa-562a093aef03"/>
 	</identifier>
-	<type value="document" />
+	<type value="document"/>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Composition/chmed16af-bundlemedicationplan-composition-s01" />
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Composition/chmed16af-mp-composition-s01"/>
 		<resource>
 			<Composition>
-				<id value="chmed16af-bundlemedicationplan-composition-s01" />
+				<id value="chmed16af-mp-composition-s01"/>
 				<meta>
-					<versionId value="2" />
-					<lastUpdated value="2017-02-08T13:17:12Z" />
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition" />
+					<versionId value="2"/>
+					<lastUpdated value="2017-03-20T13:49:49Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition"/>
 				</meta>
+				<extension url="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver">
+					<valueReference>
+						<reference value="Practitioner/chmed16af-practitioner-s01"/>
+					</valueReference>
+				</extension>
 				<identifier>
-					<system value="http://emediplan.ch/chmed16af/id" />
-					<value value="26d3dff7-ab05-4737-a49c-5eccd33595f6" />
+					<system value="http://emediplan.ch/chmed16af/id"/>
+					<value value="26d3dff7-ab05-4737-a49c-5eccd33595f6"/>
 				</identifier>
-				<status value="final" />
+				<status value="final"/>
 				<type>
 					<coding>
-						<system value="http://loinc.org" />
-						<code value="56445-0" />
+						<system value="http://loinc.org"/>
+						<code value="56445-0"/>
 					</coding>
-					<text value="Medication summary Document" />
+					<text value="Medication summary Document"/>
 				</type>
-				<!-- FIXME why do I have to an absolute URL here and a relative is not 
-					possible, document generate from grahmes servers generates it -->
 				<subject>
-					<reference value="http://fhir3.healthintersections.com.au:80/open/Patient/chmed16af-mp-composition" />
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
 				</subject>
-				<date value="2016-09-12T11:46:09+02:00" />
+				<date value="2016-09-12T11:46:09+02:00"/>
 				<author>
-					<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+					<reference value="Practitioner/chmed16af-practitioner-s01"/>
 				</author>
-				<title value="MedicationPlan" />
+				<title value="MedicationPlan"/>
 				<attester>
-					<mode value="professional" />
-					<time value="2016-09-12T11:46:09+02:00" />
+					<mode value="professional"/>
+					<time value="2016-09-12T11:46:09+02:00"/>
 					<party>
-						<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+						<reference value="Practitioner/chmed16af-practitioner-s01"/>
 					</party>
 				</attester>
 				<section>
-					<title value="Aktuelle Medikation" />
+					<title value="Aktuelle Medikation"/>
 					<code>
 						<coding>
-							<system value="http://loinc.org" />
-							<code value="77604-7" />
-							<display value="History of medication use" />
+							<system value="http://loinc.org"/>
+							<code value="77604-7"/>
+							<display value="History of medication use"/>
 						</coding>
 					</code>
 					<entry>
-						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-1" />
+						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
 					</entry>
 					<entry>
-						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-2" />
+						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
 					</entry>
 					<entry>
-						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-3" />
+						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
 					</entry>
 					<entry>
-						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-4" />
+						<reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
 					</entry>
 				</section>
 				<section>
-					<title value="Bemerkungen" />
+					<title value="Gesundheitsbelange"/>
 					<code>
 						<coding>
-							<system value="http://loinc.org" />
-							<code value="48767-8" />
-							<display value="ANNOTATION COMMENT" />
+							<system value="http://loinc.org"/>
+							<code value="75310-3"/>
+							<display value="Health Concerns"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="Observation/chmed16af-mp-observation-s01-bodyweight"/>
+					</entry>
+					<entry>
+						<reference value="Observation/chmed16af-mp-observation-s01-bodyheight"/>
+					</entry>
+					<entry>
+						<reference value="Observation/chmed16af-observation-s01-dateoflastmenustration"/>
+					</entry>
+					<entry>
+						<reference value="Observation/chmed16af-observation-s01-prematurebaby"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-1"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-2"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-3"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-4"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-5"/>
+					</entry>
+					<entry>
+						<reference value="Condition/chmed16af-mp-condition-s01-6"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Bemerkungen"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<code value="48767-8"/>
+							<display value="ANNOTATION COMMENT"/>
 						</coding>
 					</code>
 					<text>
-						<status value="additional" />
+						<status value="additional"/>
 						<div 
 							xmlns="http://www.w3.org/1999/xhtml"> Bemerkung 						
 						</div>
@@ -92,615 +134,712 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Patient/chmed16af-mp-composition" />
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Patient/chmed16af-mp-patient-s01"/>
 		<resource>
 			<Patient>
-				<id value="chmed16af-mp-composition" />
+				<id value="chmed16af-mp-patient-s01"/>
 				<meta>
-					<versionId value="2" />
-					<lastUpdated value="2017-02-08T12:29:41Z" />
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:57Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-patient"/>
 				</meta>
 				<text>
-					<status value="generated" />
+					<status value="generated"/>
 					<div 
 						xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12 					
 					</div>
 				</text>
+				<identifier>
+					<system value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
+					<value value="vekano"/>
+				</identifier>
 				<name>
-					<family value="Matter" />
-					<given value="Maxima" />
+					<family value="Matter"/>
+					<given value="Maxima"/>
 				</name>
 				<telecom>
-					<system value="phone" />
-					<value value="+41588512600" />
-					<use value="home" />
+					<system value="phone"/>
+					<value value="+41588512600"/>
+					<use value="home"/>
 				</telecom>
-				<gender value="male" />
-				<birthDate value="1981-01-12" />
-				<deceasedBoolean value="false" />
+				<gender value="female"/>
+				<birthDate value="1981-01-12"/>
 				<address>
-					<line value="Untermattweg 8" />
-					<city value="Bern" />
-					<postalCode value="3027" />
+					<line value="Untermattweg 8"/>
+					<city value="Bern"/>
+					<postalCode value="3027"/>
 				</address>
+				<communication>
+					<language>
+						<coding>
+							<system value="urn:ietf:bcp:47"/>
+							<code value="de-CH"/>
+							<display value="German (Swiss)"/>
+						</coding>
+					</language>
+					<preferred value="true"/>
+				</communication>
 			</Patient>
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-1" />
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
 		<resource>
 			<MedicationStatement>
-				<id value="chmed16af-mp-medicationstatement-s01-1" />
-				<text>
-					<status value="generated" />
-					<div 
-						xmlns="http://www.w3.org/1999/xhtml">						TODO										
-					</div>
-				</text>
-				<contained>
-					<Medication 
-						xmlns="http://hl7.org/fhir">
-						<id value="cont1" />
-						<code>
-							<!-- <coding><system value="urn:oid:2.51.1.1"/><code value="GTIN"/><display value="name of medication"/></coding> -->
-							<coding>
-								<!-- pharmacode -->
-								<system value="urn:oid:2.16.756.5.30.2.6.1" />
-								<code value="971867" />
-							</coding>
-						</code>
-					</Medication>
-				</contained>
-				<status value="active" />
-				<medicationReference>
-					<reference value="#cont1" />
-				</medicationReference>
-				<effectivePeriod>
-					<start value="2016-09-12" />
-				</effectivePeriod>
-				<informationSource>
-					<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
-				</informationSource>
-				<subject>
-					<reference value="Patient/chmed16af-mp-composition" />
-				</subject>
-				<taken value="unk" />
-				<reasonCode>
-					<text value="Akne" />
-				</reasonCode>
-				<note>
-					<text value="-" />
-				</note>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCM" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCD" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCV" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="HS" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-			</MedicationStatement>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-2" />
-		<resource>
-			<MedicationStatement>
-				<id value="chmed16af-mp-medicationstatement-s01-2" />
-				<text>
-					<status value="generated" />
-					<div 
-						xmlns="http://www.w3.org/1999/xhtml">						TODO										
-					</div>
-				</text>
-				<contained>
-					<Medication 
-						xmlns="http://hl7.org/fhir">
-						<id value="cont2" />
-						<code>
-							<!-- <coding><system value="urn:oid:2.51.1.1"/><code value="GTIN"/><display value="name of medication"/></coding> -->
-							<coding>
-								<!-- pharmacode -->
-								<system value="urn:oid:2.16.756.5.30.2.6.1" />
-								<code value="4461382" />
-							</coding>
-						</code>
-					</Medication>
-				</contained>
-				<status value="active" />
-				<medicationReference>
-					<reference value="#cont2" />
-				</medicationReference>
-				<effectivePeriod>
-					<start value="2016-02-10" />
-				</effectivePeriod>
-				<informationSource>
-					<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
-				</informationSource>
-				<subject>
-					<reference value="Patient/chmed16af-mp-composition" />
-				</subject>
-				<taken value="unk" />
-				<reasonCode>
-					<text value="Blutverdünnung" />
-				</reasonCode>
-				<note>
-					<text value="-" />
-				</note>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCM" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCD" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCV" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="HS" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-			</MedicationStatement>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-3" />
-		<resource>
-			<MedicationStatement>
-				<id value="chmed16af-mp-medicationstatement-s01-3" />
-				<text>
-					<status value="generated" />
-					<div 
-						xmlns="http://www.w3.org/1999/xhtml">						TODO										
-					</div>
-				</text>
-				<contained>
-					<Medication 
-						xmlns="http://hl7.org/fhir">
-						<id value="cont3" />
-						<code>
-							<!-- <coding><system value="urn:oid:2.51.1.1"/><code value="GTIN"/><display value="name of medication"/></coding> -->
-							<coding>
-								<!-- pharmacode -->
-								<system value="urn:oid:2.16.756.5.30.2.6.1" />
-								<code value="2355687" />
-							</coding>
-						</code>
-					</Medication>
-				</contained>
-				<status value="active" />
-				<medicationReference>
-					<reference value="#cont3" />
-				</medicationReference>
-				<effectivePeriod>
-					<start value="2016-02-10" />
-				</effectivePeriod>
-				<informationSource>
-					<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
-				</informationSource>
-				<subject>
-					<reference value="Patient/chmed16af-mp-composition" />
-				</subject>
-				<taken value="unk" />
-				<reasonCode>
-					<text value="Bluthochdruck/Herz" />
-				</reasonCode>
-				<note>
-					<text value="-" />
-				</note>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCM" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCD" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCV" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="HS" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-			</MedicationStatement>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-4" />
-		<resource>
-			<MedicationStatement>
-				<id value="chmed16af-mp-medicationstatement-s01-4" />
-				<text>
-					<status value="generated" />
-					<div 
-						xmlns="http://www.w3.org/1999/xhtml">						TODO										
-					</div>
-				</text>
-				<contained>
-					<Medication 
-						xmlns="http://hl7.org/fhir">
-						<id value="cont4" />
-						<code>
-							<!-- <coding><system value="urn:oid:2.51.1.1"/><code value="GTIN"/><display value="name of medication"/></coding> -->
-							<coding>
-								<!-- pharmacode -->
-								<system value="urn:oid:2.16.756.5.30.2.6.1" />
-								<code value="1426310" />
-							</coding>
-						</code>
-					</Medication>
-				</contained>
-				<status value="active" />
-				<medicationReference>
-					<reference value="#cont4" />
-				</medicationReference>
-				<effectivePeriod>
-					<start value="2016-02-10" />
-				</effectivePeriod>
-				<informationSource>
-					<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
-				</informationSource>
-				<subject>
-					<reference value="Patient/chmed16af-mp-composition" />
-				</subject>
-				<taken value="unk" />
-				<reasonCode>
-					<text value="Cholesterinsenker" />
-				</reasonCode>
-				<note>
-					<text value="-" />
-				</note>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCM" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCD" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="PCV" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="1" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-				<dosage>
-					<timing>
-						<repeat>
-							<when value="HS" />
-						</repeat>
-					</timing>
-					<route>
-						<coding>
-							<!-- Code 26 https://index.hcisolutions.ch/codes/codetyp26 oid to 
-								register -->
-							<system value="https://index.hcisolutions.ch/codes/cdtyp26" />
-							<code value="PO" />
-							<display value="per oral" />
-						</coding>
-					</route>
-					<doseQuantity>
-						<value value="0" />
-						<unit value="Stk" />
-						<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
-						<code value="Stk" />
-					</doseQuantity>
-				</dosage>
-			</MedicationStatement>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Practitioner/chmed16af-mp-practitioner-s01" />
-		<resource>
-			<Practitioner>
-				<id value="chmed16af-mp-practitioner-s01" />
+				<id value="chmed16af-mp-medicationstatement-s01-1"/>
 				<meta>
-					<versionId value="1" />
-					<lastUpdated value="2017-02-08T12:29:40Z" />
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:51Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
-					<status value="generated" />
+					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">
-						<p>Thomas Wälti </p>
+						xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016 					
 					</div>
 				</text>
-				<identifier>
-					<use value="official" />
-					<system value="urn:oid:2.51.1.3" />
-					<value value="7601003178999" />
-				</identifier>
-				<identifier>
-					<use value="official" />
-					<system value="urn:oid:2.16.756.5.30.1.123.100.2.1.1" />
-					<value value="ZSR" />
-				</identifier>
-				<name>
-					<family value="Wälti" />
-					<given value="Thomas" />
-				</name>
-			</Practitioner>
+				<contained>
+					<Medication>
+						<id value="cont1"/>
+						<meta>
+							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+						</meta>
+						<code>
+							<coding>
+								<system value="urn:oid:2.51.1.1"/>
+								<code value="7680453070343"/>
+								<display value="ROACCUTAN Kaps 10 mg 30 Stk"/>
+							</coding>
+						</code>
+					</Medication>
+				</contained>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#cont1"/>
+				</medicationReference>
+				<informationSource>
+					<reference value="Practitioner/chmed16af-practitioner-s01"/>
+				</informationSource>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<taken value="unk"/>
+				<reasonCode>
+					<text value="Akne"/>
+				</reasonCode>
+				<note>
+					<text value="-"/>
+				</note>
+				<dosage>
+					<timing>
+						<repeat>
+							<boundsPeriod>
+								<start value="2016-09-12"/>
+							</boundsPeriod>
+						</repeat>
+					</timing>
+					<asNeededBoolean value="true"/>
+					<route>
+						<coding>
+							<system value="https://index.hcisolutions.ch/codes/codetyp26"/>
+							<code value="PO"/>
+							<display value="per oral"/>
+						</coding>
+					</route>
+					<doseQuantity>
+						<value value="1"/>
+						<unit value="Stk"/>
+						<system value="https://index.hcisolutions.ch/codes/codetyp9"/>
+						<code value="Stk"/>
+					</doseQuantity>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
+		<resource>
+			<MedicationStatement>
+				<id value="chmed16af-mp-medicationstatement-s01-2"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:52Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016 					
+					</div>
+				</text>
+				<contained>
+					<Medication>
+						<id value="cont2"/>
+						<meta>
+							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+						</meta>
+						<code>
+							<coding>
+								<system value="urn:oid:2.51.1.1"/>
+								<code value="7680517950680"/>
+								<display value="ASPIRIN CARDIO Filmtabl 100 mg 28 Stk"/>
+							</coding>
+						</code>
+					</Medication>
+				</contained>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#cont2"/>
+				</medicationReference>
+				<effectivePeriod>
+					<start value="2016-02-10"/>
+				</effectivePeriod>
+				<informationSource>
+					<reference value="Practitioner/chmed16af-practitioner-s01"/>
+				</informationSource>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<taken value="unk"/>
+				<reasonCode>
+					<text value="Blutverdünnung"/>
+				</reasonCode>
+				<dosage>
+					<timing>
+						<repeat>
+							<when value="PCM"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="https://index.hcisolutions.ch/codes/codetyp26"/>
+							<code value="PO"/>
+							<display value="per oral"/>
+						</coding>
+					</route>
+					<doseQuantity>
+						<value value="1"/>
+						<unit value="Stk"/>
+						<system value="https://index.hcisolutions.ch/codes/codetyp9"/>
+						<code value="Stk"/>
+					</doseQuantity>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
+		<resource>
+			<MedicationStatement>
+				<id value="chmed16af-mp-medicationstatement-s01-3"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:52Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 					
+					</div>
+				</text>
+				<contained>
+					<Medication>
+						<id value="cont3"/>
+						<meta>
+							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+						</meta>
+						<code>
+							<coding>
+								<system value="urn:oid:2.51.1.1"/>
+								<code value="7680521101573"/>
+								<display value="BELOC ZOK Ret Tabl 25 mg 30 Stk"/>
+							</coding>
+						</code>
+					</Medication>
+				</contained>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#cont3"/>
+				</medicationReference>
+				<effectivePeriod>
+					<start value="2016-02-10"/>
+				</effectivePeriod>
+				<informationSource>
+					<reference value="Practitioner/chmed16af-practitioner-s01"/>
+				</informationSource>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<taken value="unk"/>
+				<reasonCode>
+					<text value="Bluthochdruck/Herz"/>
+				</reasonCode>
+				<dosage>
+					<additionalInstruction>
+						<text value="-"/>
+					</additionalInstruction>
+					<timing>
+						<repeat>
+							<when value="PCM"/>
+							<when value="PCV"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="https://index.hcisolutions.ch/codes/codetyp26"/>
+							<code value="PO"/>
+							<display value="per oral"/>
+						</coding>
+					</route>
+					<doseQuantity>
+						<value value="1"/>
+						<unit value="Stk"/>
+						<system value="https://index.hcisolutions.ch/codes/codetyp9"/>
+						<code value="Stk"/>
+					</doseQuantity>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
+		<resource>
+			<MedicationStatement>
+				<id value="chmed16af-mp-medicationstatement-s01-4"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:53Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 					
+					</div>
+				</text>
+				<contained>
+					<Medication>
+						<id value="cont4"/>
+						<meta>
+							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+						</meta>
+						<code>
+							<coding>
+								<system value="urn:oid:2.51.1.1"/>
+								<code value="7680497420456"/>
+								<display value="ZOCOR Filmtabl 20 mg 28 Stk"/>
+							</coding>
+						</code>
+					</Medication>
+				</contained>
+				<status value="active"/>
+				<medicationReference>
+					<reference value="#cont4"/>
+				</medicationReference>
+				<effectivePeriod>
+					<start value="2016-02-10"/>
+				</effectivePeriod>
+				<informationSource>
+					<reference value="Practitioner/chmed16af-practitioner-s01"/>
+				</informationSource>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<taken value="unk"/>
+				<reasonCode>
+					<text value="Cholesterinsenker"/>
+				</reasonCode>
+				<dosage>
+					<timing>
+						<repeat>
+							<when value="PCV"/>
+						</repeat>
+					</timing>
+					<route>
+						<coding>
+							<system value="https://index.hcisolutions.ch/codes/codetyp26"/>
+							<code value="PO"/>
+							<display value="per oral"/>
+						</coding>
+					</route>
+					<doseQuantity>
+						<value value="1"/>
+						<unit value="Stk"/>
+						<system value="https://index.hcisolutions.ch/codes/codetyp9"/>
+						<code value="Stk"/>
+					</doseQuantity>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-mp-observation-s01-bodyweight"/>
+		<resource>
+			<Observation>
+				<id value="chmed16af-mp-observation-s01-bodyweight"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:58:50Z"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">72 kg 					
+					</div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/observation-category"/>
+						<code value="vital-signs"/>
+						<display value="Vital Signs"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="29463-7"/>
+						<display value="Body Weight"/>
+					</coding>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="3141-9"/>
+						<display value="Body weight Measured"/>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="27113001"/>
+						<display value="Body weight"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<effectiveDateTime value="2016-09-12"/>
+				<valueQuantity>
+					<value value="72"/>
+					<unit value="kg"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="kg"/>
+				</valueQuantity>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-mp-observation-s01-bodyheight"/>
+		<resource>
+			<Observation>
+				<id value="chmed16af-mp-observation-s01-bodyheight"/>
+				<meta>
+					<versionId value="2"/>
+					<lastUpdated value="2017-03-20T13:58:36Z"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">178 cm 					
+					</div>
+				</text>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/observation-category"/>
+						<code value="vital-signs"/>
+						<display value="Vital Signs"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="8302-2"/>
+						<display value="Body height"/>
+					</coding>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="50373000"/>
+						<display value="Body height measure"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<effectiveDateTime value="2016-09-12"/>
+				<valueQuantity>
+					<value value="178"/>
+					<unit value="cm"/>
+					<system value="http://unitsofmeasure.org"/>
+					<code value="cm"/>
+				</valueQuantity>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-observation-s01-dateoflastmenustration"/>
+		<resource>
+			<Observation>
+				<id value="chmed16af-observation-s01-dateoflastmenustration"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:55Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016 					
+					</div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="161713000"/>
+						<display value="Last menstrual period - First day"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<valueDateTime value="2016-09-01"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-observation-s01-prematurebaby"/>
+		<resource>
+			<Observation>
+				<id value="chmed16af-observation-s01-prematurebaby"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:55Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-prematurebaby"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Premature baby: true 					
+					</div>
+				</text>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<code value="395507008"/>
+						<display value="Premature infant"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+				<valueBoolean value="true"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-1"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-1"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:49Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="1"/>
+						<display value="Renal Insufficiency"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/cdscode"/>
+						<code value="577"/>
+						<display value="Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-2"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-2"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:49Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="2"/>
+						<display value="Liver Insufficiency"/>
+					</coding>
+				</category>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-3"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-3"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="3"/>
+						<display value="Reproduction"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/cdscode"/>
+						<code value="612"/>
+						<display value="Frauen im gebärfähigen Alter"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-4"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-4"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="4"/>
+						<display value="Competitive athlete"/>
+					</coding>
+				</category>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-5"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-5"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="5"/>
+						<display value="Driver"/>
+					</coding>
+				</category>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-6"/>
+		<resource>
+			<Condition>
+				<id value="chmed16af-mp-condition-s01-6"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-03-20T13:49:51Z"/>
+					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie					
+					</div>
+				</text>
+				<clinicalStatus value="active"/>
+				<category>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<code value="6"/>
+						<display value="Allergies"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/cdscode"/>
+						<code value="555"/>
+						<display value="Betablocker-Allergie (Propranolol-Typ)"/>
+					</coding>
+					<coding>
+						<system value="https://index.hcisolutions.ch/codes/cdscode"/>
+						<code value="571"/>
+						<display value="Penicillin-Allergie"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/chmed16af-mp-patient-s01"/>
+				</subject>
+			</Condition>
 		</resource>
 	</entry>
 </Bundle>

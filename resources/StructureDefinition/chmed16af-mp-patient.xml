@@ -60,6 +60,7 @@
 		</element>
 		<element id="chmed16af-mp-patient.Patient.name">
 			<path value="Patient.name" />
+			<short value="Name for this patient"/>
 			<min value="0" />
 			<max value="1" />
 			<mapping>
@@ -132,8 +133,8 @@
 		</element>
 		<element id="chmed16af-mp-patient.Patient.address">
 			<path value="Patient.address"/>
-			<short value="Addresses for the individual"/>
-			<definition value="Addresses for the individual."/>
+			<short value="Address for the patient"/>
+			<definition value="Address for the patient"/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>

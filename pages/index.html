@@ -19,27 +19,11 @@ category: Home
              <div class="inner-wrapper">
   <!-- CONTENT CONTENT -->
 
-<div class="col-9">
+    <div class="col-12">
+        
+        {% capture my-include %}{% include index.md %}{% endcapture %}{{ my-include | markdownify }}
 
-<h1>eMedication Plan CHMED16AF Implementation Guide</h1>
-
-<p>
-Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, 
-the organization “Verein eMediplan” was founded in 2016. Its aim is to support and provide public, open source, medication plan 
-formats supported by a broad group of stakeholders from the public and private sectors.
-</p>
-
-<h2>Profiles for CHMED16AF</h2>
-
-<ul>
- <li><a href="StructureDefinition-chmed16af-mp-bundle.html">Profile for Medication Plan</a></li>
- <li><a href="Bundle-chmed16af-mp-bundle-s01.xml.html">Example for Medication Plan</a></li>
-</ul>
-
-<hr/>
-
-
-</div>
+     </div>
 
     </div>  <!-- /inner-wrapper -->
             </div>  <!-- /row -->

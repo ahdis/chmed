@@ -33,12 +33,12 @@
 		</element>
 		<element id="chmed16af-receiver.Extension.valueReference">
 			<path value="Extension.valueReference" />
-			<definition value="SHALL contain exactly one [1..1] Practitioner Profile (identifier: http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-practitioner)."/>
+			<definition value="SHALL contain exactly one [1..1] Practitioner Profile (identifier: http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner)."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-practitioner"/>
+				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner"/>
 			</type>
 		</element>
 	</differential>

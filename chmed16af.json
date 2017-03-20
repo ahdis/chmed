@@ -61,8 +61,8 @@
     "StructureDefinition/chmed16af-mp-patient": {
       "base": "StructureDefinition-chmed16af-mp-patient.html"
     },
-    "StructureDefinition/chmed16af-mp-practitioner": {
-      "base": "StructureDefinition-chmed16af-mp-practitioner.html"
+    "StructureDefinition/chmed16af-practitioner": {
+      "base": "StructureDefinition-chmed16af-practitioner.html"
     },
     "StructureDefinition/chmed16af-obs-dateoflastmenstruation": {
       "base": "StructureDefinition-chmed16af-obs-dateoflastmenstruation.html"
@@ -76,8 +76,8 @@
     "Patient/chmed16af-mp-patient-s01": {
       "base": "Patient-chmed16af-mp-patient-s01.html"
     },
-    "Practitioner/chmed16af-mp-practitioner-s01": {
-      "base": "Practitioner-chmed16af-mp-practitioner-s01.html"
+    "Practitioner/chmed16af-practitioner-s01": {
+      "base": "Practitioner-chmed16af-practitioner-s01.html"
     },
    "StructureDefinition/chmed16af-condition-risks": {
       "base": "StructureDefinition-chmed16af-condition-risks.html"

@@ -35,7 +35,7 @@
 		<start value="2016-02-10" />
 	</effectivePeriod>
 	<informationSource>
-		<reference value="Practitioner/chmed16af-mp-practitioner-s01" />
+		<reference value="Practitioner/chmed16af-practitioner-s01" />
 	</informationSource>
 	<subject>
 		<reference value="Patient/chmed16af-mp-patient-s01" />

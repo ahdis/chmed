@@ -6,7 +6,15 @@
   <name value="Medication"/>
   <title value="Medication"/>
   <status value="draft"/>
-  <fhirVersion value="3.0.0" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on Medication"/>
+	<fhirVersion value="3.0.0" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -95,7 +103,7 @@
       <path value="Medication.form"/>
       <short value="powder | tablets | capsule +"/>
       <definition value="Describes the form of the item.  Powder; tablets; capsule."/>
-      <comment value="When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form."/>
+      <comment value="When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationRequest, this is administered form."/>
       <min value="0"/>
       <max value="0"/>
       <type>

@@ -4,7 +4,14 @@
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver" />
 	<name value="Receiver" />
 	<status value="draft" />
-	<fhirVersion value="3.0.0" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on Receiver"/>
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>

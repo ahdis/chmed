@@ -4,7 +4,16 @@
 	<id value="chmed16af-mp-medicationstatement" />
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
 	<name value="MedicationStatement (MedicationPlan)" />
+	<title value="MedicationStatement (MedicationPlan)"/>
 	<status value="draft" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on MedicationStatement for MedicationPlan"/>
 	<fhirVersion value="3.0.0" />
 	<mapping>
 		<identity value="CHMED16A"/>
@@ -384,7 +393,7 @@
 			<isSummary value="true"/>
 			<binding>
 				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-					<valueString value="RouteOfAdministration"/>
+					<valueString value="RouteOfRequest"/>
 				</extension>
 				<strength value="required"/>
 				<description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."/>
@@ -455,11 +464,11 @@
 				<map value="TakingTime.MA"/>
 			</mapping>
 		</element>
-		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerAdministration">
-			<path value="MedicationStatement.dosage.maxDosePerAdministration"/>
+		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerRequest">
+			<path value="MedicationStatement.dosage.maxDosePerRequest"/>
 			<short value="Upper limit on medication per administration"/>
 			<definition value="Upper limit on medication per administration."/>
-			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerAdministration of 2 mg."/>
+			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerRequest of 2 mg."/>
 			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject per administration."/>
 			<min value="0"/>
 			<max value="0"/>

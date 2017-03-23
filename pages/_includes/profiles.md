@@ -37,9 +37,9 @@ The Composition ressource defines the following parameter for the medication pla
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;a&gt;  | 
 | attester.time  | Date of validation  | Practitioner  | ValDt | at  | 
 | attester.party  | Validated by GLN of practitionier  |  Practitioner | ValBy | ap  | 
-| section | medications |  MedicationStatement | Medication.Medicaments | &lt;m&gt;  | 
+| section | medications |  MedicationStatement | Medicaments | &lt;m&gt;  | 
 | section | healthconcerns |  Entry | MedicalData | &lt;sh&gt;  | 
-| section | notes |  text | Medication.Rmk | n  | 
+| section | notes |  text | Rmk | n  | 
 | receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af-receiver.html) | Patient.RCV (GLN of receiver) | r   
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed16af-mp-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-mp-composition-s01.xml.html)
@@ -63,14 +63,13 @@ The Composition ressource defines the following parameter for the medication pla
 | Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
 | ------------- | ------------- | -------------  | ------------- | -------------  | 
 | identifier  | GLN for this practitioner  | Identifier  | Author.GLN | i    | 
-| identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | z    | 
 | name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName | g, f    | 
 
 [Profile for Practitioner](StructureDefinition-chmed16af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed16af-practitioner-s01.xml.html)
 
 
 ## Medication Section 
-The medication section contains entries for the Medical data information for patient. These can be healthconcerns or possible risks.
+The medication section contains the entries for the current medications for patient. 
 
 | Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
 | ------------- | ------------- | -------------  | ------------- | -------------  | 
@@ -123,6 +122,66 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 
 [Profile for PolymedicationCheck](StructureDefinition-chmed16af-pmc-bundle.html) &#124; [Example for PolymedicationCheck (xml)](Bundle-chmed16af-pmc-bundle-s01.xml.html)
 
+## Compostion
+
+The Composition ressource defines the following parameter for the PolymedicationCheck:
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| subject  | Reference to the Patient  | Patient  | Patient | &lt;p&gt;    | 
+| identifier  | Logical identifier for document (GUID)  | Identifier  | id  | i | 
+| date  | Date of creation  |  dateTime | Dt | c  | 
+| author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;a&gt;  | 
+| section | medications |  MedicationStatement | Medicaments | &lt;m&gt;  | 
+| section | recommendations |  - | Recoms | &lt;r&gt;  | 
+
+[Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-pmc-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-pmc-composition-s01.xml.html)
+
+## Patient
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| identifier  | Insurance card number for this patient  | Identifier  | Patient.PatientId[Type=1] | i    | 
+| name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | g, f    | 
+| telecom  | telephone number  | ContactPoint  | Patient.Phone | t    | 
+| gender  | gender  | code  | Patient.gender, male=1, female=2 | g=m or f | 
+| birthDate  | the date of birth  | date  |Patient.BDt | b | 
+| address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | l, p, c | 
+
+[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-pmcrx-patient-s01.xml.html)
+
+## Practitioner
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| identifier  | GLN for this practitioner  | Identifier  | Author.GLN | i    | 
+| name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName | g, f    | 
+
+[Profile for Practitioner](StructureDefinition-chmed16af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed16af-practitioner-s01.xml.html)
+
+
+## Medication Section 
+The medication section contains the entries for the current medications for patient. 
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) | i    | 
+| informationSource  | Person or organization that provided the information about the taking of this medication  | Patient or Practitioner  | Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner | s=1 or 0    | 
+| reasonCode  | Reason for why the medication is being/was taken  | CodeableConcept  | Medication.TkgRsn (Taking Reason) | r  | 
+| note  | Application Instructions  | Annotation  |Medication.AppInstr | n  | 
+| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;d&gt;  | 
+| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | s, e, p, r, (m, d, v, h)   | 
+| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | dl, dh |
+| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | dm |
+
+[Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
+
+Examples for MedicationStatements [1](MedicationStatement-chmed16af-mp-medicationstatement-s01-1.html) &#124; [2](MedicationStatement-chmed16af-mp-medicationstatement-s01-2.html) &#124; [3](MedicationStatement-chmed16af-mp-medicationstatement-s01-3.html) &#124; [4](MedicationStatement-chmed16af-mp-medicationstatement-s01-4.html)
+
+## Recommendation Section 
+The recommendation section contains the entries for recommondation of the PolymedicationCheck.
+
+TODO
 
 # Prescription
 A prescription can be structured in a bundle according to the prescription bundle profile.
@@ -139,3 +198,60 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 * Further entry elements to the patient, medication entries, etc.
 
 [Profile for Prescription](StructureDefinition-chmed16af-rx-bundle.html) &#124; [Example for Prescription (xml)](Bundle-chmed16af-rx-bundle-s01.xml.html)
+
+## Compostion
+
+The Composition ressource defines the following parameter for the PolymedicationCheck:
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| subject  | Reference to the Patient  | Patient  | Patient | &lt;p&gt;    | 
+| identifier  | Logical identifier for document (GUID)  | Identifier  | id  | i | 
+| date  | Date of creation  |  dateTime | Dt | c  | 
+| author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;a&gt;  | 
+| section | medications |  MedicationAdminstration | Medicaments | &lt;m&gt;  | 
+| section | note |  - | Rmk | &lt;r&gt;  | 
+
+[Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-rx-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-rx-composition-s01.xml.html)
+
+## Patient
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| identifier  | Insurance card number for this patient  | Identifier  | Patient.PatientId[Type=1] | i    | 
+| name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | g, f    | 
+| telecom  | telephone number  | ContactPoint  | Patient.Phone | t    | 
+| gender  | gender  | code  | Patient.gender, male=1, female=2 | g=m or f | 
+| birthDate  | the date of birth  | date  |Patient.BDt | b | 
+| address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | l, p, c | 
+
+[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-pmcrx-patient-s01.xml.html)
+
+## Practitioner
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| identifier  | GLN for this practitioner  | Identifier  | Author.GLN | i    | 
+| identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | z    | 
+| name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName | g, f    | 
+
+[Profile for Practitioner](StructureDefinition-chmed16af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed16af-practitioner-s01.xml.html)
+
+
+## Medication Prescribed Section 
+The medication section contains the entries for the prescriped medications for the patient. 
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) | i    | 
+| informationSource  | Person or organization that provided the information about the taking of this medication  | Patient or Practitioner  | Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner | s=1 or 0    | 
+| reasonCode  | Reason for why the medication is being/was taken  | CodeableConcept  | Medication.TkgRsn (Taking Reason) | r  | 
+| note  | Application Instructions  | Annotation  |Medication.AppInstr | n  | 
+| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;d&gt;  | 
+| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | s, e, p, r, (m, d, v, h)   | 
+| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | dl, dh |
+| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | dm |
+
+[Profile for MedicationAdministration](StructureDefinition-chmed16af-mp-medicationadministration.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
+
+Examples for MedicationStatements [1](MedicationStatement-chmed16af-rx-medicationadministration-s01-1.html)

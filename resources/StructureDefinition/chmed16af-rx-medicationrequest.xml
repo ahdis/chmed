@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition 
+	xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-rx-medicationrequest" />
+	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-medicationrequest" />
+	<name value="MedicationRequest (Prescription)" />
+	<title value="MedicationRequest (Prescription)"/>
+	<status value="draft" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on MedicationRequest for Prescription"/>
+	<fhirVersion value="3.0.0" />
+	<mapping>
+		<identity value="CHMED16A"/>
+		<uri value="http://emediplan.ch/chmed16a"/>
+		<name value="Mapping to CHMED16A"/>
+	</mapping>
+	<kind value="resource" />
+	<abstract value="false" />
+	<type value="MedicationRequest" />
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+	<derivation value="constraint" />
+	<differential>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest">
+			<path value="MedicationRequest"/>
+			<short value="Ordering of medication for patient or group"/>
+			<definition value="An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called &quot;MedicationRequest&quot; rather than &quot;MedicationPrescription&quot; or &quot;MedicationOrder&quot; to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns."/>
+			<alias value="Prescription"/>
+			<alias value="Order"/>
+			<min value="0"/>
+			<max value="*"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.identifier">
+			<path value="MedicationRequest.identifier"/>
+			<short value="External ids for this request"/>
+			<definition value="This records identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example a re-imbursement system might issue its own id for each prescription that is created.  This is particularly important where FHIR only provides part of an entire workflow process where records must be tracked through an entire system."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.definition">
+			<path value="MedicationRequest.definition"/>
+			<short value="Protocol or definition"/>
+			<definition value="Protocol or definition followed by this request."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.basedOn">
+			<path value="MedicationRequest.basedOn"/>
+			<short value="What request fulfills"/>
+			<definition value="A plan or request that is fulfilled in whole or in part by this medication request."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.groupIdentifier">
+			<path value="MedicationRequest.groupIdentifier"/>
+			<short value="Composite request this is part of"/>
+			<definition value="A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription."/>
+			<requirements value="Requests are linked either by a &quot;basedOn&quot; relationship (i.e. one request is fulfilling another) or by having a common requisition. Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.status">
+			<path value="MedicationRequest.status"/>
+			<short value="active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown"/>
+			<definition value="A code specifying the current state of the order.  Generally this will be active or completed state."/>
+			<comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.intent">
+			<path value="MedicationRequest.intent"/>
+			<short value="proposal | plan | order | instance-order"/>
+			<definition value="Whether the request is a proposal, plan, or an original order."/>
+			<comment value="It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.&#xD;&#xD;An instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.&#xA;&#xA;This element is labeled as a modifier because the intent alters when and how the resource is actually applicable."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<isModifier value="true"/>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationRequestIntent"/>
+				</extension>
+				<strength value="required"/>
+				<description value="The kind of medication order"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-request-intent"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="&#x2026;intent"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".moodCode (nuances beyond PRP/PLAN/RQO would need to be elsewhere)"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="class"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.category">
+			<path value="MedicationRequest.category"/>
+			<short value="Type of medication usage"/>
+			<definition value="Indicates the type of medication order and where the medication is expected to be consumed or administered."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.priority">
+			<path value="MedicationRequest.priority"/>
+			<short value="routine | urgent | stat | asap"/>
+			<definition value="Indicates how quickly the Medication Request should be addressed with respect to other requests."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.medication[x]">
+			<path value="MedicationRequest.medication[x]"/>
+			<short value="Medication to be taken"/>
+			<definition value="Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications."/>
+			<comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.&#xA0; For example, if&#xA0;you require&#xA0;form or&#xA0;lot number or if the medication is compounded or extemporaneously prepared, then you must&#xA0;reference the Medication resource.&#xA0;."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationCode"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept identifying substance or product that can be ordered."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/medication-codes"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="&#x2026;code"/>
+			</mapping>
+			<mapping>
+				<identity value="script10.6"/>
+				<map value="Message/Body/NewRx/MedicationPrescribed&#xD;&#xD;Medication.code.coding.code = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCode&#xD;&#xD;Medication.code.coding.system = Message/Body/NewRx/MedicationPrescribed/DrugCoded/ProductCodeQualifier&#xD;&#xD;Medication.code.coding.display = Message/Body/NewRx/MedicationPrescribed/DrugDescription"/>
+			</mapping>
+			<mapping>
+				<identity value="v2"/>
+				<map value="RXE-2-Give Code / RXO-1-Requested Give Code / RXC-2-Component Code"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="consumable.administrableMedication"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="what"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.subject">
+			<path value="MedicationRequest.subject"/>
+			<short value="Who or group medication request is for"/>
+			<definition value="A link to a resource representing the person or set of individuals to whom the medication will be given."/>
+			<comment value="The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="workflow"/>
+				<map value="&#x2026;subject"/>
+			</mapping>
+			<mapping>
+				<identity value="script10.6"/>
+				<map value="Message/Body/NewRx/Patient&#xD;&#xD;(need detail to link to specific patient &#x2026; Patient.Identification in SCRIPT)"/>
+			</mapping>
+			<mapping>
+				<identity value="v2"/>
+				<map value="PID-3-Patient ID List"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".participation[typeCode=AUT].role"/>
+			</mapping>
+			<mapping>
+				<identity value="w5"/>
+				<map value="who.focus"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.context">
+			<path value="MedicationRequest.context"/>
+			<short value="Created during encounter/admission/stay"/>
+			<definition value="A link to an encounter, or episode of care, that identifies the particular occurrence or set occurrences of contact between patient and health care provider."/>
+			<comment value="SubstanceAdministration-&gt;component-&gt;EncounterEvent."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.supportingInformation">
+			<path value="MedicationRequest.supportingInformation"/>
+			<short value="Information to support ordering of the medication"/>
+			<definition value="Include additional information (for example, patient height and weight) that supports the ordering of the medication."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.authoredOn">
+			<path value="MedicationRequest.authoredOn"/>
+			<short value="When request was initially authored"/>
+			<definition value="The date (and perhaps time) when the prescription was initially written or authored on."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.requester">
+			<path value="MedicationRequest.requester"/>
+			<short value="Who/What requested the Request"/>
+			<definition value="The individual, organization or device that initiated the request and has responsibility for its activation."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.recorder">
+			<path value="MedicationRequest.recorder"/>
+			<short value="Person who entered the request"/>
+			<definition value="The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.reasonCode">
+			<path value="MedicationRequest.reasonCode"/>
+			<short value="Reason or indication for writing the prescription"/>
+			<definition value="The reason or the indication for ordering the medication."/>
+			<comment value="This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonReference."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.reasonReference">
+			<path value="MedicationRequest.reasonReference"/>
+			<short value="Condition or Observation that supports why the prescription is being written"/>
+			<definition value="Condition or observation that supports why the medication was ordered."/>
+			<comment value="This is a reference to a condition or observation that is the reason for the medication order.  If only a code exists, use reasonCode."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.note">
+			<path value="MedicationRequest.note"/>
+			<short value="Application Instructions"/>
+			<definition value="Application Instructions"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Annotation"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.AppInstr"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction">
+			<path value="MedicationRequest.dosageInstruction"/>
+			<short value="How the medication should be taken"/>
+			<definition value="Indicates how the medication is to be used by the patient."/>
+			<comment value="There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, &quot;Ondansetron 8mg orally or IV twice a day as needed for nausea&quot; or &quot;Compazine&#xAE; (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting&quot;.  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient&#39;s condition at the time the dose is needed."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Dosage"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.Pos (list of Posology)"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.sequence">
+			<path value="MedicationRequest.dosageInstructionsequence"/>
+			<short value="The order of the dosage instructions"/>
+			<definition value="Indicates the order in which the dosage instructions should be applied or interpreted."/>
+			<requirements value="If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="integer"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.text">
+			<path value="MedicationRequest.dosageInstructiontext"/>
+			<short value="Free text dosage instructions e.g. SIG"/>
+			<definition value="Free text dosage instructions e.g. SIG."/>
+			<requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".text"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.additionalInstruction">
+			<path value="MedicationRequest.dosageInstructionadditionalInstruction"/>
+			<short value="Supplemental instruction - e.g. &quot;with meals&quot;"/>
+			<definition value="Supplemental instruction - e.g. &quot;with meals&quot;."/>
+			<requirements value="Additional instruction such as &quot;Swallow with plenty of water&quot; which may or may not be coded."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="AdditionalInstruction"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept identifying additional instructions such as &quot;take with water&quot; or &quot;avoid operating heavy machinery&quot;."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/additional-instruction-codes"/>
+				</valueSetReference>
+			</binding>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.patientInstruction">
+			<path value="MedicationRequest.dosageInstructionpatientInstruction"/>
+			<short value="Patient or consumer oriented instructions"/>
+			<definition value="Instructions in terms that are understood by the patient or consumer."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.timing">
+			<path value="MedicationRequest.dosageInstructiontiming"/>
+			<short value="When medication should be administered"/>
+			<definition value="When medication should be administered."/>
+			<comment value="This attribute may not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing."/>
+			<requirements value="The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example: &quot;Every 8 hours&quot;; &quot;Three times a day&quot;; &quot;1/2 an hour before breakfast for 10 days from 23-Dec 2011:&quot;; &quot;15 Oct 2013, 17 Oct 2013 and 1 Nov 2013&quot;.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn&#39;t imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Timing"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.asNeeded[x]">
+			<path value="MedicationRequest.dosageInstructionasNeeded[x]"/>
+			<short value="Take &quot;as needed&quot; (for x)"/>
+			<definition value="Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept)."/>
+			<comment value="Can express &quot;as needed&quot; without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express &quot;as needed&quot; with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not &quot;prn&quot; or &quot;as needed&quot;."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="boolean"/>
+			</type>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.site">
+			<path value="MedicationRequest.dosageInstructionsite"/>
+			<short value="Body site to administer to"/>
+			<definition value="Body site to administer to."/>
+			<comment value="If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both."/>
+			<requirements value="A coded specification of the anatomic site where the medication first enters the body."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.route">
+			<path value="MedicationRequest.dosageInstructionroute"/>
+			<short value="How drug should enter body"/>
+			<definition value="How drug should enter body."/>
+			<requirements value="A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient&#39;s body."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="RouteOfRequest"/>
+				</extension>
+				<strength value="required"/>
+				<description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."/>
+				<valueSetReference>
+					<reference value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-cdtyp26"/>
+				</valueSetReference>
+			</binding>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.Roa"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.method">
+			<path value="MedicationRequest.dosageInstructionmethod"/>
+			<short value="Technique for administering medication"/>
+			<definition value="Technique for administering medication."/>
+			<comment value="Terminologies used often pre-coordinate this term with the route and or form of administration."/>
+			<requirements value="A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  For examples, Slow Push; Deep IV."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.dose[x]">
+			<path value="MedicationRequest.dosageInstructiondose[x]"/>
+			<short value="Amount of medication per dose"/>
+			<definition value="Amount of medication per dose."/>
+			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
+			<requirements value="The amount of therapeutic or other substance given at one administration event."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Range"/>
+			</type>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo"/>
+			</mapping>
+		</element>
+		<!--		
+				<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.doseQuantity.system"><path value="MedicationRequest.dosageInstructiondoseQuantity.system" /><min value="1" /><max value="1" /><type><code value="uri" /></type><fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" /></element>
+-->
+	<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerPeriod">
+			<path value="MedicationRequest.dosageInstructionmaxDosePerPeriod"/>
+			<short value="Upper limit on medication per unit of time"/>
+			<definition value="Upper limit on medication per unit of time."/>
+			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example &quot;2 tablets every 4 hours to a maximum of 8/day&quot;."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Ratio"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="TakingTime.MA"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerRequest">
+			<path value="MedicationRequest.dosageInstructionmaxDosePerRequest"/>
+			<short value="Upper limit on medication per administration"/>
+			<definition value="Upper limit on medication per administration."/>
+			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerRequest of 2 mg."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject per administration."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerLifetime">
+			<path value="MedicationRequest.dosageInstructionmaxDosePerLifetime"/>
+			<short value="Upper limit on medication per lifetime of the patient"/>
+			<definition value="Upper limit on medication per lifetime of the patient."/>
+			<requirements value="The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.rate[x]">
+			<path value="MedicationRequest.dosageInstructionrate[x]"/>
+			<short value="Amount of medication per unit of time"/>
+			<definition value="Amount of medication per unit of time."/>
+			<comment value="It is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate."/>
+			<requirements value="Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn&#39;t imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Ratio"/>
+			</type>
+			<type>
+				<code value="Range"/>
+			</type>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<isSummary value="true"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value=".rateQuantity"/>
+			</mapping>
+		</element> 
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest">
+			<path value="MedicationRequest.dispenseRequest"/>
+			<short value="Medication supply authorization"/>
+			<definition value="Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.validityPeriod">
+			<path value="MedicationRequest.dispenseRequest.validityPeriod"/>
+			<short value="Time period supply is authorized for"/>
+			<definition value="This indicates the validity period of a prescription (stale dating the Prescription)."/>
+			<comment value="It reflects the prescribers&#39; perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations."/>
+			<requirements value="Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Period"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
+			<path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
+			<short value="Number of refills authorized"/>
+			<definition value="An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus &quot;3 repeats&quot;, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets."/>
+			<comment value="If displaying &quot;number of authorized fills&quot;, add 1 to this number."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="positiveInt"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Rep"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.quantity">
+			<path value="MedicationRequest.dispenseRequest.quantity"/>
+			<short value="Amount of medication to supply per dispense"/>
+			<definition value="The amount that is to be dispensed for one fill."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Quantity"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Sub"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.expectedSupplyDuration">
+			<path value="MedicationRequest.dispenseRequest.expectedSupplyDuration"/>
+			<short value="Number of days supply per dispense"/>
+			<definition value="Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last."/>
+			<comment value="In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Duration"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.performer">
+			<path value="MedicationRequest.dispenseRequest.performer"/>
+			<short value="Intended dispenser"/>
+			<definition value="Indicates the intended dispensing Organization specified by the prescriber."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.substitution">
+			<path value="MedicationRequest.substitution"/>
+			<short value="Any restrictions on medication substitution"/>
+			<definition value="Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber&#39;s intent. If nothing is specified substitution may be done."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.substitution.allowed">
+			<path value="MedicationRequest.substitution.allowed"/>
+			<short value="Whether substitution is allowed or not"/>
+			<definition value="True if the prescriber allows a different drug to be dispensed from what was prescribed."/>
+			<comment value="This element is labeled as a modifer because whether substitution is allow or not cannot be ignored."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="boolean"/>
+			</type>
+			<isModifier value="true"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Subs"/>
+			</mapping>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.substitution.reason">
+			<path value="MedicationRequest.substitution.reason"/>
+			<short value="Why should (not) substitution be made"/>
+			<definition value="Indicates the reason for the substitution, or why substitution must or must not be performed."/>
+			<min value="0"/>
+			<max value="0"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+					<valueString value="MedicationIntendedSubstitutionReason"/>
+				</extension>
+				<strength value="example"/>
+				<description value="A coded concept describing the reason that a different medication should (or should not) be substituted from what was prescribed."/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/v3-SubstanceAdminSubstitutionReason"/>
+				</valueSetReference>
+			</binding>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.priorPrescription">
+			<path value="MedicationRequest.priorPrescription"/>
+			<short value="An order/prescription that is being replaced"/>
+			<definition value="A link to a resource representing an earlier order related order or prescription."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.detectedIssue">
+			<path value="MedicationRequest.detectedIssue"/>
+			<short value="Clinical Issue with action"/>
+			<definition value="Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate therapy, dosage alert etc."/>
+			<alias value="Contraindication"/>
+			<alias value="Drug Utilization Review (DUR)"/>
+			<alias value="Alert"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.eventHistory">
+			<path value="MedicationRequest.eventHistory"/>
+			<short value="A list of events of interest in the lifecycle"/>
+			<definition value="Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource."/>
+			<comment value="This may not include provenances for all versions of the request &#x2013; only those deemed &#x201C;relevant&#x201D; or important. This SHALL NOT include the Provenance associated with this current version of the resource. (If that provenance is deemed to be a &#x201C;relevant&#x201D; change, it will need to be added as part of a later update. Until then, it can be queried directly as the Provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.)."/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

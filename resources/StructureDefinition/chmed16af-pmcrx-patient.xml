@@ -3,8 +3,16 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-pmcrx-patient" />
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-pmcrx-patient" />
-	<name value="Patient (Medication Plan)" />
+	<name value="Patient (PolyMedicationCheck, Prescription)" />
 	<status value="draft" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on Patient (PolyMedicationCheck, Prescription)"/>
 	<fhirVersion value="3.0.0" />
 	<mapping>
 		<identity value="CHMED16A"/>

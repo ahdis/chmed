@@ -5,8 +5,16 @@
   <url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-prematurebaby" />
   <name value="Premature baby"/>
   <title value="Premature baby"/>
-  <status value="draft"/>
-  <fhirVersion value="3.0.0" />
+	<status value="draft" />
+	<publisher value="IG eMediplan" />
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile on Oberservation for Premature Baby"/>
+	<fhirVersion value="3.0.0" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>

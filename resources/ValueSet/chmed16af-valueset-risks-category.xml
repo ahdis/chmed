@@ -19,87 +19,9 @@
 		</telecom>
 	</contact>
 	<description value="Possible risk categories" />
-	<!--	<compose><include><system value="https://index.hcisolutions.ch/codes/riskcategory"/><concept><code value="1"/><display value="Renal Insufficiency"/><designation><language value="de-CH" /><value value="Niereninsuffizienz" /></designation><designation><language value="fr-CH" /><value value="Insuffisance rénale" /></designation></concept><concept><code value="2"/><display value="Liver Insufficiency"/><designation><language value="de-CH" /><value value="Leberinsuffizienz" /></designation><designation><language value="fr-CH" /><value value="insuffisance hépatique" /></designation></concept><concept><code value="3"/><display value="Reproduction"/><designation><language value="de-CH" /><value value="Reproduction" /></designation><designation><language value="fr-CH" /><value value="Reproduction" /></designation></concept><concept><code value="4"/><display value="Competitive athlete"/><designation><language value="de-CH" /><value value="Competitive athlete" /></designation><designation><language value="fr-CH" /><value value="Competitive athlete" /></designation></concept><concept><code value="5"/><display value="Driver"/><designation><language value="de-CH" /><value value="Driver" /></designation><designation><language value="fr-CH" /><value value="Driver" /></designation></concept><concept><code value="6"/><display value="Allergies"/><designation><language value="de-CH" /><value value="Allergies" /></designation><designation><language value="fr-CH" /><value value="Allergies" /></designation></concept></include></compose> -->
-	<expansion>
-		<identifier value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-risks-category"/>
-		<timestamp value="2017-03-14T10:00:00Z"/>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="1"/>
-			<display value="Renal Insufficiency"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Niereninsuffizienz" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="Insuffisance rénale" />
-			</designation>
-		</contains>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="2"/>
-			<display value="Liver Insufficiency"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Leberinsuffizienz" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="insuffisance hépatique" />
-			</designation>
-		</contains>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="3"/>
-			<display value="Reproduction"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Reproduction" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="Reproduction" />
-			</designation>
-		</contains>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="4"/>
-			<display value="Competitive athlete"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Competitive athlete" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="Competitive athlete" />
-			</designation>
-		</contains>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="5"/>
-			<display value="Driver"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Driver" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="Driver" />
-			</designation>
-		</contains>
-		<contains>
-			<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
-			<code value="6"/>
-			<display value="Allergies"/>
-			<designation>
-				<language value="de-CH" />
-				<value value="Allergies" />
-			</designation>
-			<designation>
-				<language value="fr-CH" />
-				<value value="Allergies" />
-			</designation>
-		</contains>
-	</expansion>
+	<compose>
+		<include>
+			<system value="http://emediplan.ch/chmed16af/CodeSystem/chmed16af-codesystem-risks-category"/>
+		</include>
+	</compose>
 </ValueSet>

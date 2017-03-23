@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-receiver" />
-	<meta>
-		<lastUpdated value="2017-02-28T11:57:39.211+02:00" />
-	</meta>
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver" />
 	<name value="Receiver" />
 	<status value="draft" />

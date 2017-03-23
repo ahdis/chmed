@@ -22,6 +22,8 @@
                 "${workspaceRoot}/resources/StructureDefinition/",
                 "-ig",
                 "${workspaceRoot}/resources/ValueSet/",
+                "-ig",
+                "${workspaceRoot}/resources/CodeSystem/",
                 "-tx",
                 "n/a"
             ],
@@ -46,7 +48,36 @@
                     }
                 ]
             }
+        },        {
+            "taskName": "validate ressource pure",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
+                "${file}"
+            ],
+            "problemMatcher": {
+                "owner": "fhirvalidator",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^.*validating\\s*([^:]*)",
+                        "file": 1
+                    },
+                    {
+                        "regexp": "^.\\s*([^\\s]*).*@\\s*([^\\s]*).*\\(line\\s*(\\d+),.*col(\\d+)[^:]*:\\s(.*)",
+                        "line": 3,
+                        "column": 4,
+                        "severity": 1,
+                        "message": 5,
+                        "code": 2,
+                        "loop": true
+                    }
+                ]
+            }
         },
+
         {
             "taskName": "validate ressource with local ig",
             "args": [
@@ -57,6 +88,8 @@
                 "${workspaceRoot}/validator/igpack.zip",
                 "-ig",
                 "${workspaceRoot}/resources/StructureDefinition/",
+                "-ig",
+                "${workspaceRoot}/resources/CodeSystem/",
                 "-ig",
                 "${workspaceRoot}/resources/ValueSet/"
             ],
@@ -90,6 +123,8 @@
                 "${file}",
                 "-defn",
                 "${workspaceRoot}/validator/igpack.zip",
+                "-ig",
+                "${workspaceRoot}/resources/CodeSystem/",
                 "-ig",
                 "${workspaceRoot}/resources/ValueSet/",
                 "-tx",
@@ -125,9 +160,7 @@
                 "-ig",
                 "${workspaceRoot}/chmed16af.json",
                 "-spec",
-                "${workspaceRoot}/validator/igpack.zip",
-                "-tx",
-                "n/a"
+                "${workspaceRoot}/validator/igpack.zip"
             ]
         }
     ]

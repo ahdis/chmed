@@ -10,9 +10,11 @@ A Bundle has list of Entries. The first Entry is the Composition where alle cont
 
 # MedicatonPlan
 
-{% include img.html img="bundle_medicationplan.png" caption="Bundle Medication Plan" %}
+The medication plan summarizes the entire, current medication of a patient.
 
 ## Bundle
+
+{% include img.html img="bundle_medicationplan.png" caption="Bundle Medication Plan" %}
 
 The FHIR ressource Bundle bundles the corresponding entroes in a document. It contains
 
@@ -106,11 +108,34 @@ The health concern sections contains the medical data for the patient and the po
  
 # PolymedicationCheck
 
+Swiss community pharmacies can offer a [Polymedication Check](http://www.pharmasuisse.org/de/dienstleistungen/Themen/Seiten/Polymedikationscheck.aspx) (PMC) to patients on greater or equals four prescribed drugs taken over more then 3 months.
+
+## Bundle
+
+{% include img.html img="bundle_polymedicationcheck.png" caption="Polymedication Check" %}
+
+The FHIR ressource Bundle bundles the corresponding entroes in a document. It contains
+
+* The profile this bundle correspons to (chmed16af-pmc-bundle)
+* The type of the bundle (fixed here on "document")
+* An entry to the composition, the actual document that references different resources (further entry elements in the bundle)
+* Further entry elements to the patient, medication entries, etc.
+
+[Profile for PolymedicationCheck](StructureDefinition-chmed16af-pmc-bundle.html) &#124; [Example for PolymedicationCheck (xml)](Bundle-chmed16af-pmc-bundle-s01.xml.html)
+
+
 # Prescription
+A prescription can be structured in a bundle according to the prescription bundle profile.
 
+## Bundle
 
+{% include img.html img="bundle_prescription.png" caption="Prescription" %}
 
+The FHIR ressource Bundle bundles the corresponding entroes in a document. It contains
 
+* The profile this bundle correspons to (chmed16af-rx-bundle)
+* The type of the bundle (fixed here on "document")
+* An entry to the composition, the actual document that references different resources (further entry elements in the bundle)
+* Further entry elements to the patient, medication entries, etc.
 
-
-
+[Profile for Prescription](StructureDefinition-chmed16af-rx-bundle.html) &#124; [Example for Prescription (xml)](Bundle-chmed16af-rx-bundle-s01.xml.html)

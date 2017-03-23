@@ -59,7 +59,7 @@
 		<doseQuantity>
 			<value value="1" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/codetyp9" />
+			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>

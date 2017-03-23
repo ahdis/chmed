@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-mp-bundle" />
-	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-bundle" />
-	<name value="MedicationPlan" />
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-rx-bundle" />
+	<url
+		value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-bundle" />
+	<name value="Prescription" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>
@@ -12,9 +12,9 @@
 			<value value="http://www.emediplan.ch"/>
 		</telecom>
 	</contact>
-	<description value="Profile for medication plan document. The medication plan summarizes the entire, current medication of a patient."/>
+	<description value="A prescription can be structured in a bundle according to the prescription bundle profile."/>
 	<fhirVersion value="3.0.0" />
-	<mapping>
+    <mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
 		<name value="Mapping to CHMED16A"/>
@@ -25,18 +25,18 @@
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
 	<derivation value="constraint" />
 	<differential>
-		<element id="chmed16af-mp-bundle.Bundle">
+		<element id="chmed16af-rx-bundle.Bundle">
 			<path value="Bundle" />
 			<min value="1" />
 			<max value="1" />
 		</element>
-		<element id="chmed16af-mp-bundle.Bundle.type">
+		<element id="chmed16af-rx-bundle.Bundle.type">
 			<path value="Bundle.type" />
 			<fixedCode value="document" />
 		</element>
-		<element id="chmed16af-mp-bundle.Bundle.entry">
+		<element id="chmed16af-rx-bundle.Bundle.entry">
 			<path value="Bundle.entry" />
-			<slicing>
+ 			<slicing>
 				<discriminator>
 					<type value="type" />
 					<path value="resource.type" />
@@ -47,14 +47,14 @@
 			<min value="1" />
 			<max value="*" />
 		</element>
-		<element id="chmed16af-mp-bundle.Bundle.entry.resource:Composition">
-			<path value="Bundle.entry.resource" />
-			<sliceName value="Composition" />
-			<min value="1" />
+		<element id="chmed16af-rx-bundle.Bundle.entry.resource:Composition">
+			<path value="Bundle.entry.resource" /> 
+ 		  <sliceName value="Composition" />
+ 			<min value="1" />
 			<max value="1" />
 			<type>
 				<code value="Composition" />
-				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition"/>
+ 				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-composition"/> 
 			</type>
 		</element>
 	</differential>

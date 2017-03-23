@@ -2,9 +2,6 @@
 <StructureDefinition 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-medicationstatement" />
-	<meta>
-		<lastUpdated value="2016-10-14T11:57:39.211+02:00" />
-	</meta>
 	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
 	<name value="MedicationStatement (MedicationPlan)" />
 	<status value="draft" />
@@ -438,7 +435,7 @@
 			<type>
 				<code value="uri" />
 			</type>
-			<fixedUri value="https://index.hcisolutions.ch/codes/codetyp9" />
+			<fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" />
 		</element>
 -->		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerPeriod">

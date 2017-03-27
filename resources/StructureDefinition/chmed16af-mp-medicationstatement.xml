@@ -464,6 +464,7 @@
 				<map value="TakingTime.MA"/>
 			</mapping>
 		</element>
+<!--		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerRequest">
 			<path value="MedicationStatement.dosage.maxDosePerRequest"/>
 			<short value="Upper limit on medication per administration"/>
@@ -478,6 +479,7 @@
 			</type>
 			<isSummary value="true"/>
 		</element>
+-->		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerLifetime">
 			<path value="MedicationStatement.dosage.maxDosePerLifetime"/>
 			<short value="Upper limit on medication per lifetime of the patient"/>

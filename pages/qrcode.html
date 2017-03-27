@@ -19,13 +19,9 @@ category: QRCode
              <div class="inner-wrapper">
   <!-- CONTENT CONTENT -->
 
-<div class="col-12">
-
-<h1>QR Code</h1>
-
-
-<h2>TODO</h2>
-
+                    <div class="col-12">
+                        {% capture my-include %}{% include qrcode.md %}{% endcapture %}{{ my-include | markdownify }}
+                    </div>
 
 </div>
 

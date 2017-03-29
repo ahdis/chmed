@@ -40,7 +40,7 @@ The Composition ressource defines the following parameter for the medication pla
 | section | medications |  MedicationStatement | Medicaments | &lt;MS&gt;  | 
 | section | healthconcerns |  Entry | MedicalData | &lt;SH&gt;  | 
 | section | notes |  text | Rmk | @n  | 
-| receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af@-re@ceiver.html) | Patient.RCV (GLN of receiver) | @R |   
+| receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af@-re@ceiver.html) | Patient.RCV (GLN of receiver) | @r |   
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed16af-mp-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-mp-composition-s01.xml.html)
 
@@ -133,7 +133,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | date  | Date of creation  |  dateTime | Dt | @c  | 
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;A&gt;  | 
 | section | medications |  MedicationStatement | Medicaments | &lt;M&gt;  | 
-| section | recommendations |  - | Recoms | &lt;R&gt;  | 
+| section | recommendations |  - | Recoms | &lt;@r&gt;  | 
 
 [Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-pmc-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-pmc-composition-s01.xml.html)
 
@@ -210,7 +210,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | date  | Date of creation  |  dateTime | Dt | @c  | 
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;A&gt;  | 
 | section | medications |  MedicationAdminstration | Medicaments | &lt;M&gt;  | 
-| section | note |  - | Rmk | &lt;R&gt;  | 
+| section | note |  - | Rmk | &lt;@n&gt;  | 
 
 [Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-rx-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-rx-composition-s01.xml.html)
 

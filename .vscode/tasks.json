@@ -162,6 +162,25 @@
                 "-spec",
                 "${workspaceRoot}/validator/igpack.zip"
             ]
+        },
+        {
+            "taskName": "xsl mp bundle to qr",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/tools/saxon9he.jar",
+                "-s:${file}",
+                "-xsl:${workspaceRoot}/chmed16aq/chmed16af-mp_to_chmed16aq-mp.xsl",
+                "-o:${workspaceRoot}/chmed16aq/chmed16aq-mp-output.xml"
+            ]
+        },         {
+            "taskName": "xsd: validate xml with chmed16aq-mp.xsd",
+            "args": [
+                "-jar",
+                "${workspaceRoot}/tools/xsdv.jar",
+                "${workspaceRoot}/chmed16aq/chmed16aq-mp.xsd",
+                "${file}"                
+            ]
         }
+
     ]
 }

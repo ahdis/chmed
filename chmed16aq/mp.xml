@@ -1,4 +1,5 @@
-<MP v="1.0">
+<MP v="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd"></MP>
+<!--  
     <C i="" c="" at="" ap="" n="" r="">
         <A i="" z="" />
         <P i="" g="" f="" t="" g="" b="" l="" p="" c="" cl="" />
@@ -9,4 +10,4 @@
         </MS>    
     </M>
     <H w="" h="" m="" p="" tw="" td="" r1="" r2="" r3="" r5="" r6="" />
-</MP>
+-->  

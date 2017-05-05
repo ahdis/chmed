@@ -2,7 +2,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-observation-s01-timeofgestation"/>
     <meta>
-        <profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-timeofgestation" />
+        <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation" />
     </meta>
     <text>
         <status value="generated"/>

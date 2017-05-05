@@ -2,6 +2,110 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified" attributeFormDefault="unqualified">
 
+
+
+<!-- <P i="" g="" f="" t="" g="" b="" l="" p="" c="" cl="" />  --> 
+
+	<xs:complexType name="MedicationPlanPatientType">
+		<xs:annotation>
+			<xs:documentation>Medication Plan Patient Shorthand</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="i">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="7601[0-9]{9}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="g">
+			<xs:annotation>
+				<xs:documentation>given name of the patient
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="f">
+			<xs:annotation>
+				<xs:documentation>family name of the patient
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="t">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="ag">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="b">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="l">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="p">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="c">
+			<xs:annotation>
+				<xs:documentation>
+				</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	
+	</xs:complexType>
+
+
+
 	<xs:complexType name="PractitionerType">
 		<xs:annotation>
 			<xs:documentation>Practitioner Shorthand</xs:documentation>
@@ -40,6 +144,8 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:complexType>
+
+
 
 
 	<xs:complexType name="MedicationPlanCompositionType">

@@ -2,7 +2,7 @@
 <StructureDefinition 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-practitioner" />
-	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner" />
+	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner" />
 	<name value="Practitioner" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
@@ -13,7 +13,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile on Practitioner"/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>

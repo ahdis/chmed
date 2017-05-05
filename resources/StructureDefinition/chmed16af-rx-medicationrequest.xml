@@ -2,7 +2,7 @@
 <StructureDefinition 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-rx-medicationrequest" />
-	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-medicationrequest" />
+	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest" />
 	<name value="MedicationRequest (Prescription)" />
 	<title value="MedicationRequest (Prescription)"/>
 	<status value="draft" />
@@ -14,7 +14,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile on MedicationRequest for Prescription"/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
@@ -288,7 +288,7 @@
 			</mapping>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.sequence">
-			<path value="MedicationRequest.dosageInstructionsequence"/>
+			<path value="MedicationRequest.dosageInstruction.sequence"/>
 			<short value="The order of the dosage instructions"/>
 			<definition value="Indicates the order in which the dosage instructions should be applied or interpreted."/>
 			<requirements value="If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential."/>
@@ -300,7 +300,7 @@
 			<isSummary value="true"/>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.text">
-			<path value="MedicationRequest.dosageInstructiontext"/>
+			<path value="MedicationRequest.dosageInstruction.text"/>
 			<short value="Free text dosage instructions e.g. SIG"/>
 			<definition value="Free text dosage instructions e.g. SIG."/>
 			<requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing."/>
@@ -316,7 +316,7 @@
 			</mapping>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.additionalInstruction">
-			<path value="MedicationRequest.dosageInstructionadditionalInstruction"/>
+			<path value="MedicationRequest.dosageInstruction.additionalInstruction"/>
 			<short value="Supplemental instruction - e.g. &quot;with meals&quot;"/>
 			<definition value="Supplemental instruction - e.g. &quot;with meals&quot;."/>
 			<requirements value="Additional instruction such as &quot;Swallow with plenty of water&quot; which may or may not be coded."/>
@@ -338,7 +338,7 @@
 			</binding>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.patientInstruction">
-			<path value="MedicationRequest.dosageInstructionpatientInstruction"/>
+			<path value="MedicationRequest.dosageInstruction.patientInstruction"/>
 			<short value="Patient or consumer oriented instructions"/>
 			<definition value="Instructions in terms that are understood by the patient or consumer."/>
 			<min value="0"/>
@@ -349,7 +349,7 @@
 			<isSummary value="true"/>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.timing">
-			<path value="MedicationRequest.dosageInstructiontiming"/>
+			<path value="MedicationRequest.dosageInstruction.timing"/>
 			<short value="When medication should be administered"/>
 			<definition value="When medication should be administered."/>
 			<comment value="This attribute may not always be populated while the Dosage.text is expected to be populated.  If both are populated, then the Dosage.text should reflect the content of the Dosage.timing."/>
@@ -366,7 +366,7 @@
 			</mapping>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.asNeeded[x]">
-			<path value="MedicationRequest.dosageInstructionasNeeded[x]"/>
+			<path value="MedicationRequest.dosageInstruction.asNeeded[x]"/>
 			<short value="Take &quot;as needed&quot; (for x)"/>
 			<definition value="Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept)."/>
 			<comment value="Can express &quot;as needed&quot; without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express &quot;as needed&quot; with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not &quot;prn&quot; or &quot;as needed&quot;."/>
@@ -380,7 +380,7 @@
 			</type>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.site">
-			<path value="MedicationRequest.dosageInstructionsite"/>
+			<path value="MedicationRequest.dosageInstruction.site"/>
 			<short value="Body site to administer to"/>
 			<definition value="Body site to administer to."/>
 			<comment value="If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [body-site-instance](extension-body-site-instance.html).  May be a summary code, or a reference to a very precise definition of the location, or both."/>
@@ -393,7 +393,7 @@
 			<isSummary value="true"/>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.route">
-			<path value="MedicationRequest.dosageInstructionroute"/>
+			<path value="MedicationRequest.dosageInstruction.route"/>
 			<short value="How drug should enter body"/>
 			<definition value="How drug should enter body."/>
 			<requirements value="A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient&#39;s body."/>
@@ -410,7 +410,7 @@
 				<strength value="required"/>
 				<description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."/>
 				<valueSetReference>
-					<reference value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-cdtyp26"/>
+					<reference value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-cdtyp26"/>
 				</valueSetReference>
 			</binding>
 			<mapping>
@@ -419,7 +419,7 @@
 			</mapping>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.method">
-			<path value="MedicationRequest.dosageInstructionmethod"/>
+			<path value="MedicationRequest.dosageInstruction.method"/>
 			<short value="Technique for administering medication"/>
 			<definition value="Technique for administering medication."/>
 			<comment value="Terminologies used often pre-coordinate this term with the route and or form of administration."/>
@@ -428,7 +428,7 @@
 			<max value="0"/>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.dose[x]">
-			<path value="MedicationRequest.dosageInstructiondose[x]"/>
+			<path value="MedicationRequest.dosageInstruction.dose[x]"/>
 			<short value="Amount of medication per dose"/>
 			<definition value="Amount of medication per dose."/>
 			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
@@ -448,11 +448,11 @@
 				<map value="doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo"/>
 			</mapping>
 		</element>
-		<!--		
-				<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.doseQuantity.system"><path value="MedicationRequest.dosageInstructiondoseQuantity.system" /><min value="1" /><max value="1" /><type><code value="uri" /></type><fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" /></element>
+		<!-- FIXME		
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.doseQuantity.system"><path value="MedicationRequest.dosageInstruction.doseQuantity.system" /><min value="1" /><max value="1" /><type><code value="uri" /></type><fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" /></element>
 -->
-	<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerPeriod">
-			<path value="MedicationRequest.dosageInstructionmaxDosePerPeriod"/>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerPeriod">
+			<path value="MedicationRequest.dosageInstruction.maxDosePerPeriod"/>
 			<short value="Upper limit on medication per unit of time"/>
 			<definition value="Upper limit on medication per unit of time."/>
 			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example &quot;2 tablets every 4 hours to a maximum of 8/day&quot;."/>
@@ -468,22 +468,8 @@
 				<map value="TakingTime.MA"/>
 			</mapping>
 		</element>
-		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerRequest">
-			<path value="MedicationRequest.dosageInstructionmaxDosePerRequest"/>
-			<short value="Upper limit on medication per administration"/>
-			<definition value="Upper limit on medication per administration."/>
-			<comment value="This is intended for use as an adjunct to the dosage when there is an upper cap.  For example, a body surface area related dose with a maximum amount, such as 1.5 mg/m2 (maximum 2 mg) IV over 5 – 10 minutes would have doseQuantity of 1.5 mg/m2 and maxDosePerRequest of 2 mg."/>
-			<requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject per administration."/>
-			<min value="0"/>
-			<max value="0"/>
-			<type>
-				<code value="Quantity"/>
-				<profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
-			</type>
-			<isSummary value="true"/>
-		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerLifetime">
-			<path value="MedicationRequest.dosageInstructionmaxDosePerLifetime"/>
+			<path value="MedicationRequest.dosageInstruction.maxDosePerLifetime"/>
 			<short value="Upper limit on medication per lifetime of the patient"/>
 			<definition value="Upper limit on medication per lifetime of the patient."/>
 			<requirements value="The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject."/>
@@ -496,7 +482,7 @@
 			<isSummary value="true"/>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.rate[x]">
-			<path value="MedicationRequest.dosageInstructionrate[x]"/>
+			<path value="MedicationRequest.dosageInstruction.rate[x]"/>
 			<short value="Amount of medication per unit of time"/>
 			<definition value="Amount of medication per unit of time."/>
 			<comment value="It is possible to supply both a rate and a doseQuantity to provide full details about how the medication is to be administered and supplied. If the rate is intended to change over time, depending on local rules/regulations, each change should be captured as a new version of the MedicationRequest with an updated rate, or captured with a new MedicationRequest with the new rate."/>
@@ -518,7 +504,7 @@
 				<identity value="rim"/>
 				<map value=".rateQuantity"/>
 			</mapping>
-		</element> 
+		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest">
 			<path value="MedicationRequest.dispenseRequest"/>
 			<short value="Medication supply authorization"/>

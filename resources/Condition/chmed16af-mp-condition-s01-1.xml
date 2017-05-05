@@ -2,7 +2,7 @@
   <id value="chmed16af-mp-condition-s01-1"/> 
 	<meta>
 		<profile
-			value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks" />
+			value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
 	</meta>
   <text> 
     <status value="generated"/> 
@@ -11,14 +11,14 @@
   <clinicalStatus value="active"/> 
   <category> 
     <coding> 
-      <system value="https://index.hcisolutions.ch/codes/riskcategory"/> 
+      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/> 
       <code value="1"/> 
       <display value="Renal Insufficiency"/> 
     </coding> 
   </category> 
   <code> 
     <coding> 
-      <system value="https://index.hcisolutions.ch/codes/cdscode"/> 
+      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/> 
       <code value="577"/> 
       <display value="Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"/> 
     </coding> 

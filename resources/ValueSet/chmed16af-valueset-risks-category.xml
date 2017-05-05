@@ -2,11 +2,7 @@
 <ValueSet 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-valueset-risks-category" />
-	<meta>
-		<versionId value="1" />
-		<lastUpdated value="2017-02-23T16:49:49.653+11:00" />
-	</meta>
-	<url value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-risks-category" />
+	<url value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-category" />
 	<version value="CHMED16A" />
 	<name value="Risk categories" />
 	<status value="active" />
@@ -21,7 +17,7 @@
 	<description value="Possible risk categories" />
 	<compose>
 		<include>
-			<system value="http://emediplan.ch/chmed16af/CodeSystem/chmed16af-codesystem-risks-category"/>
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
 		</include>
 	</compose>
 </ValueSet>

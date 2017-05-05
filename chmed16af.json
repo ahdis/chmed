@@ -9,7 +9,8 @@
     "output": "output",
     "qa": "qa",
     "txCache": "txCache",
-    "specification": "http://hl7-fhir.github.io/"
+    "specification": "http://hl7.org/fhir/STU3/",
+    "version" : "3.0.1"
   },
   "defaults": {
     "Any": {
@@ -23,9 +24,9 @@
       "template-base": "instance-template-vs.html"
     }
   },
-  "canonicalBase": "http://emediplan.ch/fhir/chmed16af",
+  "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
   "source": "ImplementationGuide/chmed16af-ig.xml",
-  "sct-edition": "http://snomed.info/sct/7900000000000207008",
+  "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {
     "CodeSystem/chmed16af-codesystem-cdtyp9": {
       "base": "CodeSystem-chmed16af-codesystem-cdtyp9.html"

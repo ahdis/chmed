@@ -2,9 +2,9 @@
 	<id value="chmed16af-mp-composition-s01" />
 	<meta>
 		<profile
-			value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition" />
+			value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition" />
 	</meta>
-	<extension url="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver">
+	<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
 		<valueReference>
 			<reference value="Practitioner/chmed16af-practitioner-s01" />
 		</valueReference>

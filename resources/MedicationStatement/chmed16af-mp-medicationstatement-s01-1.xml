@@ -2,7 +2,7 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-medicationstatement-s01-1" />
 	<meta>
-		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
 	</meta>
 	<text>
 		<status value="generated" />
@@ -14,7 +14,7 @@
 		<Medication>
 			<id value="cont1" />
 			<meta>
-				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication" />
+				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
 			</meta>
 			<code>
 				<coding>

@@ -2,7 +2,7 @@
 	<id value="chmed16af-mp-medicationstatement-s01-3" />
 	<meta>
 		<lastUpdated value="2017-02-23T13:17:28Z" />
-		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement" />
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
 	</meta>
 	<text>
 		<status value="generated" />
@@ -14,7 +14,7 @@
 		<Medication>
 			<id value="cont3" />
 			<meta>
-				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication" />
+				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
 			</meta>
 			<code>
 				<coding>
@@ -44,9 +44,6 @@
 		<text value="Bluthochdruck/Herz" />
 	</reasonCode>
 	<dosage>
-		<additionalInstruction>
-			<text value="-" />
-		</additionalInstruction>
 		<timing>
 			<repeat>
 				<when value="PCM" />

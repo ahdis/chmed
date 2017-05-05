@@ -2,7 +2,7 @@
 	<id value="chmed16af-practitioner-s01" />
     <meta>
 		<lastUpdated value="2017-02-08T13:17:28Z" />
-		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner" />
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner" />
 	</meta>
 	<text>
 		<status value="generated" />

@@ -1,7 +1,7 @@
 <CodeSystem 
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-codesystem-risks-cdscode"/>
-    <url value="http://emediplan.ch/chmed16af/CodeSystem/chmed16af-codesystem-risks-cdscode" />
+    <url value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode" />
     <identifier>
         <system value="https://index.hcisolutions.ch/codes/"/>
         <value value="risks-cdscode"/>
@@ -354,7 +354,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux immunoglobulines (humaines) "/>
+            <value value="Allergie aux immunoglobulines (humaines)"/>
         </designation>
     </concept>
     <concept>
@@ -390,7 +390,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la cire d'abeille "/>
+            <value value="Allergie à la cire d'abeille"/>
         </designation>
     </concept>
     <concept>
@@ -462,7 +462,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'acide caféique "/>
+            <value value="Allergie à l'acide caféique"/>
         </designation>
     </concept>
     <concept>
@@ -498,7 +498,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au gattilier "/>
+            <value value="Allergie au gattilier"/>
         </designation>
     </concept>
     <concept>
@@ -786,7 +786,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux glycosaminoglycanes "/>
+            <value value="Allergie aux glycosaminoglycanes"/>
         </designation>
     </concept>
     <concept>
@@ -810,7 +810,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux glucosides digitaliques "/>
+            <value value="Allergie aux glucosides digitaliques"/>
         </designation>
     </concept>
     <concept>
@@ -882,7 +882,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux para-amino-benzoyls "/>
+            <value value="Allergie aux para-amino-benzoyls"/>
         </designation>
     </concept>
     <concept>
@@ -906,7 +906,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux bêta-lactames "/>
+            <value value="Allergie aux bêta-lactames"/>
         </designation>
     </concept>
     <concept>
@@ -1002,7 +1002,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux héparinoïdes "/>
+            <value value="Allergie aux héparinoïdes"/>
         </designation>
     </concept>
     <concept>
@@ -1014,7 +1014,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'acide folique "/>
+            <value value="Allergie à l'acide folique"/>
         </designation>
     </concept>
     <concept>
@@ -1182,7 +1182,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Intolérance au saccharose (héréditaire) "/>
+            <value value="Intolérance au saccharose (héréditaire)"/>
         </designation>
     </concept>
     <concept>
@@ -1542,7 +1542,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux benzothiazolsulfénamides "/>
+            <value value="Allergie aux benzothiazolsulfénamides"/>
         </designation>
     </concept>
     <concept>
@@ -1830,7 +1830,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'albumine de saumon "/>
+            <value value="Allergie à l'albumine de saumon"/>
         </designation>
     </concept>
     <concept>
@@ -3390,7 +3390,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux lactones sesquiterpéniques "/>
+            <value value="Allergie aux lactones sesquiterpéniques"/>
         </designation>
     </concept>
     <concept>
@@ -3402,7 +3402,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux acides gras de noix de coco "/>
+            <value value="Allergie aux acides gras de noix de coco"/>
         </designation>
     </concept>
     <concept>
@@ -3558,7 +3558,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la gomme de sterculia "/>
+            <value value="Allergie à la gomme de sterculia"/>
         </designation>
     </concept>
     <concept>
@@ -3606,7 +3606,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux bituminosulfonates d'ammonium "/>
+            <value value="Allergie aux bituminosulfonates d'ammonium"/>
         </designation>
     </concept>
     <concept>
@@ -3630,7 +3630,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au plantain "/>
+            <value value="Allergie au plantain"/>
         </designation>
     </concept>
     <concept>
@@ -3726,7 +3726,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux cyclopropénones "/>
+            <value value="Allergie aux cyclopropénones"/>
         </designation>
     </concept>
     <concept>
@@ -3906,7 +3906,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au jaune de quinoléine "/>
+            <value value="Allergie au jaune de quinoléine"/>
         </designation>
     </concept>
     <concept>
@@ -3930,7 +3930,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux colorants anthraquinoniques "/>
+            <value value="Allergie aux colorants anthraquinoniques"/>
         </designation>
     </concept>
     <concept>
@@ -3942,7 +3942,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux colorants azoïques "/>
+            <value value="Allergie aux colorants azoïques"/>
         </designation>
     </concept>
     <concept>
@@ -4026,7 +4026,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'hydroxychlorure d'aluminium et de zirconium "/>
+            <value value="Allergie à l'hydroxychlorure d'aluminium et de zirconium"/>
         </designation>
     </concept>
     <concept>
@@ -4398,7 +4398,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au cyclamate "/>
+            <value value="Allergie au cyclamate"/>
         </designation>
     </concept>
     <concept>
@@ -4818,7 +4818,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au vaccin contre la poliomyélite "/>
+            <value value="Allergie au vaccin contre la poliomyélite"/>
         </designation>
     </concept>
     <concept>
@@ -4842,7 +4842,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au vaccin contre la coqueluche "/>
+            <value value="Allergie au vaccin contre la coqueluche"/>
         </designation>
     </concept>
     <concept>
@@ -4878,7 +4878,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au vaccin contre la varicelle "/>
+            <value value="Allergie au vaccin contre la varicelle"/>
         </designation>
     </concept>
     <concept>
@@ -5010,7 +5010,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux antagonistes du récepteur de la sérotonine "/>
+            <value value="Allergie aux antagonistes du récepteur de la sérotonine"/>
         </designation>
     </concept>
     <concept>
@@ -5070,7 +5070,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la streptodornase "/>
+            <value value="Allergie à la streptodornase"/>
         </designation>
     </concept>
     <concept>
@@ -5142,7 +5142,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la phénolphthaléine "/>
+            <value value="Allergie à la phénolphthaléine"/>
         </designation>
     </concept>
     <concept>
@@ -5226,7 +5226,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux antimétabolites (type purine) "/>
+            <value value="Allergie aux antimétabolites (type purine)"/>
         </designation>
     </concept>
     <concept>
@@ -5250,7 +5250,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'insuline "/>
+            <value value="Allergie à l'insuline"/>
         </designation>
     </concept>
     <concept>
@@ -5430,7 +5430,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la calcitonine (saumon) "/>
+            <value value="Allergie à la calcitonine (saumon)"/>
         </designation>
     </concept>
     <concept>
@@ -5838,7 +5838,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l’urokinase "/>
+            <value value="Allergie à l’urokinase"/>
         </designation>
     </concept>
     <concept>
@@ -5922,7 +5922,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie au vaccin antipneumococcique "/>
+            <value value="Allergie au vaccin antipneumococcique"/>
         </designation>
     </concept>
     <concept>
@@ -5934,7 +5934,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'anatoxine diphtérique "/>
+            <value value="Allergie à l'anatoxine diphtérique"/>
         </designation>
     </concept>
     <concept>
@@ -5970,7 +5970,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la protamine "/>
+            <value value="Allergie à la protamine"/>
         </designation>
     </concept>
     <concept>
@@ -6306,7 +6306,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'acide nicotinique "/>
+            <value value="Allergie à l'acide nicotinique"/>
         </designation>
     </concept>
     <concept>
@@ -6330,7 +6330,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie aux monobactams "/>
+            <value value="Allergie aux monobactams"/>
         </designation>
     </concept>
     <concept>
@@ -6450,7 +6450,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à l'or "/>
+            <value value="Allergie à l'or"/>
         </designation>
     </concept>
     <concept>
@@ -6810,7 +6810,7 @@
         </designation>
         <designation>
             <language value="fr-CH"/>
-            <value value="Allergie à la benzbromarone "/>
+            <value value="Allergie à la benzbromarone"/>
         </designation>
     </concept>
     <concept>

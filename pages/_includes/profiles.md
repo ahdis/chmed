@@ -51,7 +51,7 @@ The Composition ressource defines the following parameter for the medication pla
 | identifier  | Insurance card number for this patient  | Identifier  | Patient.PatientId[Type=1] | @i    | 
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | @g, @f    | 
 | telecom  | telephone number  | ContactPoint  | Patient.Phone | @t    | 
-| gender  | gender  | code  | Patient.gender, male=1, female=2 | @g=m or f | 
+| gender  | gender  | code  | Patient.gender, male=1, female=2 | @ag=m or f | 
 | birthDate  | the date of birth  | date  |Patient.BDt | @b | 
 | address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | @l, @p, @c | 
 | communication.language  | language for the patient  | CodeableConcept  |Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" | @cl | 

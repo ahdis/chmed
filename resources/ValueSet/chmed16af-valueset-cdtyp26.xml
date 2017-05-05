@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-valueset-cdtyp26" />
     <url
-		value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-cdtyp26" />
+		value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-cdtyp26" />
    <version value="Release 2011-11" />
     <name value="ROA (Route of administration)" />
     <status value="active" />
@@ -18,7 +18,7 @@
     <description value="Route of administration" />
     <compose>
         <include>
-			<system value="http://emediplan.ch/chmed16af/CodeSystem/chmed16af-codesystem-cdtyp26" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
         </include>
     </compose>
 </ValueSet>

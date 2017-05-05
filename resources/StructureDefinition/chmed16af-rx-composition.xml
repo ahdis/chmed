@@ -2,7 +2,7 @@
 <StructureDefinition 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-rx-composition" />
-	<url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-composition" />
+	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition" />
 	<name value="Composition (Medication Plan)" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
@@ -13,7 +13,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile for the Composition Resource of the medication plan."/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
@@ -38,7 +38,7 @@
 			<path value="Composition.identifier"/>
 			<short value="Logical identifier for document (GUID)"/>
 			<definition value="Logical identifier for document (GUID)"/>
-			<comment value=" "/>
+			<comment value="-"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -54,13 +54,13 @@
 			<path value="Composition.subject"/>
 			<short value="Reference to the Patient"/>
 			<definition value="Reference to the Patient."/>
-			<comment value=" "/>
+			<comment value="-"/>
 			<requirements value="Essential metadata for searching for the composition. Identifies who and/or what the composition/document is about."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-pmcrx-patient"/>
+				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmcrx-patient"/>
 			</type>
 			<isSummary value="true"/>
 			<mapping>
@@ -102,7 +102,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner"/>
+				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
 			</type>
 			<isSummary value="true"/>
 			<mapping>
@@ -296,7 +296,7 @@
 			<max value="*"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-medicationstatement"/>
+				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationstatement"/>
 			</type>
 		</element>
 		<!-- sectionnote -->

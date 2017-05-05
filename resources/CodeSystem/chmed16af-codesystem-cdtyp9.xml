@@ -1,7 +1,7 @@
 <CodeSystem 
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-codesystem-cdtyp9"/>
-    <url value="http://emediplan.ch/chmed16af/CodeSystem/chmed16af-codesystem-cdtyp9" />
+    <url value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
     <identifier>
         <system value="https://index.hcisolutions.ch/codes/"/>
         <value value="cdtyp9"/>

@@ -58,7 +58,7 @@ Transform from fhir example
 <MP v="1.0">
     <C i="" c="" at="" ap="" n="" r="">
         <A i="" z="" />
-        <P i="" g="" f="" t="" g="" b="" l="" p="" c="" cl="" />
+        <P i="" g="" f="" t="" ag="" b="" l="" p="" c="" cl="" />
     </C>    
     <M>
         <MS i="" s="" r="" n="">    

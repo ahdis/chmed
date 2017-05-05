@@ -4,7 +4,7 @@
 	<id value="chmed16af-mp-bundle-s01"/>
 	<meta>
 		<versionId value="1.0"/>
-		<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-bundle" />
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-bundle" />
 	</meta>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -17,9 +17,9 @@
 			<Composition>
 				<id value="chmed16af-mp-composition-s01"/>
 				<meta>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
 				</meta>
-				<extension url="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver">
+				<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
 					<valueReference>
 						<reference value="Practitioner/chmed16af-practitioner-s01"/>
 					</valueReference>
@@ -140,7 +140,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:57Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-patient"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -188,7 +188,7 @@
 				<id value="chmed16af-practitioner-s01" />
 				<meta>
 					<lastUpdated value="2017-02-08T13:17:28Z" />
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-practitioner" />
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner" />
 				</meta>
 				<text>
 					<status value="generated" />
@@ -222,7 +222,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:51Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -234,7 +234,7 @@
 					<Medication>
 						<id value="cont1"/>
 						<meta>
-							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+							<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
 						</meta>
 						<code>
 							<coding>
@@ -296,7 +296,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:52Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -308,7 +308,7 @@
 					<Medication>
 						<id value="cont2"/>
 						<meta>
-							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+							<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
 						</meta>
 						<code>
 							<coding>
@@ -367,7 +367,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:52Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -379,7 +379,7 @@
 					<Medication>
 						<id value="cont3"/>
 						<meta>
-							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+							<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
 						</meta>
 						<code>
 							<coding>
@@ -442,7 +442,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:53Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-medicationstatement"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -454,7 +454,7 @@
 					<Medication>
 						<id value="cont4"/>
 						<meta>
-							<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-medication"/>
+							<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
 						</meta>
 						<code>
 							<coding>
@@ -614,7 +614,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:55Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -645,7 +645,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:55Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-prematurebaby"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-prematurebaby"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -676,7 +676,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:49Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -713,7 +713,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:49Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -743,7 +743,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:50Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -780,7 +780,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:50Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -810,7 +810,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:50Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
@@ -840,7 +840,7 @@
 				<meta>
 					<versionId value="1"/>
 					<lastUpdated value="2017-03-20T13:49:51Z"/>
-					<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>

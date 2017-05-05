@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-rx-bundle" />
 	<url
-		value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-bundle" />
+		value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-bundle" />
 	<name value="Prescription" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
@@ -13,7 +13,7 @@
 		</telecom>
 	</contact>
 	<description value="A prescription can be structured in a bundle according to the prescription bundle profile."/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
     <mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
@@ -34,6 +34,7 @@
 			<path value="Bundle.type" />
 			<fixedCode value="document" />
 		</element>
+<!--		
 		<element id="chmed16af-rx-bundle.Bundle.entry">
 			<path value="Bundle.entry" />
  			<slicing>
@@ -47,15 +48,16 @@
 			<min value="1" />
 			<max value="*" />
 		</element>
-		<element id="chmed16af-rx-bundle.Bundle.entry.resource:Composition">
-			<path value="Bundle.entry.resource" /> 
+		<element id="chmed16af-rx-bundle.Bundle.entry:Composition">
+			<path value="Bundle.entry" /> 
  		  <sliceName value="Composition" />
  			<min value="1" />
 			<max value="1" />
 			<type>
 				<code value="Composition" />
- 				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-rx-composition"/> 
+ 				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition"/> 
 			</type>
 		</element>
+-->		
 	</differential>
 </StructureDefinition>

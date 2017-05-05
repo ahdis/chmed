@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition 
+	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-pmc-bundle" />
-	<url
-		value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-pmc-bundle" />
+	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle" />
 	<name value="PolymedicationCheck" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
@@ -13,8 +13,8 @@
 		</telecom>
 	</contact>
 	<description value="Profile for poly medication check document. Swiss community pharmacies can offer a Polymedication Check (PMC) to patients on greater or equals four prescribed drugs taken over more then 3 months."/>
-	<fhirVersion value="3.0.0" />
-    <mapping>
+	<fhirVersion value="3.0.1" />
+	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
 		<name value="Mapping to CHMED16A"/>
@@ -34,9 +34,10 @@
 			<path value="Bundle.type" />
 			<fixedCode value="document" />
 		</element>
+<!--		
 		<element id="chmed16af-pmc-bundle.Bundle.entry">
 			<path value="Bundle.entry" />
- 			<slicing>
+			<slicing>
 				<discriminator>
 					<type value="type" />
 					<path value="resource.type" />
@@ -47,15 +48,16 @@
 			<min value="1" />
 			<max value="*" />
 		</element>
-		<element id="chmed16af-pmc-bundle.Bundle.entry.resource:Composition">
-			<path value="Bundle.entry.resource" /> 
- 		  <sliceName value="Composition" />
- 			<min value="1" />
+		<element id="chmed16af-pmc-bundle.Bundle.entry:composition">
+			<path value="Bundle.entry" />
+			<sliceName value="composition" />
+			<min value="1" />
 			<max value="1" />
 			<type>
 				<code value="Composition" />
- 				<profile value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-pmc-composition"/> 
+				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition"/> 
 			</type>
 		</element>
+-->		
 	</differential>
 </StructureDefinition>

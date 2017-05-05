@@ -53,6 +53,8 @@
             "args": [
                 "-jar",
                 "${workspaceRoot}/validator/org.hl7.fhir.validator.jar",
+                "-tx",
+                "n/a"                ,
                 "${file}"
             ],
             "problemMatcher": {

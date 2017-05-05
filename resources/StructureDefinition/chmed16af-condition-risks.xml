@@ -2,7 +2,7 @@
 <StructureDefinition 
   xmlns="http://hl7.org/fhir">
   <id value="chmed16af-condition-risks"/>
-  <url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-condition-risks" />
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
   <name value="Risks"/>
   <title value="Risks"/>
 	<status value="draft" />
@@ -14,7 +14,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile on Condition for Risks"/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -84,7 +84,7 @@
         <strength value="required"/>
         <description value="A category assigned to the condition."/>
         <valueSetReference>
-          <reference value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-risks-category"/>
+          <reference value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-category"/>
         </valueSetReference>
       </binding>
       <mapping>
@@ -122,7 +122,7 @@
         <strength value="required"/>
         <description value="Identification of risk"/>
         <valueSetReference>
-          <reference value="http://emediplan.ch/fhir/chmed16af/ValueSet/chmed16af-valueset-risks-cdscode"/>
+          <reference value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-cdscode"/>
         </valueSetReference>
       </binding>
       <mapping>

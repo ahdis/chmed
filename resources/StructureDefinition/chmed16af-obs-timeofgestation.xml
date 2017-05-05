@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- FIMXE slicing does here not yet work -->
 <StructureDefinition 
   xmlns="http://hl7.org/fhir">
   <id value="chmed16af-obs-timeofgestation"/>
-  <url value="http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-timeofgestation" />
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation" />
   <name value="Time of gestation"/>
   <title value="Time of gestation"/>
 	<status value="draft" />
@@ -14,7 +15,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile on Oberservation for Time of gestation"/>
-	<fhirVersion value="3.0.0" />
+	<fhirVersion value="3.0.1" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -74,13 +75,11 @@
       </type>
       <fixedCode value="161713000"/>
     </element>
-    <!-- FIXME
     <element id="Observation:timeofgestation.valueQuantity">
       <path value="Observation.valueQuantity"/>
       <min value="0"/>
       <max value="0"/>
     </element>
-    -->
     <element id="Observation:timeofgestation.component">
       <path value="Observation.component"/>
       <slicing>
@@ -133,7 +132,6 @@
       </type>
       <fixedCode value="49051-6"/>
     </element>
-    <!-- FIMXE
     <element id="Observation:timeofgestation.component:weektg.valueQuantity">
       <path value="Observation.component.valueQuantity"/>
       <type>
@@ -151,7 +149,6 @@
       </type>
       <fixedCode value="wk"/>
     </element>
-    -->
     <element id="Observation:timeofgestation.component:daytg">
       <path value="Observation.component"/>
       <sliceName value="daytg"/>
@@ -191,7 +188,6 @@
       </type>
       <fixedCode value="49052-4"/>
     </element>
-    <!-- FIXME
     <element id="Observation:timeofgestation.component:daytg.valueQuantity">
       <path value="Observation.component.valueQuantity"/>
       <type>
@@ -209,6 +205,5 @@
       </type>
       <fixedCode value="d"/>
     </element>
-    -->
   </differential>
 </StructureDefinition>

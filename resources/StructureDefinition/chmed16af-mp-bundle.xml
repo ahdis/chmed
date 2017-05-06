@@ -33,31 +33,37 @@
 		<element id="chmed16af-mp-bundle.Bundle.type">
 			<path value="Bundle.type" />
 			<fixedCode value="document" />
-		</element>		
-<!-- FIMXE
+		</element>
 		<element id="chmed16af-mp-bundle.Bundle.entry">
 			<path value="Bundle.entry" />
-			<slicing>
-				<discriminator>
-					<type value="type" />
-					<path value="resource.type" />
-				</discriminator>
-				<ordered value="true" />
-				<rules value="openAtEnd" />
-			</slicing>
+            <slicing>
+                <discriminator>
+                    <type value="type" />
+                    <path value="resource" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
 			<min value="1" />
 			<max value="*" />
 		</element>
 		<element id="chmed16af-mp-bundle.Bundle.entry:composition">
-			<path value="Bundle.entry" />
+			<path value="Bundle.entry"/>
 			<sliceName value="composition" />
-			<min value="1" />
-			<max value="1" />
-			<type>
-				<code value="Composition" />
-				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/> 
-			</type>
+			<short value="A resource in the bundle"/>
+			<definition value="The Resources for the entry."/>
+			<min value="1"/>
+			<max value="1"/>
 		</element>
--->		
+        <element id="Bundle.entry.resource:composition">
+            <path value="Bundle.entry.resource" />
+            <short value="A resource in the bundle" />
+            <definition value="The Resources for the entry." />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Composition" />
+                <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition" />
+            </type>
+        </element>
 	</differential>
 </StructureDefinition>

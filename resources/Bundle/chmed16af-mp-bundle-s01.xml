@@ -3,20 +3,21 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-bundle-s01"/>
 	<meta>
-		<versionId value="1.0"/>
-		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-bundle" />
+		<lastUpdated value="2017-05-08T13:15:08Z"/>
 	</meta>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
-		<value value="urn:uuid:d97fc25a-c808-42fd-acaa-562a093aef03"/>
+		<value value="urn:uuid:090529d5-4231-47d6-bd59-81f74b2ec6c8"/>
 	</identifier>
 	<type value="document"/>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Composition/chmed16af-mp-composition-s01"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Composition/chmed16af-mp-composition-s01"/>
 		<resource>
 			<Composition>
 				<id value="chmed16af-mp-composition-s01"/>
 				<meta>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:12Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
 				</meta>
 				<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
@@ -125,7 +126,7 @@
 					<text>
 						<status value="additional"/>
 						<div 
-							xmlns="http://www.w3.org/1999/xhtml">Bemerkung zum Medikationsplan 																		
+							xmlns="http://www.w3.org/1999/xhtml"> Bemerkung 						
 						</div>
 					</text>
 				</section>
@@ -133,19 +134,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Patient/chmed16af-mp-patient-s01"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Patient/chmed16af-mp-patient-s01"/>
 		<resource>
 			<Patient>
 				<id value="chmed16af-mp-patient-s01"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:57Z"/>
+					<lastUpdated value="2017-05-08T11:04:19Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12 																				
+						xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12 					
 					</div>
 				</text>
 				<identifier>
@@ -182,52 +183,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Practitioner/chmed16af-practitioner-s01"/>
-		<resource>
-			<Practitioner>
-				<id value="chmed16af-practitioner-s01" />
-				<meta>
-					<lastUpdated value="2017-02-08T13:17:28Z" />
-					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner" />
-				</meta>
-				<text>
-					<status value="generated" />
-					<div 
-						xmlns="http://www.w3.org/1999/xhtml">
-						<p>Thomas Wälti			</p>
-					</div>
-				</text>
-				<identifier>
-					<use value="official" />
-					<system value="urn:oid:2.51.1.3" />
-					<value value="7601003178999" />
-				</identifier>
-				<identifier>
-					<use value="official" />
-					<system value="urn:oid:2.16.756.5.30.1.123.100.2.1.1" />
-					<value value="ZSR" />
-				</identifier>
-				<name>
-					<family value="Wälti" />
-					<given value="Thomas" />
-				</name>
-			</Practitioner>
-		</resource>
-	</entry>
-	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
+		<fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
 		<resource>
 			<MedicationStatement>
 				<id value="chmed16af-mp-medicationstatement-s01-1"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:51Z"/>
+					<versionId value="3"/>
+					<lastUpdated value="2017-05-08T11:04:15Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016 																					
+						xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016 					
 					</div>
 				</text>
 				<contained>
@@ -289,19 +257,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
+		<fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
 		<resource>
 			<MedicationStatement>
 				<id value="chmed16af-mp-medicationstatement-s01-2"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:52Z"/>
+					<lastUpdated value="2017-05-08T11:04:15Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016 																					
+						xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016 					
 					</div>
 				</text>
 				<contained>
@@ -360,19 +328,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
+		<fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
 		<resource>
 			<MedicationStatement>
 				<id value="chmed16af-mp-medicationstatement-s01-3"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:52Z"/>
+					<lastUpdated value="2017-05-08T11:04:16Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 																					
+						xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 					
 					</div>
 				</text>
 				<contained>
@@ -408,9 +376,6 @@
 					<text value="Bluthochdruck/Herz"/>
 				</reasonCode>
 				<dosage>
-					<additionalInstruction>
-						<text value="-"/>
-					</additionalInstruction>
 					<timing>
 						<repeat>
 							<when value="PCM"/>
@@ -435,19 +400,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
+		<fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
 		<resource>
 			<MedicationStatement>
 				<id value="chmed16af-mp-medicationstatement-s01-4"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:53Z"/>
+					<lastUpdated value="2017-05-08T11:04:16Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 																					
+						xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 					
 					</div>
 				</text>
 				<contained>
@@ -506,18 +471,17 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-mp-observation-s01-bodyweight"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Observation/chmed16af-mp-observation-s01-bodyweight"/>
 		<resource>
 			<Observation>
 				<id value="chmed16af-mp-observation-s01-bodyweight"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:58:50Z"/>
+					<profile value="http://hl7.org/fhir/StructureDefinition/bodyweight" />
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">72 kg 																					
+						xmlns="http://www.w3.org/1999/xhtml">72 kg 					
 					</div>
 				</text>
 				<status value="final"/>
@@ -559,18 +523,17 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-mp-observation-s01-bodyheight"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Observation/chmed16af-mp-observation-s01-bodyheight"/>
 		<resource>
 			<Observation>
 				<id value="chmed16af-mp-observation-s01-bodyheight"/>
 				<meta>
-					<versionId value="2"/>
-					<lastUpdated value="2017-03-20T13:58:36Z"/>
+					<profile value="http://hl7.org/fhir/StructureDefinition/bodyheight" />
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">178 cm 																					
+						xmlns="http://www.w3.org/1999/xhtml">178 cm 					
 					</div>
 				</text>
 				<status value="final"/>
@@ -607,19 +570,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-observation-s01-dateoflastmenustration"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Observation/chmed16af-observation-s01-dateoflastmenustration"/>
 		<resource>
 			<Observation>
 				<id value="chmed16af-observation-s01-dateoflastmenustration"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:55Z"/>
+					<lastUpdated value="2017-05-08T11:04:18Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016 																					
+						xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016 					
 					</div>
 				</text>
 				<status value="final"/>
@@ -638,19 +601,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Observation/chmed16af-observation-s01-prematurebaby"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Observation/chmed16af-observation-s01-prematurebaby"/>
 		<resource>
 			<Observation>
 				<id value="chmed16af-observation-s01-prematurebaby"/>
 				<meta>
 					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:55Z"/>
+					<lastUpdated value="2017-05-08T11:04:18Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-prematurebaby"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Premature baby: true 																					
+						xmlns="http://www.w3.org/1999/xhtml">Premature baby: true 					
 					</div>
 				</text>
 				<status value="final"/>
@@ -669,32 +632,32 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-1"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-1"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-1"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:49Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:13Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)																					
+						xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
 				<category>
 					<coding>
-						<system value="https://index.hcisolutions.ch/codes/riskcategory"/>
+						<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
 						<code value="1"/>
 						<display value="Renal Insufficiency"/>
 					</coding>
 				</category>
 				<code>
 					<coding>
-						<system value="https://index.hcisolutions.ch/codes/cdscode"/>
+						<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
 						<code value="577"/>
 						<display value="Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"/>
 					</coding>
@@ -706,19 +669,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-2"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-2"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-2"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:49Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:13Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded																					
+						xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
@@ -736,19 +699,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-3"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-3"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-3"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:13Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter																					
+						xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
@@ -773,19 +736,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-4"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-4"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-4"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:14Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded																					
+						xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
@@ -803,19 +766,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-5"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-5"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-5"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:50Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:14Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded																					
+						xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
@@ -833,19 +796,19 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="http://fhir3.healthintersections.com.au:80/open/Condition/chmed16af-mp-condition-s01-6"/>
+		<fullUrl value="http://test.fhir.org:80/r3/Condition/chmed16af-mp-condition-s01-6"/>
 		<resource>
 			<Condition>
 				<id value="chmed16af-mp-condition-s01-6"/>
 				<meta>
-					<versionId value="1"/>
-					<lastUpdated value="2017-03-20T13:49:51Z"/>
+					<versionId value="2"/>
+					<lastUpdated value="2017-05-08T11:04:14Z"/>
 					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
 				</meta>
 				<text>
 					<status value="generated"/>
 					<div 
-						xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie																					
+						xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie					
 					</div>
 				</text>
 				<clinicalStatus value="active"/>
@@ -872,6 +835,40 @@
 					<reference value="Patient/chmed16af-mp-patient-s01"/>
 				</subject>
 			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="http://test.fhir.org:80/r3/Practitioner/chmed16af-practitioner-s01"/>
+		<resource>
+			<Practitioner>
+				<id value="chmed16af-practitioner-s01"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2017-05-08T11:10:00Z"/>
+					<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
+				</meta>
+				<text>
+					<status value="generated"/>
+					<div 
+						xmlns="http://www.w3.org/1999/xhtml">
+						<p>Thomas Wälti </p>
+					</div>
+				</text>
+				<identifier>
+					<use value="official"/>
+					<system value="urn:oid:2.51.1.3"/>
+					<value value="7601003178999"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<system value="urn:oid:2.16.756.5.30.1.123.100.2.1.1"/>
+					<value value="ZSR"/>
+				</identifier>
+				<name>
+					<family value="Wälti"/>
+					<given value="Thomas"/>
+				</name>
+			</Practitioner>
 		</resource>
 	</entry>
 </Bundle>

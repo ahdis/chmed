@@ -1,40 +1,20 @@
 # Implementation Guide for eMediplan based on HL7 FHIR STU3
 
+[FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 
-Validator/igpublisher from trunk (development)
+Extending the CHMED16A format to a FHIR based definition (CHMED16AF) has the following advantages:
+* Support for [implementers](http://build.fhir.org/implsupport-module.html): .NET/Java and other implementations are availabe to work directly with FHIR Ressources, no separate Parser/Serializer has to be written
+* CHMED16AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined 
+* Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://www.e-health-suisse.ch/umsetzung/00252/index.html?lang=de).
+
+The CHEMD16AF format can bei either in XML or JSON format. However both are too big in size to be exchange in a qrcode. For this a shortened notation [CHMED16AQ](qrcode.html) has be developed similar to the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan)
 
 
- /Users/oliveregger/Documents/workspace_ehcmvn/eMediplan/chmed16af/validator/igpack.zip
+#source
 
-
-Problems with slicing/validator:
-
-Requiring an specific extensions as well as two sections in a Composition: 
-
-Example: https://github.com/ahdis/chmed16af/blob/master/resources/Composition/chmed16af-mp-composition-s01.xml
-Profile: https://github.com/ahdis/chmed16af/blob/master/resources/StructureDefinition/chmed16af-mp-composition.xml
+Publishing of the Implementation for eMediplan is currrencly a manual process
 
 ```
-  Error @ Composition.extension (line 8, col93) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element matches more than one slice
-  Error @ Composition.section[1] (line 40, col11) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element matches more than one slice
-  Error @ Composition.section[2] (line 62, col11) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element matches more than one slice
-  Error @ Composition.section[3] (line 102, col11) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element matches more than one slice
-  Error @ Composition (line 1, col42) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element 'Composition.section[sectionmed]': minimum required = 1, but only found 0
-  Error @ Composition (line 1, col42) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-mp-composition, Element 'Composition.section[sectionnote]': minimum required = 1, but only found 0
-```
-
-I tried a simliar setup following the BP profile from http://build.fhir.org/bp.profile.xml.html for time of gestation with two coded entries in components:
-
-Example: https://github.com/ahdis/chmed16af/blob/master/resources/StructureDefinition/chmed16af-obs-timeofgestation.xml
-Profile: https://github.com/ahdis/chmed16af/blob/master/resources/Observation/chmed16af-observation-s01-timeofgestation.xml
-
-But I get also similar errors:
-```
-  Error @ Observation.code.coding (line 15, col17) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-timeofgestation, Element matches more than one slice
-  Error @ Observation.component[1] (line 24, col16) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-timeofgestation, Element matches more than one slice
-  Error @ Observation.component[2] (line 39, col16) : Profile http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-obs-timeofgestation, Element matches more than one slice
-```
-So thats why I first thought its a problem with the validator after Llyod Message. But if you have any idea why my profiles are not working I would be glad to try alternate approaches.
-
 cd output
 ncftpput -R -f ../ncftp.cfg / ./
+```

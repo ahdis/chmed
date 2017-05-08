@@ -1,9 +1,9 @@
 <Observation 
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-mp-observation-s01-bodyheight"/>
-    <meta>
+   <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/bodyheight" /> 
-    </meta>
+    </meta>    
     <text>
         <status value="generated"/>
         <div 

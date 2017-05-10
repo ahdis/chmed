@@ -73,7 +73,7 @@
       <type>
         <code value="code"/>
       </type>
-      <fixedCode value="161713000"/>
+      <fixedCode value="445872007"/>
     </element>
     <element id="Observation:timeofgestation.valueQuantity">
       <path value="Observation.valueQuantity"/>

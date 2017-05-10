@@ -11,14 +11,14 @@
   <clinicalStatus value="active"/> 
   <category> 
     <coding> 
-      <system value="https://index.hcisolutions.ch/codes/riskcategory"/> 
+      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/> 
       <code value="3"/> 
       <display value="Reproduction"/> 
     </coding> 
   </category> 
   <code> 
     <coding> 
-      <system value="https://index.hcisolutions.ch/codes/cdscode"/> 
+      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/> 
       <code value="612"/> 
       <display value="Frauen im gebärfähigen Alter"/> 
     </coding> 

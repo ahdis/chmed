@@ -444,7 +444,7 @@
 			<type>
 				<code value="uri" />
 			</type>
-			<fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<fixedUri value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
 		</element>
 -->		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerPeriod">

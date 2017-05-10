@@ -48,13 +48,15 @@
 			<repeat>
 				<boundsPeriod>
 					<start value="2016-09-12" />
+					<end value="2020-09-12" />
 				</boundsPeriod>
-			</repeat>	
-		</timing>	
+				<when value="PCM" />
+			</repeat>
+		</timing>
 		<asNeededBoolean value="true" />
 		<route>
 			<coding>
-				<system value="https://index.hcisolutions.ch/codes/codetyp26" />
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
 				<code value="PO" />
 				<display value="per oral" />
 			</coding>
@@ -62,7 +64,7 @@
 		<doseQuantity>
 			<value value="1" />
 			<unit value="Stk" />
-			<system value="https://index.hcisolutions.ch/codes/cdtyp9" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
 			<code value="Stk" />
 		</doseQuantity>
 	</dosage>

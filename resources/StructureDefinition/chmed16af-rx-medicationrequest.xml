@@ -449,7 +449,7 @@
 			</mapping>
 		</element>
 		<!-- FIXME		
-		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.doseQuantity.system"><path value="MedicationRequest.dosageInstruction.doseQuantity.system" /><min value="1" /><max value="1" /><type><code value="uri" /></type><fixedUri value="https://index.hcisolutions.ch/codes/cdtyp9" /></element>
+		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.doseQuantity.system"><path value="MedicationRequest.dosageInstruction.doseQuantity.system" /><min value="1" /><max value="1" /><type><code value="uri" /></type><fixedUri value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" /></element>
 -->
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dosageInstruction.maxDosePerPeriod">
 			<path value="MedicationRequest.dosageInstruction.maxDosePerPeriod"/>

@@ -62,9 +62,9 @@ Transform from fhir example
     </C>    
     <M>
         <MS i="" s="" r="" n="">    
-            <d s="" e="" p="" r="" m="" d="" v="" h="" o="" dl="" dh="" dm="" />
+            <D s="" e="" p="" r="" m="" d="" v="" h="" o="" dl="" dh="" dm="" />
         </MS>    
     </M>
-    <H w="" h="" m="" p="" tw="" td="" r1="" r2="" r3="" r5="" r6="" />
+    <H w="" h="" m="" p="" tw="" td="" r1="" r2="" r3="" r4="" r5="" r6="" />
 </MP>
 ```

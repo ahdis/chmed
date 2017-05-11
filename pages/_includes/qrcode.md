@@ -27,7 +27,7 @@ The Content for the QRCode is based on a shortened notation of FHIR and the reso
 will be transposed to the shortened notation  
 
 ```xml
-<MP v="1.0">
+<B v="1.0" d="MP">
     <C i="chmed16af-mp-composition-s01" ...>
 
 ```
@@ -55,16 +55,31 @@ The following instructions for the creation of XML document instances according 
 
 Transform from fhir example
 ```xml
-<MP v="1.0">
-    <C i="" c="" at="" ap="" n="" r="">
-        <A i="" z="" />
-        <P i="" g="" f="" t="" ag="" b="" l="" p="" c="" cl="" />
-    </C>    
+<?xml version="1.0" encoding="UTF-8"?>
+<B 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:fhir="http://hl7.org/fhir" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:chmed16af="http://chemed16af.emediplan.ch" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd" v="1.0" d="MP">
+    <C i="26d3dff7-ab05-4737-a49c-5eccd33595f6" d="2016-09-12T11:46:09+02:00" at="2016-09-12T11:46:09+02:00" ap="7601003178999" n="Bemerkung">
+        <A i="7601003178999" g="Thomas" f="Wälti"/>
+        <P i="vekano" g="Maxima" f="Matter" t="+41588512600" ag="f" b="1981-01-12" l="Untermattweg 8" p="3027" c="Bern" cl="de-CH"/>
+    </C>
     <M>
-        <MS i="" s="" r="" n="">    
-            <D s="" e="" p="" r="" m="" d="" v="" h="" o="" dl="" dh="" dm="" />
-        </MS>    
+        <MS i="7680453070343" s="0" r="Akne" n="-">
+            <D s="2016-09-12" e="2020-09-12" r="1" m="1" o="PO"/>
+        </MS>
+        <MS i="7680517950680" s="0" r="Blutverdünnung">
+            <D s="2016-09-12" e="2020-09-12" m="1" o="PO"/>
+        </MS>
+        <MS i="7680521101573" s="0" r="Bluthochdruck/Herz">
+            <D s="2016-02-10" m="1" v="1" o="PO"/>
+        </MS>
+        <MS i="7680497420456" s="0" r="Cholesterinsenker">
+            <D s="2016-02-10" v="1" o="PO"/>
+        </MS>
     </M>
-    <H w="" h="" m="" p="" tw="" td="" r1="" r2="" r3="" r4="" r5="" r6="" />
-</MP>
+    <H w="72" h="178" m="2016-09-01" p="1" tw="30" td="5" r1="577" r3="612" r4="" r5="" r6="555,571"/>
+</B>
 ```

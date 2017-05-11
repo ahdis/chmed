@@ -7,14 +7,18 @@
 	xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xsl:template match="/fhir:Bundle">
 		<!-- MP -->
-		<MP 
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd">
+		<B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd">
 			<!-- @v -->
 			<xsl:attribute name="v">
 				<xsl:value-of select="fhir:meta/fhir:versionId/@value" />
 			</xsl:attribute>
+			<xsl:attribute name="d">
+				<xsl:choose>
+					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://loinc.org']/fhir:code/@value='56445-0'">MP</xsl:when>
+				</xsl:choose>
+			</xsl:attribute>
 			<xsl:apply-templates select="fhir:entry" />
-		</MP>
+		</B>
 	</xsl:template>
 	<xsl:template match="fhir:Composition">
 		<!-- C -->
@@ -387,7 +391,12 @@
 		</xsl:if>
 		<!-- @p -->
 		<xsl:if test="$this/fhir:code/fhir:coding[fhir:system/@value='http://snomed.info/sct']/fhir:code/@value='395507008'">
-			<xsl:variable name="p" select="$this/fhir:valueBoolean/@value" />
+			<xsl:variable name="p">
+				<xsl:choose>
+					<xsl:when test="$this/fhir:valueBoolean/@value">1</xsl:when>
+					<xsl:when test="$this/fhir:valueBoolean/@value">0</xsl:when>
+				</xsl:choose>
+			</xsl:variable>
 			<xsl:if test="$p">
 				<xsl:attribute name="p">
 					<xsl:value-of select="$p" />

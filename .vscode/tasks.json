@@ -171,15 +171,15 @@
                 "-jar",
                 "${workspaceRoot}/tools/saxon9he.jar",
                 "-s:${file}",
-                "-xsl:${workspaceRoot}/chmed16aq/chmed16af-mp_to_chmed16aq-mp.xsl",
-                "-o:${workspaceRoot}/chmed16aq/chmed16aq-mp-output.xml"
+                "-xsl:${workspaceRoot}/chmed16aq/chmed16af_to_aq.xsl",
+                "-o:${workspaceRoot}/chmed16aq/chmed16aq-output.xml"
             ]
         },         {
-            "taskName": "xsd: validate xml with chmed16aq-mp.xsd",
+            "taskName": "xsd: validate xml with chmed16aq.xsd",
             "args": [
                 "-jar",
                 "${workspaceRoot}/tools/xsdv.jar",
-                "${workspaceRoot}/chmed16aq/chmed16aq-mp.xsd",
+                "${workspaceRoot}/chmed16aq/chmed16aq.xsd",
                 "${file}"                
             ]
         }

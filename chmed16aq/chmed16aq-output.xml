@@ -4,7 +4,7 @@
     xmlns:fhir="http://hl7.org/fhir" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     xmlns:chmed16af="http://chemed16af.emediplan.ch" 
-    xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd" v="1.0" d="MP">
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="chmed16aq.xsd" v="1.0" d="MP">
     <C i="26d3dff7-ab05-4737-a49c-5eccd33595f6" d="2016-09-12T11:46:09+02:00" at="2016-09-12T11:46:09+02:00" ap="7601003178999" n="Bemerkung">
         <A i="7601003178999" g="Thomas" f="Wälti"/>
         <P i="vekano" g="Maxima" f="Matter" t="+41588512600" ag="f" b="1981-01-12" l="Untermattweg 8" p="3027" c="Bern" cl="de-CH"/>

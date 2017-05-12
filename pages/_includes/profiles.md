@@ -207,7 +207,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | ------------- | ------------- | -------------  | ------------- | -------------  | 
 | subject  | Reference to the Patient  | Patient  | Patient | &lt;P&gt;    | 
 | identifier  | Logical identifier for document (GUID)  | Identifier  | id  | @i | 
-| date  | Date of creation  |  dateTime | Dt | @c  | 
+| date  | Date of creation  |  dateTime | Dt | @d  | 
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth | &lt;A&gt;  | 
 | section | medications |  MedicationAdminstration | Medicaments | &lt;M&gt;  | 
 | section | note |  - | Rmk | &lt;@n&gt;  | 

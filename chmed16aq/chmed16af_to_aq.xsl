@@ -6,14 +6,14 @@
 	xmlns:chmed16af="http://chemed16af.emediplan.ch" 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xsl:template match="/fhir:Bundle">
-		<!-- MP -->
-		<B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq-mp.xsd">
+		<B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq.xsd">
 			<!-- @v -->
 			<xsl:attribute name="v">
 				<xsl:value-of select="fhir:meta/fhir:versionId/@value" />
 			</xsl:attribute>
 			<xsl:attribute name="d">
 				<xsl:choose>
+					<!-- MP -->
 					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://loinc.org']/fhir:code/@value='56445-0'">MP</xsl:when>
 				</xsl:choose>
 			</xsl:attribute>

@@ -171,7 +171,7 @@ The medication section contains the entries for the current medications for pati
 | note  | Application Instructions  | Annotation  |Medication.AppInstr | @n  | 
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @dl, @dh |
+| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)

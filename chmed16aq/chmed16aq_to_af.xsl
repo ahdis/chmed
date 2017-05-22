@@ -562,7 +562,7 @@
 											</fhir:coding>
 										</fhir:route>
 									</xsl:if>
-									<!-- FIXME only simplified quantites, unit not yet done -->
+									<!-- FIXME only simplified quantites -->
 									<xsl:if test="D/@m or D/@d or D/@v or D/@h">
 										<fhir:doseQuantity>
 											<fhir:value>
@@ -583,9 +583,19 @@
 													</xsl:choose>
 												</xsl:attribute>
 											</fhir:value>
-											<fhir:unit value="Stk"/>
-											<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
-											<fhir:code value="Stk"/>
+											<xsl:if test="D/@u">
+												<fhir:unit>
+													<xsl:attribute name="value">
+														<xsl:value-of select="D/@u" />
+													</xsl:attribute>
+												</fhir:unit>
+												<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+												<fhir:code>
+													<xsl:attribute name="value">
+														<xsl:value-of select="D/@u" />
+													</xsl:attribute>
+												</fhir:code>
+											</xsl:if>	
 										</fhir:doseQuantity>
 									</xsl:if>
 								</fhir:dosage>

@@ -314,7 +314,7 @@
 						</xsl:attribute>
 					</xsl:if>
 					<!-- FIXME, here only simplified version with one dosage -->
-					<xsl:variable name="doseQuantity" select="fhir:doseQuantity[fhir:unit/@value='Stk']/fhir:value/@value" />
+					<xsl:variable name="doseQuantity" select="fhir:doseQuantity/fhir:value/@value" />
 					<xsl:if test="$doseQuantity">
 						<!-- @m -->
 						<xsl:variable name="m" select="fhir:timing/fhir:repeat/fhir:when/@value='PCM'" />
@@ -344,6 +344,13 @@
 								<xsl:value-of select="$doseQuantity" />
 							</xsl:attribute>
 						</xsl:if>
+					</xsl:if>
+					<!-- @u -->
+					<xsl:variable name="doseUnit" select="fhir:doseQuantity/fhir:unit/@value" />
+					<xsl:if test="$doseUnit">
+						<xsl:attribute name="u">
+							<xsl:value-of select="$doseUnit" />
+						</xsl:attribute>
 					</xsl:if>
 					<!-- @o -->
 					<xsl:variable name="o" select="fhir:route/fhir:coding[fhir:system/@value='http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26']/fhir:code/@value" />

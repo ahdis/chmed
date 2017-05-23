@@ -263,10 +263,10 @@
 				</xsl:attribute>
 			</xsl:if>
 			<!-- @r -->
-			<xsl:variable name="r" select="$this/fhir:reasonCode/fhir:text/@value" />
-			<xsl:if test="$r">
+			<xsl:variable name="rc" select="$this/fhir:reasonCode/fhir:text/@value" />
+			<xsl:if test="$rc">
 				<xsl:attribute name="r">
-					<xsl:value-of select="$r" />
+					<xsl:value-of select="$rc" />
 				</xsl:attribute>
 			</xsl:if>
 			<!-- @n -->
@@ -280,10 +280,10 @@
 			<xsl:for-each select="$this/fhir:dosage">
 				<D>
 					<!-- @s -->
-					<xsl:variable name="s" select="fhir:timing/fhir:repeat/fhir:boundsPeriod/fhir:start/@value" />
-					<xsl:if test="$s">
+					<xsl:variable name="bs" select="fhir:timing/fhir:repeat/fhir:boundsPeriod/fhir:start/@value" />
+					<xsl:if test="$bs">
 						<xsl:attribute name="s">
-							<xsl:value-of select="$s" />
+							<xsl:value-of select="$bs" />
 						</xsl:attribute>
 					</xsl:if>
 					<!-- @e -->

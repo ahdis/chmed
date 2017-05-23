@@ -79,3 +79,7 @@ Transform from fhir example with stripped namespage
     <H w="72" h="178" m="2016-09-01" p="1" tw="30" td="5" r1="577" r3="612" r4="" r5="" r6="555,571"/>
 </B>
 ```
+
+## Example source
+The [dontnetcore_app](https://github.com/ahdis/chmed16af/tree/master/dotnetcore_app) is a sample start app to work with [CHMD16AF](http://chmed16af.emediplan.ch/) eMedication plan format.
+

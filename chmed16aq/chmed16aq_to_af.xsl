@@ -28,6 +28,7 @@
 			</fhir:identifier>
 			<fhir:type value="document"/>
 			<fhir:entry>
+				<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Composition/comp1" />
 				<fhir:resource>
 					<fhir:Composition>
 						<fhir:id value="comp1"/>
@@ -100,7 +101,7 @@
 									<fhir:entry>
 										<fhir:reference>
 											<xsl:attribute name="value">
-												<xsl:value-of select="concat('MedicationStatement/',position())" />
+												<xsl:value-of select="concat('MedicationStatement/MS',position())" />
 											</xsl:attribute>
 										</fhir:reference>
 									</fhir:entry>
@@ -210,6 +211,7 @@
 			<!-- C P -->
 			<xsl:if test="C/P">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Patient/patient" />
 					<fhir:resource>
 						<fhir:Patient>
 							<fhir:id value="patient"/>
@@ -321,6 +323,7 @@
 			<!-- C A -->
 			<xsl:if test="C/A">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/author" />
 					<fhir:resource>
 						<fhir:Practitioner>
 							<fhir:id value="author"/>
@@ -374,6 +377,7 @@
 			<!-- add receiver entry-->
 			<xsl:if test="C/@r">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/receiver" />
 					<fhir:resource>
 						<fhir:Practitioner>
 							<fhir:id value="receiver"/>
@@ -398,6 +402,7 @@
 			<!-- add attester entry -->
 			<xsl:if test="C/@ap">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/attester" />
 					<fhir:resource>
 						<fhir:Practitioner>
 							<fhir:id value="attester"/>
@@ -422,11 +427,16 @@
 			<!-- MedicationStatments -->
 			<xsl:for-each select="$ms">
 				<fhir:entry>
+					<fhir:fullUrl>
+						<xsl:attribute name="value">
+							<xsl:value-of select="concat('http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS',position())" />
+						</xsl:attribute>
+					</fhir:fullUrl>
 					<fhir:resource>
 						<fhir:MedicationStatement>
 							<fhir:id>
 								<xsl:attribute name="value">
-									<xsl:value-of select="concat('MedicationStatement/',position())" />
+									<xsl:value-of select="concat('MedicationStatement/MS',position())" />
 								</xsl:attribute>
 							</fhir:id>
 							<fhir:meta>
@@ -514,11 +524,11 @@
 														</fhir:start>
 													</xsl:if>
 													<xsl:if test="D/@e">
-														<fhir:start>
+														<fhir:end>
 															<xsl:attribute name="value">
 																<xsl:value-of select="D/@e" />
 															</xsl:attribute>
-														</fhir:start>
+														</fhir:end>
 													</xsl:if>
 												</fhir:boundsPeriod>
 												<!-- FIXME: verify and finish -->
@@ -595,7 +605,7 @@
 														<xsl:value-of select="D/@u" />
 													</xsl:attribute>
 												</fhir:code>
-											</xsl:if>	
+											</xsl:if>
 										</fhir:doseQuantity>
 									</xsl:if>
 								</fhir:dosage>
@@ -608,6 +618,7 @@
 			<!-- @w -->
 			<xsl:if test="H/@w">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/w" />
 					<fhir:resource>
 						<fhir:Observation>
 							<fhir:id value="Observation/w"/>
@@ -659,6 +670,7 @@
 			<!-- @h -->
 			<xsl:if test="H/@h">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/h" />
 					<fhir:resource>
 						<fhir:Observation>
 							<fhir:id value="Observation/h"/>
@@ -705,6 +717,7 @@
 			<!-- @m -->
 			<xsl:if test="H/@m">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/m" />
 					<fhir:resource>
 						<fhir:Observation>
 							<fhir:id value="Observation/m"/>
@@ -734,6 +747,7 @@
 			<!-- @p -->
 			<xsl:if test="H/@p">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/p" />
 					<fhir:resource>
 						<fhir:Observation>
 							<fhir:id value="Observation/p"/>
@@ -766,6 +780,7 @@
 			<!-- @tg -->
 			<xsl:if test="H/@tw or H/@td">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/g" />
 					<fhir:resource>
 						<fhir:Observation>
 							<fhir:id value="Observation/tg"/>
@@ -832,6 +847,7 @@
 			<!-- @r1 -->
 			<xsl:if test="H/@r1">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r1" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="1"/>
@@ -843,6 +859,7 @@
 			<!-- @r2 -->
 			<xsl:if test="H/@r2">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r2" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="2"/>
@@ -854,6 +871,7 @@
 			<!-- @r3 -->
 			<xsl:if test="H/@r3">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r3" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="3"/>
@@ -865,6 +883,7 @@
 			<!-- @r4 -->
 			<xsl:if test="H/@r4">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r4" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="4"/>
@@ -876,6 +895,7 @@
 			<!-- @r5 -->
 			<xsl:if test="H/@r5">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r5" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="5"/>
@@ -887,6 +907,7 @@
 			<!-- @r6 -->
 			<xsl:if test="H/@r6">
 				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r6" />
 					<fhir:resource>
 						<xsl:call-template name="HCondition">
 							<xsl:with-param name="categoryCode" select="6"/>
@@ -923,9 +944,11 @@
 				</fhir:coding>
 			</fhir:category>
 			<xsl:if test="$riskCodes">
-				<xsl:call-template name="tokenizeRiskCodes">
-					<xsl:with-param name="text" select="$riskCodes"/>
-				</xsl:call-template>
+				<fhir:code>
+					<xsl:call-template name="tokenizeRiskCodes">
+						<xsl:with-param name="text" select="$riskCodes"/>
+					</xsl:call-template>
+				</fhir:code>
 			</xsl:if>
 			<fhir:subject>
 				<fhir:reference value="Patient/patient"/>
@@ -938,21 +961,19 @@
 		<xsl:param name="separator" select="','"/>
 		<xsl:choose>
 			<xsl:when test="not(contains($text, $separator))">
-				<fhir:code>
-					<fhir:coding>
-						<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
-						<fhir:code>
-							<xsl:attribute name="value">
-								<xsl:value-of select="normalize-space($text)" />
-							</xsl:attribute>
-						</fhir:code>
-					</fhir:coding>
-				</fhir:code>
+				<fhir:coding>
+					<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+					<fhir:code>
+						<xsl:attribute name="value">
+							<xsl:value-of select="normalize-space($text)" />
+						</xsl:attribute>
+					</fhir:code>
+				</fhir:coding>
 			</xsl:when>
 			<xsl:otherwise>
-				<item>
-					<xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
-				</item>
+				<xsl:call-template name="tokenizeRiskCodes">
+					<xsl:with-param name="text" select="substring-before($text, $separator)"/>
+				</xsl:call-template>
 				<xsl:call-template name="tokenizeRiskCodes">
 					<xsl:with-param name="text" select="substring-after($text, $separator)"/>
 				</xsl:call-template>

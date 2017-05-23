@@ -10,7 +10,7 @@ following points are illustrated in the app:
 - transforms the shortend notation to a fhir bundle [chmed16aq_to_af.xsl](chmed16aq/chmed16aq_to_af.xsl) 
 - serializes a bundle to JSON
 
-XLST transforms are only suppoted in [dotnetcore 2](https://www.microsoft.com/net/core/preview), the [fhir-net-api for STU3](https://github.com/ewoutkramer/fhir-net-api) works also with [donetcore 1.0](https://www.microsoft.com/net/core#macos)
+XLST transforms are only suppoted in [.NET Core 2.0](https://www.microsoft.com/net/core/preview), the [fhir-net-api for STU3](https://github.com/ewoutkramer/fhir-net-api) works also with [.NET Core 1.0](https://www.microsoft.com/net/core#macos)
 
 
 ```

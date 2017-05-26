@@ -1,0 +1,117 @@
+<Questionnaire 
+    xmlns="http://hl7.org/fhir">
+    <id value="chmed16af-pmc-questionnaire"/>
+    <text>
+        <status value="generated"/>
+        <div 
+            xmlns="http://www.w3.org/1999/xhtml">
+            <pre>       1: week dosing system by the pharmacist                             question answered [yes], patient agrees [yes|no| remark                                                                
+                <br />2: Intensified compliance support                                     question answered [yes], patient agrees [yes|no| remark                                                                
+                <br />3: Repeat check in ... months                                         question answered [yes], patient agrees [yes|no| remark                                                                
+                <br />4: Forwarding to doctor / other specialist                            question answered [yes], patient agrees [yes|no| remark                                                                
+                <br />5: Needs analysis (e.g., interactions, side effects, duplications)    question answered [yes], patient agrees [yes|no| remark                                                                
+                <br />
+            </pre>
+        </div>
+    </text>
+    <url value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
+    <title value="Polymedikations-Check Recommendations"/>
+    <status value="active"/>
+    <date value="2017-01"/>
+    <subjectType value="Patient"/>
+    <item>
+        <linkId value="1"/>
+        <text value="Week dosing system by the pharmacist?"/>
+        <type value="group"/>
+        <item>
+            <linkId value="1.1"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="1.2"/>
+            <text value="patient agrees?"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="1.3"/>
+            <text value="remark"/>
+            <type value="string"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="2"/>
+        <text value="Intensified compliance support?"/>
+        <type value="group"/>
+        <item>
+            <linkId value="2.1"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="2.2"/>
+            <text value="patient agrees?"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="2.3"/>
+            <text value="remark"/>
+            <type value="string"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="3"/>
+        <text value="Repeat check in ... months?"/>
+        <type value="group"/>
+        <item>
+            <linkId value="3.1"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="3.2"/>
+            <text value="patient agrees?"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="3.3"/>
+            <text value="remark"/>
+            <type value="string"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="4"/>
+        <text value="Forwarding to doctor / other specialist?"/>
+        <type value="group"/>
+        <item>
+            <linkId value="4.1"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="4.2"/>
+            <text value="patient agrees?"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="4.3"/>
+            <text value="remark"/>
+            <type value="string"/>
+        </item>
+    </item>
+    <item>
+        <linkId value="5"/>
+        <text value="5: Needs analysis (e.g., interactions, side effects, duplications)?"/>
+        <type value="group"/>
+        <item>
+            <linkId value="5.1"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="5.2"/>
+            <text value="patient agrees?"/>
+            <type value="boolean"/>
+        </item>
+        <item>
+            <linkId value="5.3"/>
+            <text value="remark"/>
+            <type value="string"/>
+        </item>
+    </item>
+</Questionnaire>

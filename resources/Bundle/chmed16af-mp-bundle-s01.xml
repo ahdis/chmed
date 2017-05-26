@@ -32,10 +32,10 @@
                 <status value="final"/>
                 <type>
                     <coding>
-                        <system value="http://loinc.org"/>
-                        <code value="56445-0"/>
+                        <system value="http://emediplan.ch/chmed16af/doc" />
+                        <code value="MP" />
                     </coding>
-                    <text value="Medication summary Document"/>
+                    <text value="Medication Plan" />
                 </type>
                 <subject>
                     <reference value="Patient/chmed16af-mp-patient-s01"/>
@@ -129,7 +129,7 @@
                     <text>
                         <status value="additional"/>
                         <div 
-                            xmlns="http://www.w3.org/1999/xhtml"> Bemerkung                         
+                            xmlns="http://www.w3.org/1999/xhtml"> Bemerkung                                                 
                         </div>
                     </text>
                 </section>
@@ -149,7 +149,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12                     
+                        xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12                                         
                     </div>
                 </text>
                 <identifier>
@@ -198,7 +198,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                     
+                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                         
                     </div>
                 </text>
                 <contained>
@@ -274,7 +274,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                     
+                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                         
                     </div>
                 </text>
                 <contained>
@@ -346,7 +346,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                     
+                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                         
                     </div>
                 </text>
                 <contained>
@@ -418,7 +418,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                     
+                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                         
                     </div>
                 </text>
                 <contained>
@@ -488,7 +488,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">72 kg                     
+                        xmlns="http://www.w3.org/1999/xhtml">72 kg                                         
                     </div>
                 </text>
                 <status value="final"/>
@@ -541,7 +541,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">178 cm                     
+                        xmlns="http://www.w3.org/1999/xhtml">178 cm                                         
                     </div>
                 </text>
                 <status value="final"/>
@@ -590,7 +590,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016                     
+                        xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016                                         
                     </div>
                 </text>
                 <status value="final"/>
@@ -621,7 +621,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Premature baby: true                     
+                        xmlns="http://www.w3.org/1999/xhtml">Premature baby: true                                         
                     </div>
                 </text>
                 <status value="final"/>
@@ -652,7 +652,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Time of gestation: week 30, days 5                     
+                        xmlns="http://www.w3.org/1999/xhtml">Time of gestation: week 30, days 5                                         
                     </div>
                 </text>
                 <status value="final"/>
@@ -712,7 +712,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)                    
+                        xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)                                        
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -749,7 +749,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded                     
+                        xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded                                         
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -779,7 +779,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter                    
+                        xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter                                        
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -816,7 +816,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded                    
+                        xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded                                        
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -846,7 +846,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded                    
+                        xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded                                        
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -876,7 +876,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie                    
+                        xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie                                        
                     </div>
                 </text>
                 <clinicalStatus value="active"/>

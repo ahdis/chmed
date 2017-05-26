@@ -16,3 +16,7 @@ curl -i -X PUT -H "Content-Type:text/xml" --data @./Observation/chmed16af-observ
 curl -i -X PUT -H "Content-Type:text/xml" --data @./Observation/chmed16af-observation-s01-timeofgestation.xml  http://test.fhir.org/r3/Observation/chmed16af-observation-s01-timeofgestation
 curl -i -X PUT -H "Content-Type:text/xml" --data @./Patient/chmed16af-mp-patient-s01.xml  http://test.fhir.org/r3/Patient/chmed16af-mp-patient-s01
 curl -i -X PUT -H "Content-Type:text/xml" --data @./Practitioner/chmed16af-practitioner-s01.xml http://test.fhir.org/r3/Practitioner/chmed16af-practitioner-s01
+
+curl -i -X PUT -H "Content-Type:text/xml" --data @./Questionnaire/chmed16af-pmc-questionnaire.xml http://test.fhir.org/r3/Questionnaire/chmed16af-pmc-questionnaire
+curl -i -X PUT -H "Content-Type:text/xml" --data @./QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01.xml http://test.fhir.org/r3/QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01
+curl -i -X PUT -H "Content-Type:text/xml" --data @./Composition/chmed16af-pmc-composition-s01.xml http://test.fhir.org/r3/Composition/chmed16af-pmc-composition-s01

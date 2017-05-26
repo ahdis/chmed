@@ -44,11 +44,15 @@
 							</fhir:extension>
 							<fhir:status value="final"/>
 						</xsl:if>
-						<xsl:if test="@d='MP'">
+						<xsl:if test="@d">
 							<fhir:type>
 								<fhir:coding>
-									<fhir:system value="http://loinc.org"/>
-									<fhir:code value="56445-0"/>
+									<fhir:system value="http://emediplan.ch/chmed16af/doc"/>
+									<fhir:code>
+										<xsl:attribute name="value">
+											<xsl:value-of select="@d" />
+										</xsl:attribute>
+									</fhir:code>
 								</fhir:coding>
 								<fhir:text value="Medication summary Document"/>
 							</fhir:type>

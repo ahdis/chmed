@@ -3,7 +3,7 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-pmc-composition" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition" />
-	<name value="Composition (Polym Medication Check)" />
+	<name value="Composition (Poly Medication Check)" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>
@@ -49,6 +49,20 @@
 				<identity value="CHMED16A"/>
 				<map value="id"/>
 			</mapping>
+		</element>
+		<element id="chmed16af-pmc-composition.Composition.type" >
+			<path value="Composition.type" />
+		</element>
+		<element id="chmed16af-pmc-composition.Composition.type.coding" >
+			<path value="Composition.type.coding" />
+		</element>
+		<element id="chmed16af-pmc-composition.Composition.type.coding.system" >
+			<path value="Composition.type.coding.system" />
+			<fixedUri value="http://emediplan.ch/chmed16af/doc" />
+		</element>
+		<element id="chmed16af-pmc-composition.Composition.type.coding.code" >
+			<path value="Composition.type.coding.code" />
+			<fixedCode value="PMC" />
 		</element>
 		<element id="chmed16af-pmc-composition.Composition.subject">
 			<path value="Composition.subject"/>
@@ -388,20 +402,20 @@
 			<min value="0" />
 			<max value="*" />
 		</element>
-		<element id="chmed16af-pmc-composition.Composition.section.entry:risks">
+		<element id="chmed16af-pmc-composition.Composition.section.entry:questionnaireresponse">
 			<path value="Composition.section.entry"/>
-			<sliceName value="risks" />
-			<short value="Risks"/>
-			<definition value="Possible risks for a patient"/>
+			<sliceName value="questionnaireresponse" />
+			<short value="Questionnaireresponse"/>
+			<definition value="Response to Questionnaire with patient"/>
 			<min value="0"/>
-			<max value="6"/>
+			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
+				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
 			</type>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="MedicalData.RG"/>
+				<map value="MedicalData.Recomms"/>
 			</mapping>
 		</element>
 	</differential>

@@ -16,10 +16,10 @@
 	<status value="final" />
 	<type>
 		<coding>
-			<system value="http://loinc.org" />
-			<code value="56445-0" />
+			<system value="http://emediplan.ch/chmed16af/doc" />
+			<code value="MP" />
 		</coding>
-		<text value="Medication summary Document" />
+		<text value="Medication Plan" />
 	</type>
 	<subject>
 		<reference value="Patient/chmed16af-mp-patient-s01" />

@@ -2,8 +2,8 @@
 <ImplementationGuide 
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-ig" />
-<!--	FIXME <url value="http://chmed16af.emediplan.ch/fhir" /> -->
-    <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/chmed16af-ig" /> 
+	<!--	FIXME <url value="http://chmed16af.emediplan.ch/fhir" /> -->
+	<url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/chmed16af-ig" />
 	<version value="0.9"/>
 	<name value="Implementation Guide CHMED16AF" />
 	<status value="draft" />
@@ -41,6 +41,17 @@
 			</exampleFor>
 		</resource>
 		<resource>
+			<example value="true" />
+			<name value="Poly Medication Check" />
+			<description value="Example for Poly Medication Check" />
+			<sourceReference>
+				<reference value="Bundle/chmed16af-pmc-bundle-s01" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-pmc-bundle" />
+			</exampleFor>
+		</resource>
+		<resource>
 			<example value="false" />
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-mp-composition" />
@@ -50,6 +61,31 @@
 			<example value="false" />
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-pmc-composition" />
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false" />
+			<sourceReference>
+				<reference value="StructureDefinition/chmed16af-pmc-questionnaireresponse" />
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="Example Questionnaire Response" />
+			<description value="Example Questionnaire Response" />
+			<sourceReference>
+				<reference value="QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-pmc-questionnaireresponse" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="Example Questionnaire" />
+			<description value="Example Questionnaire" />
+			<sourceReference>
+				<reference value="Questionnaire/chmed16af-pmc-questionnaire" />
 			</sourceReference>
 		</resource>
 		<resource>
@@ -67,6 +103,17 @@
 			</sourceReference>
 			<exampleFor>
 				<reference value="StructureDefinition/chmed16af-mp-composition" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="Composition Poly Medication Check" />
+			<description value="Example for Poly Medication Check" />
+			<sourceReference>
+				<reference value="Composition/chmed16af-pmc-composition-s01" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-pmc-composition" />
 			</exampleFor>
 		</resource>
 		<resource>

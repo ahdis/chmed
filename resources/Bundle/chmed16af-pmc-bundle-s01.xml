@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle 
+    xmlns="http://hl7.org/fhir">
+    <id value="chmed16af-pmc-bundle-s01"/>
+    <meta>
+        <lastUpdated value="2017-05-26T12:47:19Z"/>
+        <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle"/>
+    </meta>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:7294b036-51bb-4c83-9b13-2c05818b2f74"/>
+    </identifier>
+    <type value="document"/>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/Composition/chmed16af-pmc-composition-s01"/>
+        <resource>
+            <Composition>
+                <id value="chmed16af-pmc-composition-s01"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-05-26T12:44:15Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition"/>
+                </meta>
+                <identifier>
+                    <system value="http://emediplan.ch/chmed16af/id"/>
+                    <value value="3ba6996c-6577-423d-984c-231629bf4a09"/>
+                </identifier>
+                <status value="final"/>
+                <type>
+                    <coding>
+                        <system value="http://emediplan.ch/chmed16af/doc"/>
+                        <code value="PMC"/>
+                    </coding>
+                    <text value="Poly Medication Check"/>
+                </type>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01"/>
+                </subject>
+                <date value="2017-05-26T11:46:09+02:00"/>
+                <author>
+                    <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                </author>
+                <title value="Poly Medication Check"/>
+                <attester>
+                    <mode value="professional"/>
+                    <time value="2017-05-26T11:46:09+02:00"/>
+                    <party>
+                        <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                    </party>
+                </attester>
+                <section>
+                    <title value="Aktuelle Medikation"/>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"/>
+                            <code value="77604-7"/>
+                            <display value="History of medication use"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
+                    </entry>
+                    <entry>
+                        <reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
+                    </entry>
+                    <entry>
+                        <reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
+                    </entry>
+                    <entry>
+                        <reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
+                    </entry>
+                </section>
+                <section>
+                    <title value="Empfehlungen"/>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"/>
+                            <code value="61357-0"/>
+                            <display value="MEDICATION PHARMACEUTICAL ADVICE.BRIEF"/>
+                        </coding>
+                    </code>
+                    <entry>
+                        <reference value="QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01"/>
+                    </entry>
+                </section>
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/Patient/chmed16af-mp-patient-s01"/>
+        <resource>
+            <Patient>
+                <id value="chmed16af-mp-patient-s01"/>
+                <meta>
+                    <versionId value="3"/>
+                    <lastUpdated value="2017-05-25T09:32:35Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
+                </meta>
+                <extension url="http://www.englishclub.com/vocabulary/world-countries-nationality.htm">
+                    <valueString value="Other"/>
+                </extension>
+                <active value="true"/>
+                <name>
+                    <text value="Maxima Matter"/>
+                    <family value="Matter"/>
+                    <given value="Maxima"/>
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <use value="mobile"/>
+                </telecom>
+                <telecom>
+                    <system value="phone"/>
+                    <use value="home"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <use value="home"/>
+                </telecom>
+                <gender value="female"/>
+                <birthDate value="1981-01-12"/>
+                <deceasedBoolean value="false"/>
+                <address>
+                    <line value="Untermattweg 8"/>
+                    <line value="Carrer de Call 19"/>
+                    <city value="Bern"/>
+                    <postalCode value="3027"/>
+                </address>
+                <multipleBirthBoolean value="false"/>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-1"/>
+        <resource>
+            <MedicationStatement>
+                <id value="chmed16af-mp-medicationstatement-s01-1"/>
+                <meta>
+                    <versionId value="4"/>
+                    <lastUpdated value="2017-05-10T13:51:40Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016 
+                    </div>
+                </text>
+                <contained>
+                    <Medication>
+                        <id value="cont1"/>
+                        <meta>
+                            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </meta>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680453070343"/>
+                                <display value="ROACCUTAN Kaps 10 mg 30 Stk"/>
+                            </coding>
+                        </code>
+                    </Medication>
+                </contained>
+                <status value="active"/>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <informationSource>
+                    <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                </informationSource>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01"/>
+                </subject>
+                <taken value="unk"/>
+                <reasonCode>
+                    <text value="Akne"/>
+                </reasonCode>
+                <note>
+                    <text value="-"/>
+                </note>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2016-09-12"/>
+                                <end value="2020-09-12"/>
+                            </boundsPeriod>
+                            <when value="PCM"/>
+                        </repeat>
+                    </timing>
+                    <asNeededBoolean value="true"/>
+                    <route>
+                        <coding>
+                            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <code value="PO"/>
+                            <display value="per oral"/>
+                        </coding>
+                    </route>
+                    <doseQuantity>
+                        <value value="1"/>
+                        <unit value="Stk"/>
+                        <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <code value="Stk"/>
+                    </doseQuantity>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-2"/>
+        <resource>
+            <MedicationStatement>
+                <id value="chmed16af-mp-medicationstatement-s01-2"/>
+                <meta>
+                    <versionId value="2"/>
+                    <lastUpdated value="2017-05-10T13:51:40Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016 
+                    </div>
+                </text>
+                <contained>
+                    <Medication>
+                        <id value="cont2"/>
+                        <meta>
+                            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </meta>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680517950680"/>
+                                <display value="ASPIRIN CARDIO Filmtabl 100 mg 28 Stk"/>
+                            </coding>
+                        </code>
+                    </Medication>
+                </contained>
+                <status value="active"/>
+                <medicationReference>
+                    <reference value="#cont2"/>
+                </medicationReference>
+                <informationSource>
+                    <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                </informationSource>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01"/>
+                </subject>
+                <taken value="unk"/>
+                <reasonCode>
+                    <text value="Blutverdünnung"/>
+                </reasonCode>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2016-09-12"/>
+                                <end value="2020-09-12"/>
+                            </boundsPeriod>
+                            <when value="PCM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <code value="PO"/>
+                            <display value="per oral"/>
+                        </coding>
+                    </route>
+                    <doseQuantity>
+                        <value value="1"/>
+                        <unit value="Stk"/>
+                        <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <code value="Stk"/>
+                    </doseQuantity>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-3"/>
+        <resource>
+            <MedicationStatement>
+                <id value="chmed16af-mp-medicationstatement-s01-3"/>
+                <meta>
+                    <versionId value="2"/>
+                    <lastUpdated value="2017-05-10T13:51:41Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 
+                    </div>
+                </text>
+                <contained>
+                    <Medication>
+                        <id value="cont3"/>
+                        <meta>
+                            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </meta>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680521101573"/>
+                                <display value="BELOC ZOK Ret Tabl 25 mg 30 Stk"/>
+                            </coding>
+                        </code>
+                    </Medication>
+                </contained>
+                <status value="active"/>
+                <medicationReference>
+                    <reference value="#cont3"/>
+                </medicationReference>
+                <informationSource>
+                    <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                </informationSource>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01"/>
+                </subject>
+                <taken value="unk"/>
+                <reasonCode>
+                    <text value="Bluthochdruck/Herz"/>
+                </reasonCode>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2016-02-10"/>
+                            </boundsPeriod>
+                            <when value="PCM"/>
+                            <when value="PCV"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <code value="PO"/>
+                            <display value="per oral"/>
+                        </coding>
+                    </route>
+                    <doseQuantity>
+                        <value value="1"/>
+                        <unit value="Stk"/>
+                        <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <code value="Stk"/>
+                    </doseQuantity>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
+        <resource>
+            <MedicationStatement>
+                <id value="chmed16af-mp-medicationstatement-s01-4"/>
+                <meta>
+                    <versionId value="2"/>
+                    <lastUpdated value="2017-05-10T13:51:41Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 
+                    </div>
+                </text>
+                <contained>
+                    <Medication>
+                        <id value="cont4"/>
+                        <meta>
+                            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </meta>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680497420456"/>
+                                <display value="ZOCOR Filmtabl 20 mg 28 Stk"/>
+                            </coding>
+                        </code>
+                    </Medication>
+                </contained>
+                <status value="active"/>
+                <medicationReference>
+                    <reference value="#cont4"/>
+                </medicationReference>
+                <informationSource>
+                    <reference value="Practitioner/chmed16af-practitioner-s01"/>
+                </informationSource>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01"/>
+                </subject>
+                <taken value="unk"/>
+                <reasonCode>
+                    <text value="Cholesterinsenker"/>
+                </reasonCode>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2016-02-10"/>
+                            </boundsPeriod>
+                            <when value="PCV"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <code value="PO"/>
+                            <display value="per oral"/>
+                        </coding>
+                    </route>
+                    <doseQuantity>
+                        <value value="1"/>
+                        <unit value="Stk"/>
+                        <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <code value="Stk"/>
+                    </doseQuantity>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01"/>
+        <resource>
+            <QuestionnaireResponse>
+                <id value="chmed16af-pmc-questionnaireresponse-s01"/>
+                <meta>
+                    <versionId value="3"/>
+                    <lastUpdated value="2017-05-26T12:46:27Z"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">
+                        <pre> 1: week dosing system by the pharmacist [yes], patient agrees [yes] -                             
+                            <br/>2: Intensified compliance support [yes] patient agrees [no] -                            
+                            <br/>3: Repeat check in ... months answered [yes], patient agrees [yes] 3 months                            
+                            <br/>4: Forwarding to doctor / other specialist question answered [no],                            
+                            <br/>5: Needs analysis (e.g., interactions, side effects, duplications)                            
+                            <br/>
+                        </pre>
+                    </div>
+                </text>
+                <questionnaire>
+                    <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire"/>
+                </questionnaire>
+                <status value="completed"/>
+                <item>
+                    <item>
+                        <linkId value="1"/>
+                        <item>
+                            <linkId value="1.1"/>
+                            <answer>
+                                <valueBoolean value="true"/>
+                            </answer>
+                        </item>
+                    </item>
+                    <item>
+                        <linkId value="1.2"/>
+                        <answer>
+                            <valueBoolean value="true"/>
+                        </answer>
+                    </item>
+                    <item>
+                        <linkId value="1.3"/>
+                        <answer>
+                            <valueString value="-"/>
+                        </answer>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="2"/>
+                    <item>
+                        <linkId value="2.1"/>
+                        <answer>
+                            <valueBoolean value="true"/>
+                        </answer>
+                    </item>
+                    <item>
+                        <linkId value="2.2"/>
+                        <answer>
+                            <valueBoolean value="false"/>
+                        </answer>
+                    </item>
+                    <item>
+                        <linkId value="2.3"/>
+                        <answer>
+                            <valueString value="-"/>
+                        </answer>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="3"/>
+                    <item>
+                        <linkId value="3.1"/>
+                        <answer>
+                            <valueBoolean value="true"/>
+                        </answer>
+                    </item>
+                    <item>
+                        <linkId value="3.2"/>
+                        <answer>
+                            <valueBoolean value="true"/>
+                        </answer>
+                    </item>
+                    <item>
+                        <linkId value="3.3"/>
+                        <answer>
+                            <valueString value="3"/>
+                        </answer>
+                    </item>
+                </item>
+                <item>
+                    <linkId value="4"/>
+                    <item>
+                        <linkId value="4.1"/>
+                        <answer>
+                            <valueBoolean value="false"/>
+                        </answer>
+                    </item>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/Practitioner/chmed16af-practitioner-s01"/>
+        <resource>
+            <Practitioner>
+                <id value="chmed16af-practitioner-s01"/>
+                <meta>
+                    <versionId value="3"/>
+                    <lastUpdated value="2017-05-26T12:35:55Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div 
+                        xmlns="http://www.w3.org/1999/xhtml">
+                        <p>Thomas Wälti </p>
+                    </div>
+                </text>
+                <identifier>
+                    <use value="official"/>
+                    <system value="urn:oid:2.51.1.3"/>
+                    <value value="7601003178999"/>
+                </identifier>
+                <identifier>
+                    <use value="official"/>
+                    <system value="urn:oid:2.16.756.5.30.1.123.100.2.1.1"/>
+                    <value value="ZSR"/>
+                </identifier>
+                <name>
+                    <family value="Wälti"/>
+                    <given value="Thomas"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+</Bundle>

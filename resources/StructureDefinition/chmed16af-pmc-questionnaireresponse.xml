@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="chmed16af-pmc-questionnaireresponse" />
+  <meta>
+    <lastUpdated value="2017-05-26T13:32:39.082+02:00" />
+  </meta>
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
+  <name value="QuestionnaireResponse (Poly Medication Check)" />
+  <status value="draft" />
+  <publisher value="IG eMediplan" />
+  <contact>
+    <telecom>
+	  <system value="url"/>
+      <value value="http://www.emediplan.ch" />
+    </telecom>
+  </contact>
+  <description value="Profile for the QuestionnaireResponse Resource of the Poly Medication Check." />
+  <fhirVersion value="3.0.1" />
+  <mapping>
+    <identity value="CHMED16A" />
+    <uri value="http://emediplan.ch/chmed16a" />
+    <name value="Mapping to CHMED16A" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="chmed16af.QuestionnaireResponse.questionnaire.reference">
+      <path value="QuestionnaireResponse.questionnaire.reference" />
+      <min value="1" />
+      <fixedString value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
+    </element>
+    <element  id="chmed16af.QuestionnaireResponse.status" >
+      <path value="QuestionnaireResponse.status" />
+      <type>
+        <code value="code" />
+        <profile value="completed" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

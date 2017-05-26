@@ -14,7 +14,11 @@
 			<xsl:attribute name="d">
 				<xsl:choose>
 					<!-- MP -->
-					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://loinc.org']/fhir:code/@value='56445-0'">MP</xsl:when>
+					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://emediplan.ch/chmed16af/doc']/fhir:code/@value='MP'">MP</xsl:when>
+					<!-- RX -->
+					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://emediplan.ch/chmed16af/doc']/fhir:code/@value='RX'">RX</xsl:when>
+					<!-- PMC -->
+					<xsl:when test="fhir:entry/fhir:resource/fhir:Composition/fhir:type/fhir:coding[fhir:system/@value='http://emediplan.ch/chmed16af/doc']/fhir:code/@value='PMC'">PMC</xsl:when>
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:apply-templates select="fhir:entry" />

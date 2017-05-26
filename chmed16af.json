@@ -76,6 +76,9 @@
     "Bundle/chmed16af-mp-bundle-s01": {
       "base": "Bundle-chmed16af-mp-bundle-s01.html"
     },
+     "Bundle/chmed16af-pmc-bundle-s01": {
+      "base": "Bundle-chmed16af-pmc-bundle-s01.html"
+    },
     "StructureDefinition/chmed16af-mp-composition": {
       "base": "StructureDefinition-chmed16af-mp-composition.html"
     },
@@ -87,6 +90,9 @@
     },
     "Composition/chmed16af-mp-composition-s01": {
       "base": "Composition-chmed16af-mp-composition-s01.html"
+    },
+    "Composition/chmed16af-pmc-composition-s01": {
+      "base": "Composition-chmed16af-pmc-composition-s01.html"
     },
     "StructureDefinition/chmed16af-mp-patient": {
       "base": "StructureDefinition-chmed16af-mp-patient.html"
@@ -118,6 +124,9 @@
     "StructureDefinition/chmed16af-mp-medicationstatement": {
       "base": "StructureDefinition-chmed16af-mp-medicationstatement.html"
     },
+    "StructureDefinition/chmed16af-pmc-questionnaireresponse": {
+      "base": "StructureDefinition-chmed16af-pmc-questionnaireresponse.html"
+    },
     "MedicationStatement/chmed16af-mp-medicationstatement-s01-1": {
       "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-1.html"
     },
@@ -144,6 +153,12 @@
     },
     "Observation/chmed16af-observation-s01-timeofgestation": {
       "base": "Observation-chmed16af-observation-s01-timeofgestation.html"
+    },
+    "Questionnaire/chmed16af-pmc-questionnaire": {
+      "base": "Questionnaire-chmed16af-pmc-questionnaire.html"
+    },
+    "QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01": {
+      "base": "QuestionnaireResponse-chmed16af-pmc-questionnaireresponse-s01.html"
     },
     "ValueSet/chmed16af-valueset-cdtyp9": {
       "base": "ValueSet-chmed16af-valueset-cdtyp9.html"

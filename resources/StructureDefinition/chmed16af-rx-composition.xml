@@ -50,6 +50,20 @@
 				<map value="id"/>
 			</mapping>
 		</element>
+		<element id="chmed16af-rx-composition.Composition.type" >
+			<path value="Composition.type" />
+		</element>
+		<element id="chmed16af-rx-composition.Composition.type.coding" >
+			<path value="Composition.type.coding" />
+		</element>
+		<element id="chmed16af-rx-composition.Composition.type.coding.system" >
+			<path value="Composition.type.coding.system" />
+			<fixedUri value="http://emediplan.ch/chmed16af/doc" />
+		</element>
+		<element id="chmed16af-rx-composition.Composition.type.coding.code" >
+			<path value="Composition.type.coding.code" />
+			<fixedCode value="RX" />
+		</element>
 		<element id="chmed16af-rx-composition.Composition.subject">
 			<path value="Composition.subject"/>
 			<short value="Reference to the Patient"/>

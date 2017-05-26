@@ -24,7 +24,9 @@
                 "${workspaceRoot}/resources/ValueSet/",
                 "-ig",
                 "${workspaceRoot}/resources/CodeSystem/",
-                "-tx",
+                "-ig",
+                "${workspaceRoot}/resources/Questionnaire/",
+                 "-tx",
                 "n/a"
             ],
             "problemMatcher": {

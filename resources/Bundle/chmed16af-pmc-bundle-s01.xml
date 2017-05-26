@@ -143,7 +143,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016 
+                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -219,7 +219,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016 
+                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -291,7 +291,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 
+                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -363,7 +363,7 @@
                 <text>
                     <status value="generated"/>
                     <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 
+                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -427,18 +427,17 @@
             <QuestionnaireResponse>
                 <id value="chmed16af-pmc-questionnaireresponse-s01"/>
                 <meta>
-                    <versionId value="3"/>
-                    <lastUpdated value="2017-05-26T12:46:27Z"/>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
                 </meta>
                 <text>
                     <status value="generated"/>
                     <div 
                         xmlns="http://www.w3.org/1999/xhtml">
-                        <pre> 1: week dosing system by the pharmacist [yes], patient agrees [yes] -                             
-                            <br/>2: Intensified compliance support [yes] patient agrees [no] -                            
-                            <br/>3: Repeat check in ... months answered [yes], patient agrees [yes] 3 months                            
-                            <br/>4: Forwarding to doctor / other specialist question answered [no],                            
-                            <br/>5: Needs analysis (e.g., interactions, side effects, duplications)                            
+                        <pre> 1: week dosing system by the pharmacist [yes], patient agrees [yes] -                                                                                                                                                                                                                                                                                         
+                            <br/>2: Intensified compliance support [yes] patient agrees [no] -                                                                                                                                                                                                                                                                                        
+                            <br/>3: Repeat check in ... months answered [yes], patient agrees [yes] 3 months                                                                                                                                                                                                                                                                                        
+                            <br/>4: Forwarding to doctor / other specialist question answered [no],                                                                                                                                                                                                                                                                                        
+                            <br/>5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                                                                                                                                                        
                             <br/>
                         </pre>
                     </div>
@@ -447,15 +446,14 @@
                     <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire"/>
                 </questionnaire>
                 <status value="completed"/>
+                
                 <item>
+                    <linkId value="1"/>
                     <item>
-                        <linkId value="1"/>
-                        <item>
-                            <linkId value="1.1"/>
-                            <answer>
-                                <valueBoolean value="true"/>
-                            </answer>
-                        </item>
+                        <linkId value="1.1"/>
+                        <answer>
+                            <valueBoolean value="true"/>
+                        </answer>
                     </item>
                     <item>
                         <linkId value="1.2"/>

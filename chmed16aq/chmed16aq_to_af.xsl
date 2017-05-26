@@ -54,7 +54,6 @@
 										</xsl:attribute>
 									</fhir:code>
 								</fhir:coding>
-								<fhir:text value="Medication summary Document"/>
 							</fhir:type>
 						</xsl:if>
 						<fhir:subject>
@@ -207,6 +206,21 @@
 										<xsl:value-of select="C/@n" />
 									</div>
 								</fhir:text>
+							</fhir:section>
+						</xsl:if>
+						<xsl:if test="R">
+							<fhir:section>
+								<fhir:title value="Gesundheitsbelange"/>
+								<fhir:code>
+									<fhir:coding>
+										<fhir:system value="http://loinc.org"/>
+										<fhir:code value="61357-0"/>
+										<fhir:display value="MEDICATION PHARMACEUTICAL ADVICE.BRIEF"/>
+									</fhir:coding>
+								</fhir:code>
+								<fhir:entry>
+									<fhir:reference value="QuestionnaireResponse/a"/>
+								</fhir:entry>
 							</fhir:section>
 						</xsl:if>
 					</fhir:Composition>
@@ -917,6 +931,88 @@
 							<xsl:with-param name="categoryCode" select="6"/>
 							<xsl:with-param name="riskCodes" select="H/@r6"/>
 						</xsl:call-template>
+					</fhir:resource>
+				</fhir:entry>
+			</xsl:if>
+			<xsl:if test="R">
+				<fhir:entry>
+					<fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/QuestionnaireResponse/a" />
+					<fhir:resource>
+						<fhir:QuestionnaireResponse>
+							<fhir:id value="a"/>
+							<fhir:meta>
+								<fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
+							</fhir:meta>
+							<fhir:questionnaire>
+								<fhir:reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire"/>
+							</fhir:questionnaire>
+							<fhir:status value="completed"/>
+							<xsl:for-each select="R/Q">
+								<xsl:if test="@n">
+									<fhir:item>
+										<fhir:linkId>
+											<xsl:attribute name="value">
+												<xsl:value-of select="@n" />
+											</xsl:attribute>
+										</fhir:linkId>
+										<xsl:if test="@q">
+											<fhir:item>
+												<fhir:linkId>
+													<xsl:attribute name="value">
+														<xsl:value-of select="concat(@n,'.1')" />
+													</xsl:attribute>
+												</fhir:linkId>
+												<fhir:answer>
+													<fhir:valueBoolean>
+														<xsl:attribute name="value">
+															<xsl:choose>
+																<xsl:when test="@q=1">true</xsl:when>
+																<xsl:when test="@q=0">false</xsl:when>
+															</xsl:choose>
+														</xsl:attribute>
+													</fhir:valueBoolean>
+												</fhir:answer>
+											</fhir:item>
+										</xsl:if>
+										<xsl:if test="@p">
+											<fhir:item>
+												<fhir:linkId>
+													<xsl:attribute name="value">
+														<xsl:value-of select="concat(@n,'.2')" />
+													</xsl:attribute>
+												</fhir:linkId>
+												<fhir:answer>
+													<fhir:valueBoolean>
+														<xsl:attribute name="value">
+															<xsl:choose>
+																<xsl:when test="@p=1">true</xsl:when>
+																<xsl:when test="@p=0">false</xsl:when>
+															</xsl:choose>
+														</xsl:attribute>
+													</fhir:valueBoolean>
+												</fhir:answer>
+											</fhir:item>
+										</xsl:if>
+										<xsl:if test="@r">
+											<fhir:item>
+												<fhir:linkId>
+													<xsl:attribute name="value">
+														<xsl:value-of select="concat(@n,'.3')" />
+													</xsl:attribute>
+												</fhir:linkId>
+												<fhir:answer>
+													<fhir:valueString>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@r" />
+														</xsl:attribute>
+													</fhir:valueString>
+												</fhir:answer>
+											</fhir:item>
+										</xsl:if>
+									</fhir:item>
+								</xsl:if>
+							</xsl:for-each>
+						</fhir:QuestionnaireResponse>
 					</fhir:resource>
 				</fhir:entry>
 			</xsl:if>

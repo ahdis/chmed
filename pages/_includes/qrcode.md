@@ -77,6 +77,10 @@ Transform from fhir example with stripped namespage
         </MS>
     </M>
     <H w="72" h="178" m="2016-09-01" p="1" tw="30" td="5" r1="577" r3="612" r4="" r5="" r6="555,571"/>
+    <!-- PMC -->
+    <R>
+        <Q n="1" p="1" r="test" />
+    </R>
 </B>
 ```
 

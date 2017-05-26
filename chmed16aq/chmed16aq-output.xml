@@ -1,1 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fhir="http://hl7.org/fhir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:chmed16af="http://chemed16af.emediplan.ch" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="chmed16aq.xsd" v="1.0" d="MP"><C i="26d3dff7-ab05-4737-a49c-5eccd33595f6" d="2016-09-12T11:46:09+02:00" at="2016-09-12T11:46:09+02:00" ap="7601003178999" n="Bemerkung"><A i="7601003178999" g="Thomas" f="Wälti"/><P i="vekano" g="Maxima" f="Matter" t="+41588512600" ag="f" b="1981-01-12" l="Untermattweg 8" p="3027" c="Bern" cl="de-CH"/></C><M><MS i="7680453070343" s="0" r="Akne" n="-"><D s="2016-09-12" e="2020-09-12" r="1" m="1" u="Stk" o="PO"/></MS><MS i="7680517950680" s="0" r="Blutverdünnung"><D s="2016-09-12" e="2020-09-12" m="1" u="Stk" o="PO"/></MS><MS i="7680521101573" s="0" r="Bluthochdruck/Herz"><D s="2016-02-10" m="1" v="1" u="Stk" o="PO"/></MS><MS i="7680497420456" s="0" r="Cholesterinsenker"><D s="2016-02-10" v="1" u="Stk" o="PO"/></MS></M><H w="72" h="178" m="2016-09-01" p="1" tw="30" td="5" r1="577" r3="612" r4="" r5="" r6="555,571"/></B>
+<?xml version="1.0" encoding="UTF-8"?>
+<B 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:fhir="http://hl7.org/fhir" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:chmed16af="http://chemed16af.emediplan.ch" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:noNamespaceSchemaLocation="chmed16aq.xsd" v="" d="PMC">
+    <C i="3ba6996c-6577-423d-984c-231629bf4a09" d="2017-05-26T11:46:09+02:00" at="2017-05-26T11:46:09+02:00" ap="7601003178999" n="">
+        <A i="7601003178999" g="Thomas" f="Wälti"/>
+        <P g="Maxima" f="Matter" ag="f" b="1981-01-12" l="Untermattweg 8 Carrer de Call 19" p="3027" c="Bern"/>
+    </C>
+    <M>
+        <MS i="7680453070343" s="0" r="Akne" n="-">
+            <D s="2016-09-12" e="2020-09-12" r="1" m="1" u="Stk" o="PO"/>
+        </MS>
+        <MS i="7680517950680" s="0" r="Blutverdünnung">
+            <D s="2016-09-12" e="2020-09-12" m="1" u="Stk" o="PO"/>
+        </MS>
+        <MS i="7680521101573" s="0" r="Bluthochdruck/Herz">
+            <D s="2016-02-10" m="1" v="1" u="Stk" o="PO"/>
+        </MS>
+        <MS i="7680497420456" s="0" r="Cholesterinsenker">
+            <D s="2016-02-10" v="1" u="Stk" o="PO"/>
+        </MS>
+    </M>
+    <R>
+        <Q n="1" q="1" p="1" r="-"/>
+        <Q n="2" q="1" p="0" r="-"/>
+        <Q n="3" q="1" p="1" r="3"/>
+        <Q n="4" q="0"/>
+    </R>
+</B>

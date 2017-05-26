@@ -6,7 +6,8 @@
 	xmlns:chmed16af="http://chemed16af.emediplan.ch" 
 	xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xsl:template match="/fhir:Bundle">
-		<B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq.xsd">
+		<B 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chmed16aq.xsd">
 			<!-- @v -->
 			<xsl:attribute name="v">
 				<xsl:value-of select="fhir:meta/fhir:versionId/@value" />
@@ -239,6 +240,23 @@
 					</xsl:if>
 				</xsl:for-each>
 			</H>
+		</xsl:if>
+		<!-- R -->
+		<xsl:if test="fhir:section[fhir:code/fhir:coding/fhir:code/@value='61357-0']">
+			<xsl:for-each select="fhir:section[fhir:code/fhir:coding/fhir:code/@value='61357-0']/fhir:entry/fhir:reference">
+				<xsl:variable name="qr" select="substring-after(@value,'QuestionnaireResponse/')" />
+				<xsl:if test="$qr">
+					<xsl:variable name="this" select="/fhir:Bundle/fhir:entry/fhir:resource/fhir:QuestionnaireResponse[fhir:id[@value=$qr]]" />
+					<xsl:if test="$this">
+						<R>
+							<!-- RQuestionnaireResponse -->
+							<xsl:call-template name='RQuestionnaireResponse'>
+								<xsl:with-param name='this' select='$this'/>
+							</xsl:call-template>
+						</R>
+					</xsl:if>
+				</xsl:if>
+			</xsl:for-each>
 		</xsl:if>
 	</xsl:template>
 	<!-- MS -->
@@ -490,6 +508,46 @@
 				</xsl:call-template>
 			</xsl:attribute>
 		</xsl:if>
+	</xsl:template>
+	<!-- R QuestionnaireResponse -->
+	<xsl:template name='RQuestionnaireResponse' mode='ms' match='fhir:QuestionnaireResponse'>
+		<xsl:param name='this' select='.'/>
+		<xsl:for-each select="$this/fhir:item">
+			<xsl:if test="fhir:linkId/@value">
+				<Q>
+					<xsl:attribute name="n">
+						<xsl:value-of select="fhir:linkId/@value" />
+					</xsl:attribute>
+					<xsl:variable name="qq" select="concat(fhir:linkId/@value,'.1')" />
+					<xsl:variable name="qqa" select="fhir:item[fhir:linkId/@value=$qq]/fhir:answer/fhir:valueBoolean/@value" />
+					<xsl:if test="$qqa">
+						<xsl:attribute name="q">
+							<xsl:choose>
+								<xsl:when test="$qqa='true'">1</xsl:when>
+								<xsl:when test="$qqa='false'">0</xsl:when>
+							</xsl:choose>
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:variable name="qp" select="concat(fhir:linkId/@value,'.2')" />
+					<xsl:variable name="qpa" select="fhir:item[fhir:linkId/@value=$qp]/fhir:answer/fhir:valueBoolean/@value" />
+					<xsl:if test="$qpa">
+						<xsl:attribute name="p">
+							<xsl:choose>
+								<xsl:when test="$qpa='true'">1</xsl:when>
+								<xsl:when test="$qpa='false'">0</xsl:when>
+							</xsl:choose>
+						</xsl:attribute>
+					</xsl:if>
+					<xsl:variable name="qr" select="concat(fhir:linkId/@value,'.3')" />
+					<xsl:variable name="qra" select="fhir:item[fhir:linkId/@value=$qr]/fhir:answer/fhir:valueString/@value" />
+					<xsl:if test="$qra">
+						<xsl:attribute name="r">
+							<xsl:value-of select="$qra" />
+						</xsl:attribute>
+					</xsl:if>
+				</Q>
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
 	<!--join -->
 	<xsl:template name="join">

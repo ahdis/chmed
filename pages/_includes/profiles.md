@@ -80,7 +80,7 @@ The medication section contains the entries for the current medications for pati
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
 | dosage.route  | How drug should enter body | CodeableConect  | Medication.Roa | @o |
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @dl, @dh |
+| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
@@ -179,9 +179,24 @@ The medication section contains the entries for the current medications for pati
 Examples for MedicationStatements [1](MedicationStatement-chmed16af-mp-medicationstatement-s01-1.html) &#124; [2](MedicationStatement-chmed16af-mp-medicationstatement-s01-2.html) &#124; [3](MedicationStatement-chmed16af-mp-medicationstatement-s01-3.html) &#124; [4](MedicationStatement-chmed16af-mp-medicationstatement-s01-4.html)
 
 ## Recommendation Section 
-The recommendation section contains the entries for recommondation of the PolymedicationCheck.
+The recommendation section contains the entry for the recommendations of the Poly Medication Check:
 
-TODO
+ 1: week dosing system by the pharmacist                             
+ 2: Intensified compliance support                                     
+ 3: Repeat check in ... months                                        
+ 4: Forwarding to doctor / other specialist                            
+ 5: Needs analysis (e.g., interactions, side effects, duplications) 
+
+The answer to this questions are provided in a QuestionnaireResponse resource [profile](StructureDefinition-chmed16af-pmc-questionnaireresponse.html) according to the [Questionnaire](Questionnaire-chmed16af-pmc-questionnaire.html) defined if a) which question was raised with the patient b) if the patient agrees and c) if there is an additional remark.
+
+| Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
+| ------------- | ------------- | -------------  | ------------- | -------------  | 
+| item.linkId  | Questionnaire number  | QuestionnaireResponse  | Recommendation.Id | &lt;Q&gt; @n  | 
+| item[linkId="n.1"]/answer/valueBoolean  | Question was asked | Boolean  | id  | @q | 
+| item[linkId="n.2"]/answer/valueBoolean  | Patient agreed |  Boolean | PatAgr | @p  | 
+| item[linkId="n.3"]/answer/valueString  | Patient agreed |  Boolean | Remark | @r  | 
+
+[Profile for Questionnaire Response](StructureDefinition-chmed16af-pmc-questionnaireresponse.html) &#124; [Example for Questionnare Response](QuestionnaireResponse-chmed16af-pmc-questionnaireresponse-s01.html)
 
 # Prescription
 A prescription can be structured in a bundle according to the prescription bundle profile.
@@ -201,7 +216,7 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 
 ## Compostion
 
-The Composition ressource defines the following parameter for the PolymedicationCheck:
+The Composition ressource defines the following parameter for the Prescription:
 
 | Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
 | ------------- | ------------- | -------------  | ------------- | -------------  | 
@@ -212,7 +227,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | section | medications |  MedicationAdminstration | Medicaments | &lt;M&gt;  | 
 | section | note |  - | Rmk | &lt;@n&gt;  | 
 
-[Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-rx-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-rx-composition-s01.xml.html)
+[Profile for Prescription Composition](StructureDefinition-chmed16af-rx-composition.html) &#124; [Example for Prescription (xml)](Composition-chmed16af-rx-composition-s01.xml.html)
 
 ## Patient
 
@@ -244,14 +259,15 @@ The medication section contains the entries for the prescriped medications for t
 | Parameter  | Description | Resource/Datatype    | CHMED16A | CHMED16AQ  |
 | ------------- | ------------- | -------------  | ------------- | -------------  | 
 | medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) | @i    | 
-| informationSource  | Person or organization that provided the information about the taking of this medication  | Patient or Practitioner  | Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner | @s=1 or 0    | 
-| reasonCode  | Reason for why the medication is being/was taken  | CodeableConcept  | Medication.TkgRsn (Taking Reason) | @r  | 
 | note  | Application Instructions  | Annotation  |Medication.AppInstr | @n  | 
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @dl, @dh |
+| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
+| dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | Medication  | Rep | @dn    | 
+| dispenseRequest.quantity  | Number of package to be delivered  | Medication  | NbPack | @dq    | 
+| substitution.allowed  |  Medication is substitutable    | Medication  | Subs negated | @sa   | 
 
-[Profile for MedicationAdministration](StructureDefinition-chmed16af-mp-medicationadministration.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
+[Profile for MedicationRequest](StructureDefinition-chmed16af-rx-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
 
-Examples for MedicationStatements [1](MedicationStatement-chmed16af-rx-medicationadministration-s01-1.html)
+Examples for MedicationRequest [1](MedicationStatement-chmed16af-rx-medicationrequest-s01-1.html)

@@ -79,6 +79,9 @@
      "Bundle/chmed16af-pmc-bundle-s01": {
       "base": "Bundle-chmed16af-pmc-bundle-s01.html"
     },
+     "Bundle/chmed16af-rx-bundle-s01": {
+      "base": "Bundle-chmed16af-rx-bundle-s01.html"
+    },
     "StructureDefinition/chmed16af-mp-composition": {
       "base": "StructureDefinition-chmed16af-mp-composition.html"
     },
@@ -93,6 +96,9 @@
     },
     "Composition/chmed16af-pmc-composition-s01": {
       "base": "Composition-chmed16af-pmc-composition-s01.html"
+    },
+    "Composition/chmed16af-rx-composition-s01": {
+      "base": "Composition-chmed16af-rx-composition-s01.html"
     },
     "StructureDefinition/chmed16af-mp-patient": {
       "base": "StructureDefinition-chmed16af-mp-patient.html"
@@ -126,6 +132,9 @@
     },
     "StructureDefinition/chmed16af-pmc-questionnaireresponse": {
       "base": "StructureDefinition-chmed16af-pmc-questionnaireresponse.html"
+    },
+    "MedicationRequest/chmed16af-rx-medicationrequest-s01-1": {
+      "base": "MedicationStatement-chmed16af-rx-medicationrequest-s01-1.html"
     },
     "MedicationStatement/chmed16af-mp-medicationstatement-s01-1": {
       "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-1.html"

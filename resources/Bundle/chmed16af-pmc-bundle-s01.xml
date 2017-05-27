@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="chmed16af-pmc-bundle-s01"/>
     <meta>
-        <lastUpdated value="2017-05-26T12:47:19Z"/>
+        <versionId value="1.0"/>
         <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle"/>
     </meta>
     <identifier>

@@ -7,15 +7,34 @@
 	xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<xsl:template match="/B">
 		<xsl:variable name="ms" select="M/MS" />
+		<xsl:variable name="doc" select="@d" />
 		<fhir:Bundle>
-			<fhir:id value="chmed16af-mp-bundle-s01"/>
+			<fhir:id>
+				<xsl:attribute name="value">
+					<xsl:value-of select="C/@i" />
+				</xsl:attribute>
+			</fhir:id>
 			<fhir:meta>
 				<fhir:versionId>
 					<xsl:attribute name="value">
-						<!-- B v -->
-						<xsl:value-of select="@v" />
+						<xsl:choose>
+							<!-- B v -->
+							<xsl:when test="@v and @v!=''">
+								<xsl:value-of select="@v" />
+							</xsl:when>
+							<xsl:otherwise>1.0</xsl:otherwise>
+						</xsl:choose>
 					</xsl:attribute>
 				</fhir:versionId>
+				<fhir:profile>
+					<xsl:attribute name="value">
+						<xsl:choose>
+							<xsl:when test="$doc='RX'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-bundle</xsl:when>
+							<xsl:when test="$doc='MP'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-bundle</xsl:when>
+							<xsl:when test="$doc='PMC'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle</xsl:when>
+						</xsl:choose>
+					</xsl:attribute>
+				</fhir:profile>
 			</fhir:meta>
 			<fhir:identifier>
 				<!-- C i -->
@@ -33,7 +52,15 @@
 					<fhir:Composition>
 						<fhir:id value="comp1"/>
 						<fhir:meta>
-							<fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
+							<fhir:profile>
+								<xsl:attribute name="value">
+									<xsl:choose>
+										<xsl:when test="$doc='RX'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition</xsl:when>
+										<xsl:when test="$doc='MP'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition</xsl:when>
+										<xsl:when test="$doc='PMC'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition</xsl:when>
+									</xsl:choose>
+								</xsl:attribute>
+							</fhir:profile>
 						</fhir:meta>
 						<!-- C r -->
 						<xsl:if test="C/@r">
@@ -44,6 +71,7 @@
 							</fhir:extension>
 							<fhir:status value="final"/>
 						</xsl:if>
+						<!-- @d -->
 						<xsl:if test="@d">
 							<fhir:type>
 								<fhir:coding>
@@ -69,7 +97,15 @@
 							<!-- C A i -->
 							<fhir:reference value="Practitioner/author" />
 						</fhir:author>
-						<fhir:title value="MedicationPlan"/>
+						<xsl:if test="$doc='PMC'">
+							<fhir:title value="Poly Medication Check"/>
+						</xsl:if>
+						<xsl:if test="$doc='MP'">
+							<fhir:title value="MedicationPlan"/>
+						</xsl:if>
+						<xsl:if test="$doc='RX'">
+							<fhir:title value="Prescription"/>
+						</xsl:if>
 						<!-- C at C ap  -->
 						<xsl:if test="C/@at or C/@ap">
 							<fhir:attester>
@@ -92,19 +128,36 @@
 						</xsl:if>
 						<xsl:if test="$ms">
 							<fhir:section>
-								<fhir:title value="Aktuelle Medikation"/>
-								<fhir:code>
-									<fhir:coding>
-										<fhir:system value="http://loinc.org"/>
-										<fhir:code value="77604-7"/>
-										<fhir:display value="History of medication use"/>
-									</fhir:coding>
-								</fhir:code>
+								<xsl:if test="$doc='PMC' or $doc='MP'">
+									<fhir:title value="Aktuelle Medikation"/>
+									<fhir:code>
+										<fhir:coding>
+											<fhir:system value="http://loinc.org"/>
+											<fhir:code value="77604-7"/>
+											<fhir:display value="History of medication use"/>
+										</fhir:coding>
+									</fhir:code>
+								</xsl:if>
+								<xsl:if test="$doc='RX'">
+									<fhir:title value="Rezept"/>
+									<fhir:code>
+										<fhir:coding>
+											<fhir:system value="http://loinc.org"/>
+											<fhir:code value="57828-6"/>
+											<fhir:display value="PRESCRIPTIONS"/>
+										</fhir:coding>
+									</fhir:code>
+								</xsl:if>
 								<xsl:for-each select="$ms">
 									<fhir:entry>
 										<fhir:reference>
 											<xsl:attribute name="value">
-												<xsl:value-of select="concat('MedicationStatement/MS',position())" />
+												<xsl:if test="$doc='PMC' or $doc='MP'">
+													<xsl:value-of select="concat('MedicationStatement/MS',position())" />
+												</xsl:if>
+												<xsl:if test="$doc='RX'">
+													<xsl:value-of select="concat('MedicationRequest/MR',position())" />
+												</xsl:if>
 											</xsl:attribute>
 										</fhir:reference>
 									</fhir:entry>
@@ -234,7 +287,15 @@
 						<fhir:Patient>
 							<fhir:id value="patient"/>
 							<fhir:meta>
-								<fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
+								<fhir:profile>
+									<xsl:attribute name="value">
+										<xsl:choose>
+											<xsl:when test="$doc='RX'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmcrx-patient</xsl:when>
+											<xsl:when test="$doc='MP'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient</xsl:when>
+											<xsl:when test="$doc='PMC'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmcrx-patient</xsl:when>
+										</xsl:choose>
+									</xsl:attribute>
+								</fhir:profile>
 							</fhir:meta>
 							<xsl:if test="C/P/@i">
 								<fhir:identifier>
@@ -442,23 +503,48 @@
 					</fhir:resource>
 				</fhir:entry>
 			</xsl:if>
-			<!-- MedicationStatments -->
+			<!-- MedicationStatments or MedicationRequests-->
 			<xsl:for-each select="$ms">
 				<fhir:entry>
 					<fhir:fullUrl>
 						<xsl:attribute name="value">
-							<xsl:value-of select="concat('http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS',position())" />
+							<xsl:if test="$doc='PMC' or $doc='MP'">
+								<xsl:value-of select="concat('http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS',position())" />
+							</xsl:if>
+							<xsl:if test="$doc='RX'">
+								<xsl:value-of select="concat('http://chmed16af.emediplan.ch/bundle/fhir/MedicationRequest/MR',position())" />
+							</xsl:if>
 						</xsl:attribute>
 					</fhir:fullUrl>
 					<fhir:resource>
-						<fhir:MedicationStatement>
+						<xsl:variable name="resource">
+							<xsl:choose>
+								<xsl:when test="$doc='RX'">fhir:MedicationRequest</xsl:when>
+								<xsl:when test="$doc='MP'">fhir:MedicationStatement</xsl:when>
+								<xsl:when test="$doc='PMC'">fhir:MedicationStatement</xsl:when>
+							</xsl:choose>
+						</xsl:variable>
+						<xsl:element name="{$resource}">
 							<fhir:id>
 								<xsl:attribute name="value">
-									<xsl:value-of select="concat('MedicationStatement/MS',position())" />
+									<xsl:if test="$doc='PMC' or $doc='MP'">
+										<xsl:value-of select="concat('MedicationStatement/MS',position())" />
+									</xsl:if>
+									<xsl:if test="$doc='RX'">
+										<xsl:value-of select="concat('MedicationRequest/MR',position())" />
+									</xsl:if>
 								</xsl:attribute>
 							</fhir:id>
 							<fhir:meta>
-								<fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+								<fhir:profile>
+									<xsl:attribute name="value">
+										<xsl:choose>
+											<xsl:when test="$doc='RX'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest</xsl:when>
+											<xsl:when test="$doc='MP'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement</xsl:when>
+											<xsl:when test="$doc='PMC'">http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement</xsl:when>
+										</xsl:choose>
+									</xsl:attribute>
+								</fhir:profile>
 							</fhir:meta>
 							<fhir:contained>
 								<fhir:Medication>
@@ -529,7 +615,14 @@
 							</xsl:if>
 							<!-- D -->
 							<xsl:if test="D">
-								<fhir:dosage>
+								<xsl:variable name="dosage">
+									<xsl:choose>
+										<xsl:when test="$doc='RX'">fhir:dosageInstruction</xsl:when>
+										<xsl:when test="$doc='MP'">fhir:dosage</xsl:when>
+										<xsl:when test="$doc='PMC'">fhir:dosage</xsl:when>
+									</xsl:choose>
+								</xsl:variable>
+								<xsl:element name="{$dosage}">
 									<xsl:if test="D/@s or D/@e">
 										<fhir:timing>
 											<fhir:repeat>
@@ -626,9 +719,39 @@
 											</xsl:if>
 										</fhir:doseQuantity>
 									</xsl:if>
-								</fhir:dosage>
+								</xsl:element>
 							</xsl:if>
-						</fhir:MedicationStatement>
+							<!-- @dn, @dq  -->
+							<xsl:if test="@dn or @dq">
+								<fhir:dispenseRequest>
+									<xsl:if test="@dn">
+										<fhir:numberOfRepeatsAllowed>
+											<xsl:value-of select="@dn" />
+										</fhir:numberOfRepeatsAllowed>
+									</xsl:if>
+									<xsl:if test="@dq">
+										<fhir:quantity>
+											<fhir:value>
+												<xsl:value-of select="@dq" />
+											</fhir:value>
+										</fhir:quantity>
+									</xsl:if>
+								</fhir:dispenseRequest>
+							</xsl:if>
+							<!-- sa -->
+							<xsl:if test="@sa">
+								<fhir:substitution>
+									<fhir:allowed>
+										<xsl:attribute name="value">
+											<xsl:choose>
+												<xsl:when test="@sa=1">true</xsl:when>
+												<xsl:when test="@sa=0">false</xsl:when>
+											</xsl:choose>
+										</xsl:attribute>
+									</fhir:allowed>
+								</fhir:substitution>
+							</xsl:if>
+						</xsl:element>
 					</fhir:resource>
 				</fhir:entry>
 			</xsl:for-each>

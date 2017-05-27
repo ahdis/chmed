@@ -8,11 +8,11 @@
         <status value="generated"/>
         <div 
             xmlns="http://www.w3.org/1999/xhtml">
-            <pre>       1: week dosing system by the pharmacist                            [yes], patient agrees [yes] -                                                                                                                                                
-                <br />2: Intensified compliance support                                    [yes]  patient agrees [no] -                                                                                                                                                
-                <br />3: Repeat check in ... months                                         answered [yes], patient agrees [yes] 3 months                                                                                                                                              
-                <br />4: Forwarding to doctor / other specialist                            question answered [no],                                                                                                                                              
-                <br />5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                               
+            <pre>       1: week dosing system by the pharmacist                            [yes], patient agrees [yes] -                                                                                                                                                                
+                <br />2: Intensified compliance support                                    [yes]  patient agrees [no] -                                                                                                                                                                
+                <br />3: Repeat check in ... months                                         answered [yes], patient agrees [yes] 3 months                                                                                                                                                              
+                <br />4: Forwarding to doctor / other specialist                            question answered [no],                                                                                                                                                              
+                <br />5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                               
                 <br />
             </pre>
         </div>
@@ -21,7 +21,6 @@
         <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
     </questionnaire>
     <status value="completed"/>
-    <!-->
     <item>
         <linkId value="1"/>
         <item>
@@ -92,5 +91,6 @@
             <answer>
                 <valueBoolean value="false"/>
             </answer>
-        </item></item>-->
-    </QuestionnaireResponse>
+        </item>
+    </item>
+</QuestionnaireResponse>

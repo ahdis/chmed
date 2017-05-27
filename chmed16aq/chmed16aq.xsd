@@ -241,6 +241,33 @@
 				<xs:restriction base="xs:string"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="dn">
+			<xs:annotation>
+				<xs:documentation>Number of repetitions</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="dq">
+			<xs:annotation>
+				<xs:documentation>Number of packages to be delivered</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="sa">
+			<xs:annotation>
+				<xs:documentation>Medication is substitutable</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="1" />
+					<xs:pattern value="[01]" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="DosageType">
 		<xs:annotation>
@@ -321,6 +348,14 @@
 				<xs:restriction base="xs:string"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="u">
+			<xs:annotation>
+				<xs:documentation>Unit dosage</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 		<xs:attribute name="dl">
 			<xs:annotation>
 				<xs:documentation>FIXME</xs:documentation>
@@ -340,6 +375,57 @@
 		<xs:attribute name="dm">
 			<xs:annotation>
 				<xs:documentation>FIXME</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RecommendationType">
+		<xs:annotation>
+			<xs:documentation>Recommendation Shorthand (PMC)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Q" type="QuestionnaireResponseType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="QuestionnaireResponseType">
+		<xs:annotation>
+			<xs:documentation>QuestionnaireResponseType Shorthand (PMC)</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="n">
+			<xs:annotation>
+				<xs:documentation>Question number</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="q">
+			<xs:annotation>
+				<xs:documentation>Question number asked</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="1" />
+					<xs:pattern value="[01]" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="p">
+			<xs:annotation>
+				<xs:documentation>Patient agreed</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:length value="1" />
+					<xs:pattern value="[01]" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="r">
+			<xs:annotation>
+				<xs:documentation>Remark</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string"></xs:restriction>
@@ -459,6 +545,7 @@
 				<xs:element name="C" type="CompositionType" />
 				<xs:element name="M" type="MedicationSectionType" />
 				<xs:element name="H" type="HealthConcernSectionType" minOccurs="0" />
+				<xs:element name="R" type="RecommendationType" minOccurs="0" />
 			</xs:sequence>
 			<xs:attribute name="v" use="required">
 				<xs:annotation>
@@ -476,8 +563,7 @@
 					<xs:documentation>document</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
-					<xs:restriction base="xs:string">
-					</xs:restriction>
+					<xs:restriction base="xs:string"></xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
 		</xs:complexType>

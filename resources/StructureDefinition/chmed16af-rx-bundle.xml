@@ -62,7 +62,7 @@
             <max value="1" />
             <type>
                 <code value="Composition" />
-                <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16taf-rx-composition" />
+                <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition" />
             </type>
         </element>
 	</differential>

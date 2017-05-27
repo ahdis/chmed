@@ -52,6 +52,17 @@
 			</exampleFor>
 		</resource>
 		<resource>
+			<example value="true" />
+			<name value="Prescription" />
+			<description value="Example for Prescription" />
+			<sourceReference>
+				<reference value="Bundle/chmed16af-rx-bundle-s01" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-rx-bundle" />
+			</exampleFor>
+		</resource>
+		<resource>
 			<example value="false" />
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-mp-composition" />
@@ -117,6 +128,17 @@
 			</exampleFor>
 		</resource>
 		<resource>
+			<example value="true" />
+			<name value="Composition Prescription" />
+			<description value="Example for Composition Prescription" />
+			<sourceReference>
+				<reference value="Composition/chmed16af-rx-composition-s01" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-rx-composition" />
+			</exampleFor>
+		</resource>
+		<resource>
 			<example value="false" />
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-mp-patient" />
@@ -161,6 +183,23 @@
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-mp-medicationstatement" />
 			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false" />
+			<sourceReference>
+				<reference value="StructureDefinition/chmed16af-rx-medicationrequest" />
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true" />
+			<name value="MedicationRequest" />
+			<description value="Example for a MedicationReqeust" />
+			<sourceReference>
+				<reference value="MedicationRequest/chmed16af-rx-medicationrequest-s01-1" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-rx-medicationrequest" />
+			</exampleFor>
 		</resource>
 		<resource>
 			<example value="true" />

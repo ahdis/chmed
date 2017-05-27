@@ -4,6 +4,7 @@
     <id value="chmed16af-mp-bundle-s01"/>
     <meta>
         <versionId value="1.0"/>
+        <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-bundle"/>
     </meta>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>

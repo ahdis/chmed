@@ -371,7 +371,7 @@
 			<definition value="Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept)."/>
 			<comment value="Can express &quot;as needed&quot; without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express &quot;as needed&quot; with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not &quot;prn&quot; or &quot;as needed&quot;."/>
 			<min value="0"/>
-			<max value="0"/>
+			<max value="1"/>
 			<type>
 				<code value="boolean"/>
 			</type>
@@ -434,7 +434,7 @@
 			<comment value="Note that this specifies the quantity of the specified medication, not the quantity for each active ingredient(s). Each ingredient amount can be communicated in the Medication resource. For example, if one wants to communicate that a tablet was 375 mg, where the dose was one tablet, you can use the Medication resource to document that the tablet was comprised of 375 mg of drug XYZ. Alternatively if the dose was 375 mg, then you may only need to use the Medication resource to indicate this was a tablet. If the example were an IV such as dopamine and you wanted to communicate that 400mg of dopamine was mixed in 500 ml of some IV solution, then this would all be communicated in the Medication resource. If the administration is not intended to be instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount to be administered over the period of time as indicated by the schedule e.g. 500 ml in dose, with timing used to convey that this should be done over 4 hours."/>
 			<requirements value="The amount of therapeutic or other substance given at one administration event."/>
 			<min value="0"/>
-			<max value="0"/>
+			<max value="1"/>
 			<type>
 				<code value="Range"/>
 			</type>
@@ -554,7 +554,7 @@
 			</type>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Sub"/>
+				<map value="NbPack"/>
 			</mapping>
 		</element>
 		<element id="chmed16af-rx-medicationrequest.MedicationRequest.dispenseRequest.expectedSupplyDuration">

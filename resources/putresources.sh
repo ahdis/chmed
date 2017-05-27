@@ -20,3 +20,6 @@ curl -i -X PUT -H "Content-Type:text/xml" --data @./Practitioner/chmed16af-pract
 curl -i -X PUT -H "Content-Type:text/xml" --data @./Questionnaire/chmed16af-pmc-questionnaire.xml http://test.fhir.org/r3/Questionnaire/chmed16af-pmc-questionnaire
 curl -i -X PUT -H "Content-Type:text/xml" --data @./QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01.xml http://test.fhir.org/r3/QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01
 curl -i -X PUT -H "Content-Type:text/xml" --data @./Composition/chmed16af-pmc-composition-s01.xml http://test.fhir.org/r3/Composition/chmed16af-pmc-composition-s01
+
+curl -i -X PUT -H "Content-Type:text/xml" --data @./MedicationRequest/chmed16af-rx-medicationrequest-s01-1.xml http://test.fhir.org/r3/MedicationRequest/chmed16af-rx-medicationrequest-s01-1
+curl -i -X PUT -H "Content-Type:text/xml" --data @./Composition/chmed16af-rx-composition-s01.xml http://test.fhir.org/r3/Composition/chmed16af-rx-composition-s01

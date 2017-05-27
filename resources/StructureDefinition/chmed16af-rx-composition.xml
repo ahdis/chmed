@@ -310,7 +310,7 @@
 			<max value="*"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationstatement"/>
+				<targetProfile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest"/>
 			</type>
 		</element>
 		<!-- sectionnote -->

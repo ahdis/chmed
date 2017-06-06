@@ -168,7 +168,7 @@
             ]
         },
         {
-            "taskName": "xsl mp bundle to qr",
+            "taskName": "xsl bundle to qr",
             "args": [
                 "-jar",
                 "${workspaceRoot}/tools/saxon9he.jar",
@@ -177,7 +177,7 @@
                 "-o:${workspaceRoot}/chmed16aq/chmed16aq-output.xml"
             ]
         },        {
-            "taskName": "xsl qr to mp bundle",
+            "taskName": "xsl qr to bundle",
             "args": [
                 "-jar",
                 "${workspaceRoot}/tools/saxon9he.jar",

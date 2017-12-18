@@ -1,0 +1,100 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-medicationstatement-tt-3-clexane" />
+	<meta>
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
+	</meta>
+	<text>
+		<status value="generated" />
+		<div 
+			xmlns="http://www.w3.org/1999/xhtml">
+ Marcumar-Therapie mit Clexane
+ 
+ 
+MARCOUMAR Tabl 3 mg  (Prd-Nr. 7157)     
+Tag 1 (08:00)   1
+
+CLEXANE Inj Lös 40 mg/0.4ml  (Prd-Nr. 16607)
+Tag 3 (08:00)	                                        1
+Tag 4 und folgende  (08:00)                             1
+
+    "Clecane": [{
+            "Id": "16607",
+            "IdType": 4,
+            "Pos": [{
+                    "DtFrom": "2017-09-07",
+                    "CyDu": 86400,
+                    "InRes": 0,
+                    "TT": [{
+                            "Off": 28800,
+                            "DoFrom": 40.0
+                        }
+                    ]
+                }
+            ],
+            "Unit": "mg",
+            "TkgRsn": "Blutverdünnung",
+            "Roa": "IVINJ",
+            "Rep": 0,
+            "Subs": 0,
+            "NbPack": 1
+
+
+
+		</div>
+	</text>
+	<contained>
+		<Medication>
+			<id value="cont1" />
+			<meta>
+				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
+			</meta>
+			<code>
+				<coding>
+					<system value="urn:oid:2.51.1.1"/>
+					<code value="7680494563859"/>
+					<display value="CLEXANE Inj Lös 40 mg/0.4ml"/>
+				</coding>
+			</code>
+		</Medication>
+	</contained>
+	<status value="active" />
+	<medicationReference>
+		<reference value="#cont1" />
+	</medicationReference>
+	<informationSource>
+		<reference value="Practitioner/chmed16af-practitioner-s01" />
+	</informationSource>
+	<subject>
+		<reference value="Patient/chmed16af-mp-patient-s01" />
+	</subject>
+	<taken value="unk" />
+	<reasonCode>
+		<text value="Blutverdünnung" />
+	</reasonCode>
+	<dosage>
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2017-09-07" />
+				</boundsPeriod>
+				<duration value="1" />
+				<durationUnit value="d" />
+				<frequency value="1" />
+				<timeOfDay value="08:00:00" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="40" />
+			<unit value="mg" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="mg" />
+		</doseQuantity>
+	</dosage>
+</MedicationStatement>

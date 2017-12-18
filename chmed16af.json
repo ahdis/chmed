@@ -1,5 +1,6 @@
 {
   "tool": "jekyll",
+  "version" : "3.0.1",
   "paths": {
     "resources": [
       "resources"
@@ -9,8 +10,7 @@
     "output": "output",
     "qa": "qa",
     "txCache": "txCache",
-    "specification": "http://hl7.org/fhir/STU3/",
-    "version" : "3.0.1"
+    "specification": "http://hl7.org/fhir/STU3/"
   },
   "defaults": {
     "Any": {
@@ -28,159 +28,6 @@
   "source": "ImplementationGuide/chmed16af-ig.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {
-    "CodeSystem/chmed16af-codesystem-cdtyp9": {
-      "base": "CodeSystem-chmed16af-codesystem-cdtyp9.html"
-    },
-    "CodeSystem/chmed16af-codesystem-cdtyp26": {
-      "base": "CodeSystem-chmed16af-codesystem-cdtyp26.html"
-    },
-    "CodeSystem/chmed16af-codesystem-risks-category": {
-      "base": "CodeSystem-chmed16af-codesystem-risks-category.html"
-    },
-    "CodeSystem/chmed16af-codesystem-risks-cdscode": {
-      "base": "CodeSystem-chmed16af-codesystem-risks-cdscode.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-1": {
-      "base": "Condition-chmed16af-mp-condition-s01-1.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-2": {
-      "base": "Condition-chmed16af-mp-condition-s01-2.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-3": {
-      "base": "Condition-chmed16af-mp-condition-s01-3.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-4": {
-      "base": "Condition-chmed16af-mp-condition-s01-4.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-5": {
-      "base": "Condition-chmed16af-mp-condition-s01-5.html"
-    },
-    "Condition/chmed16af-mp-condition-s01-6": {
-      "base": "Condition-chmed16af-mp-condition-s01-6.html"
-    },
-    "StructureDefinition/chmed16af-medication": {
-      "base": "StructureDefinition-chmed16af-medication.html"
-    },
-    "StructureDefinition/chmed16af-receiver": {
-      "base": "StructureDefinition-chmed16af-receiver.html"
-    },
-    "StructureDefinition/chmed16af-mp-bundle": {
-      "base": "StructureDefinition-chmed16af-mp-bundle.html"
-    },
-    "StructureDefinition/chmed16af-rx-bundle": {
-      "base": "StructureDefinition-chmed16af-rx-bundle.html"
-    },
-    "StructureDefinition/chmed16af-pmc-bundle": {
-      "base": "StructureDefinition-chmed16af-pmc-bundle.html"
-    },
-    "Bundle/chmed16af-mp-bundle-s01": {
-      "base": "Bundle-chmed16af-mp-bundle-s01.html"
-    },
-     "Bundle/chmed16af-pmc-bundle-s01": {
-      "base": "Bundle-chmed16af-pmc-bundle-s01.html"
-    },
-     "Bundle/chmed16af-rx-bundle-s01": {
-      "base": "Bundle-chmed16af-rx-bundle-s01.html"
-    },
-    "StructureDefinition/chmed16af-mp-composition": {
-      "base": "StructureDefinition-chmed16af-mp-composition.html"
-    },
-    "StructureDefinition/chmed16af-pmc-composition": {
-      "base": "StructureDefinition-chmed16af-pmc-composition.html"
-    },
-    "StructureDefinition/chmed16af-rx-composition": {
-      "base": "StructureDefinition-chmed16af-rx-composition.html"
-    },
-    "Composition/chmed16af-mp-composition-s01": {
-      "base": "Composition-chmed16af-mp-composition-s01.html"
-    },
-    "Composition/chmed16af-pmc-composition-s01": {
-      "base": "Composition-chmed16af-pmc-composition-s01.html"
-    },
-    "Composition/chmed16af-rx-composition-s01": {
-      "base": "Composition-chmed16af-rx-composition-s01.html"
-    },
-    "StructureDefinition/chmed16af-mp-patient": {
-      "base": "StructureDefinition-chmed16af-mp-patient.html"
-    },
-    "StructureDefinition/chmed16af-pmcrx-patient": {
-      "base": "StructureDefinition-chmed16af-pmcrx-patient.html"
-    },
-    "StructureDefinition/chmed16af-practitioner": {
-      "base": "StructureDefinition-chmed16af-practitioner.html"
-    },
-    "StructureDefinition/chmed16af-obs-dateoflastmenstruation": {
-      "base": "StructureDefinition-chmed16af-obs-dateoflastmenstruation.html"
-    },
-    "StructureDefinition/chmed16af-obs-prematurebaby": {
-      "base": "StructureDefinition-chmed16af-obs-prematurebaby.html"
-    },
-    "StructureDefinition/chmed16af-obs-timeofgestation": {
-      "base": "StructureDefinition-chmed16af-obs-timeofgestation.html"
-    },
-    "Patient/chmed16af-mp-patient-s01": {
-      "base": "Patient-chmed16af-mp-patient-s01.html"
-    },
-    "Practitioner/chmed16af-practitioner-s01": {
-      "base": "Practitioner-chmed16af-practitioner-s01.html"
-    },
-    "StructureDefinition/chmed16af-condition-risks": {
-      "base": "StructureDefinition-chmed16af-condition-risks.html"
-    },
-    "StructureDefinition/chmed16af-mp-medicationstatement": {
-      "base": "StructureDefinition-chmed16af-mp-medicationstatement.html"
-    },
-    "StructureDefinition/chmed16af-pmc-questionnaireresponse": {
-      "base": "StructureDefinition-chmed16af-pmc-questionnaireresponse.html"
-    },
-    "MedicationRequest/chmed16af-rx-medicationrequest-s01-1": {
-      "base": "MedicationStatement-chmed16af-rx-medicationrequest-s01-1.html"
-    },
-    "MedicationStatement/chmed16af-mp-medicationstatement-s01-1": {
-      "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-1.html"
-    },
-    "MedicationStatement/chmed16af-mp-medicationstatement-s01-2": {
-      "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-2.html"
-    },
-    "MedicationStatement/chmed16af-mp-medicationstatement-s01-3": {
-      "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-3.html"
-    },
-    "MedicationStatement/chmed16af-mp-medicationstatement-s01-4": {
-      "base": "MedicationStatement-chmed16af-mp-medicationstatement-s01-4.html"
-    },
-    "Observation/chmed16af-mp-observation-s01-bodyheight": {
-      "base": "Observation-chmed16af-mp-observation-s01-bodyheight.html"
-    },
-    "Observation/chmed16af-mp-observation-s01-bodyweight": {
-      "base": "Observation-chmed16af-mp-observation-s01-bodyweight.html"
-    },
-    "Observation/chmed16af-observation-s01-dateoflastmenstruation": {
-      "base": "Observation-chmed16af-observation-s01-dateoflastmenstruation.html"
-    },
-    "Observation/chmed16af-observation-s01-prematurebaby": {
-      "base": "Observation-chmed16af-observation-s01-prematurebaby.html"
-    },
-    "Observation/chmed16af-observation-s01-timeofgestation": {
-      "base": "Observation-chmed16af-observation-s01-timeofgestation.html"
-    },
-    "Questionnaire/chmed16af-pmc-questionnaire": {
-      "base": "Questionnaire-chmed16af-pmc-questionnaire.html"
-    },
-    "QuestionnaireResponse/chmed16af-pmc-questionnaireresponse-s01": {
-      "base": "QuestionnaireResponse-chmed16af-pmc-questionnaireresponse-s01.html"
-    },
-    "ValueSet/chmed16af-valueset-cdtyp9": {
-      "base": "ValueSet-chmed16af-valueset-cdtyp9.html"
-    },
-    "ValueSet/chmed16af-valueset-cdtyp26": {
-      "base": "ValueSet-chmed16af-valueset-cdtyp26.html"
-    },
-    "ValueSet/chmed16af-valueset-risks-cdscode": {
-      "base": "ValueSet-chmed16af-valueset-risks-cdscode.html"
-    },
-    "ValueSet/chmed16af-valueset-risks-category": {
-      "base": "ValueSet-chmed16af-valueset-risks-category.html"
-    }
   },
   "logging": [
     "init",

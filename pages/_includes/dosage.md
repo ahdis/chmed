@@ -1,0 +1,96 @@
+## Introduction
+
+The model of dosages between CHMED16A and the CHMED16AF FHIR version differ sligthly due to the FHIR Dosage model.
+This has an effect on how to map the different attributs form CHMED16A to CHMED16AF.
+
+## Posology and Dosage
+
+* The CHMED16A model defines for a medicament n Posology (the dosage information) and n Taking times (the intake timetable).
+* In FHIR a MediationStatement can have n Dosages with one Timing (which can have repeating timing defintions).
+
+If their is a dosage change within the posology different dosage elements have to be created.
+
+## Simplified taking times
+
+CHMED16A defines a simplified version of taking times only doses to be taken (morning, midday, evening, night). If the doses
+are the same, the can be mapped as follows:
+
+1-0-1-0: extract from [example](MedicationStatement-chmed16af-mp-medicationstatement-s01-3.html)
+
+```xml
+	<dosage>
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					 <start value="2016-02-10" />
+				</boundsPeriod>
+				<when value="PCM" />
+				<when value="PCV" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="1" />
+			<unit value="Stk" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="Stk" />
+		</doseQuantity>
+	</dosage>
+```
+see [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
+
+for 1 - 0 - 0.5 - 0 two dosage elements have to be created, [example](MedicationStatement-chmed16af-mp-medicationstatement-s02-3.html)
+
+## Taking times
+* The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing)) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
+* The offset (in seconds) of taking time after cycle start in CHMED16A has to represented with timeOfDay.
+
+[Example](MedicationStatement-chmed16af-mp-medicationstatement-tt-2-multiple-meronem.html) for a dosage for a product 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks
+
+```xml
+	<dosage>
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2017-09-05" /> <!-- DtFrom -->
+					<end value="2020-09-26" /> <!-- DtTo, inclusive -->
+				</boundsPeriod>
+
+				<duration value="1800" /> <!-- DU -->
+				<durationUnit value="s" /> <!-- DU -->
+
+				<frequency value="3" />
+
+				<period value="1" />   <!-- CyDu -->
+				<periodUnit value="wk" /> <!-- CyDu -->
+
+				<dayOfWeek value="tue" /> <!-- implied by date, optional -->
+
+				<timeOfDay value="08:00:00" /> <!-- Off, but relative to timeOfDay -->
+				<timeOfDay value="12:00:00" /> <!-- Off, but relative to timeOfDay -->
+				<timeOfDay value="18:00:00" /> <!-- Off, but relative to timeOfDay -->
+			</repeat>
+		</timing>
+        <route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="IV" />
+				<display value="intravenös (Infusion)" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="2" />
+			<unit value="g" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="g" />
+		</doseQuantity>
+    </dosage> 
+```
+
+like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed16af-mp-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed16af-mp-medicationstatement-tt-4-spiricort.html).

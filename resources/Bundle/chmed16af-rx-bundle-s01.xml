@@ -80,9 +80,6 @@
                     <lastUpdated value="2017-05-25T09:32:35Z"/>
                     <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
                 </meta>
-                <extension url="http://www.englishclub.com/vocabulary/world-countries-nationality.htm">
-                    <valueString value="Other"/>
-                </extension>
                 <active value="true"/>
                 <name>
                     <text value="Maxima Matter"/>

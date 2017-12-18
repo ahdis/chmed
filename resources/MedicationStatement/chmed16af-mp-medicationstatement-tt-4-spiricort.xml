@@ -1,0 +1,178 @@
+<MedicationStatement 
+	xmlns="http://hl7.org/fhir">
+	<id value="chmed16af-mp-medicationstatement-tt-4-spiricort" />
+	<meta>
+		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
+	</meta>
+	<text>
+		<status value="generated" />
+		<div 
+			xmlns="http://www.w3.org/1999/xhtml">
+Spiricort ausdosieren <br />
+
+Spirocort Filmtabl 20 mg				Prd-Nr. 42239<br />
+ 
+Tag    Dosierung [mg]<br />
+1      40<br />
+2      40<br />
+3-9    30<br />
+10-16   25<br />
+
+	"Medicaments": [{
+			"Id": "42239",
+			"IdType": 4,
+			"Pos": [{
+					"DtFrom": "2017-09-05",
+					"DtTo": "2017-09-06",
+					"CyDu": 86400,
+					"InRes": 0,
+					"TT": [{
+							"Off": 25200,
+							"DoFrom": 40.0
+						}
+					]
+				}, {
+					"DtFrom": "2017-09-07",
+					"DtTo": "2017-09-15",
+					"CyDu": 86400,
+					"InRes": 0,
+					"TT": [{
+							"Off": 25200,
+							"DoFrom": 30.0
+						}
+					]
+				}, {
+					"DtFrom": "2017-09-16",
+					"DtTo": "2017-09-21",
+					"CyDu": 86400,
+					"InRes": 0,
+					"TT": [{
+							"Off": 25200,
+							"DoFrom": 25.0
+						}
+					]
+				}
+			],
+			"Unit": "mg",
+			"TkgRsn": "Entzündung",
+			"Roa": "PO",
+			"Rep": 0,
+			"Subs": 0,
+			"NbPack": 1
+		}
+
+
+				
+		</div>
+	</text>
+	<contained>
+		<Medication>
+			<id value="cont1" />
+			<meta>
+				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
+			</meta>
+			<code>
+				<coding>
+					<system value="urn:oid:2.51.1.1"/>
+					<code value="7680388400291"/>
+					<display value="SPIRICORT Filmtabl 20 mg"/>
+				</coding>
+			</code>
+		</Medication>
+	</contained>
+	<status value="active" />
+	<medicationReference>
+		<reference value="#cont1" />
+	</medicationReference>
+	<informationSource>
+		<reference value="Practitioner/chmed16af-practitioner-s01" />
+	</informationSource>
+	<subject>
+		<reference value="Patient/chmed16af-mp-patient-s01" />
+	</subject>
+	<taken value="unk" />
+	<reasonCode>
+		<text value="Blutverdünnung" />
+	</reasonCode>
+	<dosage>
+		<sequence value="0" />
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2017-09-05" />
+					<end value="2017-09-06" /> 
+				</boundsPeriod>
+				<duration value="1" />
+				<durationUnit value="d" />
+				<frequency value="1" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="40" />
+			<unit value="mg" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="mg" />
+		</doseQuantity>
+	</dosage>
+	<dosage>
+		<sequence value="1" />
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2017-09-07" />
+					<end value="2017-09-15" /> 
+				</boundsPeriod>
+				<duration value="1" />
+				<durationUnit value="d" />
+				<frequency value="1" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="30" />
+			<unit value="mg" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="mg" />
+		</doseQuantity>
+	</dosage>
+	<dosage>
+		<sequence value="3" />
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2017-09-16" />
+					<end value="2017-09-21" /> 
+				</boundsPeriod>
+				<duration value="1" />
+				<durationUnit value="d" />
+				<frequency value="1" />
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+				<code value="PO" />
+				<display value="per oral" />
+			</coding>
+		</route>
+		<doseQuantity>
+			<value value="25" />
+			<unit value="mg" />
+			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+			<code value="mg" />
+		</doseQuantity>
+	</dosage>
+</MedicationStatement>

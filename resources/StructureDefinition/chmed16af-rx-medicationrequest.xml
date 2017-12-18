@@ -535,8 +535,8 @@
 			<min value="0"/>
 			<max value="1"/>
 			<type>
-<!--				<code value="positiveInt"/> -->
-				<code value="unsignedInt"/> 
+				<code value="positiveInt"/>
+<!-- R4				<code value="unsignedInt"/> --> 
 			</type>
 			<mapping>
 				<identity value="CHMED16A"/>

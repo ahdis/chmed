@@ -1,14 +1,16 @@
+# Dosage
+
 ## Introduction
 
 The model of dosages between CHMED16A and the CHMED16AF FHIR version differ sligthly due to the FHIR Dosage model.
-This has an effect on how to map the different attributs form CHMED16A to CHMED16AF.
+This has an effect on how to map the different attributes form CHMED16A to CHMED16AF.
 
 ## Posology and Dosage
 
-* The CHMED16A model defines for a medicament n Posology (the dosage information) and n Taking times (the intake timetable).
+* The CHMED16A model defines for a medication n Posology (the dosage information) and n Taking times (the intake timetable), taing times includes dosage.
 * In FHIR a MediationStatement can have n Dosages with one Timing (which can have repeating timing defintions).
 
-If their is a dosage change within the posology different dosage elements have to be created.
+If their is a dosage change within the posology in CHMED16A different dosage elements have to be created in FHIR (CHMED16AF).
 
 ## Simplified taking times
 
@@ -43,7 +45,7 @@ are the same, the can be mapped as follows:
 		</doseQuantity>
 	</dosage>
 ```
-see [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
+see [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
 
 for 1 - 0 - 0.5 - 0 two dosage elements have to be created, [example](MedicationStatement-chmed16af-mp-medicationstatement-s02-3.html)
 
@@ -93,4 +95,4 @@ for 1 - 0 - 0.5 - 0 two dosage elements have to be created, [example](Medication
     </dosage> 
 ```
 
-like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed16af-mp-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed16af-mp-medicationstatement-tt-4-spiricort.html).
+Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed16af-mp-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed16af-mp-medicationstatement-tt-4-spiricort.html).

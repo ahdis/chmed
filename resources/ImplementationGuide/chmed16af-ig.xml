@@ -162,6 +162,17 @@
 			</exampleFor>
 		</resource>
 		<resource>
+			<example value="true" />
+			<name value="Patient MedicationPlan with an extension" />
+			<description value="Example for a patient with extensions" />
+			<sourceReference>
+				<reference value="Patient/chmed16af-mp-patient-ext" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-mp-patient" />
+			</exampleFor>
+		</resource>
+		<resource>
 			<example value="false" />
 			<sourceReference>
 				<reference value="StructureDefinition/chmed16af-practitioner" />

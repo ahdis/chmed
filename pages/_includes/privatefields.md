@@ -3,7 +3,7 @@
 ## Introduction
 
 CHMED16A has the concept of Private Fields which can be added to Patient, Medication and Medicament.
-The Private Fiels can be represented in FHIR with [extensions](http://hl7.org/fhir/extensibility.html#Extension).
+The Private Fields can be represented in FHIR with [extensions](http://hl7.org/fhir/extensibility.html#Extension).
 
 
 ```xml
@@ -25,7 +25,7 @@ The name of the field can be indicated with the extension url, the value of the 
 
 ## Caveat
 
-Currently in CHMED16AF their are no private fields explicitly defined. The conversion to the QR format considers extensions definitions for Composition (equals to Medication in CHMED16A), Patient and MedicationStatment (equals to Medicament) with a cannonical url starting with http://chmed16af.emediplan.ch/fhir/StructureDefinition/.
+Currently in CHMED16AF their are no private fields explicitly defined. The conversion to the QR format considers extension definitions for Composition (equals to Medication in CHMED16A), Patient and MedicationStatement (equals to Medicament) with a cannonical url starting with http://chmed16af.emediplan.ch/fhir/StructureDefinition/.
 
 In the future official defined extensions will be published here.
 

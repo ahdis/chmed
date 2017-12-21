@@ -21,14 +21,17 @@
                     <lastUpdated value="2017-05-10T13:51:37Z"/>
                     <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
                 </meta>
+ <!--               
                 <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample1">
                     <valueString value="PrivateFieldValueSample1" />
-                </extension>
+                </extension>                
+ -->               
                 <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
                     <valueReference>
                         <reference value="Practitioner/chmed16af-practitioner-s01"/>
                     </valueReference>
                 </extension>
+
                 <identifier>
                     <system value="http://emediplan.ch/chmed16af/id"/>
                     <value value="26d3dff7-ab05-4737-a49c-5eccd33595f6"/>

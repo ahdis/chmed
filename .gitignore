@@ -9,3 +9,5 @@ updatetools.sh
 ncftp.cfg
 tools
 chmed16a
+resources/Observation/bp.xml
+resources/StructureDefinition/bp.xml

@@ -5,8 +5,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Hl7.Fhir.Specification.STU3" Version="0.93.4" />
-    <PackageReference Include="Hl7.Fhir.STU3" Version="0.93.4" />
-    <PackageReference Include="Hl7.Fhir.Support" Version="0.4.2" />
+    <PackageReference Include="Hl7.Fhir.Specification.STU3" Version="0.94.0" />
+    <PackageReference Include="Hl7.Fhir.STU3" Version="0.94.0" />
+    <PackageReference Include="Hl7.Fhir.Support" Version="0.94.0" />
+    <PackageReference Include="Hl7.FhirPath" Version="0.94.0" />
   </ItemGroup>
 </Project>

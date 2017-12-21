@@ -5,6 +5,9 @@
 		<xs:annotation>
 			<xs:documentation>Patient Shorthand</xs:documentation>
 		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="E" type="PrivateFieldType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
 		<xs:attribute name="i">
 			<xs:annotation>
 				<xs:documentation>Insurance card number for this patient</xs:documentation>
@@ -120,6 +123,27 @@
 			</xs:simpleType>
 		</xs:attribute>
 	</xs:complexType>
+	<xs:complexType name="PrivateFieldType">
+		<xs:annotation>
+			<xs:documentation>PrivateFieldType</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="n">
+			<xs:annotation>
+				<xs:documentation>name of field</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="v">
+			<xs:annotation>
+				<xs:documentation>value of field</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
 	<xs:complexType name="CompositionType">
 		<xs:annotation>
 			<xs:documentation>Composition Shorthand</xs:documentation>
@@ -127,6 +151,7 @@
 		<xs:sequence>
 			<xs:element name="A" type="PractitionerType" />
 			<xs:element name="P" type="PatientType" />
+			<xs:element name="E" type="PrivateFieldType" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 		<xs:attribute name="i" use="required">
 			<xs:annotation>
@@ -201,7 +226,8 @@
 			<xs:documentation>MedicationStatement Shorthand</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="D" type="DosageType" />
+			<xs:element name="D" type="DosageType" maxOccurs="unbounded" />
+			<xs:element name="E" type="PrivateFieldType" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
 		<xs:attribute name="i" use="required">
 			<xs:annotation>
@@ -273,9 +299,17 @@
 		<xs:annotation>
 			<xs:documentation>Dosage Shorthand</xs:documentation>
 		</xs:annotation>
+		<xs:attribute name="n">
+			<xs:annotation>
+				<xs:documentation>sequence number</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 		<xs:attribute name="s">
 			<xs:annotation>
-				<xs:documentation>dosage.timing	start</xs:documentation>
+				<xs:documentation>Timing boundsPeriod start</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:date"></xs:restriction>
@@ -283,18 +317,82 @@
 		</xs:attribute>
 		<xs:attribute name="e">
 			<xs:annotation>
-				<xs:documentation>dosage.timing	end</xs:documentation>
+				<xs:documentation>Timing boundsPeriod end</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:date"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
-		<xs:attribute name="p">
+		<xs:attribute name="c">
 			<xs:annotation>
-				<xs:documentation>FIXME: cydu</xs:documentation>
+				<xs:documentation>Timing count</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="dv">
+			<xs:annotation>
+				<xs:documentation>Timing Duration</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="du">
+			<xs:annotation>
+				<xs:documentation>Timing Duration Unit</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="f">
+			<xs:annotation>
+				<xs:documentation>Timing frequency</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="p">
+			<xs:annotation>
+				<xs:documentation>Timing Period</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="pu">
+			<xs:annotation>
+				<xs:documentation>Timing Period Unit</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="dw">
+			<xs:annotation>
+				<xs:documentation>Timing DaysOfWeek</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="td">
+			<xs:annotation>
+				<xs:documentation>Timing TimeOfDays</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="w">
+			<xs:annotation>
+				<xs:documentation>Timing whens</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
 		<xs:attribute name="r">
@@ -308,38 +406,6 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
-		<xs:attribute name="m">
-			<xs:annotation>
-				<xs:documentation>Simplified Dose Morning</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:decimal"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="d">
-			<xs:annotation>
-				<xs:documentation>Simplified Dose Lunch</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:decimal"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="v">
-			<xs:annotation>
-				<xs:documentation>Simplified Dose Dinner</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:decimal"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="h">
-			<xs:annotation>
-				<xs:documentation>Simplified Dose Before Sleep</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:decimal"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
 		<xs:attribute name="o">
 			<xs:annotation>
 				<xs:documentation>Route</xs:documentation>
@@ -348,33 +414,17 @@
 				<xs:restriction base="xs:string"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="q">
+			<xs:annotation>
+				<xs:documentation>Quantity dosage</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 		<xs:attribute name="u">
 			<xs:annotation>
 				<xs:documentation>Unit dosage</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:string"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="dl">
-			<xs:annotation>
-				<xs:documentation>FIXME</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:string"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="dh">
-			<xs:annotation>
-				<xs:documentation>FIXME</xs:documentation>
-			</xs:annotation>
-			<xs:simpleType>
-				<xs:restriction base="xs:string"></xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="dm">
-			<xs:annotation>
-				<xs:documentation>FIXME</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string"></xs:restriction>

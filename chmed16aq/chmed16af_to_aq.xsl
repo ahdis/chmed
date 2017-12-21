@@ -67,8 +67,8 @@
 				</xsl:attribute>
 			</xsl:if>
 			<!-- @r -->
-			<xsl:variable name="referenceReceiver">
-				<xsl:value-of select="fhir:extension[@url='http://emediplan.ch/fhir/chmed16af/StructureDefinition/chmed16af-receiver']/fhir:valueReference/fhir:reference/@value" />
+			<xsl:variable name="referenceReceiver">       
+				<xsl:value-of select="fhir:extension[@url='http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver']/fhir:valueReference/fhir:reference/@value" />
 			</xsl:variable>
 			<xsl:if test="$referenceReceiver">
 				<xsl:variable name="practitionerId" select="substring-after($referenceReceiver,'Practitioner/')" />
@@ -195,9 +195,39 @@
 								<xsl:value-of select="$cl" />
 							</xsl:attribute>
 						</xsl:if>
+						<!-- E -->
+						<xsl:for-each select="/fhir:Bundle/fhir:entry/fhir:resource/fhir:Patient[fhir:id[@value=$patientId]]/fhir:extension">
+							<xsl:variable name="name" select="substring-after(@url,'StructureDefinition/')" />
+							<xsl:variable name="value" select="fhir:valueString/@value" />
+							<xsl:if test="$name and $value">
+								<E>
+									<xsl:attribute name="n">
+										<xsl:value-of select="$name" />
+									</xsl:attribute>
+									<xsl:attribute name="v">
+										<xsl:value-of select="$value" />
+									</xsl:attribute>
+								</E>
+							</xsl:if>
+						</xsl:for-each>
 					</xsl:if>
 				</xsl:if>
 			</P>
+			<!-- E -->
+			<xsl:for-each select="fhir:extension">
+				<xsl:variable name="name" select="substring-after(@url,'StructureDefinition/')" />
+				<xsl:variable name="value" select="fhir:valueString/@value" />
+				<xsl:if test="$name and $value and $name!='chmed16af-receiver'">
+					<E>
+						<xsl:attribute name="n">
+							<xsl:value-of select="$name" />
+						</xsl:attribute>
+						<xsl:attribute name="v">
+							<xsl:value-of select="$value" />
+						</xsl:attribute>
+					</E>
+				</xsl:if>
+			</xsl:for-each>
 		</C>
 		<!-- M -->
 		<M>
@@ -354,11 +384,33 @@
 					</xsl:call-template>
 				</D>
 			</xsl:for-each>
+			<!-- E -->
+			<xsl:for-each select="$this/fhir:extension">
+				<xsl:variable name="name" select="substring-after(@url,'StructureDefinition/')" />
+				<xsl:variable name="value" select="fhir:valueString/@value" />
+				<xsl:if test="$name and $value">
+					<E>
+						<xsl:attribute name="n">
+							<xsl:value-of select="$name" />
+						</xsl:attribute>
+						<xsl:attribute name="v">
+							<xsl:value-of select="$value" />
+						</xsl:attribute>
+					</E>
+				</xsl:if>
+			</xsl:for-each>
 		</MS>
 	</xsl:template>
 	<!-- Dosage -->
 	<xsl:template name='Dosage'>
 		<xsl:param name='this' select='.'/>
+		<!-- @n -->
+		<xsl:variable name="n" select="fhir:sequence/@value" />
+		<xsl:if test="$n">
+			<xsl:attribute name="n">
+				<xsl:value-of select="$n" />
+			</xsl:attribute>
+		</xsl:if>
 		<!-- @s -->
 		<xsl:variable name="bs" select="fhir:timing/fhir:repeat/fhir:boundsPeriod/fhir:start/@value" />
 		<xsl:if test="$bs">
@@ -373,12 +425,76 @@
 				<xsl:value-of select="$e" />
 			</xsl:attribute>
 		</xsl:if>
+		<!-- @c -->
+		<xsl:variable name="c" select="fhir:timing/fhir:repeat/fhir:count/@value" />
+		<xsl:if test="$c">
+			<xsl:attribute name="c">
+				<xsl:value-of select="$c" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @dv -->
+		<xsl:variable name="dv" select="fhir:timing/fhir:repeat/fhir:duration/@value" />
+		<xsl:if test="$dv">
+			<xsl:attribute name="dv">
+				<xsl:value-of select="$dv" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @du -->
+		<xsl:variable name="du" select="fhir:timing/fhir:repeat/fhir:durationUnit/@value" />
+		<xsl:if test="$du">
+			<xsl:attribute name="du">
+				<xsl:value-of select="$du" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @f -->
+		<xsl:variable name="f" select="fhir:timing/fhir:repeat/fhir:frequency/@value" />
+		<xsl:if test="$f">
+			<xsl:attribute name="f">
+				<xsl:value-of select="$f" />
+			</xsl:attribute>
+		</xsl:if>
 		<!-- @p -->
-		<!-- FIXME TBD: periodMax /  periodUnit -->
-		<xsl:variable name="p" select="fhir:timing/fhir:repeat/fhir:periodMax/@value" />
+		<xsl:variable name="p" select="fhir:timing/fhir:repeat/fhir:period/@value" />
 		<xsl:if test="$p">
 			<xsl:attribute name="p">
 				<xsl:value-of select="$p" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @pu -->
+		<xsl:variable name="pu" select="fhir:timing/fhir:repeat/fhir:periodUnit/@value" />
+		<xsl:if test="$pu">
+			<xsl:attribute name="pu">
+				<xsl:value-of select="$pu" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @dw -->
+		<xsl:variable name="dw" select="fhir:timing/fhir:repeat/fhir:dayOfWeek/@value" />
+		<xsl:if test="$dw">
+			<xsl:attribute name="dw">
+				<xsl:call-template name="join">
+					<xsl:with-param name="valueList" select="$dw"/>
+					<xsl:with-param name="separator" select="','"/>
+				</xsl:call-template>
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @td -->
+		<xsl:variable name="td" select="fhir:timing/fhir:repeat/fhir:timeOfDay/@value" />
+		<xsl:if test="$td">
+			<xsl:attribute name="td">
+				<xsl:call-template name="join">
+					<xsl:with-param name="valueList" select="$td"/>
+					<xsl:with-param name="separator" select="','"/>
+				</xsl:call-template>
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @w -->
+		<xsl:variable name="w" select="fhir:timing/fhir:repeat/fhir:when/@value" />
+		<xsl:if test="$w">
+			<xsl:attribute name="w">
+				<xsl:call-template name="join">
+					<xsl:with-param name="valueList" select="$w"/>
+					<xsl:with-param name="separator" select="','"/>
+				</xsl:call-template>
 			</xsl:attribute>
 		</xsl:if>
 		<!-- @r -->
@@ -393,37 +509,12 @@
 				<xsl:value-of select="$r" />
 			</xsl:attribute>
 		</xsl:if>
-		<!-- FIXME, here only simplified version with one dosage -->
+		<!-- @q -->
 		<xsl:variable name="doseQuantity" select="fhir:doseQuantity/fhir:value/@value" />
 		<xsl:if test="$doseQuantity">
-			<!-- @m -->
-			<xsl:variable name="m" select="fhir:timing/fhir:repeat/fhir:when/@value='PCM'" />
-			<xsl:if test="$m">
-				<xsl:attribute name="m">
-					<xsl:value-of select="$doseQuantity" />
-				</xsl:attribute>
-			</xsl:if>
-			<!-- @d -->
-			<xsl:variable name="d" select="fhir:timing/fhir:repeat/fhir:when/@value='PCD'" />
-			<xsl:if test="$d">
-				<xsl:attribute name="d">
-					<xsl:value-of select="$doseQuantity" />
-				</xsl:attribute>
-			</xsl:if>
-			<!-- @v -->
-			<xsl:variable name="v" select="fhir:timing/fhir:repeat/fhir:when/@value='PCV'" />
-			<xsl:if test="$v">
-				<xsl:attribute name="v">
-					<xsl:value-of select="$doseQuantity" />
-				</xsl:attribute>
-			</xsl:if>
-			<!-- @h -->
-			<xsl:variable name="h" select="fhir:timing/fhir:repeat/fhir:when/@value='HS'" />
-			<xsl:if test="$h">
-				<xsl:attribute name="h">
-					<xsl:value-of select="$doseQuantity" />
-				</xsl:attribute>
-			</xsl:if>
+			<xsl:attribute name="q">
+				<xsl:value-of select="$doseQuantity" />
+			</xsl:attribute>
 		</xsl:if>
 		<!-- @u -->
 		<xsl:variable name="doseUnit" select="fhir:doseQuantity/fhir:unit/@value" />
@@ -439,9 +530,6 @@
 				<xsl:value-of select="$o" />
 			</xsl:attribute>
 		</xsl:if>
-		<!-- @dl -->
-		<!-- @dh -->
-		<!-- @dm -->
 	</xsl:template>
 	<!-- H Observation -->
 	<xsl:template name='HObservation' mode='ms' match='fhir:Observation'>

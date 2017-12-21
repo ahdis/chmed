@@ -69,8 +69,21 @@
 									<fhir:reference value="Practitioner/receiver"/>
 								</fhir:valueReference>
 							</fhir:extension>
-							<fhir:status value="final"/>
 						</xsl:if>
+						<!-- C E -->
+						<xsl:for-each select="C/E">
+							<fhir:extension>
+								<xsl:attribute name="url">
+									<xsl:value-of select="concat('http://chmed16af.emediplan.ch/fhir/StructureDefinition/',@n)" />
+								</xsl:attribute>
+								<fhir:valueString>
+									<xsl:attribute name="value">
+										<xsl:value-of select="@v" />
+									</xsl:attribute>
+								</fhir:valueString>
+							</fhir:extension>
+						</xsl:for-each>
+						<fhir:status value="final"/>
 						<!-- @d -->
 						<xsl:if test="@d">
 							<fhir:type>
@@ -297,6 +310,19 @@
 									</xsl:attribute>
 								</fhir:profile>
 							</fhir:meta>
+							<!-- C/P/E -->
+							<xsl:for-each select="C/P/E">
+								<fhir:extension>
+									<xsl:attribute name="url">
+										<xsl:value-of select="concat('http://chmed16af.emediplan.ch/fhir/StructureDefinition/',@n)" />
+									</xsl:attribute>
+									<fhir:valueString>
+										<xsl:attribute name="value">
+											<xsl:value-of select="@v" />
+										</xsl:attribute>
+									</fhir:valueString>
+								</fhir:extension>
+							</xsl:for-each>
 							<xsl:if test="C/P/@i">
 								<fhir:identifier>
 									<fhir:system value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
@@ -571,6 +597,19 @@
 									</xsl:if>
 								</fhir:Medication>
 							</fhir:contained>
+							<!-- E -->
+							<xsl:for-each select="E">
+								<fhir:extension>
+									<xsl:attribute name="url">
+										<xsl:value-of select="concat('http://chmed16af.emediplan.ch/fhir/StructureDefinition/',@n)" />
+									</xsl:attribute>
+									<fhir:valueString>
+										<xsl:attribute name="value">
+											<xsl:value-of select="@v" />
+										</xsl:attribute>
+									</fhir:valueString>
+								</fhir:extension>
+							</xsl:for-each>
 							<fhir:status value="active"/>
 							<fhir:medicationReference>
 								<fhir:reference>
@@ -614,7 +653,7 @@
 								</fhir:note>
 							</xsl:if>
 							<!-- D -->
-							<xsl:if test="D">
+							<xsl:for-each select="D">
 								<xsl:variable name="dosage">
 									<xsl:choose>
 										<xsl:when test="$doc='RX'">fhir:dosageInstruction</xsl:when>
@@ -623,104 +662,148 @@
 									</xsl:choose>
 								</xsl:variable>
 								<xsl:element name="{$dosage}">
-									<xsl:if test="D/@s or D/@e">
+									<!-- @n -->
+									<xsl:if test="@n">
+										<fhir:sequence>
+											<xsl:attribute name="value">
+												<xsl:value-of select="@n" />
+											</xsl:attribute>
+										</fhir:sequence>
+									</xsl:if>
+									<xsl:if test="@s or @e or @c or @dv or @du or @f or @p or @pu or @dw or @td or @w">
 										<fhir:timing>
 											<fhir:repeat>
-												<fhir:boundsPeriod>
-													<xsl:if test="D/@s">
-														<fhir:start>
-															<xsl:attribute name="value">
-																<xsl:value-of select="D/@s" />
-															</xsl:attribute>
-														</fhir:start>
-													</xsl:if>
-													<xsl:if test="D/@e">
-														<fhir:end>
-															<xsl:attribute name="value">
-																<xsl:value-of select="D/@e" />
-															</xsl:attribute>
-														</fhir:end>
-													</xsl:if>
-												</fhir:boundsPeriod>
-												<!-- FIXME: verify and finish -->
-												<!-- @p -->
-												<xsl:if test="D/@p">
-													<fhir:periodMax>
+												<xsl:if test="@s or @e">
+													<fhir:boundsPeriod>
+														<xsl:if test="@s">
+															<fhir:start>
+																<xsl:attribute name="value">
+																	<xsl:value-of select="@s" />
+																</xsl:attribute>
+															</fhir:start>
+														</xsl:if>
+														<xsl:if test="@e">
+															<fhir:end>
+																<xsl:attribute name="value">
+																	<xsl:value-of select="@e" />
+																</xsl:attribute>
+															</fhir:end>
+														</xsl:if>
+													</fhir:boundsPeriod>
+												</xsl:if>
+												<!-- @c -->
+												<xsl:if test="@c">
+													<fhir:count>
 														<xsl:attribute name="value">
-															<xsl:value-of select="D/@p" />
+															<xsl:value-of select="@c" />
 														</xsl:attribute>
-													</fhir:periodMax>
+													</fhir:count>
 												</xsl:if>
-												<xsl:if test="D/@m">
-													<fhir:when value="PCM"/>
+												<!-- @dv -->
+												<xsl:if test="@dv">
+													<fhir:duration>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@dv" />
+														</xsl:attribute>
+													</fhir:duration>
 												</xsl:if>
-												<xsl:if test="D/@d">
-													<fhir:when value="PCD"/>
+												<!-- @du -->
+												<xsl:if test="@du">
+													<fhir:durationUnit>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@du" />
+														</xsl:attribute>
+													</fhir:durationUnit>
 												</xsl:if>
-												<xsl:if test="D/@v">
-													<fhir:when value="PCV"/>
+												<!-- @f -->
+												<xsl:if test="@f">
+													<fhir:frequency>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@f" />
+														</xsl:attribute>
+													</fhir:frequency>
 												</xsl:if>
-												<xsl:if test="D/@h">
-													<fhir:when value="PCH"/>
+												<!-- @p -->
+												<xsl:if test="@p">
+													<fhir:period>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@p" />
+														</xsl:attribute>
+													</fhir:period>
 												</xsl:if>
-												<!-- FIXME doseQuantity-->
-												<!-- FIXME dl dh dm -->
+												<!-- @pu -->
+												<xsl:if test="@pu">
+													<fhir:periodUnit>
+														<xsl:attribute name="value">
+															<xsl:value-of select="@pu" />
+														</xsl:attribute>
+													</fhir:periodUnit>
+												</xsl:if>
+												<!-- @dw -->
+												<xsl:if test="@dw">
+													<xsl:call-template name="tokenizeElement">
+														<xsl:with-param name="text" select="@dw"/>
+														<xsl:with-param name="element" select="'fhir:dayOfWeek'"/>
+													</xsl:call-template>
+												</xsl:if>
+												<!-- @td -->
+												<xsl:if test="@td">
+													<xsl:call-template name="tokenizeElement">
+														<xsl:with-param name="text" select="@td"/>
+														<xsl:with-param name="element" select="'fhir:timeOfDay'"/>
+													</xsl:call-template>
+												</xsl:if>
+												<!-- @w -->
+												<xsl:if test="@w">
+													<xsl:call-template name="tokenizeElement">
+														<xsl:with-param name="text" select="@w"/>
+														<xsl:with-param name="element" select="'fhir:when'"/>
+													</xsl:call-template>
+												</xsl:if>
 											</fhir:repeat>
 										</fhir:timing>
 									</xsl:if>
-									<xsl:if test="D/@r=1">
+									<xsl:if test="@r=1">
 										<fhir:asNeededBoolean value="true"/>
 									</xsl:if>
-									<xsl:if test="D/@o">
+									<xsl:if test="@o">
 										<fhir:route>
 											<fhir:coding>
 												<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
 												<fhir:code>
 													<xsl:attribute name="value">
-														<xsl:value-of select="D/@o" />
+														<xsl:value-of select="@o" />
 													</xsl:attribute>
 												</fhir:code>
 											</fhir:coding>
 										</fhir:route>
 									</xsl:if>
-									<!-- FIXME only simplified quantites -->
-									<xsl:if test="D/@m or D/@d or D/@v or D/@h">
+									<xsl:if test="@q or @u">
 										<fhir:doseQuantity>
-											<fhir:value>
-												<xsl:attribute name="value">
-													<xsl:choose>
-														<xsl:when test="D/@m">
-															<xsl:value-of select="D/@m" />
-														</xsl:when>
-														<xsl:when test="D/@d">
-															<xsl:value-of select="D/@d" />
-														</xsl:when>
-														<xsl:when test="D/@v">
-															<xsl:value-of select="D/@v" />
-														</xsl:when>
-														<xsl:when test="D/@h">
-															<xsl:value-of select="D/@h" />
-														</xsl:when>
-													</xsl:choose>
-												</xsl:attribute>
-											</fhir:value>
-											<xsl:if test="D/@u">
+											<xsl:if test="@q">
+												<fhir:value>
+													<xsl:attribute name="value">
+														<xsl:value-of select="@q" />
+													</xsl:attribute>
+												</fhir:value>
+											</xsl:if>
+											<xsl:if test="@u">
 												<fhir:unit>
 													<xsl:attribute name="value">
-														<xsl:value-of select="D/@u" />
+														<xsl:value-of select="@u" />
 													</xsl:attribute>
 												</fhir:unit>
 												<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
 												<fhir:code>
 													<xsl:attribute name="value">
-														<xsl:value-of select="D/@u" />
+														<xsl:value-of select="@u" />
 													</xsl:attribute>
 												</fhir:code>
 											</xsl:if>
 										</fhir:doseQuantity>
 									</xsl:if>
 								</xsl:element>
-							</xsl:if>
+							</xsl:for-each>
 							<!-- @dn, @dq  -->
 							<xsl:if test="@dn or @dq">
 								<fhir:dispenseRequest>
@@ -1177,6 +1260,31 @@
 				<fhir:reference value="Patient/patient"/>
 			</fhir:subject>
 		</fhir:Condition>
+	</xsl:template>
+	<!-- tokenize -->
+	<xsl:template name="tokenizeElement">
+		<xsl:param name="text" select="."/>
+		<xsl:param name="separator" select="','"/>
+		<xsl:param name="element" select="."/>
+		<xsl:choose>
+			<xsl:when test="not(contains($text, $separator))">
+				<xsl:element name="{$element}">
+					<xsl:attribute name="value">
+						<xsl:value-of select="normalize-space($text)" />
+					</xsl:attribute>
+				</xsl:element>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:call-template name="tokenizeElement">
+					<xsl:with-param name="text" select="substring-before($text, $separator)"/>
+					<xsl:with-param name="element" select="$element"/>
+				</xsl:call-template>
+				<xsl:call-template name="tokenizeElement">
+					<xsl:with-param name="text" select="substring-after($text, $separator)"/>
+					<xsl:with-param name="element" select="$element"/>
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<!-- tokenize -->
 	<xsl:template name="tokenizeRiskCodes">

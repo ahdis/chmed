@@ -335,6 +335,17 @@
 		</resource>
 		<resource>
 			<example value="true" />
+			<name value="MedicationStatement (MedicationPlan)" />
+			<description value="Example for a MedicationStatement" />
+			<sourceReference>
+				<reference value="MedicationStatement/chmed16af-mp-medicationstatement-tt" />
+			</sourceReference>
+			<exampleFor>
+				<reference value="StructureDefinition/chmed16af-mp-medicationstatement" />
+			</exampleFor>
+		</resource>
+		<resource>
+			<example value="true" />
 			<name value="Bodyheight" />
 			<description value="Example for specifiying body height" />
 			<sourceReference>

@@ -53,10 +53,6 @@ namespace chmed16af
             string pathStructureDefintions = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../resources/StructureDefinition");
             string pathValueSet = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../resources/ValueSet");
             string pathCodeSystem = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../resources/CodeSystem");
-
-            // Ensure the FHIR extensions are registered
-            Hl7.Fhir.FhirPath.PocoNavigatorExtensions.PrepareFhirSymbolTableFunctions();
-
             CachedResolver _source;
             Validator _validator;
 

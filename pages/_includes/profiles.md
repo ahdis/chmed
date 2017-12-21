@@ -40,7 +40,7 @@ The Composition ressource defines the following parameter for the medication pla
 | section | medications |  MedicationStatement | Medicaments | &lt;MS&gt;  | 
 | section | healthconcerns |  Entry | MedicalData | &lt;SH&gt;  | 
 | section | notes |  text | Rmk | @n  | 
-| receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af@-re@ceiver.html) | Patient.RCV (GLN of receiver) | @r |   
+| receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af-receiver.html) | Patient.RCV (GLN of receiver) | @r |   
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed16af-mp-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-mp-composition-s01.xml.html)
 
@@ -77,11 +77,11 @@ The medication section contains the entries for the current medications for pati
 | informationSource  | Person or organization that provided the information about the taking of this medication  | Patient or Practitioner  | Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner | @s=1 or 0    | 
 | reasonCode  | Reason for why the medication is being/was taken  | CodeableConcept  | Medication.TkgRsn (Taking Reason) | @r  | 
 | note  | Application Instructions  | Annotation  |Medication.AppInstr | @n  | 
-| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
-| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
+| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) @n | &lt;D&gt;  | 
+| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes | @s @e @c @dv @du @f @p @pu @dw @td @w @r   | 
 | dosage.route  | How drug should enter body | CodeableConect  | Medication.Roa | @o |
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
-| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
+| dosage.doseQuantity  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom | @q @u |
+| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA |  |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
 

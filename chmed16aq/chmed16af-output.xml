@@ -1,1 +1,889 @@
-<?xml version="1.0" encoding="UTF-8"?><fhir:Bundle xmlns:fhir="http://hl7.org/fhir" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:chmed16af="http://chemed16af.emediplan.ch" xmlns:xhtml="http://www.w3.org/1999/xhtml"><fhir:id value="645bb0c3-ff7e-4123-bef5-3852a4784813"/><fhir:meta><fhir:versionId value="1.0"/><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-bundle"/></fhir:meta><fhir:identifier><fhir:system value="urn:ietf:rfc:3986"/><fhir:value value="urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"/></fhir:identifier><fhir:type value="document"/><fhir:entry><fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Composition/comp1"/><fhir:resource><fhir:Composition><fhir:id value="comp1"/><fhir:meta><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition"/></fhir:meta><fhir:type><fhir:coding><fhir:system value="http://emediplan.ch/chmed16af/doc"/><fhir:code value="RX"/></fhir:coding></fhir:type><fhir:subject><fhir:reference value="Patient/patient"/></fhir:subject><fhir:date value="2017-05-27T11:46:09+02:00"/><fhir:author><fhir:reference value="Practitioner/author"/></fhir:author><fhir:title value="Prescription"/><fhir:section><fhir:title value="Rezept"/><fhir:code><fhir:coding><fhir:system value="http://loinc.org"/><fhir:code value="57828-6"/><fhir:display value="PRESCRIPTIONS"/></fhir:coding></fhir:code><fhir:entry><fhir:reference value="MedicationRequest/MR1"/></fhir:entry></fhir:section><fhir:section><fhir:title value="Bemerkungen"/><fhir:code><fhir:coding><fhir:system value="http://loinc.org"/><fhir:code value="48767-8"/><fhir:display value="ANNOTATION COMMENT"/></fhir:coding></fhir:code><fhir:text><fhir:status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Bemerkung</div></fhir:text></fhir:section></fhir:Composition></fhir:resource></fhir:entry><fhir:entry><fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Patient/patient"/><fhir:resource><fhir:Patient><fhir:id value="patient"/><fhir:meta><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmcrx-patient"/></fhir:meta><fhir:name><fhir:family value="Matter"/><fhir:given value="Maxima"/></fhir:name><fhir:gender value="female"/><fhir:birthDate value="1981-01-12"/><fhir:address><fhir:line value="Untermattweg 8 Carrer de Call 19"/><fhir:city value="Bern"/><fhir:postalCode value="3027"/></fhir:address></fhir:Patient></fhir:resource></fhir:entry><fhir:entry><fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/author"/><fhir:resource><fhir:Practitioner><fhir:id value="author"/><fhir:meta><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/></fhir:meta><fhir:identifier><fhir:use value="official"/><fhir:system value="urn:oid:2.51.1.3"/><fhir:value value="7601003178999"/></fhir:identifier><fhir:name><fhir:family value="Wälti"/><fhir:given value="Thomas"/></fhir:name></fhir:Practitioner></fhir:resource></fhir:entry><fhir:entry><fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/MedicationRequest/MR1"/><fhir:resource><fhir:MedicationRequest><fhir:id value="MedicationRequest/MR1"/><fhir:meta><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest"/></fhir:meta><fhir:contained><fhir:Medication><fhir:id value="cont1"/><fhir:meta><fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/></fhir:meta><fhir:code><fhir:coding><fhir:system value="urn:oid:2.51.1.1"/><fhir:code value="7680453070343"/></fhir:coding></fhir:code></fhir:Medication></fhir:contained><fhir:status value="active"/><fhir:medicationReference><fhir:reference value="#cont1"/></fhir:medicationReference><fhir:subject><fhir:reference value="Patient/patient"/></fhir:subject><fhir:taken value="unk"/><fhir:note><fhir:text value="-"/></fhir:note><fhir:dosageInstruction><fhir:timing><fhir:repeat><fhir:boundsPeriod><fhir:start value="2016-09-12"/><fhir:end value="2020-09-12"/></fhir:boundsPeriod><fhir:when value="PCM"/></fhir:repeat></fhir:timing><fhir:asNeededBoolean value="true"/><fhir:route><fhir:coding><fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/><fhir:code value="PO"/></fhir:coding></fhir:route><fhir:doseQuantity><fhir:value value="1"/><fhir:unit value="Stk"/><fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/><fhir:code value="Stk"/></fhir:doseQuantity></fhir:dosageInstruction><fhir:dispenseRequest><fhir:numberOfRepeatsAllowed>2</fhir:numberOfRepeatsAllowed><fhir:quantity><fhir:value>1</fhir:value></fhir:quantity></fhir:dispenseRequest><fhir:substitution><fhir:allowed value="true"/></fhir:substitution></fhir:MedicationRequest></fhir:resource></fhir:entry></fhir:Bundle>
+<?xml version="1.0" encoding="UTF-8"?>
+<fhir:Bundle 
+    xmlns:fhir="http://hl7.org/fhir" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:chmed16af="http://chemed16af.emediplan.ch" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <fhir:id value="26d3dff7-ab05-4737-a49c-5eccd33595f6"/>
+    <fhir:meta>
+        <fhir:versionId value="1.0"/>
+        <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-bundle"/>
+    </fhir:meta>
+    <fhir:identifier>
+        <fhir:system value="urn:ietf:rfc:3986"/>
+        <fhir:value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f6"/>
+    </fhir:identifier>
+    <fhir:type value="document"/>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Composition/comp1"/>
+        <fhir:resource>
+            <fhir:Composition>
+                <fhir:id value="comp1"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
+                </fhir:meta>
+                <fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
+                    <fhir:valueReference>
+                        <fhir:reference value="Practitioner/receiver"/>
+                    </fhir:valueReference>
+                </fhir:extension>
+                <fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample1">
+                    <fhir:valueString value="PrivateFieldValueSample1"/>
+                </fhir:extension>
+                <fhir:status value="final"/>
+                <fhir:type>
+                    <fhir:coding>
+                        <fhir:system value="http://emediplan.ch/chmed16af/doc"/>
+                        <fhir:code value="MP"/>
+                    </fhir:coding>
+                </fhir:type>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:date value="2016-09-12T11:46:09+02:00"/>
+                <fhir:author>
+                    <fhir:reference value="Practitioner/author"/>
+                </fhir:author>
+                <fhir:title value="MedicationPlan"/>
+                <fhir:attester>
+                    <fhir:mode value="professional"/>
+                    <fhir:time value="2016-09-12T11:46:09+02:00"/>
+                    <fhir:party>
+                        <fhir:reference value="Practitioner/attester"/>
+                    </fhir:party>
+                </fhir:attester>
+                <fhir:section>
+                    <fhir:title value="Aktuelle Medikation"/>
+                    <fhir:code>
+                        <fhir:coding>
+                            <fhir:system value="http://loinc.org"/>
+                            <fhir:code value="77604-7"/>
+                            <fhir:display value="History of medication use"/>
+                        </fhir:coding>
+                    </fhir:code>
+                    <fhir:entry>
+                        <fhir:reference value="MedicationStatement/MS1"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="MedicationStatement/MS2"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="MedicationStatement/MS3"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="MedicationStatement/MS4"/>
+                    </fhir:entry>
+                </fhir:section>
+                <fhir:section>
+                    <fhir:title value="Gesundheitsbelange"/>
+                    <fhir:code>
+                        <fhir:coding>
+                            <fhir:system value="http://loinc.org"/>
+                            <fhir:code value="75310-3"/>
+                            <fhir:display value="Health Concerns"/>
+                        </fhir:coding>
+                    </fhir:code>
+                    <fhir:entry>
+                        <fhir:reference value="Observation/w"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Observation/h"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Observation/m"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Observation/p"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Observation/tg"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Condition/r1"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Condition/r3"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Condition/r4"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Condition/r5"/>
+                    </fhir:entry>
+                    <fhir:entry>
+                        <fhir:reference value="Condition/r6"/>
+                    </fhir:entry>
+                </fhir:section>
+                <fhir:section>
+                    <fhir:title value="Bemerkungen"/>
+                    <fhir:code>
+                        <fhir:coding>
+                            <fhir:system value="http://loinc.org"/>
+                            <fhir:code value="48767-8"/>
+                            <fhir:display value="ANNOTATION COMMENT"/>
+                        </fhir:coding>
+                    </fhir:code>
+                    <fhir:text>
+                        <fhir:status value="additional"/>
+                        <div 
+                            xmlns="http://www.w3.org/1999/xhtml">Bemerkung
+                        </div>
+                    </fhir:text>
+                </fhir:section>
+            </fhir:Composition>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Patient/patient"/>
+        <fhir:resource>
+            <fhir:Patient>
+                <fhir:id value="patient"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient"/>
+                </fhir:meta>
+                <fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample2">
+                    <fhir:valueString value="PrivateFieldValueSample2"/>
+                </fhir:extension>
+                <fhir:identifier>
+                    <fhir:system value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
+                    <fhir:value value="vekano"/>
+                </fhir:identifier>
+                <fhir:name>
+                    <fhir:family value="Matter"/>
+                    <fhir:given value="Maxima"/>
+                </fhir:name>
+                <fhir:telecom>
+                    <fhir:system value="phone"/>
+                    <fhir:value value="+41588512600"/>
+                </fhir:telecom>
+                <fhir:gender value="female"/>
+                <fhir:birthDate value="1981-01-12"/>
+                <fhir:address>
+                    <fhir:line value="Untermattweg 8"/>
+                    <fhir:city value="Bern"/>
+                    <fhir:postalCode value="3027"/>
+                </fhir:address>
+                <fhir:communication>
+                    <fhir:language>
+                        <fhir:coding>
+                            <fhir:system value="urn:ietf:bcp:47"/>
+                            <fhir:code value="de-CH"/>
+                        </fhir:coding>
+                    </fhir:language>
+                    <fhir:preferred value="true"/>
+                </fhir:communication>
+            </fhir:Patient>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/author"/>
+        <fhir:resource>
+            <fhir:Practitioner>
+                <fhir:id value="author"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
+                </fhir:meta>
+                <fhir:identifier>
+                    <fhir:use value="official"/>
+                    <fhir:system value="urn:oid:2.51.1.3"/>
+                    <fhir:value value="7601003178999"/>
+                </fhir:identifier>
+                <fhir:name>
+                    <fhir:family value="Wälti"/>
+                    <fhir:given value="Thomas"/>
+                </fhir:name>
+            </fhir:Practitioner>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/receiver"/>
+        <fhir:resource>
+            <fhir:Practitioner>
+                <fhir:id value="receiver"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
+                </fhir:meta>
+                <fhir:identifier>
+                    <fhir:use value="official"/>
+                    <fhir:system value="urn:oid:2.51.1.3"/>
+                    <fhir:value value="7601003178999"/>
+                </fhir:identifier>
+            </fhir:Practitioner>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Practitioner/attester"/>
+        <fhir:resource>
+            <fhir:Practitioner>
+                <fhir:id value="attester"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner"/>
+                </fhir:meta>
+                <fhir:identifier>
+                    <fhir:use value="official"/>
+                    <fhir:system value="urn:oid:2.51.1.3"/>
+                    <fhir:value value="7601003178999"/>
+                </fhir:identifier>
+            </fhir:Practitioner>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS1"/>
+        <fhir:resource>
+            <fhir:MedicationStatement>
+                <fhir:id value="MedicationStatement/MS1"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </fhir:meta>
+                <fhir:contained>
+                    <fhir:Medication>
+                        <fhir:id value="cont1"/>
+                        <fhir:meta>
+                            <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </fhir:meta>
+                        <fhir:code>
+                            <fhir:coding>
+                                <fhir:system value="urn:oid:2.51.1.1"/>
+                                <fhir:code value="7680453070343"/>
+                            </fhir:coding>
+                        </fhir:code>
+                    </fhir:Medication>
+                </fhir:contained>
+                <fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample3">
+                    <fhir:valueString value="PrivateFieldValueSample3"/>
+                </fhir:extension>
+                <fhir:status value="active"/>
+                <fhir:medicationReference>
+                    <fhir:reference value="#cont1"/>
+                </fhir:medicationReference>
+                <fhir:informationSource>
+                    <fhir:reference value="Practitioner/author"/>
+                </fhir:informationSource>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:taken value="unk"/>
+                <fhir:reasonCode>
+                    <fhir:text value="Akne"/>
+                </fhir:reasonCode>
+                <fhir:note>
+                    <fhir:text value="-"/>
+                </fhir:note>
+                <fhir:dosage>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2016-09-12"/>
+                                <fhir:end value="2020-09-12"/>
+                            </fhir:boundsPeriod>
+                            <fhir:when value="PCM"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:asNeededBoolean value="true"/>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="PO"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="1"/>
+                        <fhir:unit value="Stk"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="Stk"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+            </fhir:MedicationStatement>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS2"/>
+        <fhir:resource>
+            <fhir:MedicationStatement>
+                <fhir:id value="MedicationStatement/MS2"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </fhir:meta>
+                <fhir:contained>
+                    <fhir:Medication>
+                        <fhir:id value="cont2"/>
+                        <fhir:meta>
+                            <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </fhir:meta>
+                        <fhir:code>
+                            <fhir:coding>
+                                <fhir:system value="urn:oid:2.51.1.1"/>
+                                <fhir:code value="7680517950680"/>
+                            </fhir:coding>
+                        </fhir:code>
+                    </fhir:Medication>
+                </fhir:contained>
+                <fhir:status value="active"/>
+                <fhir:medicationReference>
+                    <fhir:reference value="#cont2"/>
+                </fhir:medicationReference>
+                <fhir:informationSource>
+                    <fhir:reference value="Practitioner/author"/>
+                </fhir:informationSource>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:taken value="unk"/>
+                <fhir:reasonCode>
+                    <fhir:text value="Blutverdünnung"/>
+                </fhir:reasonCode>
+                <fhir:dosage>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2016-09-12"/>
+                                <fhir:end value="2020-09-12"/>
+                            </fhir:boundsPeriod>
+                            <fhir:dayOfWeek value="mon"/>
+                            <fhir:dayOfWeek value="tue"/>
+                            <fhir:when value="PCM"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="PO"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="1"/>
+                        <fhir:unit value="Stk"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="Stk"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+            </fhir:MedicationStatement>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS3"/>
+        <fhir:resource>
+            <fhir:MedicationStatement>
+                <fhir:id value="MedicationStatement/MS3"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </fhir:meta>
+                <fhir:contained>
+                    <fhir:Medication>
+                        <fhir:id value="cont3"/>
+                        <fhir:meta>
+                            <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </fhir:meta>
+                        <fhir:code>
+                            <fhir:coding>
+                                <fhir:system value="urn:oid:2.51.1.1"/>
+                                <fhir:code value="7680521101573"/>
+                            </fhir:coding>
+                        </fhir:code>
+                    </fhir:Medication>
+                </fhir:contained>
+                <fhir:status value="active"/>
+                <fhir:medicationReference>
+                    <fhir:reference value="#cont3"/>
+                </fhir:medicationReference>
+                <fhir:informationSource>
+                    <fhir:reference value="Practitioner/author"/>
+                </fhir:informationSource>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:taken value="unk"/>
+                <fhir:reasonCode>
+                    <fhir:text value="Bluthochdruck/Herz"/>
+                </fhir:reasonCode>
+                <fhir:dosage>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2016-02-10"/>
+                            </fhir:boundsPeriod>
+                            <fhir:when value="PCM"/>
+                            <fhir:when value="PCV"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="PO"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="1"/>
+                        <fhir:unit value="Stk"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="Stk"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+            </fhir:MedicationStatement>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/MedicationStatement/MS4"/>
+        <fhir:resource>
+            <fhir:MedicationStatement>
+                <fhir:id value="MedicationStatement/MS4"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+                </fhir:meta>
+                <fhir:contained>
+                    <fhir:Medication>
+                        <fhir:id value="cont4"/>
+                        <fhir:meta>
+                            <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+                        </fhir:meta>
+                        <fhir:code>
+                            <fhir:coding>
+                                <fhir:system value="urn:oid:2.51.1.1"/>
+                                <fhir:code value="7680497420456"/>
+                            </fhir:coding>
+                        </fhir:code>
+                    </fhir:Medication>
+                </fhir:contained>
+                <fhir:status value="active"/>
+                <fhir:medicationReference>
+                    <fhir:reference value="#cont4"/>
+                </fhir:medicationReference>
+                <fhir:informationSource>
+                    <fhir:reference value="Practitioner/author"/>
+                </fhir:informationSource>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:taken value="unk"/>
+                <fhir:reasonCode>
+                    <fhir:text value="Cholesterinsenker"/>
+                </fhir:reasonCode>
+                <fhir:dosage>
+                    <fhir:sequence value="1"/>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:count value="1"/>
+                            <fhir:duration value="3600"/>
+                            <fhir:durationUnit value="s"/>
+                            <fhir:timeOfDay value="08:00:00"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="IV"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="10"/>
+                        <fhir:unit value="ml"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="ml"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+                <fhir:dosage>
+                    <fhir:sequence value="2"/>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2017-09-05"/>
+                                <fhir:end value="2020-09-26"/>
+                            </fhir:boundsPeriod>
+                            <fhir:duration value="1800"/>
+                            <fhir:durationUnit value="s"/>
+                            <fhir:frequency value="3"/>
+                            <fhir:period value="1"/>
+                            <fhir:periodUnit value="wk"/>
+                            <fhir:dayOfWeek value="tue"/>
+                            <fhir:timeOfDay value="08:00:00"/>
+                            <fhir:timeOfDay value="12:00:00"/>
+                            <fhir:timeOfDay value="18:00:00"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="IV"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="2"/>
+                        <fhir:unit value="g"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="g"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+                <fhir:dosage>
+                    <fhir:sequence value="3"/>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2016-02-10"/>
+                            </fhir:boundsPeriod>
+                            <fhir:when value="PCM"/>
+                            <fhir:when value="PCV"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="PO"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="1"/>
+                        <fhir:unit value="Stk"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="Stk"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+                <fhir:dosage>
+                    <fhir:sequence value="4"/>
+                    <fhir:timing>
+                        <fhir:repeat>
+                            <fhir:boundsPeriod>
+                                <fhir:start value="2016-02-10"/>
+                            </fhir:boundsPeriod>
+                            <fhir:when value="PCM"/>
+                            <fhir:when value="PCV"/>
+                        </fhir:repeat>
+                    </fhir:timing>
+                    <fhir:route>
+                        <fhir:coding>
+                            <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+                            <fhir:code value="PO"/>
+                        </fhir:coding>
+                    </fhir:route>
+                    <fhir:doseQuantity>
+                        <fhir:value value="1"/>
+                        <fhir:unit value="Stk"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="Stk"/>
+                    </fhir:doseQuantity>
+                </fhir:dosage>
+            </fhir:MedicationStatement>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/w"/>
+        <fhir:resource>
+            <fhir:Observation>
+                <fhir:id value="Observation/w"/>
+                <fhir:meta>
+                    <fhir:profile value="http://hl7.org/fhir/StructureDefinition/bodyweight"/>
+                </fhir:meta>
+                <fhir:status value="final"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://hl7.org/fhir/observation-category"/>
+                        <fhir:code value="vital-signs"/>
+                        <fhir:display value="Vital Signs"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://loinc.org"/>
+                        <fhir:code value="29463-7"/>
+                        <fhir:display value="Body Weight"/>
+                    </fhir:coding>
+                    <fhir:coding>
+                        <fhir:system value="http://loinc.org"/>
+                        <fhir:code value="3141-9"/>
+                        <fhir:display value="Body weight Measured"/>
+                    </fhir:coding>
+                    <fhir:coding>
+                        <fhir:system value="http://snomed.info/sct"/>
+                        <fhir:code value="27113001"/>
+                        <fhir:display value="Body weight"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:valueQuantity>
+                    <fhir:value value="72"/>
+                    <fhir:unit value="kg"/>
+                    <fhir:system value="http://unitsofmeasure.org"/>
+                    <fhir:code value="kg"/>
+                </fhir:valueQuantity>
+            </fhir:Observation>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/h"/>
+        <fhir:resource>
+            <fhir:Observation>
+                <fhir:id value="Observation/h"/>
+                <fhir:meta>
+                    <fhir:profile value="http://hl7.org/fhir/StructureDefinition/bodyheight"/>
+                </fhir:meta>
+                <fhir:status value="final"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://hl7.org/fhir/observation-category"/>
+                        <fhir:code value="vital-signs"/>
+                        <fhir:display value="Vital Signs"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://loinc.org"/>
+                        <fhir:code value="8302-2"/>
+                        <fhir:display value="Body height"/>
+                    </fhir:coding>
+                    <fhir:coding>
+                        <fhir:system value="http://snomed.info/sct"/>
+                        <fhir:code value="50373000"/>
+                        <fhir:display value="Body height measure"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:valueQuantity>
+                    <fhir:value value="178"/>
+                    <fhir:unit value="cm"/>
+                    <fhir:system value="http://unitsofmeasure.org"/>
+                    <fhir:code value="cm"/>
+                </fhir:valueQuantity>
+            </fhir:Observation>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/m"/>
+        <fhir:resource>
+            <fhir:Observation>
+                <fhir:id value="Observation/m"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
+                </fhir:meta>
+                <fhir:status value="final"/>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://snomed.info/sct"/>
+                        <fhir:code value="161713000"/>
+                        <fhir:display value="Last menstrual period - First day"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:valueDateTime value="2016-09-01"/>
+            </fhir:Observation>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/p"/>
+        <fhir:resource>
+            <fhir:Observation>
+                <fhir:id value="Observation/p"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-prematurebaby"/>
+                </fhir:meta>
+                <fhir:status value="final"/>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://snomed.info/sct"/>
+                        <fhir:code value="395507008"/>
+                        <fhir:display value="Premature infant"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:valueBoolean value="true"/>
+            </fhir:Observation>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Observation/g"/>
+        <fhir:resource>
+            <fhir:Observation>
+                <fhir:id value="Observation/tg"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation"/>
+                </fhir:meta>
+                <fhir:status value="final"/>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://snomed.info/sct"/>
+                        <fhir:code value="445872007"/>
+                        <fhir:display value="Fetal gestational age"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+                <fhir:component>
+                    <fhir:code>
+                        <fhir:coding>
+                            <fhir:system value="http://loinc.org"/>
+                            <fhir:code value="49051-6"/>
+                            <fhir:display value="Gestational age in W"/>
+                        </fhir:coding>
+                    </fhir:code>
+                    <fhir:valueQuantity>
+                        <fhir:value value="30"/>
+                        <fhir:unit value="wk"/>
+                        <fhir:system value="http://unitsofmeasure.org"/>
+                        <fhir:code value="wk"/>
+                    </fhir:valueQuantity>
+                </fhir:component>
+                <fhir:component>
+                    <fhir:code>
+                        <fhir:coding>
+                            <fhir:system value="http://loinc.org"/>
+                            <fhir:code value="49052-4"/>
+                            <fhir:display value="Gestational age in D"/>
+                        </fhir:coding>
+                    </fhir:code>
+                    <fhir:valueQuantity>
+                        <fhir:value value="5"/>
+                        <fhir:unit value="d"/>
+                        <fhir:system value="http://unitsofmeasure.org"/>
+                        <fhir:code value="d"/>
+                    </fhir:valueQuantity>
+                </fhir:component>
+            </fhir:Observation>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r1"/>
+        <fhir:resource>
+            <fhir:Condition>
+                <fhir:id value="r1"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+                </fhir:meta>
+                <fhir:clinicalStatus value="active"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+                        <fhir:code value="1"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value="577"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+            </fhir:Condition>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r3"/>
+        <fhir:resource>
+            <fhir:Condition>
+                <fhir:id value="r3"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+                </fhir:meta>
+                <fhir:clinicalStatus value="active"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+                        <fhir:code value="3"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value="612"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+            </fhir:Condition>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r4"/>
+        <fhir:resource>
+            <fhir:Condition>
+                <fhir:id value="r4"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+                </fhir:meta>
+                <fhir:clinicalStatus value="active"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+                        <fhir:code value="4"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value=""/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+            </fhir:Condition>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r5"/>
+        <fhir:resource>
+            <fhir:Condition>
+                <fhir:id value="r5"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+                </fhir:meta>
+                <fhir:clinicalStatus value="active"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+                        <fhir:code value="5"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value=""/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+            </fhir:Condition>
+        </fhir:resource>
+    </fhir:entry>
+    <fhir:entry>
+        <fhir:fullUrl value="http://chmed16af.emediplan.ch/bundle/fhir/Condition/r6"/>
+        <fhir:resource>
+            <fhir:Condition>
+                <fhir:id value="r6"/>
+                <fhir:meta>
+                    <fhir:profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+                </fhir:meta>
+                <fhir:clinicalStatus value="active"/>
+                <fhir:category>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+                        <fhir:code value="6"/>
+                    </fhir:coding>
+                </fhir:category>
+                <fhir:code>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value="555"/>
+                    </fhir:coding>
+                    <fhir:coding>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+                        <fhir:code value="571"/>
+                    </fhir:coding>
+                </fhir:code>
+                <fhir:subject>
+                    <fhir:reference value="Patient/patient"/>
+                </fhir:subject>
+            </fhir:Condition>
+        </fhir:resource>
+    </fhir:entry>
+</fhir:Bundle>

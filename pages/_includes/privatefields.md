@@ -8,7 +8,7 @@ The Private Fiels can be represented in FHIR with [extensions](http://hl7.org/fh
 
 ```xml
   <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldName" >
-    <value[x] value="PrivateFieldValue" />
+    <valueString value="PrivateFieldValue" />
   </extension>
 ```
 
@@ -16,17 +16,18 @@ The Private Fiels can be represented in FHIR with [extensions](http://hl7.org/fh
 "extension" : [
     {
       "url" : "http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateField",
-      "value[x]" : "PrivateFieldValue"
+      "valueString" : "PrivateFieldValue"
     }
   ]
 ```
 
-The name of the field can be indicated with the extension url, the value of the field in the value attribute. In addition
-the type of the field can be specified (replace [x] with the type), see sample for [patient](Patient-chmed16af-mp-patient-ext.html).
+The name of the field can be indicated with the extension url, the value of the field in the value attribute. See sample for [patient](Patient-chmed16af-mp-patient-ext.html).
 
 ## Caveat
 
-Currently in CHMED16AF their are no private fields explicitly defined and the conversion to the barcode does not encode the Private Fields. In the future official defined files will be published here.
+Currently in CHMED16AF their are no private fields explicitly defined. The conversion to the QR format considers extensions definitions for Composition (equals to Medication in CHMED16A), Patient and MedicationStatment (equals to Medicament) with a cannonical url starting with http://chmed16af.emediplan.ch/fhir/StructureDefinition/.
+
+In the future official defined extensions will be published here.
 
 
 

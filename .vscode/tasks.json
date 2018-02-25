@@ -162,7 +162,7 @@
                 "-jar",
                 "${workspaceRoot}/igpublisher/org.hl7.fhir.igpublisher.jar",
                 "-ig",
-                "${workspaceRoot}/chmed16af.json"            ]
+                "${workspaceRoot}/ig.json"            ]
         },
         {
             "taskName": "xsl bundle to qr",

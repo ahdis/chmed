@@ -16,7 +16,6 @@ The CHEMD16AF format can bei either in XML or JSON format. However both are too 
 The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder).
 
 ## source
-
 Publishing the Implementation Guide for is currrencly a manual process
 
 ```

@@ -12,6 +12,9 @@ Extending the CHMED16A format to a FHIR based definition (CHMED16AF) has the fol
 
 The CHEMD16AF format can bei either in XML or JSON format. However both are too big in size to be exchange in a qrcode. For this a shortened notation [CHMED16AQ](qrcode.html) has be developed similar to the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan)
 
+## building the Implementation Guide
+The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder).
+
 ## source
 
 Publishing the Implementation Guide for is currrencly a manual process

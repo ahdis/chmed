@@ -1,6 +1,6 @@
 {
   "tool": "jekyll",
-  "version" : "3.0.1",
+  "version": "3.0.1",
   "paths": {
     "resources": [
       "resources"
@@ -25,7 +25,7 @@
     }
   },
   "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
-  "source": "ImplementationGuide/chmed16af-ig.xml",
+  "source": "implementationguide/chmed16af-ig.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {
   },

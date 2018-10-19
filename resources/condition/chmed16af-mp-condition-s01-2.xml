@@ -13,7 +13,7 @@
   <clinicalStatus value="active"/>
   <category>
     <coding>
-      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category/" />
+      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category" />
       <code value="2"/>
       <display value="Liver Insufficiency"/>
     </coding>

@@ -4,8 +4,9 @@
   xmlns="http://hl7.org/fhir">
   <id value="chmed16af-obs-timeofgestation"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation" />
-  <name value="Time of gestation"/>
-  <title value="Time of gestation"/>
+  <version value="1.0.0" />
+  <name value="TimeOfGestation"/>
+  <title value="TimeOfGestation"/>
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>

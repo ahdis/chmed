@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Bundle 
-    xmlns="http://hl7.org/fhir">
+<Bundle xmlns="http://hl7.org/fhir">
     <id value="chmed16af-pmc-bundle-s01"/>
     <meta>
         <versionId value="1.0"/>
@@ -21,6 +19,11 @@
                     <lastUpdated value="2017-05-26T12:44:15Z"/>
                     <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition"/>
                 </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">PolyMedicationChekc                                                                                                                                                                                     
+                    </div>
+                </text>
                 <identifier>
                     <system value="http://emediplan.ch/chmed16af/id"/>
                     <value value="3ba6996c-6577-423d-984c-231629bf4a09"/>
@@ -139,8 +142,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                                                                                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -215,8 +217,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                                                                                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -287,8 +288,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                                                                                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -359,8 +359,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                                                                                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                                                                                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -428,13 +427,16 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">
+                    <div xmlns="http://www.w3.org/1999/xhtml">
                         <pre> 1: week dosing system by the pharmacist [yes], patient agrees [yes] -                                                                                                                                                                                                                                                                                         
-                            <br/>2: Intensified compliance support [yes] patient agrees [no] -                                                                                                                                                                                                                                                                                        
-                            <br/>3: Repeat check in ... months answered [yes], patient agrees [yes] 3 months                                                                                                                                                                                                                                                                                        
-                            <br/>4: Forwarding to doctor / other specialist question answered [no],                                                                                                                                                                                                                                                                                        
-                            <br/>5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                                                                                                                                                        
+                            <br/>
+2: Intensified compliance support [yes] patient agrees [no] -                                                                                                                                                                                                                                                                                        
+                            <br/>
+3: Repeat check in ... months answered [yes], patient agrees [yes] 3 months                                                                                                                                                                                                                                                                                        
+                            <br/>
+4: Forwarding to doctor / other specialist question answered [no],                                                                                                                                                                                                                                                                                        
+                            <br/>
+5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                                                                                                                                                        
                             <br/>
                         </pre>
                     </div>
@@ -443,7 +445,7 @@
                     <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire"/>
                 </questionnaire>
                 <status value="completed"/>
-                
+
                 <item>
                     <linkId value="1"/>
                     <item>
@@ -531,8 +533,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">
+                    <div xmlns="http://www.w3.org/1999/xhtml">
                         <p>Thomas Wälti </p>
                     </div>
                 </text>

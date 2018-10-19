@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="chmed16af-rx-bundle-s01"/>
     <meta>
@@ -20,6 +19,11 @@
                     <lastUpdated value="2017-05-27T09:33:21Z"/>
                     <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition"/>
                 </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Prescription                                                                                                                                                                                     
+                    </div>
+                </text>
                 <identifier>
                     <system value="http://emediplan.ch/chmed16af/id"/>
                     <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>

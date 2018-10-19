@@ -11,3 +11,4 @@ tools
 chmed16a
 resources/Observation/bp.xml
 resources/StructureDefinition/bp.xml
+org.hl7.fhir.igpublisher.jar

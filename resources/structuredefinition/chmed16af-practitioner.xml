@@ -3,7 +3,9 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-practitioner" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner" />
+    <version value="1.0.0" />
 	<name value="Practitioner" />
+	<title value="Practitioner" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>

@@ -523,6 +523,20 @@
 				<xsl:value-of select="$doseUnit" />
 			</xsl:attribute>
 		</xsl:if>
+		<!-- @q2 -->
+		<xsl:variable name="doseQuantityTo" select="fhir:doseQuantity/fhir:extension[@url='http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto']/fhir:valueQuantity/fhir:value/@value" />
+		<xsl:if test="$doseQuantityTo">
+			<xsl:attribute name="q2">
+				<xsl:value-of select="$doseQuantityTo" />
+			</xsl:attribute>
+		</xsl:if>
+		<!-- @u2 -->
+		<xsl:variable name="doseUnitTo" select="fhir:doseQuantity/fhir:extension[@url='http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto']/fhir:valueQuantity/fhir:unit/@value" />
+		<xsl:if test="$doseUnitTo">
+			<xsl:attribute name="u2">
+				<xsl:value-of select="$doseUnitTo" />
+			</xsl:attribute>
+		</xsl:if>
 		<!-- @o -->
 		<xsl:variable name="o" select="fhir:route/fhir:coding[fhir:system/@value='http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26']/fhir:code/@value" />
 		<xsl:if test="$o">

@@ -3,7 +3,9 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-rx-composition" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-composition" />
-	<name value="Composition (Medication Plan)" />
+    <version value="1.0.0" />
+	<name value="CompositionPrescription" />
+	<title value="Composition Prescription"/>
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>
@@ -360,8 +362,7 @@
 				<code value="string" />
 			</type>
 			<fixedString value="ANNOTATION COMMENT" />
-		</element>
-<!--		
+		</element>		
 		<element id="chmed16af-rx-composition.Composition.section.entry:sectionnote">
 			<path value="Composition.section.entry"/>
 			<short value="A reference to data that supports this section"/>
@@ -374,6 +375,5 @@
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
 			</type>
 		</element>
--->		
 	</differential>
 </StructureDefinition> 

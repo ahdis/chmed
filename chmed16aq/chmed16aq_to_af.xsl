@@ -778,8 +778,34 @@
 											</fhir:coding>
 										</fhir:route>
 									</xsl:if>
-									<xsl:if test="@q or @u">
+									<xsl:if test="@q or @u or @q2 or @u2">
 										<fhir:doseQuantity>
+											<xsl:if test="@q2 or @u2">
+												<fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto">
+													<fhir:valueQuantity>
+														<xsl:if test="@q2">
+															<fhir:value>
+																<xsl:attribute name="value">
+																	<xsl:value-of select="@q2" />
+																</xsl:attribute>
+															</fhir:value>
+														</xsl:if>	
+														<xsl:if test="@u2">
+															<fhir:unit>
+																<xsl:attribute name="value">
+																	<xsl:value-of select="@u2" />
+																</xsl:attribute>
+															</fhir:unit>
+															<fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+															<fhir:code>
+																<xsl:attribute name="value">
+																	<xsl:value-of select="@u2" />
+																</xsl:attribute>
+															</fhir:code>
+														</xsl:if>	
+													</fhir:valueQuantity>
+												</fhir:extension>
+											</xsl:if>
 											<xsl:if test="@q">
 												<fhir:value>
 													<xsl:attribute name="value">

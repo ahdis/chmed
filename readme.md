@@ -15,6 +15,20 @@ The CHEMD16AF format can bei either in XML or JSON format. However both are too 
 ## building the Implementation Guide
 The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder).
 
+the Implementation Guide can be built also from the command line:
+
+```
+wget http://build.fhir.org/org.hl7.fhir.igpublisher.jar -O org.hl7.fhir.igpublisher.jar
+java -jar org.hl7.fhir.igpublisher.jar -ig ig.json
+
+```
+
+## open issues
+
+slicing on the Observation/Condition based on profiles is not yet supported
+https://chat.fhir.org/#narrow/stream/99-IG-creation/topic/discriminators.20based.20on.20profiles.20is.20not.20yet.20supported
+
+
 ## source
 Publishing the Implementation Guide for is currrencly a manual process
 

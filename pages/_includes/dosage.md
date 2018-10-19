@@ -96,3 +96,25 @@ for 1 - 0 - 0.5 - 0 two dosage elements have to be created, [example](Medication
 ```
 
 Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed16af-mp-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed16af-mp-medicationstatement-tt-4-spiricort.html).
+
+An [extension](StructureDefinition-chmed16af-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (example increase form 50ml to 200 ml):
+
+```xml
+
+                 <fhir:doseQuantity>
+                        <fhir:extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto">
+                            <fhir:valueQuantity>
+                                <fhir:value value="200"/>
+                                <fhir:unit value="ml"/>
+                                <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                                <fhir:code value="ml"/>
+                            </fhir:valueQuantity>
+                        </fhir:extension>
+                        <fhir:value value="50"/>
+                        <fhir:unit value="ml"/>
+                        <fhir:system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                        <fhir:code value="ml"/>
+                    </fhir:doseQuantity>
+
+```
+

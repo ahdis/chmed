@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="chmed16af-medication"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
+  <version value="1.0.0" />
   <name value="Medication"/>
   <title value="Medication"/>
   <status value="draft"/>
-	<publisher value="IG eMediplan" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.emediplan.ch"/>
-		</telecom>
-	</contact>
-	<description value="Profile on Medication"/>
-	<fhirVersion value="3.0.1" />
+  <publisher value="IG eMediplan" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Profile on Medication"/>
+  <fhirVersion value="3.0.1"/>
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -50,13 +50,13 @@
         </extension>
         <strength value="required"/>
         <description value="Using GTIN for identification of medication"/>
-<!--	FIXMER4 org.hl7.fhir.exceptions.FHIRException: not done yet: can't fetch urn:oid:2.51.1.1	<valueSetReference>
+        <!--	FIXMER4 org.hl7.fhir.exceptions.FHIRException: not done yet: can't fetch urn:oid:2.51.1.1	<valueSetReference>
 					<reference value="urn:oid:2.51.1.1"/>
 				</valueSetReference>
         or
                 <valueSetUri value="urn:oid:2.51.1.1" /> 
 
--->        
+-->
       </binding>
       <mapping>
         <identity value="CHMED16A"/>
@@ -74,7 +74,7 @@
         <code value="code"/>
       </type>
     </element>
- <!--   FIXMER4
+    <!--   FIXMER4
     <element id="Medication.isBrand">
       <path value="Medication.isBrand"/>
       <short value="True if a brand"/>
@@ -95,7 +95,7 @@
         <code value="boolean"/>
       </type>
     </element>
- -->   
+ -->
     <element id="Medication.manufacturer">
       <path value="Medication.manufacturer"/>
       <short value="Manufacturer of the item"/>
@@ -129,7 +129,7 @@
         <code value="BackboneElement"/>
       </type>
     </element>
- <!--   
+    <!--   
     <element id="Medication.package">
       <path value="Medication.package"/>
       <short value="Details about packaged medications"/>
@@ -155,6 +155,6 @@
         <map value=".participation[typeCode=SUBJ].role[classCode=MANU],source[classCode=OBS,moodCode=EVN,code=&quot;type of image&quot;].value(ED.image)"/>
       </mapping>
     </element>
--->    
+-->
   </differential>
 </StructureDefinition>

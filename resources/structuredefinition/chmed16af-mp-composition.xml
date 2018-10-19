@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-	xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-composition" />
 	<meta>
 		<lastUpdated value="2017-05-26T13:58:37.09+02:00" />
 	</meta>
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition" />
-	<name value="Composition (Medication Plan)" />
+	<version value="1.0.0" />
+	<name value="CompositionMedicationPlan" />
+	<title value="Compositionb MedicationPlan" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>
@@ -16,7 +17,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile for the Composition Resource of the medication plan." />
-	<fhirVersion value="3.0.1" />
+	<fhirVersion value="3.0.1"/>
 	<mapping>
 		<identity value="CHMED16A" />
 		<uri value="http://emediplan.ch/chmed16a" />
@@ -37,7 +38,7 @@
 				<map value="Medication" />
 			</mapping>
 		</element>
-		<element id="chmed16af-mp-composition.Composition.extension" >
+		<element id="chmed16af-mp-composition.Composition.extension">
 			<path value="Composition.extension" />
 			<slicing>
 				<discriminator>
@@ -70,17 +71,17 @@
 				<map value="id" />
 			</mapping>
 		</element>
-		<element id="chmed16af-mp-composition.Composition.type" >
+		<element id="chmed16af-mp-composition.Composition.type">
 			<path value="Composition.type" />
 		</element>
-		<element id="chmed16af-mp-composition.Composition.type.coding" >
+		<element id="chmed16af-mp-composition.Composition.type.coding">
 			<path value="Composition.type.coding" />
 		</element>
-		<element id="chmed16af-mp-composition.Composition.type.coding.system" >
+		<element id="chmed16af-mp-composition.Composition.type.coding.system">
 			<path value="Composition.type.coding.system" />
 			<fixedUri value="http://emediplan.ch/chmed16af/doc" />
 		</element>
-		<element id="chmed16af-mp-composition.Composition.type.coding.code" >
+		<element id="chmed16af-mp-composition.Composition.type.coding.code">
 			<path value="Composition.type.coding.code" />
 			<fixedCode value="MP" />
 		</element>
@@ -284,12 +285,12 @@
 			<slicing>
 				<discriminator>
 					<type value="profile" />
-					<path value="url" />
+					<path value="resolve()" />
 				</discriminator>
 				<ordered value="false" />
 				<rules value="open" />
 			</slicing>
-		</element>
+		</element>		
 		<element id="chmed16af-mp-composition.Composition.section.entry:bodyweight">
 			<path value="Composition.section.entry" />
 			<sliceName value="bodyweight" />

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-	xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-medicationstatement" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
-	<name value="MedicationStatement (MedicationPlan)" />
+	<version value="1.0.0" />
+	<name value="MedicationStatementMedicationPlan" />
 	<title value="MedicationStatement (MedicationPlan)"/>
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
@@ -14,7 +14,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile on MedicationStatement for MedicationPlan"/>
-	<fhirVersion value="3.0.1" />
+	<fhirVersion value="3.0.1"/>
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>
@@ -436,7 +436,7 @@
 				<map value="doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo"/>
 			</mapping>
 		</element>
-<!--		
+		<!--		
 				<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.doseQuantity.system">
 			<path value="MedicationStatement.dosage.doseQuantity.system" />
 			<min value="1" />
@@ -446,7 +446,7 @@
 			</type>
 			<fixedUri value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
 		</element>
--->		
+-->
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerPeriod">
 			<path value="MedicationStatement.dosage.maxDosePerPeriod"/>
 			<short value="Upper limit on medication per unit of time"/>
@@ -464,7 +464,7 @@
 				<map value="TakingTime.MA"/>
 			</mapping>
 		</element>
-<!--		
+		<!--		
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerRequest">
 			<path value="MedicationStatement.dosage.maxDosePerRequest"/>
 			<short value="Upper limit on medication per administration"/>
@@ -479,7 +479,7 @@
 			</type>
 			<isSummary value="true"/>
 		</element>
--->		
+-->
 		<element id="chmed16af-mp-medicationstatement.MedicationStatement.dosage.maxDosePerLifetime">
 			<path value="MedicationStatement.dosage.maxDosePerLifetime"/>
 			<short value="Upper limit on medication per lifetime of the patient"/>

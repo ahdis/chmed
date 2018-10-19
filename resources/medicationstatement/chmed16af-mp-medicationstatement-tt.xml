@@ -1,6 +1,6 @@
 <MedicationStatement 
 	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-mp-medicationstatement" />
+	<id value="chmed16af-mp-medicationstatement-tt" />
 	<meta>
 		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
 	</meta>

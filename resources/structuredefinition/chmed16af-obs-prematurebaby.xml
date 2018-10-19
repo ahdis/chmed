@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="chmed16af-obs-prematurebaby"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-prematurebaby" />
-  <name value="Premature baby"/>
+  <version value="1.0.0" />
+  <name value="PrematureBaby"/>
   <title value="Premature baby"/>
-	<status value="draft" />
-	<publisher value="IG eMediplan" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.emediplan.ch"/>
-		</telecom>
-	</contact>
-	<description value="Profile on Oberservation for Premature Baby"/>
-	<fhirVersion value="3.0.1" />
+  <status value="draft" />
+  <publisher value="IG eMediplan" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Profile on Oberservation for Premature Baby"/>
+  <fhirVersion value="3.0.1" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -77,9 +77,9 @@
         <code value="boolean"/>
       </type>
       <mapping>
-				<identity value="CHMED16A" />
-				<map value="MedicalData.Prem" />
-			</mapping>
+        <identity value="CHMED16A" />
+        <map value="MedicalData.Prem" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

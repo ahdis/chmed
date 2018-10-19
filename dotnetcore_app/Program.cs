@@ -45,10 +45,9 @@ namespace chmed16af
         public void validateCHMED16AF()
         {
             Resource resource = chmed16af.Bundle;
+
             string pathSpecification = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../validator/igpack.zip");
 
-            // NOTE TODO: IG cannot be directly read, needs to be done
-            string pathIg = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../output/validator.pack");
 
             string pathStructureDefintions = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../resources/StructureDefinition");
             string pathValueSet = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "../resources/ValueSet");
@@ -62,7 +61,8 @@ namespace chmed16af
                     new DirectorySource(pathValueSet),
                     new DirectorySource(pathCodeSystem),
                     //                    new ZipSource(pathIg),
-                    new ZipSource(pathSpecification)));
+                  new ZipSource(pathSpecification))
+            );
 
             var ctx = new ValidationSettings()
             {
@@ -133,7 +133,7 @@ namespace chmed16af
 
             Console.WriteLine("---> Serialize Bundle To JSON");
 
-            Console.WriteLine(FhirSerializer.SerializeResourceToJson(chmed16afBackAndForth.Bundle));
+            Console.WriteLine(new FhirJsonSerializer().SerializeToString(chmed16afBackAndForth.Bundle));
 
         }
 
@@ -145,7 +145,6 @@ namespace chmed16af
             program.xslBundleToQrCode();
             program.xslQrCodeToBundle();
             program.readBackAndForthTransformedBundleAndSerializeToJson();
-
         }
     }
 }

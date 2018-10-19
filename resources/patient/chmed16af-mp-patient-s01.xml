@@ -36,7 +36,7 @@
 			<coding>
 				<system value="urn:ietf:bcp:47" />
 				<code value="de-CH" />
-				<display value="German (Swiss)" />
+				<display value="German (Region=Switzerland)" />
 			</coding>
 		</language>
 		<preferred value="true" />

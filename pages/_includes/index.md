@@ -27,7 +27,7 @@ In addition, the layout specification for the print-based layouts makes recognit
 
 # CHMED16AF
 
-<mark>Disclaimer 30.03.2017: This is the current draft version which is still under review and changes might happen, please contact info@emediplan.ch if you start implementing</mark>
+<mark>Disclaimer 19.10.2018: This is the current draft version which is still under review and changes might happen, please contact info@emediplan.ch if you start implementing</mark>
 
 [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 

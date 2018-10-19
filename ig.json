@@ -1,6 +1,8 @@
 {
   "tool": "jekyll",
   "version": "3.0.1",
+  "license": "CC-BY-SA-4.0",
+  "npm-name": "ch.chmed16af.emediplan.fhir",
   "paths": {
     "resources": [
       "resources"
@@ -12,6 +14,7 @@
     "txCache": "txCache",
     "specification": "http://hl7.org/fhir/STU3/"
   },
+  "path-pattern" : "[type]-[id].html",
   "defaults": {
     "Any": {
       "template-format": "instance-template-format.html",

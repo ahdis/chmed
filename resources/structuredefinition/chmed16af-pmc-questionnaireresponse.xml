@@ -5,12 +5,14 @@
     <lastUpdated value="2017-05-26T13:32:39.082+02:00" />
   </meta>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
-  <name value="QuestionnaireResponse (Poly Medication Check)" />
+  <version value="1.0.0" />
+  <name value="QuestionnaireResponsePolyMedicationCheck" />
+  <title value="QuestionnaireResponse PolyMedicationCheck" />
   <status value="draft" />
   <publisher value="IG eMediplan" />
   <contact>
     <telecom>
-	  <system value="url"/>
+      <system value="url"/>
       <value value="http://www.emediplan.ch" />
     </telecom>
   </contact>
@@ -32,12 +34,10 @@
       <min value="1" />
       <fixedString value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
     </element>
-    <element  id="chmed16af.QuestionnaireResponse.status" >
+    <element id="chmed16af.QuestionnaireResponse.status">
       <path value="QuestionnaireResponse.status" />
-      <type>
-        <code value="code" />
-        <profile value="completed" />
-      </type>
+      <min value="1" />
+      <fixedCode value="completed" />
     </element>
   </differential>
 </StructureDefinition>

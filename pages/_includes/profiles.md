@@ -24,8 +24,7 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 * Further entry elements to the patient, medication plan entries, etc.
 
 [Profile for Medication Plan](StructureDefinition-chmed16af-mp-bundle.html) &#124; [Example for Medication Plan (xml)](Bundle-chmed16af-mp-bundle-s01.xml.html)
-
-## Compostion
+## Composition
 
 The Composition ressource defines the following parameter for the medication plan:
 
@@ -42,7 +41,7 @@ The Composition ressource defines the following parameter for the medication pla
 | section | notes |  text | Rmk | @n  | 
 | receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed16af-receiver.html) | Patient.RCV (GLN of receiver) | @r |   
 
-[Profile for Medication Plan Composition](StructureDefinition-chmed16af-mp-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-mp-composition-s01.xml.html)
+[Profile for Medication Plan Composition](StructureDefinition-chmed16af-mp-composition.html)
 
 ## Patient
 
@@ -56,7 +55,8 @@ The Composition ressource defines the following parameter for the medication pla
 | address  | address for the patient  | Address  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | @l, @p, @c | 
 | communication.language  | language for the patient  | CodeableConcept  |Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" | @cl | 
 
-[Profile for Medication Plan Patient](StructureDefinition-chmed16af-mp-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-mp-patient-s01.xml.html)
+[Profile for Medication Plan Patient](StructureDefinition-chmed16af-mp-patient.html) &#124; [Example for Patient](Patient-chmed16af-mp-patient-s01.html)
+
 
 ## Practitioner
 
@@ -80,7 +80,7 @@ The medication section contains the entries for the current medications for pati
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) @n | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes | @s @e @c @dv @du @f @p @pu @dw @td @w @r   | 
 | dosage.route  | How drug should enter body | CodeableConect  | Medication.Roa | @o |
-| dosage.doseQuantity  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom | @q @u |
+| dosage.doseQuantity  |Amount of medication per dose. | Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom | @q @u @q2 @u2 |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA |  |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
@@ -135,7 +135,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | section | medications |  MedicationStatement | Medicaments | &lt;M&gt;  | 
 | section | recommendations |  - | Recoms | &lt;@r&gt;  | 
 
-[Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-pmc-composition.html) &#124; [Example for Composition (xml)](Composition-chmed16af-pmc-composition-s01.xml.html)
+[Profile for PolymedicationCheck Composition](StructureDefinition-chmed16af-pmc-composition.html)
 
 ## Patient
 
@@ -148,7 +148,7 @@ The Composition ressource defines the following parameter for the Polymedication
 | birthDate  | the date of birth  | date  |Patient.BDt | @b | 
 | address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | @l, @p, @c | 
 
-[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-pmcrx-patient-s01.xml.html)
+[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-mp-patient-s01.xml.html)
 
 ## Practitioner
 
@@ -171,7 +171,7 @@ The medication section contains the entries for the current medications for pati
 | note  | Application Instructions  | Annotation  |Medication.AppInstr | @n  | 
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
+| dosage.dose[x]  |Amount of medication per dose. | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.doTo) | @q @u @q2 @u2 |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed16af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
@@ -227,7 +227,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | section | medications |  MedicationAdminstration | Medicaments | &lt;M&gt;  | 
 | section | note |  - | Rmk | &lt;@n&gt;  | 
 
-[Profile for Prescription Composition](StructureDefinition-chmed16af-rx-composition.html) &#124; [Example for Prescription (xml)](Composition-chmed16af-rx-composition-s01.xml.html)
+[Profile for Prescription Composition](StructureDefinition-chmed16af-rx-composition.html)
 
 ## Patient
 
@@ -240,7 +240,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | birthDate  | the date of birth  | date  |Patient.BDt | @b | 
 | address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City | @l, @p, @c | 
 
-[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-pmcrx-patient-s01.xml.html)
+[Profile for Patient](StructureDefinition-chmed16af-pmcrx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed16af-mp-patient-ext.xml.html)
 
 ## Practitioner
 
@@ -262,7 +262,7 @@ The medication section contains the entries for the prescriped medications for t
 | note  | Application Instructions  | Annotation  |Medication.AppInstr | @n  | 
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | &lt;D&gt;  | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | @s, @e, @p, @r, (@m, @d, @v, @h)   | 
-| dosage.dose[x]  |Amount of medication per dose. | Range or Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo | @u, @dl, @dh |
+| dosage.dose[x]  ||Amount of medication per dose. | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.doTo) | @q @u @q2 @u2 |
 | dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA | @dm |
 | dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | Medication  | Rep | @dn    | 
 | dispenseRequest.quantity  | Number of package to be delivered  | Medication  | NbPack | @dq    | 
@@ -270,4 +270,4 @@ The medication section contains the entries for the prescriped medications for t
 
 [Profile for MedicationRequest](StructureDefinition-chmed16af-rx-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed16af-medication.html)
 
-Examples for MedicationRequest [1](MedicationStatement-chmed16af-rx-medicationrequest-s01-1.html)
+Examples for MedicationRequest [1](MedicationRequest-chmed16af-rx-medicationrequest-s01-1.html)

@@ -5,12 +5,14 @@
     <lastUpdated value="2017-05-26T11:24:09.274+02:00" />
   </meta>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle" />
+  <version value="1.0.0" />
   <name value="PolymedicationCheck" />
+  <title value="PolymedicationCheck" />
   <status value="draft" />
   <publisher value="IG eMediplan" />
   <contact>
     <telecom>
-	 <system value="url"/>
+      <system value="url"/>
       <value value="http://www.emediplan.ch" />
     </telecom>
   </contact>

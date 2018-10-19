@@ -1,18 +1,20 @@
-<QuestionnaireResponse 
-    xmlns="http://hl7.org/fhir">
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
     <id value="chmed16af-pmc-questionnaireresponse-s01"/>
     <meta>
         <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-questionnaireresponse" />
     </meta>
     <text>
         <status value="generated"/>
-        <div 
-            xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <pre>       1: week dosing system by the pharmacist                            [yes], patient agrees [yes] -                                                                                                                                                                
-                <br />2: Intensified compliance support                                    [yes]  patient agrees [no] -                                                                                                                                                                
-                <br />3: Repeat check in ... months                                         answered [yes], patient agrees [yes] 3 months                                                                                                                                                              
-                <br />4: Forwarding to doctor / other specialist                            question answered [no],                                                                                                                                                              
-                <br />5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                               
+                <br />
+2: Intensified compliance support                                    [yes]  patient agrees [no] -                                                                                                                                                                
+                <br />
+3: Repeat check in ... months                                         answered [yes], patient agrees [yes] 3 months                                                                                                                                                              
+                <br />
+4: Forwarding to doctor / other specialist                            question answered [no],                                                                                                                                                              
+                <br />
+5: Needs analysis (e.g., interactions, side effects, duplications)                                                                                                                                                               
                 <br />
             </pre>
         </div>
@@ -20,7 +22,7 @@
     <questionnaire>
         <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
     </questionnaire>
-    <status value="completed"/>
+   <status value="completed" />
     <item>
         <linkId value="1"/>
         <item>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="chmed16af-condition-risks"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
+  <version value="1.0.0" />
   <name value="Risks"/>
   <title value="Risks"/>
-	<status value="draft" />
-	<publisher value="IG eMediplan" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.emediplan.ch"/>
-		</telecom>
-	</contact>
-	<description value="Profile on Condition for Risks"/>
-	<fhirVersion value="3.0.1" />
+  <status value="draft" />
+  <publisher value="IG eMediplan" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Profile on Condition for Risks"/>
+  <fhirVersion value="3.0.1"/>
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -25,7 +25,7 @@
   <type value="Condition"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition"/>
   <derivation value="constraint"/>
-<differential>
+  <differential>
     <element id="Condition">
       <path value="Condition"/>
       <short value="Detailed information about conditions, problems or diagnoses"/>

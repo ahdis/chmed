@@ -2,7 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-receiver" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver" />
+    <version value="1.0.0" />
 	<name value="Receiver" />
+	<title value="Receiver" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>

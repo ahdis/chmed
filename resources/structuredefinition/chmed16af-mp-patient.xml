@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition 
-	xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-patient" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient" />
-	<name value="Patient (Medication Plan)" />
+	<version value="1.0.0" />
+	<name value="PatientMedicationPlan" />
+	<title value="Patient MedicationPlan" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>

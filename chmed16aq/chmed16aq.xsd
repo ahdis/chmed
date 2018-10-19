@@ -430,6 +430,22 @@
 				<xs:restriction base="xs:string"></xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
+		<xs:attribute name="q2">
+			<xs:annotation>
+				<xs:documentation>Quantity dosage To</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="u2">
+			<xs:annotation>
+				<xs:documentation>Unit dosage To</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string"></xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="RecommendationType">
 		<xs:annotation>

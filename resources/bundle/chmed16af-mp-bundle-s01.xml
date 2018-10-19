@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Bundle 
-    xmlns="http://hl7.org/fhir">
+<Bundle xmlns="http://hl7.org/fhir">
     <id value="chmed16af-mp-bundle-s01"/>
     <meta>
         <versionId value="1.0"/>
@@ -21,11 +20,14 @@
                     <lastUpdated value="2017-05-10T13:51:37Z"/>
                     <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-composition"/>
                 </meta>
- <!--               
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">MedicationPlan                                                                                                                                                                                     
+                    </div>
+                </text>
                 <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample1">
                     <valueString value="PrivateFieldValueSample1" />
-                </extension>                
- -->               
+                </extension>
                 <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver">
                     <valueReference>
                         <reference value="Practitioner/chmed16af-practitioner-s01"/>
@@ -79,6 +81,9 @@
                     </entry>
                     <entry>
                         <reference value="MedicationStatement/chmed16af-mp-medicationstatement-s01-4"/>
+                    </entry>
+                    <entry>
+                        <reference value="MedicationStatement/chmed16af-mp-medicationstatement-tt-5-morphin"/>
                     </entry>
                 </section>
                 <section>
@@ -135,8 +140,7 @@
                     </code>
                     <text>
                         <status value="additional"/>
-                        <div 
-                            xmlns="http://www.w3.org/1999/xhtml"> Bemerkung                                                                                                                         
+                        <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung                                                                                                                         
                         </div>
                     </text>
                 </section>
@@ -155,8 +159,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml"> Maxima, Matter, geb 1981-01-12                                                                                                     
                     </div>
                 </text>
                 <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample2">
@@ -187,7 +190,7 @@
                         <coding>
                             <system value="urn:ietf:bcp:47"/>
                             <code value="de-CH"/>
-                            <display value="German (Swiss)"/>
+                            <display value="German (Region=Switzerland)"/>
                         </coding>
                     </language>
                     <preferred value="true"/>
@@ -207,8 +210,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne bei Bedarf ab 12.9.2016                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -286,8 +288,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml"> ASPIRIN CARDIO Filmtabl 100 mg 28 Stk 0-1-0-0 ab 10.2.2016                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -360,8 +361,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -432,8 +432,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016                                                                                                     
                     </div>
                 </text>
                 <contained>
@@ -586,6 +585,99 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.org:80/r3/MedicationStatement/chmed16af-mp-medicationstatement-tt-5-morphin"/>
+        <resource>
+            <MedicationStatement>
+                <id value="chmed16af-mp-medicationstatement-tt-5-morphin" />
+                <meta>
+                    <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
+                </meta>
+                <text>
+                    <status value="generated" />
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+ 
+MORPHIN HCL Amino Inj Lös 20 mg/ml		Prd-Nr. 28537  			
+                        <br />
+
+Start	 08:00 Uhr
+			
+                        <br />
+Ende	 12:00 Uhr
+			
+                        <br />
+Dosis jede Stunde 50 ml erhöhen
+			
+                        <br />
+
+
+
+                    </div>
+                </text>
+                <contained>
+                    <Medication>
+                        <id value="contm1" />
+                        <meta>
+                            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
+                        </meta>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680565130034"/>
+                                <display value="MORPHIN HCL Amino Inj Lös 20 mg/ml"/>
+                            </coding>
+                        </code>
+                    </Medication>
+                </contained>
+                <status value="active" />
+                <medicationReference>
+                    <reference value="#contm1" />
+                </medicationReference>
+                <informationSource>
+                    <reference value="Practitioner/chmed16af-practitioner-s01" />
+                </informationSource>
+                <subject>
+                    <reference value="Patient/chmed16af-mp-patient-s01" />
+                </subject>
+                <taken value="unk" />
+                <reasonCode>
+                    <text value="Schmerzen" />
+                </reasonCode>
+                <dosage>
+                    <sequence value="1" />
+                    <timing>
+                        <repeat>
+                            <count value="1" />
+                            <duration value="14400" />
+                            <durationUnit value="s" />
+                            <timeOfDay value="08:00:00" />
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
+                            <code value="IV" />
+                            <display value="intravenös (Infusion)" />
+                        </coding>
+                    </route>
+                    <doseQuantity>
+                        <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto">
+                            <valueQuantity>
+                                <value value="200"/>
+                                <unit value="ml"/>
+                                <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+                                <code value="ml"/>
+                            </valueQuantity>
+                        </extension>
+                        <value value="50" />
+                        <unit value="ml" />
+                        <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
+                        <code value="ml" />
+                    </doseQuantity>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.org:80/r3/Observation/chmed16af-mp-observation-s01-bodyweight"/>
         <resource>
             <Observation>
@@ -596,8 +688,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">72 kg                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">72 kg                                                                                                     
                     </div>
                 </text>
                 <status value="final"/>
@@ -649,8 +740,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">178 cm                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">178 cm                                                                                                     
                     </div>
                 </text>
                 <status value="final"/>
@@ -698,8 +788,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016                                                                                                     
                     </div>
                 </text>
                 <status value="final"/>
@@ -729,8 +818,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Premature baby: true                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">Premature baby: true                                                                                                     
                     </div>
                 </text>
                 <status value="final"/>
@@ -760,8 +848,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Time of gestation: week 30, days 5                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">Time of gestation: week 30, days 5                                                                                                     
                     </div>
                 </text>
                 <status value="final"/>
@@ -820,8 +907,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)                                                                                                    
+                    <div xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)                                                                                                    
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -857,8 +943,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded                                                                                                     
+                    <div xmlns="http://www.w3.org/1999/xhtml">Liver Insufficiency - excluded                                                                                                     
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -887,8 +972,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter                                                                                                    
+                    <div xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter                                                                                                    
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -924,8 +1008,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded                                                                                                    
+                    <div xmlns="http://www.w3.org/1999/xhtml">Competitive athlete - Excluded                                                                                                    
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -954,8 +1037,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded                                                                                                    
+                    <div xmlns="http://www.w3.org/1999/xhtml">Driver - Excluded                                                                                                    
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -984,8 +1066,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie                                                                                                    
+                    <div xmlns="http://www.w3.org/1999/xhtml">Allergies -Betablocker-Allergie (Propranolol-Typ), Penicillin-Allergie                                                                                                    
                     </div>
                 </text>
                 <clinicalStatus value="active"/>
@@ -1026,8 +1107,7 @@
                 </meta>
                 <text>
                     <status value="generated"/>
-                    <div 
-                        xmlns="http://www.w3.org/1999/xhtml">
+                    <div xmlns="http://www.w3.org/1999/xhtml">
                         <p>Thomas Wälti </p>
                     </div>
                 </text>

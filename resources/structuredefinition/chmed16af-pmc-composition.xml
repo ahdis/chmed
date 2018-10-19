@@ -3,7 +3,9 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-pmc-composition" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition" />
-	<name value="Composition (Poly Medication Check)" />
+    <version value="1.0.0" />
+	<name value="CompositionPolyMedicationCheck" />
+	<title value="Composition PolyMedicationCheck" />
 	<status value="draft" />
 	<publisher value="IG eMediplan" />
 	<contact>
@@ -394,7 +396,7 @@
 			<slicing>
 				<discriminator>
 					<type value="profile" />
-					<path value="url" />
+					<path value="resolve()" />
 				</discriminator>
 				<ordered value="false"/>
 				<rules value="open"/>

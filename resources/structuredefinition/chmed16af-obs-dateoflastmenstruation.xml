@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="chmed16af-obs-dateoflastmenstruation"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation" />
-  <name value="First day of last menstruation"/>
+  <version value="1.0.0" />
+  <name value="FirstDayOfLastMenstruation"/>
   <title value="First day of last menstruation"/>
-	<status value="draft" />
-	<publisher value="IG eMediplan" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.emediplan.ch"/>
-		</telecom>
-	</contact>
-	<description value="Profile on Oberservation for First day of last menstruation"/>
-	<fhirVersion value="3.0.1" />
+  <status value="draft" />
+  <publisher value="IG eMediplan" />
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Profile on Oberservation for First day of last menstruation"/>
+  <fhirVersion value="3.0.1" />
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -76,9 +76,9 @@
         <code value="boolean"/>
       </type>
       <mapping>
-				<identity value="CHMED16A" />
-				<map value="MedicalData.DLstMen" />
-			</mapping>
+        <identity value="CHMED16A" />
+        <map value="MedicalData.DLstMen" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

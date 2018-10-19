@@ -3,7 +3,8 @@
 	xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-rx-medicationrequest" />
 	<url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest" />
-	<name value="MedicationRequest (Prescription)" />
+    <version value="1.0.0" />
+	<name value="MedicationRequestPrescription" />
 	<title value="MedicationRequest (Prescription)"/>
 	<status value="draft" />
 	<publisher value="IG eMediplan" />

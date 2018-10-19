@@ -1,13 +1,11 @@
-<MedicationStatement 
-	xmlns="http://hl7.org/fhir">
+<MedicationStatement xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-medicationstatement-tt-5-morphin" />
 	<meta>
 		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
 	</meta>
 	<text>
 		<status value="generated" />
-		<div 
-			xmlns="http://www.w3.org/1999/xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
  
 MORPHIN HCL Amino Inj Lös 20 mg/ml		Prd-Nr. 28537  			
 			<br />
@@ -129,7 +127,7 @@ CHMED16A0 {
 		<timing>
 			<repeat>
 				<count value="1" />
-				<duration value="3600" />
+				<duration value="14400" />
 				<durationUnit value="s" />
 				<timeOfDay value="08:00:00" />
 			</repeat>
@@ -142,79 +140,15 @@ CHMED16A0 {
 			</coding>
 		</route>
 		<doseQuantity>
+			<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-dosequantityto">
+				<valueQuantity>
+					<value value="200"/>
+					<unit value="ml"/>
+					<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+					<code value="ml"/>
+				</valueQuantity>
+			</extension>
 			<value value="50" />
-			<unit value="ml" />
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
-			<code value="ml" />
-		</doseQuantity>
-	</dosage>
-	<dosage>
-		<sequence value="2" />
-		<timing>
-			<repeat>
-				<count value="1" />
-				<duration value="3600" />
-				<durationUnit value="s" />
-				<timeOfDay value="09:00:00" />
-			</repeat>
-		</timing>
-		<route>
-			<coding>
-				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
-				<code value="IV" />
-				<display value="intravenös (Infusion)" />
-			</coding>
-		</route>
-		<doseQuantity>
-			<value value="100" />
-			<unit value="ml" />
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
-			<code value="ml" />
-		</doseQuantity>
-	</dosage>
-	<dosage>
-		<sequence value="3" />
-		<timing>
-			<repeat>
-				<count value="1" />
-				<duration value="3600" />
-				<durationUnit value="s" />
-				<timeOfDay value="10:00:00" />
-			</repeat>
-		</timing>
-		<route>
-			<coding>
-				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
-				<code value="IV" />
-				<display value="intravenös (Infusion)" />
-			</coding>
-		</route>
-		<doseQuantity>
-			<value value="150" />
-			<unit value="ml" />
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
-			<code value="ml" />
-		</doseQuantity>
-	</dosage>
-	<dosage>
-		<sequence value="4" />
-		<timing>
-			<repeat>
-				<count value="1" />
-				<duration value="3600" />
-				<durationUnit value="s" />
-				<timeOfDay value="11:00:00" />
-			</repeat>
-		</timing>
-		<route>
-			<coding>
-				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
-				<code value="IV" />
-				<display value="intravenös (Infusion)" />
-			</coding>
-		</route>
-		<doseQuantity>
-			<value value="200" />
 			<unit value="ml" />
 			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
 			<code value="ml" />

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition
+  xmlns="http://hl7.org/fhir">
   <id value="chmed16af-condition-risks"/>
-  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
-  <version value="1.0.0" />
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+  <version value="0.1.0"/>
   <name value="Risks"/>
   <title value="Risks"/>
-  <status value="draft" />
-  <publisher value="IG eMediplan" />
+  <status value="draft"/>
+  <publisher value="IG eMediplan"/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -14,7 +15,7 @@
     </telecom>
   </contact>
   <description value="Profile on Condition for Risks"/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="4.0.0"/>
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>
@@ -47,25 +48,20 @@
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus"/>
-      <short value="active | recurrence | inactive | remission | resolved"/>
+      <short value="active | recurrence | relapse | inactive | remission | resolved"/>
       <definition value="The clinical status of the condition."/>
-      <min value="1"/>
+      <comment value="The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity."/>
+      <min value="0"/>
       <max value="1"/>
       <type>
-        <code value="code"/>
+        <code value="CodeableConcept"/>
       </type>
-      <fixedCode value="active" />
+      <fixedCode value="active"/>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus"/>
-      <short value="provisional | differential | confirmed | refuted | entered-in-error | unknown"/>
-      <definition value="The verification status to support the clinical status of the condition."/>
-      <comment value="verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="code"/>
-      </type>
     </element>
     <element id="Condition.category">
       <path value="Condition.category"/>
@@ -83,9 +79,7 @@
         </extension>
         <strength value="required"/>
         <description value="A category assigned to the condition."/>
-        <valueSetReference>
-          <reference value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-category"/>
-        </valueSetReference>
+        <valueSet value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-category"/>
       </binding>
       <mapping>
         <identity value="CHMED16A"/>
@@ -121,9 +115,7 @@
         </extension>
         <strength value="required"/>
         <description value="Identification of risk"/>
-        <valueSetReference>
-          <reference value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-cdscode"/>
-        </valueSetReference>
+        <valueSet value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-cdscode"/>
       </binding>
       <mapping>
         <identity value="CHMED16A"/>
@@ -179,7 +171,7 @@
       <path value="Condition.assertedDate"/>
       <short value="Date record was believed accurate"/>
       <definition value="The date on which the existance of the Condition was first asserted or acknowledged."/>
-      <comment value="The assertedDate represents the date when this particular Condition record was created in the EHR, not the date of the most recent update in terms of when severity, abatement, etc. were specified.  The date of the last record modification can be retrieved from the resource metadata."/>
+      <comment value="The assertedDate represents the date when this particular Condition record was created in the EHR, not the date of the most recent update in terms of when severity, abatement, etc. were specified.  The date of the last record modification can be retrieved from the resource metadata."/>
       <min value="0"/>
       <max value="0"/>
       <type>

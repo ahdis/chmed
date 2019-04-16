@@ -1,84 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="chmed16af-obs-dateoflastmenstruation"/>
-  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation" />
-  <version value="1.0.0" />
-  <name value="FirstDayOfLastMenstruation"/>
-  <title value="First day of last menstruation"/>
-  <status value="draft" />
-  <publisher value="IG eMediplan" />
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://www.emediplan.ch"/>
-    </telecom>
-  </contact>
-  <description value="Profile on Oberservation for First day of last menstruation"/>
-  <fhirVersion value="3.0.1" />
-  <mapping>
-    <identity value="CHMED16A"/>
-    <uri value="http://emediplan.ch/chmed16a"/>
-    <name value="Mapping to CHMED16A"/>
-  </mapping>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-  <derivation value="constraint"/>
-  <differential>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation">
-      <path value="Observation"/>
-      <short value="First day of last menstruation"/>
-      <definition value="This profile defines  how to represent the First day of last menstruation observations in FHIR using a standard SNOMED CT code."/>
-      <min value="0"/>
-      <max value="*"/>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.code">
-      <path value="Observation.code"/>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding">
-      <path value="Observation.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="code"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode">
-      <path value="Observation.code.coding"/>
-      <sliceName value="snomedlmstcode"/>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode.system">
-      <path value="Observation.code.coding.system"/>
-      <type>
-        <code value="uri"/>
-      </type>
-      <fixedUri value="http://snomed.info/sct"/>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode.code">
-      <path value="Observation.code.coding.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="161713000"/>
-    </element>
-    <element id="Observation:chmed16af-obs-dateoflastmenstruation.value[x]">
-      <path value="Observation.value[x]"/>
-      <min value="1"/>
-      <max value="1"/>
-      <type>
-        <code value="dateTime"/>
-      </type>
-      <type>
-        <code value="boolean"/>
-      </type>
-      <mapping>
-        <identity value="CHMED16A" />
-        <map value="MedicalData.DLstMen" />
-      </mapping>
-    </element>
-  </differential>
+   <id value="chmed16af-obs-dateoflastmenstruation"/>
+   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
+   <version value="0.1.0"/>
+   <name value="FirstDayOfLastMenstruation"/>
+   <title value="First day of last menstruation"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Oberservation for First day of last menstruation"/>
+   <fhirVersion value="4.0.0"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation">
+         <path value="Observation"/>
+         <short value="First day of last menstruation"/>
+         <definition value="This profile defines  how to represent the First day of last menstruation observations in FHIR using a standard SNOMED CT code."/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.code">
+         <path value="Observation.code"/>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding">
+         <path value="Observation.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode">
+         <path value="Observation.code.coding"/>
+         <sliceName value="snomedlmstcode"/>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode.system">
+         <path value="Observation.code.coding.system"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://snomed.info/sct"/>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.code.coding:snomedlmstcode.code">
+         <path value="Observation.code.coding.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="161713000"/>
+      </element>
+      <element id="Observation:chmed16af-obs-dateoflastmenstruation.value[x]">
+         <path value="Observation.value[x]"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="dateTime"/>
+         </type>
+         <type>
+            <code value="boolean"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="MedicalData.DLstMen"/>
+         </mapping>
+      </element>
+   </differential>
 </StructureDefinition>

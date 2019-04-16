@@ -1,70 +1,69 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="chmed16af-pmc-bundle" />
-  <meta>
-    <lastUpdated value="2017-05-26T11:24:09.274+02:00" />
-  </meta>
-  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle" />
-  <version value="1.0.0" />
-  <name value="PolymedicationCheck" />
-  <title value="PolymedicationCheck" />
-  <status value="draft" />
-  <publisher value="IG eMediplan" />
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://www.emediplan.ch" />
-    </telecom>
-  </contact>
-  <description value="Profile for poly medication check document. Swiss community pharmacies can offer a Polymedication Check (PMC) to patients on greater or equals four prescribed drugs taken over more then 3 months." />
-  <fhirVersion value="3.0.1" />
-  <mapping>
-    <identity value="CHMED16A" />
-    <uri value="http://emediplan.ch/chmed16a" />
-    <name value="Mapping to CHMED16A" />
-  </mapping>
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="Bundle" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="chmed16af-pmc-bundle.Bundle">
-      <path value="Bundle" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="chmed16af-pmc-bundle.Bundle.type">
-      <path value="Bundle.type" />
-      <fixedCode value="document" />
-    </element>
-    <element id="chmed16af-mp-bundle.Bundle.entry">
-      <path value="Bundle.entry" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="resource" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="chmed16af-mp-bundle.Bundle.entry:composition">
-      <path value="Bundle.entry" />
-      <sliceName value="composition" />
-      <short value="A resource in the bundle" />
-      <definition value="The Resources for the entry." />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Bundle.entry.resource:composition">
-      <path value="Bundle.entry.resource" />
-      <short value="A resource in the bundle" />
-      <definition value="The Resources for the entry." />
-      <type>
-        <code value="Composition" />
-        <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition" />
-      </type>
-    </element>
-  </differential>
+   <id value="chmed16af-pmc-bundle"/>
+   <meta>
+      <lastUpdated value="2017-05-26T11:24:09.274+02:00"/>
+   </meta>
+   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-bundle"/>
+   <version value="0.1.0"/>
+   <name value="PolymedicationCheck"/>
+   <title value="PolymedicationCheck"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile for poly medication check document. Swiss community pharmacies can offer a Polymedication Check (PMC) to patients on greater or equals four prescribed drugs taken over more then 3 months."/>
+   <fhirVersion value="4.0.0"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Bundle"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="chmed16af-pmc-bundle.Bundle">
+         <path value="Bundle"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="chmed16af-pmc-bundle.Bundle.type">
+         <path value="Bundle.type"/>
+         <fixedCode value="document"/>
+      </element>
+      <element id="chmed16af-mp-bundle.Bundle.entry">
+         <path value="Bundle.entry"/>
+         <slicing>
+            <discriminator>
+               <type value="type"/>
+               <path value="resource"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <min value="1"/>
+      </element>
+      <element id="chmed16af-mp-bundle.Bundle.entry:composition">
+         <path value="Bundle.entry"/>
+         <sliceName value="composition"/>
+         <short value="A resource in the bundle"/>
+         <definition value="The Resources for the entry."/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Bundle.entry.resource:composition">
+         <path value="Bundle.entry.resource"/>
+         <short value="A resource in the bundle"/>
+         <definition value="The Resources for the entry."/>
+         <type>
+            <code value="Composition"/>
+            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-pmc-composition"/>
+         </type>
+      </element>
+   </differential>
 </StructureDefinition>

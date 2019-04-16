@@ -1,210 +1,207 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- FIMXE slicing does here not yet work -->
-<StructureDefinition 
-  xmlns="http://hl7.org/fhir">
-  <id value="chmed16af-obs-timeofgestation"/>
-  <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation" />
-  <version value="1.0.0" />
-  <name value="TimeOfGestation"/>
-  <title value="TimeOfGestation"/>
-	<status value="draft" />
-	<publisher value="IG eMediplan" />
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.emediplan.ch"/>
-		</telecom>
-	</contact>
-	<description value="Profile on Oberservation for Time of gestation"/>
-	<fhirVersion value="3.0.1" />
-  <mapping>
-    <identity value="CHMED16A"/>
-    <uri value="http://emediplan.ch/chmed16a"/>
-    <name value="Mapping to CHMED16A"/>
-  </mapping>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-  <derivation value="constraint"/>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed16af-obs-timeofgestation"/>
+   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation"/>
+   <version value="0.1.0"/>
+   <name value="TimeOfGestation"/>
+   <title value="TimeOfGestation"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Oberservation for Time of gestation"/>
+   <fhirVersion value="4.0.0"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
    <differential>
-    <element id="Observation:timeofgestation">
-      <path value="Observation"/>
-      <short value="FHIR Time Of Gestation Profile"/>
-      <definition value="This profile defines  how to represent Time Of Gestation observations in FHIR using a standard LOINC code and UCUM units of measure.  This is a grouping structure. It has no value in Observation.valueQuantity but contains at least one component (weeks and days)."/>
-      <min value="0"/>
-      <max value="*"/>
-     <mapping>
-				<identity value="CHMED16A" />
-				<map value="ToG" />
-			</mapping>
-    </element>
-    <element id="Observation:timeofgestation.code">
-      <path value="Observation.code"/>
-      <short value="Time Of Gestation"/>
-      <definition value="Time Of Gestation."/>
-      <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
-      <alias value="Test"/>
-      <alias value="Name"/>
-    </element>
-    <element id="Observation:timeofgestation.code.coding">
-      <path value="Observation.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="code"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Observation:timeofgestation.code.coding:tgcode">
-      <path value="Observation.code.coding"/>
-      <sliceName value="tgcode"/>
-    </element>
-    <element id="Observation:timeofgestation.code.coding:tgcode.system">
-      <path value="Observation.code.coding.system"/>
-      <type>
-        <code value="uri"/>
-      </type>
-      <fixedUri value="http://snomed.info/sct"/>
-    </element>
-    <element id="Observation:timeofgestation.code.coding:tgcode.code">
-      <path value="Observation.code.coding.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="445872007"/>
-    </element>
-    <element id="Observation:timeofgestation.valueQuantity">
-      <path value="Observation.valueQuantity"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Observation:timeofgestation.component">
-      <path value="Observation.component"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="code.coding.code"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg">
-      <path value="Observation.component"/>
-      <sliceName value="weektg"/>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.code">
-      <path value="Observation.component.code"/>
-      <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
-      <alias value="Component Test"/>
-      <alias value="Component Name"/>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.code.coding">
-      <path value="Observation.component.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="code"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode">
-      <path value="Observation.component.code.coding"/>
-      <sliceName value="wtgcode"/>
-      <short value="Weeks Of Gestation"/>
-      <definition value="Weeks Of Gestation."/>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode.system">
-      <path value="Observation.component.code.coding.system"/>
-      <type>
-        <code value="uri"/>
-      </type>
-      <fixedUri value="http://loinc.org"/>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode.code">
-      <path value="Observation.component.code.coding.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="49051-6"/>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.valueQuantity">
-      <path value="Observation.component.valueQuantity"/>
-      <type>
-        <code value="Quantity"/>
-      </type>
-      <mapping>
-				<identity value="CHMED16A" />
-				<map value="ToG.Weeks" />
-			</mapping>
-    </element>
-    <element id="Observation:timeofgestation.component:weektg.valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="wk"/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg">
-      <path value="Observation.component"/>
-      <sliceName value="daytg"/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.code">
-      <path value="Observation.component.code"/>
-      <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.code.coding">
-      <path value="Observation.component.code.coding"/>
-      <slicing>
-        <discriminator>
-          <type value="value"/>
-          <path value="code"/>
-        </discriminator>
-        <ordered value="false"/>
-        <rules value="open"/>
-      </slicing>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode">
-      <path value="Observation.component.code.coding"/>
-      <sliceName value="dtgcode"/>
-      <short value="Days Of Gestation"/>
-      <definition value="Days Of Gestation."/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode.system">
-      <path value="Observation.component.code.coding.system"/>
-      <type>
-        <code value="uri"/>
-      </type>
-      <fixedUri value="http://loinc.org"/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode.code">
-      <path value="Observation.component.code.coding.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="49052-4"/>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.valueQuantity">
-      <path value="Observation.component.valueQuantity"/>
-      <type>
-        <code value="Quantity"/>
-      </type>
-      <mapping>
-				<identity value="CHMED16A" />
-				<map value="ToG.Days" />
-			</mapping>
-    </element>
-    <element id="Observation:timeofgestation.component:daytg.valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code"/>
-      <type>
-        <code value="code"/>
-      </type>
-      <fixedCode value="d"/>
-    </element>
-  </differential>
+      <element id="Observation:timeofgestation">
+         <path value="Observation"/>
+         <short value="FHIR Time Of Gestation Profile"/>
+         <definition value="This profile defines  how to represent Time Of Gestation observations in FHIR using a standard LOINC code and UCUM units of measure.  This is a grouping structure. It has no value in Observation.valueQuantity but contains at least one component (weeks and days)."/>
+         <min value="0"/>
+         <max value="*"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="ToG"/>
+         </mapping>
+      </element>
+      <element id="Observation:timeofgestation.code">
+         <path value="Observation.code"/>
+         <short value="Time Of Gestation"/>
+         <definition value="Time Of Gestation."/>
+         <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
+         <alias value="Test"/>
+         <alias value="Name"/>
+      </element>
+      <element id="Observation:timeofgestation.code.coding">
+         <path value="Observation.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation:timeofgestation.code.coding:tgcode">
+         <path value="Observation.code.coding"/>
+         <sliceName value="tgcode"/>
+      </element>
+      <element id="Observation:timeofgestation.code.coding:tgcode.system">
+         <path value="Observation.code.coding.system"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://snomed.info/sct"/>
+      </element>
+      <element id="Observation:timeofgestation.code.coding:tgcode.code">
+         <path value="Observation.code.coding.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="445872007"/>
+      </element>
+      <element id="Observation:timeofgestation.valueQuantity">
+         <path value="Observation.valueQuantity"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Observation:timeofgestation.component">
+         <path value="Observation.component"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code.coding.code"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg">
+         <path value="Observation.component"/>
+         <sliceName value="weektg"/>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.code">
+         <path value="Observation.component.code"/>
+         <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
+         <alias value="Component Test"/>
+         <alias value="Component Name"/>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.code.coding">
+         <path value="Observation.component.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode">
+         <path value="Observation.component.code.coding"/>
+         <sliceName value="wtgcode"/>
+         <short value="Weeks Of Gestation"/>
+         <definition value="Weeks Of Gestation."/>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode.system">
+         <path value="Observation.component.code.coding.system"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://loinc.org"/>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.code.coding:wtgcode.code">
+         <path value="Observation.component.code.coding.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="49051-6"/>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.valueQuantity">
+         <path value="Observation.component.valueQuantity"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="ToG.Weeks"/>
+         </mapping>
+      </element>
+      <element id="Observation:timeofgestation.component:weektg.valueQuantity.code">
+         <path value="Observation.component.valueQuantity.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="wk"/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg">
+         <path value="Observation.component"/>
+         <sliceName value="daytg"/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.code">
+         <path value="Observation.component.code"/>
+         <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system."/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.code.coding">
+         <path value="Observation.component.code.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="code"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode">
+         <path value="Observation.component.code.coding"/>
+         <sliceName value="dtgcode"/>
+         <short value="Days Of Gestation"/>
+         <definition value="Days Of Gestation."/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode.system">
+         <path value="Observation.component.code.coding.system"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://loinc.org"/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode.code">
+         <path value="Observation.component.code.coding.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="49052-4"/>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.valueQuantity">
+         <path value="Observation.component.valueQuantity"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="ToG.Days"/>
+         </mapping>
+      </element>
+      <element id="Observation:timeofgestation.component:daytg.valueQuantity.code">
+         <path value="Observation.component.valueQuantity.code"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedCode value="d"/>
+      </element>
+   </differential>
 </StructureDefinition>

@@ -9,50 +9,43 @@
     <valueString value="/Users/oliveregger/Documents/github/chmed16af/pages"/>
   </extension>
   <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/chmed16af-ig"/>
-  <version value="1.0.0"/>
+  <version value="0.1.0"/>
   <name value="Implementation Guide CHMED16AF"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="Verein eMediplan"/>
   <packageId value="ch.chmed16af.emediplan.fhir"/>
   <license value="CC-BY-SA-4.0"/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="4.0.0"/>
   <global>
     <type value="Patient"/>
     <profile value="StructureDefinition/chmed16af-mp-patient"/>
   </global>
   <definition>
-    <grouping id="p1">
-      <name value="Implementation Guide package name"/>
-    </grouping>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-dosequantityto"/>
       </reference>
       <name value="Extension for new package"/>
       <description value="Extension for new package"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-mp-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-pmc-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-rx-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -61,7 +54,6 @@
       <name value="MedicationPlan"/>
       <description value="Example for MedicationPlan"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-bundle"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -70,7 +62,6 @@
       <name value="Poly Medication Check"/>
       <description value="Example for Poly Medication Check"/>
       <exampleCanonical value="StructureDefinition/chmed16af-pmc-bundle"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -79,28 +70,24 @@
       <name value="Prescription"/>
       <description value="Example for Prescription"/>
       <exampleCanonical value="StructureDefinition/chmed16af-rx-bundle"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-mp-composition"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-pmc-composition"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-pmc-questionnaireresponse"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -109,7 +96,6 @@
       <name value="Example Questionnaire Response"/>
       <description value="Example Questionnaire Response"/>
       <exampleCanonical value="StructureDefinition/chmed16af-pmc-questionnaireresponse"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -118,28 +104,24 @@
       <name value="Example Questionnaire"/>
       <description value="Example Questionnaire"/>
       <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-rx-composition"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-mp-patient"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-pmcrx-patient"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -148,7 +130,6 @@
       <name value="Patient MedicationPlan"/>
       <description value="Example for a patient"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-patient"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -157,14 +138,12 @@
       <name value="Patient MedicationPlan with an extension"/>
       <description value="Example for a patient with extensions"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-patient"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-practitioner"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -173,21 +152,18 @@
       <name value="Practitioner MedicationPlan"/>
       <description value="Example for a practitioner"/>
       <exampleCanonical value="StructureDefinition/chmed16af-practitioner"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-mp-medicationstatement"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-rx-medicationrequest"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -196,7 +172,6 @@
       <name value="MedicationRequest"/>
       <description value="Example for a MedicationReqeust"/>
       <exampleCanonical value="StructureDefinition/chmed16af-rx-medicationrequest"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -205,7 +180,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -214,7 +188,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -223,7 +196,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -232,7 +204,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -241,7 +212,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -250,7 +220,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -259,7 +228,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -268,7 +236,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -277,7 +244,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -286,7 +252,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -295,7 +260,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -304,7 +268,6 @@
       <name value="MedicationStatement (MedicationPlan)"/>
       <description value="Example for a MedicationStatement"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-medicationstatement"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -313,7 +276,6 @@
       <name value="Bodyheight"/>
       <description value="Example for specifiying body height"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-composition"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -322,14 +284,12 @@
       <name value="Bodyweight"/>
       <description value="Example for specifiying body weight"/>
       <exampleCanonical value="StructureDefinition/chmed16af-mp-composition"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -338,14 +298,12 @@
       <name value="First day of last menstruation"/>
       <description value="First day of last menstruation"/>
       <exampleCanonical value="StructureDefinition/chmed16af-obs-dateoflastmenstruation"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-obs-prematurebaby"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -354,21 +312,18 @@
       <name value="Premature baby"/>
       <description value="Premature baby (&lt;=18 months)"/>
       <exampleCanonical value="StructureDefinition/chmed16af-obs-prematurebaby"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-obs-timeofgestation"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-medication"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -377,14 +332,12 @@
       <name value="Premature baby"/>
       <description value="Premature baby (&lt;=18 months)"/>
       <exampleCanonical value="StructureDefinition/chmed16af-obs-timeofgestation"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-condition-risks"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -393,7 +346,6 @@
       <name value="RiskRenealInsufficiencyLeight"/>
       <description value="&gt;Rsik Renal Insufficiency Leight"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -402,7 +354,6 @@
       <name value="RiskLiverInsufficiencyExcluded"/>
       <description value="&gt;Risk Liver Insufficiency Excluded"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -411,7 +362,6 @@
       <name value="RiskReproduction"/>
       <description value="&gt;Risk Reproduction"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -420,7 +370,6 @@
       <name value="RiskCompetitiveAthleteExcluded"/>
       <description value="&gt;Risk Competitive Athlete Excluded"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -429,7 +378,6 @@
       <name value="RiskDriverExcluded"/>
       <description value="&gt;Risk Driver Excluded"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -438,14 +386,12 @@
       <name value="RiskAllergies"/>
       <description value="&gt;Risk Allergies"/>
       <exampleCanonical value="StructureDefinition/chmed16af-condition-risks"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-receiver"/>
       </reference>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -453,7 +399,6 @@
       </reference>
       <name value="CodeSystem Code Typ 9"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -461,7 +406,6 @@
       </reference>
       <name value="CodeSystem Code Typ 26"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -469,7 +413,6 @@
       </reference>
       <name value="CodeSystem Code Risks Category"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -477,7 +420,6 @@
       </reference>
       <name value="CodeSystem Code Risks CDSCODE"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -486,7 +428,6 @@
       <name value="ValueSet cdtyp9"/>
       <description value="UnitCodes"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -495,7 +436,6 @@
       <name value="ValueSet CDTYP26"/>
       <description value="ROA (Route of administration)"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -504,7 +444,6 @@
       <name value="ValueSet Risks CDSCODE"/>
       <description value="ValueSet Risks CDSCODE"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
@@ -513,7 +452,6 @@
       <name value="ValueSet Risks Category"/>
       <description value="ValueSet Risks Category"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>
@@ -525,6 +463,10 @@
         <generation value="generated"/>
       </page>
     </page>
+    <parameter>
+      <code value="apply"/>
+      <value value="version"/>
+    </parameter>
     <parameter>
       <code value="generate-json"/>
       <value value="true"/>

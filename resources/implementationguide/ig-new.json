@@ -10,51 +10,43 @@
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
   }],
   "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/chmed16af-ig",
-  "version" : "1.0.0",
+  "version" : "0.1.0",
   "name" : "Implementation Guide CHMED16AF",
   "status" : "draft",
   "experimental" : false,
   "publisher" : "Verein eMediplan",
   "packageId" : "ch.chmed16af.emediplan.fhir",
   "license" : "CC-BY-SA-4.0",
-  "fhirVersion" : ["3.0.1"],
+  "fhirVersion" : ["4.0.0"],
   "global" : [{
     "type" : "Patient",
     "profile" : "StructureDefinition/chmed16af-mp-patient"
   }],
   "definition" : {
-    "grouping" : [{
-      "id" : "p1",
-      "name" : "Implementation Guide package name"
-    }],
     "resource" : [{
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-dosequantityto"
       },
       "name" : "Extension for new package",
-      "description" : "Extension for new package",
-      "groupingId" : "p1"
+      "description" : "Extension for new package"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-mp-bundle"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-pmc-bundle"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-rx-bundle"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -62,8 +54,7 @@
       },
       "name" : "MedicationPlan",
       "description" : "Example for MedicationPlan",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-bundle",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-bundle"
     },
     {
       "reference" : {
@@ -71,8 +62,7 @@
       },
       "name" : "Poly Medication Check",
       "description" : "Example for Poly Medication Check",
-      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-bundle",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-bundle"
     },
     {
       "reference" : {
@@ -80,29 +70,25 @@
       },
       "name" : "Prescription",
       "description" : "Example for Prescription",
-      "exampleCanonical" : "StructureDefinition/chmed16af-rx-bundle",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-rx-bundle"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-mp-composition"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-pmc-composition"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-pmc-questionnaireresponse"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -110,8 +96,7 @@
       },
       "name" : "Example Questionnaire Response",
       "description" : "Example Questionnaire Response",
-      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-questionnaireresponse",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-questionnaireresponse"
     },
     {
       "reference" : {
@@ -119,29 +104,25 @@
       },
       "name" : "Example Questionnaire",
       "description" : "Example Questionnaire",
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
+      "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-rx-composition"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-mp-patient"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-pmcrx-patient"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -149,8 +130,7 @@
       },
       "name" : "Patient MedicationPlan",
       "description" : "Example for a patient",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-patient",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-patient"
     },
     {
       "reference" : {
@@ -158,15 +138,13 @@
       },
       "name" : "Patient MedicationPlan with an extension",
       "description" : "Example for a patient with extensions",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-patient",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-patient"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-practitioner"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -174,22 +152,19 @@
       },
       "name" : "Practitioner MedicationPlan",
       "description" : "Example for a practitioner",
-      "exampleCanonical" : "StructureDefinition/chmed16af-practitioner",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-practitioner"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-mp-medicationstatement"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-rx-medicationrequest"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -197,8 +172,7 @@
       },
       "name" : "MedicationRequest",
       "description" : "Example for a MedicationReqeust",
-      "exampleCanonical" : "StructureDefinition/chmed16af-rx-medicationrequest",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-rx-medicationrequest"
     },
     {
       "reference" : {
@@ -206,8 +180,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -215,8 +188,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -224,8 +196,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -233,8 +204,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -242,8 +212,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -251,8 +220,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -260,8 +228,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -269,8 +236,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -278,8 +244,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -287,8 +252,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -296,8 +260,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -305,8 +268,7 @@
       },
       "name" : "MedicationStatement (MedicationPlan)",
       "description" : "Example for a MedicationStatement",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-medicationstatement"
     },
     {
       "reference" : {
@@ -314,8 +276,7 @@
       },
       "name" : "Bodyheight",
       "description" : "Example for specifiying body height",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-composition",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-composition"
     },
     {
       "reference" : {
@@ -323,15 +284,13 @@
       },
       "name" : "Bodyweight",
       "description" : "Example for specifiying body weight",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-composition",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-composition"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-obs-dateoflastmenstruation"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -339,15 +298,13 @@
       },
       "name" : "First day of last menstruation",
       "description" : "First day of last menstruation",
-      "exampleCanonical" : "StructureDefinition/chmed16af-obs-dateoflastmenstruation",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-obs-dateoflastmenstruation"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-obs-prematurebaby"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -355,22 +312,19 @@
       },
       "name" : "Premature baby",
       "description" : "Premature baby (<=18 months)",
-      "exampleCanonical" : "StructureDefinition/chmed16af-obs-prematurebaby",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-obs-prematurebaby"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-obs-timeofgestation"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-medication"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -378,15 +332,13 @@
       },
       "name" : "Premature baby",
       "description" : "Premature baby (<=18 months)",
-      "exampleCanonical" : "StructureDefinition/chmed16af-obs-timeofgestation",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-obs-timeofgestation"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-condition-risks"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -394,8 +346,7 @@
       },
       "name" : "RiskRenealInsufficiencyLeight",
       "description" : ">Rsik Renal Insufficiency Leight",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
@@ -403,8 +354,7 @@
       },
       "name" : "RiskLiverInsufficiencyExcluded",
       "description" : ">Risk Liver Insufficiency Excluded",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
@@ -412,8 +362,7 @@
       },
       "name" : "RiskReproduction",
       "description" : ">Risk Reproduction",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
@@ -421,8 +370,7 @@
       },
       "name" : "RiskCompetitiveAthleteExcluded",
       "description" : ">Risk Competitive Athlete Excluded",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
@@ -430,8 +378,7 @@
       },
       "name" : "RiskDriverExcluded",
       "description" : ">Risk Driver Excluded",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
@@ -439,47 +386,41 @@
       },
       "name" : "RiskAllergies",
       "description" : ">Risk Allergies",
-      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks",
-      "groupingId" : "p1"
+      "exampleCanonical" : "StructureDefinition/chmed16af-condition-risks"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-receiver"
       },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/chmed16af-codesystem-cdtyp9"
       },
       "name" : "CodeSystem Code Typ 9",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/chmed16af-codesystem-cdtyp26"
       },
       "name" : "CodeSystem Code Typ 26",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/chmed16af-codesystem-risks-category"
       },
       "name" : "CodeSystem Code Risks Category",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
         "reference" : "CodeSystem/chmed16af-codesystem-risks-cdscode"
       },
       "name" : "CodeSystem Code Risks CDSCODE",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -487,8 +428,7 @@
       },
       "name" : "ValueSet cdtyp9",
       "description" : "UnitCodes",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -496,8 +436,7 @@
       },
       "name" : "ValueSet CDTYP26",
       "description" : "ROA (Route of administration)",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -505,8 +444,7 @@
       },
       "name" : "ValueSet Risks CDSCODE",
       "description" : "ValueSet Risks CDSCODE",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -514,8 +452,7 @@
       },
       "name" : "ValueSet Risks Category",
       "description" : "ValueSet Risks Category",
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
@@ -528,6 +465,10 @@
       }]
     },
     "parameter" : [{
+      "code" : "apply",
+      "value" : "version"
+    },
+    {
       "code" : "generate-json",
       "value" : "true"
     },

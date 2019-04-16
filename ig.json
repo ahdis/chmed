@@ -1,6 +1,7 @@
 {
   "tool": "jekyll",
-  "version": "3.0.1",
+  "version": "4.0.0",
+  "fixed-business-version": "0.1.0",
   "license": "CC-BY-SA-4.0",
   "npm-name": "ch.chmed16af.emediplan.fhir",
   "paths": {
@@ -12,8 +13,12 @@
     "output": "output",
     "qa": "qa",
     "txCache": "txCache",
-    "specification": "http://hl7.org/fhir/STU3/"
+    "specification": "http:/hl7.org/fhir/r4"
   },
+  "language" : "en", 
+  "languages" : [ 
+    "en", "de-CH", "fr-CH", "it-CH"
+  ],
   "path-pattern" : "[type]-[id].html",
   "defaults": {
     "Any": {
@@ -32,6 +37,7 @@
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {
   },
+  "suppressedWarningFile": "suppressedwarnings.txt",
   "logging": [
     "init",
     "progress",

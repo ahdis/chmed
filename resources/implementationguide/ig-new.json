@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "chmed16af-ig",
+  "id" : "ch.chmed16af.emediplan-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/resources"
@@ -9,19 +9,23 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
   }],
-  "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/chmed16af-ig",
+  "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.1.0",
   "version" : "0.1.0",
-  "name" : "Implementation Guide CHMED16AF",
-  "status" : "draft",
+  "name" : "IgChMED16AF",
+  "title" : "Implementation Guide CHMED16AF",
+  "status" : "active",
   "experimental" : false,
-  "publisher" : "Verein eMediplan",
-  "packageId" : "ch.chmed16af.emediplan.fhir",
-  "license" : "CC-BY-SA-4.0",
-  "fhirVersion" : ["4.0.0"],
-  "global" : [{
-    "type" : "Patient",
-    "profile" : "StructureDefinition/chmed16af-mp-patient"
+  "publisher" : "IG eMediplan",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.emediplan.ch"
+    }]
   }],
+  "packageId" : "ch.chmed16af.emediplan",
+  "license" : "CC-BY-SA-4.0",
+  "fhirVersion" : ["4.0.0",
+  "4.0.0"],
   "definition" : {
     "resource" : [{
       "reference" : {

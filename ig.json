@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "fixed-business-version": "0.1.0",
   "license": "CC-BY-SA-4.0",
-  "npm-name": "ch.chmed16af.emediplan.fhir",
+  "npm-name": "ch.chmed16af.emediplan",
   "paths": {
     "resources": [
       "resources"
@@ -33,7 +33,7 @@
     }
   },
   "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
-  "source": "implementationguide/chmed16af-ig.xml",
+  "source": "implementationguide/ch.chmed16af.emediplan-0.1.0.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {
   },

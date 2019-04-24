@@ -1,9 +1,10 @@
 Changing an ImplementationGuide from R3 to R4
 
 - Adapt ig.json to new FHIR Version and structure
-- Convert the StructutreDefintions from R3 with R4 with the convert fucnctionaliy of matchbox
+- Convert the StructutreDefintions from R3 with R4 with the convert functionality of matchbox
 - Adjust problems in differentials in StructureDefintions (which have to be later adapated also in examples
 - CodeSystem: Just minor updates TODO: designation values are not displayed
+- ValueSets: Just minor updates
 
 QuestionnaireRespone.questionnaire instead of QuestionnaireRespone.reference
 

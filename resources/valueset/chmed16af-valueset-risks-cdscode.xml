@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ValueSet 
-	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-valueset-risks-cdscode" />
-	<url value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-cdscode" />
-	<version value="CHMED16A" />
-	<name value="Risks" />
-	<status value="active" />
-	<publisher value="HCI Solutions AG" />
-	<contact>
-		<name value="Hotline" />
-		<telecom>
-			<system value="email" />
-			<value value="hotline@hcisolutions.ch" />
-		</telecom>
-	</contact>
-	<description value="Possible risks" />
-	<compose>
-		<include>
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
-		</include>
-	</compose>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="chmed16af-valueset-risks-cdscode"/>
+   <url value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-risks-cdscode"/>
+   <version value="0.1.0"/>
+   <name value="Risks"/>
+   <title value="Risks"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="Possible risks"/>
+   <compose>
+      <include>
+         <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+      </include>
+   </compose>
 </ValueSet>

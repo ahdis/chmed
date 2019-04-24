@@ -1,22 +1,22 @@
-<ValueSet 
-	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-valueset-cdtyp9" />
-	<url value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-cdtyp9" />
-	<version value="Release 2011-11" />
-	<name value="UnitCodes" />
-	<status value="active" />
-	<publisher value="HCI Solutions AG" />
-	<contact>
-		<name value="Hotline" />
-		<telecom>
-			<system value="email" />
-			<value value="hotline@hcisolutions.ch" />
-		</telecom>
-	</contact>
-	<description value="UnitCodes" />
-	<compose>
-		<include>
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
-		</include>
-	</compose>
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="chmed16af-valueset-cdtyp9"/>
+   <url value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-cdtyp9"/>
+   <version value="0.1.0"/>
+   <name value="UnitCodes"/>
+   <title value="UnitCodes"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="UnitCodes"/>
+   <compose>
+      <include>
+         <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+      </include>
+   </compose>
 </ValueSet>

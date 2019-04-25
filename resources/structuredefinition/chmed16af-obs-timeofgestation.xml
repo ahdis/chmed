@@ -157,18 +157,9 @@
       </element>
       <element id="Observation:timeofgestation.component:daytg.code.coding">
          <path value="Observation.component.code.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code"/>
-            </discriminator>
-            <ordered value="false"/>
-            <rules value="open"/>
-         </slicing>
       </element>
       <element id="Observation:timeofgestation.component:daytg.code.coding:dtgcode">
          <path value="Observation.component.code.coding"/>
-         <sliceName value="dtgcode"/>
          <short value="Days Of Gestation"/>
          <definition value="Days Of Gestation."/>
       </element>

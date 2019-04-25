@@ -21,7 +21,7 @@
     <subject>
         <reference value="Patient/chmed16af-mp-patient-s01"/>
     </subject>
-<!--    <component>
+    <component>
         <code>
             <coding>
                 <system value="http://loinc.org"/>
@@ -36,8 +36,7 @@
             <code value="wk"/>
         </valueQuantity>
     </component>
- -->    
-<!--    <component> Error @ Observation.component[2] (line 39, col16) : Error in discriminator at Observation.component:daytg.code.coding: slicing found
+   <component> <!-- Error @ Observation.component[2] (line 39, col16) : Error in discriminator at Observation.component:daytg.code.coding: slicing found  -->
         <code>
             <coding>
                 <system value="http://loinc.org"/>
@@ -52,5 +51,4 @@
             <code value="d"/>
         </valueQuantity>
     </component>
--->    
 </Observation>

@@ -34,44 +34,21 @@
       </element>
       <element id="Observation:chmed16af-obs-prematurebaby.code">
          <path value="Observation.code"/>
-      </element>
-      <element id="Observation:chmed16af-obs-prematurebaby.code.coding">
-         <path value="Observation.code.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="code"/>
-            </discriminator>
-            <ordered value="false"/>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Observation:chmed16af-obs-prematurebaby.code.coding:snomedlmstcode">
-         <path value="Observation.code.coding"/>
-         <sliceName value="snomedlmstcode"/>
-      </element>
-      <element id="Observation:chmed16af-obs-prematurebaby.code.coding:snomedlmstcode.system">
-         <path value="Observation.code.coding.system"/>
-         <type>
-            <code value="uri"/>
-         </type>
-         <fixedUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="Observation:chmed16af-obs-prematurebaby.code.coding:snomedlmstcode.code">
-         <path value="Observation.code.coding.code"/>
-         <type>
-            <code value="code"/>
-         </type>
-         <fixedCode value="395507008"/>
+         <short value="Premature infant"/>
+         <definition value="Premature infant"/>
+         <min value="1"/>
+         <max value="1"/>
+         <patternCodeableConcept>
+            <coding>
+               <system value="http://snomed.info/sct" />
+               <code value="395507008" />
+            </coding>
+         </patternCodeableConcept>
       </element>
       <element id="Observation:chmed16af-obs-prematurebaby.value[x]">
          <path value="Observation.value[x]"/>
          <min value="1"/>
          <max value="1"/>
-               <!-- fixme remove datetime and adust value[x] to valueBoolean -->
-         <type>
-            <code value="dateTime"/>
-         </type>
          <type>
             <code value="boolean"/>
          </type>

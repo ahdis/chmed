@@ -1,29 +1,33 @@
 <Condition xmlns="http://hl7.org/fhir">
-  <id value="chmed16af-mp-condition-s01-3"/> 
-	<meta>
-		<profile
-			value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks" />
-	</meta>
-  <text> 
-    <status value="generated"/> 
-    <div xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter</div> 
-  </text> 
-  <clinicalStatus value="active"/> 
-  <category> 
-    <coding> 
-      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/> 
-      <code value="3"/> 
-      <display value="Reproduction"/> 
-    </coding> 
-  </category> 
-  <code> 
-    <coding> 
-      <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/> 
-      <code value="612"/> 
-      <display value="Frauen im gebärfähigen Alter"/> 
-    </coding> 
-  </code> 
-  <subject> 
-    <reference value="Patient/chmed16af-mp-patient-s01"/> 
-  </subject> 
-</Condition> 
+   <id value="chmed16af-mp-condition-s01-3"/>
+   <meta>
+      <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Reproduction - Frauen im gebärfähigen Alter</div>
+   </text>
+   <clinicalStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+         <code value="active"/>
+      </coding>
+   </clinicalStatus>
+   <category>
+      <coding>
+         <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-category"/>
+         <code value="3"/>
+         <display value="Reproduction"/>
+      </coding>
+   </category>
+   <code>
+      <coding>
+         <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-risks-cdscode"/>
+         <code value="612"/>
+         <display value="Frauen im gebärfähigen Alter"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/chmed16af-mp-patient-s01"/>
+   </subject>
+</Condition>

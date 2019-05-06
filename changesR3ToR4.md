@@ -1,10 +1,13 @@
-Changing an ImplementationGuide from R3 to R4
 
+Changing an ImplementationGuide from R3 to R4
 - Adapt ig.json to new FHIR Version and structure
 - Convert the StructutreDefintions from R3 with R4 with the convert functionality of matchbox
-- Adjust problems in differentials in StructureDefintions (which have to be later adapated also in examples
+- Adjust problems in differentials in StructureDefinitions (which have to be later adapated also in examples
 - CodeSystem: Just minor updates TODO: designation values are not displayed
 - ValueSets: Just minor updates
+- Observation:  conversion of Code System Url
+- Condition: clinicalStatus changed to Coding with terminology clinicalStatus
+- TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21) integrated
 
 QuestionnaireRespone.questionnaire instead of QuestionnaireRespone.reference
 
@@ -48,19 +51,3 @@ Vitalsigns category profile changed from:
       <display value="Vital Signs"/> 
     </coding> 
   </category> 
-
-
-**Observation:Time Of Gestation**
-
-chmed16af-observation-s01-timeofgestation.xml
-
-Problem that thimeofgestation exaample does not validate with validator. It is built the same as the blood pressure profile. A blood pressure example shows the same error message:
-
-  Error @ Observation.component[1] (line 150, col16) : Error in discriminator at Observation.component:DiastolicBP.code.coding: slicing found
-  Error @ Observation.component[1] (line 150, col16) : Error in discriminator at Observation.component:SystolicBP.code.coding: slicing found
-  Error @ Observation.component[2] (line 200, col16) : Error in discriminator at Observation.component:DiastolicBP.code.coding: slicing found
-  Error @ Observation.component[2] (line 200, col16) : Error in discriminator at Observation.component:SystolicBP.code.coding: slicing found
-
-See also: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Error.20in.20discriminator.20at.20.2E.2E.2E.3A.20slicing.20found
-
-TODO: try latest validator and verify, make bug report (validator provided from febraury https://oss.sonatype.org/#nexus-search;quick~org.hl7.fhir.validation snapshot is on february release)

@@ -56,7 +56,12 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <fixedCode value="active"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+          <code value="active" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus"/>

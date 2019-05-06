@@ -15,7 +15,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="445872007"/>
-            <display value="Fetal gestational age"/>
+            <display value="Length of gestation at time of procedure"/>
         </coding>
     </code>
     <subject>
@@ -26,7 +26,7 @@
             <coding>
                 <system value="http://loinc.org"/>
                 <code value="49051-6"/>
-                <display value="Gestational age in W"/>
+                <display value="Gestational age in weeks"/>
             </coding>
         </code>
         <valueQuantity>
@@ -36,12 +36,12 @@
             <code value="wk"/>
         </valueQuantity>
     </component>
-   <component> <!-- Error @ Observation.component[2] (line 39, col16) : Error in discriminator at Observation.component:daytg.code.coding: slicing found  -->
+   <component> 
         <code>
             <coding>
                 <system value="http://loinc.org"/>
                 <code value="49052-4"/>
-                <display value="Gestational age in D"/>
+                <display value="Gestational age in days"/>
             </coding>
         </code>
         <valueQuantity>

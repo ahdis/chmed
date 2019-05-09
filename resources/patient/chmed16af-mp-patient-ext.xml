@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient 
-	xmlns="http://hl7.org/fhir">
+<Patient xmlns="http://hl7.org/fhir">
 	<id value="chmed16af-mp-patient-ext" />
 	<meta>
 		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-patient" />
 	</meta>
 	<text>
 		<status value="generated" />
-		<div 
-			xmlns="http://www.w3.org/1999/xhtml">Maxima, Matter, geb 1981-01-12						
+		<div xmlns="http://www.w3.org/1999/xhtml">Maxima, Matter, geb 1981-01-12						
 		</div>
 	</text>
+	<!--	
 	<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldNameSample">
 		<valueString value="PrivateFieldValueSample" />
 	</extension>
+-->
+	<extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield">
+		<extension url="name">
+			<valueString value="name" />
+		</extension>
+		<extension url="value">
+			<valueString value="value" />
+		</extension>
+	</extension>
+
 	<identifier>
 		<system value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
 		<value value="vekano" />

@@ -121,6 +121,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/chmed16af-privatefield"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Patient/chmed16af-mp-patient-s01"/>
       </reference>
       <name value="Patient MedicationPlan"/>

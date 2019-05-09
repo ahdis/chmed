@@ -130,6 +130,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/chmed16af-privatefield"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "Patient/chmed16af-mp-patient-s01"
       },
       "name" : "Patient MedicationPlan",

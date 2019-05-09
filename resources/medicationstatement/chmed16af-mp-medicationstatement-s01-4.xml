@@ -1,72 +1,64 @@
-<MedicationStatement 
-	xmlns="http://hl7.org/fhir">
-	<id value="chmed16af-mp-medicationstatement-s01-4" />
-	<meta>
-		<lastUpdated value="2017-02-23T13:17:28Z" />
-		<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement" />
-	</meta>
-	<text>
-		<status value="generated" />
-		<div 
-			xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016		
-		</div>
-	</text>
-	<contained>
-		<Medication>
-			<id value="cont4" />
-			<meta>
-				<profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication" />
-			</meta>
-			<code>
-				<coding>
-					<!-- pharmacode 1426310, urn:oid:2.16.756.5.30.2.6.1 -->
-					<system value="urn:oid:2.51.1.1"/>
-					<code value="7680497420456"/>
-					<display value="ZOCOR Filmtabl 20 mg 28 Stk"/>
-				</coding>
-			</code>
-		</Medication>
-	</contained>
-	<status value="active" />
-	<medicationReference>
-		<reference value="#cont4" />
-	</medicationReference>
-<!--	
-	<effectivePeriod>
-		<start value="2016-02-10" />
-	</effectivePeriod>
--->	
-	<informationSource>
-		<reference value="Practitioner/chmed16af-practitioner-s01" />
-	</informationSource>
-	<subject>
-		<reference value="Patient/chmed16af-mp-patient-s01" />
-	</subject>
-	<taken value="unk" />
-	<reasonCode>
-		<text value="Cholesterinsenker" />
-	</reasonCode>
-	<dosage>
-		<timing>
-			<repeat>
-				<boundsPeriod>
-					 <start value="2016-02-10" />
-				</boundsPeriod>
-				<when value="PCV" />
-			</repeat>
-		</timing>
-		<route>
-			<coding>
-				<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26" />
-				<code value="PO" />
-				<display value="per oral" />
-			</coding>
-		</route>
-		<doseQuantity>
-			<value value="1" />
-			<unit value="Stk" />
-			<system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9" />
-			<code value="Stk" />
-		</doseQuantity>
-	</dosage>
+<MedicationStatement xmlns="http://hl7.org/fhir">
+   <id value="chmed16af-mp-medicationstatement-s01-4"/>
+   <meta>
+      <lastUpdated value="2017-02-23T14:17:28.000+01:00"/>
+      <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-mp-medicationstatement"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">ZOCOR Filmtabl 20 mg 28 Stk - 0-0-1-0 ab 2.10.2016 </div>
+   </text>
+   <contained>
+      <Medication xmlns="http://hl7.org/fhir">
+         <id value="cont4"/>
+         <meta>
+            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-medication"/>
+         </meta>
+         <code>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+               <code value="7680497420456"/>
+               <display value="ZOCOR Filmtabl 20 mg 28 Stk"/>
+            </coding>
+         </code>
+      </Medication>
+   </contained>
+   <status value="active"/>
+   <medicationReference>
+      <reference value="#cont4"/>
+   </medicationReference>
+   <subject>
+      <reference value="Patient/chmed16af-mp-patient-s01"/>
+   </subject>
+   <informationSource>
+      <reference value="Practitioner/chmed16af-practitioner-s01"/>
+   </informationSource>
+   <reasonCode>
+      <text value="Cholesterinsenker"/>
+   </reasonCode>
+   <dosage>
+      <timing>
+         <repeat>
+            <boundsPeriod>
+               <start value="2016-02-10"/>
+            </boundsPeriod>
+            <when value="PCV"/>
+         </repeat>
+      </timing>
+      <route>
+         <coding>
+            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp26"/>
+            <code value="PO"/>
+            <display value="per oral"/>
+         </coding>
+      </route>
+      <doseAndRate>
+         <doseQuantity>
+            <value value="1"/>
+            <unit value="Stk"/>
+            <system value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+            <code value="Stk"/>
+         </doseQuantity>
+      </doseAndRate>
+   </dosage>
 </MedicationStatement>

@@ -1,13 +1,14 @@
-
-Changing an ImplementationGuide from R3 to R4
+# Changing ImplementationGuide from R3 to R4
 - Adapt ig.json to new FHIR Version and structure
 - Convert the StructutreDefintions from R3 with R4 with the convert functionality of matchbox
-- Adjust problems in differentials in StructureDefinitions (which have to be later adapated also in examples
-- CodeSystem: Just minor updates TODO: designation values are not displayed
+- Adjust problems in differentials in StructureDefinitions (which have to be later adapated also in the examples)
+- CodeSystem: Just minor updates (designation values are not displayed: this is an issue with the ig publisher, support for 
 - ValueSets: Just minor updates
 - Observation:  conversion of Code System Url
 - Condition: clinicalStatus changed to Coding with terminology clinicalStatus
 - TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21) integrated
+- Questionnaire PMC example fixed for validation error (wrong order) and warning
+
 
 QuestionnaireRespone.questionnaire instead of QuestionnaireRespone.reference
 

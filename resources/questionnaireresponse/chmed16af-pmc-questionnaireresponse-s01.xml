@@ -19,9 +19,7 @@
             </pre>
         </div>
     </text>
-    <questionnaire>
-        <reference value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
-    </questionnaire>
+    <questionnaire value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire"/>
    <status value="completed" />
     <item>
         <linkId value="1"/>

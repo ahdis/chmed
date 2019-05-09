@@ -15,10 +15,11 @@
         </div>
     </text>
     <url value="http://chmed16af.emediplan.ch/fhir/Questionnaire/chmed16af-pmc-questionnaire" />
+    <name value="PolymedikationsCheckRecommendations"/>
     <title value="Polymedikations-Check Recommendations"/>
     <status value="active"/>
-    <date value="2017-01"/>
     <subjectType value="Patient"/>
+    <date value="2017-01"/>
     <item>
         <linkId value="1"/>
         <text value="Week dosing system by the pharmacist?"/>

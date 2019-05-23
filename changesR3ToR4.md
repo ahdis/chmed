@@ -9,8 +9,9 @@
 - TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21) integrated
 - Questionnaire PMC example fixed for validation error (wrong order) and warning
 - QuestionnaireRespone.questionnaire instead of QuestionnaireRespone.reference
-- MedicationStatement.taken will be set to unk for conversin R3->R4
-- MediciationRequest is now allowed[x], restricted back to booelan, needs to be adjusted in examples, converter
+- MedicationStatement.taken will be set to unk for conversion R3->R4
+- MediciationRequest is now allowed[x], restricted valueBoelan, adjusted in examples and converter
+- New extension for private fields for patient, incl. conversion, TODO needs to be also adjusted in the documentation 
 
 **Dosages**
 MedicationStatement.dosage.dose[x] has an element that is not marked with a snapshot match
@@ -30,25 +31,4 @@ TODO: Need to create a profile probably on Dosage which will mapp the STU3 datal
 
 TOOD: verify which Elements have been added in R3 to Medicastion* and which should be set to 0 according to CHMED16AF
 
-**Observation**
-
-Vitalsigns category profile changed from:
-
-  <category>
-    <coding>
-      <system value="http://hl7.org/fhir/observation-category"/>
-      <code value="vital-signs"/>
-      <display value="Vital Signs"/>
-    </coding>
-  </category>
-
-<category> 
-    <coding> 
-      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/> 
-      <code value="vital-signs"/> 
-      <display value="Vital Signs"/> 
-    </coding> 
-  </category> 
-
 **PrivateFields**
-New extensions private fields, needs to be also adjusted in the documentation and maybe also conversion?

@@ -25,16 +25,16 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="chmed16af-rx-bundle.Bundle">
+      <element id="Bundle">
          <path value="Bundle"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-rx-bundle.Bundle.type">
+      <element id="Bundle.type">
          <path value="Bundle.type"/>
          <fixedCode value="document"/>
       </element>
-      <element id="chmed16af-mp-bundle.Bundle.entry">
+      <element id="Bundle.entry">
          <path value="Bundle.entry"/>
          <slicing>
             <discriminator>
@@ -46,7 +46,7 @@
          <min value="1"/>
          <max value="*"/>
       </element>
-      <element id="chmed16af-mp-bundle.Bundle.entry:composition">
+      <element id="Bundle.entry:composition">
          <path value="Bundle.entry"/>
          <sliceName value="composition"/>
          <short value="A resource in the bundle"/>

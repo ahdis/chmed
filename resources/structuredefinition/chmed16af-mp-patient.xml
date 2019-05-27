@@ -25,7 +25,7 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="chmed16af-mp-patient.Patient">
+      <element id="Patient">
          <path value="Patient"/>
          <short value="Patient within Medication Plan"/>
          <definition value="Patient within Medication Plan"/>
@@ -61,19 +61,19 @@
             <map value="Private Fields"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.identifier">
+      <element id="Patient.identifier">
          <path value="Patient.identifier"/>
          <definition value="Insurance card number for this patient."/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.identifier.system">
+      <element id="Patient.identifier.system">
          <path value="Patient.identifier.system"/>
          <min value="1"/>
          <max value="1"/>
          <fixedUri value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.identifier.value">
+      <element id="Patient.identifier.value">
          <path value="Patient.identifier.value"/>
          <short value="Insurance card number for this patient"/>
          <min value="1"/>
@@ -83,12 +83,12 @@
             <map value="Patient.PatientId[Type=1]"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.active">
+      <element id="Patient.active">
          <path value="Patient.active"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.name">
+      <element id="Patient.name">
          <path value="Patient.name"/>
          <short value="Name for this patient"/>
          <min value="0"/>
@@ -98,7 +98,7 @@
             <map value="name.given = Patient.FName, name.family = Patient.LName"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.telecom">
+      <element id="Patient.telecom">
          <path value="Patient.telecom"/>
          <short value="telephone number"/>
          <definition value="telephone number"/>
@@ -113,7 +113,7 @@
             <map value="Patient.Phone"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.gender">
+      <element id="Patient.gender">
          <path value="Patient.gender"/>
          <short value="male | female | other | unknown"/>
          <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
@@ -139,7 +139,7 @@
             <map value="Patient.gender, male=1, female=2"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.birthDate">
+      <element id="Patient.birthDate">
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
          <definition value="The date of birth for the individual."/>
@@ -154,12 +154,12 @@
             <map value="Patient.BDt"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.deceased[x]">
+      <element id="Patient.deceased[x]">
          <path value="Patient.deceased[x]"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.address">
+      <element id="Patient.address">
          <path value="Patient.address"/>
          <short value="Address for the patient"/>
          <definition value="Address for the patient"/>
@@ -174,26 +174,26 @@
             <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.maritalStatus">
+      <element id="Patient.maritalStatus">
          <path value="Patient.maritalStatus"/>
          <short value="Marital (civil) status of a patient"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.multipleBirth[x]">
+      <element id="Patient.multipleBirth[x]">
          <path value="Patient.multipleBirth[x]"/>
          <short value="Whether patient is part of a multiple birth"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.photo">
+      <element id="Patient.photo">
          <path value="Patient.photo"/>
          <short value="Image of the patient"/>
          <definition value="Image of the patient."/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.contact">
+      <element id="Patient.contact">
          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
             <valueString value="Contact"/>
          </extension>
@@ -205,7 +205,7 @@
             <code value="BackboneElement"/>
          </type>
       </element>
-      <element id="chmed16af-mp-patient.Patient.communication">
+      <element id="Patient.communication">
          <path value="Patient.communication"/>
          <short value="A list of Languages which may be used to communicate with the patient about his or her health"/>
          <definition value="Languages which may be used to communicate with the patient about his or her health."/>
@@ -225,7 +225,7 @@
             <map value="patient.languageCommunication"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.communication.language">
+      <element id="Patient.communication.language">
          <path value="Patient.communication.language"/>
          <short value="The language which can be used to communicate with the patient about his or her health"/>
          <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English."/>
@@ -255,7 +255,7 @@
             <map value="Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.communication.preferred">
+      <element id="Patient.communication.preferred">
          <path value="Patient.communication.preferred"/>
          <short value="Language preference indicator"/>
          <definition value="Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)."/>
@@ -277,14 +277,14 @@
             <map value=".preferenceInd"/>
          </mapping>
       </element>
-      <element id="chmed16af-mp-patient.Patient.generalPractitioner">
+      <element id="Patient.generalPractitioner">
          <path value="Patient.generalPractitioner"/>
          <short value="Patient's nominated primary care provider"/>
          <alias value="careProvider"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.managingOrganization">
+      <element id="Patient.managingOrganization">
          <path value="Patient.managingOrganization"/>
          <short value="Organization that is the custodian of the patient record"/>
          <definition value="Organization that is the custodian of the patient record."/>
@@ -293,7 +293,7 @@
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-mp-patient.Patient.link">
+      <element id="Patient.link">
          <path value="Patient.link"/>
          <short value="Link to another patient resource that concerns the same actual person"/>
          <definition value="Link to another patient resource that concerns the same actual patient."/>

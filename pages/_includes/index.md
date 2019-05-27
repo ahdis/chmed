@@ -8,7 +8,7 @@ formats supported by a broad group of stakeholders from the public and private s
 
 # CHMED16A
 
-CHMED16A describes the  proposed specification and reference implementation of the object model for a medication plan, the so called [CHMED16A](http://emediplan.ch/dbFile/262/u-fcae/dl/eMediplan_CHMED16A_V1.5.pdf).
+CHMED16A describes the  proposed specification and reference implementation of the object model for a medication plan, the so called [CHMED16A](https://emediplan.ch/dbFile/305/u-ce40/dl/eMediplan_CHMED16A_V1.6.pdf).
 
 The reference consists of two major parts:
 * The content and layout specification for the electronic document, a string / textfile containing a header such as “CHMED16A1” and the (compressed, encoded) medication plan as a JSON object in UTF-8
@@ -27,7 +27,7 @@ In addition, the layout specification for the print-based layouts makes recognit
 
 # CHMED16AF
 
-<mark>Disclaimer 19.10.2018: This is the current draft version which is still under review and changes might happen, please contact info@emediplan.ch if you start implementing</mark>
+<mark>Disclaimer 27.05.2019: This is the current draft version which is still under review and changes might happen, please contact info@emediplan.ch if you start implementing</mark>
 
 [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 

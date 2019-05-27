@@ -3,25 +3,40 @@
 ## Introduction
 
 CHMED16A has the concept of Private Fields which can be added to Patient, Medication and Medicament.
-The Private Fields can be represented in FHIR with [extensions](http://hl7.org/fhir/extensibility.html#Extension).
+The Private Fields can be represented in FHIR with [extensions](http://hl7.org/fhir/extensibility.html#Extension) and
+can be added to Patient, Composition (CHMED16A: Medication), MedicationStatement (CHMED16A: Medicament)
 
 
 ```xml
-  <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateFieldName" >
-    <valueString value="PrivateFieldValue" />
-  </extension>
+   <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield">
+      <extension url="name">
+         <valueString value="PrivateFieldNameSample"/>
+      </extension>
+      <extension url="value">
+         <valueString value="PrivateFieldValueSample"/>
+      </extension>
+   </extension>
 ```
 
 ```json
-"extension" : [
+  "extension" : [
     {
-      "url" : "http://chmed16af.emediplan.ch/fhir/StructureDefinition/PrivateField",
-      "valueString" : "PrivateFieldValue"
+      "url" : "http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield",
+      "extension" : [
+        {
+          "url" : "name",
+          "valueString" : "name"
+        },
+        {
+          "url" : "value",
+          "valueString" : "value"
+        }
+      ]
     }
   ]
 ```
 
-The name of the field can be indicated with the extension url, the value of the field in the value attribute. See sample for [patient](Patient-chmed16af-mp-patient-ext.html).
+The name of the field can be indicated with the extension name in attribute valueString, the value of the field with the extension value and attribute valueString. See sample for [patient](Patient-chmed16af-mp-patient-ext.html).
 
 ## Caveat
 

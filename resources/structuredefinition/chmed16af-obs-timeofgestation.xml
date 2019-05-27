@@ -25,7 +25,7 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="Observation:timeofgestation">
+      <element id="Observation">
          <path value="Observation"/>
          <short value="Time of gestation profile in weeks and days"/>
          <definition value="This profile defines  how to represent time of gestation observations in FHIR using a standard LOINC code and UCUM units of measure.  This is a grouping structure. It has no value in Observation.valueQuantity but contains at least one component (weeks and days)."/>
@@ -36,7 +36,7 @@
             <map value="ToG"/>
          </mapping>
       </element>
-      <element id="Observation:timeofgestation.code">
+      <element id="Observation.code">
          <path value="Observation.code"/>
          <short value="Time of gestation"/>
          <definition value="Time of gestation."/>
@@ -49,7 +49,7 @@
             </coding>
          </patternCodeableConcept>
       </element>
-      <element id="Observation:timeofgestation.valueQuantity">
+      <element id="Observation.valueQuantity">
          <path value="Observation.valueQuantity"/>
          <min value="0"/>
          <max value="0"/>
@@ -66,7 +66,7 @@
          <min value="1" />
          <max value="2" />
       </element>
-      <element id="Observation:timeofgestation.component:weektg">
+      <element id="Observation.component:weektg">
          <path value="Observation.component"/>
          <short value="Gestational age in weeks"/>
          <definition value="Gestational age in weeks"/>
@@ -74,7 +74,7 @@
          <max value="1"/>
          <sliceName value="weektg"/>
       </element>
-      <element id="Observation:timeofgestation.component:weektg.code">
+      <element id="Observation.component:weektg.code">
          <path value="Observation.component.code"/>
          <short value="Gestational age in weeks"/>
          <definition value="Gestational age in weeks"/>
@@ -87,7 +87,7 @@
             </coding>
          </patternCodeableConcept>
       </element>
-      <element id="Observation:timeofgestation.component:weektg.valueQuantity">
+      <element id="Observation.component:weektg.valueQuantity">
          <path value="Observation.component.valueQuantity"/>
          <type>
             <code value="Quantity"/>
@@ -97,14 +97,14 @@
             <map value="ToG.Weeks"/>
          </mapping>
       </element>
-      <element id="Observation:timeofgestation.component:weektg.valueQuantity.code">
+      <element id="Observation.component:weektg.valueQuantity.code">
          <path value="Observation.component.valueQuantity.code"/>
          <type>
             <code value="code"/>
          </type>
          <fixedCode value="wk"/>
       </element>
-      <element id="Observation:timeofgestation.component:daytg">
+      <element id="Observation.component:daytg">
          <path value="Observation.component"/>
          <short value="Gestational age in days"/>
          <definition value="Gestational age in days"/>
@@ -112,7 +112,7 @@
          <max value="1"/>
          <sliceName value="daytg"/>
       </element>
-      <element id="Observation:timeofgestation.component:daytg.code">
+      <element id="Observation.component:daytg.code">
          <path value="Observation.component.code"/>
          <short value="Gestational age in days"/>
          <definition value="Gestational age in days"/>
@@ -125,7 +125,7 @@
             </coding>
          </patternCodeableConcept>
       </element>
-      <element id="Observation:timeofgestation.component:daytg.valueQuantity">
+      <element id="Observation.component:daytg.valueQuantity">
          <path value="Observation.component.valueQuantity"/>
          <type>
             <code value="Quantity"/>
@@ -135,7 +135,7 @@
             <map value="ToG.Days"/>
          </mapping>
       </element>
-      <element id="Observation:timeofgestation.component:daytg.valueQuantity.code">
+      <element id="Observation.component:daytg.valueQuantity.code">
          <path value="Observation.component.valueQuantity.code"/>
          <type>
             <code value="code"/>

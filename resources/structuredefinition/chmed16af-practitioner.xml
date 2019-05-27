@@ -25,14 +25,14 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="chmed16af-practitioner.Practitioner">
+      <element id="Practitioner">
          <path value="Practitioner"/>
          <short value="A person with a  formal responsibility in the provisioning of healthcare or related services"/>
          <definition value="A person who is directly or indirectly involved in the provisioning of healthcare."/>
          <min value="0"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier">
+      <element id="Practitioner.identifier">
          <path value="Practitioner.identifier"/>
          <slicing>
             <discriminator>
@@ -51,13 +51,13 @@
             <code value="Identifier"/>
          </type>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier:gln">
+      <element id="Practitioner.identifier:gln">
          <path value="Practitioner.identifier"/>
          <sliceName value="gln"/>
          <min value="0"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier.system:gln">
+      <element id="Practitioner.identifier.system:gln">
          <path value="Practitioner.identifier.system"/>
          <min value="1"/>
          <max value="1"/>
@@ -66,7 +66,7 @@
          </type>
          <fixedUri value="urn:oid:2.51.1.3"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier.value:gln">
+      <element id="Practitioner.identifier.value:gln">
          <path value="Practitioner.identifier.value"/>
          <short value="GLN for this practitioner"/>
          <min value="1"/>
@@ -76,13 +76,13 @@
             <map value="Author.GLN"/>
          </mapping>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier:zsr">
+      <element id="Practitioner.identifier:zsr">
          <path value="Practitioner.identifier"/>
          <sliceName value="zsr"/>
          <min value="0"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier.system:zsr">
+      <element id="Practitioner.identifier.system:zsr">
          <path value="Practitioner.identifier.system"/>
          <min value="1"/>
          <max value="1"/>
@@ -91,7 +91,7 @@
          </type>
          <fixedUri value="urn:oid:2.16.756.5.30.1.123.100.2.1.1"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.identifier.value:zsr">
+      <element id="Practitioner.identifier.value:zsr">
          <path value="Practitioner.identifier.value"/>
          <short value="ZSR for this practitioner"/>
          <min value="1"/>
@@ -101,12 +101,12 @@
             <map value="ZSR-Number of the organisation"/>
          </mapping>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.active">
+      <element id="Practitioner.active">
          <path value="Practitioner.active"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.name">
+      <element id="Practitioner.name">
          <path value="Practitioner.name"/>
          <short value="The name(s) associated with the practitioner"/>
          <definition value="The name(s) associated with the practitioner."/>
@@ -121,7 +121,7 @@
             <map value="name.given = Author.FName, name.family = Author.LName"/>
          </mapping>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.telecom">
+      <element id="Practitioner.telecom">
          <path value="Practitioner.telecom"/>
          <short value="A contact detail for the practitioner (that apply to all roles)"/>
          <min value="0"/>
@@ -130,7 +130,7 @@
             <code value="ContactPoint"/>
          </type>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.address">
+      <element id="Practitioner.address">
          <path value="Practitioner.address"/>
          <short value="Address(es) of the practitioner that are not role specific (typically home address)"/>
          <definition value="Address(es) of the practitioner that are not role specific (typically home address). Work addresses are not typically entered in this property as they are usually role dependent."/>
@@ -142,13 +142,13 @@
             <code value="Address"/>
          </type>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.gender">
+      <element id="Practitioner.gender">
          <path value="Practitioner.gender"/>
          <short value="male | female | other | unknown"/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.birthDate">
+      <element id="Practitioner.birthDate">
          <path value="Practitioner.birthDate"/>
          <short value="The date  on which the practitioner was born"/>
          <definition value="The date of birth for the practitioner."/>
@@ -156,7 +156,7 @@
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.photo">
+      <element id="Practitioner.photo">
          <path value="Practitioner.photo"/>
          <short value="Image of the person"/>
          <definition value="Image of the person."/>
@@ -164,14 +164,14 @@
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.qualification">
+      <element id="Practitioner.qualification">
          <path value="Practitioner.qualification"/>
          <short value="Qualifications obtained by training and certification"/>
          <definition value="Qualifications obtained by training and certification."/>
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-practitioner.Practitioner.communication">
+      <element id="Practitioner.communication">
          <path value="Practitioner.communication"/>
          <short value="A language the practitioner is able to use in patient communication"/>
          <definition value="A language the practitioner is able to use in patient communication."/>

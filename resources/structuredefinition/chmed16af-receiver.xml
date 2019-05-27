@@ -29,17 +29,17 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="chmed16af-receiver.Extension">
+      <element id="Extension">
          <path value="Extension"/>
       </element>
-      <element id="chmed16af-receiver.Extension.url">
+      <element id="Extension.url">
          <path value="Extension.url"/>
          <definition value="SHALL contain exactly one [1..1] @url=&quot;http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver&quot;."/>
          <min value="1"/>
          <max value="1"/>
          <fixedUri value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver"/>
       </element>
-      <element id="chmed16af-receiver.Extension.valueReference">
+      <element id="Extension.valueReference">
          <path value="Extension.valueReference"/>
          <definition value="SHALL contain exactly one [1..1] Practitioner Profile (identifier: http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-practitioner)."/>
          <min value="1"/>

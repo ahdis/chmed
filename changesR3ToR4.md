@@ -2,18 +2,22 @@
 - Adapt ig.json to new FHIR Version and structure
 - Convert the StructutreDefintions from R3 with R4 with the convert functionality of matchbox
 - Adjust problems in differentials in StructureDefinitions (which have to be later adapated also in the examples)
-- CodeSystem: Just minor updates (designation values are not displayed: this is an issue with the ig publisher, support for 
+- CodeSystem: Just minor updates (designation values are not displayed: this is due to the ig publisher, need to do a feature reqeust to add support) 
 - ValueSets: Just minor updates
 - Observation:  conversion of Code System Url
 - Condition: clinicalStatus changed to Coding with terminology clinicalStatus
-- TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21) integrated
+- TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21), is now integrated
 - Questionnaire PMC example fixed for validation error (wrong order) and warning
 - QuestionnaireRespone.questionnaire instead of QuestionnaireRespone.reference
 - MedicationStatement.taken will be set to unk for conversion R3->R4
 - MediciationRequest is now allowed[x], restricted valueBoelan, adjusted in examples and converter
-- New extension for private fields for patient, incl. conversion, TODO needs to be also adjusted in the documentation 
+- New extension for private fields for patient, incl. conversion, adjusted in the documentation 
 
 **Dosages**
+
+
+http://hl7.org/fhir/medicationrequest-examples.html
+
 MedicationStatement.dosage.dose[x] has an element that is not marked with a snapshot match
 MedicationStatement.dosage.doseAndRate.rate[x] has an element that is not marked with a snapshot match
 MedicationRequest.dosageInstruction.dose[x] has an element that is not marked with a snapshot match
@@ -26,9 +30,4 @@ TODO: Need to create a profile probably on Dosage which will mapp the STU3 datal
 
 **Error in snapshot generation: Differential for http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-rx-medicationrequest with id:** 
 
-
-**Condition.clinicalStatus: illegal constrained type code from CodeableConcept**
-
 TOOD: verify which Elements have been added in R3 to Medicastion* and which should be set to 0 according to CHMED16AF
-
-**PrivateFields**

@@ -25,7 +25,7 @@
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition"/>
    <derivation value="constraint"/>
    <differential>
-      <element id="chmed16af-pmc-composition.Composition">
+      <element id="Composition">
          <path value="Composition"/>
          <min value="1"/>
          <max value="1"/>
@@ -34,7 +34,32 @@
             <map value="Medication"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.identifier">
+      <element id="Composition.extension">
+         <path value="Composition.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="Composition.extension:privatefield">
+         <path value="Composition.extension" />
+         <sliceName value="privatefield" />
+         <short value="Private fields for patient"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Extension" />
+            <profile value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield" />
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Private Fields"/>
+         </mapping>
+      </element>
+      <element id="Composition.identifier">
          <path value="Composition.identifier"/>
          <short value="Logical identifier for document (GUID)"/>
          <definition value="Logical identifier for document (GUID)"/>
@@ -49,21 +74,21 @@
             <map value="id"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.type">
+      <element id="Composition.type">
          <path value="Composition.type"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.type.coding">
+      <element id="Composition.type.coding">
          <path value="Composition.type.coding"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.type.coding.system">
+      <element id="Composition.type.coding.system">
          <path value="Composition.type.coding.system"/>
          <fixedUri value="http://emediplan.ch/chmed16af/doc"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.type.coding.code">
+      <element id="Composition.type.coding.code">
          <path value="Composition.type.coding.code"/>
          <fixedCode value="PMC"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.subject">
+      <element id="Composition.subject">
          <path value="Composition.subject"/>
          <short value="Reference to the Patient"/>
          <definition value="Reference to the Patient."/>
@@ -80,7 +105,7 @@
             <map value="Patient"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.encounter">
+      <element id="Composition.encounter">
          <path value="Composition.encounter"/>
          <short value="Context of the Composition"/>
          <definition value="Describes the clinical encounter or type of care this documentation is associated with."/>
@@ -88,7 +113,7 @@
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.date">
+      <element id="Composition.date">
          <path value="Composition.date"/>
          <short value="Composition editing time"/>
          <definition value="The composition editing time, when the composition was last logically changed by the author."/>
@@ -105,7 +130,7 @@
             <map value="DT"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.author">
+      <element id="Composition.author">
          <path value="Composition.author"/>
          <short value="Author (Gln if available, otherwise name)"/>
          <definition value="Author (Gln if available, otherwise name)"/>
@@ -121,7 +146,7 @@
             <map value="Auth"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.title">
+      <element id="Composition.title">
          <path value="Composition.title"/>
          <short value="Human Readable name/title"/>
          <definition value="Official human-readable label for the composition."/>
@@ -132,7 +157,7 @@
             <code value="string"/>
          </type>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.confidentiality">
+      <element id="Composition.confidentiality">
          <path value="Composition.confidentiality"/>
          <short value="As defined by affinity domain"/>
          <definition value="The code specifying the level of confidentiality of the Composition."/>
@@ -145,7 +170,7 @@
          <isModifier value="true"/>
          <isModifierReason value="No Modifier Reason provideed in previous versions of FHIR"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.attester">
+      <element id="Composition.attester">
          <path value="Composition.attester"/>
          <short value="Attests to accuracy of composition"/>
          <definition value="A participant who has attested to the accuracy of the composition/document."/>
@@ -157,7 +182,7 @@
             <code value="BackboneElement"/>
          </type>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.attester.time">
+      <element id="Composition.attester.time">
          <path value="Composition.attester.time"/>
          <short value="validate date: Date of validation"/>
          <definition value="When composition was attested by the party, Validate date: Date of validation"/>
@@ -172,7 +197,7 @@
             <map value="ValDt (Validate date: Date of validation)"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.attester.party">
+      <element id="Composition.attester.party">
          <path value="Composition.attester.party"/>
          <short value="Who attested the composition"/>
          <definition value="Validated by : The Gln of the pharmacist who has validated the medication plan"/>
@@ -187,7 +212,7 @@
             <map value="ValBy (Validate by : The Gln of the pharmacist who has validated the medication plan)"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.custodian">
+      <element id="Composition.custodian">
          <path value="Composition.custodian"/>
          <short value="Organization which maintains the composition"/>
          <definition value="Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information."/>
@@ -209,7 +234,7 @@
             <map value=".custodian.assignedCustodian"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.relatesTo">
+      <element id="Composition.relatesTo">
          <path value="Composition.relatesTo"/>
          <short value="Relationships to other compositions/documents"/>
          <definition value="Relationships that this composition has with other compositions or documents that already exist."/>
@@ -236,7 +261,7 @@
             <map value=".relatedDocument"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.event">
+      <element id="Composition.event">
          <path value="Composition.event"/>
          <short value="The clinical service(s) being documented"/>
          <definition value="The clinical service, such as a colonoscopy or an appendectomy, being documented."/>
@@ -264,7 +289,7 @@
             <map value=".documentationOf.serviceEvent"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section">
+      <element id="Composition.section">
          <path value="Composition.section"/>
          <slicing>
             <discriminator>
@@ -277,7 +302,7 @@
          <min value="2"/>
          <max value="3"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section:sectionmed">
+      <element id="Composition.section:sectionmed">
          <path value="Composition.section"/>
          <sliceName value="sectionmed"/>
          <min value="1"/>
@@ -287,17 +312,17 @@
             <map value="Medication.Medicaments"/>
          </mapping>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.codesectionmed">
+      <element id="Composition.section.codesectionmed">
          <path value="Composition.section.code"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding:sectionmed">
+      <element id="Composition.section.code.coding:sectionmed">
          <path value="Composition.section.code.coding"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.system:sectionmed">
+      <element id="Composition.section.code.coding.system:sectionmed">
          <path value="Composition.section.code.coding.system"/>
          <min value="1"/>
          <max value="1"/>
@@ -306,7 +331,7 @@
          </type>
          <fixedUri value="http://loinc.org"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.code:sectionmed">
+      <element id="Composition.section.code.coding.code:sectionmed">
          <path value="Composition.section.code.coding.code"/>
          <min value="1"/>
          <max value="1"/>
@@ -315,7 +340,7 @@
          </type>
          <fixedCode value="77604-7"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.display:sectionmed">
+      <element id="Composition.section.code.coding.display:sectionmed">
          <path value="Composition.section.code.coding.display"/>
          <min value="1"/>
          <max value="1"/>
@@ -324,7 +349,7 @@
          </type>
          <fixedString value="History of medication use"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.entry:sectionmed">
+      <element id="Composition.section.entry:sectionmed">
          <path value="Composition.section.entry"/>
          <short value="A reference to data that supports this section"/>
          <definition value="A reference to the actual resource from which the narrative in the section is derived."/>
@@ -335,23 +360,23 @@
             <code value="Reference"/>
          </type>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section:recommendation">
+      <element id="Composition.section:recommendation">
          <path value="Composition.section"/>
          <sliceName value="recommendation"/>
          <min value="0"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code:recommendation">
+      <element id="Composition.section.code:recommendation">
          <path value="Composition.section.code"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding:recommendation">
+      <element id="Composition.section.code.coding:recommendation">
          <path value="Composition.section.code.coding"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.system:recommendation">
+      <element id="Composition.section.code.coding.system:recommendation">
          <path value="Composition.section.code.coding.system"/>
          <min value="1"/>
          <max value="1"/>
@@ -360,7 +385,7 @@
          </type>
          <fixedUri value="http://loinc.org"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.code:recommendation">
+      <element id="Composition.section.code.coding.code:recommendation">
          <path value="Composition.section.code.coding.code"/>
          <min value="1"/>
          <max value="1"/>
@@ -369,7 +394,7 @@
          </type>
          <fixedCode value="61357-0"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.code.coding.display:recommendation">
+      <element id="Composition.section.code.coding.display:recommendation">
          <path value="Composition.section.code.coding.display"/>
          <min value="1"/>
          <max value="1"/>
@@ -378,7 +403,7 @@
          </type>
          <fixedString value="MEDICATION PHARMACEUTICAL ADVICE.BRIEF"/>
       </element>
-      <element id="chmed16af-pmc-composition.section.entry">
+      <element id="section.entry">
          <path value="Composition.section.entry"/>
          <slicing>
             <discriminator>
@@ -391,7 +416,7 @@
          <min value="0"/>
          <max value="*"/>
       </element>
-      <element id="chmed16af-pmc-composition.Composition.section.entry:questionnaireresponse">
+      <element id="Composition.section.entry:questionnaireresponse">
          <path value="Composition.section.entry"/>
          <sliceName value="questionnaireresponse"/>
          <short value="Questionnaireresponse"/>

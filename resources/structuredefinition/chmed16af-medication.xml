@@ -42,20 +42,12 @@
          <type>
             <code value="CodeableConcept"/>
          </type>
+         <patternCodeableConcept>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+            </coding>
+         </patternCodeableConcept>
          <isSummary value="true"/>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="MedicationFormalRepresentation"/>
-            </extension>
-            <strength value="required"/>
-            <description value="Using GTIN for identification of medication"/>
-        <!--	FIXMER4 org.hl7.fhir.exceptions.FHIRException: not done yet: can't fetch urn:oid:2.51.1.1	<valueSetReference>
-					<reference value="urn:oid:2.51.1.1"/>
-				</valueSetReference>
-        or
-                <valueSetUri value="urn:oid:2.51.1.1" /> 
-
--->         </binding>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.ID with IdTpye 2 (GTIN)"/>
@@ -71,28 +63,7 @@
          <type>
             <code value="code"/>
          </type>
-      </element>    <!--   FIXMER4
-    <element id="Medication.isBrand">
-      <path value="Medication.isBrand"/>
-      <short value="True if a brand"/>
-      <definition value="Set to true if the item is attributable to a specific manufacturer."/>
-      <min value="0"/>
-      <max value="0"/>
-      <type>
-        <code value="boolean"/>
-      </type>
-    </element>
-    <element id="Medication.isOverTheCounter">
-      <path value="Medication.isOverTheCounter"/>
-      <short value="True if medication does not require a prescription"/>
-      <definition value="Set to true if the medication can be obtained without an order from a prescriber."/>
-      <min value="0"/>
-      <max value="0"/>
-      <type>
-        <code value="boolean"/>
-      </type>
-    </element>
- -->
+      </element>
       <element id="Medication.manufacturer">
          <path value="Medication.manufacturer"/>
          <short value="Manufacturer of the item"/>
@@ -126,32 +97,5 @@
             <code value="BackboneElement"/>
          </type>
       </element>
-         <!--   
-    <element id="Medication.package">
-      <path value="Medication.package"/>
-      <short value="Details about packaged medications"/>
-      <definition value="Information that only applies to packages (not products)."/>
-      <min value="0"/>
-      <max value="0"/>
-      <type>
-        <code value="BackboneElement"/>
-      </type>
-    </element>
-    <element id="Medication.image">
-      <path value="Medication.image"/>
-      <short value="Picture of the medication"/>
-      <definition value="Photo(s) or graphic representation(s) of the medication."/>
-      <requirements value="Note that &quot;image&quot; is only applicable when the medication.code represents a physical item (e.g. Amoxil 250 mg capsule) and not an abstract item (e.g. amoxicillin 250 mg)."/>
-      <min value="0"/>
-      <max value="0"/>
-      <type>
-        <code value="Attachment"/>
-      </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".participation[typeCode=SUBJ].role[classCode=MANU],source[classCode=OBS,moodCode=EVN,code=&quot;type of image&quot;].value(ED.image)"/>
-      </mapping>
-    </element>
--->
    </differential>
 </StructureDefinition>

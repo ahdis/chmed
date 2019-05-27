@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition
-  xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="chmed16af-condition-risks"/>
   <url value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-condition-risks"/>
   <version value="0.1.0"/>
@@ -147,12 +146,11 @@
       <min value="1"/>
       <max value="1"/>
     </element>
-    <element id="Condition.context">
-      <path value="Condition.context"/>
-      <short value="Encounter or episode when condition first asserted"/>
-      <definition value="Encounter during which the condition was first asserted."/>
-      <comment value="This record indicates the encounter this particular record is associated with.  In the case of a &quot;new&quot; diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first &quot;known&quot;."/>
-      <alias value="encounter"/>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter"/>
+      <short value="Encounter created as part of"/>
+      <definition value="The Encounter during which this Condition was created or to which the creation of this record is tightly associated."/>
+      <comment value="This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. This record indicates the encounter this particular record is associated with.  In the case of a &quot;new&quot; diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first &quot;known&quot;."/>
       <min value="0"/>
       <max value="0"/>
     </element>
@@ -172,16 +170,22 @@
       <min value="0"/>
       <max value="0"/>
     </element>
-    <element id="Condition.assertedDate">
-      <path value="Condition.assertedDate"/>
-      <short value="Date record was believed accurate"/>
-      <definition value="The date on which the existance of the Condition was first asserted or acknowledged."/>
-      <comment value="The assertedDate represents the date when this particular Condition record was created in the EHR, not the date of the most recent update in terms of when severity, abatement, etc. were specified.  The date of the last record modification can be retrieved from the resource metadata."/>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate"/>
+      <short value="Date record was first recorded"/>
+      <definition value="The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <type>
         <code value="dateTime"/>
       </type>
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder"/>
+      <short value="Who recorded the condition"/>
+      <definition value="Individual who recorded the record and takes responsibility for its content."/>
+      <min value="0"/>
+      <max value="0"/>
     </element>
     <element id="Condition.asserter">
       <path value="Condition.asserter"/>

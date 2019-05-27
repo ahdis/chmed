@@ -29,10 +29,15 @@
   "definition" : {
     "resource" : [{
       "reference" : {
+        "reference" : "StructureDefinition/chmed16af-dosage"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/chmed16af-dosequantityto"
       },
-      "name" : "Extension for new package",
-      "description" : "Extension for new package"
+      "exampleBoolean" : false
     },
     {
       "reference" : {
@@ -49,6 +54,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/chmed16af-rx-bundle"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/chmed16af-simplequantity"
       },
       "exampleBoolean" : false
     },

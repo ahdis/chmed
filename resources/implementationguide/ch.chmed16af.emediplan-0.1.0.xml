@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImplementationGuide
-  xmlns="http://hl7.org/fhir">
+<ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ch.chmed16af.emediplan-0.1.0"/>
   <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.1.0"/>
   <version value="0.1.0"/>
@@ -20,10 +19,15 @@
   <definition>
     <resource>
       <reference>
+        <reference value="StructureDefinition/chmed16af-dosage"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/chmed16af-dosequantityto"/>
       </reference>
-      <name value="Extension for new package"/>
-      <description value="Extension for new package"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
@@ -40,6 +44,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-rx-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed16af-simplequantity"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

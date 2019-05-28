@@ -65,27 +65,21 @@
     },
     {
       "reference" : {
-        "reference" : "Bundle/chmed16af-mp-bundle-s01"
+        "reference" : "Composition/chmed16af-mp-composition-s01"
       },
-      "name" : "MedicationPlan",
-      "description" : "Example for MedicationPlan",
-      "exampleCanonical" : "StructureDefinition/chmed16af-mp-bundle"
+      "exampleCanonical" : "StructureDefinition/chmed16af-mp-composition"
     },
     {
       "reference" : {
-        "reference" : "Bundle/chmed16af-pmc-bundle-s01"
+        "reference" : "Composition/chmed16af-pmc-composition-s01"
       },
-      "name" : "Poly Medication Check",
-      "description" : "Example for Poly Medication Check",
-      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-bundle"
+      "exampleCanonical" : "StructureDefinition/chmed16af-pmc-composition"
     },
     {
       "reference" : {
-        "reference" : "Bundle/chmed16af-rx-bundle-s01"
+        "reference" : "Composition/chmed16af-rx-composition-s01"
       },
-      "name" : "Prescription",
-      "description" : "Example for Prescription",
-      "exampleCanonical" : "StructureDefinition/chmed16af-rx-bundle"
+      "exampleCanonical" : "StructureDefinition/chmed16af-rx-composition"
     },
     {
       "reference" : {

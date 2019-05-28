@@ -64,27 +64,21 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed16af-mp-bundle-s01"/>
+        <reference value="Composition/chmed16af-mp-composition-s01"/>
       </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example for MedicationPlan"/>
-      <exampleCanonical value="StructureDefinition/chmed16af-mp-bundle"/>
+      <exampleCanonical value="StructureDefinition/chmed16af-mp-composition"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed16af-pmc-bundle-s01"/>
+        <reference value="Composition/chmed16af-pmc-composition-s01"/>
       </reference>
-      <name value="Poly Medication Check"/>
-      <description value="Example for Poly Medication Check"/>
-      <exampleCanonical value="StructureDefinition/chmed16af-pmc-bundle"/>
+      <exampleCanonical value="StructureDefinition/chmed16af-pmc-composition"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed16af-rx-bundle-s01"/>
+        <reference value="Composition/chmed16af-rx-composition-s01"/>
       </reference>
-      <name value="Prescription"/>
-      <description value="Example for Prescription"/>
-      <exampleCanonical value="StructureDefinition/chmed16af-rx-bundle"/>
+      <exampleCanonical value="StructureDefinition/chmed16af-rx-composition"/>
     </resource>
     <resource>
       <reference>

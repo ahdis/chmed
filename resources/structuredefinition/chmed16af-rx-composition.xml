@@ -381,7 +381,7 @@
          <short value="A reference to data that supports this section"/>
          <definition value="A reference to the actual resource from which the narrative in the section is derived."/>
          <comment value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
-         <min value="1"/>
+         <min value="0"/>
          <max value="1"/>
          <type>
             <code value="Reference"/>

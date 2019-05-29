@@ -1,7 +1,7 @@
 {
   "tool": "jekyll",
   "version": "4.0.0",
-  "fixed-business-version": "0.1.0",
+  "fixed-business-version": "0.120",
   "license": "CC-BY-SA-4.0",
   "npm-name": "ch.chmed16af.emediplan",
   "paths": {
@@ -15,18 +15,46 @@
     "txCache": "txCache",
     "specification": "http:/hl7.org/fhir/r4"
   },
-  "language" : "en", 
-  "languages" : [ 
-    "en", "de-CH", "fr-CH", "it-CH"
+  "language": "en",
+  "languages": [
+    "en",
+    "de-CH",
+    "fr-CH",
+    "it-CH"
   ],
-  "path-pattern" : "[type]-[id].html",
+  "path-pattern": "[type]-[id].html",
   "defaults": {
     "Any": {
+      "xml": true,
+      "json": true,
+      "ttl": true,
+      "xml-html": true,
+      "json-html": true,
+      "ttl-html": true,
       "template-format": "instance-template-format.html",
       "template-base": "instance-template-base.html"
     },
     "StructureDefinition": {
-      "template-base": "instance-template-sd.html"
+      "shex": true,
+      "sch": true,
+      "json-schema": true,
+      "summary": true,
+      "header": true,
+      "diff": true,
+      "snapshot": true,
+      "pseudo-xml": true,
+      "pseudo-json": true,
+      "pseudo-ttl": true,
+      "uml": true,
+      "tx": true,
+      "inv": true,
+      "dict": true,
+      "maps": true,
+      "xref": true,
+      "template-base": "instance-template-sd.html",
+      "template-defns": "instance-template-sd-definitions.html",
+      "template-mappings": "instance-template-sd-mappings.html",
+      "template-examples": "instance-template-sd-examples.html"    
     },
     "ValueSet": {
       "template-base": "instance-template-vs.html"
@@ -35,8 +63,17 @@
   "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
   "source": "implementationguide/ch.chmed16af.emediplan-0.1.0.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
-  "resources": {
-  },
+  "resources": {},
+  "extraTemplates": [
+    {
+      "name": "mappings",
+      "description": "Mappings"
+    },
+    {
+      "name": "examples",
+      "description": "Examples"
+    }
+  ],
   "suppressedWarningFile": "suppressedwarnings.txt",
   "logging": [
     "init",

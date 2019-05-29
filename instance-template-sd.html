@@ -1,103 +1,202 @@
 ---
-# jekyll header
+id: {{[id]}}
+title: {{[title]}}
+tcode: {{[type]}}
 ---
+
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    <!-- instance template base -->
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>CHMED16AF</title>
-   
-{% include header.html %}
-    </head>
-    <body>
-    
-    
-{% include navbar.html %}
+<!-- instance template base -->
 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CHMED16AF</title>
 
- <div id="segment-content" class="segment">  <!-- segment-content -->
- <div class="container">  <!-- container -->
+    {% include header.html %}
+</head>
+
+<body>
+    {% include navbar.html %}
+
+    <!--
+    <div id="segment-breadcrumb" class="segmnt">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li title="{{ site.data.fhir.igName }}">
+                    <a href="index.html">
+                        <b>{{ site.data.fhir.igName }}</b>
+                    </a>
+                </li>
+                <li>
+                    <b>{{page.title}} Details</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+-->
+    <div id="segment-content" class="segment">
+        <div class="container">
             <div class="row">
-             <div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
-
-<div class="col-12">
-
-
-<h2>{{[title]}}</h2>
-<p>
-Formats: <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
-</p>
-
-<h2>Summary</h2>
-
-{% include {{[type]}}-{{[id]}}-header.xhtml %}
-{% include {{[type]}}-{{[id]}}-summary.xhtml %}
-{% include {{[type]}}-{{[id]}}-sd-xref.xhtml %}
-
-<h2>Differential</h2>
-
-{% include {{[type]}}-{{[id]}}-diff.xhtml %}
-
-<h2>Snapshot</h2>
-
-{% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
-
-<!--
-<h2>UML</h2>
-
-{% include {{[type]}}-{{[id]}}-uml.xhtml %}
-
-<h2>XML template</h2>
-
-{% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
-
-<h2>JSON template</h2>
-
-{% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
--->
-
-<h2>Terminology Bindings</h2>
-
-{% include {{[type]}}-{{[id]}}-tx.xhtml %}
-
-<h2>Invariants</h2>
-
-{% include {{[type]}}-{{[id]}}-inv.xhtml %}
-
-<!--
-<h2>Other stuff</h2>
-
-{% include {{[type]}}-{{[id]}}-sch.xhtml %}
-{% include {{[type]}}-{{[id]}}-sd-xref.xhtml %}
-{% include {{[type]}}-{{[id]}}-shex.xhtml %}
-{% include {{[type]}}-{{[id]}}-json-schema.xhtml %}
--->
-
-<h2>Definitions</h2>
-
-{% include {{[type]}}-{{[id]}}-dict.xhtml %}
-
-<h2>Mappings</h2>
-
-{% include {{[type]}}-{{[id]}}-maps.xhtml %}
-
-<hr/>
-
-{% include {{[type]}}-{{[id]}}-xml-html.xhtml %}
-{% include {{[type]}}-{{[id]}}-json-html.xhtml %}
-{% include {{[type]}}-{{[id]}}-ttl-html.xhtml %}
+                <div class="inner-wrapper">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs">
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}.html">Content</a></li>
+                            {% if "{{[type]}}" == "StructureDefinition" %}
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}-definitions.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li>
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}-mappings.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a></li>
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}-examples.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}-examples.html">Examples</a></li>
+                            {% endif %}
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}.xml.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}.xml.html">XML</a></li>
+                            <li class="{% if page.path == "{{[type]}}-{{[id]}}.json.html" %}active{% endif %}"><a
+                                    href="{{[type]}}-{{[id]}}.json.html">JSON</a></li>
+                        </ul>
 
 
-</div>
 
-    </div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
+                        <h3>
+                            StructureDefinition: {{page.id}}
+                        </h3>
 
-    </div>  <!-- /segment-content -->
+                        <a name="introduction"> </a>
 
-{% include footer.html %}
+                        <a name="profile"> </a>
+                        <h4>Formal Views of Profile Content</h4>
 
-    </body>
+                        {% include StructureDefinition-{{page.id}}-header.xhtml %}
+
+                        <p>
+                            <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles,
+                                Differentials,
+                                Snapshots, and how the XML and JSON presentations work</a>.
+                        </p>
+
+                        <div id="tabs">
+                            <ul>
+                                <li>
+                                    <a href="#tabs-summ">Text Summary</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-diff">Differential Table</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-snap">Snapshot Table</a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-all">All</a>
+                                </li>
+                            </ul>
+
+                            <div id="tabs-summ">
+                                <div id="tbl-summ">
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="tbl-diff-inner">
+                                        <a name="summary"> </a>
+                                        {% include StructureDefinition-{{page.id}}-summary.xhtml %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabs-diff">
+                                <div id="tbl-diff">
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="tbl-diff-inner">
+                                        {% include StructureDefinition-{{page.id}}-diff.xhtml %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabs-snap">
+                                <div id="tbl-snap">
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="tbl-snap-inner">
+                                        {% include StructureDefinition-{{page.id}}-snapshot.xhtml %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabs-all">
+                                <div id="tbl-all">
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="tbl-all-inner">
+                                        <a name="summary"> </a>
+                                        {% include StructureDefinition-{{page.id}}-summary.xhtml%}
+                                    </div>
+                                </div>
+
+                                <div id="all-tbl-diff">
+                                    <p>
+                                        <b>Differential View</b>
+                                    </p>
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="all-tbl-diff-inner">
+                                        {% include StructureDefinition-{{page.id}}-diff.xhtml%}
+                                    </div>
+                                </div>
+                                <div id="all-tbl-snap">
+                                    <p>
+                                        <b>Snapshot View</b>
+                                    </p>
+                                    <div id="all-tbl-snap-inner">
+                                        {% include StructureDefinition-{{page.id}}-snapshot.xhtml%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+                        <a name="tx"> </a>
+
+                        {% include StructureDefinition-{{page.id}}-tx.xhtml%}
+
+
+                        {% include StructureDefinition-{{page.id}}-inv.xhtml%} .
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include footer.html %}
+
+        <script>
+            $(document).ready(function () {
+                try {
+                    var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+                }
+                catch (exception) { }
+
+                if (!currentTabIndex) {
+                    currentTabIndex = '0';
+                }
+
+                $('#tabs').tabs({
+                    active: currentTabIndex,
+                    activate: function (event, ui) {
+                        var active = $('.selector').tabs('option', 'active');
+                        currentTabIndex = ui.newTab.index();
+                        document.activeElement.blur();
+                        try {
+                            sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+                        }
+                        catch (exception) {
+                        }
+                    }
+                });
+            });
+        </script>
+</body>
+
 </html>

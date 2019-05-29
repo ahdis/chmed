@@ -1,5 +1,8 @@
 # QRCode
 
+Not yet available for Release 4
+
+{% comment %}
 ## Introduction
 The Content for the QRCode is based on a shortened notation of FHIR and the resources / profiles defined there, such as Bundle, Composition, Patient, Observation and MedicationStatement with the applied Profiles for the Medication Plan, PolymedicationCheck or Prescription. It follows the pattern of the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan).The QRCode can the be generated or interpreted according to the encoding/decoding rules.
 
@@ -93,3 +96,4 @@ Transform from fhir example with stripped namespage
 ## Example source
 The [dontnetcore_app](https://github.com/ahdis/chmed16af/tree/master/dotnetcore_app) is a sample start app to work with [CHMD16AF](http://chmed16af.emediplan.ch/) eMedication plan format.
 
+{% endcomment %}

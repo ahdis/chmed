@@ -36,6 +36,10 @@ Extending the CHMED16A format to a FHIR based definition (CHMED16AF) has the fol
 * CHMED16AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://www.e-health-suisse.ch/umsetzung/00252/index.html?lang=de).
 
-The CHEMD16AF format can bei either in XML or JSON format. However both are too big in size to be exchange in a qrcode. For this a shortened notation [CHMED16AQ](qrcode.html) has be developed similar to the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan)
+The CHEMD16AF format can bei either in XML or JSON format. 
 
-In the section [Profiles](profiles.html) the structure for the different formats/values are explained.
+{% comment %}
+However both are too big in size to be exchange in a qrcode. For this a shortened notation [CHMED16AQ](qrcode.html) has be developed similar to the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan)
+{% endcomment %}
+
+In the section [Introduction](intro.html) the structure for the different formats/values are explained.

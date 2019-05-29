@@ -10,7 +10,7 @@
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
   }],
   "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.1.0",
-  "version" : "0.1.0",
+  "version" : "0.120",
   "name" : "IgChMED16AF",
   "title" : "Implementation Guide CHMED16AF",
   "status" : "active",

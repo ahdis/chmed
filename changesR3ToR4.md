@@ -20,7 +20,7 @@
 - Rebuilt bundles (with matchbox IgUploader and $document operation)
 
 TODO: verify which Elements have been added in STU3 to Medicastion* and which should be set to 0 according to CHMED16AF
-
+TODO: how to add history to the ig? (packaage-list.json, history.html, https://github.com/HL7/fhir-ig-history-template )
 
 Open Issues:
 

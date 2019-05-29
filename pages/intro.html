@@ -25,7 +25,7 @@ category: Mapping
 
                     <div class="col-12">
 
-                        {% include profiles.html %}
+                        {% capture my-include %}{% include intro.md %}{% endcapture %}{{ my-include | markdownify }}
 
 
                     </div>

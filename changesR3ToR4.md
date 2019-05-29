@@ -17,7 +17,17 @@
   In STU3 0.* Dosage, Dosage has 0..1 rate[x] and 0..1 dose[x]
   In R4 0.* Dosage, Dosage has 0..* doseRate with 0..1 rate[x] and  0..1 dose[x]
 - Adding Composition examples in STU3 and conversion to R4
-
+- Rebuilt bundles (with matchbox IgUploader and $document operation)
 
 TODO: verify which Elements have been added in STU3 to Medicastion* and which should be set to 0 according to CHMED16AF
-TODO: Rebuild bundles
+
+
+Open Issues:
+
+1. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle.entry[1].resource.subject.reference	error	Unable to resolve the target of the reference in the bundle (Composition Subject)
+
+reference in Composition gives an error if relativ, but strange only for the subject not for the others, need to investigate
+
+2. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle	error	A document must have an identifier with a system and a value [(type = 'document') implies (identifier.system.exists() and identifier.value.exists())]
+
+how to do that when you genarte a document on demand? check the spec if identifiere is really required

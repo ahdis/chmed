@@ -37,3 +37,8 @@ cd output
 cp -r ../chmed16aq .
 ncftpput -R -f ../ncftp.cfg / ./
 ```
+
+```
+zum download version 0.1.0
+ncftpget -R -f ../ncftp.cfg . /0.1.0
+```

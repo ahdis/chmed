@@ -12,7 +12,7 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Composition Resource of the medication plan."/>
+   <description value="Profile for the Composition Resource of the prescripton."/>
    <fhirVersion value="4.0.0"/>
    <mapping>
       <identity value="CHMED16A"/>

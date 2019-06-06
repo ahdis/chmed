@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ch.chmed16af.emediplan-0.1.0"/>
+  <id value="ch.chmed16af.emediplan-0.2.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/oliveregger/Documents/github/chmed16af/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/oliveregger/Documents/github/chmed16af/pages"/>
   </extension>
-  <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.1.0"/>
-  <version value="0.120"/>
+  <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.2.0"/>
+  <version value="0.2.0"/>
   <name value="IgChMED16AF"/>
   <title value="Implementation Guide CHMED16AF"/>
   <status value="active"/>

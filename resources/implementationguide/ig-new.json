@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ch.chmed16af.emediplan-0.1.0",
+  "id" : "ch.chmed16af.emediplan-0.2.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/resources"
@@ -9,8 +9,8 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
   }],
-  "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.1.0",
-  "version" : "0.120",
+  "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.2.0",
+  "version" : "0.2.0",
   "name" : "IgChMED16AF",
   "title" : "Implementation Guide CHMED16AF",
   "status" : "active",

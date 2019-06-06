@@ -1,7 +1,7 @@
 {
   "tool": "jekyll",
   "version": "4.0.0",
-  "fixed-business-version": "0.120",
+  "fixed-business-version": "0.2.0",
   "license": "CC-BY-SA-4.0",
   "npm-name": "ch.chmed16af.emediplan",
   "paths": {
@@ -61,7 +61,7 @@
     }
   },
   "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
-  "source": "implementationguide/ch.chmed16af.emediplan-0.1.0.xml",
+  "source": "implementationguide/ch.chmed16af.emediplan-0.2.0.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},
   "extraTemplates": [

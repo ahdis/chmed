@@ -1,23 +1,23 @@
 {
     "package-id" : "ch.chmed16af.emediplan",
     "title" : "eMediplan CHMED16AF FHIR IG", 
-    "canonical" : "http://chmed16af.emediplan.ch/fhir", 
-    "introduction" : "The SDC (Structured Data Capture) specification is an Implementation Guide of the FHIR Specification that provides guidance on using the Questionnaire and QuestionnaireResponse resources.  It includes enhanced rendering capabilities, advanced flow control to manage questionnaire completion, calculated elements, ability to populate a questionnaire response from existing data, to extract data from a completed questionnaire response into other FHIR resources and the ability to interactively generate a questionnaire based on answers to previous questions.",
+    "canonical" : "http://chmed16af.emediplan.ch", 
+    "introduction" : "CHMED16AF is the FHIR implementation guide to represent the eMediplan in FHIR",
     "list" : [{
      "version" : "0.2.0",
-     "fhirVersion" : "4.0.0",  
      "desc" : "Continuous Integration Build (latest in version control)",
      "path" : "http://build.fhir.org/ig/ahdis/chmed16af",
+     "fhirVersion" : "4.0.0",  
      "status" : "ci-build",
      "current" : true
-    }
-    ,{
+    }, 
+    {
      "version" : "0.1.0",  
-     "fhirVersion" : "3.0.1",  
      "date" : "2017-05-17", 
      "desc" : "eMediplan CHMED16AF Implementation Guide (Release 3)",   
-     "path" : "http://chmed16af.emediplan.ch/index.html",   
+     "path" : "http://chmed16af.emediplan.ch/0.1.0",   
      "status" : "draft",   
-     "sequence" : "History"
+     "sequence" : "STU1",
+     "fhirVersion" : "3.0.1"
     }]
    }

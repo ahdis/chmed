@@ -24,9 +24,8 @@ TODO: how to add history to the ig? (packaage-list.json, history.html, https://g
 
 Open Issues:
 
-1. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle.entry[1].resource.subject.reference	error	Unable to resolve the target of the reference in the bundle (Composition Subject)
+1. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle.entry[1].resource.subject.reference	error	Unable to resolve the target of the reference in the bundle (Composition Subject) -> fixed will pull request 
 
-reference in Composition gives an error if relativ, but strange only for the subject not for the others, need to investigate
 
 2. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle	error	A document must have an identifier with a system and a value [(type = 'document') implies (identifier.system.exists() and identifier.value.exists())]
 

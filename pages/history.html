@@ -3,35 +3,86 @@ category: History
 ---
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>History</title>
 
   {% include header.html %}
 
+  <script type="application/javascript" src="assets/js/history-cm.js"> </script>
+  <script type="application/javascript" src="assets/js/history.js"> </script>
+  <link href="assets/css/history.css" rel="stylesheet" />
+
 </head>
+
 <body>
-{% include navbar.html %}
 
- <div id="segment-content" class="segment">  <!-- segment-content -->
- <div class="container">  <!-- container -->
-            <div class="row">
-             <div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
 
-                    <div class="col-12">
 
-                        
-                    </div>
+  {% include navbar.html %}
 
-</div>
+  <div id="segment-content" class="segment">
+    <!-- segment-content -->
+    <div class="container">
+      <!-- container -->
+      <div class="row">
+        <div class="inner-wrapper">
+          <!-- CONTENT CONTENT -->
 
-    </div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
 
-    </div>  <!-- /segment-content -->
 
-{% include footer.html %}
+          <div class="col-12">
+
+            <b id="ig-title" style="visibility: hidden">TBD</b>
+
+            <h2>Publication (Version) History</h2>
+
+            <div id="intro"></div>
+
+            <!-- ============CONTENT CONTENT=============== -->
+
+            <div id="history-data">see <a href="http://chmed16af.emediplan.ch/history.html">History of published
+                Implemenation Guides</a></div>
+            <style>
+              #history-data table td {
+                padding-right: 1em;
+              }
+            </style>
+
+
+            <span id="ig-footer" style="visibility: hidden">TBD </span>
+
+
+          </div>
+
+
+        </div>
+
+      </div> <!-- /inner-wrapper -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+  </div> <!-- /segment-content -->
+
+  {% include footer.html %}
+
+  <!-- Include in the page -->
+  <script type="text/javascript">
+  //<![CDATA[
+    $.getJSON("../package-list.json", function (json) {
+      load(JSON.stringify(json));
+    }).fail(function () {
+      $.getJSON("./package-list.json", function (json) {
+        load(JSON.stringify(json));
+      }).fail(function () {
+        console.log("./package-list.json failed not on canonical home");
+      });
+      console.log("../package-list.json failed (not a history ig)");
+    });
+  //]]>
+  </script>
+  
 </body>
+
 </html>

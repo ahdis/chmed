@@ -12,10 +12,19 @@
      "current" : true
     }, 
     {
+     "version" : "0.2.0",  
+     "date" : "2019-06-11", 
+     "desc" : "eMediplan CHMED16AF Implementation Guide (R4)",   
+     "path" : "http://chmed16af.emediplan.ch/fhir",   
+     "status" : "draft",   
+     "sequence" : "STU1",
+     "fhirVersion" : "4.0.0"
+    }, 
+    {
      "version" : "0.1.0",  
      "date" : "2017-05-17", 
-     "desc" : "eMediplan CHMED16AF Implementation Guide (Release 3)",   
-     "path" : "http://chmed16af.emediplan.ch/0.1.0",   
+     "desc" : "eMediplan CHMED16AF Implementation Guide (STU3)",   
+     "path" : "http://chmed16af.emediplan.ch/fhir/0.1.0",   
      "status" : "draft",   
      "sequence" : "STU1",
      "fhirVersion" : "3.0.1"

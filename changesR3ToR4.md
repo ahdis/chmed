@@ -23,16 +23,4 @@
     2. adapted https://github.com/HL7/fhir-ig-history-template to use javascript instead of cfml, workaround for cors issued with current build to redirect manual point to the canonical history page http://chmed16af.emediplan.ch/fhir/history.html if package-list.json cannot be reslved
 - Fixed Bundle.entry[1].resource.subject.reference	error with pull request    
 - migrated to version 0.2.0
-
-Open Issues:
-<<<<<<< HEAD
-- TODO: verify which Elements have been added in STU3 to Medicastion* and which should be set to 0 according to CHMED16AF
-=======
-
-1. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle.entry[1].resource.subject.reference	error	Unable to resolve the target of the reference in the bundle (Composition Subject) -> fixed will pull request 
-
-
-2. TODO: Bundle/chmed16af-mp-bundle-s01: Bundle	error	A document must have an identifier with a system and a value [(type = 'document') implies (identifier.system.exists() and identifier.value.exists())]
-
-how to do that when you genarte a document on demand? check the spec if identifiere is really required
->>>>>>> af9ca5be71cbcdaa8c1ac5ac75a60884efbd84a0
+- publication of 0.2.0

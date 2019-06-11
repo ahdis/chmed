@@ -12,21 +12,18 @@ Extending the CHMED16A format to a FHIR based definition (CHMED16AF) has the fol
 
 The CHEMD16AF format can bei either in XML or JSON format. However both are too big in size to be exchange in a qrcode. For this a shortened notation [CHMED16AQ](qrcode.html) has be developed similar to the work of HL7 Germany - [Ultrakurzformat Patientenbezogener Medikationsplan](http://wiki.hl7.de/index.php?title=IG:Ultrakurzformat_Patientenbezogener_Medikationsplan)
 
+
+
 ## building the Implementation Guide
 The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder).
 
 the Implementation Guide can be built also from the command line:
 
 ```
-wget http://build.fhir.org/org.hl7.fhir.igpublisher.jar -O org.hl7.fhir.igpublisher.jar
+wget https://github.com/FHIR/latest-ig-publisher/raw/master/org.hl7.fhir.publisher.jar -O org.hl7.fhir.igpublisher.jar
 java -jar org.hl7.fhir.igpublisher.jar -ig ig.json
 
 ```
-
-## open issues
-
-slicing on the Observation/Condition based on profiles is not yet supported
-https://chat.fhir.org/#narrow/stream/99-IG-creation/topic/discriminators.20based.20on.20profiles.20is.20not.20yet.20supported
 
 
 ## source
@@ -39,6 +36,6 @@ ncftpput -R -f ../ncftp.cfg / ./
 ```
 
 ```
-zum download version 0.1.0
+download version 0.1.0
 ncftpget -R -f ../ncftp.cfg . /0.1.0
 ```

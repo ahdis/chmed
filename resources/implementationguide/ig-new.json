@@ -6,6 +6,14 @@
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/resources"
   },
   {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/maps0.1.0to0.2.0"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/maps0.2.0to0.1.0"
+  },
+  {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
   }],
@@ -491,6 +499,126 @@
       },
       "name" : "ValueSet Risks Category",
       "description" : "ValueSet Risks Category",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/BackboneElement0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Bundle0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Composition0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/DomainResource0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Element0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Extension0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/MedicationStatement0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Meta0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Patient0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Resource0.1.0to0.2.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/BackboneElement0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Bundle0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Composition0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/DomainResource0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Element0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Extension0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/MedicationStatement0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Meta0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Patient0.2.0to0.1.0"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureMap/Resource0.2.0to0.1.0"
+      },
       "exampleBoolean" : false
     }],
     "page" : {

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="Resource0.1.0to0.2.0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/Resource0.1.0to0.2.0&quot; = &quot;ConversionForResource&quot;
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Resource&quot; as target
+
+imports &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0&quot;
+
+group Resource(source src : Resource, target tgt : Resource) {
+  src.id as v -&gt; tgt.id = v &quot;Resource-id&quot;;
+  src.meta as v -&gt; tgt.meta = v &quot;Resource-meta&quot;;
+  src.implicitRules as v -&gt; tgt.implicitRules = v &quot;Resource-implicitRules&quot;;
+  src.language as v -&gt; tgt.language = v &quot;Resource-language&quot;;
+}
+
+</pre></div>
+  </text>
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureMap/Resource0.1.0to0.2.0"/>
+  <version value="0.2.0"/>
+  <name value="ConversionForResource"/>
+  <title value="Conversion for Resource"/>
+  <status value="active"/>
+  <date value="2019-06-25T15:21:44+02:00"/>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+    <mode value="source"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+    <mode value="target"/>
+  </structure>
+  <import value="http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0"/>
+  <group>
+    <name value="Resource"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="Resource"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Resource"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="Resource-id"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="Resource-meta"/>
+      <source>
+        <context value="src"/>
+        <element value="meta"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="meta"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="Resource-implicitRules"/>
+      <source>
+        <context value="src"/>
+        <element value="implicitRules"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="implicitRules"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="Resource-language"/>
+      <source>
+        <context value="src"/>
+        <element value="language"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="language"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

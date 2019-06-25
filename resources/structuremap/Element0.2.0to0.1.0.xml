@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="Element0.2.0to0.1.0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/Element0.2.0to0.1.0&quot; = &quot;ConversionForElement&quot;
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/Element&quot; as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Element&quot; as target
+
+imports &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/*0.2.0to0.1.0&quot;
+
+group Element(source src : Element, target tgt : Element) {
+  src.id as v -&gt; tgt.id = v &quot;Element-id&quot;;
+  src.extension where url.startsWith('http://hl7.org/fhir/3.0/StructureDefinition').not() as v -&gt; tgt.extension = v &quot;Element-extensions&quot;;
+}
+
+</pre></div>
+  </text>
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureMap/Element0.2.0to0.1.0"/>
+  <version value="0.2.0"/>
+  <name value="ConversionForElement"/>
+  <title value="Conversion for Element"/>
+  <status value="active"/>
+  <date value="2019-06-25T15:21:44+02:00"/>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Element"/>
+    <mode value="source"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Element"/>
+    <mode value="target"/>
+  </structure>
+  <import value="http://chmed16af.emediplan.ch/fhir/StructureMap/*0.2.0to0.1.0"/>
+  <group>
+    <name value="Element"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="Element"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Element"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="Element-id"/>
+      <source>
+        <context value="src"/>
+        <element value="id"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="id"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="Element-extensions"/>
+      <source>
+        <context value="src"/>
+        <element value="extension"/>
+        <condition value="url.startsWith(&#39;http://hl7.org/fhir/3.0/StructureDefinition&#39;).not() as v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

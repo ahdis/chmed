@@ -1,0 +1,24 @@
+map "http://chmed16af.emediplan.ch/fhir/StructureMap/MedicationStatement0.1.0to0.2.0" = "Conversion for MedicationStatement"
+
+uses "http://hl7.org/fhir/StructureDefinition/MedicationStatement" alias MedicationStatement as source
+uses "http://hl7.org/fhir/StructureDefinition/MedicationStatement" alias MedicationStatement as target
+
+imports "http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0"
+
+group MedicationStatement(source src : MedicationStatement, target tgt : MedicationStatement) extends DomainResource {
+  src.identifier as v ->  tgt.identifier = v;
+  src.basedOn as v ->  tgt.basedOn = v;
+  src.partOf as v ->  tgt.partOf = v;
+  src.context as v ->  tgt.context = v;
+  src.category as v ->  tgt.category = v;
+  src.medication as v ->  tgt.medication = v;
+  src.effective as v ->   src.effective = v;
+  src.dateAsserted as v ->  tgt.dateAsserted = v;
+  src.informationSource as v ->  tgt.informationSource = v;
+  src.subject as v ->  tgt.subject = v;
+  src.derivedFrom as v ->  tgt.derivedFrom = v;
+  src.reasonCode as v ->  tgt.reasonCode = v;
+  src.reasonReference as v ->  tgt.reasonReference = v;
+  src.note as v ->  tgt.note = v;
+  src.dosage as v ->  tgt.dosage = v;
+}

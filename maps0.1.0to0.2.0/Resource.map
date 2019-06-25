@@ -1,0 +1,14 @@
+map "http://chmed16af.emediplan.ch/fhir/StructureMap/Resource0.1.0to0.2.0" = "Conversion for Resource"
+
+uses "http://hl7.org/fhir/StructureDefinition/Resource" as source
+uses "http://hl7.org/fhir/StructureDefinition/Resource" as target
+
+imports "http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0"
+
+group Resource(source src : Resource, target tgt : Resource) {
+  src.id as v -> tgt.id  = v "Resource-id";
+  src.meta as v -> tgt.meta  = v "Resource-meta";
+  src.implicitRules as v -> tgt.implicitRules = v "Resource-implicitRules";
+  src.language as v -> tgt.language  = v "Resource-language";
+}
+

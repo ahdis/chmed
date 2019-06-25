@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="DomainResource0.1.0to0.2.0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/DomainResource0.1.0to0.2.0&quot; = &quot;ConversionForDomainResource&quot;
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/DomainResource&quot; as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/DomainResource&quot; as target
+
+imports &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0&quot;
+
+group DomainResource(source src : DomainResource, target tgt : DomainResource) extends Resource {
+  src.text as v -&gt; tgt.text = v;
+  src.contained as v -&gt; tgt.contained = v;
+  src.extension as v where (url.startsWith('http://chmed16af.emediplan.ch/fhir/StructureDefinition/') and url.startsWith('http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver').not()) -&gt; tgt.extension = create('Extension') as e then extensionPrivateField(v, e) &quot;SettingPrivatefields&quot;;
+  src.extension as v where (url.startsWith('http://chmed16af.emediplan.ch/fhir/StructureDefinition/') and url.startsWith('http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver').not()).not() -&gt; tgt.extension = v;
+  src.modifierExtension as v -&gt; tgt.modifierExtension = v;
+}
+
+group extensionPrivateField(source src : Extension, target tgt : Extension) {
+  src.url as v -&gt;  tgt.url = 'http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield',  tgt.extension = create('Extension') as e then extensionPrivateFieldName(v, e) &quot;SettingPrivatefieldName&quot;;
+  src.value as v -&gt; tgt.extension = create('Extension') as e then extensionPrivateFieldValue(v, e) &quot;SettingPrivatefieldValue&quot;;
+}
+
+group extensionPrivateFieldName(source src : uri, target tgt : Extension) {
+  src as v -&gt;  tgt.url = 'name',  tgt.value = evaluate(v&quot;v.substring(55)&quot;) &quot;settingName&quot;;
+}
+
+group extensionPrivateFieldValue(source src : string, target tgt : Extension) {
+  src as v -&gt;  tgt.url = 'value',  tgt.value = v &quot;settingValue&quot;;
+}
+
+</pre></div>
+  </text>
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureMap/DomainResource0.1.0to0.2.0"/>
+  <version value="0.2.0"/>
+  <name value="ConversionForDomainResource"/>
+  <title value="Conversion for DomainResource"/>
+  <status value="active"/>
+  <date value="2019-06-25T15:21:44+02:00"/>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+    <mode value="source"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+    <mode value="target"/>
+  </structure>
+  <import value="http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0"/>
+  <group>
+    <name value="DomainResource"/>
+    <extends value="Resource"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="DomainResource"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="DomainResource"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="text"/>
+      <source>
+        <context value="src"/>
+        <element value="text"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="text"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="contained"/>
+      <source>
+        <context value="src"/>
+        <element value="contained"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="contained"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="SettingPrivatefields"/>
+      <source>
+        <context value="src"/>
+        <element value="extension"/>
+        <variable value="v"/>
+        <condition value="(url.startsWith(&#39;http://chmed16af.emediplan.ch/fhir/StructureDefinition/&#39;) and url.startsWith(&#39;http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver&#39;).not())"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="e"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Extension"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="extensionPrivateField"/>
+        <variable value="v"/>
+        <variable value="e"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="extension"/>
+      <source>
+        <context value="src"/>
+        <element value="extension"/>
+        <variable value="v"/>
+        <condition value="(url.startsWith(&#39;http://chmed16af.emediplan.ch/fhir/StructureDefinition/&#39;) and url.startsWith(&#39;http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-receiver&#39;).not()).not()"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="modifierExtension"/>
+      <source>
+        <context value="src"/>
+        <element value="modifierExtension"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="modifierExtension"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="extensionPrivateField"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="Extension"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Extension"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="SettingPrivatefieldName"/>
+      <source>
+        <context value="src"/>
+        <element value="url"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="url"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="e"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Extension"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="extensionPrivateFieldName"/>
+        <variable value="v"/>
+        <variable value="e"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="SettingPrivatefieldValue"/>
+      <source>
+        <context value="src"/>
+        <element value="value"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="extension"/>
+        <variable value="e"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Extension"/>
+        </parameter>
+      </target>
+      <dependent>
+        <name value="extensionPrivateFieldValue"/>
+        <variable value="v"/>
+        <variable value="e"/>
+      </dependent>
+    </rule>
+  </group>
+  <group>
+    <name value="extensionPrivateFieldName"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="uri"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Extension"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="settingName"/>
+      <source>
+        <context value="src"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="url"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="name"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <transform value="evaluate"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+        <parameter>
+          <valueString value="v.substring(55)"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="extensionPrivateFieldValue"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="string"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Extension"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="settingValue"/>
+      <source>
+        <context value="src"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="url"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="value"/>
+        </parameter>
+      </target>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="value"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

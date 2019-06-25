@@ -1,0 +1,50 @@
+map "http://chmed16af.emediplan.ch/fhir/StructureMap/Bundle0.2.0to0.1.0" = "Conversion for DomainResource"
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+
+imports "http://chmed16af.emediplan.ch/fhir/StructureMap/*0.2.0to0.1.0"
+
+group Bundle(source src : Bundle, target tgt : Bundle) extends Resource <<type+>> {
+  src.identifier as v -> tgt.identifier = v;
+  src.type as v -> tgt.type = v;
+  src.total as v -> tgt.total = v;
+  src.link as vs0 -> tgt.link as vt0 then link(vs0, vt0);
+  src.entry as vs0 -> tgt.entry as vt0 then entry(vs0, vt0);
+  src.signature as v -> tgt.signature = v;
+}
+
+group link(source src, target tgt) extends BackboneElement {
+  src.relation as v -> tgt.relation = v;
+  src.url as v -> tgt.url = v;
+}
+
+group entry(source src, target tgt) extends BackboneElement {
+  src.fullUrl as v-> tgt.fullUrl = v;
+  src.resource as v-> tgt.resource = v;
+  src.search as vs0 -> tgt.search as vt0 then search(vs0, vt0);
+  src.request as vs0 -> tgt.request as vt0 then request(vs0, vt0);
+  src.response as vs0 -> tgt.response as vt0 then response(vs0, vt0);
+}
+
+group search(source src, target tgt) extends BackboneElement {
+  src.mode as v -> tgt.mode = v;
+  src.score as v -> tgt.score = v;
+}
+
+group request(source src, target tgt) extends BackboneElement {
+  src.method as v -> tgt.method = v;
+  src.url as v -> tgt.url = v;
+  src.ifNoneMatch as v -> tgt.ifNoneMatch = v;
+  src.ifModifiedSince as v -> tgt.ifModifiedSince = v;
+  src.ifMatch as v -> tgt.ifMatch = v;
+  src.ifNoneExist as v -> tgt.ifNoneExist = v;
+}
+
+group response(source src, target tgt) extends BackboneElement {
+  src.status as v -> tgt.status = v;
+  src.location as v -> tgt.location = v;
+  src.etag as v -> tgt.etag = v;
+  src.lastModified as v -> tgt.lastModified = v;
+  src.outcome as v -> tgt.outcome = v;
+}

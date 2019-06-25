@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="Composition0.1.0to0.2.0"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><pre>map &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/Composition0.1.0to0.2.0&quot; = &quot;ConversionForDomainResource&quot;
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/Composition&quot; alias Composition as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Composition&quot; alias Composition as target
+
+imports &quot;http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0&quot;
+
+group Composition(source src : Composition, target tgt : Composition) extends DomainResource {
+  src.identifier as v -&gt; tgt.identifier = v;
+  src.status as v -&gt; tgt.status = v;
+  src.type as v -&gt; tgt.type = v;
+  src.category as v -&gt; tgt.class = v;
+  src.subject as v -&gt; tgt.subject = v;
+  src.encounter as v -&gt; tgt.encounter = v;
+  src.date as v -&gt; tgt.date = v;
+  src.author as v -&gt; tgt.author = v;
+  src.title as v -&gt; tgt.title = v;
+  src.confidentiality as v -&gt; tgt.confidentiality = v;
+  src.attester as vs0 -&gt; tgt.attester as vt0 then attester(vs0, vt0);
+  src.custodian as v -&gt; tgt.custodian = v;
+  src.relatesTo as vs0 -&gt; tgt.relatesTo as vt0 then relatesTo(vs0, vt0);
+  src.event as vs0 -&gt; tgt.event as vt0 then event(vs0, vt0);
+  src.section as vs0 -&gt; tgt.section as vt0 then section(vs0, vt0);
+}
+
+group attester(source src, target tgt) extends BackboneElement {
+  src.mode as v -&gt; tgt.mode = v;
+  src.time as v -&gt; tgt.time = v;
+  src.party as v -&gt; tgt.party = v;
+}
+
+group relatesTo(source src, target tgt) extends BackboneElement {
+  src.code as v -&gt; tgt.code = v;
+  src.target as v -&gt; src.target = v;
+}
+
+group event(source src, target tgt) extends BackboneElement {
+  src.code as v -&gt; tgt.code = v;
+  src.period as v -&gt; tgt.period = v;
+  src.detail as v -&gt; tgt.detail = v;
+}
+
+group section(source src, target tgt) extends BackboneElement {
+  src.title as v -&gt; tgt.title = v;
+  src.code as v -&gt; tgt.code = v;
+  src.text as v -&gt; tgt.text = v;
+  src.mode as v -&gt; tgt.mode = v;
+  src.orderedBy as v -&gt; tgt.orderedBy = v;
+  src.entry as v -&gt; tgt.entry = v;
+  src.emptyReason as v -&gt; tgt.emptyReason = v;
+  src.section as vs0 -&gt; tgt.section as vt0 then section(vs0, vt0);
+}
+
+</pre></div>
+  </text>
+  <url value="http://chmed16af.emediplan.ch/fhir/StructureMap/Composition0.1.0to0.2.0"/>
+  <version value="0.2.0"/>
+  <name value="ConversionForDomainResource"/>
+  <title value="Conversion for DomainResource"/>
+  <status value="active"/>
+  <date value="2019-06-25T15:21:44+02:00"/>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <mode value="source"/>
+    <alias value="Composition"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <mode value="target"/>
+    <alias value="Composition"/>
+  </structure>
+  <import value="http://chmed16af.emediplan.ch/fhir/StructureMap/*0.1.0to0.2.0"/>
+  <group>
+    <name value="Composition"/>
+    <extends value="DomainResource"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="Composition"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Composition"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="identifier"/>
+      <source>
+        <context value="src"/>
+        <element value="identifier"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="status"/>
+      <source>
+        <context value="src"/>
+        <element value="status"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="status"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="type"/>
+      <source>
+        <context value="src"/>
+        <element value="type"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="category"/>
+      <source>
+        <context value="src"/>
+        <element value="category"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="class"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="subject"/>
+      <source>
+        <context value="src"/>
+        <element value="subject"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="subject"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="encounter"/>
+      <source>
+        <context value="src"/>
+        <element value="encounter"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="encounter"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="date"/>
+      <source>
+        <context value="src"/>
+        <element value="date"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="date"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="author"/>
+      <source>
+        <context value="src"/>
+        <element value="author"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="author"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="title"/>
+      <source>
+        <context value="src"/>
+        <element value="title"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="title"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="confidentiality"/>
+      <source>
+        <context value="src"/>
+        <element value="confidentiality"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="confidentiality"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="attester"/>
+      <source>
+        <context value="src"/>
+        <element value="attester"/>
+        <variable value="vs0"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="attester"/>
+        <variable value="vt0"/>
+      </target>
+      <dependent>
+        <name value="attester"/>
+        <variable value="vs0"/>
+        <variable value="vt0"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="custodian"/>
+      <source>
+        <context value="src"/>
+        <element value="custodian"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="custodian"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="relatesTo"/>
+      <source>
+        <context value="src"/>
+        <element value="relatesTo"/>
+        <variable value="vs0"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="relatesTo"/>
+        <variable value="vt0"/>
+      </target>
+      <dependent>
+        <name value="relatesTo"/>
+        <variable value="vs0"/>
+        <variable value="vt0"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="event"/>
+      <source>
+        <context value="src"/>
+        <element value="event"/>
+        <variable value="vs0"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="event"/>
+        <variable value="vt0"/>
+      </target>
+      <dependent>
+        <name value="event"/>
+        <variable value="vs0"/>
+        <variable value="vt0"/>
+      </dependent>
+    </rule>
+    <rule>
+      <name value="section"/>
+      <source>
+        <context value="src"/>
+        <element value="section"/>
+        <variable value="vs0"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="section"/>
+        <variable value="vt0"/>
+      </target>
+      <dependent>
+        <name value="section"/>
+        <variable value="vs0"/>
+        <variable value="vt0"/>
+      </dependent>
+    </rule>
+  </group>
+  <group>
+    <name value="attester"/>
+    <extends value="BackboneElement"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="mode"/>
+      <source>
+        <context value="src"/>
+        <element value="mode"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="mode"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="time"/>
+      <source>
+        <context value="src"/>
+        <element value="time"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="time"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="party"/>
+      <source>
+        <context value="src"/>
+        <element value="party"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="party"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="relatesTo"/>
+    <extends value="BackboneElement"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="code"/>
+      <source>
+        <context value="src"/>
+        <element value="code"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="target"/>
+      <source>
+        <context value="src"/>
+        <element value="target"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="src"/>
+        <contextType value="variable"/>
+        <element value="target"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="event"/>
+    <extends value="BackboneElement"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="code"/>
+      <source>
+        <context value="src"/>
+        <element value="code"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="period"/>
+      <source>
+        <context value="src"/>
+        <element value="period"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="period"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="detail"/>
+      <source>
+        <context value="src"/>
+        <element value="detail"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="detail"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+  <group>
+    <name value="section"/>
+    <extends value="BackboneElement"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="title"/>
+      <source>
+        <context value="src"/>
+        <element value="title"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="title"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="code"/>
+      <source>
+        <context value="src"/>
+        <element value="code"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="code"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="text"/>
+      <source>
+        <context value="src"/>
+        <element value="text"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="text"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="mode"/>
+      <source>
+        <context value="src"/>
+        <element value="mode"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="mode"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="orderedBy"/>
+      <source>
+        <context value="src"/>
+        <element value="orderedBy"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="orderedBy"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="entry"/>
+      <source>
+        <context value="src"/>
+        <element value="entry"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="emptyReason"/>
+      <source>
+        <context value="src"/>
+        <element value="emptyReason"/>
+        <variable value="v"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="emptyReason"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="v"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="section"/>
+      <source>
+        <context value="src"/>
+        <element value="section"/>
+        <variable value="vs0"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="section"/>
+        <variable value="vt0"/>
+      </target>
+      <dependent>
+        <name value="section"/>
+        <variable value="vs0"/>
+        <variable value="vt0"/>
+      </dependent>
+    </rule>
+  </group>
+</StructureMap>

@@ -1,0 +1,53 @@
+map "http://chmed16af.emediplan.ch/fhir/StructureMap/Composition0.2.0to0.1.0" = "Conversion for DomainResource"
+
+uses "http://hl7.org/fhir/StructureDefinition/Composition" alias Composition as source
+uses "http://hl7.org/fhir/StructureDefinition/Composition" alias Composition as target
+
+imports "http://chmed16af.emediplan.ch/fhir/StructureMap/*0.2.0to0.1.0"
+
+group Composition(source src : Composition, target tgt : Composition) extends DomainResource {
+  src.identifier as v -> tgt.identifier = v;
+  src.status as v -> tgt.status = v;
+  src.type as v -> tgt.type = v;
+  src.category as v -> tgt.class = v;
+  src.subject as v -> tgt.subject = v;
+  src.encounter as v -> tgt.encounter = v;
+  src.date as v -> tgt.date = v;
+  src.author as v -> tgt.author = v;
+  src.title as v -> tgt.title = v;
+  src.confidentiality as v -> tgt.confidentiality = v;
+  src.attester as vs0 -> tgt.attester as vt0 then attester(vs0, vt0);
+  src.custodian as v -> tgt.custodian = v;
+  src.relatesTo as vs0 -> tgt.relatesTo as vt0 then relatesTo(vs0, vt0);
+  src.event as vs0 -> tgt.event as vt0 then event(vs0, vt0);
+  src.section as vs0 -> tgt.section as vt0 then section(vs0, vt0);
+}
+
+group attester(source src, target tgt) extends BackboneElement {
+  src.mode as v -> tgt.mode = v;
+  src.time as v -> tgt.time = v;
+  src.party as v -> tgt.party = v;
+}
+
+group relatesTo(source src, target tgt) extends BackboneElement {
+  src.code as v -> tgt.code = v;
+  src.target as v -> src.target = v;
+}
+
+group event(source src, target tgt) extends BackboneElement {
+  src.code as v -> tgt.code = v;
+  src.period as v -> tgt.period = v;
+  src.detail as v -> tgt.detail = v;
+}
+
+group section(source src, target tgt) extends BackboneElement {
+  src.title as v -> tgt.title = v;
+  src.code as v -> tgt.code = v;
+  src.text as v -> tgt.text = v;
+  src.mode as v -> tgt.mode = v;
+  src.orderedBy as v -> tgt.orderedBy = v;
+  src.entry as v -> tgt.entry = v;
+  src.emptyReason as v -> tgt.emptyReason = v;
+  src.section as vs0 -> tgt.section as vt0 then section(vs0, vt0);
+}
+

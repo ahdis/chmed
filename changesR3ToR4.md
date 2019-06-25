@@ -24,3 +24,12 @@
 - Fixed Bundle.entry[1].resource.subject.reference	error with pull request    
 - migrated to version 0.2.0
 - publication of 0.2.0
+- StructureMaps are provided to transform from 0.1.0 to 0.2.0 and back. the original are in the maps0.1.0 and maps0.2.0 directory. With a special ig publisher edition this maps are converted to StructureMaps. To faciliate online build the StructureMaps are then copied.
+
+```
+cp ./output/StructureMap-*.xml ./resources/structuremap/
+cd ./resources/structuremap/
+rename -e 's/StructureMap-//' *.xml
+cd ..
+cd ..
+```

@@ -94,7 +94,7 @@
         <reference value="Composition/chmed16af-rx-composition-s01"/>
       </reference>
       <exampleCanonical value="StructureDefinition/chmed16af-rx-composition"/>
-    </resource>    
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed16af-mp-composition"/>
@@ -481,6 +481,126 @@
       </reference>
       <name value="ValueSet Risks Category"/>
       <description value="ValueSet Risks Category"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/BackboneElement0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Bundle0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Composition0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/DomainResource0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Element0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Extension0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/MedicationStatement0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Meta0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Patient0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Resource0.1.0to0.2.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/BackboneElement0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Bundle0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Composition0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/DomainResource0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Element0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Extension0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/MedicationStatement0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Meta0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Patient0.2.0to0.1.0"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureMap/Resource0.2.0to0.1.0"/>
+      </reference>
       <exampleBoolean value="false"/>
     </resource>
     <page>

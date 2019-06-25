@@ -1,0 +1,45 @@
+map "http://chmed16af.emediplan.ch/fhir/StructureMap/Patient0.2.0to0.1.0" = "mapping private field extensions"
+
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as source
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
+
+imports "http://chmed16af.emediplan.ch/fhir/StructureMap/*0.2.0to0.1.0"
+
+group Patient(source src : Patient, target tgt : Patient) extends DomainResource {
+  src.identifier as v -> tgt.identifier = v;
+  src.active as v -> tgt.active = v;
+  src.name as v -> tgt.name = v;
+  src.telecom as v -> tgt.telecom = v;
+  src.gender as v -> tgt.gender = v;
+  src.birthDate as v -> tgt.birthDate = v;
+  src.deceased as v -> tgt.deceased = v;
+  src.address as v -> tgt.address = v;
+  src.maritalStatus as v -> tgt.maritalStatus = v;
+  src.multipleBirth as v -> tgt.multipleBirth = v;
+  src.photo as v -> tgt.photo = v;
+  src.contact as vs0 -> tgt.contact as vt0 then contact(vs0, vt0);
+  src.communication as vs0 -> tgt.communication as vt0 then communication(vs0, vt0);
+  src.generalPractitioner as v -> tgt.generalPractitioner = v;
+  src.managingOrganization as v -> tgt.managingOrganization = v;
+  src.link as vs0 -> tgt.link as vt0 then link(vs0, vt0);
+}
+
+group contact(source src, target tgt) extends BackboneElement {
+  src.relationship as v -> tgt.relationship = v;
+  src.name as v -> tgt.name = v;
+  src.telecom as v -> tgt.telecom = v;
+  src.address as v -> tgt.address = v;
+  src.gender as v -> tgt.gender = v;
+  src.organization as v -> tgt.organization = v;
+  src.period as v -> tgt.period = v;
+}
+
+group communication(source src, target tgt) extends BackboneElement {
+  src.language as v -> tgt.language = v;
+  src.preferred as v -> tgt.preferred = v;
+}
+
+group link(source src, target tgt) extends BackboneElement {
+  src.other as v -> tgt.other = v;
+  src.type as v -> tgt.type = v;
+}

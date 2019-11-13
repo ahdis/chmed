@@ -242,7 +242,7 @@
 		<element id="Composition.section.code.coding.code:sectionmed">
 			<path value="Composition.section.code.coding.code"/>
 			<min value="1"/>
-			<fixedCode value="77604-7"/>
+			<fixedCode value="10160-0"/>
 		</element>
 		<element id="Composition.section.code.coding.display:sectionmed">
 			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -250,7 +250,7 @@
 			</extension>
 			<path value="Composition.section.code.coding.display"/>
 			<min value="1"/>
-			<fixedString value="History of medication use"/>
+			<fixedString value="Hx of medication use"/>
 		</element>
 		<element id="Composition.section.entry:sectionmed">
 			<path value="Composition.section.entry"/>

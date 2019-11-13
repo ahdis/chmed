@@ -338,7 +338,7 @@
          <type>
             <code value="code"/>
          </type>
-         <fixedCode value="77604-7"/>
+         <fixedCode value="10160-0"/>
       </element>
       <element id="Composition.section.code.coding.display:sectionmed">
          <path value="Composition.section.code.coding.display"/>
@@ -347,7 +347,7 @@
          <type>
             <code value="string"/>
          </type>
-         <fixedString value="History of medication use"/>
+         <fixedString value="Hx of medication use"/>
       </element>
       <element id="Composition.section.entry:sectionmed">
          <path value="Composition.section.entry"/>

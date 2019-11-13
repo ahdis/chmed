@@ -9,6 +9,7 @@
       <value value="urn:uuid:8a1d50f3-3f0c-471d-954d-dca1182dbcf3"/>
    </identifier>
    <type value="document"/>
+   <timestamp value="2019-05-29T15:00:54.948+02:00"/>
    <entry>
       <fullUrl value="http://localhost:8080/r4/Composition/3"/>
       <resource>

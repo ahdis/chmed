@@ -7,7 +7,7 @@
      "version" : "0.2.0",
      "desc" : "Continuous Integration Build (latest in version control)",
      "path" : "http://build.fhir.org/ig/ahdis/chmed16af",
-     "fhirVersion" : "4.0.0",  
+     "fhirVersion" : "4.0.1",  
      "status" : "ci-build",
      "current" : true
     }, 

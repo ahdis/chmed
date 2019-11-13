@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ch.chmed16af.emediplan-0.2.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/oliveregger/Documents/github/chmed16af/resources"/>
+    <valueString value="C:\Users\micha\Documents\GitHub\chmed16af\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/oliveregger/Documents/github/chmed16af/maps0.1.0to0.2.0"/>
+    <valueString value="C:\Users\micha\Documents\GitHub\chmed16af\maps0.1.0to0.2.0"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/oliveregger/Documents/github/chmed16af/maps0.2.0to0.1.0"/>
+    <valueString value="C:\Users\micha\Documents\GitHub\chmed16af\maps0.2.0to0.1.0"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/oliveregger/Documents/github/chmed16af/pages"/>
+    <valueString value="C:\Users\micha\Documents\GitHub\chmed16af\pages"/>
   </extension>
   <url value="http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.2.0"/>
   <version value="0.2.0"/>
@@ -29,8 +29,8 @@
   </contact>
   <packageId value="ch.chmed16af.emediplan"/>
   <license value="CC-BY-SA-4.0"/>
-  <fhirVersion value="4.0.0"/>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="4.0.1"/>
   <definition>
     <resource>
       <reference>

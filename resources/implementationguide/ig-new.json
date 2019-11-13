@@ -3,19 +3,19 @@
   "id" : "ch.chmed16af.emediplan-0.2.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/resources"
+    "valueString" : "C:\\Users\\micha\\Documents\\GitHub\\chmed16af\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/maps0.1.0to0.2.0"
+    "valueString" : "C:\\Users\\micha\\Documents\\GitHub\\chmed16af\\maps0.1.0to0.2.0"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/maps0.2.0to0.1.0"
+    "valueString" : "C:\\Users\\micha\\Documents\\GitHub\\chmed16af\\maps0.2.0to0.1.0"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/oliveregger/Documents/github/chmed16af/pages"
+    "valueString" : "C:\\Users\\micha\\Documents\\GitHub\\chmed16af\\pages"
   }],
   "url" : "http://chmed16af.emediplan.ch/fhir/ImplementationGuide/ch.chmed16af.emediplan-0.2.0",
   "version" : "0.2.0",
@@ -32,8 +32,8 @@
   }],
   "packageId" : "ch.chmed16af.emediplan",
   "license" : "CC-BY-SA-4.0",
-  "fhirVersion" : ["4.0.0",
-  "4.0.0"],
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
   "definition" : {
     "resource" : [{
       "reference" : {

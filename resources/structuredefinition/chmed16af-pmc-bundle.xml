@@ -16,7 +16,7 @@
       </telecom>
    </contact>
    <description value="Profile for poly medication check document. Swiss community pharmacies can offer a Polymedication Check (PMC) to patients on greater or equals four prescribed drugs taken over more then 3 months."/>
-   <fhirVersion value="4.0.0"/>
+   <fhirVersion value="4.0.1"/>
    <mapping>
       <identity value="CHMED16A"/>
       <uri value="http://emediplan.ch/chmed16a"/>

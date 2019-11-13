@@ -13,7 +13,7 @@
     </telecom>
   </contact>
   <description value="A prescription can be structured in a bundle according to the prescription bundle profile."/>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="CHMED16A"/>
     <uri value="http://emediplan.ch/chmed16a"/>

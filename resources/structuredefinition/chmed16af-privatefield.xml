@@ -14,7 +14,7 @@
       </telecom>
    </contact>
    <description value="Extension for private fields defined in Mediplan"/>
-   <fhirVersion value="4.0.0"/>
+   <fhirVersion value="4.0.1"/>
     <mapping>
         <identity value="rim"/>
         <uri value="http://hl7.org/v3"/>

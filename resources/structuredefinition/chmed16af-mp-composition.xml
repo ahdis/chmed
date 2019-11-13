@@ -16,7 +16,7 @@
 		</telecom>
 	</contact>
 	<description value="Profile for the Composition Resource of the medication plan."/>
-	<fhirVersion value="4.0.0"/>
+	<fhirVersion value="4.0.1"/>
 	<mapping>
 		<identity value="CHMED16A"/>
 		<uri value="http://emediplan.ch/chmed16a"/>

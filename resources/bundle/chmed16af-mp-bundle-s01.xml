@@ -68,8 +68,8 @@
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
-                     <code value="77604-7"/>
-                     <display value="History of medication use"/>
+                     <code value="10160-0"/>
+                     <display value="Hx of medication use"/>
                   </coding>
                </code>
                <entry>

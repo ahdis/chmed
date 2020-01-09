@@ -503,6 +503,12 @@
     },
     {
       "reference" : {
+        "reference" : "ConceptMap/unitcode-cdtyp9-to-ucum"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureMap/BackboneElement0.1.0to0.2.0"
       },
       "exampleBoolean" : false

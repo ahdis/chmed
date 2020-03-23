@@ -6,9 +6,7 @@
   "npm-name": "ch.chmed16af.emediplan",
   "paths": {
     "resources": [
-      "resources",
-      "maps0.1.0to0.2.0",
-      "maps0.2.0to0.1.0"
+      "resources"
     ],
     "pages": "pages",
     "temp": "temp",

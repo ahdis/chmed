@@ -12,6 +12,7 @@ chmed16a
 resources/Observation/bp.xml
 resources/StructureDefinition/bp.xml
 org.hl7.fhir.igpublisher.jar
+org.hl7.fhir.publisher.jar
 ig.ini
 resources/implementationguide/ig-expansion-parameters.json
 resources/implementationguide/ig-new.json

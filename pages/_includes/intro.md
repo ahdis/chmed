@@ -85,8 +85,8 @@ The medication section contains the entries for the current medications for pati
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes | 
 | dosage.route  | How drug should enter body | CodeableConect  | Medication.Roa |
-| dosage.doseQuantity  |Amount of medication per dose. | Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom |
-| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA |
+| dosage.doseAndRate.doseQuantity  |Amount of medication per dose | Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom |
+| dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
 [Profile for MedicationStatement](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
@@ -186,8 +186,8 @@ The medication section contains the entries for the current medications for pati
 | note  | Application Instructions  | Annotation  | Medication.AppInstr |
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys |
-| dosage.dose[x]  | Amount of medication per dose. | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.doTo) |
-| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA |
+| dosage.doseAndRate.dose[x]  | Amount of medication per dose | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.DoTo |
+| dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
 [Profile for MedicationStatmeent](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
@@ -245,7 +245,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth |
-| section | medications |  MedicationAdminstration | Medicaments | 
+| section | medications |  MedicationRequest | Medicaments | 
 | section | note |  - | Rmk | 
 
 [Profile for Prescription Composition](StructureDefinition-chmed20af-rx-composition.html)
@@ -288,8 +288,8 @@ The medication section contains the entries for the prescriped medications for t
 | note  | Application Instructions  | Annotation  |Medication.AppInstr |
 | dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | 
 | dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | 
-| dosage.dose[x]  | Amount of medication per dose. | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.doTo) |
-| dosage.maxDosePerPeriod  | Amount of medication per dose. | Ratio  | TakingTime.MA |
+| dosage.doseAndRate.dose[x]  | Amount of medication per dose | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.DoTo) |
+| dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 | dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | Medication  | Rep | 
 | dispenseRequest.quantity  | Number of package to be delivered  | Medication  | NbPack |
 | substitution.allowed  |  Medication is substitutable    | Medication  | Subs negated | 

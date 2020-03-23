@@ -1,0 +1,53 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-dosequantityto"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto"/>
+   <version value="0.1.0"/>
+   <name value="ExtensionDoseQuantityTo"/>
+   <title value="Extension to change dose quantity"/>
+   <status value="draft"/>
+   <date value="2018-10-03T06:52:18+02:00"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <fhirVersion value="4.0.1"/>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <context>
+      <type value="extension"/>
+      <expression value="Quantity"/>
+   </context>
+   <type value="Extension"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Extension">
+         <path value="Extension"/>
+         <short value="if during the period the dose has to changed linearly to this quantity"/>
+         <definition value="if during the period the dose has to changed linearly to this quantity"/>
+         <min value="0"/>
+         <max value="*"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Extension.extension">
+         <path value="Extension.extension"/>
+         <max value="0"/>
+      </element>
+      <element id="Extension.url">
+         <path value="Extension.url"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto"/>
+      </element>
+      <element id="Extension.valueQuantity">
+         <path value="Extension.valueQuantity"/>
+         <type>
+            <code value="Quantity"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>

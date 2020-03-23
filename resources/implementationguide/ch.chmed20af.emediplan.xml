@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ch.chmed20af.emediplan"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/ImplementationGuide/ch.chmed20af.emediplan"/>
+  <version value="0.3.0"/>
+  <name value="IgChMED20AF"/>
+  <title value="Implementation Guide CHMED20AF"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="IG eMediplan"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <packageId value="ch.mediplan.chmed20af"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-dosage"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-dosequantityto"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-mp-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pmc-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-rx-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-simplequantity"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/chmed20af-mp-bundle-s01"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example for MedicationPlan"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-bundle"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/chmed20af-pmc-bundle-s01"/>
+      </reference>
+      <name value="Poly Medication Check"/>
+      <description value="Example for Poly Medication Check"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-pmc-bundle"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/chmed20af-rx-bundle-s01"/>
+      </reference>
+      <name value="Prescription"/>
+      <description value="Example for Prescription"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-rx-bundle"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Composition/chmed20af-mp-composition-s01"/>
+      </reference>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Composition/chmed20af-pmc-composition-s01"/>
+      </reference>
+      <exampleCanonical value="StructureDefinition/chmed20af-pmc-composition"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Composition/chmed20af-rx-composition-s01"/>
+      </reference>
+      <exampleCanonical value="StructureDefinition/chmed20af-rx-composition"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-mp-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pmc-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pmc-questionnaireresponse"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/chmed20af-pmc-questionnaireresponse-s01"/>
+      </reference>
+      <name value="Example Questionnaire Response"/>
+      <description value="Example Questionnaire Response"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-pmc-questionnaireresponse"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/chmed20af-pmc-questionnaire"/>
+      </reference>
+      <name value="Example Questionnaire"/>
+      <description value="Example Questionnaire"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-rx-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-mp-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pmcrx-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-privatefield"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/chmed20af-mp-patient-s01"/>
+      </reference>
+      <name value="Patient MedicationPlan"/>
+      <description value="Example for a patient"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-patient"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/chmed20af-mp-patient-ext"/>
+      </reference>
+      <name value="Patient MedicationPlan with an extension"/>
+      <description value="Example for a patient with extensions"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-patient"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-practitioner"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/chmed20af-practitioner-s01"/>
+      </reference>
+      <name value="Practitioner MedicationPlan"/>
+      <description value="Example for a practitioner"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-practitioner"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-rx-medicationrequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationRequest/chmed20af-rx-medicationrequest-s01-1"/>
+      </reference>
+      <name value="MedicationRequest"/>
+      <description value="Example for a MedicationReqeust"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-rx-medicationrequest"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-1"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-2"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-3"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-4"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s02-3"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-1-diffrates-mathbera"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-2-multiple-meronem"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-3-clexane"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-3-marcoumar"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-4-spiricort"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-5-morphin"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt"/>
+      </reference>
+      <name value="MedicationStatement (MedicationPlan)"/>
+      <description value="Example for a MedicationStatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/chmed20af-mp-observation-s01-bodyheight"/>
+      </reference>
+      <name value="Bodyheight"/>
+      <description value="Example for specifiying body height"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/chmed20af-mp-observation-s01-bodyweight"/>
+      </reference>
+      <name value="Bodyweight"/>
+      <description value="Example for specifiying body weight"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/chmed20af-observation-s01-dateoflastmenustration"/>
+      </reference>
+      <name value="First day of last menstruation"/>
+      <description value="First day of last menstruation"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-obs-prematurebaby"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/chmed20af-observation-s01-prematurebaby"/>
+      </reference>
+      <name value="Premature baby"/>
+      <description value="Premature baby (&lt;=18 months)"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-obs-prematurebaby"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-obs-timeofgestation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-medication"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/chmed20af-observation-s01-timeofgestation"/>
+      </reference>
+      <name value="Premature baby"/>
+      <description value="Premature baby (&lt;=18 months)"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-obs-timeofgestation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-condition-risks"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-1"/>
+      </reference>
+      <name value="RiskRenealInsufficiencyLeight"/>
+      <description value=">Rsik Renal Insufficiency Leight"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-2"/>
+      </reference>
+      <name value="RiskLiverInsufficiencyExcluded"/>
+      <description value=">Risk Liver Insufficiency Excluded"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-3"/>
+      </reference>
+      <name value="RiskReproduction"/>
+      <description value=">Risk Reproduction"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-4"/>
+      </reference>
+      <name value="RiskCompetitiveAthleteExcluded"/>
+      <description value=">Risk Competitive Athlete Excluded"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-5"/>
+      </reference>
+      <name value="RiskDriverExcluded"/>
+      <description value=">Risk Driver Excluded"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/chmed20af-mp-condition-s01-6"/>
+      </reference>
+      <name value="RiskAllergies"/>
+      <description value=">Risk Allergies"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-receiver"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-cdtyp9"/>
+      </reference>
+      <name value="CodeSystem Code Typ 9"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-cdtyp26"/>
+      </reference>
+      <name value="CodeSystem Code Typ 26"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-risks-category"/>
+      </reference>
+      <name value="CodeSystem Code Risks Category"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-risks-cdscode"/>
+      </reference>
+      <name value="CodeSystem Code Risks CDSCODE"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-cdtyp9"/>
+      </reference>
+      <name value="ValueSet cdtyp9"/>
+      <description value="UnitCodes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-cdtyp26"/>
+      </reference>
+      <name value="ValueSet CDTYP26"/>
+      <description value="ROA (Route of administration)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-risks-cdscode"/>
+      </reference>
+      <name value="ValueSet Risks CDSCODE"/>
+      <description value="ValueSet Risks CDSCODE"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-risks-category"/>
+      </reference>
+      <name value="ValueSet Risks Category"/>
+      <description value="ValueSet Risks Category"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="Home Page"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="registry.html"/>
+        <title value="Registry"/>
+        <generation value="generated"/>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>

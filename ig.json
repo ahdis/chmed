@@ -1,9 +1,9 @@
 {
   "tool": "jekyll",
   "version": "4.0.1",
-  "fixed-business-version": "0.2.0",
+  "fixed-business-version": "0.3.0",
   "license": "CC-BY-SA-4.0",
-  "npm-name": "ch.chmed16af.emediplan",
+  "npm-name": "ch.chmed20af.emediplan",
   "paths": {
     "resources": [
       "resources"
@@ -60,8 +60,8 @@
       "template-base": "instance-template-vs.html"
     }
   },
-  "canonicalBase": "http://chmed16af.emediplan.ch/fhir",
-  "source": "implementationguide/ch.chmed16af.emediplan-0.2.0.xml",
+  "canonicalBase": "http://chmed20af.emediplan.ch/fhir",
+  "source": "implementationguide/ch.chmed20af.emediplan.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},
   "extraTemplates": [

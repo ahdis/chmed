@@ -1,0 +1,76 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-mp-medicationstatement-tt-2-multiple-meronem"/>
+   <meta>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medicationstatement"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml"> 2. MERONEM i.v. Trockensub 1 g 				Prd-Nr. 43582
+         <br/> Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen.
+         <br/> 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks 
+         <br/> &quot;Pos&quot;: [{					&quot;DtFrom&quot;: &quot;2017-09-05&quot;,					&quot;DtTo&quot;: &quot;2017-09-26&quot;,					&quot;CyDu&quot;: 604800,					&quot;InRes&quot;: 0,					&quot;TT&quot;: [{							&quot;Off&quot;: 28800,							&quot;Du&quot;: 1800,							&quot;DoFrom&quot;: 2.0						}, {							&quot;Off&quot;: 43200,							&quot;Du&quot;: 1800,							&quot;DoFrom&quot;: 2.0						}, {							&quot;Off&quot;: 64800,							&quot;Du&quot;: 1800,							&quot;DoFrom&quot;: 2.0						}					]				}			],			&quot;Unit&quot;: &quot;STK&quot;,			&quot;TkgRsn&quot;: &quot;Infektion&quot;,			&quot;Roa&quot;: &quot;IV&quot;,			&quot;Rep&quot;: 0,			&quot;Subs&quot;: 0,			&quot;NbPack&quot;: 1 
+      </div>
+   </text>
+   <contained>
+      <Medication xmlns="http://hl7.org/fhir">
+         <id value="cont4"/>
+         <meta>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+         </meta>
+         <code>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+               <code value="7680531050328"/>
+               <display value="MERONEM i.v. Trockensub 1 g"/>
+            </coding>
+         </code>
+      </Medication>
+   </contained>
+   <status value="active"/>
+   <medicationReference>
+      <reference value="#cont4"/>
+   </medicationReference>
+   <subject>
+      <reference value="Patient/chmed20af-mp-patient-s01"/>
+   </subject>
+   <informationSource>
+      <reference value="Practitioner/chmed20af-practitioner-s01"/>
+   </informationSource>
+   <reasonCode>
+      <text value="Infektion"/>
+   </reasonCode>
+   <dosage>
+      <timing>
+         <repeat>
+            <boundsPeriod>
+               <start value="2017-09-05"/>
+               <end value="2020-09-26"/>
+            </boundsPeriod>
+            <duration value="1800"/>
+            <durationUnit value="s"/>
+            <frequency value="3"/>
+            <period value="1"/>
+            <periodUnit value="wk"/>
+            <dayOfWeek value="tue"/>
+            <timeOfDay value="08:00:00"/>
+            <timeOfDay value="12:00:00"/>
+            <timeOfDay value="18:00:00"/>
+         </repeat>
+      </timing>
+      <route>
+         <coding>
+            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
+            <code value="IV"/>
+            <display value="intravenös (Infusion)"/>
+         </coding>
+      </route>
+      <doseAndRate>
+         <doseQuantity>
+            <value value="2"/>
+            <unit value="g"/>
+            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+            <code value="g"/>
+         </doseQuantity>
+      </doseAndRate>
+   </dosage>
+</MedicationStatement>

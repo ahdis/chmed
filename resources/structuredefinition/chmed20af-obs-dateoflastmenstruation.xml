@@ -1,0 +1,61 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-obs-dateoflastmenstruation"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+   <version value="0.1.0"/>
+   <name value="FirstDayOfLastMenstruation"/>
+   <title value="First day of last menstruation"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Oberservation for First day of last menstruation"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation">
+         <path value="Observation"/>
+         <short value="First day of last menstruation"/>
+         <definition value="This profile defines how to represent the first day of last menstruation."/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="Observation.code">
+         <path value="Observation.code"/>
+         <short value="First day of last menstruation"/>
+         <definition value="First day of last menstruation"/>
+         <min value="1"/>
+         <max value="1"/>
+         <patternCodeableConcept>
+            <coding>
+               <system value="http://snomed.info/sct" />
+               <code value="161713000" />
+            </coding>
+         </patternCodeableConcept>
+      </element>
+      <element id="Observation.value[x]">
+         <path value="Observation.value[x]"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="dateTime"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="MedicalData.DLstMen"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>

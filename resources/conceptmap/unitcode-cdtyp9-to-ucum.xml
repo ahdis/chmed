@@ -1,6 +1,6 @@
 <ConceptMap xmlns="http://hl7.org/fhir">
     <id value="unitcode-cdtyp9-to-ucum"/>
-    <url value="http://chmed16af.emediplan.ch/fhir/ConceptMap/unitcode-cdtyp9-to-ucum" />
+    <url value="http://chmed20af.emediplan.ch/fhir/ConceptMap/unitcode-cdtyp9-to-ucum" />
     <version value="0.1.0"/>
     <name value="UnitCodesCDTyp9ToUCUMMapping" />
     <title value="Unitcodes CDTyp9 to UCUM mapping"/>
@@ -22,10 +22,10 @@
         </coding>
     </jurisdiction>
     <copyright value="CC-BY-SA-4.0"/>
-    <sourceUri value="http://chmed16af.emediplan.ch/fhir/ValueSet/chmed16af-valueset-cdtyp9"/>
+    <sourceUri value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-cdtyp9"/>
     <targetUri value="http://terminology.hl7.org/ValueSet/ucum-common"/>
     <group>
-        <source value="http://chmed16af.emediplan.ch/fhir/CodeSystem/chmed16af-codesystem-cdtyp9"/>
+        <source value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
         <target value="http://unitsofmeasure.org"/>
         <element>
             <code value="E"/>

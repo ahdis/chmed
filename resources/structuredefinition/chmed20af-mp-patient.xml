@@ -1,0 +1,306 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-mp-patient"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
+   <version value="0.1.0"/>
+   <name value="PatientMedicationPlan"/>
+   <title value="Patient MedicationPlan"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Patient for MedicationPlan"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Patient"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Patient">
+         <path value="Patient"/>
+         <short value="Patient within Medication Plan"/>
+         <definition value="Patient within Medication Plan"/>
+         <min value="1"/>
+         <max value="1"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient"/>
+         </mapping>
+      </element>
+      <element id="Patient.extension">
+         <path value="Patient.extension" />
+         <slicing>
+            <discriminator>
+               <type value="value" />
+               <path value="url" />
+            </discriminator>
+            <rules value="open" />
+         </slicing>
+      </element>
+      <element id="Patient.extension:privatefield">
+         <path value="Patient.extension" />
+         <sliceName value="privatefield" />
+         <short value="Private fields for patient"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Extension" />
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Private Fields"/>
+         </mapping>
+      </element>
+      <element id="Patient.identifier">
+         <path value="Patient.identifier"/>
+         <definition value="Insurance card number for this patient."/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Patient.identifier.system">
+         <path value="Patient.identifier.system"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedUri value="urn:oid:2.16.756.5.30.1.123.100.1.1.1"/>
+      </element>
+      <element id="Patient.identifier.value">
+         <path value="Patient.identifier.value"/>
+         <short value="Insurance card number for this patient"/>
+         <min value="1"/>
+         <max value="1"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient.PatientId[Type=1]"/>
+         </mapping>
+      </element>
+      <element id="Patient.active">
+         <path value="Patient.active"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.name">
+         <path value="Patient.name"/>
+         <short value="Name for this patient"/>
+         <min value="0"/>
+         <max value="1"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="name.given = Patient.FName, name.family = Patient.LName"/>
+         </mapping>
+      </element>
+      <element id="Patient.telecom">
+         <path value="Patient.telecom"/>
+         <short value="telephone number"/>
+         <definition value="telephone number"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="ContactPoint"/>
+         </type>
+         <isSummary value="true"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient.Phone"/>
+         </mapping>
+      </element>
+      <element id="Patient.gender">
+         <path value="Patient.gender"/>
+         <short value="male | female | other | unknown"/>
+         <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <isSummary value="true"/>
+         <binding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+               <valueString value="AdministrativeGender"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+               <valueBoolean value="true"/>
+            </extension>
+            <strength value="required"/>
+            <description value="The gender of a person used for administrative purposes."/>
+            <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
+         </binding>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient.gender, male=1, female=2"/>
+         </mapping>
+      </element>
+      <element id="Patient.birthDate">
+         <path value="Patient.birthDate"/>
+         <short value="The date of birth for the individual"/>
+         <definition value="The date of birth for the individual."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="date"/>
+         </type>
+         <isSummary value="true"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient.BDt"/>
+         </mapping>
+      </element>
+      <element id="Patient.deceased[x]">
+         <path value="Patient.deceased[x]"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.address">
+         <path value="Patient.address"/>
+         <short value="Address for the patient"/>
+         <definition value="Address for the patient"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Address"/>
+         </type>
+         <isSummary value="true"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
+         </mapping>
+      </element>
+      <element id="Patient.maritalStatus">
+         <path value="Patient.maritalStatus"/>
+         <short value="Marital (civil) status of a patient"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.multipleBirth[x]">
+         <path value="Patient.multipleBirth[x]"/>
+         <short value="Whether patient is part of a multiple birth"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.photo">
+         <path value="Patient.photo"/>
+         <short value="Image of the patient"/>
+         <definition value="Image of the patient."/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.contact">
+         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+            <valueString value="Contact"/>
+         </extension>
+         <path value="Patient.contact"/>
+         <short value="A contact party (e.g. guardian, partner, friend) for the patient"/>
+         <min value="0"/>
+         <max value="0"/>
+         <type>
+            <code value="BackboneElement"/>
+         </type>
+      </element>
+      <element id="Patient.communication">
+         <path value="Patient.communication"/>
+         <short value="A list of Languages which may be used to communicate with the patient about his or her health"/>
+         <definition value="Languages which may be used to communicate with the patient about his or her health."/>
+         <comment value="If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required."/>
+         <requirements value="If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest."/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="BackboneElement"/>
+         </type>
+         <mapping>
+            <identity value="rim"/>
+            <map value="LanguageCommunication"/>
+         </mapping>
+         <mapping>
+            <identity value="cda"/>
+            <map value="patient.languageCommunication"/>
+         </mapping>
+      </element>
+      <element id="Patient.communication.language">
+         <path value="Patient.communication.language"/>
+         <short value="The language which can be used to communicate with the patient about his or her health"/>
+         <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English."/>
+         <comment value="The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type."/>
+         <requirements value="Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect."/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+         <binding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
+               <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+               <valueString value="Language"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+               <valueBoolean value="true"/>
+            </extension>
+            <strength value="extensible"/>
+            <description value="A human language."/>
+            <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+         </binding>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary"/>
+         </mapping>
+      </element>
+      <element id="Patient.communication.preferred">
+         <path value="Patient.communication.preferred"/>
+         <short value="Language preference indicator"/>
+         <definition value="Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="boolean"/>
+         </type>
+         <mapping>
+            <identity value="v2"/>
+            <map value="PID-15"/>
+         </mapping>
+         <mapping>
+            <identity value="rim"/>
+            <map value="preferenceInd"/>
+         </mapping>
+         <mapping>
+            <identity value="cda"/>
+            <map value=".preferenceInd"/>
+         </mapping>
+      </element>
+      <element id="Patient.generalPractitioner">
+         <path value="Patient.generalPractitioner"/>
+         <short value="Patient's nominated primary care provider"/>
+         <alias value="careProvider"/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.managingOrganization">
+         <path value="Patient.managingOrganization"/>
+         <short value="Organization that is the custodian of the patient record"/>
+         <definition value="Organization that is the custodian of the patient record."/>
+         <comment value="There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."/>
+         <requirements value="Need to know who recognizes this patient record, manages and updates it."/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+      <element id="Patient.link">
+         <path value="Patient.link"/>
+         <short value="Link to another patient resource that concerns the same actual person"/>
+         <definition value="Link to another patient resource that concerns the same actual patient."/>
+         <comment value="There is no assumption that linked patient records have mutual links."/>
+         <requirements value="There are multiple usecases: * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers."/>
+         <min value="0"/>
+         <max value="0"/>
+      </element>
+   </differential>
+</StructureDefinition>

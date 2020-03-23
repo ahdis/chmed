@@ -1,0 +1,53 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-receiver"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-receiver"/>
+   <version value="0.1.0"/>
+   <name value="Receiver"/>
+   <title value="Receiver"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Receiver"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <context>
+      <type value="fhirpath"/>
+      <expression value="Practitioner"/>
+   </context>
+   <type value="Extension"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Extension">
+         <path value="Extension"/>
+      </element>
+      <element id="Extension.url">
+         <path value="Extension.url"/>
+         <definition value="SHALL contain exactly one [1..1] @url=&quot;http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-receiver&quot;."/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-receiver"/>
+      </element>
+      <element id="Extension.valueReference">
+         <path value="Extension.valueReference"/>
+         <definition value="SHALL contain exactly one [1..1] Practitioner Profile (identifier: http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner)."/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>

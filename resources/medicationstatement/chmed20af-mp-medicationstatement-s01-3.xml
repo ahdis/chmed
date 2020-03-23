@@ -1,0 +1,65 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-mp-medicationstatement-s01-3"/>
+   <meta>
+      <lastUpdated value="2017-02-23T14:17:28.000+01:00"/>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medicationstatement"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml"> BELOC ZOK Ret Tabl 25 mg 30 Stk - 1-0-1-0 ab 2.10.2016 </div>
+   </text>
+   <contained>
+      <Medication xmlns="http://hl7.org/fhir">
+         <id value="cont3"/>
+         <meta>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+         </meta>
+         <code>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+               <code value="7680521101573"/>
+               <display value="BELOC ZOK Ret Tabl 25 mg 30 Stk"/>
+            </coding>
+         </code>
+      </Medication>
+   </contained>
+   <status value="active"/>
+   <medicationReference>
+      <reference value="#cont3"/>
+   </medicationReference>
+   <subject>
+      <reference value="Patient/chmed20af-mp-patient-s01"/>
+   </subject>
+   <informationSource>
+      <reference value="Practitioner/chmed20af-practitioner-s01"/>
+   </informationSource>
+   <reasonCode>
+      <text value="Bluthochdruck/Herz"/>
+   </reasonCode>
+   <dosage>
+      <timing>
+         <repeat>
+            <boundsPeriod>
+               <start value="2016-02-10"/>
+            </boundsPeriod>
+            <when value="PCM"/>
+            <when value="PCV"/>
+         </repeat>
+      </timing>
+      <route>
+         <coding>
+            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
+            <code value="PO"/>
+            <display value="per oral"/>
+         </coding>
+      </route>
+      <doseAndRate>
+         <doseQuantity>
+            <value value="1"/>
+            <unit value="Stk"/>
+            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+            <code value="Stk"/>
+         </doseQuantity>
+      </doseAndRate>
+   </dosage>
+</MedicationStatement>

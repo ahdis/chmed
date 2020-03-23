@@ -1,0 +1,69 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-rx-bundle"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-bundle"/>
+   <version value="0.1.0"/>
+   <name value="Prescription"/>
+   <title value="Prescription"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="A prescription can be structured in a bundle according to the prescription bundle profile."/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Bundle"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Bundle">
+         <path value="Bundle"/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Bundle.type">
+         <path value="Bundle.type"/>
+         <fixedCode value="document"/>
+      </element>
+      <element id="Bundle.entry">
+         <path value="Bundle.entry"/>
+         <slicing>
+            <discriminator>
+               <type value="type"/>
+               <path value="resource"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <min value="1"/>
+         <max value="*"/>
+      </element>
+      <element id="Bundle.entry:composition">
+         <path value="Bundle.entry"/>
+         <sliceName value="composition"/>
+         <short value="A resource in the bundle"/>
+         <definition value="The Resources for the entry."/>
+         <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="Bundle.entry.resource:composition">
+         <path value="Bundle.entry.resource"/>
+         <short value="A resource in the bundle"/>
+         <definition value="The Resources for the entry."/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Composition"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-composition"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>

@@ -1,0 +1,33 @@
+<Condition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-mp-condition-s01-1"/>
+   <meta>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Renal Insufficiency - Niereninsuffizienz, leichte (Clcr 60–90 ml/min)</div>
+   </text>
+   <clinicalStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+         <code value="active"/>
+      </coding>
+   </clinicalStatus>
+   <category>
+      <coding>
+         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-category"/>
+         <code value="1"/>
+         <display value="Renal Insufficiency"/>
+      </coding>
+   </category>
+   <code>
+      <coding>
+         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-cdscode"/>
+         <code value="577"/>
+         <display value="Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/chmed20af-mp-patient-s01"/>
+   </subject>
+</Condition>

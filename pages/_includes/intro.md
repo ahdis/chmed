@@ -49,7 +49,7 @@ The Composition ressource defines the following parameter for the medication pla
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | Insurance card number for this patient  | Identifier  | Patient.PatientId[Type=1] |
+| identifier  | Local identifier for this patient  | Identifier  | In the new version CHMED16A a local identifier will be defined |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName |
 | telecom  | telephone number  | ContactPoint  | Patient.Phone | 
 | gender  | gender  | code  | Patient.gender, male=1, female=2 |
@@ -151,7 +151,7 @@ The Composition ressource defines the following parameter for the Prescription:
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- | 
-| identifier  | Insurance card number for this patient  | Identifier  | Patient.PatientId[Type=1] |
+| identifier  | Local identifier for this patient  | Identifier  | In the new version CHMED16A a local identifier will be defined |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | 
 | telecom  | telephone number  | ContactPoint  | Patient.Phone |
 | gender  | gender  | code  | Patient.gender, male=1, female=2 |

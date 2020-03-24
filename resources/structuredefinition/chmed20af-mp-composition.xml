@@ -79,7 +79,6 @@
 			<path value="Composition.identifier"/>
 			<short value="Logical identifier for document (GUID)"/>
 			<definition value="Logical identifier for document (GUID)"/>
-			<min value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="id"/>

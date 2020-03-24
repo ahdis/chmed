@@ -35,13 +35,12 @@
     </element>
     <element id="Bundle.identifier">
       <path value="Bundle.identifier"/>
-      <short value="Identification number of the document"/>
-    </element>
-    <element id="Bundle.identifier.system">
-      <path value="Bundle.identifier.system"/>
-    </element>
-    <element id="Bundle.identifier.value">
-      <path value="Bundle.identifier.value"/>
+      <short value="Logical identifier for document (GUID)"/>
+			<definition value="Logical identifier for document (GUID)"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="id"/>
+			</mapping>
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type"/>

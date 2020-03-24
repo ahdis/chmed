@@ -5,11 +5,11 @@
       <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-bundle"/>
    </meta>
    <identifier>
-      <system value="urn:ietf:rfc:3986"/>
-      <value value="urn:uuid:425a227e-a553-4e6c-b6b0-67ccb488a7e5"/>
+      <system value="http://emediplan.ch/chmed20af/id"/>
+      <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
    </identifier>
    <type value="document"/>
-   <timestamp value="2019-05-29T15:32:26.603+02:00"/>
+   <timestamp value="2017-05-27T11:46:09+02:00"/>
    <entry>
       <fullUrl value="http://localhost:8080/r4/Composition/5"/>
       <resource>

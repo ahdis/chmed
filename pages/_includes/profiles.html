@@ -1,10 +1,32 @@
 <h2>
-    Profiles defined as part of the CH Core Implementation Guide
+    Profiles defined as part of the Implementation Guide CHMED20AF
 </h2>
 
-<p>The following profiles set the minimum expectations to record, search and fetch health data associated with a
-    Patient:</p>
-
-<div>
+<!--<div>
     {% include list-profiles.xhtml %}
+</div>-->
+
+<h3>MedicationPlan (MP)</h3>
+<div>
+    <li><a href="StructureDefinition-chmed20af-mp-bundle.html">MedicationPlan</a> Profile for medication plan document. The medication plan summarizes the entire, current medication of a patient.</li>
+    <li><a href="StructureDefinition-chmed20af-mp-composition.html">Composition MedicationPlan</a> Profile for the Composition Resource of the medication plan.</li>
+    <li><a href="StructureDefinition-chmed20af-mp-patient.html">Patient MedicationPlan</a> Profile on Patient for MedicationPlan</li>
+    <li><a href="StructureDefinition-chmed20af-practitioner.html">Practitioner</a> Profile on Practitioner</li>
+    <li><a href="StructureDefinition-chmed20af-mp-medicationstatement.html">MedicationStatement (MedicationPlan)</a> Profile on MedicationStatement for MedicationPlan</li>
+    <li><a href="StructureDefinition-chmed20af-medication.html">Medication</a> Profile on Medication</li>
+    <li><a href="StructureDefinition-chmed20af-obs-dateoflastmenstruation.html">First day of last menstruation</a> Profile on Oberservation for First day of last menstruation</li>
+    <li><a href="StructureDefinition-chmed20af-obs-prematurebaby.html">Premature baby</a> Profile on Oberservation for Premature Baby</li>
+    <li><a href="StructureDefinition-chmed20af-obs-timeofgestation.html">TimeOfGestation</a> Profile on Oberservation for Time of gestation</li>
+    <li><a href="StructureDefinition-chmed20af-condition-risks.html">Risks</a> Profile on Condition for Risks</li>
+</div>
+
+
+<h3>Prescription (Rx)</h3>
+<div>
+    <li><a href="StructureDefinition-chmed20af-rx-bundle.html">Prescription</a> A prescription can be structured in a bundle according to the prescription bundle profile.</li>
+    <li><a href="StructureDefinition-chmed20af-rx-composition.html">Composition Prescription</a> Profile for the Composition Resource of the prescripton.</li>
+    <li><a href="StructureDefinition-chmed20af-rx-patient.html">Patient Prescription</a> Profile on Patient for Prescription</li>
+    <li><a href="StructureDefinition-chmed20af-practitioner.html">Practitioner</a> Profile on Practitioner</li>
+    <li><a href="StructureDefinition-chmed20af-rx-medicationrequest.html">MedicationRequest (Prescription)</a> Profile on MedicationRequest for Prescription</li>
+    <li><a href="StructureDefinition-chmed20af-medication.html">Medication</a> Profile on Medication</li>
 </div>

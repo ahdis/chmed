@@ -28,7 +28,7 @@ In addition, the layout specification for the print-based layouts makes recognit
 # CHMED20AF
 
 <mark>Disclaimer 31.03.2020: This is the current version (0.3.0) for FHIR Release 4.
-Please contact info@emediplan.ch if you start implementing. There will be also a convertor made availabe from CHMED16A to CHMED20AF.</mark>
+Please contact info@emediplan.ch if you start implementing. There will be also a convertor from CHMED16A to CHMED20AF made availabe.</mark>
 
 [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 

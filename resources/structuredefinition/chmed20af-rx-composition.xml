@@ -98,7 +98,7 @@
          <max value="1"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pmcrx-patient"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
          </type>
          <mapping>
             <identity value="CHMED16A"/>

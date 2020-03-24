@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="chmed20af-pmcrx-patient"/>
-   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pmcrx-patient"/>
+   <id value="chmed20af-rx-patient"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
    <version value="0.1.0"/>
-   <name value="PatientPolyMedicationCheckPrescription"/>
-   <title value="Patient PolyMedicationCheck or Prescription"/>
+   <name value="PatientPrescription"/>
+   <title value="Patient Prescription"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>
@@ -12,7 +12,7 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile on Patient (PolyMedicationCheck, Prescription)"/>
+   <description value="Profile on Patient for Prescription"/>
    <fhirVersion value="4.0.1"/>
    <mapping>
       <identity value="CHMED16A"/>
@@ -27,8 +27,8 @@
    <differential>
       <element id="Patient">
          <path value="Patient"/>
-         <short value="Patient within Medication Plan"/>
-         <definition value="Patient within Medication Plan"/>
+         <short value="Patient within Prescription"/>
+         <definition value="Patient within Prescription"/>
          <min value="1"/>
          <max value="1"/>
          <mapping>

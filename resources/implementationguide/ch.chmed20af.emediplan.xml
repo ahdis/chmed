@@ -37,12 +37,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-pmc-bundle"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/chmed20af-rx-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -63,14 +57,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed20af-pmc-bundle-s01"/>
-      </reference>
-      <name value="Poly Medication Check"/>
-      <description value="Example for Poly Medication Check"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-pmc-bundle"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Bundle/chmed20af-rx-bundle-s01"/>
       </reference>
       <name value="Prescription"/>
@@ -82,12 +68,6 @@
         <reference value="Composition/chmed20af-mp-composition-s01"/>
       </reference>
       <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Composition/chmed20af-pmc-composition-s01"/>
-      </reference>
-      <exampleCanonical value="StructureDefinition/chmed20af-pmc-composition"/>
     </resource>
     <resource>
       <reference>
@@ -103,34 +83,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-pmc-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-pmc-questionnaireresponse"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/chmed20af-pmc-questionnaireresponse-s01"/>
-      </reference>
-      <name value="Example Questionnaire Response"/>
-      <description value="Example Questionnaire Response"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-pmc-questionnaireresponse"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/chmed20af-pmc-questionnaire"/>
-      </reference>
-      <name value="Example Questionnaire"/>
-      <description value="Example Questionnaire"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/chmed20af-rx-composition"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -143,7 +95,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-pmcrx-patient"/>
+        <reference value="StructureDefinition/chmed20af-rx-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

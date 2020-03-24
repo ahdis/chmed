@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The model of dosages between CHMED16A and the CHMED20AF FHIR version differ sligthly due to the FHIR Dosage model.
+The model of dosages between CHMED16A and the CHMED20AF FHIR version differ sligthly due to the FHIR dosage model.
 This has an effect on how to map the different attributes form CHMED16A to CHMED20AF.
 
 ## Posology and Dosage
@@ -45,9 +45,9 @@ are the same, the can be mapped as follows:
 		</doseQuantity>
 	</dosage>
 ```
-see [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
+See [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
 
-for 1 - 0 - 0.5 - 0 two dosage elements have to be created, [example](MedicationStatement-chmed20af-mp-medicationstatement-s02-3.html)
+For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatement-chmed20af-mp-medicationstatement-s02-3.html)
 
 ## Taking times
 * The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing)) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
@@ -100,21 +100,20 @@ Like in simplified times, if the dosage changes, multiple dosage elements have t
 An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (example increase form 50ml to 200 ml):
 
 ```xml
-
-                 <fhir:doseQuantity>
-					<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
-						<fhir:valueQuantity>
-							<fhir:value value="200"/>
-							<fhir:unit value="ml"/>
-							<fhir:system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
-							<fhir:code value="ml"/>
-						</fhir:valueQuantity>
-					</fhir:extension>
-					<fhir:value value="50"/>
-					<fhir:unit value="ml"/>
-					<fhir:system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
-					<fhir:code value="ml"/>
-				</fhir:doseQuantity>
+	<fhir:doseQuantity>
+	<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
+		<fhir:valueQuantity>
+			<fhir:value value="200"/>
+			<fhir:unit value="ml"/>
+			<fhir:system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+			<fhir:code value="ml"/>
+		</fhir:valueQuantity>
+	</fhir:extension>
+	<fhir:value value="50"/>
+	<fhir:unit value="ml"/>
+	<fhir:system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+	<fhir:code value="ml"/>
+</fhir:doseQuantity>
 
 ```
 

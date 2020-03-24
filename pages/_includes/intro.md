@@ -189,7 +189,7 @@ The medication section contains the entries for the current medications for pati
 | dosage.doseAndRate.dose[x]  | Amount of medication per dose | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.DoTo |
 | dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
-[Profile for MedicationStatmeent](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
+[Profile for MedicationStatement](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
 Examples for MedicationStatements [1](MedicationStatement-chmed20af-mp-medicationstatement-s01-1.html) &#124; [2](MedicationStatement-chmed20af-mp-medicationstatement-s01-2.html) &#124; [3](MedicationStatement-chmed20af-mp-medicationstatement-s01-3.html) &#124; [4](MedicationStatement-chmed20af-mp-medicationstatement-s01-4.html)
 

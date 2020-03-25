@@ -61,6 +61,23 @@
     }
   },
   "canonicalBase": "http://chmed20af.emediplan.ch/fhir",
+  "dependencyList": [
+    {
+      "name": "chcore",
+      "package": "ch.fhir.ig.ch-core",
+      "version": "current"
+    },
+    {
+      "name": "cheprterm",
+      "package": "ch.fhir.ig.ch-epr-term",
+      "version": "current"
+    },
+    {
+      "name": "chemed",
+      "package": "ch.fhir.ig.ch-emed",
+      "version": "current"
+    }
+  ],
   "source": "implementationguide/ch.chmed20af.emediplan.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},

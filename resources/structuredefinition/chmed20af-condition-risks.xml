@@ -123,11 +123,14 @@
     <element id="Condition.subject">
       <path value="Condition.subject"/>
       <short value="Who has the condition?"/>
-      <definition value="Indicates the patient or group who the condition record is associated with."/>
-      <requirements value="Group is typically used for veterinary or public health use cases."/>
+      <definition value="Indicates the patient who the condition record is associated with."/>
       <alias value="patient"/>
       <min value="1"/>
       <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
+      </type>
     </element>
     <element id="Condition.encounter">
       <path value="Condition.encounter"/>

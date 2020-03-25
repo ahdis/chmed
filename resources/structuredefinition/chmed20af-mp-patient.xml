@@ -196,10 +196,14 @@
       </element>
       <element id="Patient.communication">
          <path value="Patient.communication"/>
-         <short value="A list of Languages which may be used to communicate with the patient about his or her health"/>
-         <definition value="Languages which may be used to communicate with the patient about his or her health."/>
-         <comment value="If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required."/>
-         <requirements value="If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest."/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="preferred"/>
+            </discriminator>
+            <ordered value="false"/>
+            <rules value="open"/>
+         </slicing>
          <min value="1"/>
          <max value="1"/>
          <mapping>
@@ -211,14 +215,17 @@
             <map value="patient.languageCommunication"/>
          </mapping>
       </element>
-      <element id="Patient.communication.language">
+      <element id="Patient.communication:languageOfCorrespondance">
+         <path value="Patient.communication"/>
+         <sliceName value="languageOfCorrespondance"/>
+         <min value="1"/>
+      </element>
+      <element id="Patient.communication.language:languageOfCorrespondance">
          <path value="Patient.communication.language"/>
          <short value="The language which can be used to communicate with the patient about his or her health"/>
          <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English."/>
          <comment value="The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type."/>
          <requirements value="Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect."/>
-         <min value="1"/>
-         <max value="1"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
                <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
@@ -238,12 +245,10 @@
             <map value="Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary"/>
          </mapping>
       </element>
-      <element id="Patient.communication.preferred">
+      <element id="Patient.communication.preferred:languageOfCorrespondance">
          <path value="Patient.communication.preferred"/>
          <short value="Language preference indicator"/>
          <definition value="Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)."/>
-         <min value="0"/>
-         <max value="1"/>
          <mapping>
             <identity value="v2"/>
             <map value="PID-15"/>

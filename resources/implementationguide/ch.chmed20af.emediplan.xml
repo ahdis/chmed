@@ -257,7 +257,6 @@
       </reference>
       <name value="Bodyheight"/>
       <description value="Example for specifiying body height"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
     </resource>
     <resource>
       <reference>
@@ -265,7 +264,6 @@
       </reference>
       <name value="Bodyweight"/>
       <description value="Example for specifiying body weight"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
     </resource>
     <resource>
       <reference>

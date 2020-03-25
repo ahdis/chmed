@@ -1,1 +1,5 @@
 A resource should have narrative for robust management [text.div.exists()]
+
+Code System URI "urn:oid:2.51.1.1" ist unbekannt, so dass der Code nicht validiert werden kann
+
+The Implementation Guide contains no explicitly linked examples for this profile

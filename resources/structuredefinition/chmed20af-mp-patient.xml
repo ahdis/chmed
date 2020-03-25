@@ -117,10 +117,6 @@
          <short value="telephone number"/>
          <definition value="telephone number"/>
          <max value="1"/>
-         <type>
-            <code value="ContactPoint"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Phone"/>
@@ -130,10 +126,6 @@
          <path value="Patient.gender"/>
          <short value="male | female | other"/>
          <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
-         <type>
-            <code value="code"/>
-         </type>
-         <isSummary value="true"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="AdministrativeGender"/>
@@ -154,10 +146,6 @@
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
          <definition value="The date of birth for the individual."/>
-         <type>
-            <code value="date"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.BDt"/>
@@ -173,10 +161,6 @@
          <short value="Address for the patient"/>
          <definition value="Address for the patient"/>
          <max value="1"/>
-         <type>
-            <code value="Address"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
@@ -209,9 +193,6 @@
          <short value="A contact party (e.g. guardian, partner, friend) for the patient"/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
       </element>
       <element id="Patient.communication">
          <path value="Patient.communication"/>
@@ -221,9 +202,6 @@
          <requirements value="If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest."/>
          <min value="1"/>
          <max value="1"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
          <mapping>
             <identity value="rim"/>
             <map value="LanguageCommunication"/>
@@ -241,9 +219,6 @@
          <requirements value="Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect."/>
          <min value="1"/>
          <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
                <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
@@ -269,9 +244,6 @@
          <definition value="Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)."/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="boolean"/>
-         </type>
          <mapping>
             <identity value="v2"/>
             <map value="PID-15"/>

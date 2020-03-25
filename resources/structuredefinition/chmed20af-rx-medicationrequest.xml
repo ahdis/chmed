@@ -96,11 +96,6 @@
          <comment value="It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.&#xd;&#xd;An instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.&#xa;&#xa;This element is labeled as a modifier because the intent alters when and how the resource is actually applicable."/>
          <min value="1"/>
          <max value="1"/>
-         <type>
-            <code value="code"/>
-         </type>
-         <isModifier value="true"/>
-         <isModifierReason value="No Modifier Reason provideed in previous versions of FHIR"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="MedicationRequestIntent"/>
@@ -128,9 +123,6 @@
          <definition value="Indicates the type of medication order and where the medication is expected to be consumed or administered."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
       </element>
       <element id="MedicationRequest.priority">
          <path value="MedicationRequest.priority"/>
@@ -146,11 +138,6 @@
          <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource. ."/>
          <min value="1"/>
          <max value="1"/>
-         <!--
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         -->
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
@@ -251,9 +238,6 @@
          <comment value="This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonReference."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
       </element>
       <element id="MedicationRequest.reasonReference">
          <path value="MedicationRequest.reasonReference"/>
@@ -269,9 +253,6 @@
          <definition value="Application Instructions"/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="Annotation"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.AppInstr"/>
@@ -299,9 +280,6 @@
          <definition value="Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department."/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
       </element>
       <element id="MedicationRequest.dispenseRequest.validityPeriod">
          <path value="MedicationRequest.dispenseRequest.validityPeriod"/>
@@ -311,9 +289,6 @@
          <requirements value="Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="Period"/>
-         </type>
       </element>
       <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
          <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
@@ -322,9 +297,6 @@
          <comment value="If displaying &quot;number of authorized fills&quot;, add 1 to this number."/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="unsignedInt"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Rep"/>
@@ -336,10 +308,6 @@
          <definition value="The amount that is to be dispensed for one fill."/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="Quantity"/>
-            <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="NbPack"/>
@@ -352,9 +320,6 @@
          <comment value="In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="Duration"/>
-         </type>
       </element>
       <element id="MedicationRequest.dispenseRequest.performer">
          <path value="MedicationRequest.dispenseRequest.performer"/>
@@ -362,10 +327,6 @@
          <definition value="Indicates the intended dispensing Organization specified by the prescriber."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-         </type>
       </element>
       <element id="MedicationRequest.substitution">
          <path value="MedicationRequest.substitution"/>
@@ -373,9 +334,6 @@
          <definition value="Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done."/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
       </element>
       <element id="MedicationRequest.substitution.allowed[x]">
          <path value="MedicationRequest.substitution.allowed[x]"/>
@@ -406,17 +364,6 @@
          <definition value="Indicates the reason for the substitution, or why substitution must or must not be performed."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="MedicationIntendedSubstitutionReason"/>
-            </extension>
-            <strength value="example"/>
-            <description value="A coded concept describing the reason that a different medication should (or should not) be substituted from what was prescribed."/>
-            <valueSet value="http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"/>
-         </binding>
       </element>
       <element id="MedicationRequest.priorPrescription">
          <path value="MedicationRequest.priorPrescription"/>

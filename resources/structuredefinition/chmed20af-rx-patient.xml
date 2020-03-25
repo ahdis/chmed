@@ -117,10 +117,6 @@
          <short value="telephone number"/>
          <definition value="telephone number"/>
          <max value="1"/>
-         <type>
-            <code value="ContactPoint"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Phone"/>
@@ -130,10 +126,6 @@
          <path value="Patient.gender"/>
          <short value="male | female | other"/>
          <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
-         <type>
-            <code value="code"/>
-         </type>
-         <isSummary value="true"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="AdministrativeGender"/>
@@ -154,10 +146,6 @@
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
          <definition value="The date of birth for the individual."/>
-         <type>
-            <code value="date"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.BDt"/>
@@ -173,10 +161,6 @@
          <short value="Address for the patient"/>
          <definition value="Address for the patient"/>
          <max value="1"/>
-         <type>
-            <code value="Address"/>
-         </type>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
@@ -209,9 +193,6 @@
          <short value="A contact party (e.g. guardian, partner, friend) for the patient"/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
       </element>
       <element id="Patient.generalPractitioner">
          <path value="Patient.generalPractitioner"/>

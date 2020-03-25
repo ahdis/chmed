@@ -87,12 +87,6 @@
          <comment value="MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error)."/>
          <min value="1"/>
          <max value="1"/>
-         <type>
-            <code value="code"/>
-         </type>
-         <isModifier value="true"/>
-         <isModifierReason value="No Modifier Reason provideed in previous versions of FHIR"/>
-         <isSummary value="true"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="MedicationStatementStatus"/>
@@ -116,16 +110,10 @@
          <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example if you require form or lot number, then you must reference the Medication resource. ."/>
          <min value="1"/>
          <max value="1"/>
-         <!--
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
-         -->
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
-         <isSummary value="true"/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="MedicationCode"/>
@@ -160,7 +148,6 @@
          <type>
             <code value="Period"/>
          </type>
-         <isSummary value="true"/>
       </element>
       <element id="MedicationStatement.dateAsserted">
          <path value="MedicationStatement.dateAsserted"/>
@@ -168,10 +155,6 @@
          <definition value="The date when the medication statement was asserted by the information source."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-         <isSummary value="true"/>
       </element>
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
@@ -199,7 +182,6 @@
             <code value="Reference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
          </type>
-         <isSummary value="true"/>
       </element>
       <element id="MedicationStatement.derivedFrom">
          <path value="MedicationStatement.derivedFrom"/>
@@ -220,9 +202,6 @@
          <comment value="This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonForUseReference."/>
          <min value="1"/>
          <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.TkgRsn (Taking Reason)"/>
@@ -240,9 +219,6 @@
          <definition value="Application Instructions"/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="Annotation"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.AppInstr"/>

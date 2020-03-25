@@ -52,9 +52,6 @@
       <comment value="The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
@@ -74,9 +71,6 @@
       <comment value="The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts."/>
       <min value="1"/>
       <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ConditionCategory"/>
@@ -97,9 +91,6 @@
       <comment value="Coding of the severity with a terminology is preferred, where possible."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
     </element>
     <element id="Condition.code">
       <path value="Condition.code"/>
@@ -109,10 +100,6 @@
       <alias value="type"/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ConditionKind"/>
@@ -132,9 +119,6 @@
       <definition value="The anatomical location where this condition manifests itself."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject"/>
@@ -175,9 +159,6 @@
       <definition value="The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="dateTime"/>
-      </type>
     </element>
     <element id="Condition.recorder">
       <path value="Condition.recorder"/>
@@ -199,9 +180,6 @@
       <definition value="Clinical stage or grade of a condition. May include formal severity assessments."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="BackboneElement"/>
-      </type>
     </element>
     <element id="Condition.evidence">
       <path value="Condition.evidence"/>
@@ -210,9 +188,6 @@
       <comment value="The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="BackboneElement"/>
-      </type>
     </element>
     <element id="Condition.note">
       <path value="Condition.note"/>
@@ -220,9 +195,6 @@
       <definition value="Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="Annotation"/>
-      </type>
     </element>
   </differential>
 </StructureDefinition>

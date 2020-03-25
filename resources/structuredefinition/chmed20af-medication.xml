@@ -39,15 +39,11 @@
          <comment value="-"/>
          <min value="0"/>
          <max value="1"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
          <patternCodeableConcept>
             <coding>
                <system value="urn:oid:2.51.1.1"/>
             </coding>
          </patternCodeableConcept>
-         <isSummary value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.ID with IdTpye 2 (GTIN)"/>
@@ -60,9 +56,6 @@
          <comment value="This status is not intended to specify if a medication is part of a formulary."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="code"/>
-         </type>
       </element>
       <element id="Medication.manufacturer">
          <path value="Medication.manufacturer"/>
@@ -82,9 +75,6 @@
          <comment value="When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationRequest, this is administered form."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="CodeableConcept"/>
-         </type>
       </element>
       <element id="Medication.ingredient">
          <path value="Medication.ingredient"/>
@@ -93,9 +83,6 @@
          <comment value="The ingredients need not be a complete list.  If an ingredient is not specified, this does not indicate whether an ingredient is present or absent.  If an ingredient is specified it does not mean that all ingredients are specified.  It is possible to specify both inactive and active ingredients."/>
          <min value="0"/>
          <max value="0"/>
-         <type>
-            <code value="BackboneElement"/>
-         </type>
       </element>
    </differential>
 </StructureDefinition>

@@ -99,9 +99,6 @@
       </element>
       <element id="Observation.component:weektg.valueQuantity.code">
          <path value="Observation.component.valueQuantity.code"/>
-         <type>
-            <code value="code"/>
-         </type>
          <fixedCode value="wk"/>
       </element>
       <element id="Observation.component:daytg">
@@ -137,9 +134,6 @@
       </element>
       <element id="Observation.component:daytg.valueQuantity.code">
          <path value="Observation.component.valueQuantity.code"/>
-         <type>
-            <code value="code"/>
-         </type>
          <fixedCode value="d"/>
       </element>
    </differential>

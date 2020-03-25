@@ -39,10 +39,6 @@
       <requirements value="If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="integer"/>
-      </type>
-      <isSummary value="true"/>
     </element>
     <element id="Dosage.text">
       <path value="Dosage.text"/>
@@ -51,10 +47,6 @@
       <requirements value="Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".text"/>
@@ -67,10 +59,6 @@
       <requirements value="Additional instruction such as &quot;Swallow with plenty of water&quot; which may or may not be coded."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="AdditionalInstruction"/>
@@ -86,10 +74,6 @@
       <definition value="Instructions in terms that are understood by the patient or consumer."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="string"/>
-      </type>
-      <isSummary value="true"/>
     </element>
     <element id="Dosage.timing">
       <path value="Dosage.timing"/>
@@ -99,10 +83,6 @@
       <requirements value="The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions. For example: &quot;Every 8 hours&quot;; &quot;Three times a day&quot;; &quot;1/2 an hour before breakfast for 10 days from 23-Dec 2011:&quot;; &quot;15 Oct 2013, 17 Oct 2013 and 1 Nov 2013&quot;.  Sometimes, a rate can imply duration when expressed as total volume / duration (e.g.  500mL/2 hours implies a duration of 2 hours).  However, when rate doesn't imply duration (e.g. 250mL/hour), then the timing.repeat.duration is needed to convey the infuse over time period."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="Timing"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="CHMED16A"/>
         <map value="Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys"/>
@@ -128,10 +108,6 @@
       <definition value="Body site to administer to."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
     </element>
     <element id="Dosage.route">
       <path value="Dosage.route"/>
@@ -140,10 +116,6 @@
       <requirements value="A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient's body."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="RouteOfRequest"/>
@@ -188,8 +160,6 @@
         <code value="Quantity"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-simplequantity"/>
       </type>
-      <isModifier value="false"/>
-      <isSummary value="true"/>
       <mapping>
         <identity value="CHMED16A"/>
         <map value="doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.doTo"/>
@@ -212,10 +182,6 @@
       <requirements value="The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours."/>
       <min value="0"/>
       <max value="1"/>
-      <type>
-        <code value="Ratio"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="CHMED16A"/>
         <map value="TakingTime.MA"/>
@@ -237,11 +203,6 @@
       <requirements value="The maximum total quantity of a therapeutic substance that may be administered per lifetime of the subject."/>
       <min value="0"/>
       <max value="0"/>
-      <type>
-        <code value="Quantity"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
-      </type>
-      <isSummary value="true"/>
     </element>
   </differential>
 </StructureDefinition>

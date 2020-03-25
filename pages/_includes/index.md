@@ -33,7 +33,6 @@ Please contact info@emediplan.ch if you start implementing. There will be also a
 [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 
 Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the following advantages:
-* Support for [implementers](http://build.fhir.org/implsupport-module.html): .NET/Java and other implementations are availabe to work directly with FHIR Ressources, no separate Parser/Serializer has to be written
 * CHMED20AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 

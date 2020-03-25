@@ -22,7 +22,7 @@
    <kind value="resource"/>
    <abstract value="false"/>
    <type value="Patient"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
    <derivation value="constraint"/>
    <differential>
       <element id="Patient">
@@ -106,7 +106,6 @@
       <element id="Patient.name">
          <path value="Patient.name"/>
          <short value="Name for this patient"/>
-         <min value="1"/>
          <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
@@ -117,7 +116,6 @@
          <path value="Patient.telecom"/>
          <short value="telephone number"/>
          <definition value="telephone number"/>
-         <min value="0"/>
          <max value="1"/>
          <type>
             <code value="ContactPoint"/>
@@ -130,10 +128,8 @@
       </element>
       <element id="Patient.gender">
          <path value="Patient.gender"/>
-         <short value="male | female | other | unknown"/>
+         <short value="male | female | other"/>
          <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
-         <min value="0"/>
-         <max value="1"/>
          <type>
             <code value="code"/>
          </type>
@@ -158,8 +154,6 @@
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
          <definition value="The date of birth for the individual."/>
-         <min value="1"/>
-         <max value="1"/>
          <type>
             <code value="date"/>
          </type>
@@ -178,7 +172,6 @@
          <path value="Patient.address"/>
          <short value="Address for the patient"/>
          <definition value="Address for the patient"/>
-         <min value="0"/>
          <max value="1"/>
          <type>
             <code value="Address"/>

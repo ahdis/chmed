@@ -376,12 +376,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-receiver"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/chmed20af-codesystem-cdtyp9"/>
       </reference>
       <name value="CodeSystem Code Typ 9"/>

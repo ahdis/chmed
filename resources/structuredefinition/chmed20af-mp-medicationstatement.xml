@@ -28,8 +28,10 @@
       <element id="MedicationStatement">
          <path value="MedicationStatement"/>
          <short value="Record of medication being taken by a patient"/>
-         <min value="0"/>
-         <max value="*"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament"/>
+         </mapping>
       </element>
       <element id="MedicationStatement.extension">
          <path value="MedicationStatement.extension"/>
@@ -53,37 +55,12 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Private Fields"/>
+            <map value="PFields"/>
          </mapping>
-      </element>
-      <element id="MedicationStatement.identifier">
-         <path value="MedicationStatement.identifier"/>
-         <short value="External identifier"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="MedicationStatement.basedOn">
-         <path value="MedicationStatement.basedOn"/>
-         <short value="Fulfils plan, proposal or order"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="MedicationStatement.partOf">
-         <path value="MedicationStatement.partOf"/>
-         <short value="Part of referenced event"/>
-         <min value="0"/>
-         <max value="*"/>
-      </element>
-      <element id="MedicationStatement.status">
-         <path value="MedicationStatement.status"/>
-         <fixedCode value="completed"/>
       </element>
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
-         <short value="Type of medication usage"/>
-         <definition value="Indicates where type of medication statement and where the medication is expected to be consumed or administered."/>
-         <min value="0"/>
-         <max value="0"/>
+         <short value="TBD"/>
       </element>
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
@@ -92,6 +69,10 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Id with IdType 2 (GTIN)"/>
+         </mapping>
       </element>
       <element id="MedicationStatement.subject">
          <path value="MedicationStatement.subject"/>
@@ -101,37 +82,9 @@
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
          </type>
       </element>
-      <element id="MedicationStatement.context">
-         <path value="MedicationStatement.context"/>
-         <short value="Encounter / Episode associated with MedicationStatement"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="MedicationStatement.effective[x]">
-         <path value="MedicationStatement.effective[x]"/>
-         <short value="The date/time or interval when the medication was taken"/>
-         <definition value="The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true)."/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="dateTime"/>
-         </type>
-         <type>
-            <code value="Period"/>
-         </type>
-      </element>
-      <element id="MedicationStatement.dateAsserted">
-         <path value="MedicationStatement.dateAsserted"/>
-         <short value="When the statement was asserted?"/>
-         <definition value="The date when the medication statement was asserted by the information source."/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
          <short value="The author of the medical decision"/>
-         <min value="0"/>
-         <max value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
@@ -139,43 +92,20 @@
          </type>
          <mapping>
             <identity value="CHEMED16A"/>
-            <map value="Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner"/>
+            <map value="AutoMed (Selfmedication) if Patient, PrscbBy if Practitioner"/>
          </mapping>
-      </element>
-      <element id="MedicationStatement.derivedFrom">
-         <path value="MedicationStatement.derivedFrom"/>
-         <short value="Additional supporting information"/>
-         <definition value="Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement."/>
-         <min value="0"/>
-         <max value="0"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
-         </type>
       </element>
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
          <short value="Reason for why the medication is being/was taken"/>
-         <min value="1"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Medication.TkgRsn (Taking Reason)"/>
+            <map value="TkgRsn"/>
          </mapping>
-      </element>
-      <element id="MedicationStatement.reasonReference">
-         <path value="MedicationStatement.reasonReference"/>
-         <short value="Condition or observation that supports why the medication is being/was taken"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
          <short value="Application Instructions"/>
-         <mapping>
-            <identity value="CHMED16A"/>
-            <map value="Medication.AppInstr"/>
-         </mapping>
       </element>
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
@@ -196,6 +126,10 @@
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
          </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="AppInstr"/>
+         </mapping>
       </element>
       <element id="MedicationStatement.dosage:structured">
          <path value="MedicationStatement.dosage"/>
@@ -207,7 +141,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Medication.Pos (list of Posology)"/>
+            <map value="Pos"/>
          </mapping>
       </element>
    </differential>

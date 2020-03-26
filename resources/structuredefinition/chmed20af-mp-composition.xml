@@ -25,7 +25,7 @@
 	<kind value="resource"/>
 	<abstract value="false"/>
 	<type value="Composition"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+	<baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-composition-medicationcard"/>
 	<derivation value="constraint"/>
 	<differential>
 		<element id="Composition">
@@ -47,17 +47,14 @@
 				<rules value="open"/>
 			</slicing>
 		</element>
-		<element id="Composition.extension:receiver">
+		<element id="Composition.extension:informationRecipient">
 			<path value="Composition.extension"/>
-			<sliceName value="receiver"/>
+			<sliceName value="informationRecipient"/>
+			<short value="A recipient of this document (person or organization)"/>
 			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-receiver"/>
-			</type>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Patient.RCV (GLN of receiver)"/>
+				<map value="Patient or Patient.RCV (GLN of receiver)"/>
 			</mapping>
 		</element>
 		<element id="Composition.extension:privatefield">
@@ -84,19 +81,20 @@
 				<map value="id"/>
 			</mapping>
 		</element>
+		<element id="Composition.status">
+			<path value="Composition.status"/>
+			<fixedCode value="final"/>
+		</element>
 		<element id="Composition.type">
 			<path value="Composition.type"/>
-		</element>
-		<element id="Composition.type.coding">
-			<path value="Composition.type.coding"/>
-		</element>
-		<element id="Composition.type.coding.system">
-			<path value="Composition.type.coding.system"/>
-			<fixedUri value="http://emediplan.ch/chmed20af/doc"/>
-		</element>
-		<element id="Composition.type.coding.code">
-			<path value="Composition.type.coding.code"/>
-			<fixedCode value="MP"/>
+			<short value="Document type"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="721912009"/>
+					<display value="Medication summary document (record artifact)"/>
+				</coding>
+			</patternCodeableConcept>
 		</element>
 		<element id="Composition.subject">
 			<path value="Composition.subject"/>
@@ -124,8 +122,8 @@
 		</element>
 		<element id="Composition.author">
 			<path value="Composition.author"/>
-			<short value="Author (Gln if available, otherwise name)"/>
-			<definition value="Author (Gln if available, otherwise name)"/>
+			<short value="Author"/>
+			<definition value="Author"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
@@ -138,16 +136,27 @@
 		</element>
 		<element id="Composition.confidentiality">
 			<path value="Composition.confidentiality"/>
-			<comment value="The exact use of this element, and enforcement and issues related to highly sensitive documents are out of scope for the base specification, and delegated to implementation profiles (see security section)."/>
-			<max value="0"/>
 		</element>
 		<element id="Composition.attester">
 			<path value="Composition.attester"/>
+			<slicing>
+				<discriminator>
+					<type value="value" />
+					<path value="mode" />
+				</discriminator>
+				<rules value="open" />
+			</slicing>
+			<max value="1"/>
+		</element>
+		<element id="Composition.attester:legalAuthenticator">
+			<path value="Composition.attester"/>
+			<sliceName value="legalAuthenticator"/>
+			<min value="0"/>
 			<max value="1"/>
 		</element>
 		<element id="Composition.attester.time">
 			<path value="Composition.attester.time"/>
-			<short value="validate date: Date of validation"/>
+			<short value="Validate date: Date of validation"/>
 			<definition value="When composition was attested by the party, Validate date: Date of validation"/>
 			<mapping>
 				<identity value="CHMED16A"/>
@@ -156,7 +165,7 @@
 		</element>
 		<element id="Composition.attester.party">
 			<path value="Composition.attester.party"/>
-			<definition value="Validated by : The Gln of the pharmacist who has validated the medication plan"/>
+			<definition value="Validated by: The Gln of the pharmacist who has validated the medication plan"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
@@ -169,7 +178,6 @@
 		<element id="Composition.custodian">
 			<path value="Composition.custodian"/>
 			<comment value="This is useful when documents are derived from a composition - provides guidance for how to get the latest version of the document. This is optional because this is sometimes not known by the authoring system, and can be inferred by context. However it is important that this information be known when working with a derived document, so providing a custodian is encouraged."/>
-			<max value="0"/>
 		</element>
 		<element id="Composition.relatesTo">
 			<path value="Composition.relatesTo"/>
@@ -196,27 +204,23 @@
 			</constraint>
 		</element>
 		<element id="Composition.section">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-				<valueString value="Section"/>
-			</extension>
 			<path value="Composition.section"/>
 			<slicing>
 				<discriminator>
-					<type value="value"/>
-					<path value="code.coding.code"/>
+					<type value="pattern"/>
+					<path value="code"/>
 				</discriminator>
-				<ordered value="true"/>
-				<rules value="closed"/>
+				<ordered value="false"/>
+				<rules value="open"/>
 			</slicing>
 			<min value="1"/>
 			<max value="3"/>
 		</element>
-		<element id="Composition.section:sectionmed">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-				<valueString value="Section"/>
-			</extension>
+
+		<!-- Section card -->
+		<element id="Composition.section:card">
 			<path value="Composition.section"/>
-			<sliceName value="sectionmed"/>
+			<sliceName value="card"/>
 			<min value="1"/>
 			<max value="1"/>
 			<mapping>
@@ -224,44 +228,59 @@
 				<map value="Medication.Medicaments"/>
 			</mapping>
 		</element>
-		<element id="Composition.section.codesectionmed">
+		<element id="Composition.section.code:card">
 			<path value="Composition.section.code"/>
 			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="10160-0"/>
+					<display value="History of medication use"/>
+				</coding>
+			</patternCodeableConcept>
 		</element>
-		<element id="Composition.section.code.coding:sectionmed">
-			<path value="Composition.section.code.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-		</element>
-		<element id="Composition.section.code.coding.system:sectionmed">
-			<path value="Composition.section.code.coding.system"/>
-			<min value="1"/>
-			<fixedUri value="http://loinc.org"/>
-		</element>
-		<element id="Composition.section.code.coding.code:sectionmed">
-			<path value="Composition.section.code.coding.code"/>
-			<min value="1"/>
-			<fixedCode value="10160-0"/>
-		</element>
-		<element id="Composition.section.code.coding.display:sectionmed">
-			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-				<valueBoolean value="true"/>
-			</extension>
-			<path value="Composition.section.code.coding.display"/>
-			<min value="1"/>
-			<fixedString value="Hx of medication use"/>
-		</element>
-		<element id="Composition.section.entry:sectionmed">
+		<element id="Composition.section.entry:card">
 			<path value="Composition.section.entry"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medicationstatement"/>
 			</type>
 		</element>
+		<element id="Composition.section.section:card">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+
+		<!-- Section annotation-->
+		<element id="Composition.section:annotation">
+			<path value="Composition.section"/>
+			<sliceName value="annotation"/>
+			<max value="1"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication.Rmk"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.code:annotation">
+			<path value="Composition.section.code"/>
+			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="48767-8"/>
+					<display value="Annotation comment"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Composition.section.section:annotation">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+
+		<!-- Section healthconcerns -->
 		<element id="Composition.section:healthconcerns">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-				<valueString value="Section"/>
-			</extension>
 			<path value="Composition.section"/>
 			<sliceName value="healthconcerns"/>
 			<max value="1"/>
@@ -269,31 +288,15 @@
 		<element id="Composition.section.code:healthconcerns">
 			<path value="Composition.section.code"/>
 			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="75310-3"/>
+					<display value="Health Concerns"/>
+				</coding>
+			</patternCodeableConcept>
 		</element>
-		<element id="Composition.section.code.coding:healthconcerns">
-			<path value="Composition.section.code.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-		</element>
-		<element id="Composition.section.code.coding.system:healthconcerns">
-			<path value="Composition.section.code.coding.system"/>
-			<min value="1"/>
-			<fixedUri value="http://loinc.org"/>
-		</element>
-		<element id="Composition.section.code.coding.code:healthconcerns">
-			<path value="Composition.section.code.coding.code"/>
-			<min value="1"/>
-			<fixedCode value="75310-3"/>
-		</element>
-		<element id="Composition.section.code.coding.display:healthconcerns">
-			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-				<valueBoolean value="true"/>
-			</extension>
-			<path value="Composition.section.code.coding.display"/>
-			<min value="1"/>
-			<fixedString value="Health Concerns"/>
-		</element>
-		<element id="section.entry">
+		<element id="Composition.section.entry">
 			<path value="Composition.section.entry"/>
 			<slicing>
 				<discriminator>
@@ -394,44 +397,10 @@
 				<map value="MedicalData.RG"/>
 			</mapping>
 		</element>
-		<element id="Composition.section:sectionnote">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-				<valueString value="Section"/>
-			</extension>
-			<path value="Composition.section"/>
-			<sliceName value="sectionnote"/>
-			<max value="1"/>
-			<mapping>
-				<identity value="CHMED16A"/>
-				<map value="Medication.Rmk"/>
-			</mapping>
-		</element>
-		<element id="Composition.section.code:sectionnote">
-			<path value="Composition.section.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Composition.section.code.coding:sectionnote">
-			<path value="Composition.section.code.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-		</element>
-		<element id="Composition.section.code.coding.system:sectionnote">
-			<path value="Composition.section.code.coding.system"/>
-			<min value="1"/>
-			<fixedUri value="http://loinc.org"/>
-		</element>
-		<element id="Composition.section.code.coding.code:sectionnote">
-			<path value="Composition.section.code.coding.code"/>
-			<min value="1"/>
-			<fixedCode value="48767-8"/>
-		</element>
-		<element id="Composition.section.code.coding.display:sectionnote">
-			<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-				<valueBoolean value="true"/>
-			</extension>
-			<path value="Composition.section.code.coding.display"/>
-			<min value="1"/>
-			<fixedString value="ANNOTATION COMMENT"/>
+		<element id="Composition.section.section:healthconcerns">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
 		</element>
 	</differential>
 </StructureDefinition>

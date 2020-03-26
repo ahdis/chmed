@@ -137,6 +137,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Organization/chmed20af-custodian-s01"/>
+      </reference>
+      <name value="Organization MedicationPlan"/>
+      <description value="Example for a organization"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/chmed20af-mp-medicationstatement"/>
       </reference>
       <exampleBoolean value="false"/>

@@ -39,7 +39,7 @@ The Composition ressource defines the following parameter for the medication pla
 | section | medications |  MedicationStatement | Medicaments |
 | section | healthconcerns |  Entry | MedicalData |
 | section | notes |  text | Rmk |
-| receiver | Practitioner GLN if receiver |  [Practitioner](StructureDefinition-chmed20af-receiver.html) | Patient.RCV (GLN of receiver) |  
+| informationRecipient | Practitioner GLN if receiver |  Patient, unless GLN is existing | Patient or Patient.RCV (GLN of receiver) |  
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed20af-mp-composition.html)
 

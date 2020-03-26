@@ -57,11 +57,6 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Condition.verificationStatus">
-      <path value="Condition.verificationStatus"/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
     <element id="Condition.category">
       <path value="Condition.category"/>
       <short value="problem-list-item | encounter-diagnosis"/>
@@ -80,13 +75,6 @@
         <identity value="CHMED16A"/>
         <map value="RiskCatgory"/>
       </mapping>
-    </element>
-    <element id="Condition.severity">
-      <path value="Condition.severity"/>
-      <short value="Subjective severity of condition"/>
-      <definition value="A subjective assessment of the severity of the condition as evaluated by the clinician."/>
-      <min value="0"/>
-      <max value="0"/>
     </element>
     <element id="Condition.code">
       <path value="Condition.code"/>
@@ -107,13 +95,6 @@
         <map value="risk"/>
       </mapping>
     </element>
-    <element id="Condition.bodySite">
-      <path value="Condition.bodySite"/>
-      <short value="Anatomical location, if relevant"/>
-      <definition value="The anatomical location where this condition manifests itself."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
     <element id="Condition.subject">
       <path value="Condition.subject"/>
       <short value="Who has the condition?"/>
@@ -125,68 +106,12 @@
         <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
       </type>
     </element>
-    <element id="Condition.encounter">
-      <path value="Condition.encounter"/>
-      <short value="Encounter created as part of"/>
-      <definition value="The Encounter during which this Condition was created or to which the creation of this record is tightly associated."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.onset[x]">
-      <path value="Condition.onset[x]"/>
-      <short value="Estimated or actual date,  date-time, or age"/>
-      <definition value="Estimated or actual date or date-time  the condition began, in the opinion of the clinician."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.abatement[x]">
-      <path value="Condition.abatement[x]"/>
-      <short value="If/when in resolution/remission"/>
-      <definition value="The date or estimated date that the condition resolved or went into remission. This is called &quot;abatement&quot; because of the many overloaded connotations associated with &quot;remission&quot; or &quot;resolution&quot; - Conditions are never really resolved, but they can abate."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
     <element id="Condition.recordedDate">
       <path value="Condition.recordedDate"/>
       <short value="Date record was first recorded"/>
       <definition value="The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date."/>
       <min value="0"/>
       <max value="1"/>
-    </element>
-    <element id="Condition.recorder">
-      <path value="Condition.recorder"/>
-      <short value="Who recorded the condition"/>
-      <definition value="Individual who recorded the record and takes responsibility for its content."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.asserter">
-      <path value="Condition.asserter"/>
-      <short value="Person who asserts this condition"/>
-      <definition value="Individual who is making the condition statement."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.stage">
-      <path value="Condition.stage"/>
-      <short value="Stage/grade, usually assessed formally"/>
-      <definition value="Clinical stage or grade of a condition. May include formal severity assessments."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.evidence">
-      <path value="Condition.evidence"/>
-      <short value="Supporting evidence"/>
-      <definition value="Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed."/>
-      <min value="0"/>
-      <max value="0"/>
-    </element>
-    <element id="Condition.note">
-      <path value="Condition.note"/>
-      <short value="Additional information about the Condition"/>
-      <definition value="Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis."/>
-      <min value="0"/>
-      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

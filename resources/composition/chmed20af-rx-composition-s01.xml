@@ -3,10 +3,25 @@
    <meta>
       <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-composition"/>
    </meta>
+   <language value="de-CH"/>
    <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">Prescription </div>
    </text>
+   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
+      <valueIdentifier>
+         <system value="http://emediplan.ch/chmed20af/id"/>
+         <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
+      </valueIdentifier>
+   </extension>
+   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
+      <valueUnsignedInt value="1"/>
+   </extension>
+   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient">
+      <valueReference>
+         <reference value="Practitioner/chmed20af-practitioner-s01"/>
+      </valueReference>
+   </extension>
    <identifier>
       <system value="http://emediplan.ch/chmed20af/id"/>
       <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
@@ -14,10 +29,10 @@
    <status value="final"/>
    <type>
       <coding>
-         <system value="http://emediplan.ch/chmed20af/doc"/>
-         <code value="RX"/>
+         <system value="http://snomed.info/sct"/>
+         <code value="761938008"/>
+         <display value="Medical Prescription record (record artifact)"/>
       </coding>
-      <text value="Prescription"/>
    </type>
    <subject>
       <reference value="Patient/chmed20af-mp-patient-s01"/>
@@ -27,6 +42,20 @@
       <reference value="Practitioner/chmed20af-practitioner-s01"/>
    </author>
    <title value="Prescription"/>
+   <confidentiality value="N">
+      <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode">
+         <valueCodeableConcept>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="17621005"/>
+               <display value="Normally accessible"/>
+            </coding>
+         </valueCodeableConcept>
+      </extension>
+   </confidentiality>
+   <custodian>
+      <reference value="Organization/chmed20af-custodian-s01"/>
+   </custodian>
    <section>
       <title value="Verordnung"/>
       <code>
@@ -36,6 +65,10 @@
             <display value="PRESCRIPTIONS"/>
          </coding>
       </code>
+      <text>
+         <status value="additional"/>
+         <div xmlns="http://www.w3.org/1999/xhtml"> Verordnung </div>
+      </text>
       <entry>
          <reference value="MedicationRequest/chmed20af-rx-medicationrequest-s01-1"/>
       </entry>
@@ -46,7 +79,7 @@
          <coding>
             <system value="http://loinc.org"/>
             <code value="48767-8"/>
-            <display value="ANNOTATION COMMENT"/>
+            <display value="Annotation comment"/>
          </coding>
       </code>
       <text>

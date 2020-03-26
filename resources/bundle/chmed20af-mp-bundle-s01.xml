@@ -44,7 +44,7 @@
             </extension>
             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient">
                <valueReference>
-                  <reference value="Practitioner/chmed20af-practitioner-s01"/>
+                  <reference value="Practitioner/9"/>
                </valueReference>
             </extension>
             <identifier>

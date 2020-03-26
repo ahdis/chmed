@@ -28,8 +28,6 @@
       <element id="Patient">
          <path value="Patient"/>
          <short value="Patient within Prescription"/>
-         <min value="1"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient"/>
@@ -57,7 +55,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Private Fields"/>
+            <map value="Patient.PFields"/>
          </mapping>
       </element>
       <element id="Patient.identifier">
@@ -69,19 +67,16 @@
             </discriminator>
             <rules value="open" />
          </slicing>
-         <max value="1"/>
          <!-- TBD -->
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Patient.PatientId[Type=TBD]"/>
+            <map value="Patient.Id with PatientId.Type (TBD)"/>
          </mapping>
       </element>
       <element id="Patient.identifier:LocalPid">
          <path value="Patient.identifier" />
          <sliceName value="LocalPid" />
          <short value="Local patient identifiers" />
-         <min value="1" />
-         <max value="1" />
          <patternIdentifier>
             <type>
                <coding>
@@ -97,15 +92,9 @@
       <element id="Patient.identifier.value:LocalPid">
          <path value="Patient.identifier.value" />
       </element>
-      <element id="Patient.active">
-         <path value="Patient.active"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="Patient.name">
          <path value="Patient.name"/>
          <short value="Name for this patient"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="name.given = Patient.FName, name.family = Patient.LName"/>
@@ -114,7 +103,6 @@
       <element id="Patient.telecom">
          <path value="Patient.telecom"/>
          <short value="Telephone number"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Phone"/>
@@ -123,20 +111,9 @@
       <element id="Patient.gender">
          <path value="Patient.gender"/>
          <short value="male | female | other"/>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="AdministrativeGender"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-               <valueBoolean value="true"/>
-            </extension>
-            <strength value="required"/>
-            <description value="The gender of a person used for administrative purposes."/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
-         </binding>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Patient.gender, male=1, female=2"/>
+            <map value="Patient.Gender, Male = 1, Female = 2"/>
          </mapping>
       </element>
       <element id="Patient.birthDate">
@@ -147,57 +124,13 @@
             <map value="Patient.BDt"/>
          </mapping>
       </element>
-      <element id="Patient.deceased[x]">
-         <path value="Patient.deceased[x]"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="Patient.address">
          <path value="Patient.address"/>
          <short value="Address for the patient"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
          </mapping>
-      </element>
-      <element id="Patient.maritalStatus">
-         <path value="Patient.maritalStatus"/>
-         <short value="Marital (civil) status of a patient"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.multipleBirth[x]">
-         <path value="Patient.multipleBirth[x]"/>
-         <short value="Whether patient is part of a multiple birth"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.photo">
-         <path value="Patient.photo"/>
-         <short value="Image of the patient"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.contact">
-         <path value="Patient.contact"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.generalPractitioner">
-         <path value="Patient.generalPractitioner"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.managingOrganization">
-         <path value="Patient.managingOrganization"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Patient.link">
-         <path value="Patient.link"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
    </differential>
 </StructureDefinition>

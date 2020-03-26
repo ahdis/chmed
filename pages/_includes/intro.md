@@ -53,13 +53,14 @@ The Composition ressource defines the following parameter for the medication pla
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | Local identifier for this patient  | Identifier  | In the new version CHMED16A a local identifier will be defined |
+| privatefield | Private Field | Extension (string) | Patient.PFields |
+| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (TBD) |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName |
-| telecom  | telephone number  | ContactPoint  | Patient.Phone | 
-| gender  | gender  | code  | Patient.gender, male=1, female=2 |
-| birthDate  | the date of birth  | date  |Patient.BDt |
-| address  | address for the patient  | Address  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
-| communication.language  | language for the patient  | CodeableConcept  |Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" |
+| telecom  | Telephone number  | ContactPoint  | Patient.Phone | 
+| gender  | Gender  | code  | Patient.Gender, Male = 1, Female = 2 |
+| birthDate  | Date of birth  | date  | Patient.BDt |
+| address  | Address for the patient  | Address  | address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
+| communication.language  | Language of the patient  | CodeableConcept  | Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" |
 
 [Profile for Medication Plan Patient](StructureDefinition-chmed20af-mp-patient.html) &#124; [Example for Patient](Patient-chmed20af-mp-patient-s01.html)
 
@@ -162,12 +163,13 @@ The Composition ressource defines the following parameter for the Prescription:
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- | 
-| identifier  | Local identifier for this patient  | Identifier  | In the new version CHMED16A a local identifier will be defined |
+| privatefield | Private Field | Extension (string) | Patient.PFields |
+| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (TBD) |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | 
-| telecom  | telephone number  | ContactPoint  | Patient.Phone |
-| gender  | gender  | code  | Patient.gender, male=1, female=2 |
-| birthDate  | the date of birth  | date  |Patient.BDt | 
-| address  | address for the patient  | date  |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
+| telecom  | Telephone number  | ContactPoint  | Patient.Phone |
+| gender  | Gender  | code  | Patient.Gender, Male = 1, Female = 2 |
+| birthDate  | Date of birth  | date  | Patient.BDt | 
+| address  | Address for the patient  | Address |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 
 [Profile for Prescription Patient](StructureDefinition-chmed20af-rx-patient.html) &#124; [Example for Patient (xml)](Patient-chmed20af-mp-patient-ext.xml.html)
 

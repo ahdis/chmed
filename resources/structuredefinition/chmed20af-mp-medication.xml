@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="chmed20af-medication"/>
-   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+   <id value="chmed20af-mp-medication"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medication"/>
    <version value="0.1.0"/>
-   <name value="Medication"/>
-   <title value="Medication"/>
+   <name value="MPMedication"/>
+   <title value="MP Medication"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>

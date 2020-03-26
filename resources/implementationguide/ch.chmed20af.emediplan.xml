@@ -308,7 +308,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-medication"/>
+        <reference value="StructureDefinition/chmed20af-mp-medication"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-rx-medication"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

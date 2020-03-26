@@ -63,7 +63,7 @@
          <short value="Medication to be taken"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-medication"/>
          </type>  
          <mapping>
             <identity value="CHMED16A"/>

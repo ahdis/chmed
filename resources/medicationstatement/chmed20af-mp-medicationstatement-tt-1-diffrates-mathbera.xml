@@ -26,6 +26,13 @@
                <display value="MABTHERA Inf Konz 100 mg/10ml"/>
             </coding>
          </code>
+         <form>
+            <coding>
+               <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+               <code value="11210000"/>
+               <display value="Solution for infusion"/>
+            </coding>
+         </form>
       </Medication>
    </contained>
    <status value="completed"/>

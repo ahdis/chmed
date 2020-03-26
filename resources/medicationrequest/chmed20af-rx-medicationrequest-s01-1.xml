@@ -20,6 +20,13 @@
                <display value="ROACCUTAN Kaps 10 mg 30 Stk"/>
             </coding>
          </code>
+         <form>
+            <coding>
+               <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+               <code value="10219000"/>
+               <display value="Tablet"/>
+            </coding>
+         </form>
       </Medication>
    </contained>
    <intent value="order"/>

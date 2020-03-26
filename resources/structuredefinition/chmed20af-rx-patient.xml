@@ -28,7 +28,6 @@
       <element id="Patient">
          <path value="Patient"/>
          <short value="Patient within Prescription"/>
-         <definition value="Patient within Prescription"/>
          <min value="1"/>
          <max value="1"/>
          <mapping>
@@ -114,8 +113,7 @@
       </element>
       <element id="Patient.telecom">
          <path value="Patient.telecom"/>
-         <short value="telephone number"/>
-         <definition value="telephone number"/>
+         <short value="Telephone number"/>
          <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
@@ -125,7 +123,6 @@
       <element id="Patient.gender">
          <path value="Patient.gender"/>
          <short value="male | female | other"/>
-         <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
                <valueString value="AdministrativeGender"/>
@@ -145,7 +142,6 @@
       <element id="Patient.birthDate">
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
-         <definition value="The date of birth for the individual."/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.BDt"/>
@@ -159,7 +155,6 @@
       <element id="Patient.address">
          <path value="Patient.address"/>
          <short value="Address for the patient"/>
-         <definition value="Address for the patient"/>
          <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
@@ -181,41 +176,26 @@
       <element id="Patient.photo">
          <path value="Patient.photo"/>
          <short value="Image of the patient"/>
-         <definition value="Image of the patient."/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.contact">
-         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-            <valueString value="Contact"/>
-         </extension>
          <path value="Patient.contact"/>
-         <short value="A contact party (e.g. guardian, partner, friend) for the patient"/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.generalPractitioner">
          <path value="Patient.generalPractitioner"/>
-         <short value="Patient's nominated primary care provider"/>
-         <alias value="careProvider"/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.managingOrganization">
          <path value="Patient.managingOrganization"/>
-         <short value="Organization that is the custodian of the patient record"/>
-         <definition value="Organization that is the custodian of the patient record."/>
-         <comment value="There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."/>
-         <requirements value="Need to know who recognizes this patient record, manages and updates it."/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.link">
          <path value="Patient.link"/>
-         <short value="Link to another patient resource that concerns the same actual person"/>
-         <definition value="Link to another patient resource that concerns the same actual patient."/>
-         <comment value="There is no assumption that linked patient records have mutual links."/>
-         <requirements value="There are multiple usecases: * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers."/>
          <min value="0"/>
          <max value="0"/>
       </element>

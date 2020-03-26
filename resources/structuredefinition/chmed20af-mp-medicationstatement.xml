@@ -84,7 +84,6 @@
          <path value="MedicationStatement.status"/>
          <short value="active | completed | entered-in-error | intended | stopped | on-hold"/>
          <definition value="A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed."/>
-         <comment value="MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error)."/>
          <min value="1"/>
          <max value="1"/>
          <binding>
@@ -107,7 +106,6 @@
          <path value="MedicationStatement.medication[x]"/>
          <short value="What medication was taken"/>
          <definition value="Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications."/>
-         <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example if you require form or lot number, then you must reference the Medication resource. ."/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -139,7 +137,6 @@
          <path value="MedicationStatement.effective[x]"/>
          <short value="The date/time or interval when the medication was taken"/>
          <definition value="The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true)."/>
-         <comment value="This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the &quot;end&quot; date will be omitted."/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -187,7 +184,6 @@
          <path value="MedicationStatement.derivedFrom"/>
          <short value="Additional supporting information"/>
          <definition value="Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement."/>
-         <comment value="Likely references would be to MedicationRequest, MedicationDispense, Claim, Observation or QuestionnaireAnswers.  The most common use cases for deriving a MedicationStatement comes from creating a MedicationStatement from a MedicationRequest or from a lab observation or a claim.  it should be noted that the amount of information that is available varies from the type resource that you derive the MedicationStatement from."/>
          <min value="0"/>
          <max value="0"/>
          <type>
@@ -199,7 +195,6 @@
          <path value="MedicationStatement.reasonCode"/>
          <short value="Reason for why the medication is being/was taken"/>
          <definition value="A reason for why the medication is being/was taken."/>
-         <comment value="This could be a diagnosis code. If a full condition record exists or additional detail is needed, use reasonForUseReference."/>
          <min value="1"/>
          <max value="1"/>
          <mapping>
@@ -228,7 +223,6 @@
          <path value="MedicationStatement.dosage"/>
          <short value="Details of how medication is/was taken or should be taken"/>
          <definition value="Indicates how the medication is/was or should be taken by the patient."/>
-         <comment value="The dates included in the dosage on a Medication Statement reflect the dates for a given dose.  For example, &quot;from November 1, 2016 to November 3, 2016, take one tablet daily and from November 4, 2016 to November 7, 2016, take two tablets daily.&quot;  It is expected that this specificity may only be populated where the patient brings in their labelled container or where the Medication Statement is derived from a MedicationRequest."/>
          <min value="0"/>
          <max value="*"/>
          <type>

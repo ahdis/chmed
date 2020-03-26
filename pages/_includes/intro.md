@@ -35,7 +35,7 @@ The Composition ressource defines the following parameter for the medication pla
 | subject  | Reference to the Patient  | Patient  | Patient |
 | identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
-| author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth |
+| author  | Author | Practitioner  | Auth |
 | attester.time  | Date of validation  | Practitioner  | ValDt | 
 | attester.party  | Validated by Gln of practitionier  |  Practitioner | ValBy | 
 | section:card | medications |  MedicationStatement | Medicaments |
@@ -141,9 +141,10 @@ The Composition ressource defines the following parameter for the Prescription:
 | subject  | Reference to the Patient  | Patient  | Patient |
 | identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
-| author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth |
+| author  | Author | Practitioner  | Auth |
 | section:prescription | medications |  MedicationRequest | Medicaments | 
 | section:annotation | notes |  text | Rmk | 
+| informationRecipient | Receiver (Patient or Gln of receiver) |  Patient or Practitioner | Patient or Patient.RCV (Gln of receiver) |
 
 [Profile for Prescription Composition](StructureDefinition-chmed20af-rx-composition.html)
 

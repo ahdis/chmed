@@ -33,11 +33,10 @@
       <element id="Bundle.identifier">
          <path value="Bundle.identifier"/>
          <short value="Logical identifier for document (GUID)"/>
-			<definition value="Logical identifier for document (GUID)"/>
-			<mapping>
-				<identity value="CHMED16A"/>
-				<map value="id"/>
-			</mapping>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="id"/>
+         </mapping>
       </element>
       <element id="Bundle.type">
          <path value="Bundle.type"/>
@@ -61,13 +60,13 @@
       <element id="Bundle.entry:composition">
          <path value="Bundle.entry"/>
          <sliceName value="composition"/>
-         <short value="A resource in the bundle"/>
-         <definition value="The Resources for the entry."/>
+         <min value="1"/>
+         <max value="1"/>
       </element>
       <element id="Bundle.entry.resource:composition">
          <path value="Bundle.entry.resource"/>
-         <short value="A resource in the bundle"/>
-         <definition value="The Resources for the entry."/>
+         <short value="Prescritpion"/>
+         <min value="1"/>
          <type>
             <code value="Composition"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-composition"/>

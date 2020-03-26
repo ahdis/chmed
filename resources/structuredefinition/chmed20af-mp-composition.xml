@@ -75,7 +75,6 @@
 		<element id="Composition.identifier">
 			<path value="Composition.identifier"/>
 			<short value="Logical identifier for document (GUID)"/>
-			<definition value="Logical identifier for document (GUID)"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="id"/>
@@ -98,8 +97,7 @@
 		</element>
 		<element id="Composition.subject">
 			<path value="Composition.subject"/>
-			<short value="Reference to the Patient"/>
-			<definition value="Reference to the Patient."/>
+			<short value="Patient"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
@@ -115,6 +113,7 @@
 		</element>
 		<element id="Composition.date">
 			<path value="Composition.date"/>
+			<short value="Composition editing time"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="DT"/>
@@ -123,7 +122,6 @@
 		<element id="Composition.author">
 			<path value="Composition.author"/>
 			<short value="Author"/>
-			<definition value="Author"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
@@ -133,6 +131,11 @@
 				<identity value="CHMED16A"/>
 				<map value="Auth"/>
 			</mapping>
+		</element>
+		<element id="Composition.title">
+			<path value="Composition.title"/>
+			<short value="'Medikationsplan' in german or 'Plan de médication' in french or 'Piano farmacologico' in italian or 'Medication Card' in english
+                        or titles in other languages are also allowed"/>
 		</element>
 		<element id="Composition.confidentiality">
 			<path value="Composition.confidentiality"/>
@@ -156,8 +159,7 @@
 		</element>
 		<element id="Composition.attester.time">
 			<path value="Composition.attester.time"/>
-			<short value="Validate date: Date of validation"/>
-			<definition value="When composition was attested by the party, Validate date: Date of validation"/>
+			<short value="When composition was attested by the party, Validate date: Date of validation"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="ValDt (Validate date: Date of validation)"/>
@@ -165,7 +167,7 @@
 		</element>
 		<element id="Composition.attester.party">
 			<path value="Composition.attester.party"/>
-			<definition value="Validated by: The Gln of the pharmacist who has validated the medication plan"/>
+			<short value="Validated by: The Gln of the pharmacist who has validated the medication plan"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
@@ -177,31 +179,17 @@
 		</element>
 		<element id="Composition.custodian">
 			<path value="Composition.custodian"/>
-			<comment value="This is useful when documents are derived from a composition - provides guidance for how to get the latest version of the document. This is optional because this is sometimes not known by the authoring system, and can be inferred by context. However it is important that this information be known when working with a derived document, so providing a custodian is encouraged."/>
+			<short value="The organization in whose name the document has been created"/>
 		</element>
 		<element id="Composition.relatesTo">
 			<path value="Composition.relatesTo"/>
+			<min value="0"/>
 			<max value="0"/>
-			<constraint>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<expression value="children().count() > id.count()"/>
-				<xpath value="@value|f:*|h:div"/>
-				<source value="Element"/>
-			</constraint>
 		</element>
 		<element id="Composition.event">
 			<path value="Composition.event"/>
+			<min value="0"/>
 			<max value="0"/>
-			<constraint>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<expression value="children().count() > id.count()"/>
-				<xpath value="@value|f:*|h:div"/>
-				<source value="Element"/>
-			</constraint>
 		</element>
 		<element id="Composition.section">
 			<path value="Composition.section"/>
@@ -213,16 +201,12 @@
 				<ordered value="false"/>
 				<rules value="open"/>
 			</slicing>
-			<min value="1"/>
-			<max value="3"/>
 		</element>
 
 		<!-- Section card -->
 		<element id="Composition.section:card">
 			<path value="Composition.section"/>
 			<sliceName value="card"/>
-			<min value="1"/>
-			<max value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="Medication.Medicaments"/>
@@ -241,6 +225,7 @@
 		</element>
 		<element id="Composition.section.entry:card">
 			<path value="Composition.section.entry"/>
+			<short value="Medication statement"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medicationstatement"/>
@@ -256,7 +241,6 @@
 		<element id="Composition.section:annotation">
 			<path value="Composition.section"/>
 			<sliceName value="annotation"/>
-			<max value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="Medication.Rmk"/>
@@ -273,6 +257,10 @@
 				</coding>
 			</patternCodeableConcept>
 		</element>
+		<element id="Composition.section.entry:annotation">
+			<path value="Composition.section.entry"/>
+			<short value="General comments"/>
+		</element>
 		<element id="Composition.section.section:annotation">
 			<path value="Composition.section.section"/>
 			<min value="0"/>
@@ -283,6 +271,7 @@
 		<element id="Composition.section:healthconcerns">
 			<path value="Composition.section"/>
 			<sliceName value="healthconcerns"/>
+			<min value="0"/>
 			<max value="1"/>
 		</element>
 		<element id="Composition.section.code:healthconcerns">
@@ -311,7 +300,6 @@
 			<path value="Composition.section.entry"/>
 			<sliceName value="bodyweight"/>
 			<short value="Body Weight (kg)"/>
-			<definition value="Body Weight (kg)"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
@@ -326,7 +314,6 @@
 			<path value="Composition.section.entry"/>
 			<sliceName value="bodyheight"/>
 			<short value="Body height (cm)"/>
-			<definition value="Body height (cm)"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>

@@ -28,7 +28,6 @@
       <element id="Patient">
          <path value="Patient"/>
          <short value="Patient within Medication Plan"/>
-         <definition value="Patient within Medication Plan"/>
          <min value="1"/>
          <max value="1"/>
          <mapping>
@@ -114,8 +113,7 @@
       </element>
       <element id="Patient.telecom">
          <path value="Patient.telecom"/>
-         <short value="telephone number"/>
-         <definition value="telephone number"/>
+         <short value="Telephone number"/>
          <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
@@ -145,7 +143,6 @@
       <element id="Patient.birthDate">
          <path value="Patient.birthDate"/>
          <short value="The date of birth for the individual"/>
-         <definition value="The date of birth for the individual."/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.BDt"/>
@@ -159,7 +156,6 @@
       <element id="Patient.address">
          <path value="Patient.address"/>
          <short value="Address for the patient"/>
-         <definition value="Address for the patient"/>
          <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
@@ -181,16 +177,11 @@
       <element id="Patient.photo">
          <path value="Patient.photo"/>
          <short value="Image of the patient"/>
-         <definition value="Image of the patient."/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.contact">
-         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-            <valueString value="Contact"/>
-         </extension>
          <path value="Patient.contact"/>
-         <short value="A contact party (e.g. guardian, partner, friend) for the patient"/>
          <min value="0"/>
          <max value="0"/>
       </element>
@@ -206,14 +197,6 @@
          </slicing>
          <min value="1"/>
          <max value="1"/>
-         <mapping>
-            <identity value="rim"/>
-            <map value="LanguageCommunication"/>
-         </mapping>
-         <mapping>
-            <identity value="cda"/>
-            <map value="patient.languageCommunication"/>
-         </mapping>
       </element>
       <element id="Patient.communication:languageOfCorrespondance">
          <path value="Patient.communication"/>
@@ -223,9 +206,6 @@
       <element id="Patient.communication.language:languageOfCorrespondance">
          <path value="Patient.communication.language"/>
          <short value="The language which can be used to communicate with the patient about his or her health"/>
-         <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English."/>
-         <comment value="The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type."/>
-         <requirements value="Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect."/>
          <binding>
             <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
                <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
@@ -248,42 +228,19 @@
       <element id="Patient.communication.preferred:languageOfCorrespondance">
          <path value="Patient.communication.preferred"/>
          <short value="Language preference indicator"/>
-         <definition value="Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)."/>
-         <mapping>
-            <identity value="v2"/>
-            <map value="PID-15"/>
-         </mapping>
-         <mapping>
-            <identity value="rim"/>
-            <map value="preferenceInd"/>
-         </mapping>
-         <mapping>
-            <identity value="cda"/>
-            <map value=".preferenceInd"/>
-         </mapping>
       </element>
       <element id="Patient.generalPractitioner">
          <path value="Patient.generalPractitioner"/>
-         <short value="Patient's nominated primary care provider"/>
-         <alias value="careProvider"/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.managingOrganization">
          <path value="Patient.managingOrganization"/>
-         <short value="Organization that is the custodian of the patient record"/>
-         <definition value="Organization that is the custodian of the patient record."/>
-         <comment value="There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."/>
-         <requirements value="Need to know who recognizes this patient record, manages and updates it."/>
          <min value="0"/>
          <max value="0"/>
       </element>
       <element id="Patient.link">
          <path value="Patient.link"/>
-         <short value="Link to another patient resource that concerns the same actual person"/>
-         <definition value="Link to another patient resource that concerns the same actual patient."/>
-         <comment value="There is no assumption that linked patient records have mutual links."/>
-         <requirements value="There are multiple usecases: * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers."/>
          <min value="0"/>
          <max value="0"/>
       </element>

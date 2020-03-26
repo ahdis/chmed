@@ -191,10 +191,17 @@ The medication section contains the entries for the prescriped medications for t
 | ------------- | ------------- | -------------  | ------------- |
 | medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) |
 | note  | Application Instructions  | Annotation  |Medication.AppInstr |
-| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | 
-| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes, SimpliedVersion of taking times onlys | 
-| dosage.doseAndRate.dose[x]  | Amount of medication per dose | Quantity  | TakingTime.A, TakingTime.DoFrom, TakingTime.DoTo) |
+
+
+| dosage:nonstructured  | Application Instructions  | Dosage | Medicament.AppInstr |
+| dosage:structured | List of Posology | Dosage | Medicament.Pos |
+
+| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
+| dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
+| dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
 | dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
+
+
 | dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | Medication  | Rep | 
 | dispenseRequest.quantity  | Number of package to be delivered  | Medication  | NbPack |
 | substitution.allowed  |  Medication is substitutable    | Medication  | Subs negated | 

@@ -257,7 +257,7 @@
          <max value="*"/>
          <type>
             <code value="Dosage"/>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-dosage"/>
          </type>
          <mapping>
             <identity value="CHMED16A"/>

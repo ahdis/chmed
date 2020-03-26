@@ -25,6 +25,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/chmed20af-rx-dosage"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/chmed20af-dosequantityto"/>
       </reference>
       <exampleBoolean value="false"/>

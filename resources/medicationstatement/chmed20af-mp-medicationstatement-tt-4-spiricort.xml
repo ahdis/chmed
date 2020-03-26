@@ -70,7 +70,7 @@
          <doseQuantity>
             <value value="40"/>
             <unit value="mg"/>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+            <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>
       </doseAndRate>
@@ -99,7 +99,7 @@
          <doseQuantity>
             <value value="30"/>
             <unit value="mg"/>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+            <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>
       </doseAndRate>
@@ -128,7 +128,7 @@
          <doseQuantity>
             <value value="25"/>
             <unit value="mg"/>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+            <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>
       </doseAndRate>

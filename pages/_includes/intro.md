@@ -81,14 +81,15 @@ The medication section contains the entries for the current medications for pati
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- | 
-| medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) |
-| informationSource  | Person or organization that provided the information about the taking of this medication  | Patient or Practitioner  | Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner |
-| reasonCode  | Reason for why the medication is being/was taken  | CodeableConcept  | Medication.TkgRsn (Taking Reason) | 
-| note  | Application Instructions  | Annotation  |Medication.AppInstr |
-| dosage  | Details of how medication is/was taken or should be taken  | Dosage  | Medication.Pos (list of Posology) | 
-| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, CyDu, InRes | 
-| dosage.route  | How drug should enter body | CodeableConect  | Medication.Roa |
-| dosage.doseAndRate.doseQuantity  |Amount of medication per dose | Quantity  | doseSimpleQuantity: TakingTime.A, doseRange: TakingTime.DoFrom |
+| privatefield | Private Field | Extension (string) | Medicament.PFields |
+| medicationReference  | Reference to Medication  | Medication | Medicament.Id with Medicament.IdType 2 (GTIN) |
+| informationSource  | Person that provided the information about the taking of this medication | Patient or Practitioner  | Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner |
+| reasonCode  | Taking reason  | text  | Medicament.TkgRsn | 
+| dosage:nonstructured  | Application Instructions  | Dosage | Medicament.AppInstr |
+| dosage:structured | List of Posology | Dosage | Medicament.Pos |
+| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
+| dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
+| dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
 | dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
 [Profile for MedicationStatement](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)

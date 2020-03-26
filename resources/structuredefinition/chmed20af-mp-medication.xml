@@ -31,20 +31,18 @@
       </element>
       <element id="Medication.code">
          <path value="Medication.code"/>
-         <min value="1"/>
       </element>
       <element id="Medication.code.coding">
          <path value="Medication.code.coding"/>
          <short value="GTIN code that identify this medication"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Medication.ID with IdTpye 2 (GTIN)"/>
+            <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>
       </element>
       <element id="Medication.code.coding.system">
          <path value="Medication.code.coding.system"/>
          <short value="Global Trade Item Number (GS1)"/>
-         <min value="1"/>
          <type>
             <code value="uri"/>
          </type>
@@ -52,17 +50,67 @@
       </element>
       <element id="Medication.code.coding.code">
          <path value="Medication.code.coding.code"/>
-         <min value="1"/>
       </element>
       <element id="Medication.code.coding.display">
          <path value="Medication.code.coding.display"/>
-         <min value="1"/>
       </element>
       <element id="Medication.code.text">
          <path value="Medication.code.text"/>
          <short value="Name that identify this medication"/>
       </element>
-      
-      
+      <element id="Medication.form">
+         <path value="Medication.form"/>
+         <short value="Galenic form"/>
+         <binding>
+            <strength value="required"/>
+            <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/edqm-pharmaceuticaldoseform"/>
+         </binding>
+      </element>
+      <element id="Medication.form.coding">
+         <path value="Medication.form.coding"/>
+      </element>
+      <element id="Medication.form.coding.system">
+         <path value="Medication.form.coding.system"/>
+      </element>
+      <element id="Medication.form.coding.code">
+         <path value="Medication.form.coding.code"/>
+      </element>
+      <element id="Medication.form.coding.display">
+         <path value="Medication.form.coding.display"/>
+      </element>
+      <element id="Medication.amount">
+         <path value="Medication.amount"/>
+         <short value="Package size"/>
+      </element>
+      <element id="Medication.ingredient">
+         <path value="Medication.ingredient"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept">
+         <path value="Medication.ingredient.itemCodeableConcept"/>
+         <short value="Name of active ingredient"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.coding">
+         <path value="Medication.ingredient.itemCodeableConcept.coding"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.coding.system">
+         <path value="Medication.ingredient.itemCodeableConcept.coding.system"/>
+         <type>
+            <code value="uri"/>
+         </type>
+         <fixedUri value="http://snomed.info/sct"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.coding.code">
+         <path value="Medication.ingredient.itemCodeableConcept.coding.code"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.coding.display">
+         <path value="Medication.ingredient.itemCodeableConcept.coding.display"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.text">
+         <path value="Medication.ingredient.itemCodeableConcept.text"/>
+      </element>
+      <element id="Medication.ingredient.strength">
+         <path value="Medication.ingredient.strength"/>
+         <short value="Dose per unit"/>
+      </element>
    </differential>
 </StructureDefinition>

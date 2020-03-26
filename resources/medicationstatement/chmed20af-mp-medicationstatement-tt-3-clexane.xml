@@ -19,12 +19,13 @@
                <code value="7680494563859"/>
                <display value="CLEXANE Inj Lös 40 mg/0.4ml"/>
             </coding>
+            <text value="CLEXANE Inj Lös 40 mg/0.4ml"/>
          </code>
          <form>
             <coding>
                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-               <code value="10219000"/>
-               <display value="Tablet"/>
+               <code value="11201000"/>
+               <display value="Solution for injection"/>
             </coding>
          </form>
       </Medication>

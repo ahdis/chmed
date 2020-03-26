@@ -28,6 +28,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                <code value="7680565130034"/>
                <display value="MORPHIN HCL Amino Inj Lös 20 mg/ml"/>
             </coding>
+            <text value="MORPHIN HCL Amino Inj Lös 20 mg/ml"/>
          </code>
          <form>
             <coding>

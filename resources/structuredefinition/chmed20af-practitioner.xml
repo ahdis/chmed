@@ -28,8 +28,10 @@
       <element id="Practitioner">
          <path value="Practitioner"/>
          <short value="A person with a  formal responsibility in the provisioning of healthcare or related services"/>
-         <min value="0"/>
-         <max value="1"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Auth"/>
+         </mapping>
       </element>
       <element id="Practitioner.identifier">
          <path value="Practitioner.identifier"/>
@@ -41,8 +43,7 @@
             <ordered value="false"/>
             <rules value="closed"/>
          </slicing>
-         <short value="A identifier for the practitioner"/>
-         <max value="2"/>
+         <short value="An identifier for the practitioner"/>
       </element>
       <element id="Practitioner.identifier:GLN">
          <path value="Practitioner.identifier"/>
@@ -57,13 +58,12 @@
          <short value="GLN for this practitioner"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Author.GLN"/>
+            <map value="Auth.Gln"/>
          </mapping>
       </element>
       <element id="Practitioner.identifier:ZSR">
          <path value="Practitioner.identifier"/>
          <sliceName value="ZSR"/>
-         <max value="1"/>
       </element>
       <element id="Practitioner.identifier.system:ZSR">
          <path value="Practitioner.identifier.system"/>
@@ -77,18 +77,12 @@
             <map value="ZSR-Number of the organisation"/>
          </mapping>
       </element>
-      <element id="Practitioner.active">
-         <path value="Practitioner.active"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="Practitioner.name">
          <path value="Practitioner.name"/>
          <short value="The name(s) associated with the practitioner"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="name.given = Author.FName, name.family = Author.LName"/>
+            <map value="name.given = Auth.FName, name.family = Auth.LName"/>
          </mapping>
       </element>
       <element id="Practitioner.telecom">
@@ -98,33 +92,6 @@
       <element id="Practitioner.address">
          <path value="Practitioner.address"/>
          <short value="Address(es) of the practitioner"/>
-         <max value="1"/>
-      </element>
-      <element id="Practitioner.gender">
-         <path value="Practitioner.gender"/>
-         <short value="male | female | other | unknown"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Practitioner.birthDate">
-         <path value="Practitioner.birthDate"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Practitioner.photo">
-         <path value="Practitioner.photo"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Practitioner.qualification">
-         <path value="Practitioner.qualification"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Practitioner.communication">
-         <path value="Practitioner.communication"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
    </differential>
 </StructureDefinition>

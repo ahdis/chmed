@@ -70,8 +70,8 @@ The Composition ressource defines the following parameter for the medication pla
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | Gln for this practitioner  | Identifier  | Author.Gln |
-| name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName |
+| identifier  | Gln for this practitioner  | Identifier  | Auth.Gln |
+| name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName |
 
 [Profile for Practitioner](StructureDefinition-chmed20af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed20af-practitioner-s01.xml.html)
 
@@ -179,9 +179,9 @@ The Composition ressource defines the following parameter for the Prescription:
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | Gln for this practitioner  | Identifier  | Author.Gln |
+| identifier  | Gln for this practitioner  | Identifier  | Auth.Gln |
 | identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | 
-| name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName | 
+| name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName | 
 
 [Profile for Practitioner](StructureDefinition-chmed20af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed20af-practitioner-s01.xml.html)
 

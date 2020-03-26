@@ -28,6 +28,24 @@
                <display value="Solution for infusion"/>
             </coding>
          </form>
+         <ingredient>
+            <itemCodeableConcept>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="372826007"/>
+                  <display value="Metoprolol (substance)"/>
+               </coding>
+            </itemCodeableConcept>
+            <strength>
+               <numerator>
+                  <value value="50"/>
+                  <unit value="mg"/>
+               </numerator>
+               <denominator>
+                  <value value="1"/>
+               </denominator>
+            </strength>
+         </ingredient>
       </Medication>
    </contained>
    <status value="completed"/>

@@ -2,8 +2,8 @@
   <id value="chmed20af-rx-dosage"/>
   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-dosage"/>
   <version value="0.1.0"/>
-  <name value="DosageChmed20af"/>
-  <title value="Dosage for CHMED20AF"/>
+  <name value="RxDosageChmed20af"/>
+  <title value="Rx Dosage for CHMED20AF"/>
   <status value="draft"/>
   <publisher value="IG eMediplan"/>
   <contact>

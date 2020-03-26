@@ -81,6 +81,10 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
          </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient"/>
+         </mapping>
       </element>
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
@@ -105,7 +109,7 @@
       </element>
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
-         <short value="Application Instructions"/>
+         <short value="Annoation"/>
       </element>
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>

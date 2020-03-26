@@ -83,14 +83,15 @@ The medication section contains the entries for the current medications for pati
 | ------------- | ------------- | -------------  | ------------- | 
 | privatefield | Private Field | Extension (string) | Medicament.PFields |
 | medicationReference  | Reference to Medication  | Medication | Medicament.Id with Medicament.IdType 2 (GTIN) |
+| subject | Reference to Patient | Patient | Patient |
 | informationSource  | Person that provided the information about the taking of this medication | Patient or Practitioner  | Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner |
 | reasonCode  | Taking reason  | text  | Medicament.TkgRsn | 
 | dosage:nonstructured  | Application Instructions  | Dosage | Medicament.AppInstr |
 | dosage:structured | List of Posology | Dosage | Medicament.Pos |
-| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
-| dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
-| dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
-| dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
+| Dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
+| Dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
+| Dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
+| Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
 [Profile for MedicationStatement](StructureDefinition-chmed20af-mp-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
@@ -189,22 +190,18 @@ The medication section contains the entries for the prescriped medications for t
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| medicationReference  | reference to Medication  | Medication  | Medication.ID with IdTpye 2 (GTIN) |
-| note  | Application Instructions  | Annotation  |Medication.AppInstr |
-
-
-| dosage:nonstructured  | Application Instructions  | Dosage | Medicament.AppInstr |
-| dosage:structured | List of Posology | Dosage | Medicament.Pos |
-
-| dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
-| dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
-| dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
-| dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
-
-
-| dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | Medication  | Rep | 
-| dispenseRequest.quantity  | Number of package to be delivered  | Medication  | NbPack |
-| substitution.allowed  |  Medication is substitutable    | Medication  | Subs negated | 
+| privatefield | Private Field | Extension (string) | Medicament.PFields |
+| medicationReference  | Reference to Medication  | Medication | Medicament.Id with Medicament.IdType 2 (GTIN) |
+| subject | Reference to Patient | Patient | Patient |
+| dosageInstruction:nonstructured  | Application Instructions  | Dosage | Medicament.AppInstr |
+| dosageInstruction:structured | List of Posology | Dosage | Medicament.Pos |
+| Dosage.timing  | When medication should be administered  | Timing  | Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes | 
+| Dosage.route  | How drug should enter body | CodeableConect | Medicament.Roa |
+| Dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
+| Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
+| dispenseRequest.numberOfRepeatsAllowed | Number of repetitions allowed  | unsignedInt  | Medicament.Rep | 
+| dispenseRequest.quantity  | Number of package to be delivered  | 	SimpleQuantity  | Medicament.NbPack |
+| substitution.allowedCodeableConcept |  Medication is substitutable  | CodeableConcept  | Medicament.Subs | 
 
 [Profile for MedicationRequest](StructureDefinition-chmed20af-rx-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 

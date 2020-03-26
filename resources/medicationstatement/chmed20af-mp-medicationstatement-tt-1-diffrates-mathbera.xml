@@ -17,7 +17,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont4"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-medication"/>
          </meta>
          <code>
             <coding>

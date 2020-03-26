@@ -27,8 +27,6 @@
    <differential>
       <element id="Composition">
          <path value="Composition"/>
-         <min value="1"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication"/>
@@ -48,10 +46,9 @@
          <path value="Composition.extension"/>
          <sliceName value="informationRecipient"/>
          <short value="A recipient of this document"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Patient or Patient.RCV (Gln of receiver)"/>
+            <map value="Patient or Patient.Rcv (Gln of receiver)"/>
          </mapping>
       </element>
       <element id="Composition.extension:privatefield">
@@ -66,7 +63,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Private Fields"/>
+            <map value="PFields"/>
          </mapping>
       </element>
       <element id="Composition.identifier">
@@ -74,7 +71,7 @@
          <short value="Logical identifier for document (GUID)"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="id"/>
+            <map value="Id"/>
          </mapping>
       </element>
       <element id="Composition.type">
@@ -87,6 +84,10 @@
                <display value="Medical Prescription record (record artifact)"/>
             </coding>
          </patternCodeableConcept>
+         <mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedType"/>
+			</mapping>
       </element>
       <element id="Composition.subject">
          <path value="Composition.subject"/>
@@ -100,23 +101,17 @@
             <map value="Patient"/>
          </mapping>
       </element>
-      <element id="Composition.encounter">
-         <path value="Composition.encounter"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="Composition.date">
          <path value="Composition.date"/>
          <short value="Composition editing time"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="DT"/>
+            <map value="Dt"/>
          </mapping>
       </element>
       <element id="Composition.author">
          <path value="Composition.author"/>
          <short value="Author"/>
-         <max value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
@@ -125,34 +120,6 @@
             <identity value="CHMED16A"/>
             <map value="Auth"/>
          </mapping>
-      </element>
-      <element id="Composition.title">
-         <path value="Composition.title"/>
-         <short value="'Rezept' in german or 'Ordonnance' in french or 'Ricetta' in italian or 'Prescription' in english
-                        or titles in other languages are also allowed"/>
-      </element>
-      <element id="Composition.confidentiality">
-         <path value="Composition.confidentiality"/>
-      </element>
-      <element id="Composition.attester">
-         <path value="Composition.attester"/>
-         <short value="Attests to accuracy of composition"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Composition.custodian">
-         <path value="Composition.custodian"/>
-         <short value="The organization in whose name the document has been created"/>
-      </element>
-      <element id="Composition.relatesTo">
-         <path value="Composition.relatesTo"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
-      <element id="Composition.event">
-         <path value="Composition.event"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
       <element id="Composition.section">
          <path value="Composition.section"/>
@@ -172,7 +139,7 @@
          <sliceName value="prescription"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Medication.Medicaments"/>
+            <map value="Medicaments"/>
          </mapping>
       </element>
       <element id="Composition.section.code:prescription">
@@ -206,7 +173,7 @@
          <short value="Annotation"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Medication.Rmk"/>
+            <map value="Rmk"/>
          </mapping>
       </element>
       <element id="Composition.section.code:annotation">

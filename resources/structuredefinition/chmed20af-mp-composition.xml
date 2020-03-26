@@ -30,8 +30,6 @@
 	<differential>
 		<element id="Composition">
 			<path value="Composition"/>
-			<min value="1"/>
-			<max value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
 				<map value="Medication"/>
@@ -51,10 +49,9 @@
 			<path value="Composition.extension"/>
 			<sliceName value="informationRecipient"/>
 			<short value="A recipient of this document"/>
-			<max value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Patient or Patient.RCV (Gln of receiver)"/>
+				<map value="Patient or Patient.Rcv (Gln of receiver)"/>
 			</mapping>
 		</element>
 		<element id="Composition.extension:privatefield">
@@ -69,7 +66,7 @@
 			</type>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Private Fields"/>
+				<map value="PFields"/>
 			</mapping>
 		</element>
 		<element id="Composition.identifier">
@@ -77,12 +74,8 @@
 			<short value="Logical identifier for document (GUID)"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="id"/>
+				<map value="Id"/>
 			</mapping>
-		</element>
-		<element id="Composition.status">
-			<path value="Composition.status"/>
-			<fixedCode value="final"/>
 		</element>
 		<element id="Composition.type">
 			<path value="Composition.type"/>
@@ -94,6 +87,10 @@
 					<display value="Medication summary document (record artifact)"/>
 				</coding>
 			</patternCodeableConcept>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedType"/>
+			</mapping>
 		</element>
 		<element id="Composition.subject">
 			<path value="Composition.subject"/>
@@ -107,22 +104,17 @@
 				<map value="Patient"/>
 			</mapping>
 		</element>
-		<element id="Composition.encounter">
-			<path value="Composition.encounter"/>
-			<max value="0"/>
-		</element>
 		<element id="Composition.date">
 			<path value="Composition.date"/>
 			<short value="Composition editing time"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="DT"/>
+				<map value="Dt"/>
 			</mapping>
 		</element>
 		<element id="Composition.author">
 			<path value="Composition.author"/>
 			<short value="Author"/>
-			<max value="1"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
@@ -131,14 +123,6 @@
 				<identity value="CHMED16A"/>
 				<map value="Auth"/>
 			</mapping>
-		</element>
-		<element id="Composition.title">
-			<path value="Composition.title"/>
-			<short value="'Medikationsplan' in german or 'Plan de médication' in french or 'Piano farmacologico' in italian or 'Medication Card' in english
-                        or titles in other languages are also allowed"/>
-		</element>
-		<element id="Composition.confidentiality">
-			<path value="Composition.confidentiality"/>
 		</element>
 		<element id="Composition.attester">
 			<path value="Composition.attester"/>
@@ -149,9 +133,18 @@
 				</discriminator>
 				<rules value="open" />
 			</slicing>
-			<max value="1"/>
+			<short value="The authenticator of the document (person)"/>
 		</element>
-		<element id="Composition.attester.time">
+		<element id="Composition.attester:professionalAuthenticator">
+			<path value="Composition.attester"/>
+			<sliceName value="professionalAuthenticator"/>
+			<short value="The professional authenticator of the document (person)"/>
+		</element>
+		<element id="Composition.attester.mode:professionalAuthenticator">
+			<path value="Composition.attester.mode"/>
+			<fixedCode value="professional"/>
+		</element>
+		<element id="Composition.attester.time:professionalAuthenticator">
 			<path value="Composition.attester.time"/>
 			<short value="When composition was attested by the party, Validate date: Date of validation"/>
 			<mapping>
@@ -159,7 +152,7 @@
 				<map value="ValDt (Validate date: Date of validation)"/>
 			</mapping>
 		</element>
-		<element id="Composition.attester.party">
+		<element id="Composition.attester.party:professionalAuthenticator">
 			<path value="Composition.attester.party"/>
 			<short value="Validated by: The Gln of the pharmacist who has validated the medication plan"/>
 			<type>
@@ -170,20 +163,6 @@
 				<identity value="CHMED16A"/>
 				<map value="ValBy (Validate by: The Gln of the pharmacist who has validated the medication plan)"/>
 			</mapping>
-		</element>
-		<element id="Composition.custodian">
-			<path value="Composition.custodian"/>
-			<short value="The organization in whose name the document has been created"/>
-		</element>
-		<element id="Composition.relatesTo">
-			<path value="Composition.relatesTo"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
-		<element id="Composition.event">
-			<path value="Composition.event"/>
-			<min value="0"/>
-			<max value="0"/>
 		</element>
 		<element id="Composition.section">
 			<path value="Composition.section"/>
@@ -203,12 +182,11 @@
 			<sliceName value="card"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Medication.Medicaments"/>
+				<map value="Medicaments"/>
 			</mapping>
 		</element>
 		<element id="Composition.section.code:card">
 			<path value="Composition.section.code"/>
-			<min value="1"/>
 			<patternCodeableConcept>
 				<coding>
 					<system value="http://loinc.org"/>
@@ -237,12 +215,11 @@
 			<sliceName value="annotation"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Medication.Rmk"/>
+				<map value="Rmk"/>
 			</mapping>
 		</element>
 		<element id="Composition.section.code:annotation">
 			<path value="Composition.section.code"/>
-			<min value="1"/>
 			<patternCodeableConcept>
 				<coding>
 					<system value="http://loinc.org"/>

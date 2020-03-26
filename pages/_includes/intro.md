@@ -32,16 +32,18 @@ The Composition ressource defines the following parameter for the medication pla
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
+| informationRecipient | Receiver (Patient or Gln of receiver) |  Extension (Patient or Practitioner) | Patient or Patient.RCV (Gln of receiver) |  
+| privatefield | Private Field | Extension (string) | PFields |
+| identifier  | Logical identifier for document (GUID)  | Identifier  | Id  |
+| type | Type of medication object, 1: MedicationPlan (MP) | code | MedType |
 | subject  | Reference to the Patient  | Patient  | Patient |
-| identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
-| author  | Author | Practitioner  | Auth |
-| attester.time  | Date of validation  | Practitioner  | ValDt | 
-| attester.party  | Validated by Gln of practitionier  |  Practitioner | ValBy | 
-| section:card | medications |  MedicationStatement | Medicaments |
-| section:healthconcerns | healthconcerns |  Entry | MedicalData |
-| section:annotation | notes |  text | Rmk |
-| informationRecipient | Receiver (Patient or Gln of receiver) |  Patient or Practitioner | Patient or Patient.RCV (Gln of receiver) |  
+| author  | Author | Practitioner | Auth |
+| attester:professionalAuthenticator.time  | Validate date: Date of validation  | dateTime  | ValDt | 
+| attester:professionalAuthenticator.party  | Validated by: The Gln of the practitionier |  Practitioner | ValBy | 
+| section:card | List of medicaments |  MedicationStatement | Medicaments |
+| section:healthconcerns | Health concerns |  Entry | MedicalData |
+| section:annotation | Notes |  text | Rmk |
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed20af-mp-composition.html)
 
@@ -138,13 +140,17 @@ The Composition ressource defines the following parameter for the Prescription:
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
+| informationRecipient | Receiver (Patient or Gln of receiver) |  Extension (Patient or Practitioner) | Patient or Patient.RCV (Gln of receiver) |  
+| privatefield | Private Field | Extension (string) | PFields |
+| identifier  | Logical identifier for document (GUID)  | Identifier  | Id  |
+| type | Type of medication object, 1: MedicationPlan (MP) | code | MedType |
 | subject  | Reference to the Patient  | Patient  | Patient |
-| identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
-| author  | Author | Practitioner  | Auth |
-| section:prescription | medications |  MedicationRequest | Medicaments | 
-| section:annotation | notes |  text | Rmk | 
-| informationRecipient | Receiver (Patient or Gln of receiver) |  Patient or Practitioner | Patient or Patient.RCV (Gln of receiver) |
+| author  | Author | Practitioner | Auth |
+| attester:professionalAuthenticator.time  | Validate date: Date of validation  | dateTime  | ValDt | 
+| attester:professionalAuthenticator.party  | Validated by: The Gln of the practitionier |  Practitioner | ValBy | 
+| section:prescription | List of medicaments |  MedicationRequest | Medicaments |
+| section:annotation | Notes |  text | Rmk |
 
 [Profile for Prescription Composition](StructureDefinition-chmed20af-rx-composition.html)
 

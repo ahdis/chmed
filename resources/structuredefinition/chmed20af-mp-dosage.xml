@@ -41,6 +41,18 @@
         <map value="Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes, SimpliedVersion of taking times onlys"/>
       </mapping>
     </element>
+    <element id="Dosage.timing.repeat">
+      <path value="Dosage.timing.repeat"/>
+      <short value="When the event is to occur"/>
+    </element>
+    <element id="Dosage.timing.repeat.bounds[x]">
+      <path value="Dosage.timing.repeat.bounds[x]"/>
+      <short value="Length/Range of lengths, or (Start and/or end) limits"/>
+    </element>
+    <element id="Dosage.timing.repeat.when">
+      <path value="Dosage.timing.repeat.when"/>
+      <short value="Code for time period of occurrence"/>
+    </element>
     <element id="Dosage.route">
       <path value="Dosage.route"/>
       <short value="How drug should enter body"/>
@@ -52,6 +64,18 @@
         <identity value="CHMED16A"/>
         <map value="Medicament.Roa"/>
       </mapping>
+    </element>
+    <element id="Dosage.route.coding">
+      <path value="Dosage.route.coding"/>
+    </element>
+    <element id="Dosage.route.coding.system">
+      <path value="Dosage.route.coding.system"/>
+    </element>
+    <element id="Dosage.route.coding.code">
+      <path value="Dosage.route.coding.code"/>
+    </element>
+    <element id="Dosage.route.coding.display">
+      <path value="Dosage.route.coding.display"/>
     </element>
     <element id="Dosage.doseAndRate">
       <path value="Dosage.doseAndRate"/>

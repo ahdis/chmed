@@ -55,7 +55,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="PFields"/>
+            <map value="Medicament.PFields"/>
          </mapping>
       </element>
       <element id="MedicationStatement.category">
@@ -71,7 +71,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Id with IdType 2 (GTIN)"/>
+            <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>
       </element>
       <element id="MedicationStatement.subject">
@@ -92,7 +92,7 @@
          </type>
          <mapping>
             <identity value="CHEMED16A"/>
-            <map value="AutoMed (Selfmedication) if Patient, PrscbBy if Practitioner"/>
+            <map value="Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"/>
          </mapping>
       </element>
       <element id="MedicationStatement.reasonCode">
@@ -100,7 +100,7 @@
          <short value="Reason for why the medication is being/was taken"/>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="TkgRsn"/>
+            <map value="Medicament.TkgRsn"/>
          </mapping>
       </element>
       <element id="MedicationStatement.note">
@@ -128,7 +128,7 @@
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="AppInstr"/>
+            <map value="Medicament.AppInstr"/>
          </mapping>
       </element>
       <element id="MedicationStatement.dosage:structured">
@@ -137,11 +137,11 @@
          <short value="Structured dosage instructions"/>
          <type>
             <code value="Dosage"/>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-dosage"/>
          </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Pos"/>
+            <map value="Medicament.Pos"/>
          </mapping>
       </element>
    </differential>

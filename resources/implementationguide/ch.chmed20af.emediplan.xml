@@ -19,7 +19,7 @@
   <definition>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-dosage"/>
+        <reference value="StructureDefinition/chmed20af-mp-dosage"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -38,12 +38,6 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed20af-rx-bundle"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-simplequantity"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

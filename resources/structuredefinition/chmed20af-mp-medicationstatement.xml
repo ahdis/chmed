@@ -22,7 +22,7 @@
    <kind value="resource"/>
    <abstract value="false"/>
    <type value="MedicationStatement"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement-card"/>
    <derivation value="constraint"/>
    <differential>
       <element id="MedicationStatement">
@@ -74,26 +74,9 @@
          <min value="0"/>
          <max value="*"/>
       </element>
-      <element id="MedicationStatement.context">
-         <path value="MedicationStatement.context"/>
-         <short value="Encounter / Episode associated with MedicationStatement"/>
-         <min value="0"/>
-         <max value="0"/>
-      </element>
       <element id="MedicationStatement.status">
          <path value="MedicationStatement.status"/>
-         <short value="active | completed | entered-in-error | intended | stopped | on-hold"/>
-         <definition value="A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed."/>
-         <min value="1"/>
-         <max value="1"/>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="MedicationStatementStatus"/>
-            </extension>
-            <strength value="required"/>
-            <description value="A coded concept indicating the current status of a MedicationStatement."/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/medication-statement-status"/>
-         </binding>
+         <fixedCode value="completed"/>
       </element>
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
@@ -102,36 +85,27 @@
          <min value="0"/>
          <max value="0"/>
       </element>
-      <element id="MedicationStatement.medication[x]">
-         <path value="MedicationStatement.medication[x]"/>
+      <element id="MedicationStatement.medicationReference">
+         <path value="MedicationStatement.medicationReference"/>
          <short value="What medication was taken"/>
-         <definition value="Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications."/>
-         <min value="1"/>
-         <max value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
-         <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="MedicationCode"/>
-            </extension>
-            <strength value="example"/>
-            <description value="A coded concept identifying the substance or product being taken."/>
-            <valueSet value="http://hl7.org/fhir/ValueSet/medication-codes"/>
-         </binding>
-         <mapping>
-            <identity value="workflow"/>
-            <map value="…code"/>
-         </mapping>
-         <mapping>
-            <identity value="rim"/>
-            <map value=".participation[typeCode=CSM].role[classCode=ADMM or MANU]"/>
-         </mapping>
-         <mapping>
-            <identity value="w5"/>
-            <map value="what"/>
-         </mapping>
+      </element>
+      <element id="MedicationStatement.subject">
+         <path value="MedicationStatement.subject"/>
+         <short value="Who is/was taking  the medication"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
+         </type>
+      </element>
+      <element id="MedicationStatement.context">
+         <path value="MedicationStatement.context"/>
+         <short value="Encounter / Episode associated with MedicationStatement"/>
+         <min value="0"/>
+         <max value="0"/>
       </element>
       <element id="MedicationStatement.effective[x]">
          <path value="MedicationStatement.effective[x]"/>
@@ -155,8 +129,7 @@
       </element>
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
-         <short value="Person or organization that provided the information about the taking of this medication"/>
-         <definition value="The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g Claim or MedicationRequest."/>
+         <short value="The author of the medical decision"/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -168,17 +141,6 @@
             <identity value="CHEMED16A"/>
             <map value="Selfmedication (AutoMed) if Patient is informationSource, PrescrBy if Practitioner"/>
          </mapping>
-      </element>
-      <element id="MedicationStatement.subject">
-         <path value="MedicationStatement.subject"/>
-         <short value="Who is/was taking  the medication"/>
-         <definition value="The person, animal or group who is/was taking the medication."/>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
-         </type>
       </element>
       <element id="MedicationStatement.derivedFrom">
          <path value="MedicationStatement.derivedFrom"/>
@@ -194,7 +156,6 @@
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
          <short value="Reason for why the medication is being/was taken"/>
-         <definition value="A reason for why the medication is being/was taken."/>
          <min value="1"/>
          <max value="1"/>
          <mapping>
@@ -211,9 +172,6 @@
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
          <short value="Application Instructions"/>
-         <definition value="Application Instructions"/>
-         <min value="0"/>
-         <max value="1"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication.AppInstr"/>
@@ -221,10 +179,28 @@
       </element>
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
-         <short value="Details of how medication is/was taken or should be taken"/>
-         <definition value="Indicates how the medication is/was or should be taken by the patient."/>
-         <min value="0"/>
-         <max value="*"/>
+         <slicing>
+            <discriminator>
+               <type value="profile"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="How the medication should be taken"/>
+      </element>
+      <element id="MedicationStatement.dosage:nonstructured">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="nonstructured"/>
+         <short value="Free text dosage instructions"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
+         </type>
+      </element>
+      <element id="MedicationStatement.dosage:structured">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="structured"/>
+         <short value="Structured dosage instructions"/>
          <type>
             <code value="Dosage"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosage"/>

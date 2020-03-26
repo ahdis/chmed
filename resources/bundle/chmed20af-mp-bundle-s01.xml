@@ -391,7 +391,7 @@
                   </code>
                </Medication>
             </contained>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                <reference value="#cont1"/>
             </medicationReference>
@@ -407,6 +407,9 @@
             <note>
                <text value="-"/>
             </note>
+            <dosage>
+               <text value="bei Bedarf"/>
+            </dosage>
             <dosage>
                <timing>
                   <repeat>
@@ -463,7 +466,7 @@
                   </code>
                </Medication>
             </contained>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                <reference value="#cont2"/>
             </medicationReference>
@@ -476,6 +479,9 @@
             <reasonCode>
                <text value="Blutverdünnung"/>
             </reasonCode>
+            <dosage>
+               <text value="1 Tablette morgens"/>
+            </dosage>
             <dosage>
                <timing>
                   <repeat>
@@ -531,7 +537,7 @@
                   </code>
                </Medication>
             </contained>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                <reference value="#cont3"/>
             </medicationReference>
@@ -544,6 +550,9 @@
             <reasonCode>
                <text value="Bluthochdruck/Herz"/>
             </reasonCode>
+            <dosage>
+               <text value="1 Tablette morgens und abends"/>
+            </dosage>
             <dosage>
                <timing>
                   <repeat>
@@ -599,7 +608,7 @@
                   </code>
                </Medication>
             </contained>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                <reference value="#cont4"/>
             </medicationReference>
@@ -612,6 +621,9 @@
             <reasonCode>
                <text value="Cholesterinsenker"/>
             </reasonCode>
+            <dosage>
+               <text value="1 Tablette abends"/>
+            </dosage>
             <dosage>
                <timing>
                   <repeat>
@@ -675,7 +687,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                   </code>
                </Medication>
             </contained>
-            <status value="active"/>
+            <status value="completed"/>
             <medicationReference>
                <reference value="#cont1"/>
             </medicationReference>
@@ -688,6 +700,9 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <reasonCode>
                <text value="Blutverdünnung"/>
             </reasonCode>
+            <dosage>
+               <text value="einschleichend"/>
+            </dosage>
             <dosage>
                <sequence value="1"/>
                <timing>

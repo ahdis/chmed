@@ -23,7 +23,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont2"/>
    </medicationReference>
@@ -36,6 +36,9 @@
    <reasonCode>
       <text value="Blutverdünnung"/>
    </reasonCode>
+   <dosage>
+      <text value="1 Tablette morgens"/>
+   </dosage>
    <dosage>
       <timing>
          <repeat>

@@ -23,7 +23,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
    </medicationReference>
@@ -36,6 +36,9 @@
    <reasonCode>
       <text value="Cholesterinsenker"/>
    </reasonCode>
+   <dosage>
+      <text value="1 Tablette abends"/>
+   </dosage>
    <dosage>
       <timing>
          <repeat>

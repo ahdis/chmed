@@ -27,7 +27,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
    </medicationReference>
@@ -40,6 +40,9 @@
    <reasonCode>
       <text value="Blutverdünnung"/>
    </reasonCode>
+   <dosage>
+      <text value="Dosis jede Stunde 50 ml erhöhen"/>
+   </dosage>
    <dosage>
       <sequence value="1"/>
       <timing>

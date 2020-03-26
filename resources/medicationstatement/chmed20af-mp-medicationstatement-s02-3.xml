@@ -23,7 +23,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont3"/>
    </medicationReference>
@@ -36,6 +36,9 @@
    <reasonCode>
       <text value="Bluthochdruck/Herz"/>
    </reasonCode>
+   <dosage>
+      <text value="1 Tablette morgens, 1/2 Tablette abends"/>
+   </dosage>
    <dosage>
       <timing>
          <repeat>

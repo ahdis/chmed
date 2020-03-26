@@ -5,7 +5,7 @@
    </meta>
    <text>
       <status value="generated"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne	bei Bedarf ab  12.9.2016 </div>
+      <div xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne	bei Bedarf ab 12.9.2016</div>
    </text>
    <contained>
       <Medication xmlns="http://hl7.org/fhir">
@@ -22,7 +22,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
    </medicationReference>
@@ -38,6 +38,9 @@
    <note>
       <text value="-"/>
    </note>
+   <dosage>
+      <text value="bei Bedarf"/>
+   </dosage>
    <dosage>
       <timing>
          <repeat>

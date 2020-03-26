@@ -30,7 +30,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
    </medicationReference>
@@ -43,6 +43,9 @@
    <reasonCode>
       <text value="Blutverdünnung"/>
    </reasonCode>
+   <dosage>
+      <text value="ausschleichend"/>
+   </dosage>
    <dosage>
       <sequence value="0"/>
       <timing>

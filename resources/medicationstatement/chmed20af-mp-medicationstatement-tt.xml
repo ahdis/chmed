@@ -22,7 +22,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
    </medicationReference>
@@ -35,6 +35,9 @@
    <reasonCode>
       <text value="Krebsleiden"/>
    </reasonCode>
+   <dosage>
+      <text value="Dosage sample"/>
+   </dosage>
    <dosage>
       <sequence value="1"/>
       <timing>

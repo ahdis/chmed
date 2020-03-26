@@ -26,7 +26,7 @@
          </code>
       </Medication>
    </contained>
-   <status value="active"/>
+   <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
    </medicationReference>
@@ -39,6 +39,9 @@
    <reasonCode>
       <text value="Infektion"/>
    </reasonCode>
+   <dosage>
+      <text value="Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen"/>
+   </dosage>
    <dosage>
       <timing>
          <repeat>

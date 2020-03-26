@@ -23,6 +23,8 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 * Further entry elements to the patient, medication plan entries, etc.
 
 [Profile for Medication Plan](StructureDefinition-chmed20af-mp-bundle.html) &#124; [Example for Medication Plan (xml)](Bundle-chmed20af-mp-bundle-s01.xml.html)
+
+
 ## Composition
 
 The Composition ressource defines the following parameter for the medication plan:
@@ -35,11 +37,11 @@ The Composition ressource defines the following parameter for the medication pla
 | date  | Date of creation  |  dateTime | Dt |
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth |
 | attester.time  | Date of validation  | Practitioner  | ValDt | 
-| attester.party  | Validated by GLN of practitionier  |  Practitioner | ValBy | 
-| section | medications |  MedicationStatement | Medicaments |
-| section | healthconcerns |  Entry | MedicalData |
-| section | notes |  text | Rmk |
-| informationRecipient | Practitioner GLN if receiver |  Patient, unless GLN is existing | Patient or Patient.RCV (GLN of receiver) |  
+| attester.party  | Validated by Gln of practitionier  |  Practitioner | ValBy | 
+| section:card | medications |  MedicationStatement | Medicaments |
+| section:healthconcerns | healthconcerns |  Entry | MedicalData |
+| section:annotation | notes |  text | Rmk |
+| informationRecipient | Receiver (Patient or Gln of receiver) |  Patient or Practitioner | Patient or Patient.RCV (Gln of receiver) |  
 
 [Profile for Medication Plan Composition](StructureDefinition-chmed20af-mp-composition.html)
 
@@ -65,7 +67,7 @@ The Composition ressource defines the following parameter for the medication pla
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | GLN for this practitioner  | Identifier  | Author.GLN |
+| identifier  | Gln for this practitioner  | Identifier  | Author.Gln |
 | name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName |
 
 [Profile for Practitioner](StructureDefinition-chmed20af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed20af-practitioner-s01.xml.html)
@@ -129,7 +131,7 @@ The FHIR ressource Bundle bundles the corresponding entroes in a document. It co
 [Profile for Prescription](StructureDefinition-chmed20af-rx-bundle.html) &#124; [Example for Prescription (xml)](Bundle-chmed20af-rx-bundle-s01.xml.html)
 
 
-## Compostion
+## Composition
 
 The Composition ressource defines the following parameter for the Prescription:
 
@@ -140,8 +142,8 @@ The Composition ressource defines the following parameter for the Prescription:
 | identifier  | Logical identifier for document (GUID)  | Identifier  | id  |
 | date  | Date of creation  |  dateTime | Dt |
 | author  | Author (Gln if available, otherwise name)  | Practitioner  | Auth |
-| section | medications |  MedicationRequest | Medicaments | 
-| section | note |  - | Rmk | 
+| section:prescription | medications |  MedicationRequest | Medicaments | 
+| section:annotation | notes |  text | Rmk | 
 
 [Profile for Prescription Composition](StructureDefinition-chmed20af-rx-composition.html)
 
@@ -166,7 +168,7 @@ The Composition ressource defines the following parameter for the Prescription:
 {:class="table table-bordered"}
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| identifier  | GLN for this practitioner  | Identifier  | Author.GLN |
+| identifier  | Gln for this practitioner  | Identifier  | Author.Gln |
 | identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | 
 | name  | Name for this practitioner  | HumanName  | name.given = Author.FName, name.family = Author.LName | 
 

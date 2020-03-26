@@ -50,11 +50,11 @@
 		<element id="Composition.extension:informationRecipient">
 			<path value="Composition.extension"/>
 			<sliceName value="informationRecipient"/>
-			<short value="A recipient of this document (person or organization)"/>
+			<short value="A recipient of this document"/>
 			<max value="1"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="Patient or Patient.RCV (GLN of receiver)"/>
+				<map value="Patient or Patient.RCV (Gln of receiver)"/>
 			</mapping>
 		</element>
 		<element id="Composition.extension:privatefield">
@@ -172,7 +172,7 @@
 			</type>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="ValBy (Validate by : The Gln of the pharmacist who has validated the medication plan)"/>
+				<map value="ValBy (Validate by: The Gln of the pharmacist who has validated the medication plan)"/>
 			</mapping>
 		</element>
 		<element id="Composition.custodian">

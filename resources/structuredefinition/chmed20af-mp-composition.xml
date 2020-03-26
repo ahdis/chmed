@@ -151,12 +151,6 @@
 			</slicing>
 			<max value="1"/>
 		</element>
-		<element id="Composition.attester:legalAuthenticator">
-			<path value="Composition.attester"/>
-			<sliceName value="legalAuthenticator"/>
-			<min value="0"/>
-			<max value="1"/>
-		</element>
 		<element id="Composition.attester.time">
 			<path value="Composition.attester.time"/>
 			<short value="When composition was attested by the party, Validate date: Date of validation"/>

@@ -65,10 +65,17 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/1-1-MedicationCard-Analyzer"/>
+        <reference value="Bundle/1-1-MedicationPlan-Analyzer"/>
       </reference>
       <name value="MedicationPlan"/>
       <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/1-2-MedicationPlan-Analyzer"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
     </resource>
     <resource>
       <reference>

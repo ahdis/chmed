@@ -78,10 +78,10 @@
                         <div xmlns="http://www.w3.org/1999/xhtml"> Medikamentenliste </div>
                     </text>
                     <entry>
-                        <reference value="MedicationStatement/1-2-MedStatTriatec"/>
+                        <reference value="MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
                     </entry>
                     <entry>
-                        <reference value="MedicationDispense/1-2-MedDispTriatec"/>
+                        <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
                     </entry>
                 </section>
             </Composition>
@@ -165,10 +165,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-2-MedStatTriatec"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="1-2-MedStatTriatec"/>
+                <id value="1-2-MedStatTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -236,7 +236,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <derivedFrom>
-                    <reference value="MedicationStatement/1-1-MedStatTriatec"/>
+                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
                 </derivedFrom>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
@@ -273,10 +273,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-MedDispTriatec"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
         <resource>
             <MedicationDispense>
-                <id value="1-2-MedDispTriatec"/>
+                <id value="1-2-MedDispTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>

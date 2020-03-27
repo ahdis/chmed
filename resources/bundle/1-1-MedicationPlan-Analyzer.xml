@@ -1,3 +1,5 @@
+<!-- Output from 1-1-MedicationTreatmentPlan -->
+
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="1-1-MedicationPlan-Analyzer"/>
     <meta>
@@ -8,6 +10,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
     </identifier>
+    <!-- TBD: type document? -->
     <type value="document"/>
     <timestamp value="2020-03-27T12:00:00.000+00:00"/>
     <entry>
@@ -16,24 +19,6 @@
             <Composition>
                 <id value="1-1-Analyzer"/>
                 <language value="de-CH"/>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
-                    <valueIdentifier>
-                        <system value="urn:ietf:rfc:3986"/>
-                        <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
-                    </valueIdentifier>
-                </extension>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
-                    <valueUnsignedInt value="1"/>
-                </extension>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient">
-                    <valueReference>
-                        <reference value="Patient/MonikaWegmuellerRecipient"/>
-                    </valueReference>
-                </extension>
-                <identifier>
-                    <system value="urn:ietf:rfc:3986"/>
-                    <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
-                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -61,6 +46,7 @@
                         </valueCodeableConcept>
                     </extension>
                 </confidentiality>
+                <!-- TBD: Welches ist die dokumentenverwahrende Organisation? -->
                 <custodian>
                     <reference value="Organization/Apotheke"/>
                 </custodian>
@@ -78,7 +64,7 @@
                         <div xmlns="http://www.w3.org/1999/xhtml"> Medikamentenliste </div>
                     </text>
                     <entry>
-                        <reference value="MedicationStatement/1-1-MedStatTriatec"/>
+                        <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
                     </entry>
                 </section>
             </Composition>
@@ -162,10 +148,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="1-1-MedStatTriatec"/>
+                <id value="1-1-MedStatTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>

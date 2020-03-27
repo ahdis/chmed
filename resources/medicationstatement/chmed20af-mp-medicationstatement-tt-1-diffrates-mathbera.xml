@@ -82,9 +82,9 @@
       </timing>
       <route>
          <coding>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
-            <code value="IV"/>
-            <display value="intravenös (Infusion)"/>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20045000"/>
+            <display value="Intravenous use"/>
          </coding>
       </route>
       <doseAndRate>
@@ -108,9 +108,9 @@
       </timing>
       <route>
          <coding>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
-            <code value="IV"/>
-            <display value="intravenös (Infusion)"/>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20045000"/>
+            <display value="Intravenous use"/>
          </coding>
       </route>
       <doseAndRate>
@@ -134,9 +134,9 @@
       </timing>
       <route>
          <coding>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
-            <code value="IV"/>
-            <display value="intravenös (Infusion)"/>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20045000"/>
+            <display value="Intravenous use"/>
          </coding>
       </route>
       <doseAndRate>
@@ -160,9 +160,9 @@
       </timing>
       <route>
          <coding>
-            <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp26"/>
-            <code value="IV"/>
-            <display value="intravenös (Infusion)"/>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20045000"/>
+            <display value="Intravenous use"/>
          </coding>
       </route>
       <doseAndRate>

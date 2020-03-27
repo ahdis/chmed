@@ -389,13 +389,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/chmed20af-codesystem-cdtyp26"/>
-      </reference>
-      <name value="CodeSystem Code Typ 26"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/chmed20af-codesystem-risks-category"/>
       </reference>
       <name value="CodeSystem Code Risks Category"/>
@@ -414,14 +407,6 @@
       </reference>
       <name value="ValueSet cdtyp9"/>
       <description value="UnitCodes"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/chmed20af-valueset-cdtyp26"/>
-      </reference>
-      <name value="ValueSet CDTYP26"/>
-      <description value="ROA (Route of administration)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

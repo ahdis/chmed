@@ -24,25 +24,26 @@
          <form>
             <coding>
                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-               <code value="11210000"/>
-               <display value="Solution for infusion"/>
+               <code value="11213000"/>
+               <display value="Concentrate for solution for infusion"/>
             </coding>
          </form>
          <ingredient>
             <itemCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
-                  <code value="372826007"/>
-                  <display value="Metoprolol (substance)"/>
+                  <code value="386919002"/>
+                  <display value="Rituximab (substance)"/>
                </coding>
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
+                  <value value="100"/>
                   <unit value="mg"/>
                </numerator>
                <denominator>
-                  <value value="1"/>
+                  <value value="10"/>
+                  <unit value="ml"/>
                </denominator>
             </strength>
          </ingredient>

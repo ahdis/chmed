@@ -25,8 +25,8 @@
          <form>
             <coding>
                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-               <code value="10219000"/>
-               <display value="Tablet"/>
+               <code value="10226000"/>
+               <display value="Prolonged-release tablet"/>
             </coding>
          </form>
          <ingredient>
@@ -39,7 +39,7 @@
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
+                  <value value="25"/>
                   <unit value="mg"/>
                </numerator>
                <denominator>

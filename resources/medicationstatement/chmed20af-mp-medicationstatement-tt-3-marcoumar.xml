@@ -32,13 +32,13 @@
             <itemCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
-                  <code value="372826007"/>
-                  <display value="Metoprolol (substance)"/>
+                  <code value="59488002"/>
+                  <display value="Phenprocoumon (substance)"/>
                </coding>
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
+                  <value value="3"/>
                   <unit value="mg"/>
                </numerator>
                <denominator>

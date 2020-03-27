@@ -25,21 +25,21 @@
          <form>
             <coding>
                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-               <code value="10219000"/>
-               <display value="Tablet"/>
+               <code value="10221000"/>
+               <display value="Film-coated tablet"/>
             </coding>
          </form>
          <ingredient>
             <itemCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
-                  <code value="372826007"/>
-                  <display value="Metoprolol (substance)"/>
+                  <code value="387458008"/>
+                  <display value="Aspirin (substance)"/>
                </coding>
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
+                  <value value="100"/>
                   <unit value="mg"/>
                </numerator>
                <denominator>

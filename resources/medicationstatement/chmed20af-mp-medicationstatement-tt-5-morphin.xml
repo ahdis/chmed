@@ -41,17 +41,18 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <itemCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
-                  <code value="372826007"/>
-                  <display value="Metoprolol (substance)"/>
+                  <code value="373529000"/>
+                  <display value="Morphine (substance)"/>
                </coding>
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
+                  <value value="20"/>
                   <unit value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="ml"/>
                </denominator>
             </strength>
          </ingredient>

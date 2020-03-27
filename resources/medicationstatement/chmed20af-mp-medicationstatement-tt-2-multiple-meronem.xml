@@ -31,22 +31,22 @@
          <form>
             <coding>
                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-               <code value="11210000"/>
-               <display value="Solution for infusion"/>
+               <code value="11212000"/>
+               <display value="Powder for solution for infusion"/>
             </coding>
          </form>
          <ingredient>
             <itemCodeableConcept>
                <coding>
                   <system value="http://snomed.info/sct"/>
-                  <code value="372826007"/>
-                  <display value="Metoprolol (substance)"/>
+                  <code value="387540000"/>
+                  <display value="Meropenem (substance)"/>
                </coding>
             </itemCodeableConcept>
             <strength>
                <numerator>
-                  <value value="50"/>
-                  <unit value="mg"/>
+                  <value value="1"/>
+                  <unit value="g"/>
                </numerator>
                <denominator>
                   <value value="1"/>

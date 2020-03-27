@@ -20,6 +20,10 @@
       <type value="extension"/>
       <expression value="Quantity"/>
    </context>
+   <context>
+      <type value="element"/>
+      <expression value="Dosage.doseAndRate.dose"/>
+   </context>
    <type value="Extension"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
    <derivation value="constraint"/>

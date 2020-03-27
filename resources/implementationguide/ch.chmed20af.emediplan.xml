@@ -65,6 +65,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/1-1-MedicationCard-Analyzer"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Composition/chmed20af-mp-composition-s01"/>
       </reference>
       <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>

@@ -1,36 +1,16 @@
-<!-- Output Analyzer mit Input 1-1-MedicationTreatmentPlan und 1-2-MedicationDispense
-    http://build.fhir.org/ig/hl7ch/ch-emed/branches/master/Bundle-1-1-MedicationTreatmentPlan.html
-    http://build.fhir.org/ig/hl7ch/ch-emed/branches/master/Bundle-1-2-MedicationDispense.html -->
-
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="1-2-MedicationPlan-Analyzer"/>
-    <meta>
-        <lastUpdated value="2020-03-27T12:00:00.000+00:00"/>
-        <!-- TBD: Soll der Output ein EPD-konformes Dokument sein, oder ein internes File? 
-                    EPD-Konformität verlangt bspw. setId, versionNumber, informationRecipient etc.
-                    Entsprechendes Profil muss noch definiert werden -->
-        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-bundle"/>
-    </meta>
-    <!-- TBD: identifier beim Typ "document" nötig, sonst nicht -->
     <identifier>
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440011"/>
+        <system value="http://emediplan.ch/chmed20af/id"/>
+        <value value="26d3dff7-ab05-4737-a49c-5eccd3351111"/>
     </identifier>
-    <!-- TBD: Ist der Output des Analyzers ein Dokument? Mögliche Typen:
-        document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection
-        https://www.hl7.org/fhir/valueset-bundle-type.html -->
     <type value="document"/>
-    <!-- TBD: timestamp beim Typ "document" nötig, sonst nicht -->
     <timestamp value="2020-03-27T12:00:00.000+00:00"/>
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/Composition/1-2-Analyzer"/>
         <resource>
             <Composition>
                 <id value="1-2-Analyzer"/>
-                <identifier>
-                    <system value="urn:ietf:rfc:3986"/>
-                    <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440011"/>
-                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -42,33 +22,15 @@
                 <subject>
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
-                <!-- TBD: Datum, wann der Analyzer Output generiert wurde -->
                 <date value="2020-03-27T12:00:00.000+00:00"/>
                 <author>
-                    <reference value="Practitioner/FamilienHausarzt"/>
+                    <reference value="Device/Analyzer"/>
                 </author>
                 <title value="Medikationsplan"/>
-                <!-- TBD: Dokumentenverwahrende Organisation
-                    EPD fordert diese Angabe, wer würde das Dokument verwahren? -->
-                <!--<custodian>
-                    <reference value="Organization/..."/>
-                </custodian>-->
                 <section>
-                    <title value="Medikamentenliste"/>
-                    <code>
-                        <coding>
-                            <system value="http://loinc.org"/>
-                            <code value="10160-0"/>
-                            <display value="History of medication use"/>
-                        </coding>
-                    </code>
-                    <!-- TBD: 1. Entry ist aus dem Medication Treatment Plan, also die Entscheidung des Hausarztes, 
-                                dass die Patientin ein Medikament (Triatec) benötigt -->
                     <entry>
                         <reference value="MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
                     </entry>
-                    <!-- TBD: 2. Entry ist aus der Medication Dispense, also der Hausarzt hat das Medikament (Triatec)
-                                der Patientin abgegeben -->
                     <entry>
                         <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
                     </entry>
@@ -122,322 +84,18 @@
             </Practitioner>
         </resource>
     </entry>
-
-    <!-- 1. Entry aus der Composition (Input: 1-1-MedicationTreatmentPlan),
-            mit einem derivedFrom-Element, da es nachfolgend bereits eine Abgabe gegeben hat -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
         <resource>
-            <MedicationStatement>
-                <id value="1-2-MedStatTriatec-Analyzer"/>
-                <contained>
-                    <Medication>
-                        <id value="med"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680538751228"/>
-                                <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
-                            </coding>
-                            <text value="TRIATEC Tabl 2.5 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10219000"/>
-                                <display value="Tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="386872004"/>
-                                    <display value="Ramipril (substance)"/>
-                                </coding>
-                                <text value="Ramipril"/>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="2.5"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                    <unit value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <status value="completed"/>
-                <!-- TBD: Coding-Element noch nicht korrekt abgebildet
-                            Dieses Element kommt nicht aus dem ursprünglichen Input-Dokument.
-                            Kann dies vom Analyzer ergänzt werden? -->
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="C09AA05"/>
-                    </coding>
-                    <text value="Kardiovaskuläres System"/>
-                </category>
-                <medicationReference>
-                    <reference value="#med"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <!-- TBD: Abbildung History -> 1-1-MedicationTreatmentPlan (Entscheid Hausarzt für Medikament)
-                            derivedFrom Observation nur beim Pharmaceutical Advice oder bei jeder Änderung? -->
-                <derivedFrom>
-                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
-                </derivedFrom>
-                <reasonCode>
-                    <text value="Bluthochdruck"/>
-                </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2011-11-29"/>
-                            </boundsPeriod>
-                            <when value="ACM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="0.5"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-                <dosage>
-                    <text value="Morgens 1/2 Tablette nehmen"/>
-                </dosage>
-            </MedicationStatement>
+            <Device>
+                <id value="Analyzer"/>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+            </Device>
         </resource>
     </entry>
 
-    <!-- 2. Entry aus der Composition (Input: 1-2-MedicationDispense),
-        kein derivedFrom-Element, ist die aktuelle Abgabe des Medikaments -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
-        <resource>
-            <MedicationDispense>
-                <id value="1-2-MedDispTriatec-Analyzer"/>
-                <contained>
-                    <Medication>
-                        <id value="med"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680538751228"/>
-                                <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
-                            </coding>
-                            <text value="TRIATEC Tabl 2.5 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10219000"/>
-                                <display value="Tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="386872004"/>
-                                    <display value="Ramipril (substance)"/>
-                                </coding>
-                                <text value="Ramipril"/>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="2.5"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                    <unit value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <status value="completed"/>
-                <medicationReference>
-                    <reference value="#med"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <quantity>
-                    <value value="1"/>
-                </quantity>
-                <note>
-                    <text value="-"/>
-                </note>
-                <dosageInstruction>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2011-11-29"/>
-                            </boundsPeriod>
-                            <when value="ACM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="0.5"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosageInstruction>
-                <dosageInstruction>
-                    <text value="Morgens 1/2 Tablette nehmen"/>
-                </dosageInstruction>
-            </MedicationDispense>
-        </resource>
-    </entry>
-
-    <!-- Referenz auf derivedFrom-Element aus MedicationStatement/1-2-MedStatTriatec-Analyzer -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec"/>
-        <resource>
-            <MedicationStatement>
-                <id value="1-1-MedStatTriatec"/>
-                <contained>
-                    <Medication>
-                        <id value="med"/>
-                        <code>
-                            <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
-                                <valueUrl value="#mtp.1.brandedmedication"/>
-                            </extension>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680538751228"/>
-                                <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
-                            </coding>
-                            <text value="TRIATEC Tabl 2.5 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10219000"/>
-                                <display value="Tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="386872004"/>
-                                    <display value="Ramipril (substance)"/>
-                                </coding>
-                                <text value="Ramipril"/>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="2.5"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                    <unit value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <status value="completed"/>
-                <!-- TBD: Coding-Element noch nicht korrekt abgebildet
-                            Dieses Element kommt nicht aus dem ursprünglichen Input-Dokument.
-                            Kann dies vom Analyzer ergänzt werden? -->
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="C09AA05"/>
-                    </coding>
-                    <text value="Kardiovaskuläres System"/>
-                </category>
-                <medicationReference>
-                    <reference value="#med"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <reasonCode>
-                    <text value="Bluthochdruck"/>
-                </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2011-11-29"/>
-                            </boundsPeriod>
-                            <when value="ACM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="0.5"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-                <dosage>
-                    <text value="Morgens 1/2 Tablette nehmen"/>
-                </dosage>
-            </MedicationStatement>
-        </resource>
-    </entry>
+    
 </Bundle>

@@ -1,5 +1,8 @@
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="1-1-MedicationPlan-Analyzer"/>
+    <meta>
+        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
+    </meta>
     <identifier>
         <system value="http://emediplan.ch/chmed20af/id"/>
         <value value="26d3dff7-ab05-4737-a49c-5eccd3350000"/>

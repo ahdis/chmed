@@ -17,4 +17,4 @@ The display "Medication dispensed.brief" is not a valid display for the code {ht
 
 The Implementation Guide contains no explicitly linked examples for this profile
 The Implementation Guide contains no examples for this data type profile
-
+The Implementation Guide contains no examples for this profile

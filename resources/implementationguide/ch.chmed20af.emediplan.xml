@@ -380,6 +380,42 @@
       <description value=">Risk Allergies"/>
       <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-composition"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationrequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationdispense"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-observation"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- Code Systems -->
     <resource>
@@ -433,13 +469,6 @@
       </reference>
       <name value="MedicationPlan"/>
       <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/2-1-MedicationPlan-Analyzer"/>
-      </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 2-1 for MedicationPlan (Output Analyzer)"/>
     </resource>
 
     <!-- Value Sets -->

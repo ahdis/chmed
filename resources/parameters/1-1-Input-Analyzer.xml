@@ -2,15 +2,14 @@
 
 <Parameters xmlns="http://hl7.org/fhir">
     <id value="1-1-Input-Analyzer"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Parameters"/>
+    </meta>
     <parameter>
         <name value="1-1-MedicationTreatmentPlan"/>
         <resource>
             <Bundle>
                 <id value="1-1-MedicationTreatmentPlan"/>
-                <meta>
-                    <lastUpdated value="2020-03-09T12:31:59.738+00:00"/>
-                    <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-document-medicationtreatmentplan"/>
-                </meta>
                 <identifier>
                     <system value="urn:ietf:rfc:3986"/>
                     <value value="urn:uuid:c9f758a1-296c-4710-84d4-e181db8c7478"/>

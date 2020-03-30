@@ -58,10 +58,6 @@
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
-      <element id="MedicationStatement.category">
-         <path value="MedicationStatement.category"/>
-         <short value="TBD"/>
-      </element>
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
          <short value="What medication was taken"/>

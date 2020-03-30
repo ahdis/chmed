@@ -1,4 +1,5 @@
-<!-- Output from 1-1-MedicationTreatmentPlan -->
+<!-- Output Analyzer mit Input 1-1-MedicationTreatmentPlan und 1-2-MedicationDispense
+    http://build.fhir.org/ig/hl7ch/ch-emed/branches/master/Bundle-1-1-MedicationTreatmentPlan.html -->
 
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="1-1-MedicationPlan-Analyzer"/>
@@ -10,7 +11,6 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
     </identifier>
-    <!-- TBD: type document? -->
     <type value="document"/>
     <timestamp value="2020-03-27T12:00:00.000+00:00"/>
     <entry>
@@ -18,7 +18,6 @@
         <resource>
             <Composition>
                 <id value="1-1-Analyzer"/>
-                <language value="de-CH"/>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -35,21 +34,6 @@
                     <reference value="Practitioner/FamilienHausarzt"/>
                 </author>
                 <title value="Medikationsplan"/>
-                <confidentiality value="N">
-                    <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://snomed.info/sct"/>
-                                <code value="17621005"/>
-                                <display value="Normally accessible"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                </confidentiality>
-                <!-- TBD: Welches ist die dokumentenverwahrende Organisation? -->
-                <custodian>
-                    <reference value="Organization/Apotheke"/>
-                </custodian>
                 <section>
                     <title value="Medikamentenliste"/>
                     <code>
@@ -59,10 +43,6 @@
                             <display value="History of medication use"/>
                         </coding>
                     </code>
-                    <text>
-                        <status value="additional"/>
-                        <div xmlns="http://www.w3.org/1999/xhtml"> Medikamentenliste </div>
-                    </text>
                     <entry>
                         <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
                     </entry>
@@ -117,19 +97,6 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Organization/Apotheke"/>
-        <resource>
-            <Organization>
-                <id value="Apotheke"/>
-                <identifier>
-                    <system value="urn:oid:2.51.1.3"/>
-                    <value value="7601000234000"/>
-                </identifier>
-                <name value="Apotheke"/>
-            </Organization>
-        </resource>
-    </entry>
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"/>
         <resource>
             <Patient>
@@ -156,9 +123,6 @@
                     <Medication>
                         <id value="med"/>
                         <code>
-                            <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
-                                <valueUrl value="#mtp.1.brandedmedication"/>
-                            </extension>
                             <coding>
                                 <system value="urn:oid:2.51.1.1"/>
                                 <code value="7680538751228"/>
@@ -203,10 +167,6 @@
                         </ingredient>
                     </Medication>
                 </contained>
-                <identifier>
-                    <system value="urn:ietf:rfc:3986"/>
-                    <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
-                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>

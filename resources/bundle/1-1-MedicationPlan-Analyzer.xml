@@ -1,15 +1,8 @@
-<!-- Output Analyzer mit Input 1-1-MedicationTreatmentPlan und 1-2-MedicationDispense
-    http://build.fhir.org/ig/hl7ch/ch-emed/branches/master/Bundle-1-1-MedicationTreatmentPlan.html -->
-
 <Bundle xmlns="http://hl7.org/fhir">
     <id value="1-1-MedicationPlan-Analyzer"/>
-    <meta>
-        <lastUpdated value="2020-03-27T12:00:00.000+00:00"/>
-        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-bundle"/>
-    </meta>
     <identifier>
-        <system value="urn:ietf:rfc:3986"/>
-        <value value="urn:uuid:550e8400-e29b-11d4-a716-446655440000"/>
+        <system value="http://emediplan.ch/chmed20af/id"/>
+        <value value="26d3dff7-ab05-4737-a49c-5eccd3350000"/>
     </identifier>
     <type value="document"/>
     <timestamp value="2020-03-27T12:00:00.000+00:00"/>
@@ -31,18 +24,10 @@
                 </subject>
                 <date value="2020-03-27T12:00:00.000+00:00"/>
                 <author>
-                    <reference value="Practitioner/FamilienHausarzt"/>
+                    <reference value="Device/Analyzer"/>
                 </author>
                 <title value="Medikationsplan"/>
                 <section>
-                    <title value="Medikamentenliste"/>
-                    <code>
-                        <coding>
-                            <system value="http://loinc.org"/>
-                            <code value="10160-0"/>
-                            <display value="History of medication use"/>
-                        </coding>
-                    </code>
                     <entry>
                         <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
                     </entry>
@@ -97,21 +82,15 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"/>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
         <resource>
-            <Patient>
-                <id value="MonikaWegmuellerRecipient"/>
-                <name>
-                    <family value="Wegmüller"/>
-                    <given value="Monika"/>
-                </name>
-                <address>
-                    <line value="Wiesenstr. 12"/>
-                    <city value="Zürich"/>
-                    <postalCode value="8003"/>
-                    <country value="CH"/>
-                </address>
-            </Patient>
+            <Device>
+                <id value="Analyzer"/>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+            </Device>
         </resource>
     </entry>
     <entry>
@@ -171,9 +150,9 @@
                 <category>
                     <coding>
                         <system value="http://www.whocc.no/atc"/>
-                        <code value="C09AA05"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
                     </coding>
-                    <text value="Kardiovaskuläres System"/>
                 </category>
                 <medicationReference>
                     <reference value="#med"/>
@@ -181,6 +160,9 @@
                 <subject>
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
+                <informationSource>
+                    <reference value="Practitioner/FamilienHausarzt"/>
+                </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>

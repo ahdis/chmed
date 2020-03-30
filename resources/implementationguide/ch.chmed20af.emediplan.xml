@@ -65,27 +65,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/1-1-MedicationPlan-Analyzer"/>
-      </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/1-2-MedicationPlan-Analyzer"/>
-      </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/2-1-MedicationPlan-Analyzer"/>
-      </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 2-1 for MedicationPlan (Output Analyzer)"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Composition/chmed20af-mp-composition-s01"/>
       </reference>
       <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
@@ -358,7 +337,7 @@
         <reference value="Condition/chmed20af-mp-condition-s01-1"/>
       </reference>
       <name value="RiskRenealInsufficiencyLeight"/>
-      <description value=">Rsik Renal Insufficiency Leight"/>
+      <description value=">Risk Renal Insufficiency Leight"/>
       <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
     </resource>
     <resource>
@@ -401,6 +380,8 @@
       <description value=">Risk Allergies"/>
       <exampleCanonical value="StructureDefinition/chmed20af-condition-risks"/>
     </resource>
+
+    <!-- Code Systems -->
     <resource>
       <reference>
         <reference value="CodeSystem/chmed20af-codesystem-cdtyp9"/>
@@ -422,6 +403,46 @@
       <name value="CodeSystem Code Risks CDSCODE"/>
       <exampleBoolean value="false"/>
     </resource>
+
+    <!-- Examples Analyzer -->
+    <resource>
+      <reference>
+        <reference value="Parameters/1-1-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example 1-1 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/1-2-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example 1-2 Input Analyzer"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Bundle/1-1-MedicationPlan-Analyzer"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/1-2-MedicationPlan-Analyzer"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/2-1-MedicationPlan-Analyzer"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 2-1 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+
+    <!-- Value Sets -->
     <resource>
       <reference>
         <reference value="ValueSet/chmed20af-valueset-cdtyp9"/>
@@ -452,6 +473,8 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+
+    <!-- pages -->
     <page>
       <nameUrl value="index.html"/>
       <title value="Home Page"/>

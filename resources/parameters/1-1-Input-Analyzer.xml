@@ -2,11 +2,8 @@
 
 <Parameters xmlns="http://hl7.org/fhir">
     <id value="1-1-Input-Analyzer"/>
-    <meta>
-        <profile value="http://hl7.org/fhir/StructureDefinition/Parameters"/>
-    </meta>
     <parameter>
-        <name value="1-1-MedicationTreatmentPlan"/>
+        <name value="bundle"/>
         <resource>
             <Bundle>
                 <id value="1-1-MedicationTreatmentPlan"/>

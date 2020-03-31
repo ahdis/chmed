@@ -44,7 +44,7 @@
 			<short value="Patient"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
 			</type>
 			<min value="1"/>
 		</element>

@@ -32,7 +32,7 @@
                 <title value="Medikationsplan"/>
                 <section>
                     <entry>
-                        <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+                        <reference value="MedicationStatement/1-1-V1-MedStatTriatec-Analyzer"/>
                     </entry>
                 </section>
             </Composition>
@@ -97,10 +97,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-V1-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="1-1-MedStatTriatec-Analyzer"/>
+                <id value="1-1-V1-MedStatTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>

@@ -32,10 +32,10 @@
                 <title value="Medikationsplan"/>
                 <section>
                     <entry>
-                        <reference value="MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
+                        <reference value="MedicationStatement/1-1-V2-MedStatTriatec-Analyzer"/>
                     </entry>
                     <entry>
-                        <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
+                        <reference value="MedicationDispense/1-2-V1-MedDispTriatec-Analyzer"/>
                     </entry>
                 </section>
             </Composition>
@@ -102,10 +102,10 @@
 
     <!-- 1. Entry MedicationStatement aus Medication Treatment Plan document -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-2-MedStatTriatec-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-V2-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="1-2-MedStatTriatec-Analyzer"/>
+                <id value="1-1-V2-MedStatTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -173,10 +173,10 @@
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
-                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+                    <reference value="MedicationStatement/1-1-V1-MedStatTriatec-Analyzer"/>
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/Change"/>
+                    <reference value="Observation/Change"/> <!-- Aenderung von Entscheid zu Abgabe -->
                 </derivedFrom>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
@@ -216,10 +216,10 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-V1-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="1-1-MedStatTriatec-Analyzer"/>
+                <id value="1-1-V1-MedStatTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -339,10 +339,10 @@
 
     <!-- 2. Entry MedicationDispense aus Medication Dispense document -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-V1-MedDispTriatec-Analyzer"/>
         <resource>
             <MedicationDispense>
-                <id value="1-2-MedDispTriatec-Analyzer"/>
+                <id value="1-2-V1-MedDispTriatec-Analyzer"/>
                 <contained>
                     <Medication>
                         <id value="med"/>

@@ -1,0 +1,37 @@
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="chmed20af-analyzer"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/OperationDefinition/chmed20af-analyzer"/>
+  <version value="0.1.0"/>
+  <name value="InputOutputParametersAnalyzer"/>
+  <title value="Input Output Parameters Analyzer"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <publisher value="IG eMediplan"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Definition Input and Output Parameters Analyzer"/>
+  <code value="analyze"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="ch-emed-doc"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="*"/>
+    <documentation value="eMedication documents according to CH-EMED"/>
+    <type value="Bundle"/>
+  </parameter>
+  <parameter>
+    <name value="cons-medicationplan"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Consolidated MedicationPlan (MP)"/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

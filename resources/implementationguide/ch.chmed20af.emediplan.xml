@@ -416,6 +416,12 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/chmed20af-analyzer"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- Code Systems -->
     <resource>
@@ -455,20 +461,41 @@
       <name value="Parameters"/>
       <description value="Example 1-2 Input Analyzer"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/2-1-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example 2-1 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/2-2-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example 2-2 Input Analyzer"/>
+    </resource>
 
     <resource>
       <reference>
-        <reference value="Bundle/1-1-MedicationPlan-Analyzer"/>
+        <reference value="Bundle/1-1-ConsolidatedMedicationPlan"/>
       </reference>
       <name value="MedicationPlan"/>
       <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/1-2-MedicationPlan-Analyzer"/>
+        <reference value="Bundle/1-2-ConsolidatedMedicationPlan"/>
       </reference>
       <name value="MedicationPlan"/>
       <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/2-2-ConsolidatedMedicationPlan"/>
+      </reference>
+      <name value="MedicationPlan"/>
+      <description value="Example 2-2 for MedicationPlan (Output Analyzer)"/>
     </resource>
 
     <!-- Value Sets -->

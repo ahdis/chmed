@@ -14,6 +14,8 @@ The display "Medication treatment plan.extended" is not a valid display for the 
 The display "Medication treatment plan.brief" is not a valid display for the code {http://loinc.org}77604-7 - should be one of ["Medication treatment plan.brief Document","Med tx plan.brief Doc"]
 The display "Medication dispensed.extended" is not a valid display for the code {http://loinc.org}60593-1 - should be one of ["Medication dispensed.extended Document","Medication dispensed.extended Doc"]
 The display "Medication dispensed.brief" is not a valid display for the code {http://loinc.org}60590-7 - should be one of ["Medication dispensed.brief Document","Medication dispensed.brief Doc"]
+The display "Medication pharmaceutical advice.extended" is not a valid display for the code {http://loinc.org}61356-2 - should be one of ["Medication pharmaceutical advice.extended Document","Medication pharm advice.extended Doc"]
+The display "Medication pharmaceutical advice.brief" is not a valid display for the code {http://loinc.org}61357-0 - should be one of ["Medication pharmaceutical advice.brief Document","Medication pharm advice.brief Doc"]
 
 The Implementation Guide contains no explicitly linked examples for this profile
 The Implementation Guide contains no examples for this data type profile

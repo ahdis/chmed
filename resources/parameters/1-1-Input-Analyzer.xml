@@ -3,7 +3,7 @@
 <Parameters xmlns="http://hl7.org/fhir">
     <id value="1-1-Input-Analyzer"/>
     <parameter>
-        <name value="bundle"/>
+        <name value="ch-emed-doc"/>
         <resource>
             <Bundle>
                 <id value="1-1-MedicationTreatmentPlan"/>

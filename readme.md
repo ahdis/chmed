@@ -14,19 +14,45 @@ The CHEMD20AF format can bei either in XML or JSON format. However both are too 
 
 ## Building the Implementation Guide
 
-You can build the Implementation Guide with the [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
+You can build the Implementation Guide with the [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
 
+- For building the Implementation Guide you need to install [Jekyll](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation#IGPublisherDocumentation-Jekyll).
+
+- Clone this repository and change into its main directory.
+- Download the latest version of IG Publisher:
 ```
 wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar -O org.hl7.fhir.publisher.jar
-java -Xms3550m -Xmx3550m -jar org.hl7.fhir.publisher.jar -ig ig.ini
+```
+- Build the Implementation Guide:
+```
+java -Xms3550m -Xmx3550m -jar org.hl7.fhir.publisher.jar -ig ig.json
 ```
 
+## Validate a Resource
 
-## Validating without publishing
-There is an alternative mode, where you run the IG publisher against a collection of conformance resources (profiles, value sets etc) without publishing an implementation guide. This allows you to validate a set of profiles, and see what they look like. To run the IG publisher in this mode:
+You can check your example against the specification of the IG with the [Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator).
 
+- Download the latest version of Validator: 
 ```
-java -jar org.hl7.fhir.publisher.jar -source [source] -destination [dest] (-tx [url])
+wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
 ```
+- Validate the resource: 
+```
+java -jar org.hl7.fhir.validator.jar [filename]
+ ```
 
-Where source is a directory containing the conformance resources, destination is where to put the generated output (validation.html is the most important). In this case, the IG publisher uses its own internal control file and renders a simple version of the output.
+
+## Validating without Building the IG
+
+The validator can validate against an implementation guide. Do this involves 2 steps:
+- loading the package for the implementation guide
+- telling the validator what to validate against
+
+- Download the latest version of Validator: 
+```
+wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
+```
+- Validate the resource:
+```
+java -jar org.hl7.fhir.validator.jar [filename] -ig ch.emediplan.chmed20af#current
+```

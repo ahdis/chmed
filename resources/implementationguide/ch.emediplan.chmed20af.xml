@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ch.chmed20af.emediplan"/>
-  <url value="http://chmed20af.emediplan.ch/fhir/ImplementationGuide/ch.chmed20af.emediplan"/>
+  <id value="ch.emediplan.chmed20af"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/ImplementationGuide/ch.emediplan.chmed20af"/>
   <version value="0.3.0"/>
   <name value="IgChMED20AF"/>
   <title value="Implementation Guide CHMED20AF"/>
@@ -14,7 +14,7 @@
       <value value="http://www.emediplan.ch"/>
     </telecom>
   </contact>
-  <packageId value="ch.mediplan.chmed20af"/>
+  <packageId value="ch.emediplan.chmed20af"/>
   <fhirVersion value="4.0.1"/>
   <definition>
     <resource>

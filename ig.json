@@ -3,7 +3,7 @@
   "version": "4.0.1",
   "fixed-business-version": "0.3.0",
   "license": "CC-BY-SA-4.0",
-  "npm-name": "ch.chmed20af.emediplan",
+  "npm-name": "ch.emediplan.chmed20af",
   "paths": {
     "resources": [
       "resources"
@@ -78,7 +78,7 @@
       "version": "current"
     }
   ],
-  "source": "implementationguide/ch.chmed20af.emediplan.xml",
+  "source": "implementationguide/ch.emediplan.chmed20af.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},
   "extraTemplates": [

@@ -1,5 +1,5 @@
 {
-    "package-id" : "ch.chmed20af.emediplan",
+    "package-id" : "ch.emediplan.chmed20af",
     "title" : "eMediplan CHMED20AF FHIR IG", 
     "canonical" : "http://chmed20af.emediplan.ch", 
     "introduction" : "CHMED20AF is the FHIR implementation guide to represent the eMediplan in FHIR",
@@ -15,7 +15,7 @@
     "version" : "0.3.0",  
     "date" : "2020-03-31", 
     "desc" : "eMediplan CHMED20AF Implementation Guide (R4)",   
-    "path" : "http://chmed20af.emediplan.ch/fhir",   
+    "path" : "http://chmed20af.emediplan.ch/fhir",
     "status" : "draft",   
     "sequence" : "STU1",
     "fhirVersion" : "4.0.1"

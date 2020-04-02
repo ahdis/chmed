@@ -59,10 +59,12 @@
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
 			</type>
+			<max value="1"/>
 		</element>
 		<element id="Composition.title">
 			<path value="Composition.title"/>
-			<short value="Title of the document"/>
+			<short value="'Medikationsplan' in german or 'Plan de médication' in french or 'Piano farmacologico' in italian or 'Medication Card' in english
+                        or titles in other languages are also allowed"/>
 		</element>
 		<element id="Composition.section">
 			<path value="Composition.section"/>
@@ -72,9 +74,6 @@
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
-				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observation"/>
 			</type>
 		</element>
 		<element id="Composition.section.section">

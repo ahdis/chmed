@@ -50,12 +50,24 @@
       </element>
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
-         <patternCodeableConcept>
-				<coding>
-					<system value="http://www.whocc.no/atc"/>
-				</coding>
-			</patternCodeableConcept>
          <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding">
+         <path value="MedicationStatement.category.coding"/>
+         <short value="ATC code if possible"/>
+      </element>
+      <element id="MedicationStatement.category.coding.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.text">
+         <path value="MedicationStatement.category.text"/>
+         <short value="Note that no ATC Code is applied"/>
       </element>
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
@@ -89,16 +101,20 @@
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observation"/>
          </type>
       </element>
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
          <short value="Reason for why the medication is being/was taken"/>
+         <max value="1"/>
       </element>
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
          <short value="Annoation"/>
+         <max value="1"/>
       </element>
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
@@ -110,6 +126,7 @@
             <rules value="open"/>
          </slicing>
          <short value="How the medication should be taken"/>
+         <min value="1"/>
       </element>
       <element id="MedicationStatement.dosage:nonstructured">
          <path value="MedicationStatement.dosage"/>
@@ -119,6 +136,8 @@
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
          </type>
+         <min value="1"/>
+         <max value="1"/>
       </element>
       <element id="MedicationStatement.dosage:structured">
          <path value="MedicationStatement.dosage"/>

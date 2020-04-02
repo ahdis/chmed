@@ -1,9 +1,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="chmed20af-analyzer-bundle"/>
-  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
+  <id value="chmed20af-card-bundle"/>
+  <meta>
+    <lastUpdated value="2017-05-26T11:18:41.712+02:00"/>
+  </meta>
+  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>
   <version value="0.1.0"/>
-  <name value="AnalyzerBundle"/>
-  <title value="Analyzer Bundle"/>
+  <name value="MedicationCardDocument"/>
+  <title value="Medication Card document"/>
   <status value="draft"/>
   <publisher value="IG eMediplan"/>
   <contact>
@@ -12,12 +15,17 @@
       <value value="http://www.emediplan.ch"/>
     </telecom>
   </contact>
-  <description value="Profile for the Analyzer Bundle (Medication Card document)"/>
+  <description value="Profile for Medication Card document. The Medication Card document summarizes the entire, current medication of a patient."/>
   <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="CHMED16A"/>
+    <uri value="http://emediplan.ch/chmed16a"/>
+    <name value="Mapping to CHMED16A"/>
+  </mapping>
   <kind value="resource"/>
   <abstract value="false"/>
   <type value="Bundle"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-document-medicationcard"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Bundle">
@@ -26,17 +34,18 @@
     <element id="Bundle.identifier">
       <path value="Bundle.identifier"/>
       <short value="Logical identifier for document (GUID)"/>
-      <min value="1"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="id"/>
+			</mapping>
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type"/>
-      <short value="Document"/>
       <fixedCode value="document"/>
     </element>
     <element id="Bundle.timestamp">
       <path value="Bundle.timestamp" />
       <short value="The document's creation date and time"/>
-      <min value="1"/>
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry"/>
@@ -47,7 +56,6 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <min value="1"/>
     </element>
     <element id="Bundle.entry:composition">
       <path value="Bundle.entry"/>
@@ -57,11 +65,11 @@
     </element>
     <element id="Bundle.entry.resource:composition">
       <path value="Bundle.entry.resource"/>
+      <short value="Medication Card"/>
       <min value="1"/>
-      <max value="1"/>
       <type>
         <code value="Composition"/>
-        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
+        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>
       </type>
     </element>
   </differential>

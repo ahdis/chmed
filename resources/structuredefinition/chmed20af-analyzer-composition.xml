@@ -2,8 +2,8 @@
 	<id value="chmed20af-analyzer-composition"/>
 	<url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
 	<version value="0.1.0"/>
-	<name value="AnalyzerCompositionMedicationPlan"/>
-	<title value="Analyzer Composition MedicationPlan"/>
+	<name value="AnalyzerCompositionMedicationCardDocument"/>
+	<title value="Analyzer Composition Medication Card document"/>
 	<status value="draft"/>
 	<publisher value="IG eMediplan"/>
 	<contact>

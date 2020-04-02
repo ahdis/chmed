@@ -103,7 +103,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-patient"/>
+        <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
       </type>
     </element>
     <element id="Condition.recordedDate">

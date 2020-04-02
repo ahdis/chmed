@@ -19,13 +19,13 @@
   <definition>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-dosage"/>
+        <reference value="StructureDefinition/chmed20af-card-dosage"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-rx-dosage"/>
+        <reference value="StructureDefinition/chmed20af-pre-dosage"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -37,65 +37,65 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-bundle"/>
+        <reference value="StructureDefinition/chmed20af-card-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-rx-bundle"/>
+        <reference value="StructureDefinition/chmed20af-pre-bundle"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed20af-mp-bundle-s01"/>
+        <reference value="Bundle/chmed20af-card-bundle-s01"/>
       </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example for MedicationPlan"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-bundle"/>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-bundle"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/chmed20af-rx-bundle-s01"/>
+        <reference value="Bundle/chmed20af-pre-bundle-s01"/>
       </reference>
-      <name value="Prescription"/>
-      <description value="Example for Prescription"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-rx-bundle"/>
+      <name value="Medication Prescription document"/>
+      <description value="Example for Medication Prescription document"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-pre-bundle"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Composition/chmed20af-mp-composition-s01"/>
+        <reference value="Composition/chmed20af-card-composition-s01"/>
       </reference>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-composition"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-composition"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Composition/chmed20af-rx-composition-s01"/>
+        <reference value="Composition/chmed20af-pre-composition-s01"/>
       </reference>
-      <exampleCanonical value="StructureDefinition/chmed20af-rx-composition"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-pre-composition"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-rx-composition"/>
+        <reference value="StructureDefinition/chmed20af-card-composition"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-patient"/>
+        <reference value="StructureDefinition/chmed20af-pre-composition"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-rx-patient"/>
+        <reference value="StructureDefinition/chmed20af-card-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pre-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -107,19 +107,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Patient/chmed20af-mp-patient-s01"/>
+        <reference value="Patient/chmed20af-card-patient-s01"/>
       </reference>
-      <name value="Patient MedicationPlan"/>
+      <name value="Patient Card"/>
       <description value="Example for a patient"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-patient"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-patient"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Patient/chmed20af-mp-patient-ext"/>
+        <reference value="Patient/chmed20af-card-patient-ext"/>
       </reference>
-      <name value="Patient MedicationPlan with an extension"/>
+      <name value="Patient Card with an extension"/>
       <description value="Example for a patient with extensions"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-patient"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-patient"/>
     </resource>
     <resource>
       <reference>
@@ -131,7 +131,7 @@
       <reference>
         <reference value="Practitioner/chmed20af-practitioner-s01"/>
       </reference>
-      <name value="Practitioner MedicationPlan"/>
+      <name value="Practitioner Card"/>
       <description value="Example for a practitioner"/>
       <exampleCanonical value="StructureDefinition/chmed20af-practitioner"/>
     </resource>
@@ -139,135 +139,135 @@
       <reference>
         <reference value="Organization/chmed20af-custodian-s01"/>
       </reference>
-      <name value="Organization MedicationPlan"/>
+      <name value="Organization Card"/>
       <description value="Example for a organization"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+        <reference value="StructureDefinition/chmed20af-card-medicationstatement"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-rx-medicationrequest"/>
+        <reference value="StructureDefinition/chmed20af-pre-medicationrequest"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationRequest/chmed20af-rx-medicationrequest-s01-1"/>
+        <reference value="MedicationRequest/chmed20af-pre-medicationrequest-s01-1"/>
       </reference>
       <name value="MedicationRequest"/>
       <description value="Example for a MedicationReqeust"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-rx-medicationrequest"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-pre-medicationrequest"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-1"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-s01-1"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-2"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-s01-2"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-3"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-s01-3"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s01-4"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-s01-4"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-s02-3"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-s02-3"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-1-diffrates-mathbera"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-1-diffrates-mathbera"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-2-multiple-meronem"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-2-multiple-meronem"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-3-clexane"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-3-clexane"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-3-marcoumar"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-3-marcoumar"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-4-spiricort"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-4-spiricort"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt-5-morphin"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt-5-morphin"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/chmed20af-mp-medicationstatement-tt"/>
+        <reference value="MedicationStatement/chmed20af-card-medicationstatement-tt"/>
       </reference>
-      <name value="MedicationStatement (MedicationPlan)"/>
+      <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="StructureDefinition/chmed20af-mp-medicationstatement"/>
+      <exampleCanonical value="StructureDefinition/chmed20af-card-medicationstatement"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/chmed20af-mp-observation-s01-bodyheight"/>
+        <reference value="Observation/chmed20af-card-observation-s01-bodyheight"/>
       </reference>
       <name value="Bodyheight"/>
       <description value="Example for specifiying body height"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/chmed20af-mp-observation-s01-bodyweight"/>
+        <reference value="Observation/chmed20af-card-observation-s01-bodyweight"/>
       </reference>
       <name value="Bodyweight"/>
       <description value="Example for specifiying body weight"/>
@@ -308,13 +308,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-mp-medication"/>
+        <reference value="StructureDefinition/chmed20af-card-medication"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-rx-medication"/>
+        <reference value="StructureDefinition/chmed20af-pre-medication"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -334,7 +334,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-1"/>
+        <reference value="Condition/chmed20af-card-condition-s01-1"/>
       </reference>
       <name value="RiskRenealInsufficiencyLeight"/>
       <description value=">Risk Renal Insufficiency Leight"/>
@@ -342,7 +342,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-2"/>
+        <reference value="Condition/chmed20af-card-condition-s01-2"/>
       </reference>
       <name value="RiskLiverInsufficiencyExcluded"/>
       <description value=">Risk Liver Insufficiency Excluded"/>
@@ -350,7 +350,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-3"/>
+        <reference value="Condition/chmed20af-card-condition-s01-3"/>
       </reference>
       <name value="RiskReproduction"/>
       <description value=">Risk Reproduction"/>
@@ -358,7 +358,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-4"/>
+        <reference value="Condition/chmed20af-card-condition-s01-4"/>
       </reference>
       <name value="RiskCompetitiveAthleteExcluded"/>
       <description value=">Risk Competitive Athlete Excluded"/>
@@ -366,7 +366,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-5"/>
+        <reference value="Condition/chmed20af-card-condition-s01-5"/>
       </reference>
       <name value="RiskDriverExcluded"/>
       <description value=">Risk Driver Excluded"/>
@@ -374,7 +374,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Condition/chmed20af-mp-condition-s01-6"/>
+        <reference value="Condition/chmed20af-card-condition-s01-6"/>
       </reference>
       <name value="RiskAllergies"/>
       <description value=">Risk Allergies"/>

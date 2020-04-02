@@ -19,7 +19,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/chmed20af-mp-patient-s01"/>
+        <reference value="Patient/chmed20af-card-patient-s01"/>
     </subject>
     <component>
         <code>

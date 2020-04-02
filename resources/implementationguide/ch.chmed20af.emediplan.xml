@@ -485,14 +485,14 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/1-2-ConsolidatedMedicationPlan"/>
+        <reference value="Bundle/1-2-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example 1-2 for Medication Card document (Output Analyzer)"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/2-2-ConsolidatedMedicationPlan"/>
+        <reference value="Bundle/2-2-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example 2-2 for Medication Card document (Output Analyzer)"/>

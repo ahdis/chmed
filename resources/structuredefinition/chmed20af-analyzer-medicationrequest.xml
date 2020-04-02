@@ -52,14 +52,27 @@
          <path value="MedicationRequest.intent"/>
          <short value="Intent of the medication request"/>
       </element>
-      <element id="MedicationRequest.category">
-         <path value="MedicationRequest.category"/>
-         <patternCodeableConcept>
-				<coding>
-					<system value="http://www.whocc.no/atc"/>
-				</coding>
-			</patternCodeableConcept>
+       <element id="MedicationStatement.category">
+         <path value="MedicationStatement.category"/>
          <min value="1"/>
+         <max value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding">
+         <path value="MedicationStatement.category.coding"/>
+         <short value="ATC code if possible"/>
+      </element>
+      <element id="MedicationStatement.category.coding.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.text">
+         <path value="MedicationStatement.category.text"/>
+         <short value="Note that no ATC Code is applied"/>
       </element>
       <element id="MedicationRequest.medicationReference">
          <path value="MedicationRequest.medicationReference"/>
@@ -89,6 +102,7 @@
       <element id="MedicationRequest.note">
          <path value="MedicationRequest.note"/>
          <short value="Annotation"/>
+         <max value="1"/>
       </element>
       <element id="MedicationRequest.dosageInstruction">
          <path value="MedicationRequest.dosageInstruction"/>

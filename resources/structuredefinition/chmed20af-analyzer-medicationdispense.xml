@@ -70,14 +70,26 @@
          <path value="MedicationDispense.status"/>
          <short value="Status of the medication dispense"/>
       </element>
-      <element id="MedicationDispense.category">
-         <path value="MedicationDispense.category"/>
-         <patternCodeableConcept>
-				<coding>
-					<system value="http://www.whocc.no/atc"/>
-				</coding>
-			</patternCodeableConcept>
+       <element id="MedicationStatement.category">
+         <path value="MedicationStatement.category"/>
          <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding">
+         <path value="MedicationStatement.category.coding"/>
+         <short value="ATC code if possible"/>
+      </element>
+      <element id="MedicationStatement.category.coding.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.text">
+         <path value="MedicationStatement.category.text"/>
+         <short value="Note that no ATC Code is applied"/>
       </element>
       <element id="MedicationDispense.medicationReference">
          <path value="MedicationDispense.medicationReference"/>
@@ -94,11 +106,13 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
          </type>
+         <min value="1"/>
       </element>
       <element id="MedicationDispense.performer">
          <path value="MedicationDispense.performer"/>
          <short value="Who performed event"/>
          <min value="1"/>
+         <max value="1"/>
       </element>
       <element id="MedicationDispense.performer.actor">
          <path value="MedicationDispense.performer.actor"/>
@@ -119,6 +133,7 @@
       <element id="MedicationDispense.note">
          <path value="MedicationDispense.note"/>
          <short value="Annotation"/>
+         <max value="1"/>
       </element>
       <element id="MedicationDispense.dosageInstruction">
          <path value="MedicationDispense.dosageInstruction"/>

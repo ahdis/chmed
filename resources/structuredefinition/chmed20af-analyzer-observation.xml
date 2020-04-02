@@ -70,13 +70,25 @@
          <path value="Observation.status"/>
          <short value="Status of the observation"/>
       </element>
-      <element id="Observation.category">
-         <path value="Observation.category"/>
-         <patternCodeableConcept>
-				<coding>
-					<system value="http://www.whocc.no/atc"/>
-				</coding>
-			</patternCodeableConcept>
+       <element id="MedicationStatement.category">
+         <path value="MedicationStatement.category"/>
+      </element>
+      <element id="MedicationStatement.category.coding">
+         <path value="MedicationStatement.category.coding"/>
+         <short value="ATC code if possible"/>
+      </element>
+      <element id="MedicationStatement.category.coding.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.text">
+         <path value="MedicationStatement.category.text"/>
+         <short value="Note that no ATC Code is applied"/>
       </element>
       <element id="Observation.code">
          <path value="Observation.code"/>
@@ -93,6 +105,7 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
          </type>
+         <min value="1"/>
       </element>
       <element id="Observation.performer">
          <path value="Observation.performer"/>
@@ -101,6 +114,8 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
          </type>
+         <min value="1"/>
+         <max value="1"/>
       </element>
    </differential>
 </StructureDefinition>

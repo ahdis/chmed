@@ -98,7 +98,7 @@
          <short value="Individual who was performing"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
          </type>
       </element>
       <element id="MedicationDispense.quantity">

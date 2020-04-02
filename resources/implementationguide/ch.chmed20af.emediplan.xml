@@ -430,6 +430,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-practitioner"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="OperationDefinition/chmed20af-analyzer"/>
       </reference>
       <exampleBoolean value="false"/>

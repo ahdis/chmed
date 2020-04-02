@@ -478,24 +478,24 @@
 
     <resource>
       <reference>
-        <reference value="Bundle/1-1-ConsolidatedMedicationPlan"/>
+        <reference value="Bundle/1-1-ConsolidatedMedicationCard"/>
       </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 1-1 for MedicationPlan (Output Analyzer)"/>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example 1-1 for Medication Card document (Output Analyzer)"/>
     </resource>
     <resource>
       <reference>
         <reference value="Bundle/1-2-ConsolidatedMedicationPlan"/>
       </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 1-2 for MedicationPlan (Output Analyzer)"/>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example 1-2 for Medication Card document (Output Analyzer)"/>
     </resource>
     <resource>
       <reference>
         <reference value="Bundle/2-2-ConsolidatedMedicationPlan"/>
       </reference>
-      <name value="MedicationPlan"/>
-      <description value="Example 2-2 for MedicationPlan (Output Analyzer)"/>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example 2-2 for Medication Card document (Output Analyzer)"/>
     </resource>
 
     <!-- Value Sets -->

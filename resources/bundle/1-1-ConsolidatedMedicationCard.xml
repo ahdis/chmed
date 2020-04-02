@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="1-1-ConsolidatedMedicationPlan"/>
+    <id value="1-1-ConsolidatedMedicationCard"/>
     <meta>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
     </meta>

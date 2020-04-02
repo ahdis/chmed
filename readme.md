@@ -6,36 +6,27 @@ This github repository provides holds the source for the eMediplan CHMED20AF Imp
 The Implemenation Guide is based on FHIR. [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 
 Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the following advantages:
-* Support for [implementers](http://build.fhir.org/implsupport-module.html): .NET/Java and other implementations are availabe to work directly with FHIR Ressources, no separate Parser/Serializer has to be written
 * CHMED20AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined 
-* Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://www.e-health-suisse.ch/umsetzung/00252/index.html?lang=de).
+* Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 
 The CHEMD20AF format can bei either in XML or JSON format. However both are too big in size to be exchange in a qrcode. 
 
 
-## building the Implementation Guide
-The Implementation Guide is built with the [FHIR Implementation Guide Auto-Builder(https://github.com/hl7-fhir/auto-ig-builder).
+## Building the Implementation Guide
 
-the Implementation Guide can be built also from the command line:
-
-```
-wget https://github.com/FHIR/latest-ig-publisher/raw/master/org.hl7.fhir.publisher.jar -O org.hl7.fhir.igpublisher.jar
-java -jar org.hl7.fhir.igpublisher.jar -ig ig.json
+You can build the Implementation Guide with the [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 
 ```
-
-## source
-Publishing the Implementation Guide for is currrencly a manual process
-
-```
-cd output
-cp ../package-list.json .
-ncftpput -R -f ../ncftp.cfg /fhir ./
-rm package-list.json
-ncftpput -R -f ../ncftp.cfg /fhir/<<<version>>> ./
+wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar -O org.hl7.fhir.publisher.jar
+java -Xms3550m -Xmx3550m -jar org.hl7.fhir.publisher.jar -ig ig.ini
 ```
 
+
+## Validating without publishing
+There is an alternative mode, where you run the IG publisher against a collection of conformance resources (profiles, value sets etc) without publishing an implementation guide. This allows you to validate a set of profiles, and see what they look like. To run the IG publisher in this mode:
+
 ```
-download version 0.1.0
-ncftpget -R -f ../ncftp.cfg . /0.1.0
+java -jar org.hl7.fhir.publisher.jar -source [source] -destination [dest] (-tx [url])
 ```
+
+Where source is a directory containing the conformance resources, destination is where to put the generated output (validation.html is the most important). In this case, the IG publisher uses its own internal control file and renders a simple version of the output.

@@ -27,11 +27,11 @@
     <type value="Bundle"/>
   </parameter>
   <parameter>
-    <name value="cons-medicationplan"/>
+    <name value="cons-medicationcard"/>
     <use value="out"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="Consolidated MedicationPlan (MP)"/>
+    <documentation value="Consolidated Medication Card document"/>
     <type value="Bundle"/>
   </parameter>
 </OperationDefinition>

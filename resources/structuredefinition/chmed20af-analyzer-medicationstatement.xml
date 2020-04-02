@@ -12,7 +12,7 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Analyzer MedicationStatement (MedicationPlan)"/>
+   <description value="Profile for the Analyzer MedicationStatement (Medication Card document)"/>
    <fhirVersion value="4.0.1"/>
    <kind value="resource"/>
    <abstract value="false"/>
@@ -82,7 +82,7 @@
          <short value="Who is/was taking  the medication"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
          </type>
       </element>
       <element id="MedicationStatement.informationSource">
@@ -90,7 +90,7 @@
          <short value="The author of the medication statement"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
          </type>
          <min value="1"/>
@@ -103,7 +103,8 @@
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observation"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationpadv"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
          </type>
       </element>
       <element id="MedicationStatement.reasonCode">

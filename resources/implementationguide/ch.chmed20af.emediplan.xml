@@ -412,7 +412,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-observation"/>
+        <reference value="StructureDefinition/chmed20af-analyzer-observationpadv"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-observationhistory"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

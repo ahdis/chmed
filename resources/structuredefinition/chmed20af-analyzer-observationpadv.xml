@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="chmed20af-analyzer-observation"/>
-   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observation"/>
+   <id value="chmed20af-analyzer-observationpadv"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationpadv"/>
    <version value="0.1.0"/>
-   <name value="AnalyzerObservation"/>
-   <title value="Analyzer Observation"/>
+   <name value="AnalyzerObservationPADV"/>
+   <title value="Analyzer Observation PADV"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>
@@ -12,7 +12,7 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Analyzer Observation (MedicationPlan)"/>
+   <description value="Profile for the Analyzer Observation from a Pharmaceutical Advice document (PADV) (Medication Card document)"/>
    <fhirVersion value="4.0.1"/>
    <kind value="resource"/>
    <abstract value="false"/>
@@ -83,7 +83,7 @@
          <short value="Patient"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-rx-patient"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
          </type>
          <min value="1"/>
       </element>

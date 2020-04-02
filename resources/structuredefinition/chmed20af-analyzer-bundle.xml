@@ -12,7 +12,7 @@
       <value value="http://www.emediplan.ch"/>
     </telecom>
   </contact>
-  <description value="Profile for the Analyzer Bundle (MedicationPlan)"/>
+  <description value="Profile for the Analyzer Bundle (Medication Card document)"/>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>

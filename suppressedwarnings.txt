@@ -1,5 +1,6 @@
 A resource should have narrative for robust management [text.div.exists()]
 Resource has a language, but the XHTML does not have a language tag
+Die Ressource hat eine language, aber das XHTML hat kein lang oder ein xml:lang Tag (benötigt beides - siehe https://www.w3.org/TR/i18n-html-tech-lang/#langvalues)
 
 Code System URI "urn:oid:2.51.1.1" ist unbekannt, so dass der Code nicht validiert werden kann
 

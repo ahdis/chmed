@@ -146,7 +146,7 @@
          <short value="Structured dosage instructions"/>
          <type>
             <code value="Dosage"/>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-mp-dosage"/>
+            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured"/>
          </type>
       </element>
    </differential>

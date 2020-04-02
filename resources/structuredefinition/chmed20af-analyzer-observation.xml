@@ -70,26 +70,6 @@
          <path value="Observation.status"/>
          <short value="Status of the observation"/>
       </element>
-       <element id="Observation.category">
-         <path value="Observation.category"/>
-      </element>
-      <element id="Observation.category.coding">
-         <path value="Observation.category.coding"/>
-         <short value="ATC code if possible"/>
-      </element>
-      <element id="Observation.category.coding.system">
-         <path value="Observation.category.coding.system"/>
-         <fixedUri value="http://www.whocc.no/atc"/>
-         <min value="1"/>
-      </element>
-      <element id="Observation.category.coding.code">
-         <path value="Observation.category.coding.code"/>
-         <min value="1"/>
-      </element>
-      <element id="Observation.category.text">
-         <path value="Observation.category.text"/>
-         <short value="Note that no ATC Code is applied"/>
-      </element>
       <element id="Observation.code">
          <path value="Observation.code"/>
          <short value="Observation code"/>

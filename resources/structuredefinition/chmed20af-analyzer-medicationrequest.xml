@@ -52,28 +52,6 @@
          <path value="MedicationRequest.intent"/>
          <short value="Intent of the medication request"/>
       </element>
-       <element id="MedicationRequest.category">
-         <path value="MedicationRequest.category"/>
-         <min value="1"/>
-         <max value="1"/>
-      </element>
-      <element id="MedicationRequest.category.coding">
-         <path value="MedicationRequest.category.coding"/>
-         <short value="ATC code if possible"/>
-      </element>
-      <element id="MedicationRequest.category.coding.system">
-         <path value="MedicationRequest.category.coding.system"/>
-         <fixedUri value="http://www.whocc.no/atc"/>
-         <min value="1"/>
-      </element>
-      <element id="MedicationRequest.category.coding.code">
-         <path value="MedicationRequest.category.coding.code"/>
-         <min value="1"/>
-      </element>
-      <element id="MedicationRequest.category.text">
-         <path value="MedicationRequest.category.text"/>
-         <short value="Note that no ATC Code is applied"/>
-      </element>
       <element id="MedicationRequest.medicationReference">
          <path value="MedicationRequest.medicationReference"/>
          <short value="Medication to be taken"/>

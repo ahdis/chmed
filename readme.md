@@ -44,10 +44,7 @@ java -jar org.hl7.fhir.validator.jar [filename]
 
 ## Validating without Building the IG
 
-The validator can validate against an implementation guide. Do this involves 2 steps:
-- loading the package for the implementation guide
-- telling the validator what to validate against   
-
+The validator can validate against an implementation guide.
 
 - Download the latest version of Validator: 
 ```
@@ -55,5 +52,5 @@ wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O or
 ```
 - Validate the resource:
 ```
-java -jar org.hl7.fhir.validator.jar [filename] -ig ch.chmed20af.emediplan#current
+java -jar org.hl7.fhir.validator.jar [filename] -ig ch.chmed20af.emediplan
 ```

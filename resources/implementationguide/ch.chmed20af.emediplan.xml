@@ -578,6 +578,13 @@
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example 2-6 for Medication Card document (Output Analyzer)"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/2-7-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example 2-7 for Medication Card document (Output Analyzer)"/>
+    </resource>
 
     <!-- Value Sets -->
     <resource>

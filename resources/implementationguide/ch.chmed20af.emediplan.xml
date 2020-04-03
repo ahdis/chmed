@@ -500,6 +500,13 @@
       <name value="Parameters"/>
       <description value="Example 2-3 Input Analyzer"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/2-4-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example 2-4 Input Analyzer"/>
+    </resource>
 
     <resource>
       <reference>
@@ -528,6 +535,13 @@
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example 2-3 for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/2-4-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example 2-4 for Medication Card document (Output Analyzer)"/>
     </resource>
 
     <!-- Value Sets -->

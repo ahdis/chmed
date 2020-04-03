@@ -1,5 +1,5 @@
 {
-    "package-id" : "ch.emediplan.chmed20af",
+    "package-id" : "ch.chmed20af.emediplan",
     "title" : "eMediplan CHMED20AF FHIR IG", 
     "canonical" : "http://chmed20af.emediplan.ch", 
     "introduction" : "CHMED20AF is the FHIR implementation guide to represent the eMediplan in FHIR",

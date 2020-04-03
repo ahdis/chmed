@@ -528,6 +528,41 @@
       <name value="Parameters"/>
       <description value="Example 2-7 Input Analyzer"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/BeloczokMTP-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/BeloczokDIS-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/NorvascMTP-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/NorvascPRE-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/NorvascCard-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example Input Analyzer"/>
+    </resource>
 
     <resource>
       <reference>
@@ -584,6 +619,41 @@
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example 2-7 for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/BeloczokMTP-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/BeloczokDIS-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/NorvascMTP-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/NorvascPRE-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/NorvascCard-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
     </resource>
 
     <!-- Value Sets -->

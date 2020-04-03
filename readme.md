@@ -52,5 +52,5 @@ wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O or
 ```
 - Validate the resource:
 ```
-java -jar org.hl7.fhir.validator.jar [filename] -ig ch.chmed20af.emediplan
+java -jar org.hl7.fhir.validator.jar [filename] -ig ch.chmed20af.emediplan#current
 ```

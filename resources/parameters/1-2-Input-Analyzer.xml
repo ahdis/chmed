@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Parameters xmlns="http://hl7.org/fhir">
+    <!-- The parameter resource actually has no ID. Here the ID is used to show the resource in the IG. -->
     <id value="1-2-Input-Analyzer"/>
     <parameter>
         <name value="ch-emed-doc"/>

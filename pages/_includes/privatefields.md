@@ -8,7 +8,7 @@ can be added to Patient, Composition (CHMED16A: Medication), MedicationStatement
 
 
 ```xml
-   <extension url="http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield">
+   <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield">
       <extension url="name">
          <valueString value="PrivateFieldNameSample"/>
       </extension>
@@ -21,7 +21,7 @@ can be added to Patient, Composition (CHMED16A: Medication), MedicationStatement
 ```json
   "extension" : [
     {
-      "url" : "http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-privatefield",
+      "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield",
       "extension" : [
         {
           "url" : "name",
@@ -36,11 +36,11 @@ can be added to Patient, Composition (CHMED16A: Medication), MedicationStatement
   ]
 ```
 
-The name of the field can be indicated with the extension name in attribute valueString, the value of the field with the extension value and attribute valueString. See sample for [patient](Patient-chmed16af-mp-patient-ext.html).
+The name of the field can be indicated with the extension name in attribute valueString, the value of the field with the extension value and attribute valueString. See sample for [patient](Patient-chmed20af-card-patient-ext.html).
 
 ## Caveat
 
-Currently in CHMED16AF their are no private fields explicitly defined. The conversion to the QR format considers extension definitions for Composition (equals to Medication in CHMED16A), Patient and MedicationStatement (equals to Medicament) with a canonical url starting with http://chmed16af.emediplan.ch/fhir/StructureDefinition/.
+Currently in CHMED20AF their are no private fields explicitly defined. The conversion to the QR format considers extension definitions for Composition (equals to Medication in CHMED16A), Patient and MedicationStatement (equals to Medicament) with a canonical url starting with http://chmed20af.emediplan.ch/fhir/StructureDefinition/.
 
 In the future official defined extensions will be published here.
 

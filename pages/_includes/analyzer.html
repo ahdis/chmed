@@ -1,0 +1,108 @@
+<h2>
+    Analyzer
+</h2>
+
+<br>
+
+<h3>Examples Input and Output</h3>
+
+<h4>1-1 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-1-1-Input-Analyzer.html"> 1-1 Input Analyzer</a> Inputdokument: 1-1-MTP</li>
+    <li><a href="Bundle-1-1-ConsolidatedMedicationCard.html"> 1-1 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>1-2 Abgabe (Medication Dispense document)</h4>
+<div>
+    <li><a href="Parameters-1-2-Input-Analyzer.html"> 1-2 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS</li>
+    <li><a href="Bundle-1-2-ConsolidatedMedicationCard.html"> 1-2 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-1 Medikationsliste (Medication List document)</h4>
+<div>
+    <li><a href="Parameters-2-1-Input-Analyzer.html"> 2-1 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List</li>
+    <li><a href="Bundle-1-2-ConsolidatedMedicationCard.html"> 2-1 Consolidated Medication Card document</a> äquivalent zu 1-2 Consolidated Medication Card document</li>
+</div>
+
+<br>
+
+<h4>2-2 Kommentar zur Medikation (Pharmaceutical Advice document)</h4>
+<div>
+    <li><a href="Parameters-2-2-Input-Analyzer.html"> 2-2 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV</li>
+    <li><a href="Bundle-2-2-ConsolidatedMedicationCard.html"> 2-2 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-3 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-2-3-Input-Analyzer.html"> 2-3 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV, 2-3-MTP</li>
+    <li><a href="Bundle-2-3-ConsolidatedMedicationCard.html"> 2-3 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-4 Abgabe (Medication Dispense document)</h4>
+<div>
+    <li><a href="Parameters-2-4-Input-Analyzer.html"> 2-4 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV, 2-3-MTP, 2-4-DIS</li>
+    <li><a href="Bundle-2-4-ConsolidatedMedicationCard.html"> 2-4 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-5 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-2-5-Input-Analyzer.html"> 2-5 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP</li>
+    <li><a href="Bundle-2-5-ConsolidatedMedicationCard.html"> 2-5 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-6 Rezept (Medication Prescription document)</h4>
+<div>
+    <li><a href="Parameters-2-6-Input-Analyzer.html"> 2-6 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP, 2-6-PRE</li>
+    <li><a href="Bundle-2-6-ConsolidatedMedicationCard.html"> 2-6 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-7 Medikationsplan (Medication Card document)</h4>
+<div>
+    <li><a href="Parameters-2-7-Input-Analyzer.html"> 2-7 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-1-List, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP, 2-6-PRE, 2-7-Card</li>
+    <li><a href="Bundle-2-7-ConsolidatedMedicationCard.html"> 2-7 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+
+<h3>Profiles</h3>
+
+<h4>Profile Operation Analyzer</h4>
+<div>
+    <li><a href="OperationDefinition-chmed20af-analyzer.html">Definition Input and Output Parameter Analyzer</a></li>
+</div>
+
+<br>
+
+<h4>Profiles Output</h4>
+<p>Nachfolgende Profile definieren die Anforderungen an ein Minimaldatenset für das durch den Analyzer konsolidierte Medication Card document.<br>
+    Bemerkung: <br>
+    Die Anforderungen an dieses durch den Analyzer kosolidiertes Medication Card document entsprechen 
+    nicht den Anforderungen des <a href="profiles.html">CHMED20AF Medication Card documents</a>.</p>
+<div>
+    <li><a href="StructureDefinition-chmed20af-analyzer-bundle.html">Analyzer Consolidated Medication Card document</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-composition.html">Analyzer Composition</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationstatement.html">Analyzer MedicationStatement</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationrequest.html">Analyzer MedicationRequest</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationdispense.html">Analyzer MedicationDispense</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-observationpadv.html">Analyzer Observation PADV</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-observationhistory.html">Analyzer Observation History of Changes</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-patient.html">Analyzer Patient</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-practitioner.html">Analyzer Practitioner</a></li>
+</div>
+
+<br>

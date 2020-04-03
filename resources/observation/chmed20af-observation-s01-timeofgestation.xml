@@ -1,0 +1,54 @@
+<Observation 
+    xmlns="http://hl7.org/fhir">
+    <id value="chmed20af-observation-s01-timeofgestation"/>
+    <meta>
+        <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-timeofgestation" />
+    </meta>
+    <text>
+        <status value="generated"/>
+        <div 
+            xmlns="http://www.w3.org/1999/xhtml">Time of gestation: week 30, days 5                                
+        </div>
+    </text>
+    <status value="final" />
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="445872007"/>
+            <display value="Length of gestation at time of procedure"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/chmed20af-card-patient-s01"/>
+    </subject>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="49051-6"/>
+                <display value="Gestational age in weeks"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="30"/>
+            <unit value="wk"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="wk"/>
+        </valueQuantity>
+    </component>
+   <component> 
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="49052-4"/>
+                <display value="Gestational age in days"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="5"/>
+            <unit value="d"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+        </valueQuantity>
+    </component>
+</Observation>

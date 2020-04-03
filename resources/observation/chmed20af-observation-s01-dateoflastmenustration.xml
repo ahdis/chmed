@@ -1,0 +1,22 @@
+<Observation xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-observation-s01-dateoflastmenustration"/>
+   <meta>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Date last menstruation: 01.09.2016 </div>
+   </text>
+   <status value="final"/>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="161713000"/>
+         <display value="Last menstrual period - First day"/>
+      </coding>
+   </code>
+   <subject>
+      <reference value="Patient/chmed20af-card-patient-s01"/>
+   </subject>
+   <valueDateTime value="2016-09-01"/>
+</Observation>

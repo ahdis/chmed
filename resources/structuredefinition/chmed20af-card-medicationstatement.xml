@@ -1,0 +1,148 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-card-medicationstatement"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+   <version value="0.1.0"/>
+   <name value="MedicationStatementCard"/>
+   <title value="MedicationStatement Card"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on MedicationStatement for Medication Card document"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="MedicationStatement"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement-card"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="MedicationStatement">
+         <path value="MedicationStatement"/>
+         <short value="Record of medication being taken by a patient"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.extension">
+         <path value="MedicationStatement.extension"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="url"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+      </element>
+      <element id="MedicationStatement.extension:privatefield">
+         <path value="MedicationStatement.extension" />
+         <sliceName value="privatefield" />
+         <short value="Private fields for patient"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Extension" />
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.PFields"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.medicationReference">
+         <path value="MedicationStatement.medicationReference"/>
+         <short value="What medication was taken"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.subject">
+         <path value="MedicationStatement.subject"/>
+         <short value="Who is/was taking  the medication"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Patient"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.informationSource">
+         <path value="MedicationStatement.informationSource"/>
+         <short value="The author of the medical decision"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+         </type>
+         <mapping>
+            <identity value="CHEMED16A"/>
+            <map value="Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.reasonCode">
+         <path value="MedicationStatement.reasonCode"/>
+         <short value="Reason for why the medication is being/was taken"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.TkgRsn"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.note">
+         <path value="MedicationStatement.note"/>
+         <short value="Annoation"/>
+      </element>
+      <element id="MedicationStatement.dosage">
+         <path value="MedicationStatement.dosage"/>
+         <slicing>
+            <discriminator>
+               <type value="profile"/>
+               <path value="$this"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <short value="How the medication should be taken"/>
+      </element>
+      <element id="MedicationStatement.dosage:nonstructured">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="nonstructured"/>
+         <short value="Free text dosage instructions"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.AppInstr"/>
+         </mapping>
+      </element>
+      <element id="MedicationStatement.dosage:structured">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="structured"/>
+         <short value="Structured dosage instructions"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.Pos"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>

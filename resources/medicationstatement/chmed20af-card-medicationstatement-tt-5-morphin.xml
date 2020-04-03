@@ -1,0 +1,111 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-card-medicationstatement-tt-5-morphin"/>
+   <meta>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml"> MORPHIN HCL Amino Inj Lös 20 mg/ml		Prd-Nr. 28537 
+         <br/>
+Start	 08:00 Uhr 
+         <br/>
+Ende	 12:00 Uhr 
+         <br/>
+Dosis jede Stunde 50 ml erhöhen 
+         <br/>
+CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;LName&quot;: &quot;Graber&quot;,		&quot;BDt&quot;: &quot;1945-11-23&quot;,		&quot;Gender&quot;: 2,		&quot;Lng&quot;: &quot;de&quot;,		&quot;Med&quot;: {			&quot;DLstMen&quot;: &quot;&quot;,			&quot;Prem&quot;: 0,			&quot;Rc&quot;: [{					&quot;Id&quot;: 4				}, {					&quot;Id&quot;: 2				}, {					&quot;Id&quot;: 1				}, {					&quot;Id&quot;: 3				}, {					&quot;Id&quot;: 6,					&quot;R&quot;: [571]				}, {					&quot;Id&quot;: 7,					&quot;R&quot;: [9999]				}			],			&quot;Meas&quot;: [{					&quot;Type&quot;: 1,					&quot;Val&quot;: &quot;93&quot;,					&quot;Unit&quot;: 2				}, {					&quot;Type&quot;: 2,					&quot;Val&quot;: &quot;165&quot;,					&quot;Unit&quot;: 1				}			]		}	},	&quot;Medicaments&quot;: [{			&quot;Id&quot;: &quot;1176325&quot;,			&quot;IdType&quot;: 4,			&quot;Pos&quot;: [{					&quot;DtFrom&quot;: &quot;2017-09-05&quot;,					&quot;DtTo&quot;: &quot;2017-09-07&quot;,					&quot;CyDu&quot;: 604800,					&quot;InRes&quot;: 0,					&quot;TT&quot;: [{							&quot;Off&quot;: 28800,							&quot;Du&quot;: 14400,							&quot;DoFrom&quot;: 50.0,							&quot;DoTo&quot;: 200.0						}					]				}			],			&quot;Unit&quot;: &quot;ML&quot;,			&quot;Rep&quot;: 0,			&quot;Subs&quot;: 0,			&quot;NbPack&quot;: 1		}	],	&quot;PFields&quot;: [],	&quot;MedType&quot;: 1,	&quot;Dt&quot;: &quot;2017-09-05T03:21:25+02:00&quot;} 
+      </div>
+   </text>
+   <contained>
+      <Medication xmlns="http://hl7.org/fhir">
+         <id value="cont1"/>
+         <meta>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+         </meta>
+         <code>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+               <code value="7680565130034"/>
+               <display value="MORPHIN HCL Amino Inj Lös 20 mg/ml"/>
+            </coding>
+            <text value="MORPHIN HCL Amino Inj Lös 20 mg/ml"/>
+         </code>
+         <form>
+            <coding>
+               <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+               <code value="11201000"/>
+               <display value="Solution for injection"/>
+            </coding>
+         </form>
+         <ingredient>
+            <itemCodeableConcept>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="373529000"/>
+                  <display value="Morphine (substance)"/>
+               </coding>
+            </itemCodeableConcept>
+            <strength>
+               <numerator>
+                  <value value="20"/>
+                  <unit value="mg"/>
+               </numerator>
+               <denominator>
+                  <value value="1"/>
+                  <unit value="ml"/>
+               </denominator>
+            </strength>
+         </ingredient>
+      </Medication>
+   </contained>
+   <status value="completed"/>
+   <medicationReference>
+      <reference value="#cont1"/>
+   </medicationReference>
+   <subject>
+      <reference value="Patient/chmed20af-card-patient-s01"/>
+   </subject>
+   <informationSource>
+      <reference value="Practitioner/chmed20af-practitioner-s01"/>
+   </informationSource>
+   <reasonCode>
+      <text value="Blutverdünnung"/>
+   </reasonCode>
+   <dosage>
+      <text value="Dosis jede Stunde 50 ml erhöhen"/>
+   </dosage>
+   <dosage>
+      <sequence value="1"/>
+      <timing>
+         <repeat>
+            <count value="1"/>
+            <duration value="14400"/>
+            <durationUnit value="s"/>
+            <timeOfDay value="08:00:00"/>
+         </repeat>
+      </timing>
+      <route>
+         <coding>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20045000"/>
+            <display value="Intravenous use"/>
+         </coding>
+      </route>
+      <doseAndRate>
+         <doseQuantity>
+            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
+               <valueQuantity>
+                  <value value="200"/>
+                  <unit value="ml"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="ml"/>
+               </valueQuantity>
+            </extension>
+            <value value="50"/>
+            <unit value="ml"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="ml"/>
+         </doseQuantity>
+      </doseAndRate>
+   </dosage>
+</MedicationStatement>

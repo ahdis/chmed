@@ -1,0 +1,364 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="chmed20af-card-composition"/>
+	<meta>
+		<lastUpdated value="2017-05-26T13:58:37.090+02:00"/>
+	</meta>
+	<url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>
+	<version value="0.1.0"/>
+	<name value="CompositionMedicationCardDocument"/>
+	<title value="Composition Medication Card document"/>
+	<status value="draft"/>
+	<publisher value="IG eMediplan"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile for the Composition Resource of the Medication Card document."/>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="CHMED16A"/>
+		<uri value="http://emediplan.ch/chmed16a"/>
+		<name value="Mapping to CHMED16A"/>
+	</mapping>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Composition"/>
+	<baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-composition-medicationcard"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Composition">
+			<path value="Composition"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medication"/>
+			</mapping>
+		</element>
+		<element id="Composition.extension">
+			<path value="Composition.extension"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+		</element>
+		<element id="Composition.extension:informationRecipient">
+			<path value="Composition.extension"/>
+			<sliceName value="informationRecipient"/>
+			<short value="A recipient of this document"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Patient or Patient.Rcv (Gln of receiver)"/>
+			</mapping>
+		</element>
+		<element id="Composition.extension:privatefield">
+			<path value="Composition.extension" />
+			<sliceName value="privatefield" />
+			<short value="Private fields for patient"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Extension" />
+				<profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="PFields"/>
+			</mapping>
+		</element>
+		<element id="Composition.identifier">
+			<path value="Composition.identifier"/>
+			<short value="Logical identifier for document (GUID)"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Id"/>
+			</mapping>
+		</element>
+		<element id="Composition.type">
+			<path value="Composition.type"/>
+			<short value="Document type"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="721912009"/>
+					<display value="Medication summary document (record artifact)"/>
+				</coding>
+			</patternCodeableConcept>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedType"/>
+			</mapping>
+		</element>
+		<element id="Composition.subject">
+			<path value="Composition.subject"/>
+			<short value="Patient"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Patient"/>
+			</mapping>
+		</element>
+		<element id="Composition.date">
+			<path value="Composition.date"/>
+			<short value="Composition editing time"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Dt"/>
+			</mapping>
+		</element>
+		<element id="Composition.author">
+			<path value="Composition.author"/>
+			<short value="Author"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Auth"/>
+			</mapping>
+		</element>
+		<element id="Composition.attester">
+			<path value="Composition.attester"/>
+			<slicing>
+				<discriminator>
+					<type value="value" />
+					<path value="mode" />
+				</discriminator>
+				<rules value="open" />
+			</slicing>
+			<short value="The authenticator of the document (person)"/>
+		</element>
+		<element id="Composition.attester:professionalAuthenticator">
+			<path value="Composition.attester"/>
+			<sliceName value="professionalAuthenticator"/>
+			<short value="The professional authenticator of the document (person)"/>
+		</element>
+		<element id="Composition.attester.mode:professionalAuthenticator">
+			<path value="Composition.attester.mode"/>
+			<fixedCode value="professional"/>
+		</element>
+		<element id="Composition.attester.time:professionalAuthenticator">
+			<path value="Composition.attester.time"/>
+			<short value="When composition was attested by the party, Validate date: Date of validation"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="ValDt (Validate date: Date of validation)"/>
+			</mapping>
+		</element>
+		<element id="Composition.attester.party:professionalAuthenticator">
+			<path value="Composition.attester.party"/>
+			<short value="Validated by: The Gln of the pharmacist who has validated the medication card"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="ValBy (Validate by: The Gln of the pharmacist who has validated the medication card)"/>
+			</mapping>
+		</element>
+		<element id="Composition.section">
+			<path value="Composition.section"/>
+			<slicing>
+				<discriminator>
+					<type value="pattern"/>
+					<path value="code"/>
+				</discriminator>
+				<ordered value="false"/>
+				<rules value="open"/>
+			</slicing>
+		</element>
+
+		<!-- Section card -->
+		<element id="Composition.section:card">
+			<path value="Composition.section"/>
+			<sliceName value="card"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Medicaments"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.code:card">
+			<path value="Composition.section.code"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="10160-0"/>
+					<display value="History of medication use"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Composition.section.entry:card">
+			<path value="Composition.section.entry"/>
+			<short value="Medication statement"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+			</type>
+		</element>
+		<element id="Composition.section.section:card">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+
+		<!-- Section annotation-->
+		<element id="Composition.section:annotation">
+			<path value="Composition.section"/>
+			<sliceName value="annotation"/>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="Rmk"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.code:annotation">
+			<path value="Composition.section.code"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="48767-8"/>
+					<display value="Annotation comment"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Composition.section.entry:annotation">
+			<path value="Composition.section.entry"/>
+			<short value="General comments"/>
+		</element>
+		<element id="Composition.section.section:annotation">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+
+		<!-- Section healthconcerns -->
+		<element id="Composition.section:healthconcerns">
+			<path value="Composition.section"/>
+			<sliceName value="healthconcerns"/>
+			<min value="0"/>
+			<max value="1"/>
+		</element>
+		<element id="Composition.section.code:healthconcerns">
+			<path value="Composition.section.code"/>
+			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://loinc.org"/>
+					<code value="75310-3"/>
+					<display value="Health Concerns"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Composition.section.entry">
+			<path value="Composition.section.entry"/>
+			<slicing>
+				<discriminator>
+					<type value="profile"/>
+					<path value="resolve()"/>
+				</discriminator>
+				<ordered value="false"/>
+				<rules value="open"/>
+			</slicing>
+		</element>
+		<element id="Composition.section.entry:bodyweight">
+			<path value="Composition.section.entry"/>
+			<sliceName value="bodyweight"/>
+			<short value="Body Weight (kg)"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/bodyweight"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.Meas.Weight"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.entry:bodyheight">
+			<path value="Composition.section.entry"/>
+			<sliceName value="bodyheight"/>
+			<short value="Body height (cm)"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/bodyheight"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.Meas.Height"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.entry:dlstmen">
+			<path value="Composition.section.entry"/>
+			<sliceName value="dlstmen"/>
+			<short value="First day of last menstruation"/>
+			<definition value="First day of last menstruation, Only if risks Id 74,75,76 in risk group 3"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.DLstMen"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.entry:prematurebaby">
+			<path value="Composition.section.entry"/>
+			<sliceName value="prematurebaby"/>
+			<short value="Premature Baby"/>
+			<definition value="Premature Baby if age &lt;=18 months"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-prematurebaby"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.Prem"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.entry:timeofgestation">
+			<path value="Composition.section.entry"/>
+			<sliceName value="timeofgestation"/>
+			<short value="Time of gestation"/>
+			<definition value="Time of Gestation weeks-day"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-timeofgestation"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.ToG"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.entry:risks">
+			<path value="Composition.section.entry"/>
+			<sliceName value="risks"/>
+			<short value="Risks"/>
+			<definition value="Possible risks for a patient"/>
+			<max value="6"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+			</type>
+			<mapping>
+				<identity value="CHMED16A"/>
+				<map value="MedicalData.RG"/>
+			</mapping>
+		</element>
+		<element id="Composition.section.section:healthconcerns">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

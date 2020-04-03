@@ -1,0 +1,22 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-valueset-cdtyp9"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-cdtyp9"/>
+   <version value="0.1.0"/>
+   <name value="UnitCodes"/>
+   <title value="UnitCodes"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="UnitCodes"/>
+   <compose>
+      <include>
+         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-cdtyp9"/>
+      </include>
+   </compose>
+</ValueSet>

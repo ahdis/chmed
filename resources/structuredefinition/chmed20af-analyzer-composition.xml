@@ -1,0 +1,85 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="chmed20af-analyzer-composition"/>
+	<url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
+	<version value="0.1.0"/>
+	<name value="AnalyzerCompositionMedicationCardDocument"/>
+	<title value="Analyzer Composition Medication Card document"/>
+	<status value="draft"/>
+	<publisher value="IG eMediplan"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.emediplan.ch"/>
+		</telecom>
+	</contact>
+	<description value="Profile for the Analyzer Composition (Medication Card document)"/>
+	<fhirVersion value="4.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Composition"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Composition">
+			<path value="Composition"/>
+		</element>
+		<element id="Composition.status">
+			<path value="Composition.status"/>
+			<short value="Status of the composition"/>
+			<fixedCode value="final"/>
+		</element>
+		<element id="Composition.type">
+			<path value="Composition.type"/>
+			<short value="Document type"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="721912009"/>
+					<display value="Medication summary document (record artifact)"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Composition.subject">
+			<path value="Composition.subject"/>
+			<short value="Patient"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
+			</type>
+			<min value="1"/>
+		</element>
+		<element id="Composition.date">
+			<path value="Composition.date"/>
+			<short value="The document's creation date and time"/>
+		</element>
+		<element id="Composition.author">
+			<path value="Composition.author"/>
+			<short value="Analyzer"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+			</type>
+			<max value="1"/>
+		</element>
+		<element id="Composition.title">
+			<path value="Composition.title"/>
+			<short value="'Medikationsplan' in german or 'Plan de médication' in french or 'Piano farmacologico' in italian or 'Medication Card' in english
+                        or titles in other languages are also allowed"/>
+		</element>
+		<element id="Composition.section">
+			<path value="Composition.section"/>
+		</element>
+		<element id="Composition.section.entry">
+			<path value="Composition.section.entry"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+			</type>
+		</element>
+		<element id="Composition.section.section">
+			<path value="Composition.section.section"/>
+			<min value="0"/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

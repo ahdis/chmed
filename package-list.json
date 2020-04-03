@@ -1,21 +1,30 @@
 {
-    "package-id" : "ch.chmed16af.emediplan",
-    "title" : "eMediplan CHMED16AF FHIR IG", 
-    "canonical" : "http://chmed16af.emediplan.ch", 
-    "introduction" : "CHMED16AF is the FHIR implementation guide to represent the eMediplan in FHIR",
+    "package-id" : "ch.chmed20af.emediplan",
+    "title" : "eMediplan CHMED20AF FHIR IG", 
+    "canonical" : "http://chmed20af.emediplan.ch", 
+    "introduction" : "CHMED20AF is the FHIR implementation guide to represent the eMediplan in FHIR",
     "list" : [{
-     "version" : "0.2.0",
+     "version" : "0.3.0",
      "desc" : "Continuous Integration Build (latest in version control)",
-     "path" : "http://build.fhir.org/ig/ahdis/chmed16af",
+     "path" : "http://build.fhir.org/ig/ahdis/chmed20af",
      "fhirVersion" : "4.0.1",  
      "status" : "ci-build",
      "current" : true
     }, 
     {
+    "version" : "0.3.0",  
+    "date" : "2020-03-31", 
+    "desc" : "eMediplan CHMED20AF Implementation Guide (R4)",   
+    "path" : "http://chmed20af.emediplan.ch/fhir",
+    "status" : "draft",   
+    "sequence" : "STU1",
+    "fhirVersion" : "4.0.1"
+    }, 
+    {
      "version" : "0.2.0",  
      "date" : "2019-06-11", 
      "desc" : "eMediplan CHMED16AF Implementation Guide (R4)",   
-     "path" : "http://chmed16af.emediplan.ch/fhir",   
+     "path" : "http://chmed16af.emediplan.ch/fhir/0.2.0",   
      "status" : "draft",   
      "sequence" : "STU1",
      "fhirVersion" : "4.0.0"

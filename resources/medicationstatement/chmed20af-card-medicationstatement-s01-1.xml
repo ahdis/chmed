@@ -1,0 +1,97 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-card-medicationstatement-s01-1"/>
+   <meta>
+      <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">ROACCUTAN Kaps 10 mg 30 Stk gegen Akne	bei Bedarf ab 12.9.2016</div>
+   </text>
+   <contained>
+      <Medication xmlns="http://hl7.org/fhir">
+         <id value="cont1"/>
+         <meta>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+         </meta>
+         <code>
+            <coding>
+               <system value="urn:oid:2.51.1.1"/>
+               <code value="7680453070343"/>
+               <display value="ROACCUTAN Kaps 10 mg 30 Stk"/>
+            </coding>
+            <text value="ROACCUTAN Kaps 10 mg 30 Stk"/>
+         </code>
+         <form>
+            <coding>
+               <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+               <code value="10210000"/>
+               <display value="Capsule, hard"/>
+            </coding>
+         </form>
+         <ingredient>
+            <itemCodeableConcept>
+               <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="387208003"/>
+                  <display value="Isotretinoin (substance)"/>
+               </coding>
+            </itemCodeableConcept>
+            <strength>
+               <numerator>
+                  <value value="10"/>
+                  <unit value="mg"/>
+               </numerator>
+               <denominator>
+                  <value value="1"/>
+               </denominator>
+            </strength>
+         </ingredient>
+      </Medication>
+   </contained>
+   <status value="completed"/>
+   <medicationReference>
+      <reference value="#cont1"/>
+   </medicationReference>
+   <subject>
+      <reference value="Patient/chmed20af-card-patient-s01"/>
+   </subject>
+   <informationSource>
+      <reference value="Practitioner/chmed20af-practitioner-s01"/>
+   </informationSource>
+   <reasonCode>
+      <text value="Akne"/>
+   </reasonCode>
+   <note>
+      <text value="-"/>
+   </note>
+   <dosage>
+      <text value="bei Bedarf"/>
+   </dosage>
+   <dosage>
+      <timing>
+         <repeat>
+            <boundsPeriod>
+               <start value="2016-09-12"/>
+               <end value="2020-09-12"/>
+            </boundsPeriod>
+            <when value="PCM"/>
+         </repeat>
+      </timing>
+      <asNeededBoolean value="true"/>
+      <route>
+         <coding>
+            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+            <code value="20053000"/>
+            <display value="Oral use"/>
+         </coding>
+      </route>
+      <doseAndRate>
+         <doseQuantity>
+            <value value="1"/>
+            <unit value="Stück"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="1"/>
+         </doseQuantity>
+      </doseAndRate>
+   </dosage>
+</MedicationStatement>

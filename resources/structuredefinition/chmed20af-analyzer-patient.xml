@@ -1,0 +1,84 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-analyzer-patient"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
+   <version value="0.1.0"/>
+   <name value="AnalyzerPatient"/>
+   <title value="Analyzer Patient"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile for the Analyzer Patient (Medication Card document)"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Patient"/>
+   <baseDefinition value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Patient">
+         <path value="Patient"/>
+      </element>
+     
+      <element id="Patient.identifier">
+         <path value="Patient.identifier"/>
+         <slicing>
+            <discriminator>
+               <type value="pattern" />
+               <path value="$this" />
+            </discriminator>
+            <rules value="open" />
+         </slicing>
+      </element>
+      <element id="Patient.identifier:LocalPid">
+         <path value="Patient.identifier" />
+         <sliceName value="LocalPid" />
+         <short value="Local patient identifiers" />
+         <patternIdentifier>
+            <type>
+               <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+                  <code value="MR" />
+               </coding>
+            </type>
+         </patternIdentifier>
+         <min value="1"/>
+      </element>
+      <element id="Patient.identifier.system:LocalPid">
+         <path value="Patient.identifier.system" />
+      </element>
+      <element id="Patient.identifier.value:LocalPid">
+         <path value="Patient.identifier.value" />
+      </element>
+      <element id="Patient.name">
+         <path value="Patient.name"/>
+         <short value="Name for this patient"/>
+         <max value="1"/>
+      </element>
+      <element id="Patient.telecom">
+         <path value="Patient.telecom"/>
+         <short value="Telephone number"/>
+      </element>
+      <element id="Patient.gender">
+         <path value="Patient.gender"/>
+         <short value="male | female | other"/>
+      </element>
+      <element id="Patient.birthDate">
+         <path value="Patient.birthDate"/>
+         <short value="The date of birth for the individual"/>
+      </element>
+      <element id="Patient.address">
+         <path value="Patient.address"/>
+         <short value="Address for the patient"/>
+      </element>
+   </differential>
+</StructureDefinition>

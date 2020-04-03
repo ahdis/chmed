@@ -1,0 +1,61 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-obs-prematurebaby"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-prematurebaby"/>
+   <version value="0.1.0"/>
+   <name value="PrematureBaby"/>
+   <title value="Premature baby"/>
+   <status value="draft"/>
+   <publisher value="IG eMediplan"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.emediplan.ch"/>
+      </telecom>
+   </contact>
+   <description value="Profile on Oberservation for Premature Baby"/>
+   <fhirVersion value="4.0.1"/>
+   <mapping>
+      <identity value="CHMED16A"/>
+      <uri value="http://emediplan.ch/chmed16a"/>
+      <name value="Mapping to CHMED16A"/>
+   </mapping>
+   <kind value="resource"/>
+   <abstract value="false"/>
+   <type value="Observation"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element id="Observation">
+         <path value="Observation"/>
+         <short value="premature baby true only if age &lt;= 18 months"/>
+         <definition value="This profile defines  how to represent a premature baby in FHIR using a standard SNOMED CT code."/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="Observation.code">
+         <path value="Observation.code"/>
+         <short value="Premature infant"/>
+         <definition value="Premature infant"/>
+         <min value="1"/>
+         <max value="1"/>
+         <patternCodeableConcept>
+            <coding>
+               <system value="http://snomed.info/sct" />
+               <code value="395507008" />
+            </coding>
+         </patternCodeableConcept>
+      </element>
+      <element id="Observation.value[x]">
+         <path value="Observation.value[x]"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="boolean"/>
+         </type>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="MedicalData.Prem"/>
+         </mapping>
+      </element>
+   </differential>
+</StructureDefinition>

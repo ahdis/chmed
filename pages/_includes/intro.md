@@ -124,7 +124,7 @@ A Medication Prescription document can be structured in a bundle according to th
 
 ## Bundle
 
-{% include img.html img="bundle_prescription.png" caption="Medication Prescription document" %}
+{% include img.html img="bundle_prescription.png" caption="Bundle Medication Prescription document" %}
 
 The FHIR ressource Bundle bundles the corresponding entries in a document. It contains
 

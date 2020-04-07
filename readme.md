@@ -28,9 +28,8 @@ wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar -O or
 java -Xms3550m -Xmx3550m -jar org.hl7.fhir.publisher.jar -ig ig.json
 ```
 
-## Validate a Resource
-
-You can check your example against the specification of the IG with the [Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator).
+### Validate a Resource
+If you are in the main directory of the Implementation Guide you can check your example against the specification of this IG with the [Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator).
 
 - Download the latest version of Validator: 
 ```
@@ -44,7 +43,7 @@ java -jar org.hl7.fhir.validator.jar [filename]
 
 ## Validating without Building the IG
 
-The validator can validate against an implementation guide.
+If you do not want to build the IG locally, you can validate your example against the Implementation Guide with the [Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) as follows:
 
 - Download the latest version of Validator: 
 ```

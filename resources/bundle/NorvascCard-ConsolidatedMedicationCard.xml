@@ -349,6 +349,12 @@
                         <code value="CHANGE"/>
                     </coding>
                 </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="TBD"/>
+                    </coding>
+                </valueCodeableConcept>
             </Observation>
         </resource>
     </entry>
@@ -502,6 +508,12 @@
                         <code value="OK"/>
                     </coding>
                 </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="TBD"/>
+                    </coding>
+                </valueCodeableConcept>
             </Observation>
         </resource>
     </entry>

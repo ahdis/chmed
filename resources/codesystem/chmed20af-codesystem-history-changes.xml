@@ -1,0 +1,27 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-codesystem-history-changes"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+   <identifier>
+      <system value="https://index.hcisolutions.ch/codes/"/>
+      <value value="history-changes"/>
+   </identifier>
+   <version value="0.1.0"/>
+   <name value="HistoryChanges"/>
+   <title value="History Changes"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="Type of changes in the history"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="TBD"/>
+      <display value="To be defined"/>
+   </concept>
+</CodeSystem>

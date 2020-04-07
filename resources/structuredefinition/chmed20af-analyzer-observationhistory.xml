@@ -35,5 +35,14 @@
             <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/ihe-pharmaceuticaladvicestatuslist"/>
          </binding>
       </element>
+      <element id="Observation.valueCodeableConcept">
+         <path value="Observation.valueCodeableConcept"/>
+         <short value="Code to specify the change in more details"/>
+         <binding>
+            <strength value="required"/>
+            <valueSet value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-history-changes"/>
+         </binding>
+         <min value="1"/>
+      </element>
    </differential>
 </StructureDefinition>

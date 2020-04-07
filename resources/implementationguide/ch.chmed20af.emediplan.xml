@@ -463,6 +463,13 @@
       <name value="CodeSystem Code Risks CDSCODE"/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-history-changes"/>
+      </reference>
+      <name value="CodeSystem History Changes"/>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- Examples Analyzer -->
     <resource>
@@ -681,6 +688,16 @@
       <description value="ValueSet Risks Category"/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-history-changes"/>
+      </reference>
+      <name value="ValueSet History Changes"/>
+      <description value="ValueSet History Changes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+
+    <!-- Concept Map -->
     <resource>
       <reference>
         <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>

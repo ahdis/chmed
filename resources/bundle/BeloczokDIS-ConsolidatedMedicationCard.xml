@@ -189,7 +189,7 @@
                     <reference value="MedicationStatement/2-3-MedStatBeloczok-Analyzer"/> <!-- 2-3 Entscheid (Beloc Zok) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-4-Change"/> <!-- Aenderung von Entscheid zu Abgabe (Beloc Zok) -->
+                    <reference value="Observation/2-4-History"/> <!-- Aenderung von Entscheid zu Abgabe (Beloc Zok) -->
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="MedicationDispense/2-4-MedDispBeloczok-Analyzer"/> <!-- 2-4 Abgabe (Beloc Zok) -->
@@ -387,10 +387,10 @@
 
     <!-- Section entry: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/2-4-Change"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/2-4-History"/>
         <resource>
             <Observation>
-                <id value="2-4-Change"/>
+                <id value="2-4-History"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -398,13 +398,13 @@
                 <code>
                     <coding>
                         <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
+                        <code value="OK"/>
                     </coding>
                 </code>
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="TBD"/>
+                        <code value="sameMedication"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>

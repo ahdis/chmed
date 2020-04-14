@@ -187,13 +187,13 @@
                     <reference value="MedicationStatement/2-5-MedStatNorvasc-Analyzer"/> <!-- 2-5 Entscheid (Norvasc) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-6-Change"/> <!-- Aenderung von Entscheid zu Rezept (Norvasc) -->
+                    <reference value="Observation/2-6-History"/> <!-- Aenderung von Entscheid zu Rezept (Norvasc) -->
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="MedicationRequest/2-6-MedReqNorvasc-Analyzer"/> <!-- 2-6 Rezept (Norvasc) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-7-Norvasc-Ok"/> <!-- 2-7 Erstellung Medication Card -->
+                    <reference value="Observation/2-7-Norvasc-History"/> <!-- 2-7 Erstellung Medication Card -->
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="MedicationStatement/2-7-MedStatNorvascFromCard-Analyzer"/> <!-- 2-7 Erstellung Medication Card -->
@@ -335,10 +335,10 @@
 
     <!-- Section entry: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/2-6-Change"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/2-6-History"/>
         <resource>
             <Observation>
-                <id value="2-6-Change"/>
+                <id value="2-6-History"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -346,13 +346,13 @@
                 <code>
                     <coding>
                         <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
+                        <code value="OK"/>
                     </coding>
                 </code>
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="TBD"/>
+                        <code value="sameMedication"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>
@@ -494,10 +494,10 @@
 
    <!-- Section entry: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/2-7-Norvasc-Ok"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/2-7-Norvasc-History"/>
         <resource>
             <Observation>
-                <id value="2-7-Norvasc-Ok"/>
+                <id value="2-7-Norvasc-History"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -511,7 +511,7 @@
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="TBD"/>
+                        <code value="sameMedication"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>

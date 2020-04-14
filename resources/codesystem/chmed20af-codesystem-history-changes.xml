@@ -21,7 +21,27 @@
    <caseSensitive value="true"/>
    <content value="complete"/>
    <concept>
-      <code value="TBD"/>
-      <display value="To be defined"/>
+      <code value="sameMedication"/>
+      <definition value="Gleiche Medikation"/>
+   </concept>
+   <concept>
+      <code value="substitution"/>
+      <definition value="Substitution"/>
+   </concept>
+   <concept>
+      <code value="changeDosage"/>
+      <definition value="Änderung Dosierung"/>
+   </concept>
+   <concept>
+      <code value="changePractitioner"/>
+      <definition value="Änderung Arzt"/>
+   </concept>
+   <concept>
+      <code value="changeTherapy"/>
+      <definition value="Änderung Therapie"/>
+   </concept>
+   <concept>
+      <code value="comment"/>
+      <definition value="Kommentar"/>
    </concept>
 </CodeSystem>

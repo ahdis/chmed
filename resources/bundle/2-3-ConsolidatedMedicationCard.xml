@@ -191,13 +191,13 @@
                     <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/> <!-- 1-1 Entscheid (Triatec) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/1-2-Change"/> <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
+                    <reference value="Observation/1-2-History"/> <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/> <!-- 1-2 Abgabe -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-2-Cancel"/> <!-- Aenderung von Abgabe zu Kommentar -->
+                    <reference value="Observation/2-2-History"/> <!-- Aenderung von Abgabe zu Kommentar -->
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="Observation/2-2-PharmAdvTriatec-Analyzer"/> <!-- 1-2 Kommentar: Medikament absetzen (Triatec) -->
@@ -348,10 +348,10 @@
 
     <!-- Section entry 1: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/1-2-Change"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/1-2-History"/>
         <resource>
             <Observation>
-                <id value="1-2-Change"/>
+                <id value="1-2-History"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -359,13 +359,13 @@
                 <code>
                     <coding>
                         <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
+                        <code value="OK"/>
                     </coding>
                 </code>
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="TBD"/>
+                        <code value="sameMedication"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>
@@ -503,10 +503,10 @@
 
     <!-- Section entry 1: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/2-2-Cancel"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/2-2-History"/>
         <resource>
             <Observation>
-                <id value="2-2-Cancel"/>
+                <id value="2-2-History"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -514,13 +514,13 @@
                 <code>
                     <coding>
                         <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CANCEL"/>
+                        <code value="CHANGE"/>
                     </coding>
                 </code>
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="TBD"/>
+                        <code value="changeTherapy"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>

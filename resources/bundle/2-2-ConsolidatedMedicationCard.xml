@@ -517,7 +517,7 @@
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="changeTherapy"/>
+                        <code value="comment"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>

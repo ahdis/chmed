@@ -41,6 +41,14 @@
       <definition value="Änderung Therapie"/>
    </concept>
    <concept>
+      <code value="changeGalenic"/>
+      <definition value="Änderung Galenik"/>
+   </concept>
+   <concept>
+      <code value="changeROA"/>
+      <definition value="Änderung ROA"/>
+   </concept>
+   <concept>
       <code value="comment"/>
       <definition value="Kommentar"/>
    </concept>

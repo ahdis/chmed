@@ -58,6 +58,26 @@
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
+      <element id="MedicationStatement.category">
+         <path value="MedicationStatement.category"/>
+      </element>
+      <element id="MedicationStatement.category.coding">
+         <path value="MedicationStatement.category.coding"/>
+         <short value="ATC code (Level 1) if possible"/>
+      </element>
+      <element id="MedicationStatement.category.coding.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.coding.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+      </element>
+      <element id="MedicationStatement.category.text">
+         <path value="MedicationStatement.category.text"/>
+         <short value="Note that no ATC Code is applied"/>
+      </element>
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
          <short value="What medication was taken"/>

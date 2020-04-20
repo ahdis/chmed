@@ -54,7 +54,7 @@
       </element>
       <element id="MedicationStatement.category.coding">
          <path value="MedicationStatement.category.coding"/>
-         <short value="ATC code if possible"/>
+         <short value="ATC code (Level 1) if possible"/>
       </element>
       <element id="MedicationStatement.category.coding.system">
          <path value="MedicationStatement.category.coding.system"/>

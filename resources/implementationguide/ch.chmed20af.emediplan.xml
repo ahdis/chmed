@@ -57,6 +57,34 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/A1-MedicationCard-Simcora"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A1-MedicationCard-Zocor"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A4-MedicationCard-DrDupont"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A4-MedicationCard-DrMoney"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/chmed20af-pre-bundle-s01"/>
       </reference>
       <name value="Medication Prescription document"/>
@@ -474,6 +502,20 @@
     <!-- Examples Analyzer -->
     <resource>
       <reference>
+        <reference value="Parameters/A1-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example A1 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/A4-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example A4 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Parameters/1-1-Input-Analyzer"/>
       </reference>
       <name value="Parameters"/>
@@ -658,6 +700,20 @@
     <resource>
       <reference>
         <reference value="Bundle/NorvascCard-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A1-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A4-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>

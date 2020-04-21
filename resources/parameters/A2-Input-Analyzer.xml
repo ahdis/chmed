@@ -315,7 +315,7 @@
                             </subject>
                             <date value="2020-02-01T11:30:00+01:00"/>
                             <author>
-                                <reference value="Practitioner/HausarztDupont"/>
+                                <reference value="Practitioner/Apotheker"/>
                             </author>
                             <title value="Medikationsplan"/>
                             <confidentiality value="N">
@@ -330,7 +330,7 @@
                                 </extension>
                             </confidentiality>
                             <custodian>
-                                <reference value="Organization/Custodian"/>
+                                <reference value="Organization/ApothekeGare"/>
                             </custodian>
                             <section>
                                 <title value="Aktuelle Medikation"/>
@@ -383,31 +383,31 @@
                     </resource>
                 </entry>
                 <entry>
-                    <fullUrl value="http://test.fhir.ch/r4/Practitioner/HausarztDupont"/>
+                    <fullUrl value="http://test.fhir.ch/r4/Practitioner/Apotheker"/>
                     <resource>
                         <Practitioner>
-                            <id value="HausarztDupont"/>
+                            <id value="Apotheker"/>
                             <identifier>
                                 <system value="urn:oid:2.51.1.3"/>
-                                <value value="7601000234466"/>
+                                <value value="7601000237755"/>
                             </identifier>
                             <name>
-                                <family value="Dupont"/>
-                                <given value="Hausarzt"/>
+                                <family value="Apotheker"/>
+                                <given value="Andreas"/>
                             </name>
                         </Practitioner>
                     </resource>
                 </entry>
                 <entry>
-                    <fullUrl value="http://test.fhir.ch/r4/Organization/Custodian"/>
+                    <fullUrl value="http://test.fhir.ch/r4/Organization/ApothekeGare"/>
                     <resource>
                         <Organization>
-                            <id value="Custodian"/>
+                            <id value="ApothekeGare"/>
                             <identifier>
                                 <system value="urn:oid:2.51.1.3"/>
-                                <value value="7601000234466"/>
+                                <value value="7601000237755"/>
                             </identifier>
-                            <name value="Hausarzt"/>
+                            <name value="Apotheke Gare"/>
                         </Organization>
                     </resource>
                 </entry>

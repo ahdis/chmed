@@ -94,6 +94,22 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Practitioner/Apotheker"/>
+        <resource>
+            <Practitioner>
+                <id value="Apotheker"/>
+                <identifier>
+                    <system value="urn:oid:2.51.1.3"/>
+                    <value value="7601000237755"/>
+                </identifier>
+                <name>
+                    <family value="Apotheker"/>
+                    <given value="Andreas"/>
+                </name>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
         <resource>
             <Device>
@@ -179,7 +195,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/HausarztDupont"/>
+                    <reference value="Practitioner/Apotheker"/>
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
@@ -187,6 +203,9 @@
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="Observation/A2-History-SameMedication"/>
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="Observation/A2-History-ChangePractitioner"/>
                 </derivedFrom>
                 <derivedFrom>
                     <reference value="MedicationStatement/A2-MedStatValium-1x10"/>
@@ -362,6 +381,32 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/A2-History-ChangePractitioner"/>
+        <resource>
+            <Observation>
+                <id value="A2-History-ChangePractitioner"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+                        <code value="CHANGE"/>
+                    </coding>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="changePractitioner"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A2-MedStatValium-1x10"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
@@ -375,10 +420,10 @@
                         <code>
                             <coding>
                                 <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680288400476"/>
-                                <display value="VALIUM Tabl 5 mg"/>
+                                <code value="7680288400711"/>
+                                <display value="VALIUM Tabl 10 mg"/>
                             </coding>
-                            <text value="VALIUM Tabl 5 mg"/>
+                            <text value="VALIUM Tabl 10 mg"/>
                         </code>
                         <form>
                             <coding>
@@ -405,7 +450,7 @@
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
-                                    <value value="5"/>
+                                    <value value="10"/>
                                     <unit value="mg"/>
                                 </numerator>
                                 <denominator>
@@ -430,13 +475,13 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/HausarztDupont"/>
+                    <reference value="Practitioner/Apotheker"/>
                 </informationSource>
                 <reasonCode>
                     <text value="Beruhigung"/>
                 </reasonCode>
                 <dosage>
-                    <text value="2 Tabletten für die Nacht"/>
+                    <text value="1 Tablette für die Nacht"/>
                 </dosage>
                 <dosage>
                     <timing>
@@ -456,7 +501,7 @@
                     </route>
                     <doseAndRate>
                         <doseQuantity>
-                            <value value="2"/>
+                            <value value="1"/>
                             <unit value="Tablette"/>
                             <system value="http://unitsofmeasure.org"/>
                             <code value="1"/>

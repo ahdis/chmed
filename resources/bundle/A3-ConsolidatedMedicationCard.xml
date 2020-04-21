@@ -1,19 +1,19 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="A4-ConsolidatedMedicationCard"/>
+    <id value="A3-ConsolidatedMedicationCard"/>
     <meta>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
     </meta>
     <identifier>
         <system value="http://emediplan.ch/chmed20af/id"/>
-        <value value="26d3dff7-ab05-4737-a49c-5eccd33511a4"/>
+        <value value="26d3dff7-ab05-4737-a49c-5eccd33511a3"/>
     </identifier>
     <type value="document"/>
-    <timestamp value="2020-03-10T11:30:00+01:00"/>
+    <timestamp value="2020-03-10T18:00:00+01:00"/>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Composition/A4-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/Composition/A3-Analyzer"/>
         <resource>
             <Composition>
-                <id value="A4-Analyzer"/>
+                <id value="A3-Analyzer"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
                 </meta>
@@ -28,14 +28,14 @@
                 <subject>
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
-                <date value="2020-03-10T11:30:00+01:00"/>
+                <date value="2020-03-10T18:00:00+01:00"/>
                 <author>
                     <reference value="Device/Analyzer"/>
                 </author>
                 <title value="Medikationsplan"/>
                 <section>
                     <entry>
-                        <reference value="MedicationStatement/A4-MedStatReniten-Analyzer"/>
+                        <reference value="MedicationStatement/A3-MedStatReniten-Analyzer"/>
                     </entry>
                 </section>
             </Composition>
@@ -75,25 +75,6 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMoney"/>
-        <resource>
-            <Practitioner>
-                <id value="SpezialistMoney"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
-                <identifier>
-                    <system value="urn:oid:2.51.1.3"/>
-                    <value value="7601000239933"/>
-                </identifier>
-                <name>
-                    <family value="Money"/>
-                    <given value="Spezialist"/>
-                </name>
-            </Practitioner>
-        </resource>
-    </entry>
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Practitioner/HausarztDupont"/>
         <resource>
             <Practitioner>
@@ -130,10 +111,10 @@
 
     <!-- Section entry: MedicationStatement -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A3-MedStatReniten-Analyzer"/>
         <resource>
             <MedicationStatement>
-                <id value="A4-MedStatReniten-Analyzer"/>
+                <id value="A3-MedStatReniten-Analyzer"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
@@ -198,23 +179,23 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/HausarztDupont"/>
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
-                    <reference value="MedicationStatement/A4-MedStatReniten-Dupont"/>
+                    <reference value="MedicationStatement/A3-MedStatReniten-1x"/>
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/A4-History-ChangePractitioner"/>
+                    <reference value="Observation/A3-History-ChangeDosage"/>
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="MedicationStatement/A4-MedStatReniten-Money"/>
+                    <reference value="MedicationStatement/A3-MedStatReniten-2x"/>
                 </derivedFrom>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
                 <dosage>
-                    <text value="1 Tablette morgens"/>
+                    <text value="2 Tabletten morgens"/>
                 </dosage>
                 <dosage>
                     <timing>
@@ -234,7 +215,7 @@
                     </route>
                     <doseAndRate>
                         <doseQuantity>
-                            <value value="1"/>
+                            <value value="2"/>
                             <unit value="Tablette"/>
                             <system value="http://unitsofmeasure.org"/>
                             <code value="1"/>
@@ -248,10 +229,10 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Dupont"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A3-MedStatReniten-1x"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A4-MedStatReniten-Dupont"/>
+                <id value="A3-MedStatReniten-1x"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
@@ -328,7 +309,7 @@
                     <timing>
                         <repeat>
                             <boundsPeriod>
-                                <start value="2020-03-01"/>
+                                <start value="2020-03-10"/>
                             </boundsPeriod>
                             <when value="CM"/>
                         </repeat>
@@ -355,10 +336,10 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/A4-History-ChangePractitioner"/>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/A3-History-ChangeDosage"/>
         <resource>
             <Observation>
-                <id value="A4-History-ChangePractitioner"/>
+                <id value="A3-History-ChangeDosage"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
                 </meta>
@@ -372,7 +353,7 @@
                 <valueCodeableConcept>
                     <coding>
                         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="changePractitioner"/>
+                        <code value="changeDosage"/>
                     </coding>
                 </valueCodeableConcept>
             </Observation>
@@ -381,10 +362,10 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Money"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A3-MedStatReniten-2x"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A4-MedStatReniten-Money"/>
+                <id value="A3-MedStatReniten-2x"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
@@ -449,13 +430,13 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/HausarztDupont"/>
                 </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
                 <dosage>
-                    <text value="1 Tablette morgens"/>
+                    <text value="2 Tabletten morgens"/>
                 </dosage>
                 <dosage>
                     <timing>
@@ -475,7 +456,7 @@
                     </route>
                     <doseAndRate>
                         <doseQuantity>
-                            <value value="1"/>
+                            <value value="2"/>
                             <unit value="Tablette"/>
                             <system value="http://unitsofmeasure.org"/>
                             <code value="1"/>

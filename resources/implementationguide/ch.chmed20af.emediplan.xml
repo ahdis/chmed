@@ -85,6 +85,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/A3-MedicationCard-Reniten-1x"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A3-MedicationCard-Reniten-2x"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/A4-MedicationCard-DrDupont"/>
       </reference>
       <name value="Medication Card document"/>
@@ -530,6 +544,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/A3-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example A3 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Parameters/A4-Input-Analyzer"/>
       </reference>
       <name value="Parameters"/>
@@ -735,6 +756,13 @@
     <resource>
       <reference>
         <reference value="Bundle/A2-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A3-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>

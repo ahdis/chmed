@@ -71,6 +71,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/A2-MedicationCard-1x10mg"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A2-MedicationCard-2x5mg"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/A4-MedicationCard-DrDupont"/>
       </reference>
       <name value="Medication Card document"/>
@@ -509,6 +523,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/A2-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example A2 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Parameters/A4-Input-Analyzer"/>
       </reference>
       <name value="Parameters"/>
@@ -707,6 +728,13 @@
     <resource>
       <reference>
         <reference value="Bundle/A1-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A2-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>

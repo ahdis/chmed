@@ -657,13 +657,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/2-2-ConsolidatedMedicationCard-V2"/>
-      </reference>
-      <name value="Consolidated Medication Card document (Analyzer)"/>
-      <description value="Example 2-2 for Medication Card document (Output Analyzer)"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Bundle/2-3-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>

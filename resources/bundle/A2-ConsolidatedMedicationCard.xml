@@ -347,7 +347,7 @@
                 <code>
                     <coding>
                         <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
+                        <code value="OK"/>
                     </coding>
                 </code>
                 <valueCodeableConcept>

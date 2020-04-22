@@ -328,6 +328,7 @@
                         <repeat>
                             <boundsPeriod>
                                 <start value="2020-03-10"/>
+                                <end value="2020-03-23"/>
                             </boundsPeriod>
                             <when value="CM"/>
                         </repeat>

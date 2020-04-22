@@ -113,6 +113,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/A5-MedicationCard-Reniten"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A5-MedicationCard-Exforge"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/chmed20af-pre-bundle-s01"/>
       </reference>
       <name value="Medication Prescription document"/>
@@ -558,6 +572,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/A5-Input-Analyzer"/>
+      </reference>
+      <name value="Parameters"/>
+      <description value="Example A5 Input Analyzer"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Parameters/1-1-Input-Analyzer"/>
       </reference>
       <name value="Parameters"/>
@@ -770,6 +791,13 @@
     <resource>
       <reference>
         <reference value="Bundle/A4-ConsolidatedMedicationCard"/>
+      </reference>
+      <name value="Consolidated Medication Card document (Analyzer)"/>
+      <description value="Example for Medication Card document (Output Analyzer)"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A5-ConsolidatedMedicationCard"/>
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>

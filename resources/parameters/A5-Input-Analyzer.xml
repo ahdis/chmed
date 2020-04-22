@@ -488,7 +488,7 @@
                                         </itemCodeableConcept>
                                         <strength>
                                             <numerator>
-                                                <value value="160"/>
+                                                <value value="170"/>
                                                 <unit value="mg"/>
                                             </numerator>
                                             <denominator>

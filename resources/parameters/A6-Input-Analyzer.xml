@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+    <!-- The parameter resource actually has no ID. Here the ID is used to show the resource in the IG. -->
+    <id value="A6-Input-Analyzer"/>
+    <parameter>
+        <name value="ch-emed-doc"/>
+        <resource>
+            <Bundle>
+                <id value="A6-MedicationCard-Tbl"/>
+                <identifier>
+                    <system value="http://emediplan.ch/chmed20af/id"/>
+                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6a"/>
+                </identifier>
+                <type value="document"/>
+                <timestamp value="2020-02-05T09:00:00+01:00"/>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Composition/A6-CompImigran-Tbl"/>
+                    <resource>
+                        <Composition>
+                            <id value="A6-CompImigran-Tbl"/>
+                            <language value="de-CH"/>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
+                                <valueIdentifier>
+                                    <system value="http://emediplan.ch/chmed20af/id"/>
+                                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6a"/>
+                                </valueIdentifier>
+                            </extension>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
+                                <valueUnsignedInt value="1"/>
+                            </extension>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient">
+                                <valueReference>
+                                    <reference value="Patient/MonikaWegmuellerRecipient"/>
+                                </valueReference>
+                            </extension>
+                            <identifier>
+                                <system value="http://emediplan.ch/chmed20af/id"/>
+                                <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6a"/>
+                            </identifier>
+                            <status value="final"/>
+                            <type>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="721912009"/>
+                                    <display value="Medication summary document (record artifact)"/>
+                                </coding>
+                            </type>
+                            <subject>
+                                <reference value="Patient/MonikaWegmueller"/>
+                            </subject>
+                            <date value="2020-02-05T09:00:00+01:00"/>
+                            <author>
+                                <reference value="Practitioner/SpezialistMetzler"/>
+                            </author>
+                            <title value="Medikationsplan"/>
+                            <confidentiality value="N">
+                                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode">
+                                    <valueCodeableConcept>
+                                        <coding>
+                                            <system value="http://snomed.info/sct"/>
+                                            <code value="17621005"/>
+                                            <display value="Normally accessible"/>
+                                        </coding>
+                                    </valueCodeableConcept>
+                                </extension>
+                            </confidentiality>
+                            <custodian>
+                                <reference value="Organization/SpezialistNeuro"/>
+                            </custodian>
+                            <section>
+                                <title value="Aktuelle Medikation"/>
+                                <code>
+                                    <coding>
+                                        <system value="http://loinc.org"/>
+                                        <code value="10160-0"/>
+                                        <display value="History of medication use"/>
+                                    </coding>
+                                </code>
+                                <text>
+                                    <status value="additional"/>
+                                    <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
+                                </text>
+                                <entry>
+                                    <reference value="MedicationStatement/A6-MedStatImigran-Tbl"/>
+                                </entry>
+                            </section>
+                        </Composition>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
+                    <resource>
+                        <Patient>
+                            <id value="MonikaWegmueller"/>
+                            <identifier>
+                                <type>
+                                    <coding>
+                                        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                                        <code value="MR"/>
+                                    </coding>
+                                </type>
+                                <system value="urn:oid:2.999"/>
+                                <value value="11111111"/>
+                            </identifier>
+                            <name>
+                                <family value="Wegmüller"/>
+                                <given value="Monika"/>
+                            </name>
+                            <gender value="female"/>
+                            <birthDate value="1943-05-15"/>
+                            <address>
+                                <line value="Wiesenstr. 12"/>
+                                <city value="Zürich"/>
+                                <postalCode value="8003"/>
+                                <country value="CH"/>
+                            </address>
+                        </Patient>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMetzler"/>
+                    <resource>
+                        <Practitioner>
+                            <id value="SpezialistMetzler"/>
+                            <identifier>
+                                <system value="urn:oid:2.51.1.3"/>
+                                <value value="7601000232255"/>
+                            </identifier>
+                            <name>
+                                <family value="Metzler"/>
+                                <given value="Spezialist"/>
+                            </name>
+                        </Practitioner>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Organization/SpezialistNeuro"/>
+                    <resource>
+                        <Organization>
+                            <id value="SpezialistNeuro"/>
+                            <identifier>
+                                <system value="urn:oid:2.51.1.3"/>
+                                <value value="7601000232255"/>
+                            </identifier>
+                            <name value="Spezialist Neuro"/>
+                        </Organization>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"/>
+                    <resource>
+                        <Patient>
+                            <id value="MonikaWegmuellerRecipient"/>
+                            <name>
+                                <family value="Wegmüller"/>
+                                <given value="Monika"/>
+                            </name>
+                            <address>
+                                <line value="Wiesenstr. 12"/>
+                                <city value="Zürich"/>
+                                <postalCode value="8003"/>
+                                <country value="CH"/>
+                            </address>
+                        </Patient>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Tbl"/>
+                    <resource>
+                        <MedicationStatement xmlns="http://hl7.org/fhir">
+                            <id value="A6-MedStatImigran-Tbl"/>
+                            <contained>
+                                <Medication xmlns="http://hl7.org/fhir">
+                                    <id value="cont1"/>
+                                    <code>
+                                        <coding>
+                                            <system value="urn:oid:2.51.1.1"/>
+                                            <code value="7680516850592"/>
+                                            <display value="IMIGRAN 50 mg Filmtabl"/>
+                                        </coding>
+                                        <text value="IMIGRAN 50 mg Filmtabl"/>
+                                    </code>
+                                    <form>
+                                        <coding>
+                                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                            <code value="10221000"/>
+                                            <display value="Film-coated tablet"/>
+                                        </coding>
+                                    </form>
+                                    <amount>
+                                        <numerator>
+                                            <value value="12"/>
+                                        </numerator>
+                                        <denominator>
+                                            <value value="1"/>
+                                        </denominator>
+                                    </amount>
+                                    <ingredient>
+                                        <itemCodeableConcept>
+                                            <coding>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="395892000"/>
+                                                <display value="Sumatriptan (substance)"/>
+                                            </coding>
+                                        </itemCodeableConcept>
+                                        <strength>
+                                            <numerator>
+                                                <value value="50"/>
+                                                <unit value="mg"/>
+                                            </numerator>
+                                            <denominator>
+                                                <value value="1"/>
+                                            </denominator>
+                                        </strength>
+                                    </ingredient>
+                                </Medication>
+                            </contained>
+                            <status value="completed"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.whocc.no/atc"/>
+                                    <code value="N"/>
+                                    <display value="Nervensystem"/>
+                                </coding>
+                            </category>
+                            <medicationReference>
+                                <reference value="#cont1"/>
+                            </medicationReference>
+                            <subject>
+                                <reference value="Patient/MonikaWegmueller"/>
+                            </subject>
+                            <reasonCode>
+                                <text value="Migräne"/>
+                            </reasonCode>
+                            <dosage>
+                                <text value="2 Tabletten morgens"/>
+                            </dosage>
+                            <dosage>
+                                <timing>
+                                    <repeat>
+                                        <boundsPeriod>
+                                            <start value="2020-02-05"/>
+                                        </boundsPeriod>
+                                        <when value="CM"/>
+                                    </repeat>
+                                </timing>
+                                <route>
+                                    <coding>
+                                        <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                        <code value="20053000"/>
+                                        <display value="Oral use"/>
+                                    </coding>
+                                </route>
+                                <doseAndRate>
+                                    <doseQuantity>
+                                        <value value="2"/>
+                                        <unit value="Tablette"/>
+                                        <system value="http://unitsofmeasure.org"/>
+                                        <code value="1"/>
+                                    </doseQuantity>
+                                </doseAndRate>
+                            </dosage>
+                        </MedicationStatement>
+                    </resource>
+                </entry>
+            </Bundle>
+        </resource>
+    </parameter>
+    <parameter>
+        <name value="ch-emed-doc"/>
+        <resource>
+            <Bundle>
+                <id value="A6-MedicationCard-TblSpray"/>
+                <identifier>
+                    <system value="http://emediplan.ch/chmed20af/id"/>
+                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6b"/>
+                </identifier>
+                <type value="document"/>
+                <timestamp value="2020-03-01T10:30:00+01:00"/>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Composition/A6-CompImigran-TblSpray"/>
+                    <resource>
+                        <Composition>
+                            <id value="A6-CompImigran-TblSpray"/>
+                            <language value="de-CH"/>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
+                                <valueIdentifier>
+                                    <system value="http://emediplan.ch/chmed20af/id"/>
+                                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6b"/>
+                                </valueIdentifier>
+                            </extension>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
+                                <valueUnsignedInt value="1"/>
+                            </extension>
+                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient">
+                                <valueReference>
+                                    <reference value="Patient/MonikaWegmuellerRecipient"/>
+                                </valueReference>
+                            </extension>
+                            <identifier>
+                                <system value="http://emediplan.ch/chmed20af/id"/>
+                                <value value="26d3dff7-ab05-4737-a49c-5eccd3359a6b"/>
+                            </identifier>
+                            <status value="final"/>
+                            <type>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="721912009"/>
+                                    <display value="Medication summary document (record artifact)"/>
+                                </coding>
+                            </type>
+                            <subject>
+                                <reference value="Patient/MonikaWegmueller"/>
+                            </subject>
+                            <date value="2020-03-01T10:30:00+01:00"/>
+                            <author>
+                                <reference value="Practitioner/SpezialistMetzler"/>
+                            </author>
+                            <title value="Medikationsplan"/>
+                            <confidentiality value="N">
+                                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode">
+                                    <valueCodeableConcept>
+                                        <coding>
+                                            <system value="http://snomed.info/sct"/>
+                                            <code value="17621005"/>
+                                            <display value="Normally accessible"/>
+                                        </coding>
+                                    </valueCodeableConcept>
+                                </extension>
+                            </confidentiality>
+                            <custodian>
+                                <reference value="Organization/SpezialistNeuro"/>
+                            </custodian>
+                            <section>
+                                <title value="Aktuelle Medikation"/>
+                                <code>
+                                    <coding>
+                                        <system value="http://loinc.org"/>
+                                        <code value="10160-0"/>
+                                        <display value="History of medication use"/>
+                                    </coding>
+                                </code>
+                                <text>
+                                    <status value="additional"/>
+                                    <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
+                                </text>
+                                <entry>
+                                    <reference value="MedicationStatement/A6-MedStatImigran-Tbl"/>
+                                </entry>
+                                <entry>
+                                    <reference value="MedicationStatement/A6-MedStatImigran-Spray"/>
+                                </entry>
+                            </section>
+                        </Composition>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
+                    <resource>
+                        <Patient>
+                            <id value="MonikaWegmueller"/>
+                            <identifier>
+                                <type>
+                                    <coding>
+                                        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                                        <code value="MR"/>
+                                    </coding>
+                                </type>
+                                <system value="urn:oid:2.999"/>
+                                <value value="11111111"/>
+                            </identifier>
+                            <name>
+                                <family value="Wegmüller"/>
+                                <given value="Monika"/>
+                            </name>
+                            <gender value="female"/>
+                            <birthDate value="1943-05-15"/>
+                            <address>
+                                <line value="Wiesenstr. 12"/>
+                                <city value="Zürich"/>
+                                <postalCode value="8003"/>
+                                <country value="CH"/>
+                            </address>
+                        </Patient>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMetzler"/>
+                    <resource>
+                        <Practitioner>
+                            <id value="SpezialistMetzler"/>
+                            <identifier>
+                                <system value="urn:oid:2.51.1.3"/>
+                                <value value="7601000232255"/>
+                            </identifier>
+                            <name>
+                                <family value="Metzler"/>
+                                <given value="Spezialist"/>
+                            </name>
+                        </Practitioner>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Organization/SpezialistNeuro"/>
+                    <resource>
+                        <Organization>
+                            <id value="SpezialistNeuro"/>
+                            <identifier>
+                                <system value="urn:oid:2.51.1.3"/>
+                                <value value="7601000232255"/>
+                            </identifier>
+                            <name value="Spezialist Neuro"/>
+                        </Organization>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient"/>
+                    <resource>
+                        <Patient>
+                            <id value="MonikaWegmuellerRecipient"/>
+                            <name>
+                                <family value="Wegmüller"/>
+                                <given value="Monika"/>
+                            </name>
+                            <address>
+                                <line value="Wiesenstr. 12"/>
+                                <city value="Zürich"/>
+                                <postalCode value="8003"/>
+                                <country value="CH"/>
+                            </address>
+                        </Patient>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Tbl"/>
+                    <resource>
+                        <MedicationStatement xmlns="http://hl7.org/fhir">
+                            <id value="A6-MedStatImigran-Tbl"/>
+                            <contained>
+                                <Medication xmlns="http://hl7.org/fhir">
+                                    <id value="cont1"/>
+                                    <code>
+                                        <coding>
+                                            <system value="urn:oid:2.51.1.1"/>
+                                            <code value="7680516850592"/>
+                                            <display value="IMIGRAN 50 mg Filmtabl"/>
+                                        </coding>
+                                        <text value="IMIGRAN 50 mg Filmtabl"/>
+                                    </code>
+                                    <form>
+                                        <coding>
+                                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                            <code value="10221000"/>
+                                            <display value="Film-coated tablet"/>
+                                        </coding>
+                                    </form>
+                                    <amount>
+                                        <numerator>
+                                            <value value="12"/>
+                                        </numerator>
+                                        <denominator>
+                                            <value value="1"/>
+                                        </denominator>
+                                    </amount>
+                                    <ingredient>
+                                        <itemCodeableConcept>
+                                            <coding>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="395892000"/>
+                                                <display value="Sumatriptan (substance)"/>
+                                            </coding>
+                                        </itemCodeableConcept>
+                                        <strength>
+                                            <numerator>
+                                                <value value="50"/>
+                                                <unit value="mg"/>
+                                            </numerator>
+                                            <denominator>
+                                                <value value="1"/>
+                                            </denominator>
+                                        </strength>
+                                    </ingredient>
+                                </Medication>
+                            </contained>
+                            <status value="completed"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.whocc.no/atc"/>
+                                    <code value="N"/>
+                                    <display value="Nervensystem"/>
+                                </coding>
+                            </category>
+                            <medicationReference>
+                                <reference value="#cont1"/>
+                            </medicationReference>
+                            <subject>
+                                <reference value="Patient/MonikaWegmueller"/>
+                            </subject>
+                            <reasonCode>
+                                <text value="Migräne"/>
+                            </reasonCode>
+                            <dosage>
+                                <text value="2 Tabletten morgens"/>
+                            </dosage>
+                            <dosage>
+                                <timing>
+                                    <repeat>
+                                        <boundsPeriod>
+                                            <start value="2020-02-05"/>
+                                        </boundsPeriod>
+                                        <when value="CM"/>
+                                    </repeat>
+                                </timing>
+                                <route>
+                                    <coding>
+                                        <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                        <code value="20053000"/>
+                                        <display value="Oral use"/>
+                                    </coding>
+                                </route>
+                                <doseAndRate>
+                                    <doseQuantity>
+                                        <value value="2"/>
+                                        <unit value="Tablette"/>
+                                        <system value="http://unitsofmeasure.org"/>
+                                        <code value="1"/>
+                                    </doseQuantity>
+                                </doseAndRate>
+                            </dosage>
+                        </MedicationStatement>
+                    </resource>
+                </entry>
+                <entry>
+                    <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Spray"/>
+                    <resource>
+                        <MedicationStatement xmlns="http://hl7.org/fhir">
+                            <id value="A6-MedStatImigran-Spray"/>
+                            <contained>
+                                <Medication xmlns="http://hl7.org/fhir">
+                                    <id value="cont1"/>
+                                    <code>
+                                        <coding>
+                                            <system value="urn:oid:2.51.1.1"/>
+                                            <code value="7680537080138"/>
+                                            <display value="IMIGRAN Nasenspray 10 mg"/>
+                                        </coding>
+                                        <text value="IMIGRAN Nasenspray 10 mg"/>
+                                    </code>
+                                    <form>
+                                        <coding>
+                                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                            <code value="10808000"/>
+                                            <display value="Nasal spray, solution"/>
+                                        </coding>
+                                    </form>
+                                    <amount>
+                                        <numerator>
+                                            <value value="2"/>
+                                        </numerator>
+                                        <denominator>
+                                            <value value="1"/>
+                                        </denominator>
+                                    </amount>
+                                    <ingredient>
+                                        <itemCodeableConcept>
+                                            <coding>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="395892000"/>
+                                                <display value="Sumatriptan (substance)"/>
+                                            </coding>
+                                        </itemCodeableConcept>
+                                        <strength>
+                                            <numerator>
+                                                <value value="10"/>
+                                                <unit value="mg"/>
+                                            </numerator>
+                                            <denominator>
+                                                <value value="1"/>
+                                            </denominator>
+                                        </strength>
+                                    </ingredient>
+                                </Medication>
+                            </contained>
+                            <status value="completed"/>
+                            <category>
+                                <coding>
+                                    <system value="http://www.whocc.no/atc"/>
+                                    <code value="N"/>
+                                    <display value="Nervensystem"/>
+                                </coding>
+                            </category>
+                            <medicationReference>
+                                <reference value="#cont1"/>
+                            </medicationReference>
+                            <subject>
+                                <reference value="Patient/MonikaWegmueller"/>
+                            </subject>
+                            <reasonCode>
+                                <text value="Migräne"/>
+                            </reasonCode>
+                            <dosage>
+                                <text value="2 Hübe morgens"/>
+                            </dosage>
+                            <dosage>
+                                <timing>
+                                    <repeat>
+                                        <boundsPeriod>
+                                            <start value="2020-03-01"/>
+                                        </boundsPeriod>
+                                        <when value="CM"/>
+                                    </repeat>
+                                </timing>
+                                <route>
+                                    <coding>
+                                        <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                        <code value="20049000"/>
+                                        <display value="Nasal use"/>
+                                    </coding>
+                                </route>
+                                <doseAndRate>
+                                    <doseQuantity>
+                                        <value value="2"/>
+                                        <unit value="Hübe"/>
+                                        <system value="http://unitsofmeasure.org"/>
+                                        <code value="1"/>
+                                    </doseQuantity>
+                                </doseAndRate>
+                            </dosage>
+                        </MedicationStatement>
+                    </resource>
+                </entry>
+            </Bundle>
+        </resource>
+    </parameter>
+</Parameters>

@@ -106,7 +106,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/A4-MedicationCard-DrMoney"/>
+        <reference value="Bundle/A4-MedicationCard-DrMonney"/>
       </reference>
       <name value="Medication Card document"/>
       <description value="Example for Medication Card document"/>

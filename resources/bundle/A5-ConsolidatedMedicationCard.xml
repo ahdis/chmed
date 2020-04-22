@@ -75,10 +75,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMoney"/>
+        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMonney"/>
         <resource>
             <Practitioner>
-                <id value="SpezialistMoney"/>
+                <id value="SpezialistMonney"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
                 </meta>
@@ -87,7 +87,7 @@
                     <value value="7601000239933"/>
                 </identifier>
                 <name>
-                    <family value="Money"/>
+                    <family value="Monney"/>
                     <given value="Spezialist"/>
                 </name>
             </Practitioner>
@@ -197,7 +197,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
@@ -315,7 +315,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
@@ -466,7 +466,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>

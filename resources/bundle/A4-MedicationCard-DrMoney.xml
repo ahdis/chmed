@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <id value="A4-MedicationCard-DrMoney"/>
+    <id value="A4-MedicationCard-DrMonney"/>
     <meta>
         <lastUpdated value="2020-04-20T11:00:00+01:00"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>
@@ -11,10 +11,10 @@
     <type value="document"/>
     <timestamp value="2020-03-10T11:00:00+01:00"/>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Composition/A4-CompReniten-Money"/>
+        <fullUrl value="http://test.fhir.ch/r4/Composition/A4-CompReniten-Monney"/>
         <resource>
             <Composition>
-                <id value="A4-CompReniten-Money"/>
+                <id value="A4-CompReniten-Monney"/>
                 <language value="de-CH"/>
                 <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                     <valueIdentifier>
@@ -47,7 +47,7 @@
                 </subject>
                 <date value="2020-03-10T11:00:00+01:00"/>
                 <author>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </author>
                 <title value="Medikationsplan"/>
                 <confidentiality value="N">
@@ -78,7 +78,7 @@
                         <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
                     </text>
                     <entry>
-                        <reference value="MedicationStatement/A4-MedStatReniten-Money"/>
+                        <reference value="MedicationStatement/A4-MedStatReniten-Monney"/>
                     </entry>
                 </section>
             </Composition>
@@ -115,16 +115,16 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMoney"/>
+        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMonney"/>
         <resource>
             <Practitioner>
-                <id value="SpezialistMoney"/>
+                <id value="SpezialistMonney"/>
                 <identifier>
                     <system value="urn:oid:2.51.1.3"/>
                     <value value="7601000239933"/>
                 </identifier>
                 <name>
-                    <family value="Money"/>
+                    <family value="Monney"/>
                     <given value="Spezialist"/>
                 </name>
             </Practitioner>
@@ -162,10 +162,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Money"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Monney"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A1-MedStatReniten-Money"/>
+                <id value="A1-MedStatReniten-Monney"/>
                 <contained>
                     <Medication xmlns="http://hl7.org/fhir">
                         <id value="cont1"/>

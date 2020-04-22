@@ -75,10 +75,10 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMoney"/>
+        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMonney"/>
         <resource>
             <Practitioner>
-                <id value="SpezialistMoney"/>
+                <id value="SpezialistMonney"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
                 </meta>
@@ -87,7 +87,7 @@
                     <value value="7601000239933"/>
                 </identifier>
                 <name>
-                    <family value="Money"/>
+                    <family value="Monney"/>
                     <given value="Spezialist"/>
                 </name>
             </Practitioner>
@@ -198,7 +198,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
@@ -208,7 +208,7 @@
                     <reference value="Observation/A4-History-ChangePractitioner"/>
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="MedicationStatement/A4-MedStatReniten-Money"/>
+                    <reference value="MedicationStatement/A4-MedStatReniten-Monney"/>
                 </derivedFrom>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
@@ -381,10 +381,10 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Money"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Monney"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A4-MedStatReniten-Money"/>
+                <id value="A4-MedStatReniten-Monney"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
@@ -449,7 +449,7 @@
                     <reference value="Patient/MonikaWegmueller"/>
                 </subject>
                 <informationSource>
-                    <reference value="Practitioner/SpezialistMoney"/>
+                    <reference value="Practitioner/SpezialistMonney"/>
                 </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>

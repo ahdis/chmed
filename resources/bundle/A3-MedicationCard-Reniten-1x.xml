@@ -16,6 +16,9 @@
             <Composition>
                 <id value="A3-CompReniten-1x"/>
                 <language value="de-CH"/>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                    <valueString value="Cara"/>
+                </extension>
                 <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                     <valueIdentifier>
                         <system value="http://emediplan.ch/chmed20af/id"/>

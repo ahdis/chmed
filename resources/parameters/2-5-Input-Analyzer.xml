@@ -20,6 +20,9 @@
                         <Composition>
                             <id value="1-1-MedicationTreatmentPlan"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -382,6 +385,9 @@
                         <Composition>
                             <id value="1-2-MedicationDispense"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -773,6 +779,9 @@
                         <Composition>
                             <id value="2-1-MedicationList"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -1271,6 +1280,9 @@
                         <Composition>
                             <id value="2-2-PharmaceuticalAdvice"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -1561,6 +1573,9 @@
                         <Composition>
                             <id value="2-3-MedicationTreatmentPlan"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -1951,6 +1966,9 @@
                         <Composition>
                             <id value="2-4-MedicationDispense"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>
@@ -2369,6 +2387,9 @@
                         <Composition>
                             <id value="2-5-MedicationTreatmentPlan"/>
                             <language value="de-CH"/>
+                            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                                <valueString value="EPD"/>
+                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
                                 <valueIdentifier>
                                     <system value="urn:ietf:rfc:3986"/>

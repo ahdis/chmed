@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="chmed20af-inputdocumentsource"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource"/>
+  <version value="0.1.0"/>
+  <name value="ExtInputDocumentSource"/>
+  <title value="Extension Input Document Source"/>
+  <status value="draft"/>
+  <publisher value="IG eMediplan"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Extension for representing the source of the input document"/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Composition"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="Extension"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Extension for Input Document Source"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource"/>
+    </element>
+    <element id="Extension.valueString">
+      <path value="Extension.valueString"/>
+      <short value="Source of the input document"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

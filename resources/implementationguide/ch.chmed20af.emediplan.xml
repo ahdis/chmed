@@ -538,6 +538,12 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumentsource"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- Code Systems -->
     <resource>

@@ -184,7 +184,10 @@
                 <informationSource>
                     <reference value="Practitioner/HausarztDupont"/>
                 </informationSource>
-                <!-- keine History, da sich nichts ändert an diesem Medikament -->
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/A7-MedStatBrufen-600"/>
+                </derivedFrom>
                 <reasonCode>
                     <text value="Schmerzen"/>
                 </reasonCode>

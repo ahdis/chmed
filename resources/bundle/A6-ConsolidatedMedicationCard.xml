@@ -184,7 +184,10 @@
                 <informationSource>
                     <reference value="Practitioner/SpezialistMetzler"/>
                 </informationSource>
-                <!-- keine History, da sich nichts ändert an diesem Medikament -->
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/A6-MedStatImigran-Tbl"/>
+                </derivedFrom>
                 <reasonCode>
                     <text value="Migräne"/>
                 </reasonCode>

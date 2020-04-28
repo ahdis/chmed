@@ -109,8 +109,6 @@
         </resource>
     </entry>
     
-    
-
     <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-4-MedStatBeloczok-Analyzer"/>

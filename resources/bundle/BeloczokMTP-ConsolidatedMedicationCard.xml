@@ -182,6 +182,153 @@
                 <informationSource>
                     <reference value="Practitioner/FamilienHausarzt"/>
                 </informationSource>
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/2-3-MedStatBeloczok"/>
+                </derivedFrom>
+                <reasonCode>
+                    <text value="Bluthochdruck"/>
+                </reasonCode>
+                <note>
+                    <text value="-"/>
+                </note>
+                <dosage>
+                    <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
+                </dosage>
+                <dosage>
+                    <sequence value="1"/>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2012-02-04"/>
+                            </boundsPeriod>
+                            <when value="ACM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+                <dosage>
+                    <sequence value="2"/>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2012-02-04"/>
+                            </boundsPeriod>
+                            <when value="ACV"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="0.5"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-3-MedStatBeloczok"/>
+        <resource>
+            <MedicationStatement>
+                <id value="2-3-MedStatBeloczok"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication>
+                        <id value="med"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680521101306"/>
+                                <display value="BELOC ZOK Ret Tabl 50 mg 30 Stk"/>
+                            </coding>
+                            <text value="BELOC ZOK Ret Tabl 50 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10219000"/>
+                                <display value="Tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="30"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="372826007"/>
+                                    <display value="Metoprolol (substance)"/>
+                                </coding>
+                                <text value="Metoprolol"/>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="50"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="EPD"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueString value="Medication Treatment Plan document"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2012-02-04T14:00:00+01:00"/>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#med"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/FamilienHausarzt"/>
+                </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>

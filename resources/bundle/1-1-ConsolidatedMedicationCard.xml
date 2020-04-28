@@ -108,11 +108,126 @@
             </Device>
         </resource>
     </entry>
+
+    <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
         <resource>
             <MedicationStatement>
                 <id value="1-1-MedStatTriatec-Analyzer"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication>
+                        <id value="med"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680538751228"/>
+                                <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
+                            </coding>
+                            <text value="TRIATEC Tabl 2.5 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10219000"/>
+                                <display value="Tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="20"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="386872004"/>
+                                    <display value="Ramipril (substance)"/>
+                                </coding>
+                                <text value="Ramipril"/>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="2.5"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                    <unit value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#med"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/FamilienHausarzt"/>
+                </informationSource>
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/1-1-MedStatTriatec"/> <!-- 1-1 Entscheid -->
+                </derivedFrom>
+                <reasonCode>
+                    <text value="Bluthochdruck"/>
+                </reasonCode>
+                <note>
+                    <text value="-"/>
+                </note>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2011-11-29"/>
+                            </boundsPeriod>
+                            <when value="ACM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="0.5"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+                <dosage>
+                    <text value="Morgens 1/2 Tablette nehmen"/>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/1-1-MedStatTriatec"/>
+        <resource>
+            <MedicationStatement>
+                <id value="1-1-MedStatTriatec"/>
                 <meta>
                     <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>

@@ -301,6 +301,17 @@
                         </ingredient>
                     </Medication>
                 </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueString value="Medication Card document"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-03-01T11:00:00+01:00"/>
+                    </extension>
+                </extension>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -434,6 +445,17 @@
                         </ingredient>
                     </Medication>
                 </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueString value="Medication Card document"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-03-01T16:00:00+01:00"/>
+                    </extension>
+                </extension>
                 <status value="completed"/>
                 <category>
                     <coding>

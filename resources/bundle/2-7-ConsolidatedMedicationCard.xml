@@ -1780,11 +1780,11 @@
                     <reference value="#med"/>
                 </medicationReference>
                 <subject>
-                <reference value="Patient/MonikaWegmueller"/>
+                    <reference value="Patient/MonikaWegmueller"/>
                 </subject>
-                <performer>
+                <informationSource>
                     <reference value="Practitioner/FamilienHausarzt"/>
-                </performer>
+                </informationSource>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>

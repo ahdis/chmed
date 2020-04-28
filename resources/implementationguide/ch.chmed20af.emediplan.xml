@@ -540,7 +540,25 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumentdate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/chmed20af-inputdocumentsource"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumenttype"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-infoinputdocument"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

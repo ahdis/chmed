@@ -33,6 +33,17 @@
             <rules value="open"/>
          </slicing>
       </element>
+      <element id="Observation.extension:infoInputDocument">
+         <path value="Observation.extension" />
+         <sliceName value="infoInputDocument" />
+         <short value="Information about the input document"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Extension" />
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument" />
+         </type>
+      </element>
       <element id="Observation.extension:treatmentPlan">
          <path value="Observation.extension" />
          <sliceName value="treatmentPlan" />

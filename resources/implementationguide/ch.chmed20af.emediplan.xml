@@ -659,13 +659,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Parameters/2-1-Input-Analyzer"/>
-      </reference>
-      <name value="Parameters"/>
-      <description value="Example 2-1 Input Analyzer"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Parameters/2-2-Input-Analyzer"/>
       </reference>
       <name value="Parameters"/>

@@ -811,6 +811,17 @@
                         </ingredient>
                     </Medication>
                 </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="EPD"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueString value="Medication Treatment Plan document"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2012-02-04T14:00:00+01:00"/>
+                    </extension>
+                </extension>
                 <status value="completed"/>
                 <category>
                     <coding>

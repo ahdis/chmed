@@ -400,7 +400,12 @@
                         <valueString value="Cara"/>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueString value="Medication Card document"/>
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Card document"/>
+                            </coding>
+                        </valueCodeableConcept> 
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-02-01T09:00:00+01:00"/>
@@ -544,7 +549,12 @@
                         <valueString value="Cara"/>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueString value="Medication Card document"/>
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Card document"/>
+                            </coding>
+                        </valueCodeableConcept> 
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-02-01T09:15:00+01:00"/>

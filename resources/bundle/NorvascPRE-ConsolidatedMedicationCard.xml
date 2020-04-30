@@ -184,13 +184,16 @@
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
-                    <reference value="MedicationStatement/2-5-MedStatNorvasc-Analyzer"/> <!-- 2-5 Entscheid (Norvasc) -->
+                    <reference value="MedicationStatement/2-5-MedStatNorvasc-Analyzer"/>
+                    <!-- 2-5 Entscheid (Norvasc) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-6-History"/> <!-- Aenderung von Entscheid zu Rezept (Norvasc) -->
+                    <reference value="Observation/2-6-History"/>
+                    <!-- Aenderung von Entscheid zu Rezept (Norvasc) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="MedicationRequest/2-6-MedReqNorvasc-Analyzer"/> <!-- 2-6 Rezept (Norvasc) -->
+                    <reference value="MedicationRequest/2-6-MedReqNorvasc-Analyzer"/>
+                    <!-- 2-6 Rezept (Norvasc) -->
                 </derivedFrom>
                 <reasonCode>
                     <text value="Bluthochdruck"/>
@@ -222,7 +225,7 @@
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Section entry: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-5-MedStatNorvasc-Analyzer"/>
@@ -284,7 +287,12 @@
                         <valueString value="EPD"/>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueString value="Medication Treatment Plan document"/>
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Treatment Plan document"/>
+                            </coding>
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2012-02-04T14:00:00+01:00"/>
@@ -366,145 +374,150 @@
 
     <!-- Section entry: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-      <fullUrl value="http://test.fhir.ch/r4/MedicationRequest/2-6-MedReqNorvasc-Analyzer"/>
-      <resource>
-         <MedicationRequest>
-            <id value="2-6-MedReqNorvasc-Analyzer"/>
-            <meta>
-                <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-            </meta>
-            <contained>
-               <Medication>
-                  <id value="med"/>
-                  <code>
-                     <coding>
-                        <system value="urn:oid:2.51.1.1"/>
-                        <code value="7680500440334"/>
-                        <display value="NORVASC Tabl 10 mg"/>
-                     </coding>
-                     <text value="NORVASC Tabl 10 mg"/>
-                  </code>
-                  <form>
-                     <coding>
-                        <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                        <code value="10219000"/>
-                        <display value="Tablet"/>
-                     </coding>
-                  </form>
-                  <amount>
-                     <numerator>
-                        <value value="30"/>
-                     </numerator>
-                     <denominator>
-                        <value value="1"/>
-                     </denominator>
-                  </amount>
-                  <ingredient>
-                     <itemCodeableConcept>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationRequest/2-6-MedReqNorvasc-Analyzer"/>
+        <resource>
+            <MedicationRequest>
+                <id value="2-6-MedReqNorvasc-Analyzer"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
+                </meta>
+                <contained>
+                    <Medication>
+                        <id value="med"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680500440334"/>
+                                <display value="NORVASC Tabl 10 mg"/>
+                            </coding>
+                            <text value="NORVASC Tabl 10 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10219000"/>
+                                <display value="Tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="30"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="386864001"/>
+                                    <display value="Amlodipine (substance)"/>
+                                </coding>
+                                <text value="Amlodipine"/>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="10"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="EPD"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Prescription document"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2012-02-04T14:00:00+01:00"/>
+                    </extension>
+                </extension>
+                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan">
+                    <extension url="id">
+                        <valueIdentifier>
+                            <system value="urn:ietf:rfc:3986"/>
+                            <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
+                        </valueIdentifier>
+                    </extension>
+                    <extension url="externalDocumentId">
+                        <valueIdentifier>
+                            <system value="urn:ietf:rfc:3986"/>
+                            <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
+                        </valueIdentifier>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <intent value="order"/>
+                <medicationReference>
+                    <reference value="#med"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <performer>
+                    <reference value="Practitioner/FamilienHausarzt"/>
+                </performer>
+                <reasonCode>
+                    <text value="-"/>
+                </reasonCode>
+                <note>
+                    <text value="-"/>
+                </note>
+                <dosageInstruction>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2012-02-04"/>
+                            </boundsPeriod>
+                            <when value="ACM"/>
+                            <when value="ACV"/>
+                        </repeat>
+                    </timing>
+                    <route>
                         <coding>
-                           <system value="http://snomed.info/sct"/>
-                           <code value="386864001"/>
-                           <display value="Amlodipine (substance)"/>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
                         </coding>
-                        <text value="Amlodipine"/>
-                     </itemCodeableConcept>
-                     <strength>
-                        <numerator>
-                           <value value="10"/>
-                           <unit value="mg"/>
-                        </numerator>
-                        <denominator>
-                           <value value="1"/>
-                        </denominator>
-                     </strength>
-                  </ingredient>
-               </Medication>
-            </contained>
-            <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
-                    <valueString value="EPD"/>
-                </extension>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                    <valueString value="Medication Prescription document"/>
-                </extension>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
-                    <valueDateTime value="2012-02-04T14:00:00+01:00"/>
-                </extension>
-            </extension>
-            <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan">
-               <extension url="id">
-                  <valueIdentifier>
-                     <system value="urn:ietf:rfc:3986"/>
-                     <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
-                  </valueIdentifier>
-               </extension>
-               <extension url="externalDocumentId">
-                  <valueIdentifier>
-                     <system value="urn:ietf:rfc:3986"/>
-                     <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
-                  </valueIdentifier>
-               </extension>
-            </extension>
-            <status value="completed"/>
-            <intent value="order"/>
-            <medicationReference>
-               <reference value="#med"/>
-            </medicationReference>
-            <subject>
-               <reference value="Patient/MonikaWegmueller"/>
-            </subject>
-            <performer>
-                <reference value="Practitioner/FamilienHausarzt"/>
-            </performer>
-            <reasonCode>
-               <text value="-"/>
-            </reasonCode>
-            <note>
-               <text value="-"/>
-            </note>
-            <dosageInstruction>
-               <timing>
-                  <repeat>
-                     <boundsPeriod>
-                        <start value="2012-02-04"/>
-                     </boundsPeriod>
-                     <when value="ACM"/>
-                     <when value="ACV"/>
-                  </repeat>
-               </timing>
-               <route>
-                  <coding>
-                     <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                     <code value="20053000"/>
-                     <display value="Oral use"/>
-                  </coding>
-               </route>
-               <doseAndRate>
-                  <doseQuantity>
-                     <value value="1"/>
-                  </doseQuantity>
-               </doseAndRate>
-            </dosageInstruction>
-            <dosageInstruction>
-               <text value="Morgens und abends je 1 Tablette nehmen"/>
-            </dosageInstruction>
-            <dispenseRequest>
-               <numberOfRepeatsAllowed value="2"/>
-               <quantity>
-                  <value value="1"/>
-               </quantity>
-            </dispenseRequest>
-            <!-- substitution just as test case -->
-            <substitution>
-               <allowedCodeableConcept>
-                  <coding>
-                     <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
-                     <code value="E"/>
-                     <display value="equivalent"/>
-                  </coding>
-               </allowedCodeableConcept>
-            </substitution>
-         </MedicationRequest>
-      </resource>
-   </entry>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosageInstruction>
+                <dosageInstruction>
+                    <text value="Morgens und abends je 1 Tablette nehmen"/>
+                </dosageInstruction>
+                <dispenseRequest>
+                    <numberOfRepeatsAllowed value="2"/>
+                    <quantity>
+                        <value value="1"/>
+                    </quantity>
+                </dispenseRequest>
+                <!-- substitution just as test case -->
+                <substitution>
+                    <allowedCodeableConcept>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+                            <code value="E"/>
+                            <display value="equivalent"/>
+                        </coding>
+                    </allowedCodeableConcept>
+                </substitution>
+            </MedicationRequest>
+        </resource>
+    </entry>
 </Bundle>

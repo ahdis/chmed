@@ -291,7 +291,12 @@
                         <valueString value="EPD"/>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueString value="Medication Treatment Plan document"/>
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Treatment Plan document"/>
+                            </coding>
+                        </valueCodeableConcept> 
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2011-11-29T11:00:00+01:00"/>
@@ -437,7 +442,12 @@
                         <valueString value="EPD"/>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueString value="Medication Dispense document"/>
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+                                <code value="Medication Dispense document"/>
+                            </coding>
+                        </valueCodeableConcept> 
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2011-11-29T11:01:00+01:00"/>

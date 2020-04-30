@@ -40,14 +40,18 @@
       </type>
       <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype"/>
     </element>
-    <element id="Extension.valueString">
-      <path value="Extension.valueString"/>
+    <element id="Extension.valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept"/>
       <short value="Type of the input document"/>
       <min value="1"/>
       <max value="1"/>
       <type>
-        <code value="string"/>
+        <code value="CodeableConcept"/>
       </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-document-type"/>
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

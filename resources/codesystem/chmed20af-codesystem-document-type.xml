@@ -1,0 +1,43 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-codesystem-document-type"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+   <identifier>
+      <system value="https://index.hcisolutions.ch/codes/"/>
+      <value value="document-type"/>
+   </identifier>
+   <version value="0.1.0"/>
+   <name value="DocumentType"/>
+   <title value="Document Type"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="Document Type of the Input Document"/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <concept>
+      <code value="Medication Treatment Plan document"/>
+      <display value="Medication Treatment Plan document"/>
+   </concept>
+   <concept>
+      <code value="Medication Prescription document"/>
+      <display value="Medication Prescription document"/>
+   </concept>
+   <concept>
+      <code value="Medication Dispense document"/>
+      <display value="Medication Dispense document"/>
+   </concept>
+   <concept>
+      <code value="Medication Card document"/>
+      <display value="Medication Card document"/>
+   </concept>
+   <concept>
+      <code value="Pharmaceutical Advice document"/>
+      <display value="Pharmaceutical Advice document"/>
+   </concept>
+</CodeSystem>

@@ -1,0 +1,22 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="chmed20af-valueset-document-type"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-document-type"/>
+   <version value="0.1.0"/>
+   <name value="DocumentType"/>
+   <title value="Document Type"/>
+   <status value="active"/>
+   <publisher value="HCI Solutions AG"/>
+   <contact>
+      <name value="Hotline"/>
+      <telecom>
+         <system value="email"/>
+         <value value="hotline@hcisolutions.ch"/>
+      </telecom>
+   </contact>
+   <description value="Document Type of the Input Document"/>
+   <compose>
+      <include>
+         <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
+      </include>
+   </compose>
+</ValueSet>

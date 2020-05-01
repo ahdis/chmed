@@ -108,7 +108,7 @@
             </Device>
         </resource>
     </entry>
-    
+
     <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-2-MedStatTriatec-Analyzer"/>
@@ -185,27 +185,32 @@
                 </informationSource>
                 <!-- History -->
                 <derivedFrom>
-                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/> <!-- 1-1 Entscheid (Triatec) -->
+                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+                    <!-- 1-1 Entscheid (Triatec) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/1-2-History"/> <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
+                    <reference value="Observation/1-2-History"/>
+                    <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/> <!-- 1-2 Abgabe -->
+                    <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
+                    <!-- 1-2 Abgabe -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-2-History"/> <!-- Aenderung von Abgabe zu Kommentar -->
+                    <reference value="Observation/2-2-History"/>
+                    <!-- Aenderung von Abgabe zu Kommentar -->
                 </derivedFrom>
                 <derivedFrom>
-                    <reference value="Observation/2-2-PharmAdvTriatec-Analyzer"/> <!-- 1-2 Kommentar: Medikament absetzen (Triatec) -->
+                    <reference value="Observation/2-2-PharmAdvTriatec-Analyzer"/>
+                    <!-- 1-2 Kommentar: Medikament absetzen (Triatec) -->
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Bluthochdruck"/>
-                </reasonCode>
-                <note>
+                </reasonCode>-->
+                <!--<note>
                     <text value="-"/>
-                </note>
-                <dosage>
+                </note>-->
+                <!--<dosage>
                     <timing>
                         <repeat>
                             <boundsPeriod>
@@ -226,9 +231,9 @@
                             <value value="0.5"/>
                         </doseQuantity>
                     </doseAndRate>
-                </dosage>
+                </dosage>-->
                 <dosage>
-                    <text value="Morgens 1/2 Tablette nehmen"/>
+                    <text value="-"/>
                 </dosage>
             </MedicationStatement>
         </resource>
@@ -298,10 +303,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Treatment Plan document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="77603-9"/>
+                                <display value="Medication treatment plan.extended"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2011-11-29T11:00:00+01:00"/>
@@ -449,10 +455,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Dispense document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="60593-1"/>
+                                <display value="Medication dispensed.extended"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2011-11-29T11:01:00+01:00"/>
@@ -572,10 +579,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Pharmaceutical Advice document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="61356-2"/>
+                                <display value="Medication pharmaceutical advice.extended"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2012-02-04T14:00:00+01:00"/>

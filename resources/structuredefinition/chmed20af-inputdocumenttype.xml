@@ -48,10 +48,11 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <binding>
-        <strength value="preferred"/>
-        <valueSet value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-document-type"/>
-      </binding>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
   </differential>
 </StructureDefinition>

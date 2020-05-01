@@ -188,9 +188,9 @@
                 <derivedFrom>
                     <reference value="MedicationStatement/A6-MedStatImigran-Tbl"/>
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Migräne"/>
-                </reasonCode>
+                </reasonCode>-->
                 <dosage>
                     <text value="2 Tabletten morgens"/>
                 </dosage>
@@ -305,9 +305,9 @@
                 <derivedFrom>
                     <reference value="MedicationStatement/A6-MedStatImigran-Spray"/>
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Migräne"/>
-                </reasonCode>
+                </reasonCode>-->
                 <dosage>
                     <text value="2 Hübe morgens"/>
                 </dosage>
@@ -402,10 +402,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Card document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-02-05T09:00:00+01:00"/>
@@ -551,10 +552,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Card document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-03-01T10:30:00+01:00"/>

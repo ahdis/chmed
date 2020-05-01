@@ -592,13 +592,6 @@
       <name value="CodeSystem History Changes"/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/chmed20af-codesystem-document-type"/>
-      </reference>
-      <name value="CodeSystem Document Type"/>
-      <exampleBoolean value="false"/>
-    </resource>
 
     <!-- Examples Analyzer -->
     <resource>
@@ -914,14 +907,6 @@
       </reference>
       <name value="ValueSet History Changes"/>
       <description value="ValueSet History Changes"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/chmed20af-valueset-document-type"/>
-      </reference>
-      <name value="ValueSet Document Type"/>
-      <description value="ValueSet Document Type"/>
       <exampleBoolean value="false"/>
     </resource>
 

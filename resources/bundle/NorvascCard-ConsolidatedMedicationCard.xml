@@ -203,12 +203,12 @@
                     <reference value="MedicationStatement/2-7-MedStatNorvascFromCard-Analyzer"/>
                     <!-- 2-7 Erstellung Medication Card -->
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Bluthochdruck"/>
-                </reasonCode>
-                <note>
+                </reasonCode>-->
+                <!--<note>
                     <text value="-"/>
-                </note>
+                </note>-->
                 <dosage>
                     <timing>
                         <repeat>
@@ -297,8 +297,9 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Treatment Plan document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="77603-9"/>
+                                <display value="Medication treatment plan.extended"/>
                             </coding>
                         </valueCodeableConcept>
                     </extension>
@@ -443,8 +444,9 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Prescription document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="57833-6"/>
+                                <display value="Prescription for medication"/>
                             </coding>
                         </valueCodeableConcept>
                     </extension>
@@ -618,8 +620,9 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Card document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
                             </coding>
                         </valueCodeableConcept>
                     </extension>

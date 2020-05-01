@@ -186,12 +186,12 @@
                 <derivedFrom>
                     <reference value="MedicationStatement/2-5-MedStatNorvasc"/>
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Bluthochdruck"/>
-                </reasonCode>
-                <note>
+                </reasonCode>-->
+                <!--<note>
                     <text value="-"/>
-                </note>
+                </note>-->
                 <dosage>
                     <timing>
                         <repeat>
@@ -280,10 +280,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Treatment Plan document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="77603-9"/>
+                                <display value="Medication treatment plan.extended"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2012-02-04T14:00:00+01:00"/>

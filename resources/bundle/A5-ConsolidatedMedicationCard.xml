@@ -209,9 +209,9 @@
                 <derivedFrom>
                     <reference value="MedicationStatement/A5-MedStatExforge"/>
                 </derivedFrom>
-                <reasonCode>
+                <!--<reasonCode>
                     <text value="Bluthochdruck"/>
-                </reasonCode>
+                </reasonCode>-->
                 <dosage>
                     <text value="1 Tablette morgens"/>
                 </dosage>
@@ -307,10 +307,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Card document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-03-10T11:00:00+01:00"/>
@@ -475,10 +476,11 @@
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
                         <valueCodeableConcept>
                             <coding>
-                                <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-document-type"/>
-                                <code value="Medication Card document"/>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
                             </coding>
-                        </valueCodeableConcept> 
+                        </valueCodeableConcept>
                     </extension>
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
                         <valueDateTime value="2020-03-23T15:00:00+01:00"/>

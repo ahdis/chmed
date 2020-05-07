@@ -262,7 +262,7 @@
                                         <coding>
                                             <system value="urn:oid:2.51.1.1"/>
                                             <code value="7680538751228"/>
-                                            <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
+                                            <display value="TRIATEC Tabl 2.5 mg 20 Stk"/>
                                         </coding>
                                         <text value="TRIATEC Tabl 2.5 mg"/>
                                     </code>
@@ -634,7 +634,7 @@
                                         <coding>
                                             <system value="urn:oid:2.51.1.1"/>
                                             <code value="7680538751228"/>
-                                            <display value="TRIATEC Tabl 2.5 mg 100 Stk"/>
+                                            <display value="TRIATEC Tabl 2.5 mg 20 Stk"/>
                                         </coding>
                                         <text value="TRIATEC Tabl 2.5 mg"/>
                                     </code>

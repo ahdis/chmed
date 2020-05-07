@@ -23,7 +23,7 @@
             <language value="de-CH"/>
             <text>
                <status value="generated"/>
-               <div xmlns="http://www.w3.org/1999/xhtml">Medication Card document </div>
+               <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-CH" lang="de-CH">Medication Card document </div>
             </text>
             <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield">
                <extension url="name">

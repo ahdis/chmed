@@ -6,7 +6,7 @@
    <language value="de-CH"/>
    <text>
       <status value="generated"/>
-      <div xmlns="http://www.w3.org/1999/xhtml">Prescription </div>
+      <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-CH" lang="de-CH">Prescription </div>
    </text>
    <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
       <valueIdentifier>

@@ -1292,6 +1292,13 @@
                     </extension>
                 </extension>
                 <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
                 <medicationReference>
                     <reference value="#med"/>
                 </medicationReference>
@@ -1921,6 +1928,13 @@
                     </extension>
                 </extension>
                 <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
                 <medicationReference>
                     <reference value="#med"/>
                 </medicationReference>

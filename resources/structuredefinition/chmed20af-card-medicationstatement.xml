@@ -60,19 +60,15 @@
       </element>
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
+         <patternCodeableConcept>
+            <coding>
+               <system value="http://www.whocc.no/atc" />
+            </coding>
+         </patternCodeableConcept>
       </element>
       <element id="MedicationStatement.category.coding">
          <path value="MedicationStatement.category.coding"/>
          <short value="ATC code (Level 1) if possible"/>
-      </element>
-      <element id="MedicationStatement.category.coding.system">
-         <path value="MedicationStatement.category.coding.system"/>
-         <fixedUri value="http://www.whocc.no/atc"/>
-         <min value="1"/>
-      </element>
-      <element id="MedicationStatement.category.coding.code">
-         <path value="MedicationStatement.category.coding.code"/>
-         <min value="1"/>
       </element>
       <element id="MedicationStatement.category.text">
          <path value="MedicationStatement.category.text"/>

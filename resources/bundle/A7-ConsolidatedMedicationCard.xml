@@ -108,6 +108,9 @@
                     <name value="Analyzer"/>
                     <type value="user-friendly-name"/>
                 </deviceName>
+                <version>
+                    <value value="V1"/>
+                </version>
             </Device>
         </resource>
     </entry>

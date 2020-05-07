@@ -21,7 +21,7 @@ You can build the Implementation Guide with the [IG Publisher](https://confluenc
 - Clone this repository and change into its main directory.
 - Download the latest version of IG Publisher:
 ```
-wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar -O org.hl7.fhir.publisher.jar
+wget https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar -O org.hl7.fhir.publisher.jar
 ```
 - Build the Implementation Guide:
 ```
@@ -33,11 +33,11 @@ If you are in the main directory of the Implementation Guide you can check your 
 
 - Download the latest version of Validator: 
 ```
-wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
+wget https://storage.googleapis.com/ig-build/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
 ```
-- Validate the resource: 
+- Validate the resource against a profile (e.g. chmed20af-card-patient): 
 ```
-java -jar org.hl7.fhir.validator.jar [file path]
+java -jar org.hl7.fhir.validator.jar [file path] -version 4.0.1 -ig output -profile http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient
  ```
 
 
@@ -47,9 +47,9 @@ If you do not want to build the IG locally, you can validate your example agains
 
 - Download the latest version of Validator: 
 ```
-wget https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
+wget https://storage.googleapis.com/ig-build/org.hl7.fhir.validator.jar -O org.hl7.fhir.validator.jar
 ```
 - Validate the resource:
 ```
-java -jar org.hl7.fhir.validator.jar [file path] -version 4.0.1 -ig ch.chmed20af.emediplan#current
+java -jar org.hl7.fhir.validator.jar [file path] -version 4.0.1 -ig ch.chmed20af.emediplan#current -profile http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient
 ```

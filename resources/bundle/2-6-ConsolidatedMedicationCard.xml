@@ -1284,6 +1284,11 @@
                             <display value="Oral use"/>
                         </coding>
                     </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
                 </dosage>
                 <dosage>
                     <text value="Morgens und abends je 1 Tablette nehmen"/>

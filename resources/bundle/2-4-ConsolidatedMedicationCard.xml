@@ -54,11 +54,11 @@
                     <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
                 </meta>
                 <deviceName>
-                    <name value="Analyzer"/>
+                    <name value="Documedis Medical Data Analyzer CE"/>
                     <type value="user-friendly-name"/>
                 </deviceName>
                 <version>
-                    <value value="V1"/>
+                    <value value="1.0.0.0"/>
                 </version>
             </Device>
         </resource>

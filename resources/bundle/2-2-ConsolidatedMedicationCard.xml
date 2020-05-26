@@ -42,6 +42,24 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <resource>
+            <Device>
+                <id value="Analyzer"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                </meta>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+                <version>
+                    <value value="V1"/>
+                </version>
+            </Device>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
         <resource>
             <Patient>
@@ -91,159 +109,6 @@
                     <given value="Familien"/>
                 </name>
             </Practitioner>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
-        <resource>
-            <Device>
-                <id value="Analyzer"/>
-                <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-                </meta>
-                <deviceName>
-                    <name value="Analyzer"/>
-                    <type value="user-friendly-name"/>
-                </deviceName>
-                <version>
-                    <value value="V1"/>
-                </version>
-            </Device>
-        </resource>
-    </entry>
-
-    <!-- Section entry: MedicationStatement -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-2-MedStatTriatec-Analyzer"/>
-        <resource>
-            <MedicationStatement>
-                <id value="2-2-MedStatTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication>
-                        <id value="med"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680538751228"/>
-                                <display value="TRIATEC Tabl 2.5 mg 20 Stk"/>
-                            </coding>
-                            <text value="TRIATEC Tabl 2.5 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10219000"/>
-                                <display value="Tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="386872004"/>
-                                    <display value="Ramipril (substance)"/>
-                                </coding>
-                                <text value="Ramipril"/>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="2.5"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                    <unit value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="C"/>
-                        <display value="Kardiovaskuläres System"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#med"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/FamilienHausarzt"/>
-                </informationSource>
-                <!-- History -->
-                <derivedFrom>
-                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
-                    <!-- 1-1 Entscheid (Triatec) -->
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="Observation/1-2-History"/>
-                    <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
-                    <!-- 1-2 Abgabe -->
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="Observation/2-2-History"/>
-                    <!-- Aenderung von Abgabe zu Kommentar -->
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="Observation/2-2-PharmAdvTriatec-Analyzer"/>
-                    <!-- 1-2 Kommentar: Medikament absetzen (Triatec) -->
-                </derivedFrom>
-                <!--<reasonCode>
-                    <text value="Bluthochdruck"/>
-                </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
-                <!--<dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2011-11-29"/>
-                            </boundsPeriod>
-                            <when value="ACM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="0.5"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>-->
-                <dosage>
-                    <text value="-"/>
-                </dosage>
-            </MedicationStatement>
         </resource>
     </entry>
 
@@ -375,32 +240,6 @@
                     <text value="Morgens 1/2 Tablette nehmen"/>
                 </dosage>
             </MedicationStatement>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/1-2-History"/>
-        <resource>
-            <Observation>
-                <id value="1-2-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
-                <status value="final"/>
-                <code>
-                    <coding>
-                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="OK"/>
-                    </coding>
-                </code>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="sameMedication"/>
-                    </coding>
-                </valueCodeableConcept>
-            </Observation>
         </resource>
     </entry>
 
@@ -557,32 +396,6 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/2-2-History"/>
-        <resource>
-            <Observation>
-                <id value="2-2-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
-                <status value="final"/>
-                <code>
-                    <coding>
-                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
-                    </coding>
-                </code>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="comment"/>
-                    </coding>
-                </valueCodeableConcept>
-            </Observation>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Observation/2-2-PharmAdvTriatec-Analyzer"/>
         <resource>
             <Observation>
@@ -638,6 +451,193 @@
                 <note>
                     <text value="Abgesetzt aufgrund UAW trockener Husten"/>
                 </note>
+            </Observation>
+        </resource>
+    </entry>
+
+    <!-- Section entry: MedicationStatement -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/2-2-MedStatTriatec-Analyzer"/>
+        <resource>
+            <MedicationStatement>
+                <id value="2-2-MedStatTriatec-Analyzer"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication>
+                        <id value="med"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680538751228"/>
+                                <display value="TRIATEC Tabl 2.5 mg 20 Stk"/>
+                            </coding>
+                            <text value="TRIATEC Tabl 2.5 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10219000"/>
+                                <display value="Tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="20"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="386872004"/>
+                                    <display value="Ramipril (substance)"/>
+                                </coding>
+                                <text value="Ramipril"/>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="2.5"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                    <unit value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#med"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/FamilienHausarzt"/>
+                </informationSource>
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/1-1-MedStatTriatec-Analyzer"/>
+                    <!-- 1-1 Entscheid (Triatec) -->
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="Observation/1-2-History"/>
+                    <!-- Aenderung von Entscheid zu Abgabe (Triatec) -->
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
+                    <!-- 1-2 Abgabe -->
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="Observation/2-2-History"/>
+                    <!-- Aenderung von Abgabe zu Kommentar -->
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="Observation/2-2-PharmAdvTriatec-Analyzer"/>
+                    <!-- 1-2 Kommentar: Medikament absetzen (Triatec) -->
+                </derivedFrom>
+                <!--<reasonCode>
+                    <text value="Bluthochdruck"/>
+                </reasonCode>-->
+                <!--<note>
+                    <text value="-"/>
+                </note>-->
+                <!--<dosage>
+                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
+                        <valueIdentifier>
+                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
+                        </valueIdentifier>
+                    </extension>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2011-11-29"/>
+                            </boundsPeriod>
+                            <when value="ACM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="0.5"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>-->
+                <dosage>
+                    <text value="-"/>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/1-2-History"/>
+        <resource>
+            <Observation>
+                <id value="1-2-History"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+                        <code value="OK"/>
+                    </coding>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="sameMedication"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/2-2-History"/>
+        <resource>
+            <Observation>
+                <id value="2-2-History"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+                        <code value="CHANGE"/>
+                    </coding>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="comment"/>
+                    </coding>
+                </valueCodeableConcept>
             </Observation>
         </resource>
     </entry>

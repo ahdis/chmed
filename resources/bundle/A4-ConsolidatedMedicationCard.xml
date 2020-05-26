@@ -42,6 +42,24 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <resource>
+            <Device>
+                <id value="Analyzer"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                </meta>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+                <version>
+                    <value value="V1"/>
+                </version>
+            </Device>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
         <resource>
             <Patient>
@@ -75,25 +93,6 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMonney"/>
-        <resource>
-            <Practitioner>
-                <id value="SpezialistMonney"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
-                <identifier>
-                    <system value="urn:oid:2.51.1.3"/>
-                    <value value="7601000239933"/>
-                </identifier>
-                <name>
-                    <family value="Monney"/>
-                    <given value="Spezialist"/>
-                </name>
-            </Practitioner>
-        </resource>
-    </entry>
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Practitioner/HausarztDupont"/>
         <resource>
             <Practitioner>
@@ -113,141 +112,24 @@
         </resource>
     </entry>
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/Practitioner/SpezialistMonney"/>
         <resource>
-            <Device>
-                <id value="Analyzer"/>
+            <Practitioner>
+                <id value="SpezialistMonney"/>
                 <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
                 </meta>
-                <deviceName>
-                    <name value="Analyzer"/>
-                    <type value="user-friendly-name"/>
-                </deviceName>
-                <version>
-                    <value value="V1"/>
-                </version>
-            </Device>
+                <identifier>
+                    <system value="urn:oid:2.51.1.3"/>
+                    <value value="7601000239933"/>
+                </identifier>
+                <name>
+                    <family value="Monney"/>
+                    <given value="Spezialist"/>
+                </name>
+            </Practitioner>
         </resource>
     </entry>
-
-    <!-- Section entry: MedicationStatement -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Analyzer"/>
-        <resource>
-            <MedicationStatement>
-                <id value="A4-MedStatReniten-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication>
-                        <id value="cont1"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680460380299"/>
-                                <display value="RENITEN Tabl 20 mg"/>
-                            </coding>
-                            <text value="RENITEN Tabl 20 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10219000"/>
-                                <display value="Tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="98"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="387165009"/>
-                                    <display value="Enalapril maleate (substance)"/>
-                                </coding>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="20"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="C"/>
-                        <display value="Kardiovaskuläres System"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#cont1"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/SpezialistMonney"/>
-                </informationSource>
-                <!-- History -->
-                <derivedFrom>
-                    <reference value="MedicationStatement/A4-MedStatReniten-Dupont"/>
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="Observation/A4-History-ChangePractitioner"/>
-                </derivedFrom>
-                <derivedFrom>
-                    <reference value="MedicationStatement/A4-MedStatReniten-Monney"/>
-                </derivedFrom>
-                <!--<reasonCode>
-                    <text value="Bluthochdruck"/>
-                </reasonCode>-->
-                <dosage>
-                    <text value="1 Tablette morgens"/>
-                </dosage>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2020-03-10"/>
-                            </boundsPeriod>
-                            <when value="CM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-            </MedicationStatement>
-        </resource>
-    </entry>
-
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
@@ -375,32 +257,6 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Observation/A4-History-ChangePractitioner"/>
-        <resource>
-            <Observation>
-                <id value="A4-History-ChangePractitioner"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
-                <status value="final"/>
-                <code>
-                    <coding>
-                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
-                        <code value="CHANGE"/>
-                    </coding>
-                </code>
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
-                        <code value="changePractitioner"/>
-                    </coding>
-                </valueCodeableConcept>
-            </Observation>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Monney"/>
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
@@ -522,4 +378,175 @@
             </MedicationStatement>
         </resource>
     </entry>
+    
+    <!-- Section entry: MedicationStatement -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A4-MedStatReniten-Analyzer"/>
+        <resource>
+            <MedicationStatement>
+                <id value="A4-MedStatReniten-Analyzer"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication>
+                        <id value="cont1"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680460380299"/>
+                                <display value="RENITEN Tabl 20 mg"/>
+                            </coding>
+                            <text value="RENITEN Tabl 20 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10219000"/>
+                                <display value="Tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="98"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="387165009"/>
+                                    <display value="Enalapril maleate (substance)"/>
+                                </coding>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="20"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="C"/>
+                        <display value="Kardiovaskuläres System"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/SpezialistMonney"/>
+                </informationSource>
+                <!-- History -->
+                <derivedFrom>
+                    <reference value="MedicationStatement/A4-MedStatReniten-Dupont"/>
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="Observation/A4-History-ChangePractitioner"/>
+                </derivedFrom>
+                <derivedFrom>
+                    <reference value="MedicationStatement/A4-MedStatReniten-Monney"/>
+                </derivedFrom>
+                <!--<reasonCode>
+                    <text value="Bluthochdruck"/>
+                </reasonCode>-->
+                <dosage>
+                    <text value="1 Tablette morgens"/>
+                </dosage>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2020-03-10"/>
+                            </boundsPeriod>
+                            <when value="CM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                            <unit value="Tablette"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/A4-History-SameMedication"/>
+        <resource>
+            <Observation>
+                <id value="A4-History-SameMedication"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+                        <code value="OK"/>
+                    </coding>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="sameMedication"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Observation/A4-History-ChangePractitioner"/>
+        <resource>
+            <Observation>
+                <id value="A4-History-ChangePractitioner"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
+                </meta>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.9.2.1"/>
+                        <code value="CHANGE"/>
+                    </coding>
+                </code>
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-history-changes"/>
+                        <code value="changePractitioner"/>
+                    </coding>
+                </valueCodeableConcept>
+            </Observation>
+        </resource>
+    </entry>
+
+    
 </Bundle>

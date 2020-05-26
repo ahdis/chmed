@@ -45,6 +45,24 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <resource>
+            <Device>
+                <id value="Analyzer"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                </meta>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+                <version>
+                    <value value="V1"/>
+                </version>
+            </Device>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
         <resource>
             <Patient>
@@ -96,25 +114,254 @@
             </Practitioner>
         </resource>
     </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A7-MedStatBrufen-600"/>
         <resource>
-            <Device>
-                <id value="Analyzer"/>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="A7-MedStatBrufen-600"/>
                 <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
-                <deviceName>
-                    <name value="Analyzer"/>
-                    <type value="user-friendly-name"/>
-                </deviceName>
-                <version>
-                    <value value="V1"/>
-                </version>
-            </Device>
+                <contained>
+                    <Medication xmlns="http://hl7.org/fhir">
+                        <id value="cont1"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680450311951"/>
+                                <display value="Brufen 600 mg Filmtabl"/>
+                            </coding>
+                            <text value="Brufen 600 mg Filmtabl"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10221000"/>
+                                <display value="Film-coated tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="20"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="387207008"/>
+                                    <display value="Ibuprofen (substance)"/>
+                                </coding>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="600"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-02-01T09:00:00+01:00"/>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="M"/>
+                        <display value="Muskel- und Skelettsystem"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/HausarztDupont"/>
+                </informationSource>
+                <reasonCode>
+                    <text value="Schmerzen"/>
+                </reasonCode>
+                <dosage>
+                    <text value="1 Tablette morgens"/>
+                </dosage>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2020-02-01"/>
+                            </boundsPeriod>
+                            <when value="CM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                            <unit value="Tablette"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
         </resource>
     </entry>
-
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A7-MedStatBrufenRetard-800"/>
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="A7-MedStatBrufenRetard-800"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication xmlns="http://hl7.org/fhir">
+                        <id value="cont1"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680500720610"/>
+                                <display value="Brufen retard 800 mg Filmtabl"/>
+                            </coding>
+                            <text value="Brufen retard 800 mg Filmtabl"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10221000"/>
+                                <display value="Film-coated tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="20"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="387207008"/>
+                                    <display value="Ibuprofen (substance)"/>
+                                </coding>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="800"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-02-01T09:15:00+01:00"/>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="M"/>
+                        <display value="Muskel- und Skelettsystem"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/HausarztDupont"/>
+                </informationSource>
+                <reasonCode>
+                    <text value="Schmerzen"/>
+                </reasonCode>
+                <dosage>
+                    <text value="1 Tablette morgens"/>
+                </dosage>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2020-02-01"/>
+                            </boundsPeriod>
+                            <when value="CM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="1"/>
+                            <unit value="Tablette"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    
     <!-- Section entry 1: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A7-MedStatBrufen-600-Analyzer"/>
@@ -345,130 +592,6 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A7-MedStatBrufen-600"/>
-        <resource>
-            <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A7-MedStatBrufen-600"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication xmlns="http://hl7.org/fhir">
-                        <id value="cont1"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680450311951"/>
-                                <display value="Brufen 600 mg Filmtabl"/>
-                            </coding>
-                            <text value="Brufen 600 mg Filmtabl"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10221000"/>
-                                <display value="Film-coated tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="387207008"/>
-                                    <display value="Ibuprofen (substance)"/>
-                                </coding>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="600"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
-                        <valueString value="Cara"/>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://loinc.org"/>
-                                <code value="56445-0"/>
-                                <display value="Medication summary"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
-                        <valueDateTime value="2020-02-01T09:00:00+01:00"/>
-                    </extension>
-                </extension>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="M"/>
-                        <display value="Muskel- und Skelettsystem"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#cont1"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/HausarztDupont"/>
-                </informationSource>
-                <reasonCode>
-                    <text value="Schmerzen"/>
-                </reasonCode>
-                <dosage>
-                    <text value="1 Tablette morgens"/>
-                </dosage>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2020-02-01"/>
-                            </boundsPeriod>
-                            <when value="CM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-            </MedicationStatement>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Observation/A7-History-ChangeGalenic"/>
         <resource>
             <Observation>
@@ -490,130 +613,6 @@
                     </coding>
                 </valueCodeableConcept>
             </Observation>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A7-MedStatBrufenRetard-800"/>
-        <resource>
-            <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A7-MedStatBrufenRetard-800"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication xmlns="http://hl7.org/fhir">
-                        <id value="cont1"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680500720610"/>
-                                <display value="Brufen retard 800 mg Filmtabl"/>
-                            </coding>
-                            <text value="Brufen retard 800 mg Filmtabl"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10221000"/>
-                                <display value="Film-coated tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="20"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="387207008"/>
-                                    <display value="Ibuprofen (substance)"/>
-                                </coding>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="800"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
-                        <valueString value="Cara"/>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://loinc.org"/>
-                                <code value="56445-0"/>
-                                <display value="Medication summary"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
-                        <valueDateTime value="2020-02-01T09:15:00+01:00"/>
-                    </extension>
-                </extension>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="M"/>
-                        <display value="Muskel- und Skelettsystem"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#cont1"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/HausarztDupont"/>
-                </informationSource>
-                <reasonCode>
-                    <text value="Schmerzen"/>
-                </reasonCode>
-                <dosage>
-                    <text value="1 Tablette morgens"/>
-                </dosage>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2020-02-01"/>
-                            </boundsPeriod>
-                            <when value="CM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-            </MedicationStatement>
         </resource>
     </entry>
 </Bundle>

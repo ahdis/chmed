@@ -45,6 +45,24 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <resource>
+            <Device>
+                <id value="Analyzer"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                </meta>
+                <deviceName>
+                    <name value="Analyzer"/>
+                    <type value="user-friendly-name"/>
+                </deviceName>
+                <version>
+                    <value value="V1"/>
+                </version>
+            </Device>
+        </resource>
+    </entry>
+    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
         <resource>
             <Patient>
@@ -96,24 +114,255 @@
             </Practitioner>
         </resource>
     </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/Device/Analyzer"/>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Tbl"/>
         <resource>
-            <Device>
-                <id value="Analyzer"/>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="A6-MedStatImigran-Tbl"/>
                 <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
                 </meta>
-                <deviceName>
-                    <name value="Analyzer"/>
-                    <type value="user-friendly-name"/>
-                </deviceName>
-                <version>
-                    <value value="V1"/>
-                </version>
-            </Device>
+                <contained>
+                    <Medication xmlns="http://hl7.org/fhir">
+                        <id value="cont1"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680516850592"/>
+                                <display value="IMIGRAN 50 mg Filmtabl"/>
+                            </coding>
+                            <text value="IMIGRAN 50 mg Filmtabl"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10221000"/>
+                                <display value="Film-coated tablet"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="12"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="395892000"/>
+                                    <display value="Sumatriptan (substance)"/>
+                                </coding>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="50"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-02-05T09:00:00+01:00"/>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="N"/>
+                        <display value="Nervensystem"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/SpezialistMetzler"/>
+                </informationSource>
+                <reasonCode>
+                    <text value="Migräne"/>
+                </reasonCode>
+                <dosage>
+                    <text value="2 Tabletten morgens"/>
+                </dosage>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2020-02-05"/>
+                            </boundsPeriod>
+                            <when value="CM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20053000"/>
+                            <display value="Oral use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="2"/>
+                            <unit value="Tablette"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
         </resource>
     </entry>
+
+    <!-- Reference from MedicationStatement.derivedFrom (History) -->
+    <entry>
+        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Spray"/>
+        <resource>
+            <MedicationStatement xmlns="http://hl7.org/fhir">
+                <id value="A6-MedStatImigran-Spray"/>
+                <meta>
+                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+                </meta>
+                <contained>
+                    <Medication xmlns="http://hl7.org/fhir">
+                        <id value="cont1"/>
+                        <code>
+                            <coding>
+                                <system value="urn:oid:2.51.1.1"/>
+                                <code value="7680537080138"/>
+                                <display value="IMIGRAN Nasenspray 10 mg"/>
+                            </coding>
+                            <text value="IMIGRAN Nasenspray 10 mg"/>
+                        </code>
+                        <form>
+                            <coding>
+                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                                <code value="10808000"/>
+                                <display value="Nasal spray, solution"/>
+                            </coding>
+                        </form>
+                        <amount>
+                            <numerator>
+                                <value value="2"/>
+                            </numerator>
+                            <denominator>
+                                <value value="1"/>
+                            </denominator>
+                        </amount>
+                        <ingredient>
+                            <itemCodeableConcept>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="395892000"/>
+                                    <display value="Sumatriptan (substance)"/>
+                                </coding>
+                            </itemCodeableConcept>
+                            <strength>
+                                <numerator>
+                                    <value value="10"/>
+                                    <unit value="mg"/>
+                                </numerator>
+                                <denominator>
+                                    <value value="1"/>
+                                </denominator>
+                            </strength>
+                        </ingredient>
+                    </Medication>
+                </contained>
+                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
+                        <valueString value="Cara"/>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://loinc.org"/>
+                                <code value="56445-0"/>
+                                <display value="Medication summary"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
+                        <valueDateTime value="2020-03-01T10:30:00+01:00"/>
+                    </extension>
+                </extension>
+                <status value="completed"/>
+                <category>
+                    <coding>
+                        <system value="http://www.whocc.no/atc"/>
+                        <code value="N"/>
+                        <display value="Nervensystem"/>
+                    </coding>
+                </category>
+                <medicationReference>
+                    <reference value="#cont1"/>
+                </medicationReference>
+                <subject>
+                    <reference value="Patient/MonikaWegmueller"/>
+                </subject>
+                <informationSource>
+                    <reference value="Practitioner/SpezialistMetzler"/>
+                </informationSource>
+                <reasonCode>
+                    <text value="Migräne"/>
+                </reasonCode>
+                <dosage>
+                    <text value="2 Hübe morgens"/>
+                </dosage>
+                <dosage>
+                    <timing>
+                        <repeat>
+                            <boundsPeriod>
+                                <start value="2020-03-01"/>
+                            </boundsPeriod>
+                            <when value="CM"/>
+                        </repeat>
+                    </timing>
+                    <route>
+                        <coding>
+                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+                            <code value="20049000"/>
+                            <display value="Nasal use"/>
+                        </coding>
+                    </route>
+                    <doseAndRate>
+                        <doseQuantity>
+                            <value value="2"/>
+                            <unit value="Hübe"/>
+                            <system value="http://unitsofmeasure.org"/>
+                            <code value="1"/>
+                        </doseQuantity>
+                    </doseAndRate>
+                </dosage>
+            </MedicationStatement>
+        </resource>
+    </entry>
+    
 
     <!-- Section entry 1: MedicationStatement -->
     <entry>
@@ -345,130 +594,6 @@
 
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Tbl"/>
-        <resource>
-            <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A6-MedStatImigran-Tbl"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication xmlns="http://hl7.org/fhir">
-                        <id value="cont1"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680516850592"/>
-                                <display value="IMIGRAN 50 mg Filmtabl"/>
-                            </coding>
-                            <text value="IMIGRAN 50 mg Filmtabl"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10221000"/>
-                                <display value="Film-coated tablet"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="12"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="395892000"/>
-                                    <display value="Sumatriptan (substance)"/>
-                                </coding>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="50"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
-                        <valueString value="Cara"/>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://loinc.org"/>
-                                <code value="56445-0"/>
-                                <display value="Medication summary"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
-                        <valueDateTime value="2020-02-05T09:00:00+01:00"/>
-                    </extension>
-                </extension>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="N"/>
-                        <display value="Nervensystem"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#cont1"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/SpezialistMetzler"/>
-                </informationSource>
-                <reasonCode>
-                    <text value="Migräne"/>
-                </reasonCode>
-                <dosage>
-                    <text value="2 Tabletten morgens"/>
-                </dosage>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2020-02-05"/>
-                            </boundsPeriod>
-                            <when value="CM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20053000"/>
-                            <display value="Oral use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="2"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-            </MedicationStatement>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
         <fullUrl value="http://test.fhir.ch/r4/Observation/A6-History-ChangeROA"/>
         <resource>
             <Observation>
@@ -490,130 +615,6 @@
                     </coding>
                 </valueCodeableConcept>
             </Observation>
-        </resource>
-    </entry>
-
-    <!-- Reference from MedicationStatement.derivedFrom (History) -->
-    <entry>
-        <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A6-MedStatImigran-Spray"/>
-        <resource>
-            <MedicationStatement xmlns="http://hl7.org/fhir">
-                <id value="A6-MedStatImigran-Spray"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
-                <contained>
-                    <Medication xmlns="http://hl7.org/fhir">
-                        <id value="cont1"/>
-                        <code>
-                            <coding>
-                                <system value="urn:oid:2.51.1.1"/>
-                                <code value="7680537080138"/>
-                                <display value="IMIGRAN Nasenspray 10 mg"/>
-                            </coding>
-                            <text value="IMIGRAN Nasenspray 10 mg"/>
-                        </code>
-                        <form>
-                            <coding>
-                                <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                                <code value="10808000"/>
-                                <display value="Nasal spray, solution"/>
-                            </coding>
-                        </form>
-                        <amount>
-                            <numerator>
-                                <value value="2"/>
-                            </numerator>
-                            <denominator>
-                                <value value="1"/>
-                            </denominator>
-                        </amount>
-                        <ingredient>
-                            <itemCodeableConcept>
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="395892000"/>
-                                    <display value="Sumatriptan (substance)"/>
-                                </coding>
-                            </itemCodeableConcept>
-                            <strength>
-                                <numerator>
-                                    <value value="10"/>
-                                    <unit value="mg"/>
-                                </numerator>
-                                <denominator>
-                                    <value value="1"/>
-                                </denominator>
-                            </strength>
-                        </ingredient>
-                    </Medication>
-                </contained>
-                <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
-                        <valueString value="Cara"/>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://loinc.org"/>
-                                <code value="56445-0"/>
-                                <display value="Medication summary"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate">
-                        <valueDateTime value="2020-03-01T10:30:00+01:00"/>
-                    </extension>
-                </extension>
-                <status value="completed"/>
-                <category>
-                    <coding>
-                        <system value="http://www.whocc.no/atc"/>
-                        <code value="N"/>
-                        <display value="Nervensystem"/>
-                    </coding>
-                </category>
-                <medicationReference>
-                    <reference value="#cont1"/>
-                </medicationReference>
-                <subject>
-                    <reference value="Patient/MonikaWegmueller"/>
-                </subject>
-                <informationSource>
-                    <reference value="Practitioner/SpezialistMetzler"/>
-                </informationSource>
-                <reasonCode>
-                    <text value="Migräne"/>
-                </reasonCode>
-                <dosage>
-                    <text value="2 Hübe morgens"/>
-                </dosage>
-                <dosage>
-                    <timing>
-                        <repeat>
-                            <boundsPeriod>
-                                <start value="2020-03-01"/>
-                            </boundsPeriod>
-                            <when value="CM"/>
-                        </repeat>
-                    </timing>
-                    <route>
-                        <coding>
-                            <system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-                            <code value="20049000"/>
-                            <display value="Nasal use"/>
-                        </coding>
-                    </route>
-                    <doseAndRate>
-                        <doseQuantity>
-                            <value value="2"/>
-                            <unit value="Hübe"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
-                        </doseQuantity>
-                    </doseAndRate>
-                </dosage>
-            </MedicationStatement>
         </resource>
     </entry>
 </Bundle>

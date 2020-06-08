@@ -221,6 +221,11 @@
 				<map value="Medicaments"/>
 			</mapping>
 		</element>
+		<element id="Composition.section.title:card">
+			<path value="Composition.section.title"/>
+			<short value="'Medikamentenliste' in german or 'Liste de médicaments' in french or 'Lista farmaci' in talian or 'Medication List' in english
+                        or titles in other languages are also allowed"/>
+		</element>
 		<element id="Composition.section.code:card">
 			<path value="Composition.section.code"/>
 			<patternCodeableConcept>
@@ -253,6 +258,11 @@
 				<identity value="CHMED16A"/>
 				<map value="Rmk"/>
 			</mapping>
+		</element>
+		<element id="Composition.section.title:annotation">
+			<path value="Composition.section.title"/>
+			<short value="'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english
+                        or titles in other languages are also allowed"/>
 		</element>
 		<element id="Composition.section.code:annotation">
 			<path value="Composition.section.code"/>

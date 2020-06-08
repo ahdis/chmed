@@ -89,7 +89,7 @@
                <reference value="Organization/10"/>
             </custodian>
             <section>
-               <title value="Aktuelle Medikation"/>
+               <title value="Medikamentenliste"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -99,7 +99,7 @@
                </code>
                <text>
                   <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
+                  <div xmlns="http://www.w3.org/1999/xhtml"> Medikamentenliste </div>
                </text>
                <entry>
                   <reference value="MedicationStatement/11"/>
@@ -161,7 +161,7 @@
                </entry>
             </section>
             <section>
-               <title value="Bemerkungen"/>
+               <title value="Kommentar"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -171,7 +171,7 @@
                </code>
                <text>
                   <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung </div>
+                  <div xmlns="http://www.w3.org/1999/xhtml"> Kommentar </div>
                </text>
             </section>
          </Composition>

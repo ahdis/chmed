@@ -74,7 +74,7 @@
                <reference value="Organization/10"/>
             </custodian>
             <section>
-               <title value="Verordnung"/>
+               <title value="Arzneimittelverordnung"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -84,14 +84,14 @@
                </code>
                <text>
                   <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Verordnung </div>
+                  <div xmlns="http://www.w3.org/1999/xhtml"> Arzneimittelverordnung </div>
                </text>
                <entry>
                   <reference value="MedicationRequest/10"/>
                </entry>
             </section>
             <section>
-               <title value="Bemerkungen"/>
+               <title value="Kommentar"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -101,7 +101,7 @@
                </code>
                <text>
                   <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung </div>
+                  <div xmlns="http://www.w3.org/1999/xhtml"> Kommentar </div>
                </text>
             </section>
          </Composition>

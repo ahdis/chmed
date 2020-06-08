@@ -85,9 +85,9 @@
             </coding>
          </patternCodeableConcept>
          <mapping>
-				<identity value="CHMED16A"/>
-				<map value="MedType"/>
-			</mapping>
+            <identity value="CHMED16A"/>
+            <map value="MedType"/>
+         </mapping>
       </element>
       <element id="Composition.subject">
          <path value="Composition.subject"/>
@@ -178,6 +178,12 @@
             <map value="Medicaments"/>
          </mapping>
       </element>
+      <element id="Composition.section.title:prescription">
+         <path value="Composition.section.title"/>
+         <short value="'Arzneimittelverordnung' in german or 'Prescription médicamenteuse' in french 
+                        or 'Prescrizione di droga' in italian or 'Prescription for medication' in english
+                        or titles in other languages are also allowed"/>
+      </element>
       <element id="Composition.section.code:prescription">
          <path value="Composition.section.code"/>
          <patternCodeableConcept>
@@ -211,6 +217,11 @@
             <identity value="CHMED16A"/>
             <map value="Rmk"/>
          </mapping>
+      </element>
+      <element id="Composition.section.title:annotation">
+         <path value="Composition.section.title"/>
+         <short value="'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english
+                        or titles in other languages are also allowed"/>
       </element>
       <element id="Composition.section.code:annotation">
          <path value="Composition.section.code"/>

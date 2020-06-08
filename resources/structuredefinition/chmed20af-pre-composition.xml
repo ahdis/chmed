@@ -133,6 +133,42 @@
          </slicing>
       </element>
 
+      <!-- Section Original Representation-->
+      <element id="Composition.section:originalRepresentation">
+         <path value="Composition.section"/>
+         <sliceName value="originalRepresentation"/>
+         <short value="Original representation"/>
+      </element>
+      <element id="Composition.section.title:originalRepresentation">
+         <path value="Composition.section.title"/>
+         <short value="Original representation"/>
+      </element>
+      <element id="Composition.section.code:originalRepresentation">
+         <path value="Composition.section.code"/>
+         <patternCodeableConcept>
+            <coding>
+               <system value="http://loinc.org"/>
+               <code value="55108-5"/>
+               <display value="Clinical presentation"/>
+            </coding>
+         </patternCodeableConcept>
+      </element>
+      <element id="Composition.section.text:originalRepresentation">
+         <path value="Composition.section.text"/>
+         <short value="Representation of the original view"/>
+      </element>
+      <element id="Composition.section.entry:originalRepresentation">
+         <path value="Composition.section.entry"/>
+         <short value="PDF"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"/>
+         </type>
+      </element>
+      <element id="Composition.section.section:originalRepresentation">
+         <path value="Composition.section.section"/>
+      </element>
+
       <!-- Section prescritpion-->
       <element id="Composition.section:prescription">
          <path value="Composition.section"/>

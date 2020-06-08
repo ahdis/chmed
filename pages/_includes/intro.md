@@ -13,7 +13,7 @@ The Medication Card document summarizes the entire, current medication of a pati
 
 ## Bundle
 
-{% include img.html img="bundle_medicationplan.png" caption="Bundle Medication Card document" %}
+{% include imgbundle.html img="bundle_medicationplan.png" caption="Bundle Medication Card document" %}
 
 The FHIR ressource Bundle bundles the corresponding entries in a document. It contains
 
@@ -124,7 +124,7 @@ A Medication Prescription document can be structured in a bundle according to th
 
 ## Bundle
 
-{% include img.html img="bundle_prescription.png" caption="Bundle Medication Prescription document" %}
+{% include imgbundle.html img="bundle_prescription.png" caption="Bundle Medication Prescription document" %}
 
 The FHIR ressource Bundle bundles the corresponding entries in a document. It contains
 

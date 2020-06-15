@@ -24,10 +24,10 @@ are the same, the can be mapped as follows:
 		<timing>
 			<repeat>
 				<boundsPeriod>
-					 <start value="2016-02-10" />
+					 <start value="2016-02-10"/>
 				</boundsPeriod>
-				<when value="PCM" />
-				<when value="PCV" />
+				<when value="PCM"/>
+				<when value="PCV"/>
 			</repeat>
 		</timing>
 		<route>
@@ -37,12 +37,14 @@ are the same, the can be mapped as follows:
             	<display value="Oral use"/>   
 			</coding>
 		</route>
-		<doseQuantity>
-			<value value="1" />
-			<unit value="Stk" />
-			<system value="http://unitsofmeasure.org" />
-			<code value="1" />
-		</doseQuantity>
+		<doseAndRate>
+			<doseQuantity>
+				<value value="1"/>
+				<unit value="Stk"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="1"/>
+			</doseQuantity>
+		</doseAndRate>
 	</dosage>
 ```
 See [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
@@ -60,23 +62,23 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 		<timing>
 			<repeat>
 				<boundsPeriod>
-					<start value="2017-09-05" /> <!-- DtFrom -->
-					<end value="2020-09-26" /> <!-- DtTo, inclusive -->
+					<start value="2017-09-05"/> <!-- DtFrom -->
+					<end value="2020-09-26"/> <!-- DtTo, inclusive -->
 				</boundsPeriod>
 
-				<duration value="1800" /> <!-- DU -->
-				<durationUnit value="s" /> <!-- DU -->
+				<duration value="1800"/> <!-- DU -->
+				<durationUnit value="s"/> <!-- DU -->
 
-				<frequency value="3" />
+				<frequency value="3"/>
 
-				<period value="1" />   <!-- CyDu -->
-				<periodUnit value="wk" /> <!-- CyDu -->
+				<period value="1"/>   <!-- CyDu -->
+				<periodUnit value="wk"/> <!-- CyDu -->
 
-				<dayOfWeek value="tue" /> <!-- implied by date, optional -->
+				<dayOfWeek value="tue"/> <!-- implied by date, optional -->
 
-				<timeOfDay value="08:00:00" /> <!-- Off, but relative to timeOfDay -->
-				<timeOfDay value="12:00:00" /> <!-- Off, but relative to timeOfDay -->
-				<timeOfDay value="18:00:00" /> <!-- Off, but relative to timeOfDay -->
+				<timeOfDay value="08:00:00"/> <!-- Off, but relative to timeOfDay -->
+				<timeOfDay value="12:00:00"/> <!-- Off, but relative to timeOfDay -->
+				<timeOfDay value="18:00:00"/> <!-- Off, but relative to timeOfDay -->
 			</repeat>
 		</timing>
         <route>
@@ -86,12 +88,14 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
             	<display value="Intravenous use"/>   
 			</coding>
 		</route>
-		<doseQuantity>
-			<value value="2" />
-			<unit value="g" />
-			<system value="http://unitsofmeasure.org" />
-			<code value="g" />
-		</doseQuantity>
+		<doseAndRate>
+			<doseQuantity>
+				<value value="2"/>
+				<unit value="g"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g"/>
+			</doseQuantity>
+		</doseAndRate>
     </dosage> 
 ```
 
@@ -101,19 +105,18 @@ An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defin
 
 ```xml
 	<fhir:doseQuantity>
-	<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
-		<fhir:valueQuantity>
-			<fhir:value value="200"/>
-			<fhir:unit value="ml"/>
-			<fhir:system value="http://unitsofmeasure.org"/>
-			<fhir:code value="ml"/>
-		</fhir:valueQuantity>
-	</fhir:extension>
-	<fhir:value value="50"/>
-	<fhir:unit value="ml"/>
-	<fhir:system value="http://unitsofmeasure.org"/>
-	<fhir:code value="ml"/>
-</fhir:doseQuantity>
-
+		<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
+			<fhir:valueQuantity>
+				<fhir:value value="200"/>
+				<fhir:unit value="ml"/>
+				<fhir:system value="http://unitsofmeasure.org"/>
+				<fhir:code value="ml"/>
+			</fhir:valueQuantity>
+		</fhir:extension>
+		<fhir:value value="50"/>
+		<fhir:unit value="ml"/>
+		<fhir:system value="http://unitsofmeasure.org"/>
+		<fhir:code value="ml"/>
+	</fhir:doseQuantity>
 ```
 

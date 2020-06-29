@@ -54,7 +54,7 @@ The Composition ressource defines the following parameter for the Medication Car
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
 | privatefield | Private Field | Extension (string) | Patient.PFields |
-| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (TBD) |
+| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (LocalPatientIdentifier = 2) |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName |
 | telecom  | Telephone number  | ContactPoint  | Patient.Phone | 
 | gender  | Gender  | code  | Patient.Gender, Male = 1, Female = 2 |
@@ -164,7 +164,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | Parameter  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- | 
 | privatefield | Private Field | Extension (string) | Patient.PFields |
-| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (TBD) |
+| identifier  | Local identifier for this patient  | Identifier  | Patient.Id with PatientId.Type (LocalPatientIdentifier = 2) |
 | name  | Name for this patient  | HumanName  | name.given = Patient.FName, name.family = Patient.LName | 
 | telecom  | Telephone number  | ContactPoint  | Patient.Phone |
 | gender  | Gender  | code  | Patient.Gender, Male = 1, Female = 2 |

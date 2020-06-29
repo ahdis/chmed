@@ -1,9 +1,5 @@
 == Suppressed Messages ==
 
-# Structure of a resource
-A resource should have narrative for robust management [text.div.exists()]
-Resource has a language, but the XHTML does not have a language tag
-
 # The following code systems are external and not supported by terminology server
 Code System URI "urn:oid:2.51.1.1" is unknown so the code cannot be validated
 
@@ -47,9 +43,3 @@ Details for MedicationRequest/10 matching against Profilehttp://chmed20af.emedip
 
 # Others
 ValueSet http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.0.1 not found by validator
-
-# WHO ATC Level 1 Codes: Terminology Server TBD
-None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/doc-typecodes (http://hl7.org/fhir/ValueSet/doc-typecodes), and a code is recommended to come from this value set) (codes = http://snomed.info/sct#721912009)
-None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/medication-statement-category (http://hl7.org/fhir/ValueSet/medication-statement-category), and a code is recommended to come from this value set) (codes = http://www.whocc.no/atc#M)
-None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/medication-statement-category (http://hl7.org/fhir/ValueSet/medication-statement-category), and a code is recommended to come from this value set) (codes = http://www.whocc.no/atc#N)
-None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/medication-statement-category (http://hl7.org/fhir/ValueSet/medication-statement-category), and a code is recommended to come from this value set) (codes = http://www.whocc.no/atc#C)

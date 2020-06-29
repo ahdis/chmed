@@ -67,10 +67,9 @@
             </discriminator>
             <rules value="open" />
          </slicing>
-         <!-- TBD -->
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="Patient.Id with PatientId.Type (TBD)"/>
+            <map value="Patient.Id with PatientId.Type (LocalPatientIdentifier = 2)"/>
          </mapping>
       </element>
       <element id="Patient.identifier:LocalPid">

@@ -55,7 +55,7 @@
       <description value="Example for Medication Card document"/>
       <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="Bundle/A1-MedicationCard-Simcora"/>
       </reference>
@@ -152,7 +152,7 @@
       </reference>
       <name value="Medication Card document"/>
       <description value="Example for Medication Card document"/>
-    </resource>
+    </resource>-->
     <resource>
       <reference>
         <reference value="Bundle/chmed20af-pre-bundle-s01"/>
@@ -478,7 +478,7 @@
       <description value=">Risk Allergies"/>
       <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>
       </reference>
@@ -561,7 +561,7 @@
         <reference value="StructureDefinition/chmed20af-infoinputdocument"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Code Systems -->
     <resource>
@@ -585,16 +585,16 @@
       <name value="CodeSystem Code Risks CDSCODE"/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="CodeSystem/chmed20af-codesystem-history-changes"/>
       </reference>
       <name value="CodeSystem History Changes"/>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Examples Analyzer -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="Parameters/A1-Input-Analyzer"/>
       </reference>
@@ -874,7 +874,7 @@
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>
-    </resource>
+    </resource>-->
 
     <!-- Value Sets -->
     <resource>
@@ -901,14 +901,14 @@
       <description value="ValueSet Risks Category"/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="ValueSet/chmed20af-valueset-history-changes"/>
       </reference>
       <name value="ValueSet History Changes"/>
       <description value="ValueSet History Changes"/>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Concept Map -->
     <resource>

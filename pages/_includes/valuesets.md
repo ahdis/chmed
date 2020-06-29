@@ -5,6 +5,6 @@ Within the Implementation Guide the Value Sets correspond directly to the Code S
 {:class="table table-bordered"}
 | Name  | CodeSystem | ValueSet | ConceptMap | 
 | ------------- | ------------- | 
-| UnitCodes  | [CDTYP 9](CodeSystem-chmed20af-codesystem-cdtyp9.html)  | [CDTYP 9](ValueSet-chmed20af-valueset-cdtyp9.html)  | Disclaimer: UCUM codes are used as UnitCodes. The ValueSet/ConceptMap will be published in the coming weeks, for questions please contact HCI Solutions AG (hotline@hcisolutions.ch). |
+| UnitCodes  | [CDTYP 9](CodeSystem-chmed20af-codesystem-cdtyp9.html)  | [CDTYP 9](ValueSet-chmed20af-valueset-cdtyp9.html)  | Disclaimer: UCUM codes are used as UnitCodes. The ValueSet/ConceptMap will be published here as soon as it is available. For questions please contact HCI Solutions AG (hotline@hcisolutions.ch). |
 | Risks Categories  | [Categories](CodeSystem-chmed20af-codesystem-risks-category.html)  | [Categories](ValueSet-chmed20af-valueset-risks-category.html)  | 
 | Risks CDSCODE  | [Risks](CodeSystem-chmed20af-codesystem-risks-cdscode.html)  | [Risks](ValueSet-chmed20af-valueset-risks-cdscode.html)  | |

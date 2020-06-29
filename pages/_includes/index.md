@@ -27,7 +27,7 @@ In addition, the layout specification for the print-based layouts makes recognit
 
 # CHMED20AF
 
-<mark>Disclaimer July 2020: HCI Solutions AG has built a converter for all software houses that have integrated the CHMED16A. The converter will be published here in the coming weeks. If you have any questions, please contact hotline@hcisolutions.ch directly.</mark>
+<mark>Disclaimer July 2020: HCI Solutions AG has built a converter for all software houses that have integrated the CHMED16A. The converter will be published here as soon as it is available. If you have any questions, please contact hotline@hcisolutions.ch directly.</mark> 
 
 [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
 

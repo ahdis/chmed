@@ -911,12 +911,12 @@
     </resource>-->
 
     <!-- Concept Map -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- pages, parameters -->
     <page>

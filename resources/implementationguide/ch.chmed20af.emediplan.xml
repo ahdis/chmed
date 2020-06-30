@@ -4,7 +4,7 @@
   <url value="http://chmed20af.emediplan.ch/fhir/ImplementationGuide/ch.chmed20af.emediplan"/>
   <version value="1.0.0"/>
   <name value="IgChMED20AF"/>
-  <title value="Implementation Guide CHMED20AF"/>
+  <title value="Implementation Guide CHMED20AF (R4)"/>
   <status value="active"/>
   <experimental value="false"/>
   <publisher value="IG eMediplan"/>
@@ -929,5 +929,10 @@
         <generation value="generated"/>
       </page>
     </page>
+    <parameter>
+      <code value="releaselabel"/>
+      <!--<value value="CI build"/>-->
+      <value value="Trial use"/>
+    </parameter>
   </definition>
 </ImplementationGuide>

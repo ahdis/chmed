@@ -420,8 +420,8 @@
       <reference>
         <reference value="Observation/chmed20af-observation-s01-timeofgestation"/>
       </reference>
-      <name value="Premature baby"/>
-      <description value="Premature baby (&lt;=18 months)"/>
+      <name value="Time of gestation"/>
+      <description value="Time of gestation: week 30, days 5"/>
       <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-timeofgestation"/>
     </resource>
     <resource>

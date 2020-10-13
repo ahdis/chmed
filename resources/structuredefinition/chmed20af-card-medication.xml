@@ -35,24 +35,34 @@
       <element id="Medication.code.coding">
          <path value="Medication.code.coding"/>
          <short value="GTIN code that identify this medication"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="system"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>
       </element>
-      <element id="Medication.code.coding.system">
+      <element id="Medication.code.coding:GTIN">
+         <path value="Medication.code.coding"/>
+         <sliceName value="GTIN"/>
+      </element>
+      <element id="Medication.code.coding:GTIN.system">
          <path value="Medication.code.coding.system"/>
-         <short value="Global Trade Item Number (GS1)"/>
-         <type>
-            <code value="uri"/>
-         </type>
+         <sliceName value="GTIN"/>
          <fixedUri value="urn:oid:2.51.1.1"/>
       </element>
-      <element id="Medication.code.coding.code">
+      <element id="Medication.code.coding:GTIN.code">
          <path value="Medication.code.coding.code"/>
+         <sliceName value="GTIN"/>
       </element>
-      <element id="Medication.code.coding.display">
+      <element id="Medication.code.coding:GTIN.display">
          <path value="Medication.code.coding.display"/>
+         <sliceName value="GTIN"/>
       </element>
       <element id="Medication.code.text">
          <path value="Medication.code.text"/>
@@ -91,19 +101,30 @@
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.coding">
          <path value="Medication.ingredient.itemCodeableConcept.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="system"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
       </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding.system">
+      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT">
+         <path value="Medication.ingredient.itemCodeableConcept.coding"/>
+         <sliceName value="SCT"/>
+      </element>
+      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.system">
          <path value="Medication.ingredient.itemCodeableConcept.coding.system"/>
-         <type>
-            <code value="uri"/>
-         </type>
+         <sliceName value="SCT"/>
          <fixedUri value="http://snomed.info/sct"/>
       </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding.code">
+      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.code">
          <path value="Medication.ingredient.itemCodeableConcept.coding.code"/>
+         <sliceName value="SCT"/>
       </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding.display">
+      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.display">
          <path value="Medication.ingredient.itemCodeableConcept.coding.display"/>
+         <sliceName value="SCT"/>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.text">
          <path value="Medication.ingredient.itemCodeableConcept.text"/>

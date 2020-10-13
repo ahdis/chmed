@@ -380,7 +380,7 @@
 			<path value="Composition.section.entry"/>
 			<sliceName value="timeofgestation"/>
 			<short value="Time of gestation"/>
-			<definition value="Time of Gestation weeks-day"/>
+			<definition value="Time of Gestation in days"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>

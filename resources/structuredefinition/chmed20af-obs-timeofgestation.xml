@@ -27,8 +27,8 @@
    <differential>
       <element id="Observation">
          <path value="Observation"/>
-         <short value="Time of gestation profile in weeks and days"/>
-         <definition value="This profile defines  how to represent time of gestation observations in FHIR using a standard LOINC code and UCUM units of measure.  This is a grouping structure. It has no value in Observation.valueQuantity but contains at least one component (weeks and days)."/>
+         <short value="Time of gestation in days profile"/>
+         <definition value="This profile defines how to represent time of gestation observations in FHIR using a standard LOINC code and UCUM units of measure."/>
          <min value="0"/>
          <max value="*"/>
          <mapping>
@@ -38,94 +38,41 @@
       </element>
       <element id="Observation.code">
          <path value="Observation.code"/>
-         <short value="Time of gestation"/>
-         <definition value="Time of gestation."/>
-         <min value="1"/>
-         <max value="1"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://snomed.info/sct" />
-               <code value="445872007" />
-            </coding>
-         </patternCodeableConcept>
-      </element>
-      <element id="Observation.component">
-         <path value="Observation.component" />
-         <slicing>
-            <discriminator>
-               <type value="pattern" />
-               <path value="code" />
-            </discriminator>
-            <rules value="open" />
-         </slicing>
-         <min value="1" />
-         <max value="2" />
-      </element>
-      <element id="Observation.component:weektg">
-         <path value="Observation.component"/>
-         <short value="Gestational age in weeks"/>
-         <definition value="Gestational age in weeks"/>
-         <min value="0"/>
-         <max value="1"/>
-         <sliceName value="weektg"/>
-      </element>
-      <element id="Observation.component:weektg.code">
-         <path value="Observation.component.code"/>
-         <short value="Gestational age in weeks"/>
-         <definition value="Gestational age in weeks"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://loinc.org" />
-               <code value="49051-6" />
-            </coding>
-         </patternCodeableConcept>
-      </element>
-      <element id="Observation.component:weektg.valueQuantity">
-         <path value="Observation.component.valueQuantity"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
-         <mapping>
-            <identity value="CHMED16A"/>
-            <map value="ToG.Weeks"/>
-         </mapping>
-      </element>
-      <element id="Observation.component:weektg.valueQuantity.code">
-         <path value="Observation.component.valueQuantity.code"/>
-         <fixedCode value="wk"/>
-      </element>
-      <element id="Observation.component:daytg">
-         <path value="Observation.component"/>
          <short value="Gestational age in days"/>
-         <definition value="Gestational age in days"/>
-         <min value="1"/>
-         <max value="1"/>
-         <sliceName value="daytg"/>
-      </element>
-      <element id="Observation.component:daytg.code">
-         <path value="Observation.component.code"/>
-         <short value="Gestational age in days"/>
-         <definition value="Gestational age in days"/>
+         <definition value="Gestational age in days."/>
          <patternCodeableConcept>
             <coding>
                <system value="http://loinc.org" />
                <code value="49052-4" />
             </coding>
          </patternCodeableConcept>
-      </element>
-      <element id="Observation.component:daytg.valueQuantity">
-         <path value="Observation.component.valueQuantity"/>
-         <type>
-            <code value="Quantity"/>
-         </type>
          <mapping>
             <identity value="CHMED16A"/>
-            <map value="ToG.Days"/>
+            <map value="ToG.Days + ToG.Weeks"/>
          </mapping>
       </element>
-      <element id="Observation.component:daytg.valueQuantity.code">
-         <path value="Observation.component.valueQuantity.code"/>
+      <element id="Observation.valueQuantity">
+         <path value="Observation.valueQuantity"/>
+         <min value="1"/>
+      </element>
+      <element id="Observation.valueQuantity.value">
+         <path value="Observation.valueQuantity.value"/>
+         <min value="1"/>
+      </element>
+      <element id="Observation.valueQuantity.unit">
+         <path value="Observation.valueQuantity.unit"/>
+         <fixedString value="d"/>
+         <min value="1"/>
+      </element>
+      <element id="Observation.valueQuantity.system">
+         <path value="Observation.valueQuantity.system"/>
+         <fixedUri value="http://unitsofmeasure.org"/>
+         <min value="1"/>
+      </element>
+      <element id="Observation.valueQuantity.code">
+         <path value="Observation.valueQuantity.code"/>
          <fixedCode value="d"/>
+         <min value="1"/>
       </element>
    </differential>
 </StructureDefinition>

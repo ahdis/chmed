@@ -54,13 +54,13 @@
             <rules value="open"/>
          </slicing>
       </element>
-      <element id="Bundle.entry:composition">
+      <element id="Bundle.entry:Composition">
          <path value="Bundle.entry"/>
-         <sliceName value="composition"/>
+         <sliceName value="Composition"/>
          <min value="1"/>
          <max value="1"/>
       </element>
-      <element id="Bundle.entry.resource:composition">
+      <element id="Bundle.entry.resource:Composition">
          <path value="Bundle.entry.resource"/>
          <short value="Prescritpion"/>
          <min value="1"/>

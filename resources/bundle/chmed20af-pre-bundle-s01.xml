@@ -281,6 +281,9 @@
                <text value="-"/>
             </note>
             <dosageInstruction>
+               <text value="1 x ROACCUTAN Kaps 10 mg 30 Stk substitituion alllowed, 2x repeatable"/>
+            </dosageInstruction>
+            <dosageInstruction>
                <timing>
                   <repeat>
                      <boundsPeriod>

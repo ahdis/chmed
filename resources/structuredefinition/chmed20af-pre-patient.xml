@@ -22,7 +22,7 @@
    <kind value="resource"/>
    <abstract value="false"/>
    <type value="Patient"/>
-   <baseDefinition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-composition-patient-epr"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-epr"/>
    <derivation value="constraint"/>
    <differential>
       <element id="Patient">

@@ -19,12 +19,6 @@
                 <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
                     <valueString value="Cara"/>
                 </extension>
-                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
-                    <valueIdentifier>
-                        <system value="http://emediplan.ch/chmed20af/id"/>
-                        <value value="26d3dff7-ab05-4737-a49c-5eccd3359a7a"/>
-                    </valueIdentifier>
-                </extension>
                 <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
                     <valueUnsignedInt value="1"/>
                 </extension>

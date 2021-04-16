@@ -25,12 +25,6 @@
                <status value="generated"/>
                <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-CH" lang="de-CH">Prescription </div>
             </text>
-            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
-               <valueIdentifier>
-                  <system value="http://emediplan.ch/chmed20af/id"/>
-                  <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
-               </valueIdentifier>
-            </extension>
             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
                <valueUnsignedInt value="1"/>
             </extension>

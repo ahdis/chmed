@@ -23,12 +23,6 @@
                             <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
                                 <valueString value="EPD"/>
                             </extension>
-                            <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
-                                <valueIdentifier>
-                                    <system value="urn:ietf:rfc:3986"/>
-                                    <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
-                                </valueIdentifier>
-                            </extension>
                             <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
                                 <valueUnsignedInt value="1"/>
                             </extension>

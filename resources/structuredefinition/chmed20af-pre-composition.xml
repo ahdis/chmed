@@ -32,6 +32,9 @@
             <map value="Medication"/>
          </mapping>
       </element>
+      <element id="Composition.language">
+         <path value="Composition.language"/>
+      </element>
       <element id="Composition.extension">
          <path value="Composition.extension"/>
          <slicing>
@@ -45,7 +48,6 @@
       <element id="Composition.extension:informationRecipient">
          <path value="Composition.extension"/>
          <sliceName value="informationRecipient"/>
-         <short value="A recipient of this document"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient or Patient.Rcv (Gln of receiver)"/>
@@ -74,14 +76,24 @@
             <map value="Id"/>
          </mapping>
       </element>
+      <element id="Composition.identifier.system">
+			<path value="Composition.identifier.system"/>
+			<min value="1"/>
+		</element>
+		<element id="Composition.identifier.value">
+			<path value="Composition.identifier.value"/>
+			<min value="1"/>
+		</element>
+      <element id="Composition.status">
+			<path value="Composition.status"/>
+		</element>
       <element id="Composition.type">
          <path value="Composition.type"/>
-         <short value="Document type"/>
+         <short value="Document type: Medical Prescription record (record artifact)"/>
          <patternCodeableConcept>
             <coding>
                <system value="http://snomed.info/sct"/>
                <code value="761938008"/>
-               <display value="Medical Prescription record (record artifact)"/>
             </coding>
          </patternCodeableConcept>
          <mapping>
@@ -103,7 +115,6 @@
       </element>
       <element id="Composition.date">
          <path value="Composition.date"/>
-         <short value="Composition editing time"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Dt"/>
@@ -126,6 +137,19 @@
             <map value="Auth"/>
          </mapping>
       </element>
+      <element id="Composition.title">
+         <path value="Composition.title"/>
+      </element>
+      <element id="Composition.confidentiality">
+         <path value="Composition.confidentiality"/>
+      </element>
+      <element id="Composition.confidentiality.extension:confidentialityCode">
+         <path value="Composition.confidentiality.extension"/>
+         <sliceName value="confidentialityCode"/>
+      </element>
+      <element id="Composition.custodian">
+			<path value="Composition.custodian"/>
+		</element>
       <element id="Composition.section">
          <path value="Composition.section"/>
          <slicing>
@@ -142,11 +166,9 @@
       <element id="Composition.section:originalRepresentation">
          <path value="Composition.section"/>
          <sliceName value="originalRepresentation"/>
-         <short value="Original representation"/>
       </element>
       <element id="Composition.section.title:originalRepresentation">
          <path value="Composition.section.title"/>
-         <short value="Original representation"/>
       </element>
       <element id="Composition.section.code:originalRepresentation">
          <path value="Composition.section.code"/>
@@ -160,18 +182,13 @@
       </element>
       <element id="Composition.section.text:originalRepresentation">
          <path value="Composition.section.text"/>
-         <short value="Representation of the original view"/>
       </element>
       <element id="Composition.section.entry:originalRepresentation">
          <path value="Composition.section.entry"/>
-         <short value="PDF"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"/>
          </type>
-      </element>
-      <element id="Composition.section.section:originalRepresentation">
-         <path value="Composition.section.section"/>
       </element>
 
       <!-- Section prescritpion-->
@@ -185,9 +202,6 @@
       </element>
       <element id="Composition.section.title:prescription">
          <path value="Composition.section.title"/>
-         <short value="'Arzneimittelverordnung' in german or 'Prescription médicamenteuse' in french 
-                        or 'Prescrizione di droga' in italian or 'Prescription for medication' in english
-                        or titles in other languages are also allowed"/>
       </element>
       <element id="Composition.section.code:prescription">
          <path value="Composition.section.code"/>
@@ -199,25 +213,21 @@
             </coding>
          </patternCodeableConcept>
       </element>
+      <element id="Composition.section.text:prescription">
+         <path value="Composition.section.text"/>
+      </element>
       <element id="Composition.section.entry:prescription">
          <path value="Composition.section.entry"/>
-         <short value="Medication request"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medicationrequest"/>
          </type>
-      </element>
-      <element id="Composition.section.section:prescription">
-         <path value="Composition.section.section"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
 
       <!-- Section annotation -->
       <element id="Composition.section:annotation">
          <path value="Composition.section"/>
          <sliceName value="annotation"/>
-         <short value="Annotation"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Rmk"/>
@@ -225,8 +235,6 @@
       </element>
       <element id="Composition.section.title:annotation">
          <path value="Composition.section.title"/>
-         <short value="'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english
-                        or titles in other languages are also allowed"/>
       </element>
       <element id="Composition.section.code:annotation">
          <path value="Composition.section.code"/>
@@ -238,14 +246,9 @@
             </coding>
          </patternCodeableConcept>
       </element>
-      <element id="Composition.section.entry:annotation">
-         <path value="Composition.section.entry"/>
+      <element id="Composition.section.text:annotation">
+         <path value="Composition.section.text"/>
          <short value="General comments"/>
-      </element>
-      <element id="Composition.section.section:annotation">
-         <path value="Composition.section.section"/>
-         <min value="0"/>
-         <max value="0"/>
       </element>
    </differential>
 </StructureDefinition>

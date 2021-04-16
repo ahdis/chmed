@@ -37,7 +37,7 @@
       <short value="Logical identifier for document (GUID)"/>
 			<mapping>
 				<identity value="CHMED16A"/>
-				<map value="id"/>
+				<map value="Id"/>
 			</mapping>
     </element>
     <element id="Bundle.identifier.system">

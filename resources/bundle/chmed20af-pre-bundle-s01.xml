@@ -5,8 +5,8 @@
       <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-bundle"/>
    </meta>
    <identifier>
-      <system value="http://emediplan.ch/chmed20af/id"/>
-      <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"/>
    </identifier>
    <type value="document"/>
    <timestamp value="2017-05-27T11:46:09+02:00"/>

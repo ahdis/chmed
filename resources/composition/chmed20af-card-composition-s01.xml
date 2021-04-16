@@ -151,4 +151,24 @@
          <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung </div>
       </text>
    </section>
+   <section>
+      <title value="Original representation"/>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="55108-5"/>
+            <display value="Clinical presentation"/>
+         </coding>
+      </code>
+      <text>
+         <status value="generated"/>
+         <div xmlns="http://www.w3.org/1999/xhtml">
+            Representation of the original view:
+            <img src="example-pdf"/>
+         </div>
+      </text>
+      <entry>
+         <reference value="Binary/example-pdf"/>
+      </entry>
+   </section>
 </Composition>

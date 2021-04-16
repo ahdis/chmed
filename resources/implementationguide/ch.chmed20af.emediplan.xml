@@ -478,6 +478,13 @@
       <description value=">Risk Allergies"/>
       <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Binary/example-pdf"/>
+      </reference>
+      <name value="ExamplePDF"/>
+      <description value="Example PDF"/>
+    </resource>
     <!--<resource>
       <reference>
         <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>

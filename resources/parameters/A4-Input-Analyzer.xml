@@ -9,8 +9,8 @@
             <Bundle>
                 <id value="A4-MedicationCard-DrDupont"/>
                 <identifier>
-                    <system value="http://emediplan.ch/chmed20af/id"/>
-                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a4a"/>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359a4a"/>
                 </identifier>
                 <type value="document"/>
                 <timestamp value="2020-03-01T11:00:00+01:00"/>
@@ -32,8 +32,8 @@
                                 </valueReference>
                             </extension>
                             <identifier>
-                                <system value="http://emediplan.ch/chmed20af/id"/>
-                                <value value="26d3dff7-ab05-4737-a49c-5eccd3359a4a"/>
+                                <system value="urn:ietf:rfc:3986"/>
+                                <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359a4a"/>
                             </identifier>
                             <status value="final"/>
                             <type>
@@ -270,8 +270,8 @@
             <Bundle>
                 <id value="A4-MedicationCard-DrMonney"/>
                 <identifier>
-                    <system value="http://emediplan.ch/chmed20af/id"/>
-                    <value value="26d3dff7-ab05-4737-a49c-5eccd3359a4b"/>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359a4b"/>
                 </identifier>
                 <type value="document"/>
                 <timestamp value="2020-03-10T11:00:00+01:00"/>
@@ -293,8 +293,8 @@
                                 </valueReference>
                             </extension>
                             <identifier>
-                                <system value="http://emediplan.ch/chmed20af/id"/>
-                                <value value="26d3dff7-ab05-4737-a49c-5eccd3359a4b"/>
+                                <system value="urn:ietf:rfc:3986"/>
+                                <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3359a4b"/>
                             </identifier>
                             <status value="final"/>
                             <type>

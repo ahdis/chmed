@@ -2,8 +2,8 @@
    <id value="chmed20af-pre-composition"/>
    <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-composition"/>
    <version value="0.1.0"/>
-   <name value="CompositionMedicationPrescriptionDocument"/>
-   <title value="Composition Medication Prescription document"/>
+   <name value="CompositionMedicationPrescription"/>
+   <title value="Composition Medication Prescription"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>

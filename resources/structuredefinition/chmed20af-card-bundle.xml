@@ -30,6 +30,7 @@
   <differential>
     <element id="Bundle">
       <path value="Bundle"/>
+      <short value="CHMED20AF Medication Card document"/>
     </element>
     <element id="Bundle.identifier">
       <path value="Bundle.identifier"/>
@@ -39,13 +40,18 @@
 				<map value="id"/>
 			</mapping>
     </element>
+    <element id="Bundle.identifier.system">
+         <path value="Bundle.identifier.system"/>
+      </element>
+      <element id="Bundle.identifier.value">
+         <path value="Bundle.identifier.value"/>
+      </element>
     <element id="Bundle.type">
       <path value="Bundle.type"/>
       <fixedCode value="document"/>
     </element>
     <element id="Bundle.timestamp">
       <path value="Bundle.timestamp" />
-      <short value="The document's creation date and time"/>
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry"/>
@@ -60,13 +66,10 @@
     <element id="Bundle.entry:Composition">
       <path value="Bundle.entry"/>
       <sliceName value="Composition"/>
-      <min value="1"/>
-      <max value="1"/>
     </element>
     <element id="Bundle.entry.resource:Composition">
       <path value="Bundle.entry.resource"/>
-      <short value="Medication Card"/>
-      <min value="1"/>
+      <short value="Medication Card Composition"/>
       <type>
         <code value="Composition"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>

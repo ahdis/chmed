@@ -5,8 +5,8 @@
 	</meta>
 	<url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>
 	<version value="0.1.0"/>
-	<name value="CompositionMedicationCardDocument"/>
-	<title value="Composition Medication Card document"/>
+	<name value="CompositionMedicationCard"/>
+	<title value="Composition Medication Card"/>
 	<status value="draft"/>
 	<publisher value="IG eMediplan"/>
 	<contact>

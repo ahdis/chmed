@@ -33,6 +33,9 @@
             <map value="Medicament"/>
          </mapping>
       </element>
+      <element id="MedicationStatement.contained">
+         <path value="MedicationStatement.contained"/>
+      </element>
       <element id="MedicationStatement.extension">
          <path value="MedicationStatement.extension"/>
          <slicing>
@@ -58,6 +61,18 @@
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
+      <element id="MedicationStatement.identifier">
+         <path value="MedicationStatement.identifier"/>
+      </element>
+      <element id="MedicationStatement.identifier.system">
+         <path value="MedicationStatement.identifier.system"/>
+      </element>
+      <element id="MedicationStatement.identifier.value">
+         <path value="MedicationStatement.identifier.value"/>
+      </element>
+      <element id="MedicationStatement.status">
+         <path value="MedicationStatement.status"/>
+      </element>
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
          <patternCodeableConcept>
@@ -76,7 +91,6 @@
       </element>
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
-         <short value="What medication was taken"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
@@ -88,7 +102,6 @@
       </element>
       <element id="MedicationStatement.subject">
          <path value="MedicationStatement.subject"/>
-         <short value="Who is/was taking  the medication"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
@@ -100,7 +113,6 @@
       </element>
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
-         <short value="The author of the medical decision"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
@@ -113,7 +125,6 @@
       </element>
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
-         <short value="Reason for why the medication is being/was taken"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.TkgRsn"/>
@@ -121,7 +132,6 @@
       </element>
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
-         <short value="Annoation"/>
       </element>
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
@@ -132,12 +142,10 @@
             </discriminator>
             <rules value="open"/>
          </slicing>
-         <short value="How the medication should be taken"/>
       </element>
       <element id="MedicationStatement.dosage:nonstructured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="nonstructured"/>
-         <short value="Free text dosage instructions"/>
          <type>
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
@@ -150,7 +158,6 @@
       <element id="MedicationStatement.dosage:structured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="structured"/>
-         <short value="Structured dosage instructions"/>
          <type>
             <code value="Dosage"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage"/>

@@ -49,6 +49,10 @@
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:e85c2ec3-d4a4-499d-9e00-7360bee9ce6a"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont3"/>

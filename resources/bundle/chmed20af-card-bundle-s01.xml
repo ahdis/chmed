@@ -431,6 +431,10 @@
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:7489bc8a-2342-409d-b4c5-083a2707a12e"/>
+            </identifier>
             <status value="completed"/>
             <medicationReference>
                <reference value="#cont1"/>
@@ -532,6 +536,10 @@
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:aa48a9af-0229-4432-8791-af66e86d4ada"/>
+            </identifier>
             <status value="completed"/>
             <medicationReference>
                <reference value="#cont2"/>
@@ -629,6 +637,10 @@
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:fbaa527c-8efa-40d7-8ef8-ea793fbc21ea"/>
+            </identifier>
             <status value="completed"/>
             <medicationReference>
                <reference value="#cont3"/>
@@ -726,6 +738,10 @@
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:26cbe5de-50a6-4f44-a210-6c2c70c60ea7"/>
+            </identifier>
             <status value="completed"/>
             <medicationReference>
                <reference value="#cont4"/>
@@ -832,6 +848,10 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:aea087d7-5001-45ab-a341-2dfbc8e3f749"/>
+            </identifier>
             <status value="completed"/>
             <medicationReference>
                <reference value="#cont1"/>

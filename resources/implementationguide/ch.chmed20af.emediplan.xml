@@ -406,13 +406,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-card-medication"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-pre-medication"/>
+        <reference value="StructureDefinition/chmed20af-medication"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

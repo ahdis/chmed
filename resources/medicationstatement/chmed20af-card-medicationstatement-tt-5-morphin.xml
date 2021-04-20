@@ -20,7 +20,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont1"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>

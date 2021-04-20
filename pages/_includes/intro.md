@@ -94,7 +94,7 @@ The medication section contains the entries for the current medications for pati
 | Dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
 | Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
-[Profile for MedicationStatement](StructureDefinition-chmed20af-card-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-card-medication.html)
+[Profile for MedicationStatement](StructureDefinition-chmed20af-card-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
 Examples for MedicationStatements [1](MedicationStatement-chmed20af-card-medicationstatement-s01-1.html) &#124; [2](MedicationStatement-chmed20af-card-medicationstatement-s01-2.html) &#124; [3](MedicationStatement-chmed20af-card-medicationstatement-s01-3.html) &#124; [4](MedicationStatement-chmed20af-card-medicationstatement-s01-4.html)
 
@@ -205,6 +205,6 @@ The medication section contains the entries for the prescriped medications for t
 | dispenseRequest.quantity  | Number of package to be delivered  | 	SimpleQuantity  | Medicament.NbPack |
 | substitution.allowedCodeableConcept |  Medication is substitutable  | CodeableConcept  | Medicament.Subs | 
 
-[Profile for MedicationRequest](StructureDefinition-chmed20af-pre-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-pre-medication.html)
+[Profile for MedicationRequest](StructureDefinition-chmed20af-pre-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-medication.html)
 
 Examples for MedicationRequest [1](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.html)

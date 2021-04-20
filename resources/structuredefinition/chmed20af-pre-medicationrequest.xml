@@ -77,7 +77,7 @@
          <path value="MedicationRequest.medicationReference"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medication"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>  
          <mapping>
             <identity value="CHMED16A"/>

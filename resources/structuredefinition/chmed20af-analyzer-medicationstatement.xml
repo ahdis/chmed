@@ -85,7 +85,7 @@
          <short value="What medication was taken"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
       </element>
       <element id="MedicationStatement.subject">

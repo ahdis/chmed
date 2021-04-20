@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="chmed20af-pre-medication"/>
-   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medication"/>
+   <id value="chmed20af-medication"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
    <version value="0.1.0"/>
-   <name value="PreMedication"/>
-   <title value="Pre Medication"/>
+   <name value="Medication"/>
+   <title value="Medication"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>
@@ -34,7 +34,6 @@
       </element>
       <element id="Medication.code.coding">
          <path value="Medication.code.coding"/>
-         <short value="GTIN code that identify this medication"/>
          <slicing>
             <discriminator>
                <type value="value"/>
@@ -42,35 +41,30 @@
             </discriminator>
             <rules value="open"/>
          </slicing>
+      </element>
+      <element id="Medication.code.coding:GTIN">
+         <path value="Medication.code.coding"/>
+         <sliceName value="GTIN"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>
       </element>
-      <element id="Medication.code.coding:GTIN">
-         <path value="Medication.code.coding"/>
-         <sliceName value="GTIN"/>
-      </element>
       <element id="Medication.code.coding:GTIN.system">
          <path value="Medication.code.coding.system"/>
-         <sliceName value="GTIN"/>
          <fixedUri value="urn:oid:2.51.1.1"/>
       </element>
       <element id="Medication.code.coding:GTIN.code">
          <path value="Medication.code.coding.code"/>
-         <sliceName value="GTIN"/>
       </element>
       <element id="Medication.code.coding:GTIN.display">
          <path value="Medication.code.coding.display"/>
-         <sliceName value="GTIN"/>
       </element>
       <element id="Medication.code.text">
          <path value="Medication.code.text"/>
-         <short value="Name that identify this medication"/>
       </element>
       <element id="Medication.form">
          <path value="Medication.form"/>
-         <short value="Galenic form"/>
          <binding>
             <strength value="required"/>
             <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/edqm-pharmaceuticaldoseform"/>
@@ -90,48 +84,25 @@
       </element>
       <element id="Medication.amount">
          <path value="Medication.amount"/>
-         <short value="Package size"/>
       </element>
       <element id="Medication.ingredient">
          <path value="Medication.ingredient"/>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept">
          <path value="Medication.ingredient.itemCodeableConcept"/>
-         <short value="Name of active ingredient"/>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.coding">
          <path value="Medication.ingredient.itemCodeableConcept.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="system"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT">
-         <path value="Medication.ingredient.itemCodeableConcept.coding"/>
-         <sliceName value="SCT"/>
-      </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.system">
-         <path value="Medication.ingredient.itemCodeableConcept.coding.system"/>
-         <sliceName value="SCT"/>
-         <fixedUri value="http://snomed.info/sct"/>
-      </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.code">
-         <path value="Medication.ingredient.itemCodeableConcept.coding.code"/>
-         <sliceName value="SCT"/>
-      </element>
-      <element id="Medication.ingredient.itemCodeableConcept.coding:SCT.display">
-         <path value="Medication.ingredient.itemCodeableConcept.coding.display"/>
-         <sliceName value="SCT"/>
+         <binding>
+            <strength value="extensible"/>
+            <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/ActivePharmaceuticalIngredient"/>
+         </binding>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.text">
          <path value="Medication.ingredient.itemCodeableConcept.text"/>
       </element>
       <element id="Medication.ingredient.strength">
          <path value="Medication.ingredient.strength"/>
-         <short value="Dose per unit"/>
       </element>
    </differential>
 </StructureDefinition>

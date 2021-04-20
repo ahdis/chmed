@@ -33,6 +33,9 @@
             <map value="Medicament"/>
          </mapping>
       </element>
+      <element id="MedicationRequest.contained">
+         <path value="MedicationRequest.contained"/>
+      </element>
       <element id="MedicationRequest.extension">
          <path value="MedicationRequest.extension"/>
          <slicing>
@@ -58,9 +61,20 @@
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
+      <element id="MedicationRequest.identifier">
+         <path value="MedicationRequest.identifier"/>
+      </element>
+      <element id="MedicationRequest.identifier.system">
+         <path value="MedicationRequest.identifier.system"/>
+      </element>
+      <element id="MedicationRequest.identifier.value">
+         <path value="MedicationRequest.identifier.value"/>
+      </element>
+      <element id="MedicationRequest.status">
+         <path value="MedicationRequest.status"/>
+      </element>
       <element id="MedicationRequest.medicationReference">
          <path value="MedicationRequest.medicationReference"/>
-         <short value="Medication to be taken"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medication"/>
@@ -72,7 +86,6 @@
       </element>
       <element id="MedicationRequest.subject">
          <path value="MedicationRequest.subject"/>
-         <short value="Patient"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
@@ -84,7 +97,6 @@
       </element>
       <element id="MedicationRequest.note">
          <path value="MedicationRequest.note"/>
-         <short value="Annotation"/>
       </element>
       <element id="MedicationRequest.dosageInstruction">
          <path value="MedicationRequest.dosageInstruction"/>
@@ -95,12 +107,10 @@
             </discriminator>
             <rules value="open"/>
          </slicing>
-         <short value="How the medication should be taken"/>
       </element>
       <element id="MedicationRequest.dosageInstruction:nonstructured">
          <path value="MedicationRequest.dosageInstruction"/>
          <sliceName value="nonstructured"/>
-         <short value="Free text dosage instructions"/>
          <type>
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
@@ -113,7 +123,6 @@
       <element id="MedicationRequest.dosageInstruction:structured">
          <path value="MedicationRequest.dosageInstruction"/>
          <sliceName value="structured"/>
-         <short value="Structured dosage instructions"/>
          <type>
             <code value="Dosage"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-dosage"/>
@@ -125,11 +134,9 @@
       </element>
       <element id="MedicationRequest.dispenseRequest">
          <path value="MedicationRequest.dispenseRequest"/>
-         <short value="Medication supply authorization"/>
       </element>
       <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
          <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
-         <short value="Number of refills authorized"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Rep"/>
@@ -137,7 +144,6 @@
       </element>
       <element id="MedicationRequest.dispenseRequest.quantity">
          <path value="MedicationRequest.dispenseRequest.quantity"/>
-         <short value="Amount of medication to supply per dispense"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.NbPack"/>
@@ -145,7 +151,6 @@
       </element>
       <element id="MedicationRequest.substitution">
          <path value="MedicationRequest.substitution"/>
-         <short value="Any restrictions on medication substitution"/>
       </element>
       <element id="MedicationRequest.substitution.allowedCodeableConcept">
          <path value="MedicationRequest.substitution.allowedCodeableConcept"/>

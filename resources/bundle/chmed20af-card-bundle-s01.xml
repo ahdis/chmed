@@ -481,9 +481,9 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stück"/>
+                     <unit value="Stk"/>
                      <system value="http://unitsofmeasure.org"/>
-                     <code value="1"/>
+                     <code value="U{PIECE(S)}"/>
                   </doseQuantity>
                </doseAndRate>
             </dosage>
@@ -588,9 +588,9 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stück"/>
+                     <unit value="Stk"/>
                      <system value="http://unitsofmeasure.org"/>
-                     <code value="1"/>
+                     <code value="U{PIECE(S)}"/>
                   </doseQuantity>
                </doseAndRate>
             </dosage>
@@ -695,9 +695,9 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stück"/>
+                     <unit value="Stk"/>
                      <system value="http://unitsofmeasure.org"/>
-                     <code value="1"/>
+                     <code value="U{PIECE(S)}"/>
                   </doseQuantity>
                </doseAndRate>
             </dosage>
@@ -801,9 +801,9 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stück"/>
+                     <unit value="Stk"/>
                      <system value="http://unitsofmeasure.org"/>
-                     <code value="1"/>
+                     <code value="U{PIECE(S)}"/>
                   </doseQuantity>
                </doseAndRate>
             </dosage>
@@ -871,7 +871,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                            <value value="1"/>
                            <unit value="ml"/>
                            <system value="http://unitsofmeasure.org"/>
-                           <code value="ml"/>
+                           <code value="mL"/>
                         </denominator>
                      </strength>
                   </ingredient>
@@ -921,13 +921,13 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                            <value value="200"/>
                            <unit value="ml"/>
                            <system value="http://unitsofmeasure.org"/>
-                           <code value="ml"/>
+                           <code value="mL"/>
                         </valueQuantity>
                      </extension>
                      <value value="50"/>
                      <unit value="ml"/>
                      <system value="http://unitsofmeasure.org"/>
-                     <code value="ml"/>
+                     <code value="mL"/>
                   </doseQuantity>
                </doseAndRate>
             </dosage>

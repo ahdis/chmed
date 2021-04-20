@@ -102,7 +102,7 @@
             <value value="10"/>
             <unit value="ml"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -128,7 +128,7 @@
             <value value="20"/>
             <unit value="ml"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -154,7 +154,7 @@
             <value value="30"/>
             <unit value="ml"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -180,7 +180,7 @@
             <value value="40"/>
             <unit value="ml"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

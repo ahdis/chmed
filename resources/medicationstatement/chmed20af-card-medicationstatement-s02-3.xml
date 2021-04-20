@@ -94,9 +94,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stück"/>
+            <unit value="Stk"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="U{PIECE(S)}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -119,9 +119,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="0.5"/>
-            <unit value="Stück"/>
+            <unit value="Stk"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="U{PIECE(S)}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

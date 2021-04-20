@@ -48,9 +48,14 @@
                <numerator>
                   <value value="1"/>
                   <unit value="g"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="g"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Vial"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="733026001"/>
                </denominator>
             </strength>
          </ingredient>

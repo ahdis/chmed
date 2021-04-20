@@ -41,9 +41,14 @@
                <numerator>
                   <value value="10"/>
                   <unit value="mg"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Capsule (unit of presentation)"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="732937005"/>
                </denominator>
             </strength>
          </ingredient>

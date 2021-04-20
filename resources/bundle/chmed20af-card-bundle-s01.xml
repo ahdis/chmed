@@ -424,9 +424,14 @@
                         <numerator>
                            <value value="10"/>
                            <unit value="mg"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
+                           <unit value="Capsule"/>
+                           <system value="http://snomed.info/sct"/>
+                           <code value="732937005"/>
                         </denominator>
                      </strength>
                   </ingredient>
@@ -530,9 +535,14 @@
                         <numerator>
                            <value value="100"/>
                            <unit value="mg"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
+                           <unit value="Tablet"/>
+                           <system value="http://snomed.info/sct"/>
+                           <code value="732936001"/>
                         </denominator>
                      </strength>
                   </ingredient>
@@ -632,9 +642,14 @@
                         <numerator>
                            <value value="25"/>
                            <unit value="mg"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
+                           <unit value="Tablet"/>
+                           <system value="http://snomed.info/sct"/>
+                           <code value="732936001"/>
                         </denominator>
                      </strength>
                   </ingredient>
@@ -734,9 +749,14 @@
                         <numerator>
                            <value value="20"/>
                            <unit value="mg"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
+                           <unit value="Tablet"/>
+                           <system value="http://snomed.info/sct"/>
+                           <code value="732936001"/>
                         </denominator>
                      </strength>
                   </ingredient>
@@ -844,10 +864,14 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                         <numerator>
                            <value value="20"/>
                            <unit value="mg"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
                            <unit value="ml"/>
+                           <system value="http://unitsofmeasure.org"/>
+                           <code value="ml"/>
                         </denominator>
                      </strength>
                   </ingredient>

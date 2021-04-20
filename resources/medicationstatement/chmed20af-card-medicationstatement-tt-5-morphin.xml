@@ -50,10 +50,14 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                <numerator>
                   <value value="20"/>
                   <unit value="mg"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
-                  <unit value="ml"/>
+                  <unit value="mL"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mL"/>
                </denominator>
             </strength>
          </ingredient>

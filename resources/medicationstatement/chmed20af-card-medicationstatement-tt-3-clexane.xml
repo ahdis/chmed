@@ -35,6 +35,7 @@
                   <code value="372562003"/>
                   <display value="Enoxaparin (substance)"/>
                </coding>
+               <text value="Enoxaparin"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

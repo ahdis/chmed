@@ -44,6 +44,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                   <code value="373529000"/>
                   <display value="Morphine (substance)"/>
                </coding>
+               <text value="Morphine"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

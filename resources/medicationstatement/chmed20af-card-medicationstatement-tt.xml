@@ -35,6 +35,7 @@
                   <code value="386919002"/>
                   <display value="Rituximab (substance)"/>
                </coding>
+               <text value="Rituximab"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

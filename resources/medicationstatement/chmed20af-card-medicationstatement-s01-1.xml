@@ -35,6 +35,7 @@
                   <code value="387208003"/>
                   <display value="Isotretinoin (substance)"/>
                </coding>
+               <text value="Isotretinoin"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

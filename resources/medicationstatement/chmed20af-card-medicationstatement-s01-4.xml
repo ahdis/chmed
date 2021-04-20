@@ -36,6 +36,7 @@
                   <code value="387584000"/>
                   <display value="Simvastatin (substance)"/>
                </coding>
+               <text value="Simvastatin"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

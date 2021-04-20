@@ -418,6 +418,7 @@
                            <code value="387208003"/>
                            <display value="Isotretinoin (substance)"/>
                         </coding>
+                        <text value="Isotretinoin"/>
                      </itemCodeableConcept>
                      <strength>
                         <numerator>
@@ -523,6 +524,7 @@
                            <code value="387458008"/>
                            <display value="Aspirin (substance)"/>
                         </coding>
+                        <text value="Aspirin"/>
                      </itemCodeableConcept>
                      <strength>
                         <numerator>
@@ -624,6 +626,7 @@
                            <code value="372826007"/>
                            <display value="Metoprolol (substance)"/>
                         </coding>
+                        <text value="Metoprolol"/>
                      </itemCodeableConcept>
                      <strength>
                         <numerator>
@@ -725,6 +728,7 @@
                            <code value="387584000"/>
                            <display value="Simvastatin (substance)"/>
                         </coding>
+                        <text value="Simvastatin"/>
                      </itemCodeableConcept>
                      <strength>
                         <numerator>
@@ -834,6 +838,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                            <code value="373529000"/>
                            <display value="Morphine (substance)"/>
                         </coding>
+                        <text value="Morphine"/>
                      </itemCodeableConcept>
                      <strength>
                         <numerator>

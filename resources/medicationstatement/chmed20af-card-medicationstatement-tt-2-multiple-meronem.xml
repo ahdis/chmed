@@ -42,6 +42,7 @@
                   <code value="387540000"/>
                   <display value="Meropenem (substance)"/>
                </coding>
+               <text value="Meropenem"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

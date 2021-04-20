@@ -35,6 +35,7 @@
                   <code value="59488002"/>
                   <display value="Phenprocoumon (substance)"/>
                </coding>
+               <text value="Phenprocoumon"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

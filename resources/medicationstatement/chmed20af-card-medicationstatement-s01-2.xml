@@ -36,6 +36,7 @@
                   <code value="387458008"/>
                   <display value="Aspirin (substance)"/>
                </coding>
+               <text value="Aspirin"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

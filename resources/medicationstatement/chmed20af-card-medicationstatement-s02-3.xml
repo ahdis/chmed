@@ -36,6 +36,7 @@
                   <code value="372826007"/>
                   <display value="Metoprolol (substance)"/>
                </coding>
+               <text value="Metoprolol"/>
             </itemCodeableConcept>
             <strength>
                <numerator>

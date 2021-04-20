@@ -283,6 +283,10 @@
                   </ingredient>
                </Medication>
             </contained>
+            <identifier>
+               <system value="urn:ietf:rfc:3986"/>
+               <value value="urn:uuid:0a7fba01-0c53-4f2a-90c7-ec7ea6a621e1"/>
+            </identifier>
             <status value="completed"/>
             <intent value="order"/>
             <medicationReference>

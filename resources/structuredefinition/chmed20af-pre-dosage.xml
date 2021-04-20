@@ -47,8 +47,6 @@
       <path value="Dosage.extension"/>
       <sliceName value="dosageType"/>
       <short value="Dosage type"/>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype"/>
@@ -56,13 +54,9 @@
     </element>
     <element id="Dosage.sequence">
       <path value="Dosage.sequence"/>
-      <short value="The order of the dosage instructions"/>
     </element>
     <element id="Dosage.timing">
       <path value="Dosage.timing"/>
-      <short value="When medication should be administered"/>
-      <min value="1"/>
-      <max value="1"/>
       <mapping>
         <identity value="CHMED16A"/>
         <map value="Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes, SimpliedVersion of taking times onlys"/>
@@ -70,25 +64,15 @@
     </element>
     <element id="Dosage.timing.repeat">
       <path value="Dosage.timing.repeat"/>
-      <short value="When the event is to occur"/>
-      <min value="1"/>
-      <max value="1"/>
     </element>
     <element id="Dosage.timing.repeat.bounds[x]">
       <path value="Dosage.timing.repeat.bounds[x]"/>
-      <short value="Length/Range of lengths, or (Start and/or end) limits"/>
-      <min value="1"/>
-      <max value="1"/>
     </element>
     <element id="Dosage.timing.repeat.when">
       <path value="Dosage.timing.repeat.when"/>
-      <short value="Code for time period of occurrence"/>
-      <min value="1"/>
-      <max value="*"/>
     </element>
     <element id="Dosage.route">
       <path value="Dosage.route"/>
-      <short value="How drug should enter body"/>
       <binding>
         <strength value="required"/>
         <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration"/>
@@ -112,15 +96,21 @@
     </element>
     <element id="Dosage.doseAndRate">
       <path value="Dosage.doseAndRate"/>
-      <short value="Amount of medication administered"/>
     </element>
     <element id="Dosage.doseAndRate.dose[x]">
       <path value="Dosage.doseAndRate.dose[x]"/>
-      <short value="Amount of medication per dose"/>
       <mapping>
         <identity value="CHMED16A"/>
         <map value="doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo"/>
       </mapping>
+      <type>
+        <code value="Range"/>
+        <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-range"/>
+      </type>
+      <type>
+        <code value="Quantity"/>
+        <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-quantity"/>
+      </type>
     </element>
     <element id="Dosage.maxDosePerPeriod">
       <path value="Dosage.maxDosePerPeriod"/>

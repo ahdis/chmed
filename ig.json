@@ -76,7 +76,7 @@
       {      
         "name": "chemed",
         "package": "ch.fhir.ig.ch-emed",
-        "version": "current"
+        "version": "2.0.4"
     }
   ],
   "source": "implementationguide/ch.chmed20af.emediplan.xml",

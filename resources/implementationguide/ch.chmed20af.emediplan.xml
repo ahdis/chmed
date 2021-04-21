@@ -221,6 +221,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Patient/chmed20af-pre-patient-s01"/>
+      </reference>
+      <name value="Patient Pre"/>
+      <description value="Example for a patient"/>
+      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/chmed20af-practitioner"/>
       </reference>
       <exampleBoolean value="false"/>

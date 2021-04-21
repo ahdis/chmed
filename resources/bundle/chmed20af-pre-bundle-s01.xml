@@ -129,7 +129,7 @@
             <meta>
                <versionId value="1"/>
                <lastUpdated value="2019-05-29T14:58:58.181+02:00"/>
-               <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+               <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
             </meta>
             <text>
                <status value="generated"/>
@@ -161,16 +161,6 @@
                <city value="Bern"/>
                <postalCode value="3027"/>
             </address>
-            <communication>
-               <language>
-                  <coding>
-                     <system value="urn:ietf:bcp:47"/>
-                     <code value="de-CH"/>
-                     <display value="German (Region=Switzerland)"/>
-                  </coding>
-               </language>
-               <preferred value="true"/>
-            </communication>
          </Patient>
       </resource>
    </entry>

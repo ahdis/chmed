@@ -1,4 +1,4 @@
-# Code Systems and Value Sets
+# Terminology
 
 Within the Implementation Guide the Value Sets correspond directly to the Code Systems. The Code Systems and Value Sets are provided for free by HCI Solutions AG.
 

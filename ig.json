@@ -71,12 +71,12 @@
       {
         "name": "cheprterm",
         "package": "ch.fhir.ig.ch-epr-term",
-        "version": "current"
+        "version": "2.0.4"
       },
       {      
         "name": "chemed",
         "package": "ch.fhir.ig.ch-emed",
-        "version": "2.0.4"
+        "version": "current"
     }
   ],
   "source": "implementationguide/ch.chmed20af.emediplan.xml",

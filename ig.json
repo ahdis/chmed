@@ -71,7 +71,7 @@
       {
         "name": "cheprterm",
         "package": "ch.fhir.ig.ch-epr-term",
-        "version": "2.0.4"
+        "version": "current"
       },
       {      
         "name": "chemed",

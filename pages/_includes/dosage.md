@@ -31,10 +31,10 @@ are the same, the can be mapped as follows:
 			</repeat>
 		</timing>
 		<route>
-			<coding>   
-				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>   
-            	<code value="20053000"/>   
-            	<display value="Oral use"/>   
+			<coding>
+				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+				<code value="20053000"/>
+				<display value="Oral use"/>
 			</coding>
 		</route>
 		<doseAndRate>
@@ -42,7 +42,7 @@ are the same, the can be mapped as follows:
 				<value value="1"/>
 				<unit value="Stk"/>
 				<system value="http://unitsofmeasure.org"/>
-				<code value="1"/>
+				<code value="U{PIECE(S)}"/>
 			</doseQuantity>
 		</doseAndRate>
 	</dosage>
@@ -71,7 +71,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 
 				<frequency value="3"/>
 
-				<period value="1"/>   <!-- CyDu -->
+				<period value="1"/> <!-- CyDu -->
 				<periodUnit value="wk"/> <!-- CyDu -->
 
 				<dayOfWeek value="tue"/> <!-- implied by date, optional -->
@@ -81,11 +81,11 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 				<timeOfDay value="18:00:00"/> <!-- Off, but relative to timeOfDay -->
 			</repeat>
 		</timing>
-        <route>
+		<route>
 			<coding>
-				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>   
-            	<code value="20045000"/>   
-            	<display value="Intravenous use"/>   
+				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+				<code value="20045000"/>
+				<display value="Intravenous use"/>
 			</coding>
 		</route>
 		<doseAndRate>
@@ -96,7 +96,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 				<code value="g"/>
 			</doseQuantity>
 		</doseAndRate>
-    </dosage> 
+	</dosage> 
 ```
 
 Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed20af-card-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed20af-card-medicationstatement-tt-4-spiricort.html).
@@ -110,13 +110,13 @@ An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defin
 				<fhir:value value="200"/>
 				<fhir:unit value="ml"/>
 				<fhir:system value="http://unitsofmeasure.org"/>
-				<fhir:code value="ml"/>
+				<fhir:code value="mL"/>
 			</fhir:valueQuantity>
 		</fhir:extension>
 		<fhir:value value="50"/>
 		<fhir:unit value="ml"/>
 		<fhir:system value="http://unitsofmeasure.org"/>
-		<fhir:code value="ml"/>
+		<fhir:code value="mL"/>
 	</fhir:doseQuantity>
 ```
 

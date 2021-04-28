@@ -63,20 +63,10 @@
   },
   "canonicalBase": "http://chmed20af.emediplan.ch/fhir",
   "dependencyList": [
-    {
-        "name": "chcore",
-        "package": "ch.fhir.ig.ch-core",
-        "version": "current"
-      },
-      {
-        "name": "cheprterm",
-        "package": "ch.fhir.ig.ch-epr-term",
-        "version": "current"
-      },
-      {      
-        "name": "chemed",
-        "package": "ch.fhir.ig.ch-emed",
-        "version": "current"
+    {      
+      "name": "chemed",
+      "package": "ch.fhir.ig.ch-emed",
+      "version": "current"
     }
   ],
   "source": "implementationguide/ch.chmed20af.emediplan.xml",

@@ -441,12 +441,12 @@
     </resource>
     
     <!-- ConceptMap -->
-    <!--<resource>
+    <resource>
       <reference>
-        <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>
+        <reference value="ConceptMap/unitcode-cdtyp9-to-chemed"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
 
     <!-- ================================ Analyzer Start ================================ -->
     

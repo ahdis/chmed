@@ -250,9 +250,6 @@
                                 <Medication>
                                     <id value="med"/>
                                     <code>
-                                        <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
-                                            <valueUrl value="#mtp.1.brandedmedication"/>
-                                        </extension>
                                         <coding>
                                             <system value="urn:oid:2.51.1.1"/>
                                             <code value="7680538751228"/>
@@ -270,9 +267,15 @@
                                     <amount>
                                         <numerator>
                                             <value value="20"/>
+                                            <unit value="Tablet"/>
+                                            <system value="http://snomed.info/sct"/>
+                                            <code value="732936001"/>
                                         </numerator>
                                         <denominator>
                                             <value value="1"/>
+                                            <unit value="Package"/>
+                                            <system value="http://unitsofmeasure.org"/>
+                                            <code value="{Package}"/>
                                         </denominator>
                                     </amount>
                                     <ingredient>
@@ -288,10 +291,14 @@
                                             <numerator>
                                                 <value value="2.5"/>
                                                 <unit value="mg"/>
+                                                <system value="http://unitsofmeasure.org"/>
+                                                <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
-                                                <unit value="1"/>
+                                                <unit value="Tablet"/>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="732936001"/>
                                             </denominator>
                                         </strength>
                                     </ingredient>
@@ -299,6 +306,16 @@
                             </contained>
                             <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
                                 <valueUrl value="#mtp.1"/>
+                            </extension>
+                            <!-- substitution just as test case -->
+                            <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-substitution">
+                                <valueCodeableConcept>
+                                    <coding>
+                                        <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+                                        <code value="E"/>
+                                        <display value="equivalent"/>
+                                    </coding>
+                                </valueCodeableConcept>
                             </extension>
                             <identifier>
                                 <system value="urn:ietf:rfc:3986"/>
@@ -347,6 +364,9 @@
                                 <doseAndRate>
                                     <doseQuantity>
                                         <value value="0.5"/>
+                                        <unit value="Tablette" />
+                                        <system value="http://snomed.info/sct"/>
+                                        <code value="732936001"/>
                                     </doseQuantity>
                                 </doseAndRate>
                             </dosage>

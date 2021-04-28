@@ -17,6 +17,7 @@
   <packageId value="ch.chmed20af.emediplan"/>
   <fhirVersion value="4.0.1"/>
   <definition>
+    <!-- StructureDefinition and Example -->
     <resource>
       <reference>
         <reference value="StructureDefinition/chmed20af-card-dosage"/>
@@ -55,104 +56,6 @@
       <description value="Example for Medication Card document"/>
       <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>
     </resource>
-    <!--<resource>
-      <reference>
-        <reference value="Bundle/A1-MedicationCard-Simcora"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A1-MedicationCard-Zocor"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A2-MedicationCard-1x10mg"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A2-MedicationCard-2x5mg"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A3-MedicationCard-Reniten-1x"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A3-MedicationCard-Reniten-2x"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A4-MedicationCard-DrDupont"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A4-MedicationCard-DrMonney"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A5-MedicationCard-Reniten"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A5-MedicationCard-Exforge"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A6-MedicationCard-Tbl"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A6-MedicationCard-TblSpray"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A7-MedicationCard-Brufen"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/A7-MedicationCard-BrufenBrufenretard"/>
-      </reference>
-      <name value="Medication Card document"/>
-      <description value="Example for Medication Card document"/>
-    </resource>-->
     <resource>
       <reference>
         <reference value="Bundle/chmed20af-pre-bundle-s01"/>
@@ -487,92 +390,8 @@
       <name value="ExamplePDF"/>
       <description value="Example PDF"/>
     </resource>
-    <!--<resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-medicationdispense"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-observationpadv"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-observationhistory"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-patient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-practitioner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="OperationDefinition/chmed20af-analyzer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-inputdocumentdate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-inputdocumentsource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-inputdocumenttype"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/chmed20af-infoinputdocument"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>-->
-
-    <!-- Code Systems -->
+    
+    <!-- CodeSystem -->
     <resource>
       <reference>
         <reference value="CodeSystem/chmed20af-codesystem-cdtyp9"/>
@@ -594,16 +413,145 @@
       <name value="CodeSystem Code Risks CDSCODE"/>
       <exampleBoolean value="false"/>
     </resource>
+    
+    <!-- ValueSet -->
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-cdtyp9"/>
+      </reference>
+      <name value="ValueSet cdtyp9"/>
+      <description value="UnitCodes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-risks-cdscode"/>
+      </reference>
+      <name value="ValueSet Risks CDSCODE"/>
+      <description value="ValueSet Risks CDSCODE"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/chmed20af-valueset-risks-category"/>
+      </reference>
+      <name value="ValueSet Risks Category"/>
+      <description value="ValueSet Risks Category"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    
+    <!-- ConceptMap -->
     <!--<resource>
       <reference>
-        <reference value="CodeSystem/chmed20af-codesystem-history-changes"/>
+        <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>
       </reference>
-      <name value="CodeSystem History Changes"/>
       <exampleBoolean value="false"/>
     </resource>-->
 
-    <!-- Examples Analyzer -->
-    <!--<resource>
+    <!-- ================================ Analyzer Start ================================ -->
+    
+    <!-- Analyzer: Examples for Medication Card document (included then in Parameters => Input Analzyer)-->
+    <resource>
+      <reference>
+        <reference value="Bundle/A1-MedicationCard-Simcora"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A1-MedicationCard-Zocor"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A2-MedicationCard-1x10mg"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A2-MedicationCard-2x5mg"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A3-MedicationCard-Reniten-1x"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A3-MedicationCard-Reniten-2x"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A4-MedicationCard-DrDupont"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A4-MedicationCard-DrMonney"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A5-MedicationCard-Reniten"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A5-MedicationCard-Exforge"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A6-MedicationCard-Tbl"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A6-MedicationCard-TblSpray"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A7-MedicationCard-Brufen"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/A7-MedicationCard-BrufenBrufenretard"/>
+      </reference>
+      <name value="Medication Card document"/>
+      <description value="Example for Medication Card document"/>
+    </resource>
+
+    <!-- Analyzer: Example for Parameters (=> Input Analyzer) -->
+    <resource>
       <reference>
         <reference value="Parameters/A1-Input-Analyzer"/>
       </reference>
@@ -744,6 +692,7 @@
       <description value="Example Input Analyzer"/>
     </resource>
 
+    <!-- Analyzer: Examples for Consolidated Medication Card document (=> Output Analyzer) -->
     <resource>
       <reference>
         <reference value="Bundle/1-1-ConsolidatedMedicationCard"/>
@@ -883,51 +832,118 @@
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>
-    </resource>-->
+    </resource>
 
-    <!-- Value Sets -->
+    <!-- Analyzer: StructureDefinition -->
     <resource>
       <reference>
-        <reference value="ValueSet/chmed20af-valueset-cdtyp9"/>
+        <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>
       </reference>
-      <name value="ValueSet cdtyp9"/>
-      <description value="UnitCodes"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/chmed20af-valueset-risks-cdscode"/>
+        <reference value="StructureDefinition/chmed20af-analyzer-composition"/>
       </reference>
-      <name value="ValueSet Risks CDSCODE"/>
-      <description value="ValueSet Risks CDSCODE"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/chmed20af-valueset-risks-category"/>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatement"/>
       </reference>
-      <name value="ValueSet Risks Category"/>
-      <description value="ValueSet Risks Category"/>
       <exampleBoolean value="false"/>
     </resource>
-    <!--<resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationrequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationdispense"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-observationpadv"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-observationhistory"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-practitioner"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumentdate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumentsource"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-inputdocumenttype"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-infoinputdocument"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+
+    <!-- Analyzer: OperationDefinition -->
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/chmed20af-analyzer"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+
+    <!-- Analyzer: CodeSystem -->
+    <resource>
+      <reference>
+        <reference value="CodeSystem/chmed20af-codesystem-history-changes"/>
+      </reference>
+      <name value="CodeSystem History Changes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+
+    <!-- Analyzer: ValueSet -->
+    <resource>
       <reference>
         <reference value="ValueSet/chmed20af-valueset-history-changes"/>
       </reference>
       <name value="ValueSet History Changes"/>
       <description value="ValueSet History Changes"/>
       <exampleBoolean value="false"/>
-    </resource>-->
+    </resource>
 
-    <!-- Concept Map -->
-    <!--<resource>
-      <reference>
-        <reference value="ConceptMap/unitcode-cdtyp9-to-ucum"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>-->
+    <!-- ================================ Analyzer End ================================ -->
 
-    <!-- pages, parameters -->
+    <!-- pages -->
     <page>
       <nameUrl value="index.html"/>
       <title value="Home Page"/>
@@ -938,10 +954,13 @@
         <generation value="generated"/>
       </page>
     </page>
+
+    <!-- parameters -->
     <parameter>
       <code value="releaselabel"/>
       <value value="CI build"/>
       <!--<value value="Trial use"/>-->
     </parameter>
+
   </definition>
 </ImplementationGuide>

@@ -89,6 +89,16 @@
                     <postalCode value="8003"/>
                     <country value="CH"/>
                 </address>
+                <communication>
+                    <language>
+                        <coding>
+                            <system value="urn:ietf:bcp:47" />
+                            <code value="de-CH" />
+                            <display value="German (Region=Switzerland)" />
+                        </coding>
+                    </language>
+                    <preferred value="true" />
+                </communication>
             </Patient>
         </resource>
     </entry>
@@ -142,9 +152,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -154,14 +170,20 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -184,6 +206,10 @@
                         <valueDateTime value="2020-03-10T10:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:64bff866-0059-4b56-ab89-d0a3e46fddda"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -226,9 +252,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -266,9 +292,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -278,14 +310,20 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -308,6 +346,10 @@
                         <valueDateTime value="2020-03-10T17:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:8bec35c0-7da4-4b28-aa8c-f657cf0c95b3"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -350,16 +392,16 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A3-MedStatReniten-Analyzer"/>
@@ -390,9 +432,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -402,19 +450,29 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:79ff247f-7e14-4581-90b2-2fa157320bd2"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -467,9 +525,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>

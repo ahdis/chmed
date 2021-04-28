@@ -92,6 +92,16 @@
                     <postalCode value="8003"/>
                     <country value="CH"/>
                 </address>
+                <communication>
+                    <language>
+                        <coding>
+                            <system value="urn:ietf:bcp:47" />
+                            <code value="de-CH" />
+                            <display value="German (Region=Switzerland)" />
+                        </coding>
+                    </language>
+                    <preferred value="true" />
+                </communication>
             </Patient>
         </resource>
     </entry>
@@ -145,9 +155,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -157,14 +173,20 @@
                                     <code value="387207008"/>
                                     <display value="Ibuprofen (substance)"/>
                                 </coding>
+                                <text value="Ibuprofen (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="600"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -187,6 +209,10 @@
                         <valueDateTime value="2020-02-01T09:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d0506dca-64e6-464a-862a-15cdb40b2796"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -229,9 +255,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -268,9 +294,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -280,14 +312,20 @@
                                     <code value="387207008"/>
                                     <display value="Ibuprofen (substance)"/>
                                 </coding>
+                                <text value="Ibuprofen (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="800"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -310,6 +348,10 @@
                         <valueDateTime value="2020-02-01T09:15:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d4745784-4409-48d1-a332-92077c804ac3"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -352,9 +394,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -392,9 +434,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -404,19 +452,29 @@
                                     <code value="387207008"/>
                                     <display value="Ibuprofen (substance)"/>
                                 </coding>
+                                <text value="Ibuprofen (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="600"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:60999d89-95fb-43b2-aa15-22e101a7ae40"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -463,9 +521,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -503,9 +561,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -515,19 +579,29 @@
                                     <code value="387207008"/>
                                     <display value="Ibuprofen (substance)"/>
                                 </coding>
+                                <text value="Ibuprofen (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="800"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:de1a022c-171c-4bdb-b51a-aaa4f0cd850c"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -580,9 +654,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>

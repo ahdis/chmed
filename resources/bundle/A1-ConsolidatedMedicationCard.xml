@@ -89,6 +89,16 @@
                     <postalCode value="8003"/>
                     <country value="CH"/>
                 </address>
+                <communication>
+                    <language>
+                        <coding>
+                            <system value="urn:ietf:bcp:47" />
+                            <code value="de-CH" />
+                            <display value="German (Region=Switzerland)" />
+                        </coding>
+                    </language>
+                    <preferred value="true" />
+                </communication>
             </Patient>
         </resource>
     </entry>
@@ -161,9 +171,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -173,14 +189,20 @@
                                     <code value="387584000"/>
                                     <display value="Simvastatin (substance)"/>
                                 </coding>
+                                <text value="Simvastatin (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="40"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -203,6 +225,10 @@
                         <valueDateTime value="2020-03-01T11:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:6b7e044c-6d68-47f9-879e-0221338b45ba"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -245,16 +271,16 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A1-MedStatSimcora"/>
@@ -285,9 +311,15 @@
                         <amount>
                             <numerator>
                                 <value value="100"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -297,14 +329,20 @@
                                     <code value="387584000"/>
                                     <display value="Simvastatin (substance)"/>
                                 </coding>
+                                <text value="Simvastatin (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="40"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -327,6 +365,10 @@
                         <valueDateTime value="2020-03-01T16:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:a9d448f4-ed8d-45ae-81d9-41f2e82be808"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -369,9 +411,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -409,9 +451,15 @@
                         <amount>
                             <numerator>
                                 <value value="100"/>
+                                <unit value="Stk"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="U{PIECE(S)}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -421,19 +469,29 @@
                                     <code value="387584000"/>
                                     <display value="Simvastatin (substance)"/>
                                 </coding>
+                                <text value="Simvastatin (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="40"/>
                                     <unit value="mg"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:f0301281-41f9-49d5-95ec-ea3ebecc6156"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -489,9 +547,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablette" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -551,5 +609,5 @@
         </resource>
     </entry>
 
-    
+
 </Bundle>

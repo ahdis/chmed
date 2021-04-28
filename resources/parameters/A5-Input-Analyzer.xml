@@ -188,9 +188,15 @@
                                     <amount>
                                         <numerator>
                                             <value value="98"/>
+                                            <unit value="Stk"/>
+                                            <system value="http://unitsofmeasure.org"/>
+                                            <code value="U{PIECE(S)}"/>
                                         </numerator>
                                         <denominator>
                                             <value value="1"/>
+                                            <unit value="Package"/>
+                                            <system value="http://unitsofmeasure.org"/>
+                                            <code value="{Package}"/>
                                         </denominator>
                                     </amount>
                                     <ingredient>
@@ -200,19 +206,29 @@
                                                 <code value="387165009"/>
                                                 <display value="Enalapril maleate (substance)"/>
                                             </coding>
+                                            <text value="Enalapril maleate (substance)"/>
                                         </itemCodeableConcept>
                                         <strength>
                                             <numerator>
                                                 <value value="20"/>
                                                 <unit value="mg"/>
+                                                <system value="http://unitsofmeasure.org"/>
+                                                <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
+                                                <unit value="Tablet"/>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="732936001"/>
                                             </denominator>
                                         </strength>
                                     </ingredient>
                                 </Medication>
                             </contained>
+                            <identifier>
+                                <system value="urn:ietf:rfc:3986"/>
+                                <value value="urn:uuid:1b310b02-6033-4ed1-b356-48ffd9024c4e"/>
+                            </identifier>
                             <status value="completed"/>
                             <category>
                                 <coding>
@@ -252,9 +268,9 @@
                                 <doseAndRate>
                                     <doseQuantity>
                                         <value value="1"/>
-                                        <unit value="Tablette"/>
-                                        <system value="http://unitsofmeasure.org"/>
-                                        <code value="1"/>
+                                        <unit value="Tablette" />
+                                        <system value="http://snomed.info/sct"/>
+                                        <code value="732936001"/>
                                     </doseQuantity>
                                 </doseAndRate>
                             </dosage>
@@ -449,9 +465,15 @@
                                     <amount>
                                         <numerator>
                                             <value value="28"/>
+                                            <unit value="Stk"/>
+                                            <system value="http://unitsofmeasure.org"/>
+                                            <code value="U{PIECE(S)}"/>
                                         </numerator>
                                         <denominator>
                                             <value value="1"/>
+                                            <unit value="Package"/>
+                                            <system value="http://unitsofmeasure.org"/>
+                                            <code value="{Package}"/>
                                         </denominator>
                                     </amount>
                                     <ingredient>
@@ -461,14 +483,20 @@
                                                 <code value="386864001"/>
                                                 <display value="Amlodipine (substance)"/>
                                             </coding>
+                                            <text value="Amlodipine (substance)"/>
                                         </itemCodeableConcept>
                                         <strength>
                                             <numerator>
                                                 <value value="10"/>
                                                 <unit value="mg"/>
+                                                <system value="http://unitsofmeasure.org"/>
+                                                <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
+                                                <unit value="Tablet"/>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="732936001"/>
                                             </denominator>
                                         </strength>
                                     </ingredient>
@@ -479,19 +507,29 @@
                                                 <code value="386876001"/>
                                                 <display value="Valsartan (substance)"/>
                                             </coding>
+                                            <text value="Valsartan (substance)"/>
                                         </itemCodeableConcept>
                                         <strength>
                                             <numerator>
-                                                <value value="170"/>
+                                                <value value="160"/>
                                                 <unit value="mg"/>
+                                                <system value="http://unitsofmeasure.org"/>
+                                                <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
+                                                <unit value="Tablet"/>
+                                                <system value="http://snomed.info/sct"/>
+                                                <code value="732936001"/>
                                             </denominator>
                                         </strength>
                                     </ingredient>
                                 </Medication>
                             </contained>
+                            <identifier>
+                                <system value="urn:ietf:rfc:3986"/>
+                                <value value="urn:uuid:3302c61b-4299-4e63-8938-71cec1b56f2f"/>
+                            </identifier>
                             <status value="completed"/>
                             <category>
                                 <coding>
@@ -531,9 +569,9 @@
                                 <doseAndRate>
                                     <doseQuantity>
                                         <value value="1"/>
-                                        <unit value="Tablette"/>
-                                        <system value="http://unitsofmeasure.org"/>
-                                        <code value="1"/>
+                                        <unit value="Tablette" />
+                                        <system value="http://snomed.info/sct"/>
+                                        <code value="732936001"/>
                                     </doseQuantity>
                                 </doseAndRate>
                             </dosage>

@@ -39,5 +39,6 @@
             "sequence": "DSTU1",
             "fhirversion": "3.0.1"
         }
-    ]
+    ],
+    "category": "Medications / Immunizations"
 }

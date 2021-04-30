@@ -14,9 +14,6 @@
         <resource>
             <Composition>
                 <id value="A5-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
-                </meta>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -46,9 +43,6 @@
         <resource>
             <Device>
                 <id value="Analyzer"/>
-                <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-                </meta>
                 <deviceName>
                     <name value="Documedis Medical Data Analyzer CE"/>
                     <type value="user-friendly-name"/>
@@ -65,9 +59,6 @@
         <resource>
             <Patient>
                 <id value="MonikaWegmueller"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
-                </meta>
                 <identifier>
                     <type>
                         <coding>
@@ -108,9 +99,6 @@
         <resource>
             <Practitioner>
                 <id value="SpezialistMonney"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
                 <identifier>
                     <system value="urn:oid:2.51.1.3"/>
                     <value value="7601000239933"/>
@@ -129,9 +117,6 @@
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="A5-MedStatReniten"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication xmlns="http://hl7.org/fhir">
                         <id value="cont1"/>
@@ -270,9 +255,6 @@
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="A5-MedStatExforge"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication xmlns="http://hl7.org/fhir">
                         <id value="cont1"/>
@@ -434,9 +416,6 @@
         <resource>
             <MedicationStatement>
                 <id value="A5-MedStatExforge-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="cont1"/>
@@ -591,9 +570,6 @@
         <resource>
             <Observation>
                 <id value="A5-History-ChangeTherapy"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
                 <status value="final"/>
                 <code>
                     <coding>

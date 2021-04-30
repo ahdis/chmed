@@ -14,9 +14,6 @@
         <resource>
             <Composition>
                 <id value="1-1-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
-                </meta>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -46,9 +43,6 @@
         <resource>
             <Device>
                 <id value="Analyzer"/>
-                <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-                </meta>
                 <deviceName>
                     <name value="Documedis Medical Data Analyzer CE"/>
                     <type value="user-friendly-name"/>
@@ -63,10 +57,6 @@
         <fullUrl value="http://test.fhir.ch/r4/Patient/MonikaWegmueller"/>
         <resource>
             <Patient>
-                <id value="MonikaWegmueller"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
-                </meta>
                 <identifier>
                     <type>
                         <coding>
@@ -97,9 +87,6 @@
         <resource>
             <Practitioner>
                 <id value="FamilienHausarzt"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
                 <identifier>
                     <system value="urn:oid:2.51.1.3"/>
                     <value value="7601000234438"/>
@@ -118,9 +105,6 @@
         <resource>
             <MedicationStatement>
                 <id value="1-1-MedStatTriatec"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -266,9 +250,6 @@
         <resource>
             <MedicationStatement>
                 <id value="1-1-MedStatTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>

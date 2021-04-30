@@ -12,7 +12,7 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Analyzer MedicationDispense (Medication Card document)"/>
+   <description value="Profile for the Analyzer MedicationDispense"/>
    <fhirVersion value="4.0.1"/>
    <kind value="resource"/>
    <abstract value="false"/>
@@ -22,17 +22,17 @@
    <differential>
       <element id="MedicationDispense">
          <path value="MedicationDispense"/>
+         <short value="Analyzer MedicationDispense"/>
       </element>
-      <element id="MedicationDispense.extension">
-         <path value="MedicationDispense.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+
+      <element id="MedicationDispense.contained">
+         <path value="MedicationDispense.contained"/>
+         <short value="Medication inline resource"/>
+         <min value="1"/>
+         <max value="1"/>
+         <mustSupport value="true"/>
       </element>
+      
       <element id="MedicationDispense.extension:infoInputDocument">
          <path value="MedicationDispense.extension" />
          <sliceName value="infoInputDocument" />
@@ -43,7 +43,9 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument" />
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.extension:prescription">
          <path value="MedicationDispense.extension" />
          <sliceName value="prescription" />
@@ -54,7 +56,9 @@
             <code value="Extension" />
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription" />
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.extension:pharmaceuticalAdvice">
          <path value="MedicationDispense.extension" />
          <sliceName value="pharmaceuticalAdvice" />
@@ -65,7 +69,9 @@
             <code value="Extension" />
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-pharmaceuticaladvice" />
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.extension:treatmentPlan">
          <path value="MedicationDispense.extension" />
          <sliceName value="treatmentPlan" />
@@ -76,19 +82,25 @@
             <code value="Extension" />
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan" />
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.status">
          <path value="MedicationDispense.status"/>
-         <short value="Status of the medication dispense"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.medicationReference">
          <path value="MedicationDispense.medicationReference"/>
          <short value="Reference to the contained medication"/>
+         <min value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.subject">
          <path value="MedicationDispense.subject"/>
          <short value="Patient"/>
@@ -97,13 +109,17 @@
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
          </type>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.performer">
          <path value="MedicationDispense.performer"/>
          <short value="Who performed event"/>
          <min value="1"/>
          <max value="1"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.performer.actor">
          <path value="MedicationDispense.performer.actor"/>
          <short value="Individual who was performing"/>
@@ -111,20 +127,28 @@
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.quantity">
          <path value="MedicationDispense.quantity"/>
          <short value="Number of packages"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.whenHandedOver">
          <path value="MedicationDispense.whenHandedOver"/>
          <short value="When product was given out"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.note">
          <path value="MedicationDispense.note"/>
          <short value="Annotation"/>
          <max value="1"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.dosageInstruction">
          <path value="MedicationDispense.dosageInstruction"/>
          <slicing>
@@ -136,7 +160,9 @@
          </slicing>
          <short value="How the medication should be taken"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.dosageInstruction:nonstructured">
          <path value="MedicationDispense.dosageInstruction"/>
          <sliceName value="nonstructured"/>
@@ -145,9 +171,11 @@
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
          </type>
-         <min value="1"/>
+         <min value="0"/>
          <max value="1"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.dosageInstruction:structured">
          <path value="MedicationDispense.dosageInstruction"/>
          <sliceName value="structured"/>
@@ -156,18 +184,23 @@
             <code value="Dosage"/>
             <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured"/>
          </type>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationDispense.substitution">
          <path value="MedicationDispense.substitution"/>
          <short value="Whether a substitution was performed on the dispense"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationDispense.substitution.wasSubstituted">
          <path value="MedicationDispense.substitution.wasSubstituted"/>
          <short value="Whether a substitution was or was not performed on the dispense"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationDispense.substitution.type">
          <path value="MedicationDispense.substitution.type"/>
          <short value="Code signifying whether a different drug was dispensed from what was prescribed"/>
+         <mustSupport value="true"/>
          <binding>
             <strength value="preferred"/>
             <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"/>

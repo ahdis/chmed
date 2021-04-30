@@ -38,9 +38,9 @@
             <path value="Extension"/>
             <short value="Extension for Private Field"/>
             <definition value="Extension for Private Field."/>
-            <min value="0"/>
             <max value="1"/>
           </element>
+
           <element id="Extension.extension:name">
             <path value="Extension.extension"/>
             <sliceName value="name"/>
@@ -51,6 +51,7 @@
             <type>
               <code value="Extension"/>
             </type>
+            <mustSupport value="true"/>
           </element>
           <element id="Extension.extension:name.extension">
             <path value="Extension.extension.extension"/>
@@ -62,13 +63,16 @@
               <code value="uri"/>
             </type>
             <fixedUri value="name"/>
+            <mustSupport value="true"/>
           </element>
           <element id="Extension.extension:name.valueString">
             <path value="Extension.extension.valueString"/>
             <type>
               <code value="string"/>
             </type>
+            <mustSupport value="true"/>
           </element>
+
           <element id="Extension.extension:value">
             <path value="Extension.extension"/>
             <sliceName value="value"/>
@@ -79,6 +83,7 @@
             <type>
               <code value="Extension"/>
             </type>
+            <mustSupport value="true"/>
           </element>
           <element id="Extension.extension:value.extension">
             <path value="Extension.extension.extension"/>
@@ -90,20 +95,25 @@
               <code value="uri"/>
             </type>
             <fixedUri value="value"/>
+            <mustSupport value="true"/>
           </element>
           <element id="Extension.extension:value.valueString">
             <path value="Extension.extension.valueString"/>
             <type>
               <code value="string"/>
             </type>
+            <mustSupport value="true"/>
           </element>
+
           <element id="Extension.url">
             <path value="Extension.url"/>
             <type>
               <code value="uri"/>
             </type>
             <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield"/>
+            <mustSupport value="true"/>
           </element>
+
           <element id="Extension.value[x]">
             <path value="Extension.value[x]"/>
             <min value="0"/>

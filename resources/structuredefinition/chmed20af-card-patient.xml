@@ -33,16 +33,7 @@
             <map value="Patient"/>
          </mapping>
       </element>
-      <element id="Patient.extension">
-         <path value="Patient.extension" />
-         <slicing>
-            <discriminator>
-               <type value="value" />
-               <path value="url" />
-            </discriminator>
-            <rules value="open" />
-         </slicing>
-      </element>
+
       <element id="Patient.extension:privatefield">
          <path value="Patient.extension" />
          <sliceName value="privatefield" />
@@ -53,20 +44,16 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.PFields"/>
          </mapping>
       </element>
+
       <element id="Patient.identifier">
          <path value="Patient.identifier"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern" />
-               <path value="$this" />
-            </discriminator>
-            <rules value="open" />
-         </slicing>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Id with PatientId.Type (LocalPatientIdentifier = 2)"/>
@@ -75,62 +62,62 @@
       <element id="Patient.identifier:LocalPid">
          <path value="Patient.identifier" />
          <sliceName value="LocalPid" />
-         <short value="Local patient identifiers" />
-         <patternIdentifier>
-            <type>
-               <coding>
-                  <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-                  <code value="MR" />
-               </coding>
-            </type>
-         </patternIdentifier>
+         <mustSupport value="true"/>
       </element>
       <element id="Patient.identifier.system:LocalPid">
          <path value="Patient.identifier.system" />
+         <mustSupport value="true"/>
       </element>
       <element id="Patient.identifier.value:LocalPid">
          <path value="Patient.identifier.value" />
+         <mustSupport value="true"/>
       </element>
+
       <element id="Patient.name">
          <path value="Patient.name"/>
-         <short value="Name for this patient"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="name.given = Patient.FName, name.family = Patient.LName"/>
          </mapping>
       </element>
+
       <element id="Patient.telecom">
          <path value="Patient.telecom"/>
-         <short value="Telephone number"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Phone"/>
          </mapping>
       </element>
+
       <element id="Patient.gender">
          <path value="Patient.gender"/>
-         <short value="male | female | other"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Gender, Male = 1, Female = 2"/>
          </mapping>
       </element>
+
       <element id="Patient.birthDate">
          <path value="Patient.birthDate"/>
-         <short value="The date of birth for the individual"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.BDt"/>
          </mapping>
       </element>
+
       <element id="Patient.address">
          <path value="Patient.address"/>
-         <short value="Address for the patient"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"/>
          </mapping>
       </element>
+
       <element id="Patient.communication">
          <path value="Patient.communication"/>
          <slicing>
@@ -143,29 +130,23 @@
          </slicing>
          <min value="1"/>
          <max value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Patient.communication:languageOfCorrespondance">
          <path value="Patient.communication"/>
          <sliceName value="languageOfCorrespondance"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Patient.communication.language:languageOfCorrespondance">
          <path value="Patient.communication.language"/>
          <short value="The language which can be used to communicate with the patient about his or her health"/>
          <binding>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
-               <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-               <valueString value="Language"/>
-            </extension>
-            <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-               <valueBoolean value="true"/>
-            </extension>
             <strength value="extensible"/>
             <description value="A human language."/>
             <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
          </binding>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary"/>
@@ -174,6 +155,7 @@
       <element id="Patient.communication.preferred:languageOfCorrespondance">
          <path value="Patient.communication.preferred"/>
          <short value="Language preference indicator"/>
+         <mustSupport value="true"/>
       </element>
    </differential>
 </StructureDefinition>

@@ -29,22 +29,19 @@
          <path value="Medication"/>
          <short value="Definition of a Medication"/>
       </element>
+
       <element id="Medication.code">
          <path value="Medication.code"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.code.coding">
          <path value="Medication.code.coding"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="system"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.code.coding:GTIN">
          <path value="Medication.code.coding"/>
          <sliceName value="GTIN"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
@@ -52,57 +49,68 @@
       </element>
       <element id="Medication.code.coding:GTIN.system">
          <path value="Medication.code.coding.system"/>
-         <fixedUri value="urn:oid:2.51.1.1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.code.coding:GTIN.code">
          <path value="Medication.code.coding.code"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.code.coding:GTIN.display">
          <path value="Medication.code.coding.display"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.code.text">
          <path value="Medication.code.text"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Medication.form">
          <path value="Medication.form"/>
-         <binding>
-            <strength value="required"/>
-            <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/edqm-pharmaceuticaldoseform"/>
-         </binding>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.form.coding">
          <path value="Medication.form.coding"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.form.coding.system">
          <path value="Medication.form.coding.system"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.form.coding.code">
          <path value="Medication.form.coding.code"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.form.coding.display">
          <path value="Medication.form.coding.display"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Medication.amount">
          <path value="Medication.amount"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Medication.ingredient">
          <path value="Medication.ingredient"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Medication.ingredient.itemCodeableConcept">
          <path value="Medication.ingredient.itemCodeableConcept"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.coding">
          <path value="Medication.ingredient.itemCodeableConcept.coding"/>
-         <binding>
-            <strength value="extensible"/>
-            <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/ActivePharmaceuticalIngredient"/>
-         </binding>
+         <mustSupport value="true"/>
       </element>
       <element id="Medication.ingredient.itemCodeableConcept.text">
          <path value="Medication.ingredient.itemCodeableConcept.text"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Medication.ingredient.strength">
          <path value="Medication.ingredient.strength"/>
+         <mustSupport value="true"/>
       </element>
    </differential>
 </StructureDefinition>

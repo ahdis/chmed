@@ -29,17 +29,21 @@
       <path value="Extension"/>
       <short value="Extension for Input Document Type"/>
     </element>
+
     <element id="Extension.extension">
       <path value="Extension.extension"/>
       <max value="0"/>
     </element>
+
     <element id="Extension.url">
       <path value="Extension.url"/>
       <type>
         <code value="uri"/>
       </type>
       <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype"/>
+      <mustSupport value="true"/>
     </element>
+
     <element id="Extension.valueCodeableConcept">
       <path value="Extension.valueCodeableConcept"/>
       <short value="Type of the input document"/>
@@ -53,6 +57,7 @@
           <system value="http://loinc.org"/>
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

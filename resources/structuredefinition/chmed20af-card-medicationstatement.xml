@@ -33,19 +33,12 @@
             <map value="Medicament"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.contained">
          <path value="MedicationStatement.contained"/>
+         <mustSupport value="true"/>
       </element>
-      <element id="MedicationStatement.extension">
-         <path value="MedicationStatement.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
+
       <element id="MedicationStatement.extension:privatefield">
          <path value="MedicationStatement.extension" />
          <sliceName value="privatefield" />
@@ -56,105 +49,153 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.identifier">
          <path value="MedicationStatement.identifier"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationStatement.identifier.system">
          <path value="MedicationStatement.identifier.system"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationStatement.identifier.value">
          <path value="MedicationStatement.identifier.value"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationStatement.status">
          <path value="MedicationStatement.status"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationStatement.category">
          <path value="MedicationStatement.category"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://www.whocc.no/atc" />
-            </coding>
-         </patternCodeableConcept>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationStatement.category.coding">
          <path value="MedicationStatement.category.coding"/>
+         <slicing>
+            <discriminator>
+               <type value="value"/>
+               <path value="system"/>
+            </discriminator>
+            <rules value="open"/>
+         </slicing>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="MedicationStatement.category.coding:ATC">
+         <path value="MedicationStatement.category.coding"/>
+         <sliceName value="ATC"/>
          <short value="ATC code (Level 1) if possible"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.category.coding:ATC.system">
+         <path value="MedicationStatement.category.coding.system"/>
+         <min value="1"/>
+         <max value="1"/>
+         <fixedUri value="http://www.whocc.no/atc"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.category.coding:ATC.code">
+         <path value="MedicationStatement.category.coding.code"/>
+         <min value="1"/>
+         <max value="1"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.category.coding:ATC.display">
+         <path value="MedicationStatement.category.coding.display"/>
+         <min value="0"/>
+         <max value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationStatement.category.text">
          <path value="MedicationStatement.category.text"/>
          <short value="Note that no ATC Code is applied"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.subject">
          <path value="MedicationStatement.subject"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+            <!--<targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole-epr"/>-->
+            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+            <!--<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>-->
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHEMED16A"/>
             <map value="Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.TkgRsn"/>
          </mapping>
       </element>
+      <element id="MedicationStatement.reasonCode.text">
+         <path value="MedicationStatement.reasonCode.text"/>
+         <mustSupport value="true"/>
+      </element>
+
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
-         <slicing>
-            <discriminator>
-               <type value="profile"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationStatement.dosage:nonstructured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="nonstructured"/>
-         <type>
-            <code value="Dosage"/>
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
-         </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.AppInstr"/>
          </mapping>
       </element>
+
       <element id="MedicationStatement.dosage:structured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="structured"/>
@@ -162,6 +203,7 @@
             <code value="Dosage"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Pos"/>

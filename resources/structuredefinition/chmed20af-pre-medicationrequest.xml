@@ -33,19 +33,12 @@
             <map value="Medicament"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.contained">
          <path value="MedicationRequest.contained"/>
+         <mustSupport value="true"/>
       </element>
-      <element id="MedicationRequest.extension">
-         <path value="MedicationRequest.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-      </element>
+
       <element id="MedicationRequest.extension:privatefield">
          <path value="MedicationRequest.extension" />
          <sliceName value="privatefield" />
@@ -56,70 +49,74 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.PFields"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.identifier">
          <path value="MedicationRequest.identifier"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.identifier.system">
          <path value="MedicationRequest.identifier.system"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.identifier.value">
          <path value="MedicationRequest.identifier.value"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.status">
          <path value="MedicationRequest.status"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="MedicationRequest.medicationReference">
          <path value="MedicationRequest.medicationReference"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
-         </type>  
+         </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Id with Medicament.IdType 2 (GTIN)"/>
          </mapping>       
       </element>
+
       <element id="MedicationRequest.subject">
          <path value="MedicationRequest.subject"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.note">
          <path value="MedicationRequest.note"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.dosageInstruction">
          <path value="MedicationRequest.dosageInstruction"/>
-         <slicing>
-            <discriminator>
-               <type value="profile"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.dosageInstruction:nonstructured">
          <path value="MedicationRequest.dosageInstruction"/>
          <sliceName value="nonstructured"/>
-         <type>
-            <code value="Dosage"/>
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
-         </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.AppInstr"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.dosageInstruction:structured">
          <path value="MedicationRequest.dosageInstruction"/>
          <sliceName value="structured"/>
@@ -127,16 +124,20 @@
             <code value="Dosage"/>
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-dosage"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Pos"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.dispenseRequest">
          <path value="MedicationRequest.dispenseRequest"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
          <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Rep"/>
@@ -144,20 +145,20 @@
       </element>
       <element id="MedicationRequest.dispenseRequest.quantity">
          <path value="MedicationRequest.dispenseRequest.quantity"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.NbPack"/>
          </mapping>
       </element>
+
       <element id="MedicationRequest.substitution">
          <path value="MedicationRequest.substitution"/>
+         <mustSupport value="true"/>
       </element>
       <element id="MedicationRequest.substitution.allowedCodeableConcept">
          <path value="MedicationRequest.substitution.allowedCodeableConcept"/>
-         <binding>
-            <strength value="preferred"/>
-            <valueSet value="http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode"/>
-         </binding>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicament.Subs"/>

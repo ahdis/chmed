@@ -103,6 +103,9 @@
       <numberOfRepeatsAllowed value="2"/>
       <quantity>
          <value value="1"/>
+         <unit value="Package"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="{Package}"/>
       </quantity>
    </dispenseRequest>
    <substitution>

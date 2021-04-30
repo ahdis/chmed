@@ -29,50 +29,55 @@
          <path value="Observation"/>
          <short value="Time of gestation in days profile"/>
          <definition value="This profile defines how to represent time of gestation observations in FHIR using a standard LOINC code and UCUM units of measure."/>
-         <min value="0"/>
-         <max value="*"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="ToG"/>
          </mapping>
       </element>
+
       <element id="Observation.code">
          <path value="Observation.code"/>
          <short value="Gestational age in days"/>
-         <definition value="Gestational age in days."/>
          <patternCodeableConcept>
             <coding>
                <system value="http://loinc.org" />
                <code value="49052-4" />
             </coding>
          </patternCodeableConcept>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="ToG.Days + ToG.Weeks"/>
          </mapping>
       </element>
+
       <element id="Observation.valueQuantity">
          <path value="Observation.valueQuantity"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Observation.valueQuantity.value">
          <path value="Observation.valueQuantity.value"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Observation.valueQuantity.unit">
          <path value="Observation.valueQuantity.unit"/>
          <fixedString value="d"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Observation.valueQuantity.system">
          <path value="Observation.valueQuantity.system"/>
          <fixedUri value="http://unitsofmeasure.org"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Observation.valueQuantity.code">
          <path value="Observation.valueQuantity.code"/>
          <fixedCode value="d"/>
          <min value="1"/>
+         <mustSupport value="true"/>
       </element>
    </differential>
 </StructureDefinition>

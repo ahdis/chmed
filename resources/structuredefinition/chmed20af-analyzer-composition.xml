@@ -25,6 +25,19 @@
 			<short value="Analyzer Composition"/>
 		</element>
 
+		<element id="Composition.identifier">
+			<path value="Composition.identifier"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Composition.identifier.system">
+			<path value="Composition.identifier.system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Composition.identifier.value">
+			<path value="Composition.identifier.value"/>
+			<mustSupport value="true"/>
+		</element>
+
 		<element id="Composition.status">
 			<path value="Composition.status"/>
 			<fixedCode value="final"/>
@@ -87,7 +100,7 @@
 			<min value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+				<targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement-header"/>
 			</type>
 			<mustSupport value="true"/>
 		</element>

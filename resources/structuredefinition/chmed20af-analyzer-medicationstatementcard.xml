@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="chmed20af-analyzer-medicationstatement"/>
-   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+   <id value="chmed20af-analyzer-medicationstatementcard"/>
+   <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatementcard"/>
    <version value="0.1.0"/>
-   <name value="AnalyzerMedicationStatement"/>
-   <title value="Analyzer MedicationStatement"/>
+   <name value="AnalyzerMedicationStatementCard"/>
+   <title value="Analyzer MedicationStatement (Card)"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>
@@ -12,24 +12,27 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Analyzer MedicationStatement"/>
+   <description value="Profile for the Analyzer MedicationStatement (Card)"/>
    <fhirVersion value="4.0.1"/>
    <kind value="resource"/>
    <abstract value="false"/>
    <type value="MedicationStatement"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement-card"/>
    <derivation value="constraint"/>
    <differential>
       <element id="MedicationStatement">
          <path value="MedicationStatement"/>
-         <short value="Analyzer MedicationStatement"/>
+         <short value="Analyzer MedicationStatement (Card)"/>
       </element>
 
       <element id="MedicationStatement.contained">
          <path value="MedicationStatement.contained"/>
-         <short value="Medication inline resource"/>
-         <min value="1"/>
-         <max value="1"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="MedicationStatement.extension:treatmentplan">
+         <path value="MedicationStatement.extension" />
+         <sliceName value="treatmentplan" />
          <mustSupport value="true"/>
       </element>
 
@@ -46,16 +49,16 @@
          <mustSupport value="true"/>
       </element>
 
-      <element id="MedicationStatement.extension:treatmentplan">
-         <path value="MedicationStatement.extension" />
-         <sliceName value="treatmentplan" />
-         <short value="Reference to the medication treatment plan if the MedicationStatement is part of a Medication Card document"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension" />
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan" />
-         </type>
+      <element id="MedicationStatement.identifier">
+         <path value="MedicationStatement.identifier"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.identifier.system">
+         <path value="MedicationStatement.identifier.system"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.identifier.value">
+         <path value="MedicationStatement.identifier.value"/>
          <mustSupport value="true"/>
       </element>
 
@@ -115,17 +118,15 @@
 
       <element id="MedicationStatement.medicationReference">
          <path value="MedicationStatement.medicationReference"/>
-         <short value="Reference to the contained medication"/>
          <type>
             <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
+            <targetProfile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication"/>
          </type>
          <mustSupport value="true"/>
       </element>
 
       <element id="MedicationStatement.subject">
          <path value="MedicationStatement.subject"/>
-         <short value="Patient"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
@@ -135,7 +136,6 @@
 
       <element id="MedicationStatement.informationSource">
          <path value="MedicationStatement.informationSource"/>
-         <short value="The author of the medical decision"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
@@ -145,24 +145,8 @@
          <mustSupport value="true"/>
       </element>
 
-      <element id="MedicationStatement.derivedFrom">
-         <path value="MedicationStatement.derivedFrom"/>
-         <short value="History of changes"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationpadv"/>
-            <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-         </type>
-         <mustSupport value="true"/>
-      </element>
-
       <element id="MedicationStatement.reasonCode">
          <path value="MedicationStatement.reasonCode"/>
-         <short value="Treatment reason"/>
-         <max value="1"/>
          <mustSupport value="true"/>
       </element>
       <element id="MedicationStatement.reasonCode.text">
@@ -172,46 +156,23 @@
 
       <element id="MedicationStatement.note">
          <path value="MedicationStatement.note"/>
-         <short value="Annoation"/>
-         <max value="1"/>
          <mustSupport value="true"/>
       </element>
 
       <element id="MedicationStatement.dosage">
          <path value="MedicationStatement.dosage"/>
-         <slicing>
-            <discriminator>
-               <type value="profile"/>
-               <path value="$this"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
-         <short value="How the medication should be taken"/>
-         <min value="1"/>
          <mustSupport value="true"/>
       </element>
 
       <element id="MedicationStatement.dosage:nonstructured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="nonstructured"/>
-         <short value="Free text dosage instructions"/>
-         <type>
-            <code value="Dosage"/>
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured"/>
-         </type>
-         <min value="0"/>
-         <max value="1"/>
          <mustSupport value="true"/>
       </element>
 
       <element id="MedicationStatement.dosage:structured">
          <path value="MedicationStatement.dosage"/>
          <sliceName value="structured"/>
-         <short value="Structured dosage instructions"/>
-         <type>
-            <code value="Dosage"/>
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured"/>
-         </type>
          <mustSupport value="true"/>
       </element>
    </differential>

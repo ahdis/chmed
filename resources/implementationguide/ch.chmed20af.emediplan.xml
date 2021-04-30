@@ -849,7 +849,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatement"/>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatement-header"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatementcard"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-analyzer-medicationstatementmtp"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

@@ -14,6 +14,10 @@
         <resource>
             <Composition>
                 <id value="A6-Analyzer"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a6"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -306,7 +310,8 @@
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Actuation (unit of presentation)"/><!--Betätigung (Sprühstoss)-->
+                                    <unit value="Actuation (unit of presentation)"/>
+                                    <!--Betätigung (Sprühstoss)-->
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732981002"/>
                                 </denominator>
@@ -377,7 +382,8 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Actuation (unit of presentation)"/><!--Betätigung (Sprühstoss)-->
+                            <unit value="Actuation (unit of presentation)"/>
+                            <!--Betätigung (Sprühstoss)-->
                             <system value="http://snomed.info/sct"/>
                             <code value="732981002"/>
                         </doseQuantity>
@@ -386,7 +392,7 @@
             </MedicationStatement>
         </resource>
     </entry>
-    
+
 
     <!-- Section entry 1: MedicationStatement -->
     <entry>
@@ -568,7 +574,8 @@
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Actuation (unit of presentation)"/><!--Betätigung (Sprühstoss)-->
+                                    <unit value="Actuation (unit of presentation)"/>
+                                    <!--Betätigung (Sprühstoss)-->
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732981002"/>
                                 </denominator>
@@ -632,7 +639,8 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Actuation (unit of presentation)"/><!--Betätigung (Sprühstoss)-->
+                            <unit value="Actuation (unit of presentation)"/>
+                            <!--Betätigung (Sprühstoss)-->
                             <system value="http://snomed.info/sct"/>
                             <code value="732981002"/>
                         </doseQuantity>
@@ -648,6 +656,10 @@
         <resource>
             <Observation>
                 <id value="A6-History-ChangeROA"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:5d8f03e8-ef50-44a7-b2d5-53e28691a2a9"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

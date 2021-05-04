@@ -14,6 +14,10 @@
         <resource>
             <Composition>
                 <id value="2-7-Analyzer"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3357779"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -724,9 +728,10 @@
         <resource>
             <Observation>
                 <id value="2-6-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:3893faff-9d79-4cca-b903-f66dbe922614"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -750,6 +755,10 @@
         <resource>
             <Observation>
                 <id value="2-7-Norvasc-History"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:094129e6-4c25-48bf-a6f5-acc4b7c36132"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

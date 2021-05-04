@@ -14,6 +14,10 @@
         <resource>
             <Composition>
                 <id value="A2-Analyzer"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a2"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -539,6 +543,10 @@
         <resource>
             <Observation>
                 <id value="A2-History-SameMedication"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:f021ad7d-42f6-4d7b-b5d0-2a1cfe5ef734"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -562,6 +570,10 @@
         <resource>
             <Observation>
                 <id value="A2-History-ChangePractitioner"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:4a6f17e0-2e7b-47dc-914d-f383eb2344a1"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

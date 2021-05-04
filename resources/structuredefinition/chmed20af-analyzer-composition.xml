@@ -27,14 +27,20 @@
 
 		<element id="Composition.identifier">
 			<path value="Composition.identifier"/>
+			<min value="1"/>
+         	<max value="1"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Composition.identifier.system">
 			<path value="Composition.identifier.system"/>
+			<min value="1"/>
+         	<fixedUri value="urn:ietf:rfc:3986"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Composition.identifier.value">
 			<path value="Composition.identifier.value"/>
+			<short value="identifier value as uuid"/>
+         	<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
 

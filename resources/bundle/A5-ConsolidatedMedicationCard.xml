@@ -14,6 +14,10 @@
         <resource>
             <Composition>
                 <id value="A5-Analyzer"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a5"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -409,7 +413,7 @@
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A5-MedStatExforge-Analyzer"/>
@@ -570,6 +574,10 @@
         <resource>
             <Observation>
                 <id value="A5-History-ChangeTherapy"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d9cd8d0e-b441-4935-8dab-e1c3f2b917a8"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

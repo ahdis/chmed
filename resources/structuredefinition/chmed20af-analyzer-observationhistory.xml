@@ -24,6 +24,25 @@
          <path value="Observation"/>
          <short value="Analyzer Observation (History)"/>
       </element>
+
+      <element id="Observation.identifier">
+         <path value="Observation.identifier"/>
+         <min value="1"/>
+         <max value="1"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Observation.identifier.system">
+         <path value="Observation.identifier.system"/>
+         <min value="1"/>
+         <fixedUri value="urn:ietf:rfc:3986"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Observation.identifier.value">
+         <path value="Observation.identifier.value"/>
+         <short value="identifier value as uuid"/>
+         <min value="1"/>
+         <mustSupport value="true"/>
+      </element>
       
       <element id="Observation.status">
          <path value="Observation.status"/>

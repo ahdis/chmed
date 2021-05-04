@@ -14,6 +14,10 @@
         <resource>
             <Composition>
                 <id value="A1-Analyzer"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a1"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -539,6 +543,10 @@
         <resource>
             <Observation>
                 <id value="A1-History-ChangePractitioner"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:9012332e-a89a-433e-b020-8eb80d1be74a"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -562,6 +570,10 @@
         <resource>
             <Observation>
                 <id value="A1-History-Substitution"/>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:dd45bf9b-5e70-42df-a2e6-39390c18cf70"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

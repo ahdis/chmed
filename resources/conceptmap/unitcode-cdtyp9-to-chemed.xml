@@ -324,7 +324,7 @@
             <display value="Stück"/>
             <target>
                 <code value="{Piece}"/>
-                <display value="Piece(s)"/>
+                <display value="Piece"/>
                 <equivalence value="equal"/>
             </target>
         </element>

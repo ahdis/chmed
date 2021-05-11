@@ -323,7 +323,7 @@
             <code value="Stk"/>
             <display value="Stück"/>
             <target>
-                <code value="U{PIECE(S)}"/>
+                <code value="{Piece}"/>
                 <display value="Piece(s)"/>
                 <equivalence value="equal"/>
             </target>

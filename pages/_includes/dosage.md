@@ -42,7 +42,7 @@ are the same, the can be mapped as follows:
 				<value value="1"/>
 				<unit value="Stk"/>
 				<system value="http://unitsofmeasure.org"/>
-				<code value="U{PIECE(S)}"/>
+				<code value="{Piece}"/>
 			</doseQuantity>
 		</doseAndRate>
 	</dosage>

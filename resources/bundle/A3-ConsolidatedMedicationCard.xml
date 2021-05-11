@@ -143,7 +143,7 @@
                                 <value value="98"/>
                                 <unit value="Stk"/>
                                 <system value="http://unitsofmeasure.org"/>
-                                <code value="U{PIECE(S)}"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
@@ -280,7 +280,7 @@
                                 <value value="98"/>
                                 <unit value="Stk"/>
                                 <system value="http://unitsofmeasure.org"/>
-                                <code value="U{PIECE(S)}"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
@@ -417,7 +417,7 @@
                                 <value value="98"/>
                                 <unit value="Stk"/>
                                 <system value="http://unitsofmeasure.org"/>
-                                <code value="U{PIECE(S)}"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>

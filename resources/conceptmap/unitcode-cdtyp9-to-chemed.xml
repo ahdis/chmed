@@ -23,7 +23,7 @@
     </jurisdiction>
     <copyright value="CC-BY-SA-4.0"/>
     <sourceUri value="http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-cdtyp9"/>
-    <targetUri value="http://fhir.ch/ig/ch-emed/ValueSet/UnitsOfPresentation"/>
+    <targetUri value="http://fhir.ch/ig/ch-emed/ValueSet/UnitCode"/>
     
     <!-- Group SNOMED CT -->
     <group>

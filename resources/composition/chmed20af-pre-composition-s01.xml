@@ -59,10 +59,6 @@
             <display value="PRESCRIPTIONS"/>
          </coding>
       </code>
-      <text>
-         <status value="additional"/>
-         <div xmlns="http://www.w3.org/1999/xhtml"> Verordnung </div>
-      </text>
       <entry>
          <reference value="MedicationRequest/chmed20af-pre-medicationrequest-s01-1"/>
       </entry>

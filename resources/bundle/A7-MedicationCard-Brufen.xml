@@ -70,10 +70,6 @@
                             <display value="History of medication use"/>
                         </coding>
                     </code>
-                    <text>
-                        <status value="additional"/>
-                        <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
-                    </text>
                     <entry>
                         <reference value="MedicationStatement/A7-MedStatBrufen-600"/>
                     </entry>

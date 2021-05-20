@@ -74,10 +74,6 @@
                                         <display value="History of medication use"/>
                                     </coding>
                                 </code>
-                                <text>
-                                    <status value="additional"/>
-                                    <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
-                                </text>
                                 <entry>
                                     <reference value="MedicationStatement/A3-MedStatReniten-1x"/>
                                 </entry>
@@ -351,10 +347,6 @@
                                         <display value="History of medication use"/>
                                     </coding>
                                 </code>
-                                <text>
-                                    <status value="additional"/>
-                                    <div xmlns="http://www.w3.org/1999/xhtml"> Aktuelle Medikation </div>
-                                </text>
                                 <entry>
                                     <reference value="MedicationStatement/A3-MedStatReniten-2x"/>
                                 </entry>

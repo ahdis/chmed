@@ -252,10 +252,6 @@
 			<path value="Composition.section.code"/>
 			<mustSupport value="true"/>
 		</element>
-		<element id="Composition.section.text:card">
-			<path value="Composition.section.text"/>
-			<mustSupport value="true"/>
-		</element>
 		<element id="Composition.section.entry:card">
 			<path value="Composition.section.entry"/>
 			<type>

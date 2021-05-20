@@ -203,10 +203,6 @@
          <path value="Composition.section.code"/>
          <mustSupport value="true"/>
       </element>
-      <element id="Composition.section.text:prescription">
-         <path value="Composition.section.text"/>
-         <mustSupport value="true"/>
-      </element>
       <element id="Composition.section.entry:prescription">
          <path value="Composition.section.entry"/>
          <type>

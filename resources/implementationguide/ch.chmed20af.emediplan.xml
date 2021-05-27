@@ -66,7 +66,7 @@
       </reference>
       <name value="Medication Card document"/>
       <description value="Example for Medication Card document"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-bundle"/>-->
     </resource>
     <resource>
       <reference>
@@ -74,19 +74,19 @@
       </reference>
       <name value="Medication Prescription document"/>
       <description value="Example for Medication Prescription document"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-bundle"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-bundle"/>-->
     </resource>
     <resource>
       <reference>
         <reference value="Composition/chmed20af-card-composition-s01"/>
       </reference>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-composition"/>-->
     </resource>
     <resource>
       <reference>
         <reference value="Composition/chmed20af-pre-composition-s01"/>
       </reference>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-composition"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-composition"/>-->
     </resource>
     <resource>
       <reference>
@@ -124,7 +124,7 @@
       </reference>
       <name value="Patient Card"/>
       <description value="Example for a patient"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>-->
     </resource>
     <resource>
       <reference>
@@ -132,7 +132,7 @@
       </reference>
       <name value="Patient Card with an extension"/>
       <description value="Example for a patient with extensions"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-patient"/>-->
     </resource>
     <resource>
       <reference>
@@ -140,7 +140,7 @@
       </reference>
       <name value="Patient Pre"/>
       <description value="Example for a patient"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>-->
     </resource>
     <resource>
       <reference>
@@ -154,7 +154,7 @@
       </reference>
       <name value="Practitioner Card"/>
       <description value="Example for a practitioner"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>-->
     </resource>
     <resource>
       <reference>
@@ -181,7 +181,7 @@
       </reference>
       <name value="MedicationRequest"/>
       <description value="Example for a MedicationReqeust"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medicationrequest"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medicationrequest"/>-->
     </resource>
     <resource>
       <reference>
@@ -189,7 +189,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -197,7 +197,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -205,7 +205,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -213,7 +213,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -221,7 +221,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -229,7 +229,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -237,7 +237,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -245,7 +245,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -253,7 +253,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -261,7 +261,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -269,7 +269,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -277,7 +277,7 @@
       </reference>
       <name value="MedicationStatement (Card)"/>
       <description value="Example for a MedicationStatement"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medicationstatement"/>-->
     </resource>
     <resource>
       <reference>
@@ -305,7 +305,7 @@
       </reference>
       <name value="First day of last menstruation"/>
       <description value="First day of last menstruation"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-dateoflastmenstruation"/>-->
     </resource>
     <resource>
       <reference>
@@ -319,7 +319,7 @@
       </reference>
       <name value="Premature baby"/>
       <description value="Premature baby (&lt;=18 months)"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-prematurebaby"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-prematurebaby"/>-->
     </resource>
     <resource>
       <reference>
@@ -339,7 +339,7 @@
       </reference>
       <name value="Time of gestation"/>
       <description value="Time of gestation: week 30, days 5"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-timeofgestation"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-obs-timeofgestation"/>-->
     </resource>
     <resource>
       <reference>
@@ -353,7 +353,7 @@
       </reference>
       <name value="RiskRenealInsufficiencyLeight"/>
       <description value=">Risk Renal Insufficiency Leight"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>
@@ -361,7 +361,7 @@
       </reference>
       <name value="RiskLiverInsufficiencyExcluded"/>
       <description value=">Risk Liver Insufficiency Excluded"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>
@@ -369,7 +369,7 @@
       </reference>
       <name value="RiskReproduction"/>
       <description value=">Risk Reproduction"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>
@@ -377,7 +377,7 @@
       </reference>
       <name value="RiskCompetitiveAthleteExcluded"/>
       <description value=">Risk Competitive Athlete Excluded"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>
@@ -385,7 +385,7 @@
       </reference>
       <name value="RiskDriverExcluded"/>
       <description value=">Risk Driver Excluded"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>
@@ -393,7 +393,7 @@
       </reference>
       <name value="RiskAllergies"/>
       <description value=">Risk Allergies"/>
-      <exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>
+      <!--<exampleCanonical value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-condition-risks"/>-->
     </resource>
     <resource>
       <reference>

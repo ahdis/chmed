@@ -14,8 +14,11 @@ If their is a dosage change within the posology in CHMED16A different dosage ele
 
 ## Simplified taking times
 
-CHMED16A defines a simplified version of taking times only doses to be taken (morning, midday, evening, night). If the doses
-are the same, the can be mapped as follows:
+CHMED16A defines a simplified version of taking times only doses to be taken (morning, midday, evening, night).    
+See [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
+
+### Normal Dosing
+If the doses are the same, the can be mapped as follows:
 
 1-0-1-0: extract from [example](MedicationStatement-chmed20af-card-medicationstatement-s01-3.html)
 
@@ -47,12 +50,68 @@ are the same, the can be mapped as follows:
 		</doseAndRate>
 	</dosage>
 ```
-See [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
 
+
+### Split Dosing
 For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatement-chmed20af-card-medicationstatement-s02-3.html)
 
+```xml
+	<dosage>
+		<sequence value="1"/>
+		<timing>
+		<repeat>
+			<boundsPeriod>
+				<start value="2016-02-10"/>
+			</boundsPeriod>
+			<when value="PCM"/>
+		</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+				<code value="20053000"/>
+				<display value="Oral use"/>
+			</coding>
+		</route>
+		<doseAndRate>
+			<doseQuantity>
+				<value value="1"/>
+				<unit value="Stk"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="{Piece}"/>
+			</doseQuantity>
+		</doseAndRate>
+	</dosage>
+	<dosage>
+		<sequence value="2"/>
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2016-02-10"/>
+				</boundsPeriod>
+				<when value="PCV"/>
+			</repeat>
+		</timing>
+		<route>
+			<coding>
+				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
+				<code value="20053000"/>
+				<display value="Oral use"/>
+			</coding>
+		</route>
+		<doseAndRate>
+			<doseQuantity>
+				<value value="0.5"/>
+				<unit value="Stk"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="{Piece}"/>
+			</doseQuantity>
+		</doseAndRate>
+	</dosage>
+```
+
 ## Taking times
-* The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing)) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
+* The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
 * The offset (in seconds) of taking time after cycle start in CHMED16A has to represented with timeOfDay.
 
 [Example](MedicationStatement-chmed20af-card-medicationstatement-tt-2-multiple-meronem.html) for a dosage for a product 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks

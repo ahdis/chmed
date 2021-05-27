@@ -124,9 +124,14 @@
          <sliceName value="nonstructured"/>
          <mustSupport value="true"/>
       </element>
-      <element id="MedicationRequest.dosageInstruction:structured">
+      <element id="MedicationRequest.dosageInstruction:structurednormal">
          <path value="MedicationRequest.dosageInstruction"/>
-         <sliceName value="structured"/>
+         <sliceName value="structurednormal"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationRequest.dosageInstruction:structuredsplit">
+         <path value="MedicationRequest.dosageInstruction"/>
+         <sliceName value="structuredsplit"/>
          <mustSupport value="true"/>
       </element>
 

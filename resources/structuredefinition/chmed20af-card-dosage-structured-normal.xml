@@ -1,9 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="chmed20af-card-dosage"/>
-  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage"/>
+  <id value="chmed20af-card-dosage-structured-normal"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage-structured-normal"/>
   <version value="0.1.0"/>
-  <name value="CardDosageChmed20af"/>
-  <title value="Card Dosage for CHMED20AF"/>
+  <name value="CardDosageStructuredNormalChmed20af"/>
+  <title value="Card Dosage Structured Normal for CHMED20AF"/>
   <status value="draft"/>
   <publisher value="IG eMediplan"/>
   <contact>
@@ -12,7 +12,7 @@
       <value value="http://www.emediplan.ch"/>
     </telecom>
   </contact>
-  <description value="Dosage of Medication Card document."/>
+  <description value="Dosage Structured Normal of Medication Card document."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="CHMED16A"/>
@@ -22,7 +22,7 @@
   <kind value="complex-type"/>
   <abstract value="false"/>
   <type value="Dosage"/>
-  <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured"/>
+  <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured-normal"/>
   <derivation value="constraint"/>
   <differential>
     <element id="Dosage">
@@ -32,17 +32,6 @@
         <identity value="CHMED16A"/>
         <map value="Posology"/>
       </mapping>
-    </element>
-
-    <element id="Dosage.extension:dosageType">
-      <path value="Dosage.extension"/>
-      <sliceName value="dosageType"/>
-      <mustSupport value="true"/>
-    </element>
-
-    <element id="Dosage.sequence">
-      <path value="Dosage.sequence"/>
-      <mustSupport value="true"/>
     </element>
 
     <element id="Dosage.timing">

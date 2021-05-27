@@ -117,12 +117,26 @@
          </mapping>
       </element>
 
-      <element id="MedicationRequest.dosageInstruction:structured">
+      <element id="MedicationRequest.dosageInstruction:structurednormal">
          <path value="MedicationRequest.dosageInstruction"/>
-         <sliceName value="structured"/>
+         <sliceName value="structurednormal"/>
          <type>
             <code value="Dosage"/>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-dosage-structured-normal"/>
+         </type>
+         <mustSupport value="true"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.Pos"/>
+         </mapping>
+      </element>
+
+      <element id="MedicationRequest.dosageInstruction:structuredsplit">
+         <path value="MedicationRequest.dosageInstruction"/>
+         <sliceName value="structuredsplit"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-dosage-structured-split"/>
          </type>
          <mustSupport value="true"/>
          <mapping>

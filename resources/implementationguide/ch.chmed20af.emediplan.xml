@@ -20,13 +20,25 @@
     <!-- StructureDefinition and Example -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-card-dosage"/>
+        <reference value="StructureDefinition/chmed20af-card-dosage-structured-normal"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/chmed20af-pre-dosage"/>
+        <reference value="StructureDefinition/chmed20af-card-dosage-structured-split"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pre-dosage-structured-normal"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/chmed20af-pre-dosage-structured-split"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

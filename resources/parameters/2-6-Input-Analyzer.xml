@@ -332,11 +332,6 @@
                                 <text value="-"/>
                             </note>
                             <dosage>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
@@ -710,11 +705,6 @@
                                 <text value="-"/>
                             </note>
                             <dosageInstruction>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
@@ -1362,11 +1352,6 @@
                                 <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                             </dosage>
                             <dosage>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <sequence value="1"/>
                                 <timing>
                                     <repeat>
@@ -1393,11 +1378,6 @@
                                 </doseAndRate>
                             </dosage>
                             <dosage>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <sequence value="2"/>
                                 <timing>
                                     <repeat>
@@ -1771,11 +1751,6 @@
                                 <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                             </dosageInstruction>
                             <dosageInstruction>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <sequence value="1"/>
                                 <timing>
                                     <repeat>
@@ -1802,11 +1777,6 @@
                                 </doseAndRate>
                             </dosageInstruction>
                             <dosageInstruction>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <sequence value="2"/>
                                 <timing>
                                     <repeat>
@@ -2168,11 +2138,6 @@
                                 <text value="-"/>
                             </note>
                             <dosage>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
@@ -2594,11 +2559,6 @@
                                 <text value="-"/>
                             </note>
                             <dosageInstruction>
-                                <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                                    <valueIdentifier>
-                                        <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>

@@ -164,10 +164,14 @@
          <sliceName value="nonstructured"/>
          <mustSupport value="true"/>
       </element>
-
-      <element id="MedicationStatement.dosage:structured">
+      <element id="MedicationStatement.dosage:structurednormal">
          <path value="MedicationStatement.dosage"/>
-         <sliceName value="structured"/>
+         <sliceName value="structurednormal"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="MedicationStatement.dosage:structuredsplit">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="structuredsplit"/>
          <mustSupport value="true"/>
       </element>
    </differential>

@@ -196,12 +196,26 @@
          </mapping>
       </element>
 
-      <element id="MedicationStatement.dosage:structured">
+      <element id="MedicationStatement.dosage:structurednormal">
          <path value="MedicationStatement.dosage"/>
-         <sliceName value="structured"/>
+         <sliceName value="structurednormal"/>
          <type>
             <code value="Dosage"/>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage-structured-normal"/>
+         </type>
+         <mustSupport value="true"/>
+         <mapping>
+            <identity value="CHMED16A"/>
+            <map value="Medicament.Pos"/>
+         </mapping>
+      </element>
+
+      <element id="MedicationStatement.dosage:structuredsplit">
+         <path value="MedicationStatement.dosage"/>
+         <sliceName value="structuredsplit"/>
+         <type>
+            <code value="Dosage"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage-structured-split"/>
          </type>
          <mustSupport value="true"/>
          <mapping>

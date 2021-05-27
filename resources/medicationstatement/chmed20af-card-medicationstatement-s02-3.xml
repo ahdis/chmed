@@ -76,6 +76,7 @@
       <text value="1 Tablette morgens, 1/2 Tablette abends"/>
    </dosage>
    <dosage>
+      <sequence value="1"/>
       <timing>
          <repeat>
             <boundsPeriod>
@@ -101,6 +102,7 @@
       </doseAndRate>
    </dosage>
    <dosage>
+      <sequence value="2"/>
       <timing>
          <repeat>
             <boundsPeriod>

@@ -63,7 +63,6 @@
       </element>
       <element id="Observation.valueQuantity.unit">
          <path value="Observation.valueQuantity.unit"/>
-         <fixedString value="d"/>
          <min value="1"/>
          <mustSupport value="true"/>
       </element>

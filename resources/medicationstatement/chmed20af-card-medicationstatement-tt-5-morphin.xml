@@ -49,13 +49,13 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <strength>
                <numerator>
                   <value value="20"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
-                  <unit value="mL"/>
+                  <unit value="milliliter"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mL"/>
                </denominator>
@@ -105,13 +105,13 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
                <valueQuantity>
                   <value value="200"/>
-                  <unit value="ml"/>
+                  <unit value="milliliter"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mL"/>
                </valueQuantity>
             </extension>
             <value value="50"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mL"/>
          </doseQuantity>

@@ -140,7 +140,7 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -163,13 +163,13 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -218,16 +218,13 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -240,7 +237,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -280,7 +277,7 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -303,13 +300,13 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -367,16 +364,13 @@
                 <quantity>
                     <value value="1"/>
                 </quantity>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -389,7 +383,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -398,7 +392,7 @@
                 <dosageInstruction>
                     <text value="Morgens 1/2 Tablette nehmen"/>
                 </dosageInstruction>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <wasSubstituted value="true"/>
                     <type>
@@ -408,7 +402,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </type>
-                </substitution>
+                </substitution> -->
             </MedicationDispense>
         </resource>
     </entry>
@@ -502,7 +496,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -525,13 +519,13 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -580,9 +574,6 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosage>
@@ -593,7 +584,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -606,7 +597,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -619,7 +610,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -632,7 +623,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -669,7 +660,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -692,13 +683,13 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -756,9 +747,6 @@
                 <quantity>
                     <value value="1"/>
                 </quantity>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosageInstruction>
@@ -769,7 +757,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -782,7 +770,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -795,7 +783,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -808,13 +796,13 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosageInstruction>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <wasSubstituted value="true"/>
                     <type>
@@ -824,7 +812,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </type>
-                </substitution>
+                </substitution> -->
             </MedicationDispense>
         </resource>
     </entry>
@@ -856,7 +844,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -879,13 +867,13 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -934,17 +922,14 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -989,7 +974,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -1012,13 +997,13 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -1072,20 +1057,14 @@
                 <performer>
                     <reference value="Practitioner/FamilienHausarzt"/>
                 </performer>
-                <reasonCode>
-                    <text value="-"/>
-                </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1098,7 +1077,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -1113,7 +1092,7 @@
                         <value value="1"/>
                     </quantity>
                 </dispenseRequest>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <allowedCodeableConcept>
                         <coding>
@@ -1122,7 +1101,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </allowedCodeableConcept>
-                </substitution>
+                </substitution> -->
             </MedicationRequest>
         </resource>
     </entry>
@@ -1154,7 +1133,7 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -1177,13 +1156,13 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -1236,16 +1215,13 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <!--<dosage>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1258,7 +1234,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -1352,7 +1328,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -1375,13 +1351,13 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -1426,9 +1402,6 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <dosage>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosage>
@@ -1439,7 +1412,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1452,7 +1425,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -1465,7 +1438,7 @@
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1478,7 +1451,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>
@@ -1542,7 +1515,7 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
-                                <unit value="Tablet"/>
+                                <unit value="Tablet (unit of presentation)"/>
                                 <system value="http://snomed.info/sct"/>
                                 <code value="732936001"/>
                             </numerator>
@@ -1565,13 +1538,13 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
                                     <system value="http://unitsofmeasure.org"/>
                                     <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="Tablet"/>
+                                    <unit value="Tablet (unit of presentation)"/>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="732936001"/>
                                 </denominator>
@@ -1616,17 +1589,14 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <dosage>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1639,7 +1609,7 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette" />
+                            <unit value="Tablet (unit of presentation)" />
                             <system value="http://snomed.info/sct"/>
                             <code value="732936001"/>
                         </doseQuantity>

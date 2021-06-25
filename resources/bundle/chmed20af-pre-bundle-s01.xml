@@ -40,9 +40,14 @@
             <status value="final"/>
             <type>
                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="57833-6"/>
+                  <display value="Prescription for medication"/>
+               </coding>
+               <coding>
                   <system value="http://snomed.info/sct"/>
                   <code value="761938008"/>
-                  <display value="Medical Prescription record (record artifact)"/>
+                  <display value="Medicinal prescription record (record artifact)"/>
                </coding>
             </type>
             <subject>
@@ -76,10 +81,6 @@
                      <display value="PRESCRIPTIONS"/>
                   </coding>
                </code>
-               <text>
-                  <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Arzneimittelverordnung </div>
-               </text>
                <entry>
                   <reference value="MedicationRequest/10"/>
                </entry>
@@ -99,7 +100,7 @@
                </text>
             </section>
             <section>
-               <title value="Original representation"/>
+               <title value="Original Darstellung"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -110,8 +111,7 @@
                <text>
                   <status value="generated"/>
                   <div xmlns="http://www.w3.org/1999/xhtml">
-            Representation of the original view:
-                     <img src="example-pdf"/>
+                     <a href="Binary/example-pdf">Representation of the original view</a>
                   </div>
                </text>
                <entry>
@@ -265,13 +265,13 @@
                      <strength>
                         <numerator>
                            <value value="10"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="Capsule"/>
+                           <unit value="Capsule (unit of presentation)"/>
                            <system value="http://snomed.info/sct"/>
                            <code value="732937005"/>
                         </denominator>
@@ -291,9 +291,6 @@
             <subject>
                <reference value="Patient/7"/>
             </subject>
-            <note>
-               <text value="-"/>
-            </note>
             <dosageInstruction>
                <text value="1 x ROACCUTAN Kaps 10 mg 30 Stk substitituion alllowed, 2x repeatable"/>
             </dosageInstruction>
@@ -304,7 +301,7 @@
                         <start value="2016-09-12"/>
                         <end value="2020-09-12"/>
                      </boundsPeriod>
-                     <when value="PCM"/>
+                     <when value="MORN"/>
                   </repeat>
                </timing>
                <asNeededBoolean value="true"/>
@@ -318,7 +315,7 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stk"/>
+                     <unit value="Piece"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="{Piece}"/>
                   </doseQuantity>

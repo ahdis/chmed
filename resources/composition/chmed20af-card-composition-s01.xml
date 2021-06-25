@@ -66,7 +66,7 @@
       <reference value="Organization/chmed20af-custodian-s01"/>
    </custodian>
    <section>
-      <title value="Aktuelle Medikation"/>
+      <title value="Medikamentenliste"/>
       <code>
          <coding>
             <system value="http://loinc.org"/>
@@ -134,7 +134,7 @@
       </entry>
    </section>
    <section>
-      <title value="Bemerkungen"/>
+      <title value="Kommentar"/>
       <code>
          <coding>
             <system value="http://loinc.org"/>
@@ -144,11 +144,11 @@
       </code>
       <text>
          <status value="additional"/>
-         <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung </div>
+         <div xmlns="http://www.w3.org/1999/xhtml"> Kommentar </div>
       </text>
    </section>
    <section>
-      <title value="Original representation"/>
+      <title value="Original Darstellung"/>
       <code>
          <coding>
             <system value="http://loinc.org"/>
@@ -159,8 +159,7 @@
       <text>
          <status value="generated"/>
          <div xmlns="http://www.w3.org/1999/xhtml">
-            Representation of the original view:
-            <img src="example-pdf"/>
+            <a href="Binary/example-pdf">Representation of the original view</a>
          </div>
       </text>
       <entry>

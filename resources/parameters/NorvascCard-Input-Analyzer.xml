@@ -37,16 +37,15 @@
                             </identifier>
                             <status value="final"/>
                             <type>
-                                <!-- TBD -->
-                                <coding>
-                                    <system value="http://snomed.info/sct"/>
-                                    <code value="419891008"/>
-                                    <display value="Record artifact (record artifact)"/>
-                                </coding>
                                 <coding>
                                     <system value="http://loinc.org"/>
                                     <code value="77603-9"/>
                                     <display value="Medication treatment plan.extended"/>
+                                </coding>
+                                <coding>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="419891008"/>
+                                    <display value="Record artifact (record artifact)"/>
                                 </coding>
                             </type>
                             <subject>
@@ -78,12 +77,6 @@
                                 <reference value="Organization/Custodian"/>
                             </custodian>
                             <section>
-                                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-sectionid">
-                                    <valueIdentifier>
-                                        <system value="urn:ietf:rfc:3986"/>
-                                        <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <title value="Medikamentöser Behandlungsplan"/>
                                 <code>
                                     <coding>
@@ -196,11 +189,6 @@
                                 <value value="7601000234438"/>
                             </identifier>
                             <name value="Hausarzt"/>
-                            <telecom>
-                                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-                                    <valueCode value="NI"/>
-                                </extension>
-                            </telecom>
                             <address>
                                 <line value="Krankenstrasse 2"/>
                                 <city value="Zürich"/>
@@ -250,6 +238,9 @@
                                 <Medication>
                                     <id value="med"/>
                                     <code>
+                                        <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
+                                            <valueUrl value="#mtp.1"/>
+                                        </extension>
                                         <coding>
                                             <system value="urn:oid:2.51.1.1"/>
                                             <code value="7680500440334"/>
@@ -267,7 +258,7 @@
                                     <amount>
                                         <numerator>
                                             <value value="30"/>
-                                            <unit value="Tablet"/>
+                                            <unit value="Tablet (unit of presentation)"/>
                                             <system value="http://snomed.info/sct"/>
                                             <code value="732936001"/>
                                         </numerator>
@@ -290,13 +281,13 @@
                                         <strength>
                                             <numerator>
                                                 <value value="10"/>
-                                                <unit value="mg"/>
+                                                <unit value="milligram"/>
                                                 <system value="http://unitsofmeasure.org"/>
                                                 <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
-                                                <unit value="Tablet"/>
+                                                <unit value="Tablet (unit of presentation)"/>
                                                 <system value="http://snomed.info/sct"/>
                                                 <code value="732936001"/>
                                             </denominator>
@@ -304,6 +295,9 @@
                                     </ingredient>
                                 </Medication>
                             </contained>
+                            <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
+                                <valueUrl value="#mtp.1"/>
+                            </extension>
                             <identifier>
                                 <system value="urn:ietf:rfc:3986"/>
                                 <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
@@ -316,19 +310,19 @@
                                 <reference value="Patient/MonikaWegmueller"/>
                             </subject>
                             <reasonCode>
+                                <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
+                                    <valueUrl value="#mtp.1.reason"/>
+                                </extension>
                                 <text value="Bluthochdruck"/>
                             </reasonCode>
-                            <note>
-                                <text value="-"/>
-                            </note>
                             <dosage>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
                                             <start value="2012-02-04"/>
                                         </boundsPeriod>
-                                        <when value="ACM"/>
-                                        <when value="ACV"/>
+                                        <when value="MORN"/>
+                                        <when value="EVE"/>
                                     </repeat>
                                 </timing>
                                 <route>
@@ -338,8 +332,19 @@
                                         <display value="Oral use"/>
                                     </coding>
                                 </route>
+                                <doseAndRate>
+                                    <doseQuantity>
+                                        <value value="1"/>
+                                        <unit value="Tablet (unit of presentation)"/>
+                                        <system value="http://snomed.info/sct"/>
+                                        <code value="732936001"/>
+                                    </doseQuantity>
+                                </doseAndRate>
                             </dosage>
                             <dosage>
+                                <extension url="http://hl7.org/fhir/StructureDefinition/narrativeLink">
+                                    <valueUrl value="#mtp.1.dosageintakemode"/>
+                                </extension>
                                 <text value="Morgens und abends je 1 Tablette nehmen"/>
                             </dosage>
                         </MedicationStatement>
@@ -390,7 +395,7 @@
                                 <coding>
                                     <system value="http://snomed.info/sct"/>
                                     <code value="761938008"/>
-                                    <display value="Medical Prescription record (record artifact)"/>
+                                    <display value="Medicinal prescription record (record artifact)"/>
                                 </coding>
                             </type>
                             <subject>
@@ -422,12 +427,6 @@
                                 <reference value="Organization/Custodian"/>
                             </custodian>
                             <section>
-                                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-sectionid">
-                                    <valueIdentifier>
-                                        <system value="urn:ietf:rfc:3986"/>
-                                        <value value="urn:uuid:d41d72ba-2100-11e6-b67b-9e71128cae77"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <title value="Arzneimittelverordnung"/>
                                 <code>
                                     <coding>
@@ -436,52 +435,6 @@
                                         <display value="PRESCRIPTIONS"/>
                                     </coding>
                                 </code>
-                                <text>
-                                    <status value="generated"/>
-                                    <div xmlns="http://www.w3.org/1999/xhtml">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Präpartename</th>
-                                                    <th>Wirkstoffname</th>
-                                                    <th>Galenische Form</th>
-                                                    <th>Dosis pro Einheit</th>
-                                                    <th>Wiederholter Bezug pro Arzneimittel</th>
-                                                    <th>Dosierung</th>
-                                                    <th>Dos.Morgen</th>
-                                                    <th>Dos.Mittag</th>
-                                                    <th>Dos.Abend</th>
-                                                    <th>Dos.Nacht</th>
-                                                    <th>Verabreichungsweg</th>
-                                                    <th>Kommentar</th>
-                                                    <th>Anwendungsdauer</th>
-                                                    <th>Substituierbarkeit</th>
-                                                    <th>Behandlungsgrund</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr id="pre.1">
-                                                    <td id="pre.1.brandedmedication">Norvasc</td>
-                                                    <td id="pre.1.ingredient">Amlodipin</td>
-                                                    <td id="pre.1.dosequantity">Tbl</td>
-                                                    <td id="pre.1.packageform">10 mg/Tabl</td>
-                                                    <td id="pre.1.repeat">Dauerrezept 3 Monate</td>
-                                                    <td id="pre.1.dosageintakemode">Morgens und abends je 1 Tablette nehmen</td>
-                                                    <td id="pre.1.packagesize">30</td>
-                                                    <td id="pre.1.dosagemorning">1</td>
-                                                    <td id="pre.1.dosagelunch">0</td>
-                                                    <td id="pre.1.dosageevening">1</td>
-                                                    <td id="pre.1.dosagenight">0</td>
-                                                    <td id="pre.1.routecode">oral</td>
-                                                    <td id="pre.1.note"/>
-                                                    <td id="pre.1.datefromto"/>
-                                                    <td id="pre.1.subst"/>
-                                                    <td id="pre.1.reason"/>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </text>
                                 <entry>
                                     <reference value="MedicationRequest/2-6-MedReqNorvasc"/>
                                 </entry>
@@ -545,11 +498,6 @@
                                 <value value="7601000234438"/>
                             </identifier>
                             <name value="Hausarzt"/>
-                            <telecom>
-                                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-                                    <valueCode value="NI"/>
-                                </extension>
-                            </telecom>
                             <address>
                                 <line value="Krankenstrasse 2"/>
                                 <city value="Zürich"/>
@@ -616,7 +564,7 @@
                                     <amount>
                                         <numerator>
                                             <value value="30"/>
-                                            <unit value="Tablet"/>
+                                            <unit value="Tablet (unit of presentation)"/>
                                             <system value="http://snomed.info/sct"/>
                                             <code value="732936001"/>
                                         </numerator>
@@ -639,13 +587,13 @@
                                         <strength>
                                             <numerator>
                                                 <value value="10"/>
-                                                <unit value="mg"/>
+                                                <unit value="milligram"/>
                                                 <system value="http://unitsofmeasure.org"/>
                                                 <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
-                                                <unit value="Tablet"/>
+                                                <unit value="Tablet (unit of presentation)"/>
                                                 <system value="http://snomed.info/sct"/>
                                                 <code value="732936001"/>
                                             </denominator>
@@ -679,20 +627,14 @@
                             <subject>
                                 <reference value="Patient/MonikaWegmueller"/>
                             </subject>
-                            <reasonCode>
-                                <text value="-"/>
-                            </reasonCode>
-                            <note>
-                                <text value="-"/>
-                            </note>
                             <dosageInstruction>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
                                             <start value="2012-02-04"/>
                                         </boundsPeriod>
-                                        <when value="ACM"/>
-                                        <when value="ACV"/>
+                                        <when value="MORN"/>
+                                        <when value="EVE"/>
                                     </repeat>
                                 </timing>
                                 <route>
@@ -705,7 +647,7 @@
                                 <doseAndRate>
                                     <doseQuantity>
                                         <value value="1"/>
-                                        <unit value="Tablette" />
+                                        <unit value="Tablet (unit of presentation)" />
                                         <system value="http://snomed.info/sct"/>
                                         <code value="732936001"/>
                                     </doseQuantity>
@@ -720,7 +662,7 @@
                                     <value value="1"/>
                                 </quantity>
                             </dispenseRequest>
-                            <!-- substitution just as test case -->
+                            <!-- substitution just as test case
                             <substitution>
                                 <allowedCodeableConcept>
                                     <coding>
@@ -729,7 +671,7 @@
                                         <display value="equivalent"/>
                                     </coding>
                                 </allowedCodeableConcept>
-                            </substitution>
+                            </substitution> -->
                         </MedicationRequest>
                     </resource>
                 </entry>
@@ -810,12 +752,6 @@
                                 <reference value="Organization/Custodian"/>
                             </custodian>
                             <section>
-                                <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-sectionid">
-                                    <valueIdentifier>
-                                        <system value="urn:ietf:rfc:3986"/>
-                                        <value value="urn:uuid:5fb3eacf-be0d-42aa-9619-abf008c50051"/>
-                                    </valueIdentifier>
-                                </extension>
                                 <title value="Medikamentenliste"/>
                                 <code>
                                     <coding>
@@ -824,47 +760,6 @@
                                         <display value="History of medication use"/>
                                     </coding>
                                 </code>
-                                <text>
-                                    <status value="generated"/>
-                                    <div xmlns="http://www.w3.org/1999/xhtml">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Präpartename</th>
-                                                    <th>Wirkstoffname</th>
-                                                    <th>Galenische Form</th>
-                                                    <th>Dosis pro Einheit</th>
-                                                    <th>Dosierung</th>
-                                                    <th>Dos.Morgen</th>
-                                                    <th>Dos.Mittag</th>
-                                                    <th>Dos.Abend</th>
-                                                    <th>Dos.Nacht</th>
-                                                    <th>Verabreichungsweg</th>
-                                                    <th>Kommentar</th>
-                                                    <th>Anwendungsdauer</th>
-                                                    <th>Behandlungsgrund</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr id="mtpc.2">
-                                                    <td id="mtpc.2.brandedmedication">Norvasc</td>
-                                                    <td id="mtpc.2.ingredient">Amlodipin</td>
-                                                    <td id="mtpc.2.packageform">Tbl</td>
-                                                    <td id="mtpc.2.dosequantity">10 mg</td>
-                                                    <td id="mtpc.2.dosageintakemode">Morgens und abends je 1 Tablette nehmen</td>
-                                                    <td id="mtpc.2.dosagemorning">1</td>
-                                                    <td id="mtpc.2.dosagelunch">0</td>
-                                                    <td id="mtpc.2.dosageevening">1</td>
-                                                    <td id="mtpc.2.dosagenight">0</td>
-                                                    <td id="mtpc.2.routecode">oral</td>
-                                                    <td id="mtpc.2.note"/>
-                                                    <td id="mtpc.2.datefromto">-</td>
-                                                    <td id="mtpc.2.reason">Bluthochdruck</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </text>
                                 <entry>
                                     <reference value="MedicationStatement/2-7-MedStatNorvasc"/>
                                 </entry>
@@ -928,11 +823,6 @@
                                 <value value="7601000234438"/>
                             </identifier>
                             <name value="Hausarzt"/>
-                            <telecom>
-                                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
-                                    <valueCode value="NI"/>
-                                </extension>
-                            </telecom>
                             <address>
                                 <line value="Krankenstrasse 2"/>
                                 <city value="Zürich"/>
@@ -999,7 +889,7 @@
                                     <amount>
                                         <numerator>
                                             <value value="30"/>
-                                            <unit value="Tablet"/>
+                                            <unit value="Tablet (unit of presentation)"/>
                                             <system value="http://snomed.info/sct"/>
                                             <code value="732936001"/>
                                         </numerator>
@@ -1022,13 +912,13 @@
                                         <strength>
                                             <numerator>
                                                 <value value="10"/>
-                                                <unit value="mg"/>
+                                                <unit value="milligram"/>
                                                 <system value="http://unitsofmeasure.org"/>
                                                 <code value="mg"/>
                                             </numerator>
                                             <denominator>
                                                 <value value="1"/>
-                                                <unit value="Tablet"/>
+                                                <unit value="Tablet (unit of presentation)"/>
                                                 <system value="http://snomed.info/sct"/>
                                                 <code value="732936001"/>
                                             </denominator>
@@ -1064,17 +954,14 @@
                             <reasonCode>
                                 <text value="Bluthochdruck"/>
                             </reasonCode>
-                            <note>
-                                <text value="-"/>
-                            </note>
                             <dosage>
                                 <timing>
                                     <repeat>
                                         <boundsPeriod>
                                             <start value="2012-02-04"/>
                                         </boundsPeriod>
-                                        <when value="ACM"/>
-                                        <when value="ACV"/>
+                                        <when value="MORN"/>
+                                        <when value="EVE"/>
                                     </repeat>
                                 </timing>
                                 <route>
@@ -1087,7 +974,7 @@
                                 <doseAndRate>
                                     <doseQuantity>
                                         <value value="1"/>
-                                        <unit value="Tablette" />
+                                        <unit value="Tablet (unit of presentation)" />
                                         <system value="http://snomed.info/sct"/>
                                         <code value="732936001"/>
                                     </doseQuantity>

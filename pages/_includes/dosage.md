@@ -14,8 +14,8 @@ If their is a dosage change within the posology in CHMED16A different dosage ele
 
 ## Simplified taking times
 
-CHMED16A defines a simplified version of taking times only doses to be taken (morning, midday, evening, night).    
-See [TimingEvent](https://www.hl7.org/fhir/v3/TimingEvent/cs.html), the simplified version x-x-x-x is represented with PCM - PCD- PCV and HS coding values. 
+CHMED16A defines a simplified version of taking times only doses to be taken (morning, noon, evening, night).    
+See [EventTiming](https://www.hl7.org/fhir/valueset-event-timing.html), the simplified version x-x-x-x is represented with MORN-NOON-EVE-NIGHT coding values. 
 
 ### Normal Dosing
 If the doses are the same, the can be mapped as follows:
@@ -29,8 +29,8 @@ If the doses are the same, the can be mapped as follows:
 				<boundsPeriod>
 					 <start value="2016-02-10"/>
 				</boundsPeriod>
-				<when value="PCM"/>
-				<when value="PCV"/>
+				<when value="MORN"/>
+				<when value="EVE"/>
 			</repeat>
 		</timing>
 		<route>
@@ -43,7 +43,7 @@ If the doses are the same, the can be mapped as follows:
 		<doseAndRate>
 			<doseQuantity>
 				<value value="1"/>
-				<unit value="Stk"/>
+				<unit value="Piece"/>
 				<system value="http://unitsofmeasure.org"/>
 				<code value="{Piece}"/>
 			</doseQuantity>
@@ -63,7 +63,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 			<boundsPeriod>
 				<start value="2016-02-10"/>
 			</boundsPeriod>
-			<when value="PCM"/>
+			<when value="MORN"/>
 		</repeat>
 		</timing>
 		<route>
@@ -76,7 +76,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 		<doseAndRate>
 			<doseQuantity>
 				<value value="1"/>
-				<unit value="Stk"/>
+				<unit value="Piece"/>
 				<system value="http://unitsofmeasure.org"/>
 				<code value="{Piece}"/>
 			</doseQuantity>
@@ -89,7 +89,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 				<boundsPeriod>
 					<start value="2016-02-10"/>
 				</boundsPeriod>
-				<when value="PCV"/>
+				<when value="EVE"/>
 			</repeat>
 		</timing>
 		<route>
@@ -102,7 +102,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 		<doseAndRate>
 			<doseQuantity>
 				<value value="0.5"/>
-				<unit value="Stk"/>
+				<unit value="Piece"/>
 				<system value="http://unitsofmeasure.org"/>
 				<code value="{Piece}"/>
 			</doseQuantity>
@@ -150,7 +150,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 		<doseAndRate>
 			<doseQuantity>
 				<value value="2"/>
-				<unit value="g"/>
+				<unit value="gram"/>
 				<system value="http://unitsofmeasure.org"/>
 				<code value="g"/>
 			</doseQuantity>
@@ -167,13 +167,13 @@ An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defin
 		<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
 			<fhir:valueQuantity>
 				<fhir:value value="200"/>
-				<fhir:unit value="ml"/>
+				<fhir:unit value="milliliter"/>
 				<fhir:system value="http://unitsofmeasure.org"/>
 				<fhir:code value="mL"/>
 			</fhir:valueQuantity>
 		</fhir:extension>
 		<fhir:value value="50"/>
-		<fhir:unit value="ml"/>
+		<fhir:unit value="milliliter"/>
 		<fhir:system value="http://unitsofmeasure.org"/>
 		<fhir:code value="mL"/>
 	</fhir:doseQuantity>

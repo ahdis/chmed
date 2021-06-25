@@ -40,7 +40,7 @@
             <strength>
                <numerator>
                   <value value="10"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mg"/>
                </numerator>
@@ -66,9 +66,6 @@
    <subject>
       <reference value="Patient/chmed20af-card-patient-s01"/>
    </subject>
-   <note>
-      <text value="-"/>
-   </note>
    <dosageInstruction>
       <text value="1 x ROACCUTAN Kaps 10 mg 30 Stk substitituion alllowed, 2x repeatable"/>
    </dosageInstruction>
@@ -79,7 +76,7 @@
                <start value="2016-09-12"/>
                <end value="2020-09-12"/>
             </boundsPeriod>
-            <when value="PCM"/>
+            <when value="MORN"/>
          </repeat>
       </timing>
       <asNeededBoolean value="true"/>
@@ -93,7 +90,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stk"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="{Piece}"/>
          </doseQuantity>

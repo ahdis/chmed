@@ -40,7 +40,7 @@
             <strength>
                <numerator>
                   <value value="10"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mg"/>
                </numerator>
@@ -71,9 +71,6 @@
    <reasonCode>
       <text value="Akne"/>
    </reasonCode>
-   <note>
-      <text value="-"/>
-   </note>
    <dosage>
       <text value="bei Bedarf"/>
    </dosage>
@@ -84,7 +81,7 @@
                <start value="2016-09-12"/>
                <end value="2020-09-12"/>
             </boundsPeriod>
-            <when value="PCM"/>
+            <when value="MORN"/>
          </repeat>
       </timing>
       <asNeededBoolean value="true"/>
@@ -98,7 +95,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stk"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="{Piece}"/>
          </doseQuantity>

@@ -46,13 +46,13 @@
             <strength>
                <numerator>
                   <value value="100"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="10"/>
-                  <unit value="mL"/>
+                  <unit value="milliliter"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="mL"/>
                </denominator>
@@ -100,7 +100,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="10"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mL"/>
          </doseQuantity>
@@ -126,7 +126,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="20"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mL"/>
          </doseQuantity>
@@ -152,7 +152,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="30"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mL"/>
          </doseQuantity>
@@ -178,7 +178,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="40"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mL"/>
          </doseQuantity>

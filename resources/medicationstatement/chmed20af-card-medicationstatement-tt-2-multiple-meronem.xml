@@ -47,13 +47,13 @@
             <strength>
                <numerator>
                   <value value="1"/>
-                  <unit value="g"/>
+                  <unit value="gram"/>
                   <system value="http://unitsofmeasure.org"/>
                   <code value="g"/>
                </numerator>
                <denominator>
                   <value value="1"/>
-                  <unit value="Vial"/>
+                  <unit value="Vial (unit of presentation)"/>
                   <system value="http://snomed.info/sct"/>
                   <code value="733026001"/>
                </denominator>
@@ -109,7 +109,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="2"/>
-            <unit value="g"/>
+            <unit value="gram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="g"/>
          </doseQuantity>

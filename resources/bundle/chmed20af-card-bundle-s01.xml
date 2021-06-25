@@ -48,6 +48,11 @@
             <status value="final"/>
             <type>
                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="56445-0"/>
+                  <display value="Medication summary"/>
+               </coding>
+               <coding>
                   <system value="http://snomed.info/sct"/>
                   <code value="721912009"/>
                   <display value="Medication summary document (record artifact)"/>
@@ -91,10 +96,6 @@
                      <display value="History of medication use"/>
                   </coding>
                </code>
-               <text>
-                  <status value="additional"/>
-                  <div xmlns="http://www.w3.org/1999/xhtml"> Medikamentenliste </div>
-               </text>
                <entry>
                   <reference value="MedicationStatement/11"/>
                </entry>
@@ -169,7 +170,7 @@
                </text>
             </section>
             <section>
-               <title value="Original representation"/>
+               <title value="Original Darstellung"/>
                <code>
                   <coding>
                      <system value="http://loinc.org"/>
@@ -180,8 +181,7 @@
                <text>
                   <status value="generated"/>
                   <div xmlns="http://www.w3.org/1999/xhtml">
-            Representation of the original view:
-                     <img src="example-pdf"/>
+                     <a href="Binary/example-pdf">Representation of the original view</a>
                   </div>
                </text>
                <entry>
@@ -423,13 +423,13 @@
                      <strength>
                         <numerator>
                            <value value="10"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="Capsule"/>
+                           <unit value="Capsule (unit of presentation)"/>
                            <system value="http://snomed.info/sct"/>
                            <code value="732937005"/>
                         </denominator>
@@ -454,9 +454,6 @@
             <reasonCode>
                <text value="Akne"/>
             </reasonCode>
-            <note>
-               <text value="-"/>
-            </note>
             <dosage>
                <text value="bei Bedarf"/>
             </dosage>
@@ -467,7 +464,7 @@
                         <start value="2016-09-12"/>
                         <end value="2020-09-12"/>
                      </boundsPeriod>
-                     <when value="PCM"/>
+                     <when value="MORN"/>
                   </repeat>
                </timing>
                <asNeededBoolean value="true"/>
@@ -481,7 +478,7 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stk"/>
+                     <unit value="Piece"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="{Piece}"/>
                   </doseQuantity>
@@ -534,13 +531,13 @@
                      <strength>
                         <numerator>
                            <value value="100"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="Tablet"/>
+                           <unit value="Tablet (unit of presentation)"/>
                            <system value="http://snomed.info/sct"/>
                            <code value="732936001"/>
                         </denominator>
@@ -575,7 +572,7 @@
                         <start value="2016-09-12"/>
                         <end value="2020-09-12"/>
                      </boundsPeriod>
-                     <when value="PCM"/>
+                     <when value="MORN"/>
                   </repeat>
                </timing>
                <route>
@@ -588,7 +585,7 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stk"/>
+                     <unit value="Piece"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="{Piece}"/>
                   </doseQuantity>
@@ -641,13 +638,13 @@
                      <strength>
                         <numerator>
                            <value value="25"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="Tablet"/>
+                           <unit value="Tablet (unit of presentation)"/>
                            <system value="http://snomed.info/sct"/>
                            <code value="732936001"/>
                         </denominator>
@@ -681,8 +678,8 @@
                      <boundsPeriod>
                         <start value="2016-02-10"/>
                      </boundsPeriod>
-                     <when value="PCM"/>
-                     <when value="PCV"/>
+                     <when value="MORN"/>
+                     <when value="EVE"/>
                   </repeat>
                </timing>
                <route>
@@ -695,7 +692,7 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stk"/>
+                     <unit value="Piece"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="{Piece}"/>
                   </doseQuantity>
@@ -748,13 +745,13 @@
                      <strength>
                         <numerator>
                            <value value="20"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="Tablet"/>
+                           <unit value="Tablet (unit of presentation)"/>
                            <system value="http://snomed.info/sct"/>
                            <code value="732936001"/>
                         </denominator>
@@ -788,7 +785,7 @@
                      <boundsPeriod>
                         <start value="2016-02-10"/>
                      </boundsPeriod>
-                     <when value="PCV"/>
+                     <when value="EVE"/>
                   </repeat>
                </timing>
                <route>
@@ -801,7 +798,7 @@
                <doseAndRate>
                   <doseQuantity>
                      <value value="1"/>
-                     <unit value="Stk"/>
+                     <unit value="Piece"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="{Piece}"/>
                   </doseQuantity>
@@ -863,13 +860,13 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                      <strength>
                         <numerator>
                            <value value="20"/>
-                           <unit value="mg"/>
+                           <unit value="milligram"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mg"/>
                         </numerator>
                         <denominator>
                            <value value="1"/>
-                           <unit value="ml"/>
+                           <unit value="milliliter"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mL"/>
                         </denominator>
@@ -919,13 +916,13 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                      <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
                         <valueQuantity>
                            <value value="200"/>
-                           <unit value="ml"/>
+                           <unit value="milliliter"/>
                            <system value="http://unitsofmeasure.org"/>
                            <code value="mL"/>
                         </valueQuantity>
                      </extension>
                      <value value="50"/>
-                     <unit value="ml"/>
+                     <unit value="milliliter"/>
                      <system value="http://unitsofmeasure.org"/>
                      <code value="mL"/>
                   </doseQuantity>
@@ -974,7 +971,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <effectiveDateTime value="2016-09-12"/>
             <valueQuantity>
                <value value="178"/>
-               <unit value="cm"/>
+               <unit value="centimeter"/>
                <system value="http://unitsofmeasure.org"/>
                <code value="cm"/>
             </valueQuantity>
@@ -1026,7 +1023,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <effectiveDateTime value="2016-09-12"/>
             <valueQuantity>
                <value value="72"/>
-               <unit value="kg"/>
+               <unit value="kilogram"/>
                <system value="http://unitsofmeasure.org"/>
                <code value="kg"/>
             </valueQuantity>
@@ -1118,7 +1115,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             </subject>
             <valueQuantity>
                <value value="215"/>
-               <unit value="d"/>
+               <unit value="Day"/>
                <system value="http://unitsofmeasure.org"/>
                <code value="d"/>
             </valueQuantity>

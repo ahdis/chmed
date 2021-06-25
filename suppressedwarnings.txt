@@ -1,5 +1,8 @@
 == Suppressed Messages ==
 
+# Build error
+The image source 'example-pdf' cannot be resolved
+
 # The following code systems are external and not supported by terminology server
 Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
 

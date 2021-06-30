@@ -22,7 +22,7 @@ The FHIR ressource Bundle bundles the corresponding entries in a document. It co
 * An entry to the composition, the actual document that references different resources (further entry elements in the bundle)
 * Further entry elements to the patient, medication card entries, etc.
 
-[Profile for Medication Card document](StructureDefinition-chmed20af-card-bundle.html) &#124; [Example for Medication Card document (xml)](Bundle-chmed20af-card-bundle-s01.xml.html)
+Medication Card document: [Profile](StructureDefinition-chmed20af-card-bundle.html), Example ([XML](Bundle-chmed20af-card-bundle-s01.xml.html), [JSON](Bundle-chmed20af-card-bundle-s01.json.html))
 
 
 ## Composition
@@ -45,7 +45,7 @@ The Composition ressource defines the following parameter for the Medication Car
 | section:healthconcerns | Health concerns |  Entry | MedicalData |
 | section:annotation | Notes |  text | Rmk |
 
-[Profile for Medication Card Composition](StructureDefinition-chmed20af-card-composition.html)
+Composition Medication Card document: [Profile](StructureDefinition-chmed20af-card-composition.html), Example ([XML](Composition-chmed20af-card-composition-s01.xml.html), [JSON](Composition-chmed20af-card-composition-s01.json.html))
 
 
 ## Patient
@@ -62,7 +62,7 @@ The Composition ressource defines the following parameter for the Medication Car
 | address  | Address for the patient  | Address  | address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 | communication.language  | Language of the patient  | CodeableConcept  | Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" |
 
-[Profile for Medication Card Patient](StructureDefinition-chmed20af-card-patient.html) &#124; [Example for Patient (xml)](Patient-chmed20af-card-patient-s01.xml.html)
+Patient (Medication Card document): [Profile](StructureDefinition-chmed20af-card-patient.html), Example ([XML](Patient-chmed20af-card-patient-s01.xml.html), [JSON](Patient-chmed20af-card-patient-s01.json.html))
 
 
 ## Practitioner
@@ -73,7 +73,7 @@ The Composition ressource defines the following parameter for the Medication Car
 | identifier  | Gln for this practitioner  | Identifier  | Auth.Gln |
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName |
 
-[Profile for Practitioner](StructureDefinition-chmed20af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed20af-practitioner-s01.xml.html)
+Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-chmed20af-practitioner-s01.xml.html), [JSON](Practitioner-chmed20af-practitioner-s01.json.html))
 
 
 ## Medication Section 
@@ -94,9 +94,11 @@ The medication section contains the entries for the current medications for pati
 | Dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
 | Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
-[Profile for MedicationStatement](StructureDefinition-chmed20af-card-medicationstatement.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-card-medication.html)
-
-Examples for MedicationStatements [1](MedicationStatement-chmed20af-card-medicationstatement-s01-1.html) &#124; [2](MedicationStatement-chmed20af-card-medicationstatement-s01-2.html) &#124; [3](MedicationStatement-chmed20af-card-medicationstatement-s01-3.html) &#124; [4](MedicationStatement-chmed20af-card-medicationstatement-s01-4.html)
+MedicationStatement: [Profile](StructureDefinition-chmed20af-card-medicationstatement.html), 
+Example 1 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-1.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-1.json.html)),
+Example 2 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-2.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-2.json.html)),
+Example 3 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-3.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-3.json.html)),
+Example 4 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-4.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-4.json.html))
 
 
 ## Health Concerns Section 
@@ -133,7 +135,7 @@ The FHIR ressource Bundle bundles the corresponding entries in a document. It co
 * An entry to the composition, the actual document that references different resources (further entry elements in the bundle)
 * Further entry elements to the patient, medication entries, etc.
 
-[Profile for Medication Prescription document](StructureDefinition-chmed20af-pre-bundle.html) &#124; [Example for Medication Prescription document (xml)](Bundle-chmed20af-pre-bundle-s01.xml.html)
+Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-bundle.html), Example ([XML](Bundle-chmed20af-pre-bundle-s01.xml.html), [JSON](Bundle-chmed20af-pre-bundle-s01.json.html))
 
 
 ## Composition
@@ -155,7 +157,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | section:prescription | List of medicaments |  MedicationRequest | Medicaments |
 | section:annotation | Notes |  text | Rmk |
 
-[Profile for Prescription Composition](StructureDefinition-chmed20af-pre-composition.html)
+Composition Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-composition.html), Example ([XML](Composition-chmed20af-pre-composition-s01.xml.html), [JSON](Composition-chmed20af-pre-composition-s01.json.html))
 
 
 ## Patient
@@ -171,7 +173,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | birthDate  | Date of birth  | date  | Patient.BDt | 
 | address  | Address for the patient  | Address |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 
-[Profile for Prescription Patient](StructureDefinition-chmed20af-pre-patient.html) &#124; [Example for Patient (xml)](Patient-chmed20af-card-patient-ext.xml.html)
+Patient (Medication Prescription document): [Profile](StructureDefinition-chmed20af-pre-patient.html), Example ([XML](Patient-chmed20af-pre-patient-s01.xml.html), [JSON](Patient-chmed20af-pre-patient-s01.json.html))
 
 
 ## Practitioner
@@ -183,7 +185,7 @@ The Composition ressource defines the following parameter for the Prescription:
 | identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | 
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName | 
 
-[Profile for Practitioner](StructureDefinition-chmed20af-practitioner.html) &#124; [Example for Practitioner (xml)](Practitioner-chmed20af-practitioner-s01.xml.html)
+Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-chmed20af-practitioner-s01.xml.html), [JSON](Practitioner-chmed20af-practitioner-s01.json.html))
 
 
 ## Medication Prescribed Section 
@@ -205,6 +207,4 @@ The medication section contains the entries for the prescriped medications for t
 | dispenseRequest.quantity  | Number of package to be delivered  | 	SimpleQuantity  | Medicament.NbPack |
 | substitution.allowedCodeableConcept |  Medication is substitutable  | CodeableConcept  | Medicament.Subs | 
 
-[Profile for MedicationRequest](StructureDefinition-chmed20af-pre-medicationrequest.html) &#124; [Profile for Medication](StructureDefinition-chmed20af-pre-medication.html)
-
-Examples for MedicationRequest [1](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.html)
+MedicationRequest: [Profile](StructureDefinition-chmed20af-pre-medicationrequest.html), Example ([XML](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.xml.html), [JSON](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.json.html))

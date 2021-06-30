@@ -29,29 +29,27 @@
          <path value="Observation"/>
          <short value="premature baby true only if age &lt;= 18 months"/>
          <definition value="This profile defines  how to represent a premature baby in FHIR using a standard SNOMED CT code."/>
-         <min value="0"/>
-         <max value="*"/>
       </element>
+
       <element id="Observation.code">
          <path value="Observation.code"/>
          <short value="Premature infant"/>
-         <definition value="Premature infant"/>
-         <min value="1"/>
-         <max value="1"/>
          <patternCodeableConcept>
             <coding>
                <system value="http://snomed.info/sct" />
                <code value="395507008" />
             </coding>
          </patternCodeableConcept>
+         <mustSupport value="true"/>
       </element>
-      <element id="Observation.value[x]">
-         <path value="Observation.value[x]"/>
+
+      <element id="Observation.valueBoolean">
+         <path value="Observation.valueBoolean"/>
          <min value="1"/>
-         <max value="1"/>
          <type>
             <code value="boolean"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="MedicalData.Prem"/>

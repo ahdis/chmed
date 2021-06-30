@@ -14,8 +14,12 @@ resources/StructureDefinition/bp.xml
 org.hl7.fhir.igpublisher.jar
 org.hl7.fhir.publisher.jar
 org.hl7.fhir.validator.jar
-ig.ini
 resources/implementationguide/ig-expansion-parameters.json
 resources/implementationguide/ig-new.json
 resources/implementationguide/ig-new.xml
 resources/implementationguide/ig-validation-parameters.json
+ig.ini
+**.jar
+www/*   
+!www/package-list.json   
+!www/publish.ini

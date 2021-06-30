@@ -12,7 +12,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont3"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -36,19 +36,29 @@
                   <code value="372826007"/>
                   <display value="Metoprolol (substance)"/>
                </coding>
+               <text value="Metoprolol"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="25"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Tablet (unit of presentation)"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="732936001"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:e85c2ec3-d4a4-499d-9e00-7360bee9ce6a"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont3"/>
@@ -71,8 +81,8 @@
             <boundsPeriod>
                <start value="2016-02-10"/>
             </boundsPeriod>
-            <when value="PCM"/>
-            <when value="PCV"/>
+            <when value="MORN"/>
+            <when value="EVE"/>
          </repeat>
       </timing>
       <route>
@@ -85,9 +95,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stück"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="{Piece}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

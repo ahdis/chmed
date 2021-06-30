@@ -4,8 +4,8 @@
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
     </meta>
     <identifier>
-        <system value="http://emediplan.ch/chmed20af/id"/>
-        <value value="26d3dff7-ab05-4737-a49c-5eccd3357777"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3357777"/>
     </identifier>
     <type value="document"/>
     <timestamp value="2020-04-03T12:00:00.000+00:00"/>
@@ -14,9 +14,10 @@
         <resource>
             <Composition>
                 <id value="2-7-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd3357777"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -55,9 +56,6 @@
         <resource>
             <Device>
                 <id value="Analyzer"/>
-                <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-                </meta>
                 <deviceName>
                     <name value="Documedis Medical Data Analyzer CE"/>
                     <type value="user-friendly-name"/>
@@ -73,9 +71,6 @@
         <resource>
             <Patient>
                 <id value="MonikaWegmueller"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
-                </meta>
                 <identifier>
                     <type>
                         <coding>
@@ -106,9 +101,6 @@
         <resource>
             <Practitioner>
                 <id value="FamilienHausarzt"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
                 <identifier>
                     <system value="urn:oid:2.51.1.3"/>
                     <value value="7601000234438"/>
@@ -127,9 +119,6 @@
         <resource>
             <MedicationStatement>
                 <id value="1-1-MedStatTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -151,9 +140,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -168,11 +163,15 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -195,6 +194,10 @@
                         <valueDateTime value="2011-11-29T11:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:c9f758a1-296c-4710-84d4-e181db8c7478"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -215,21 +218,13 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -242,6 +237,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -251,16 +249,13 @@
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Section entry 1: Reference from MedicationStatement.derivedFrom (History) -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationDispense/1-2-MedDispTriatec-Analyzer"/>
         <resource>
             <MedicationDispense>
                 <id value="1-2-MedDispTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -282,9 +277,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -299,11 +300,15 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -340,6 +345,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:488bd23a-20c6-11e6-b67b-9e71128cae77"/>
+                </identifier>
                 <status value="completed"/>
                 <medicationReference>
                     <reference value="#med"/>
@@ -355,21 +364,13 @@
                 <quantity>
                     <value value="1"/>
                 </quantity>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -382,13 +383,16 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosageInstruction>
                 <dosageInstruction>
                     <text value="Morgens 1/2 Tablette nehmen"/>
                 </dosageInstruction>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <wasSubstituted value="true"/>
                     <type>
@@ -398,7 +402,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </type>
-                </substitution>
+                </substitution> -->
             </MedicationDispense>
         </resource>
     </entry>
@@ -409,9 +413,6 @@
         <resource>
             <Observation>
                 <id value="2-2-PharmAdvTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationpadv"/>
-                </meta>
                 <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument">
                     <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource">
                         <valueString value="EPD"/>
@@ -443,6 +444,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:8ed02d0a-2971-11e6-b67b-9e71128cae77"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -470,9 +475,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-3-MedStatBeloczok-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -494,9 +496,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -511,10 +519,15 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -537,6 +550,10 @@
                         <valueDateTime value="2012-02-04T14:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:17931678-20b4-11e6-b67b-9e71128cca77"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -557,25 +574,17 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosage>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="1"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -588,22 +597,20 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="2"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -616,6 +623,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -629,9 +639,6 @@
         <resource>
             <MedicationDispense>
                 <id value="2-4-MedDispBeloczok-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationdispense"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -653,9 +660,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -670,10 +683,15 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -710,6 +728,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d8143fea-4778-11e6-beb8-9e71128cae77"/>
+                </identifier>
                 <status value="completed"/>
                 <medicationReference>
                     <reference value="#med"/>
@@ -725,25 +747,17 @@
                 <quantity>
                     <value value="1"/>
                 </quantity>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosageInstruction>
                 <dosageInstruction>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="1"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -756,22 +770,20 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosageInstruction>
                 <dosageInstruction>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="2"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -784,10 +796,13 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosageInstruction>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <wasSubstituted value="true"/>
                     <type>
@@ -797,7 +812,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </type>
-                </substitution>
+                </substitution> -->
             </MedicationDispense>
         </resource>
     </entry>
@@ -808,9 +823,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-5-MedStatNorvasc-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -832,9 +844,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -849,10 +867,15 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -875,6 +898,10 @@
                         <valueDateTime value="2012-02-04T14:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:5712fffe-20c6-11e6-b67b-9e71128cae77"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -895,22 +922,14 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -934,9 +953,6 @@
         <resource>
             <MedicationRequest>
                 <id value="2-6-MedReqNorvasc-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationrequest"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -958,9 +974,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -975,10 +997,15 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -1015,6 +1042,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d41d72ba-2100-11e6-b67b-9e71128cae77"/>
+                </identifier>
                 <status value="completed"/>
                 <intent value="order"/>
                 <medicationReference>
@@ -1026,25 +1057,14 @@
                 <performer>
                     <reference value="Practitioner/FamilienHausarzt"/>
                 </performer>
-                <reasonCode>
-                    <text value="-"/>
-                </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosageInstruction>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1057,6 +1077,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosageInstruction>
@@ -1069,7 +1092,7 @@
                         <value value="1"/>
                     </quantity>
                 </dispenseRequest>
-                <!-- substitution just as test case -->
+                <!-- substitution just as test case
                 <substitution>
                     <allowedCodeableConcept>
                         <coding>
@@ -1078,7 +1101,7 @@
                             <display value="equivalent"/>
                         </coding>
                     </allowedCodeableConcept>
-                </substitution>
+                </substitution> -->
             </MedicationRequest>
         </resource>
     </entry>
@@ -1089,9 +1112,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-7-MedStatBeloczokFromCard-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -1113,9 +1133,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -1130,10 +1156,15 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -1170,6 +1201,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:d0f885ca-afa6-4e7e-905d-f7698f9607aa"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -1190,25 +1225,17 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosage>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="1"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1221,22 +1248,20 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>
                     <sequence value="2"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1249,6 +1274,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -1262,9 +1290,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-7-MedStatNorvascFromCard-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -1286,9 +1311,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -1303,10 +1334,15 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -1343,6 +1379,10 @@
                         </valueIdentifier>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:534996fe-5e45-40ed-9388-06fa268e13d8"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -1363,22 +1403,14 @@
                 <reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>
-                <note>
-                    <text value="-"/>
-                </note>
                 <dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1391,6 +1423,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -1407,9 +1442,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-2-MedStatTriatec-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -1431,9 +1463,15 @@
                         <amount>
                             <numerator>
                                 <value value="20"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -1448,16 +1486,24 @@
                             <strength>
                                 <numerator>
                                     <value value="2.5"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
-                                    <unit value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:b3c2329c-87fd-4b75-aacc-a5ba021ff1ef"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -1499,21 +1545,13 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <!--<dosage>
-                    <extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2011-11-29"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1526,6 +1564,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>-->
@@ -1542,9 +1583,10 @@
         <resource>
             <Observation>
                 <id value="1-2-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:ab1de402-2c23-45e1-80f4-47c6347eec43"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -1568,9 +1610,10 @@
         <resource>
             <Observation>
                 <id value="2-2-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:7721f918-0634-453d-9c2d-e2d9d7f50cf9"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -1594,9 +1637,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-7-MedStatBeloczok-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -1618,9 +1658,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -1635,15 +1681,24 @@
                             <strength>
                                 <numerator>
                                     <value value="50"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:0d201c92-318c-4017-bd8a-da3dde8ed5a5"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -1685,25 +1740,17 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <dosage>
                     <text value="Morgens 1 und abends 1/2 Tablette nehmen"/>
                 </dosage>
                 <dosage>
-                    <!--<extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>-->
                     <sequence value="1"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1716,22 +1763,20 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
                 <dosage>
-                    <!--<extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.9"/>
-                        </valueIdentifier>
-                    </extension>-->
                     <sequence value="2"/>
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACV"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1744,6 +1789,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="0.5"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -1757,9 +1805,10 @@
         <resource>
             <Observation>
                 <id value="2-4-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:8ddfebfa-6058-4210-a5dc-07597959b7f9"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -1783,9 +1832,10 @@
         <resource>
             <Observation>
                 <id value="2-7-Beloczok-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:b4d149ef-92aa-4fe1-bbfc-5d60ca2319a3"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -1809,9 +1859,6 @@
         <resource>
             <MedicationStatement>
                 <id value="2-7-MedStatNorvasc-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="med"/>
@@ -1833,9 +1880,15 @@
                         <amount>
                             <numerator>
                                 <value value="30"/>
+                                <unit value="Tablet (unit of presentation)"/>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="732936001"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -1850,15 +1903,24 @@
                             <strength>
                                 <numerator>
                                     <value value="10"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:c521bffb-4db5-4bd9-aa77-45d815a2f293"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -1900,22 +1962,14 @@
                 <!--<reasonCode>
                     <text value="Bluthochdruck"/>
                 </reasonCode>-->
-                <!--<note>
-                    <text value="-"/>
-                </note>-->
                 <dosage>
-                    <!--<extension url="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dosagetype">
-                        <valueIdentifier>
-                            <value value="1.3.6.1.4.1.19376.1.5.3.1.4.7.1"/>
-                        </valueIdentifier>
-                    </extension>-->
                     <timing>
                         <repeat>
                             <boundsPeriod>
                                 <start value="2012-02-04"/>
                             </boundsPeriod>
-                            <when value="ACM"/>
-                            <when value="ACV"/>
+                            <when value="MORN"/>
+                            <when value="EVE"/>
                         </repeat>
                     </timing>
                     <route>
@@ -1928,6 +1982,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -1944,9 +2001,10 @@
         <resource>
             <Observation>
                 <id value="2-6-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:3893faff-9d79-4cca-b903-f66dbe922614"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>
@@ -1970,9 +2028,10 @@
         <resource>
             <Observation>
                 <id value="2-7-Norvasc-History"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:094129e6-4c25-48bf-a6f5-acc4b7c36132"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

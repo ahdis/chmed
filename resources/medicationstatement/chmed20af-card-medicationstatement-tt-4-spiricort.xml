@@ -19,7 +19,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont1"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -43,19 +43,29 @@
                   <code value="116601002"/>
                   <display value="Prednisolone (substance)"/>
                </coding>
+               <text value="Prednisolone"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="20"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Tablet (unit of presentation)"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="732936001"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:87799ce6-33f1-48db-ac1b-bdc7c8c6fe90"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
@@ -95,7 +105,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="40"/>
-            <unit value="mg"/>
+            <unit value="milligram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>
@@ -124,7 +134,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="30"/>
-            <unit value="mg"/>
+            <unit value="milligram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>
@@ -153,7 +163,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="25"/>
-            <unit value="mg"/>
+            <unit value="milligram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>
          </doseQuantity>

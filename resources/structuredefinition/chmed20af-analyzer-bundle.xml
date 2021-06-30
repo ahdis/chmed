@@ -12,7 +12,7 @@
       <value value="http://www.emediplan.ch"/>
     </telecom>
   </contact>
-  <description value="Profile for the Analyzer Bundle (Medication Card document)"/>
+  <description value="Profile for the Analyzer Bundle"/>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -22,22 +22,40 @@
   <differential>
     <element id="Bundle">
       <path value="Bundle"/>
+      <short value="Analyzer Bundle"/>
     </element>
+
     <element id="Bundle.identifier">
       <path value="Bundle.identifier"/>
-      <short value="Logical identifier for document (GUID)"/>
+      <short value="Identification number of the document"/>
       <min value="1"/>
+      <mustSupport value="true"/>
     </element>
+    <element id="Bundle.identifier.system">
+      <path value="Bundle.identifier.system"/>
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Bundle.identifier.value">
+      <path value="Bundle.identifier.value"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+
     <element id="Bundle.type">
       <path value="Bundle.type"/>
-      <short value="Document"/>
       <fixedCode value="document"/>
+      <mustSupport value="true"/>
     </element>
+
     <element id="Bundle.timestamp">
       <path value="Bundle.timestamp" />
       <short value="The document's creation date and time"/>
       <min value="1"/>
+      <mustSupport value="true"/>
     </element>
+
     <element id="Bundle.entry">
       <path value="Bundle.entry"/>
       <slicing>
@@ -48,14 +66,17 @@
         <rules value="open"/>
       </slicing>
       <min value="1"/>
+      <mustSupport value="true"/>
     </element>
-    <element id="Bundle.entry:composition">
+
+    <element id="Bundle.entry:Composition">
       <path value="Bundle.entry"/>
-      <sliceName value="composition"/>
+      <sliceName value="Composition"/>
       <min value="1"/>
       <max value="1"/>
+      <mustSupport value="true"/>
     </element>
-    <element id="Bundle.entry.resource:composition">
+    <element id="Bundle.entry.resource:Composition">
       <path value="Bundle.entry.resource"/>
       <min value="1"/>
       <max value="1"/>
@@ -63,6 +84,7 @@
         <code value="Composition"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
       </type>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

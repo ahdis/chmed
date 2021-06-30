@@ -4,8 +4,8 @@
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-bundle"/>
     </meta>
     <identifier>
-        <system value="http://emediplan.ch/chmed20af/id"/>
-        <value value="26d3dff7-ab05-4737-a49c-5eccd33511a3"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a3"/>
     </identifier>
     <type value="document"/>
     <timestamp value="2020-03-10T18:00:00+01:00"/>
@@ -14,9 +14,10 @@
         <resource>
             <Composition>
                 <id value="A3-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-composition"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33511a3"/>
+                </identifier>
                 <status value="final"/>
                 <type>
                     <coding>
@@ -46,9 +47,6 @@
         <resource>
             <Device>
                 <id value="Analyzer"/>
-                <meta>
-                    <profile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-                </meta>
                 <deviceName>
                     <name value="Documedis Medical Data Analyzer CE"/>
                     <type value="user-friendly-name"/>
@@ -64,9 +62,6 @@
         <resource>
             <Patient>
                 <id value="MonikaWegmueller"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
-                </meta>
                 <identifier>
                     <type>
                         <coding>
@@ -89,6 +84,16 @@
                     <postalCode value="8003"/>
                     <country value="CH"/>
                 </address>
+                <communication>
+                    <language>
+                        <coding>
+                            <system value="urn:ietf:bcp:47" />
+                            <code value="de-CH" />
+                            <display value="German (Region=Switzerland)" />
+                        </coding>
+                    </language>
+                    <preferred value="true" />
+                </communication>
             </Patient>
         </resource>
     </entry>
@@ -97,9 +102,6 @@
         <resource>
             <Practitioner>
                 <id value="HausarztDupont"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
-                </meta>
                 <identifier>
                     <system value="urn:oid:2.51.1.3"/>
                     <value value="7601000234466"/>
@@ -118,9 +120,6 @@
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="A3-MedStatReniten-1x"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication xmlns="http://hl7.org/fhir">
                         <id value="cont1"/>
@@ -142,9 +141,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Piece"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -154,14 +159,20 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -184,6 +195,10 @@
                         <valueDateTime value="2020-03-10T10:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:64bff866-0059-4b56-ab89-d0a3e46fddda"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -213,7 +228,7 @@
                             <boundsPeriod>
                                 <start value="2020-03-10"/>
                             </boundsPeriod>
-                            <when value="CM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -226,9 +241,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="1"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -242,9 +257,6 @@
         <resource>
             <MedicationStatement xmlns="http://hl7.org/fhir">
                 <id value="A3-MedStatReniten-2x"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication xmlns="http://hl7.org/fhir">
                         <id value="cont1"/>
@@ -266,9 +278,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Piece"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -278,14 +296,20 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
@@ -308,6 +332,10 @@
                         <valueDateTime value="2020-03-10T17:00:00+01:00"/>
                     </extension>
                 </extension>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:8bec35c0-7da4-4b28-aa8c-f657cf0c95b3"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -337,7 +365,7 @@
                             <boundsPeriod>
                                 <start value="2020-03-10"/>
                             </boundsPeriod>
-                            <when value="CM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -350,25 +378,22 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
             </MedicationStatement>
         </resource>
     </entry>
-    
+
     <!-- Section entry: MedicationStatement -->
     <entry>
         <fullUrl value="http://test.fhir.ch/r4/MedicationStatement/A3-MedStatReniten-Analyzer"/>
         <resource>
             <MedicationStatement>
                 <id value="A3-MedStatReniten-Analyzer"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-medicationstatement"/>
-                </meta>
                 <contained>
                     <Medication>
                         <id value="cont1"/>
@@ -390,9 +415,15 @@
                         <amount>
                             <numerator>
                                 <value value="98"/>
+                                <unit value="Piece"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Piece}"/>
                             </numerator>
                             <denominator>
                                 <value value="1"/>
+                                <unit value="Package"/>
+                                <system value="http://unitsofmeasure.org"/>
+                                <code value="{Package}"/>
                             </denominator>
                         </amount>
                         <ingredient>
@@ -402,19 +433,29 @@
                                     <code value="387165009"/>
                                     <display value="Enalapril maleate (substance)"/>
                                 </coding>
+                                <text value="Enalapril maleate (substance)"/>
                             </itemCodeableConcept>
                             <strength>
                                 <numerator>
                                     <value value="20"/>
-                                    <unit value="mg"/>
+                                    <unit value="milligram"/>
+                                    <system value="http://unitsofmeasure.org"/>
+                                    <code value="mg"/>
                                 </numerator>
                                 <denominator>
                                     <value value="1"/>
+                                    <unit value="Tablet (unit of presentation)"/>
+                                    <system value="http://snomed.info/sct"/>
+                                    <code value="732936001"/>
                                 </denominator>
                             </strength>
                         </ingredient>
                     </Medication>
                 </contained>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:79ff247f-7e14-4581-90b2-2fa157320bd2"/>
+                </identifier>
                 <status value="completed"/>
                 <category>
                     <coding>
@@ -454,7 +495,7 @@
                             <boundsPeriod>
                                 <start value="2020-03-10"/>
                             </boundsPeriod>
-                            <when value="CM"/>
+                            <when value="MORN"/>
                         </repeat>
                     </timing>
                     <route>
@@ -467,9 +508,9 @@
                     <doseAndRate>
                         <doseQuantity>
                             <value value="2"/>
-                            <unit value="Tablette"/>
-                            <system value="http://unitsofmeasure.org"/>
-                            <code value="1"/>
+                            <unit value="Tablet (unit of presentation)" />
+                            <system value="http://snomed.info/sct"/>
+                            <code value="732936001"/>
                         </doseQuantity>
                     </doseAndRate>
                 </dosage>
@@ -483,9 +524,10 @@
         <resource>
             <Observation>
                 <id value="A3-History-ChangeDosage"/>
-                <meta>
-                    <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-observationhistory"/>
-                </meta>
+                <identifier>
+                    <system value="urn:ietf:rfc:3986"/>
+                    <value value="urn:uuid:671a0728-b160-454e-9cdd-4e2a88b3d106"/>
+                </identifier>
                 <status value="final"/>
                 <code>
                     <coding>

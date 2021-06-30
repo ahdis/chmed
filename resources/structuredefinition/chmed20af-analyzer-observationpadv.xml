@@ -12,27 +12,37 @@
          <value value="http://www.emediplan.ch"/>
       </telecom>
    </contact>
-   <description value="Profile for the Analyzer Observation from a Pharmaceutical Advice document (PADV) (Medication Card document)"/>
+   <description value="Profile for the Analyzer Observation from a Pharmaceutical Advice document (PADV)"/>
    <fhirVersion value="4.0.1"/>
    <kind value="resource"/>
    <abstract value="false"/>
    <type value="Observation"/>
-   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+   <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-observation"/>
    <derivation value="constraint"/>
    <differential>
       <element id="Observation">
          <path value="Observation"/>
+         <short value="Analyzer Observation (PADV)"/>
       </element>
-      <element id="Observation.extension">
-         <path value="Observation.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+
+      <element id="Observation.extension:treatmentPlan">
+         <path value="Observation.extension" />
+         <sliceName value="treatmentPlan"/>
+         <mustSupport value="true"/>
       </element>
+
+      <element id="Observation.extension:prescription">
+         <path value="Observation.extension" />
+         <sliceName value="prescription"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="Observation.extension:dispense">
+         <path value="Observation.extension" />
+         <sliceName value="dispense"/>
+         <mustSupport value="true"/>
+      </element>
+
       <element id="Observation.extension:infoInputDocument">
          <path value="Observation.extension" />
          <sliceName value="infoInputDocument" />
@@ -43,70 +53,66 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument" />
          </type>
+         <mustSupport value="true"/>
       </element>
-      <element id="Observation.extension:treatmentPlan">
-         <path value="Observation.extension" />
-         <sliceName value="treatmentPlan" />
-         <short value="Reference to the medication treatment plan"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension" />
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan" />
-         </type>
+
+      <element id="Observation.identifier">
+         <path value="Observation.identifier"/>
+         <mustSupport value="true"/>
       </element>
-      <element id="Observation.extension:prescription">
-         <path value="Observation.extension" />
-         <sliceName value="prescription" />
-         <short value="Reference to the medication prescription"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension" />
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-prescription" />
-         </type>
+      <element id="Observation.identifier.system">
+         <path value="Observation.identifier.system"/>
+         <mustSupport value="true"/>
       </element>
-      <element id="Observation.extension:dispense">
-         <path value="Observation.extension" />
-         <sliceName value="dispense" />
-         <short value="Reference to the medication dispense"/>
-         <min value="0"/>
-         <max value="1"/>
-         <type>
-            <code value="Extension" />
-            <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-dispense" />
-         </type>
+      <element id="Observation.identifier.value">
+         <path value="Observation.identifier.value"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Observation.status">
          <path value="Observation.status"/>
-         <short value="Status of the observation"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Observation.code">
          <path value="Observation.code"/>
-         <short value="Observation code"/>
-         <binding>
-            <strength value="required"/>
-            <valueSet value="http://fhir.ch/ig/ch-emed/ValueSet/ihe-pharmaceuticaladvicestatuslist"/>
-         </binding>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Observation.subject">
          <path value="Observation.subject"/>
-         <short value="Patient"/>
+         <min value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-patient"/>
          </type>
-         <min value="1"/>
+         <mustSupport value="true"/>
       </element>
+
+      <element id="Observation.effectiveDateTime">
+         <path value="Observation.effectiveDateTime"/>
+         <mustSupport value="true"/>
+      </element>
+
       <element id="Observation.performer">
          <path value="Observation.performer"/>
          <short value="Practitioner"/>
+         <min value="1"/>
+         <max value="1"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-analyzer-practitioner"/>
          </type>
-         <min value="1"/>
-         <max value="1"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="Observation.note">
+         <path value="Observation.note"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Observation.note.text">
+         <path value="Observation.note.text"/>
+         <mustSupport value="true"/>
       </element>
    </differential>
 </StructureDefinition>

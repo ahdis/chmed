@@ -18,7 +18,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont4"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -42,19 +42,29 @@
                   <code value="387540000"/>
                   <display value="Meropenem (substance)"/>
                </coding>
+               <text value="Meropenem"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="1"/>
-                  <unit value="g"/>
+                  <unit value="gram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="g"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Vial (unit of presentation)"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="733026001"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:9a55ba81-9a54-4cd5-867c-f7c353f1102c"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
@@ -99,7 +109,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="2"/>
-            <unit value="g"/>
+            <unit value="gram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="g"/>
          </doseQuantity>

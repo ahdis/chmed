@@ -1,0 +1,116 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="chmed20af-card-dosage-structured-split"/>
+  <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-dosage-structured-split"/>
+  <version value="0.1.0"/>
+  <name value="CardDosageStructuredSplitChmed20af"/>
+  <title value="Card Dosage Structured Split for CHMED20AF"/>
+  <status value="draft"/>
+  <publisher value="IG eMediplan"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.emediplan.ch"/>
+    </telecom>
+  </contact>
+  <description value="Dosage Structured Split of Medication Card document."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="CHMED16A"/>
+    <uri value="http://emediplan.ch/chmed16a"/>
+    <name value="Mapping to CHMED16A"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <type value="Dosage"/>
+  <baseDefinition value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-structured-split"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Dosage">
+      <path value="Dosage"/>
+      <short value="How the medication is/was taken or should be taken"/>
+      <mapping>
+        <identity value="CHMED16A"/>
+        <map value="Posology"/>
+      </mapping>
+    </element>
+
+    <element id="Dosage.sequence">
+      <path value="Dosage.sequence"/>
+      <mustSupport value="true"/>
+    </element>
+
+    <element id="Dosage.timing">
+      <path value="Dosage.timing"/>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="CHMED16A"/>
+        <map value="Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes, SimpliedVersion of taking times onlys"/>
+      </mapping>
+    </element>
+
+    <element id="Dosage.timing.repeat">
+      <path value="Dosage.timing.repeat"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.timing.repeat.bounds[x]">
+      <path value="Dosage.timing.repeat.bounds[x]"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.timing.repeat.when">
+      <path value="Dosage.timing.repeat.when"/>
+      <mustSupport value="true"/>
+    </element>
+
+    <element id="Dosage.route">
+      <path value="Dosage.route"/>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="CHMED16A"/>
+        <map value="Medicament.Roa"/>
+      </mapping>
+    </element>
+    <element id="Dosage.route.coding">
+      <path value="Dosage.route.coding"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.route.coding.system">
+      <path value="Dosage.route.coding.system"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.route.coding.code">
+      <path value="Dosage.route.coding.code"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.route.coding.display">
+      <path value="Dosage.route.coding.display"/>
+      <mustSupport value="true"/>
+    </element>
+
+    <element id="Dosage.doseAndRate">
+      <path value="Dosage.doseAndRate"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Dosage.doseAndRate.dose[x]">
+      <path value="Dosage.doseAndRate.dose[x]"/>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="CHMED16A"/>
+        <map value="doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo"/>
+      </mapping>
+    </element>
+
+    <element id="Dosage.maxDosePerPeriod">
+      <path value="Dosage.maxDosePerPeriod"/>
+      <short value="Upper limit on medication per unit of time"/>
+      <type>
+        <code value="Ratio"/>
+        <profile value="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ratio"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="CHMED16A"/>
+        <map value="TakingTime.MA"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

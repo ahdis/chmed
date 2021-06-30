@@ -8,12 +8,6 @@
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-CH" lang="de-CH">Prescription </div>
    </text>
-   <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-setid">
-      <valueIdentifier>
-         <system value="http://emediplan.ch/chmed20af/id"/>
-         <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
-      </valueIdentifier>
-   </extension>
    <extension url="http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber">
       <valueUnsignedInt value="1"/>
    </extension>
@@ -23,8 +17,8 @@
       </valueReference>
    </extension>
    <identifier>
-      <system value="http://emediplan.ch/chmed20af/id"/>
-      <value value="645bb0c3-ff7e-4123-bef5-3852a4784813"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"/>
    </identifier>
    <status value="final"/>
    <type>
@@ -57,7 +51,7 @@
       <reference value="Organization/chmed20af-custodian-s01"/>
    </custodian>
    <section>
-      <title value="Verordnung"/>
+      <title value="Arzneimittelverordnung"/>
       <code>
          <coding>
             <system value="http://loinc.org"/>
@@ -65,16 +59,12 @@
             <display value="PRESCRIPTIONS"/>
          </coding>
       </code>
-      <text>
-         <status value="additional"/>
-         <div xmlns="http://www.w3.org/1999/xhtml"> Verordnung </div>
-      </text>
       <entry>
          <reference value="MedicationRequest/chmed20af-pre-medicationrequest-s01-1"/>
       </entry>
    </section>
    <section>
-      <title value="Bemerkungen"/>
+      <title value="Kommentar"/>
       <code>
          <coding>
             <system value="http://loinc.org"/>
@@ -84,7 +74,26 @@
       </code>
       <text>
          <status value="additional"/>
-         <div xmlns="http://www.w3.org/1999/xhtml"> Bemerkung </div>
+         <div xmlns="http://www.w3.org/1999/xhtml"> Kommentar </div>
       </text>
+   </section>
+   <section>
+      <title value="Original Darstellung"/>
+      <code>
+         <coding>
+            <system value="http://loinc.org"/>
+            <code value="55108-5"/>
+            <display value="Clinical presentation"/>
+         </coding>
+      </code>
+      <text>
+         <status value="generated"/>
+         <div xmlns="http://www.w3.org/1999/xhtml">
+            <a href="Binary/example-pdf">Representation of the original view</a>
+         </div>
+      </text>
+      <entry>
+         <reference value="Binary/example-pdf"/>
+      </entry>
    </section>
 </Composition>

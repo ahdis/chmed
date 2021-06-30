@@ -11,7 +11,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont4"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -35,20 +35,29 @@
                   <code value="386919002"/>
                   <display value="Rituximab (substance)"/>
                </coding>
+               <text value="Rituximab"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="100"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="10"/>
-                  <unit value="ml"/>
+                  <unit value="milliliter"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mL"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:92b9336a-e3a8-412b-aa04-808a8d5a9a03"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
@@ -85,9 +94,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="10"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -120,7 +129,7 @@
       <doseAndRate>
          <doseQuantity>
             <value value="2"/>
-            <unit value="g"/>
+            <unit value="gram"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="g"/>
          </doseQuantity>
@@ -133,8 +142,8 @@
             <boundsPeriod>
                <start value="2016-02-10"/>
             </boundsPeriod>
-            <when value="PCM"/>
-            <when value="PCV"/>
+            <when value="MORN"/>
+            <when value="EVE"/>
          </repeat>
       </timing>
       <route>
@@ -147,9 +156,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stk"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="{Piece}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -160,8 +169,8 @@
             <boundsPeriod>
                <start value="2016-02-10"/>
             </boundsPeriod>
-            <when value="PCM"/>
-            <when value="PCV"/>
+            <when value="MORN"/>
+            <when value="EVE"/>
          </repeat>
       </timing>
       <route>
@@ -174,9 +183,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stk"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="{Piece}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

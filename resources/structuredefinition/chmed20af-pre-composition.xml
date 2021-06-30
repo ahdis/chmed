@@ -2,8 +2,8 @@
    <id value="chmed20af-pre-composition"/>
    <url value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-composition"/>
    <version value="0.1.0"/>
-   <name value="CompositionMedicationPrescriptionDocument"/>
-   <title value="Composition Medication Prescription document"/>
+   <name value="CompositionMedicationPrescription"/>
+   <title value="Composition Medication Prescription"/>
    <status value="draft"/>
    <publisher value="IG eMediplan"/>
    <contact>
@@ -27,30 +27,28 @@
    <differential>
       <element id="Composition">
          <path value="Composition"/>
+         <short value="CHMED20AF Medication Prescription Composition"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medication"/>
          </mapping>
       </element>
-      <element id="Composition.extension">
-         <path value="Composition.extension"/>
-         <slicing>
-            <discriminator>
-               <type value="value"/>
-               <path value="url"/>
-            </discriminator>
-            <rules value="open"/>
-         </slicing>
+
+      <element id="Composition.language">
+         <path value="Composition.language"/>
+         <mustSupport value="true"/>
       </element>
+
       <element id="Composition.extension:informationRecipient">
          <path value="Composition.extension"/>
          <sliceName value="informationRecipient"/>
-         <short value="A recipient of this document"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient or Patient.Rcv (Gln of receiver)"/>
          </mapping>
       </element>
+
       <element id="Composition.extension:privatefield">
          <path value="Composition.extension" />
          <sliceName value="privatefield" />
@@ -61,123 +59,137 @@
             <code value="Extension" />
             <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield" />
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="PFields"/>
          </mapping>
       </element>
+
       <element id="Composition.identifier">
          <path value="Composition.identifier"/>
-         <short value="Logical identifier for document (GUID)"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Id"/>
          </mapping>
       </element>
+      <element id="Composition.identifier.system">
+         <path value="Composition.identifier.system"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Composition.identifier.value">
+         <path value="Composition.identifier.value"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="Composition.status">
+         <path value="Composition.status"/>
+         <mustSupport value="true"/>
+      </element>
+
       <element id="Composition.type">
          <path value="Composition.type"/>
-         <short value="Document type"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://snomed.info/sct"/>
-               <code value="761938008"/>
-               <display value="Medical Prescription record (record artifact)"/>
-            </coding>
-         </patternCodeableConcept>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="MedType"/>
          </mapping>
       </element>
+
       <element id="Composition.subject">
          <path value="Composition.subject"/>
-         <short value="Patient"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Patient"/>
          </mapping>
       </element>
+
       <element id="Composition.date">
          <path value="Composition.date"/>
-         <short value="Composition editing time"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Dt"/>
          </mapping>
       </element>
+
       <element id="Composition.author">
          <path value="Composition.author"/>
-         <short value="Author"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-practitioner"/>
-            <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole"/>
+            <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole-epr"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-patient"/>
             <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
             <targetProfile value="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization-epr"/>
          </type>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Auth"/>
          </mapping>
       </element>
+
+      <element id="Composition.title">
+         <path value="Composition.title"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="Composition.confidentiality">
+         <path value="Composition.confidentiality"/>
+         <mustSupport value="true"/>
+      </element>
+      <element id="Composition.confidentiality.extension:confidentialityCode">
+         <path value="Composition.confidentiality.extension"/>
+         <sliceName value="confidentialityCode"/>
+         <mustSupport value="true"/>
+      </element>
+
+      <element id="Composition.custodian">
+         <path value="Composition.custodian"/>
+         <mustSupport value="true"/>
+      </element>
+
       <element id="Composition.section">
          <path value="Composition.section"/>
-         <slicing>
-            <discriminator>
-               <type value="pattern"/>
-               <path value="code"/>
-            </discriminator>
-            <ordered value="false"/>
-            <rules value="open"/>
-         </slicing>
+         <mustSupport value="true"/>
       </element>
 
       <!-- Section Original Representation-->
       <element id="Composition.section:originalRepresentation">
          <path value="Composition.section"/>
          <sliceName value="originalRepresentation"/>
-         <short value="Original representation"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.title:originalRepresentation">
          <path value="Composition.section.title"/>
-         <short value="Original representation"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.code:originalRepresentation">
          <path value="Composition.section.code"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://loinc.org"/>
-               <code value="55108-5"/>
-               <display value="Clinical presentation"/>
-            </coding>
-         </patternCodeableConcept>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.text:originalRepresentation">
          <path value="Composition.section.text"/>
-         <short value="Representation of the original view"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.entry:originalRepresentation">
          <path value="Composition.section.entry"/>
-         <short value="PDF"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/StructureDefinition/Binary"/>
-         </type>
-      </element>
-      <element id="Composition.section.section:originalRepresentation">
-         <path value="Composition.section.section"/>
+         <mustSupport value="true"/>
       </element>
 
       <!-- Section prescritpion-->
       <element id="Composition.section:prescription">
          <path value="Composition.section"/>
          <sliceName value="prescription"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Medicaments"/>
@@ -185,39 +197,26 @@
       </element>
       <element id="Composition.section.title:prescription">
          <path value="Composition.section.title"/>
-         <short value="'Arzneimittelverordnung' in german or 'Prescription médicamenteuse' in french 
-                        or 'Prescrizione di droga' in italian or 'Prescription for medication' in english
-                        or titles in other languages are also allowed"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.code:prescription">
          <path value="Composition.section.code"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://loinc.org"/>
-               <code value="57828-6"/>
-               <display value="PRESCRIPTIONS"/>
-            </coding>
-         </patternCodeableConcept>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.entry:prescription">
          <path value="Composition.section.entry"/>
-         <short value="Medication request"/>
          <type>
             <code value="Reference"/>
             <targetProfile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-pre-medicationrequest"/>
          </type>
-      </element>
-      <element id="Composition.section.section:prescription">
-         <path value="Composition.section.section"/>
-         <min value="0"/>
-         <max value="0"/>
+         <mustSupport value="true"/>
       </element>
 
       <!-- Section annotation -->
       <element id="Composition.section:annotation">
          <path value="Composition.section"/>
          <sliceName value="annotation"/>
-         <short value="Annotation"/>
+         <mustSupport value="true"/>
          <mapping>
             <identity value="CHMED16A"/>
             <map value="Rmk"/>
@@ -225,27 +224,16 @@
       </element>
       <element id="Composition.section.title:annotation">
          <path value="Composition.section.title"/>
-         <short value="'Kommentar' in german or 'Commentaire' in french or 'Osservazione' in italian or 'Comment' in english
-                        or titles in other languages are also allowed"/>
+         <mustSupport value="true"/>
       </element>
       <element id="Composition.section.code:annotation">
          <path value="Composition.section.code"/>
-         <patternCodeableConcept>
-            <coding>
-               <system value="http://loinc.org"/>
-               <code value="48767-8"/>
-               <display value="Annotation comment"/>
-            </coding>
-         </patternCodeableConcept>
+         <mustSupport value="true"/>
       </element>
-      <element id="Composition.section.entry:annotation">
-         <path value="Composition.section.entry"/>
+      <element id="Composition.section.text:annotation">
+         <path value="Composition.section.text"/>
          <short value="General comments"/>
-      </element>
-      <element id="Composition.section.section:annotation">
-         <path value="Composition.section.section"/>
-         <min value="0"/>
-         <max value="0"/>
+         <mustSupport value="true"/>
       </element>
    </differential>
 </StructureDefinition>

@@ -20,7 +20,7 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont1"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -44,20 +44,29 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
                   <code value="373529000"/>
                   <display value="Morphine (substance)"/>
                </coding>
+               <text value="Morphine"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="20"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
-                  <unit value="ml"/>
+                  <unit value="milliliter"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mL"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:dd8fc692-c177-46d1-817c-4ba2029a8e01"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
@@ -96,15 +105,15 @@ CHMED16A0 {	&quot;Patient&quot;: {		&quot;FName&quot;: &quot;Dora&quot;,		&quot;
             <extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
                <valueQuantity>
                   <value value="200"/>
-                  <unit value="ml"/>
+                  <unit value="milliliter"/>
                   <system value="http://unitsofmeasure.org"/>
-                  <code value="ml"/>
+                  <code value="mL"/>
                </valueQuantity>
             </extension>
             <value value="50"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

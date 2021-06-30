@@ -17,7 +17,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont4"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -41,20 +41,29 @@
                   <code value="386919002"/>
                   <display value="Rituximab (substance)"/>
                </coding>
+               <text value="Rituximab"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="100"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="10"/>
-                  <unit value="ml"/>
+                  <unit value="milliliter"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mL"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:ddc5e747-baf8-4fd3-97b3-b8cf70df0dc9"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont4"/>
@@ -91,9 +100,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="10"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -117,9 +126,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="20"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -143,9 +152,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="30"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>
@@ -169,9 +178,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="40"/>
-            <unit value="ml"/>
+            <unit value="milliliter"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="ml"/>
+            <code value="mL"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

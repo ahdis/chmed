@@ -38,3 +38,5 @@ Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the fol
 The CHEMD20AF format can bei either in XML or JSON format. 
 
 In the section [Introduction](intro.html) the structures for the different formats/values are explained.
+
+**Download**: You can download this implementation guide in npm format from [here](package.tgz).

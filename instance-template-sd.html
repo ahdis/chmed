@@ -86,6 +86,9 @@ tcode: {{[type]}}
                                     <a href="#tabs-snap">Snapshot Table</a>
                                 </li>
                                 <li>
+                                    <a href="#tabs-snapms">Snapshot Table (Must Support)</a>
+                                </li>
+                                <li>
                                     <a href="#tabs-all">All</a>
                                 </li>
                             </ul>
@@ -120,6 +123,17 @@ tcode: {{[type]}}
                                     </p>
                                     <div id="tbl-snap-inner">
                                         {% include StructureDefinition-{{page.id}}-snapshot.xhtml %}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tabs-snapms">
+                                <div id="tbl-snap">
+                                    <p>This structure is derived from <a
+                                            href="{{site.data.structuredefinitions[page.id].basepath}}">{{site.data.structuredefinitions[page.id].basename}}</a>
+                                    </p>
+                                    <div id="tbl-snap-inner">
+                                        {% include StructureDefinition-{{page.id}}-snapshot-by-mustsupport.xhtml %}
                                     </div>
                                 </div>
                             </div>

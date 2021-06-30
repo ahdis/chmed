@@ -11,7 +11,7 @@
       <Medication xmlns="http://hl7.org/fhir">
          <id value="cont1"/>
          <meta>
-            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-card-medication"/>
+            <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-medication"/>
          </meta>
          <code>
             <coding>
@@ -35,19 +35,29 @@
                   <code value="387208003"/>
                   <display value="Isotretinoin (substance)"/>
                </coding>
+               <text value="Isotretinoin"/>
             </itemCodeableConcept>
             <strength>
                <numerator>
                   <value value="10"/>
-                  <unit value="mg"/>
+                  <unit value="milligram"/>
+                  <system value="http://unitsofmeasure.org"/>
+                  <code value="mg"/>
                </numerator>
                <denominator>
                   <value value="1"/>
+                  <unit value="Capsule (unit of presentation)"/>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="732937005"/>
                </denominator>
             </strength>
          </ingredient>
       </Medication>
    </contained>
+   <identifier>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:5c288e1e-d549-46c3-a835-60fb60b7d098"/>
+   </identifier>
    <status value="completed"/>
    <medicationReference>
       <reference value="#cont1"/>
@@ -61,9 +71,6 @@
    <reasonCode>
       <text value="Akne"/>
    </reasonCode>
-   <note>
-      <text value="-"/>
-   </note>
    <dosage>
       <text value="bei Bedarf"/>
    </dosage>
@@ -74,7 +81,7 @@
                <start value="2016-09-12"/>
                <end value="2020-09-12"/>
             </boundsPeriod>
-            <when value="PCM"/>
+            <when value="MORN"/>
          </repeat>
       </timing>
       <asNeededBoolean value="true"/>
@@ -88,9 +95,9 @@
       <doseAndRate>
          <doseQuantity>
             <value value="1"/>
-            <unit value="Stück"/>
+            <unit value="Piece"/>
             <system value="http://unitsofmeasure.org"/>
-            <code value="1"/>
+            <code value="{Piece}"/>
          </doseQuantity>
       </doseAndRate>
    </dosage>

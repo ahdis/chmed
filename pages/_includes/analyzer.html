@@ -1,0 +1,203 @@
+<h2>
+    Analyzer
+</h2>
+
+<br>
+
+<h3>Examples CH-EMED Input and Output</h3>
+
+<h4>1-1 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-1-1-Input-Analyzer.html"> 1-1 Input Analyzer</a> Inputdokument: 1-1-MTP</li>
+    <li><a href="Bundle-1-1-ConsolidatedMedicationCard.html"> 1-1 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>1-2 Abgabe (Medication Dispense document)</h4>
+<div>
+    <li><a href="Parameters-1-2-Input-Analyzer.html"> 1-2 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS</li>
+    <li><a href="Bundle-1-2-ConsolidatedMedicationCard.html"> 1-2 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-1 Medikationsliste (Medication List document)</h4>
+<p>Arbeitshypothese: Die Medikationsliste ist ein dynamisch generiertes Dokument und wird daher nicht als Inputdokument für den Analyzer auftreten.</p>
+
+<br>
+
+<h4>2-2 Kommentar zur Medikation (Pharmaceutical Advice document)</h4>
+<div>
+    <li><a href="Parameters-2-2-Input-Analyzer.html"> 2-2 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV</li>
+    <li><a href="Bundle-2-2-ConsolidatedMedicationCard.html"> 2-2 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-3 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-2-3-Input-Analyzer.html"> 2-3 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV, 2-3-MTP</li>
+    <li><a href="Bundle-2-3-ConsolidatedMedicationCard.html"> 2-3 Consolidated Medication Card document</a></li>
+</div>
+<h5>Test-Case Beloc Zok: Therapieentscheid Beloc Zok (abgesetztes Triatec wird für Testzwecke nicht aufgeführt)</h5>
+<div>
+    <li><a href="Parameters-BeloczokMTP-Input-Analyzer.html"> Input Analyzer</a> Inputdokument: 2-3-MTP</li>
+    <li><a href="Bundle-BeloczokMTP-ConsolidatedMedicationCard.html"> Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-4 Abgabe (Medication Dispense document)</h4>
+<div>
+    <li><a href="Parameters-2-4-Input-Analyzer.html"> 2-4 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV, 2-3-MTP, 2-4-DIS</li>
+    <li><a href="Bundle-2-4-ConsolidatedMedicationCard.html"> 2-4 Consolidated Medication Card document</a></li>
+</div>
+<h5>Test-Case Beloc Zok: Abgabe Beloc Zok (abgesetztes Triatec wird für Testzwecke nicht aufgeführt)</h5>
+<div>
+    <li><a href="Parameters-BeloczokDIS-Input-Analyzer.html"> Input Analyzer</a> Inputdokumente: 2-3-MTP, 2-4-DIS</li>
+    <li><a href="Bundle-BeloczokDIS-ConsolidatedMedicationCard.html"> Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-5 Therapieentscheid Medikation (Medication Treatment Plan document)</h4>
+<div>
+    <li><a href="Parameters-2-5-Input-Analyzer.html"> 2-5 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP</li>
+    <li><a href="Bundle-2-5-ConsolidatedMedicationCard.html"> 2-5 Consolidated Medication Card document</a></li>
+</div>
+<h5>Test-Case Norvasc: Therapieentscheid Norvasc (abgesetztes Triatec und abgegebenes Beloc Zok werden für Testzwecke nicht aufgeführt)</h5>
+<div>
+    <li><a href="Parameters-NorvascMTP-Input-Analyzer.html"> Input Analyzer</a> Inputdokumente: 2-5-MTP</li>
+    <li><a href="Bundle-NorvascMTP-ConsolidatedMedicationCard.html"> Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-6 Rezept (Medication Prescription document)</h4>
+<div>
+    <li><a href="Parameters-2-6-Input-Analyzer.html"> 2-6 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP, 2-6-PRE</li>
+    <li><a href="Bundle-2-6-ConsolidatedMedicationCard.html"> 2-6 Consolidated Medication Card document</a></li>
+</div>
+<h5>Test-Case Norvasc: Rezept Norvasc (abgesetztes Triatec und abgegebenes Beloc Zok werden für Testzwecke nicht aufgeführt)</h5>
+<div>
+    <li><a href="Parameters-NorvascPRE-Input-Analyzer.html"> Input Analyzer</a> Inputdokumente: 2-5-MTP, 2-6-PRE</li>
+    <li><a href="Bundle-NorvascPRE-ConsolidatedMedicationCard.html"> Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>2-7 Medikationsplan (Medication Card document)</h4>
+<div>
+    <li><a href="Parameters-2-7-Input-Analyzer.html"> 2-7 Input Analyzer</a> Inputdokumente: 1-1-MTP, 1-2-DIS, 2-2-PADV, 2-3-MTP, 2-4-DIS, 2-5-MTP, 2-6-PRE, 2-7-Card</li>
+    <li><a href="Bundle-2-7-ConsolidatedMedicationCard.html"> 2-7 Consolidated Medication Card document</a></li>
+</div>
+<h5>Test-Case Norvasc: Medikationsplan Norvasc (abgesetztes Triatec und abgegebenes Beloc Zok werden für Testzwecke nicht aufgeführt)</h5>
+<div>
+    <li><a href="Parameters-NorvascCard-Input-Analyzer.html"> Input Analyzer</a> Inputdokumente: 2-5-MTP, 2-6-PRE, 2-7-Card (nur Norvasc)</li>
+    <li><a href="Bundle-NorvascCard-ConsolidatedMedicationCard.html"> Consolidated Medication Card document</a></li>
+</div>
+
+<hr>
+
+
+<h3>Examples to show the type of change in the history</h3>
+<div>
+    <li><a href="ValueSet-chmed20af-valueset-history-changes.html"> Value Set</a> Type of changes in the history</li>
+</div>
+
+<br>
+
+<h4>A1 Substitution</h4>
+<p>Apotheke Gare führt eine Substituion bei Zocor durch.</p>
+<div>
+    <li><a href="Parameters-A1-Input-Analyzer.html"> A1 Input Analyzer</a> Inputdokumente: Medication Card Zocor, Medication Card Simcora</li>
+    <li><a href="Bundle-A1-ConsolidatedMedicationCard.html"> A1 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A2 Same Medication, inkl. Change Practitioner</h4>
+<p>Ausgangsmedikation Valium 5 mg Dosierung 0-0-0-2 (Dr. Dupont) und Änderung Valium 10 mg 0-0-0-1 (Apotheke Gare).</p>
+<div>
+    <li><a href="Parameters-A2-Input-Analyzer.html"> A2 Input Analyzer</a> Inputdokumente: Medication Card Valium 2 x 5 mg, Medication Card Valium 1 x 10 mg</li>
+    <li><a href="Bundle-A2-ConsolidatedMedicationCard.html"> A2 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A3 Change Dosage</h4>
+<p>Arzt Dr. Dupont ändert Dosierung bei Reniten von morgens 1 Tbl. zu morgens 2 Tbl.</p>
+<div>
+    <li><a href="Parameters-A3-Input-Analyzer.html"> A3 Input Analyzer</a> Inputdokumente: Medication Card Reniten 1 Tbl. morgens, Medication Card Reniten 2 Tbl. morgens</li>
+    <li><a href="Bundle-A3-ConsolidatedMedicationCard.html"> A3 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A4 Change Practitioner</h4>
+<p>Dr. Dupont verschreibt am 01.03.2020 das Medikament Reniten. Ab 10.03.2020 verschreibt Dr. Monney das Medikament weiter.</p>
+<div>
+    <li><a href="Parameters-A4-Input-Analyzer.html"> A4 Input Analyzer</a> Inputdokumente: Medication Card Dr. Dupont, Medication Card Dr. Monney</li>
+    <li><a href="Bundle-A4-ConsolidatedMedicationCard.html"> A4 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A5 Change Therapy</h4>
+<p>Dr. Monney verschreibt neu das Medikamente Exforge. Ausgangsmedikation war Reniten, das nun abgesetzt wurde.</p>
+<div>
+    <li><a href="Parameters-A5-Input-Analyzer.html"> A5 Input Analyzer</a> Inputdokumente: Medication Card Reniten, Medication Card Exforge</li>
+    <li><a href="Bundle-A5-ConsolidatedMedicationCard.html"> A5 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A6 Change ROA (Route of Administration)</h4>
+<p>Arzt Dr. Dupont verschreibt zusätzlich ein Imigran Spray zu den bestehenden Imigran Tabletten.</p>
+<div>
+    <li><a href="Parameters-A6-Input-Analyzer.html"> A6 Input Analyzer</a> Inputdokumente: Medication Card Imigran Tabletten, Medication Card Imigran Tabletten und Spray</li>
+    <li><a href="Bundle-A6-ConsolidatedMedicationCard.html"> A6 Consolidated Medication Card document</a></li>
+</div>
+
+<br>
+
+<h4>A7 Change Galenic</h4>
+<p>Arzt Dr. Dupont verordnet zusätzlich zu den Brufen Tabletten (600 mg) die Brufen retard Tabletten (800 mg).</p>
+<div>
+    <li><a href="Parameters-A7-Input-Analyzer.html"> A7 Input Analyzer</a> Inputdokumente: Medication Card Brufen (600 mg), Medication Card Brufen (600 mg) und Brufen retard (800 mg)</li>
+    <li><a href="Bundle-A7-ConsolidatedMedicationCard.html"> A7 Consolidated Medication Card document</a></li>
+</div>
+
+
+<hr>
+
+<h3>Profiles</h3>
+
+<h4>Profile Operation Analyzer</h4>
+<div>
+    <li><a href="OperationDefinition-chmed20af-analyzer.html">Definition Input and Output Parameter Analyzer</a></li>
+</div>
+
+<br>
+
+<h4>Profiles Output</h4>
+<p>Nachfolgende Profile definieren die Anforderungen an ein Minimaldatenset für das durch den Analyzer konsolidierte Medication Card document.<br>
+    Bemerkung: <br>
+    Die Anforderungen an dieses durch den Analyzer kosolidiertes Medication Card document entsprechen 
+    nicht den Anforderungen des <a href="profiles.html">CHMED20AF Medication Card documents</a>.</p>
+<div>
+    <li><a href="StructureDefinition-chmed20af-analyzer-bundle.html">Analyzer Consolidated Medication Card document</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-composition.html">Analyzer Composition</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationstatement-header.html">Analyzer MedicationStatement Header</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationstatementcard.html">Analyzer MedicationStatement (Card)</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationstatementmtp.html">Analyzer MedicationStatement (MTP)</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationrequest.html">Analyzer MedicationRequest</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-medicationdispense.html">Analyzer MedicationDispense</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-observationpadv.html">Analyzer Observation PADV</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-observationhistory.html">Analyzer Observation History of Changes</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-patient.html">Analyzer Patient</a></li>
+    <li><a href="StructureDefinition-chmed20af-analyzer-practitioner.html">Analyzer Practitioner</a></li>
+</div>
+
+<br>

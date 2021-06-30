@@ -29,17 +29,21 @@
       <path value="Extension"/>
       <short value="Extension for Input Document Date"/>
     </element>
+
     <element id="Extension.extension">
       <path value="Extension.extension"/>
       <max value="0"/>
     </element>
+
     <element id="Extension.url">
       <path value="Extension.url"/>
       <type>
         <code value="uri"/>
       </type>
       <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate"/>
+      <mustSupport value="true"/>
     </element>
+
     <element id="Extension.valueDateTime">
       <path value="Extension.valueDateTime"/>
       <short value="Date of the input document"/>
@@ -48,6 +52,7 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

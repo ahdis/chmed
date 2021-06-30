@@ -52,6 +52,7 @@
         <code value="Extension"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentsource"/>
       </type>
+      <mustSupport value="true"/>
     </element>
 
     <element id="Extension.extension:documentType">
@@ -64,6 +65,7 @@
         <code value="Extension"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumenttype"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     
     <element id="Extension.extension:documentDate">
@@ -76,6 +78,7 @@
         <code value="Extension"/>
         <profile value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-inputdocumentdate"/>
       </type>
+      <mustSupport value="true"/>
     </element>
 
     <element id="Extension.url">
@@ -84,7 +87,9 @@
         <code value="uri"/>
       </type>
       <fixedUri value="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-infoinputdocument"/>
+      <mustSupport value="true"/>
     </element>
+    
     <element id="Extension.value[x]">
       <path value="Extension.value[x]"/>
       <min value="0"/>

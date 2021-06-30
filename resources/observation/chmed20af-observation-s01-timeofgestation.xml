@@ -20,7 +20,7 @@
     </subject>
     <valueQuantity>
         <value value="215"/>
-        <unit value="d"/>
+        <unit value="Day"/>
         <system value="http://unitsofmeasure.org"/>
         <code value="d"/>
     </valueQuantity>

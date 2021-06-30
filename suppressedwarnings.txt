@@ -1,5 +1,8 @@
 == Suppressed Messages ==
 
+# Build error
+The link 'Binary/example-pdf' for "Representation of the original view" cannot be resolved
+
 # The following code systems are external and not supported by terminology server
 Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
 
@@ -26,6 +29,8 @@ The display "Medical Prescription record (record artifact)" is not a valid displ
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ["Medicinal prescription record","Medicinal prescription","Medicinal prescription record (record artifact)","Drug prescription record"]
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ["Medicinal prescription record","Medicinal prescription","Medicinal prescription record (record artifact)","Drug prescription record"] (from http://tx.fhir.org/r4)
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ["Medicinal prescription record","Medicinal prescription","Medicinal prescription record (record artifact)","Drug prescription record"] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#761938008'
+The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of [Medicinal prescription record, Medicinal prescription, Medicinal prescription record (record artifact), Drug prescription record] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#761938008'
+The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of [Medicinal prescription record, Medicinal prescription, Medicinal prescription record (record artifact), Drug prescription record] (from http://tx.fhir.org/r4)
 
 The display "History of medication use" is not a valid display for the code {http://loinc.org}10160-0 - should be one of ["History of Medication use Narrative","Hx of Medication use"] (from http://tx.fhir.org/r4) for 'http://loinc.org#10160-0'
 The display "History of medication use" is not a valid display for the code {http://loinc.org}10160-0 - should be one of [History of Medication use Narrative, Hx of Medication use, 医疗服务对象, 客户, 病人, 病患, 病号, 超系统 - 病人 历史, 史, 病史 历史纪录与体格检查 历史纪录与体格检查.历史记录, 历史纪录与体格检查.历史记录类, 历史纪录与体格检查.历史记录类别, 历史纪录与体格检查.病史, 历史纪录与体格检查.病史类, 历史纪录与体格检查.病史类别, 历史纪录与体格检查.病史记录, 历史纪录与体格检查.病史记录类, 历史纪录与体格检查.病史记录类别, 历史纪录与体格检查小节.历史记录, 历史纪录与体格检查小节.历史记录类, 历史纪录与体格检查小节.历史记录类别, 历史纪录与体格检查小节.病史, 历史纪录与体格检查小节.病史类, 历史纪录与体格检查小节.病史类别, 历史纪录与体格检查小节.病史记 历史纪录与体格检查小节 叙述, 叙述性文字, 报告, 报告型, 文字叙述, 文本叙述型, 文本描述, 文本描述型 处理用药, 处理用药物, 处理药物, 治疗用药, 治疗用药物, 用药, 药物处理, 药物治疗, 治疗药物 时刻, 随机, 随意, 瞬间 病史与体格检查 药物使用历史, 药物使用史, , Anamnesi paziente Punto nel tempo (episodio) Storia, Anamnesi, История Лекарственный анамнез Описательный Точка во времени, Момент, anamnese geneesmiddelen] (from http://tx.fhir.org/r4) for 'http://loinc.org#10160-0'
@@ -43,7 +48,8 @@ The display "Normally accessible" is not a valid display for the code {http://sn
 The display "Normally accessible" is not a valid display for the code {http://snomed.info/sct}17621005 - should be one of [Normal,Unremarkable,"Normal (qualifier value)"] for 'http://snomed.info/sct#17621005'
 The display "Normally accessible" is not a valid display for the code {http://snomed.info/sct}17621005 - should be one of [Normal,Unremarkable,"Normal (qualifier value)"] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#17621005'
 The display "Normally accessible" is not a valid display for the code {http://snomed.info/sct}17621005 - should be one of [Normal,Unremarkable,"Normal (qualifier value)"] (from http://tx.fhir.org/r4)
-
+The display "Normally accessible" is not a valid display for the code {http://snomed.info/sct}17621005 - should be one of [Normal, Unremarkable, Normal (qualifier value)] (from http://tx.fhir.org/r4)
+The display "Normally accessible" is not a valid display for the code {http://snomed.info/sct}17621005 - should be one of [Normal, Unremarkable, Normal (qualifier value)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#17621005'
 
 # Analyzer: The following display values do not correspond to the exact wording
 The display "Medication treatment plan.extended" is not a valid display for the code {http://loinc.org}77603-9 - should be one of ["Medication treatment plan.extended Document","Med tx plan.extended Doc"] (from http://tx.fhir.org/r4)

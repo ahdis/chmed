@@ -455,17 +455,17 @@
     </resource>
     
     <!-- ConceptMap -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="ConceptMap/unitcode-cdtyp9-to-chemed"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- ================================ Analyzer Start ================================ -->
     
     <!-- Analyzer: Examples for Medication Card document (included then in Parameters => Input Analzyer)-->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="Bundle/A1-MedicationCard-Simcora"/>
       </reference>
@@ -562,10 +562,10 @@
       </reference>
       <name value="Medication Card document"/>
       <description value="Example for Medication Card document"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: Example for Parameters (=> Input Analyzer) -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="Parameters/A1-Input-Analyzer"/>
       </reference>
@@ -704,10 +704,10 @@
       </reference>
       <name value="Parameters"/>
       <description value="Example Input Analyzer"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: Examples for Consolidated Medication Card document (=> Output Analyzer) -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="Bundle/1-1-ConsolidatedMedicationCard"/>
       </reference>
@@ -846,10 +846,10 @@
       </reference>
       <name value="Consolidated Medication Card document (Analyzer)"/>
       <description value="Example for Medication Card document (Output Analyzer)"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: StructureDefinition -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="StructureDefinition/chmed20af-analyzer-bundle"/>
       </reference>
@@ -938,34 +938,34 @@
         <reference value="StructureDefinition/chmed20af-infoinputdocument"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: OperationDefinition -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="OperationDefinition/chmed20af-analyzer"/>
       </reference>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: CodeSystem -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="CodeSystem/chmed20af-codesystem-history-changes"/>
       </reference>
       <name value="CodeSystem History Changes"/>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- Analyzer: ValueSet -->
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="ValueSet/chmed20af-valueset-history-changes"/>
       </reference>
       <name value="ValueSet History Changes"/>
       <description value="ValueSet History Changes"/>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
 
     <!-- ================================ Analyzer End ================================ -->
 

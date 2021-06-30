@@ -1,7 +1,7 @@
 {
   "tool": "jekyll", 
   "version": "4.0.1",
-  "fixed-business-version": "1.1.0",
+  "fixed-business-version": "2.0.0",
   "license": "CC-BY-SA-4.0",
   "npm-name": "ch.chmed20af.emediplan",
   "append-slash-to-dependency-urls": true,

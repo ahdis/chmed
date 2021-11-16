@@ -1,0 +1,12 @@
+{
+    "name": "ch.chmed20af.emediplan.template",
+    "version": "0.1.0",
+    "type": "fhir.template",
+    "license": "CC-BY-SA-4.0",
+    "description": "Template for Cooking on Fire IG",
+    "author": "IG eMediplan",
+      "base":  "fhir.base.template",
+    "dependencies": {
+      "fhir.base.template": "current"
+    }
+  }

@@ -1,0 +1,35 @@
+/* Define colors here */
+
+:root {
+    --ig-status-text-color: #255080; /* Header IG Title and status text color (center) */
+    --ig-header-container-color:#ffffff; /* Header container color (center) */
+    --ig-header-color:#ffffff; /* Header color (sides) */
+
+    --navbar-bg-color: #009dcc; /* Navbar container color (center) */
+    --stripe-bg-color:#8ad0ea; /* Navbar strip color (sides) */
+
+    --footer-container-bg-color: #009dcc; /* Footer container color (center) */
+    --footer-bg-color: #8ad0ea; /* Footer background color (sides) */
+    --footer-hyperlink-text-color: #255080;
+  
+    --btn-hover-color:#8ad0ea;  /* Navbar: Menu button hover color */
+    --btn-text-color: #ffffff; /* Menu button text color */
+
+    --link-color:#009dcc; /* Hyperlink text color */
+    --link-hover-color:#255080; /* Hyperlink text hover color */
+  
+    --publish-box-bg-color:#c5e6f5; /* Publish box background color */
+    --publish-box-border: 1px solid  #255080; /* Publish box border definition */
+
+    --toc-box-bg-color: #c5e6f5; /* TOC box background color */
+    --toc-box-border: 1px solid #255080; /* TOC box border definition */
+
+  }
+
+body {
+  color: #255080;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #255080;
+}

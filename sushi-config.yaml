@@ -1,0 +1,45 @@
+id: ch.chmed20af.emediplan
+canonical: http://chmed20af.emediplan.ch/fhir
+name: IgChMED20AF
+status: active
+version: 2.0.0
+fhirVersion: 4.0.1
+copyrightYear: 2017+
+releaseLabel: ci-build
+publisher:
+  name: IG eMediplan
+  url: http://www.emediplan.ch
+
+title: eMediplan CHMED20AF Implementation Guide
+description: FHIR IG for eMediplan
+license: CC-BY-SA-4.0
+
+dependencies:
+  ch.fhir.ig.ch-emed: 1.0.0
+  ch.fhir.ig.ch-core: 2.0.0
+
+
+# ----- Define IG tabs (page content) -----
+menu:
+  Home: index.html
+  Introduction: intro.html
+  Profiles: profiles.html
+  Private Fields: privatefields.html
+  Terminology: terminology.html
+  Dosage: dosage.html
+  Artifacts: artifacts.html
+
+# ----- Define own titles (default: IG Publisher generates titles) -----
+pages:
+  index.md:
+    title: Home
+  intro.md:
+    title: Introduction
+  profiles.md:
+    title: Profiles
+  privatefields.md:
+    title: Private Fields
+  terminology.md:
+    title: Terminology
+  dosage.md:
+    title: Dosage

@@ -3,6 +3,9 @@ Parent: CHEMEDMedication
 Id: chmed20af-medication
 Title: "Medication"
 Description: "Profile for the Medication resource"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication"
 * code MS
 * code.coding MS

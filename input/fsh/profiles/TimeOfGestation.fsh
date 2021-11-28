@@ -3,6 +3,9 @@ Parent: Observation
 Id: chmed20af-obs-timeofgestation
 Title: "Time of Gestation"
 Description: "Profile for the Observation resource to represent the time of gestation"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Time of Gestation"
 * code = $loinc#49052-4
 * code MS

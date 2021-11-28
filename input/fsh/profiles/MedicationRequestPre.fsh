@@ -3,6 +3,9 @@ Parent: CHEMEDMedicationRequest
 Id: chmed20af-pre-medicationrequest
 Title: "MedicationRequest (Pre)"
 Description: "Profile for the MedicationRequest resource of the Medication Prescription document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF MedicationRequest (Pre)"
 * contained MS
 * extension contains ExtPrivateField named privatefield 0..* MS

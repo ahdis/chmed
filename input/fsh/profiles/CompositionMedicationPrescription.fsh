@@ -3,6 +3,9 @@ Parent: CHEMEDCompositionMedicationPrescription
 Id: chmed20af-pre-composition
 Title: "Medication Prescription Composition"
 Description: "Profile for the Composition resource of the Medication Prescription document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Prescription Composition"
 * language MS
 * extension[informationRecipient] MS

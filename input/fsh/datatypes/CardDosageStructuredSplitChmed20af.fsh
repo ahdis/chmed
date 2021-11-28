@@ -3,6 +3,9 @@ Parent: CHEMEDDosageStructuredSplit
 Id: chmed20af-card-dosage-structured-split
 Title: "Dosage Structured Split (Card)"
 Description: "Dosage structured split of Medication Card document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Dosage Structured Split (Card)"
 * sequence MS
 * timing MS

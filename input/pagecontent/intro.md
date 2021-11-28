@@ -11,7 +11,7 @@ The Medication Card document summarizes the entire, current medication of a pati
 
 #### Bundle
 
-{% include img.html img="bundle_medicationplan.png" caption="Fig.: Bundle Medication Card document" width="50%" %}
+{% include img.html img="bundle_medicationplan.png" caption="Fig.: Bundle Medication Card document" width="35%" %}
 
 The FHIR resource Bundle bundles the corresponding entries in a document. It contains
 
@@ -19,7 +19,7 @@ The FHIR resource Bundle bundles the corresponding entries in a document. It con
 * an entry to the Composition, the actual document that references different resources (further entry elements in the Bundle) and
 * further entry elements to the patient, medication card entries, etc.
 
-Medication Card document: [Profile](StructureDefinition-chmed20af-card-bundle.html), Example ([XML](Bundle-chmed20af-card-bundle-s01.xml.html), [JSON](Bundle-chmed20af-card-bundle-s01.json.html))
+Medication Card document: [Profile](StructureDefinition-chmed20af-card-bundle.html), Example ([XML](Bundle-card-bundle-s01.xml.html), [JSON](Bundle-card-bundle-s01.json.html))
 
 
 #### Composition
@@ -42,7 +42,7 @@ The Composition resource defines the following parameter for the Medication Card
 | section:healthconcerns | Health concerns |  Entry | MedicalData |
 | section:annotation | Notes |  text | Rmk |
 
-Composition Medication Card document: [Profile](StructureDefinition-chmed20af-card-composition.html), Example ([XML](Composition-chmed20af-card-composition-s01.xml.html), [JSON](Composition-chmed20af-card-composition-s01.json.html))
+Composition Medication Card document: [Profile](StructureDefinition-chmed20af-card-composition.html), Example ([XML](Composition-card-composition-s01.xml.html), [JSON](Composition-card-composition-s01.json.html))
 
 
 #### Patient
@@ -59,7 +59,7 @@ Composition Medication Card document: [Profile](StructureDefinition-chmed20af-ca
 | address  | Address for the patient  | Address  | address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 | communication.language  | Language of the patient  | CodeableConcept  | Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" |
 
-Patient (Medication Card document): [Profile](StructureDefinition-chmed20af-card-patient.html), Example ([XML](Patient-chmed20af-card-patient-s01.xml.html), [JSON](Patient-chmed20af-card-patient-s01.json.html))
+Patient (Medication Card document): [Profile](StructureDefinition-chmed20af-card-patient.html), Example ([XML](Patient-card-patient-s01.xml.html), [JSON](Patient-card-patient-s01.json.html))
 
 
 #### Practitioner
@@ -70,7 +70,7 @@ Patient (Medication Card document): [Profile](StructureDefinition-chmed20af-card
 | identifier  | GLN for this practitioner  | Identifier  | Auth.Gln |
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName |
 
-Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-chmed20af-practitioner-s01.xml.html), [JSON](Practitioner-chmed20af-practitioner-s01.json.html))
+Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-practitioner-s01.xml.html), [JSON](Practitioner-practitioner-s01.json.html))
 
 
 #### Medication Section 
@@ -92,10 +92,10 @@ The medication section contains the entries for the current medication for a pat
 | Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
 MedicationStatement: [Profile](StructureDefinition-chmed20af-card-medicationstatement.html), 
-Example 1 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-1.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-1.json.html)),
-Example 2 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-2.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-2.json.html)),
-Example 3 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-3.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-3.json.html)),
-Example 4 ([XML](MedicationStatement-chmed20af-card-medicationstatement-s01-4.xml.html), [JSON](MedicationStatement-chmed20af-card-medicationstatement-s01-4.json.html))
+Example 1 ([XML](MedicationStatement-card-medicationstatement-s01-1-roaccutan.xml.html), [JSON](MedicationStatement-card-medicationstatement-s01-1-roaccutan.json.html)),
+Example 2 ([XML](MedicationStatement-card-medicationstatement-s01-2-aspirincardio.xml.html), [JSON](MedicationStatement-card-medicationstatement-s01-2-aspirincardio.json.html)),
+Example 3 ([XML](MedicationStatement-card-medicationstatement-s01-3-beloczok.xml.html), [JSON](MedicationStatement-card-medicationstatement-s01-3-beloczok.json.html)),
+Example 4 ([XML](MedicationStatement-card-medicationstatement-s01-4-zocor.xml.html), [JSON](MedicationStatement-card-medicationstatement-s01-4-zocor.json.html))
 
 
 #### Health Concerns Section 
@@ -104,17 +104,17 @@ The health concern section contains the medical data for the patient and the pos
 {:class="table table-bordered"}
 | Entry  | Description | Resource/Datatype    | CHMED16A |
 | ------------- | ------------- | -------------  | ------------- |
-| Body Weight  | [Weight measurement for patient in kg](Observation-chmed20af-card-observation-s01-bodyweight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyweight)  | MedicalData.Meas.Weight |
-| Body Height  | [Weight measurement for patient in cm](Observation-chmed20af-card-observation-s01-bodyheight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyheight)  | MedicalData.Meas.Height | 
-| First day of last menstruation  | [First day of last menstruation](Observation-chmed20af-observation-s01-dateoflastmenustration.html) | [Observation](StructureDefinition-chmed20af-obs-dateoflastmenstruation.html)  | MedicalData.DLstMen |
-| Premature baby  | [premature baby true only if age &lt;= 18 months](Observation-chmed20af-observation-s01-prematurebaby.html) | [Observation](StructureDefinition-chmed20af-obs-prematurebaby.html)  | MedicalData.Prem| 
-| Time of gestation  | [Time of gestation only if Premature Baby](Observation-chmed20af-observation-s01-timeofgestation.html) | [Observation](StructureDefinition-chmed20af-obs-timeofgestation.html)  | MedicalData.ToG.Weeks + MedicalData.ToG.Day | 
-| Risks per group  |   [Renal Insufficiency](Condition-chmed20af-card-condition-s01-1.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Liver Insufficiency](Condition-chmed20af-card-condition-s01-2.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Reproduction](Condition-chmed20af-card-condition-s01-3.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Competitive athlete](Condition-chmed20af-card-condition-s01-4.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Driver](Condition-chmed20af-card-condition-s01-5.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Allergies](Condition-chmed20af-card-condition-s01-6.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Body Weight  | [Weight measurement for patient in kg](Observation-card-observation-s01-bodyweight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyweight)  | MedicalData.Meas.Weight |
+| Body Height  | [Height measurement for patient in cm](Observation-card-observation-s01-bodyheight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyheight)  | MedicalData.Meas.Height | 
+| First day of last menstruation  | [First day of last menstruation](Observation-card-observation-s01-dateoflastmenstruation.html) | [Observation](StructureDefinition-chmed20af-obs-dateoflastmenstruation.html)  | MedicalData.DLstMen |
+| Premature baby  | [Premature baby true only if age &lt;= 18 months](Observation-card-observation-s01-prematurebaby.html) | [Observation](StructureDefinition-chmed20af-obs-prematurebaby.html)  | MedicalData.Prem| 
+| Time of gestation  | [Time of gestation only if Premature Baby](Observation-card-observation-s01-timeofgestation.html) | [Observation](StructureDefinition-chmed20af-obs-timeofgestation.html)  | MedicalData.ToG.Weeks + MedicalData.ToG.Day | 
+| Risks per group  |   [Renal Insufficiency](Condition-card-condition-s01-1-renalinsufficiency.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Liver Insufficiency](Condition-card-condition-s01-2-liverinsufficiency.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Reproduction](Condition-card-condition-s01-3-reproduction.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Competitive athlete](Condition-card-condition-s01-4-competitiveathlete.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Driver](Condition-card-condition-s01-5-driver.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Allergies](Condition-card-condition-s01-6-allergies.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
 
 
 ### Medication Prescription document
@@ -123,7 +123,7 @@ A Medication Prescription document is generated during the process in which a he
 
 #### Bundle
 
-{% include img.html img="bundle_prescription.png" caption="Fig.: Bundle Medication Prescription document" width="50%" %}
+{% include img.html img="bundle_prescription.png" caption="Fig.: Bundle Medication Prescription document" width="35%" %}
 
 The FHIR resource Bundle bundles the corresponding entries in a document. It contains
 
@@ -131,7 +131,7 @@ The FHIR resource Bundle bundles the corresponding entries in a document. It con
 * an entry to the Composition, the actual document that references different resources (further entry elements in the Bundle) and
 * further entry elements to the patient, medication prescription entries, etc.
 
-Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-bundle.html), Example ([XML](Bundle-chmed20af-pre-bundle-s01.xml.html), [JSON](Bundle-chmed20af-pre-bundle-s01.json.html))
+Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-bundle.html), Example ([XML](Bundle-pre-bundle-s01.xml.html), [JSON](Bundle-pre-bundle-s01.json.html))
 
 
 #### Composition
@@ -153,7 +153,7 @@ The Composition resource defines the following parameter for the Medication Pres
 | section:prescription | List of medicaments |  MedicationRequest | Medicaments |
 | section:annotation | Notes |  text | Rmk |
 
-Composition Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-composition.html), Example ([XML](Composition-chmed20af-pre-composition-s01.xml.html), [JSON](Composition-chmed20af-pre-composition-s01.json.html))
+Composition Medication Prescription document: [Profile](StructureDefinition-chmed20af-pre-composition.html), Example ([XML](Composition-pre-composition-s01.xml.html), [JSON](Composition-pre-composition-s01.json.html))
 
 
 #### Patient
@@ -169,7 +169,7 @@ Composition Medication Prescription document: [Profile](StructureDefinition-chme
 | birthDate  | Date of birth  | date  | Patient.BDt | 
 | address  | Address for the patient  | Address |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 
-Patient (Medication Prescription document): [Profile](StructureDefinition-chmed20af-pre-patient.html), Example ([XML](Patient-chmed20af-pre-patient-s01.xml.html), [JSON](Patient-chmed20af-pre-patient-s01.json.html))
+Patient (Medication Prescription document): [Profile](StructureDefinition-chmed20af-pre-patient.html), Example ([XML](Patient-pre-patient-s01.xml.html), [JSON](Patient-pre-patient-s01.json.html))
 
 
 #### Practitioner
@@ -181,7 +181,7 @@ Patient (Medication Prescription document): [Profile](StructureDefinition-chmed2
 | identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | 
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName | 
 
-Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-chmed20af-practitioner-s01.xml.html), [JSON](Practitioner-chmed20af-practitioner-s01.json.html))
+Practitioner: [Profile](StructureDefinition-chmed20af-practitioner.html), Example ([XML](Practitioner-practitioner-s01.xml.html), [JSON](Practitioner-practitioner-s01.json.html))
 
 
 #### Medication Prescribed Section 
@@ -203,4 +203,4 @@ The medication section contains the entries for the prescriped medications for a
 | dispenseRequest.quantity  | Number of package to be delivered  | 	SimpleQuantity  | Medicament.NbPack |
 | substitution.allowedCodeableConcept |  Medication is substitutable  | CodeableConcept  | Medicament.Subs | 
 
-MedicationRequest: [Profile](StructureDefinition-chmed20af-pre-medicationrequest.html), Example ([XML](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.xml.html), [JSON](MedicationRequest-chmed20af-pre-medicationrequest-s01-1.json.html))
+MedicationRequest: [Profile](StructureDefinition-chmed20af-pre-medicationrequest.html), Example ([XML](MedicationRequest-pre-medicationrequest-s01-1-roaccutan.xml.html), [JSON](MedicationRequest-pre-medicationrequest-s01-1-roaccutan.json.html))

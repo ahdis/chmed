@@ -3,6 +3,9 @@ Parent: CHCorePractitionerEPR
 Id: chmed20af-practitioner
 Title: "Practitioner"
 Description: "Profile for the Practitioner resource to represent a healthcare professional"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Practitioer"
 * identifier MS
 * identifier[GLN] MS

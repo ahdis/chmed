@@ -3,6 +3,9 @@ Parent: Condition
 Id: chmed20af-condition-risks
 Title: "Risks"
 Description: "Profile for the Condition resource to represent the risks"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Risks"
 * identifier MS
 * clinicalStatus = $condition-clinical#active

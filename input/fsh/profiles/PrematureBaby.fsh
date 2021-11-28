@@ -3,6 +3,9 @@ Parent: Observation
 Id: chmed20af-obs-prematurebaby
 Title: "Premature Baby"
 Description: "Profile for the Observation resource to represent a premature baby"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Premature Baby"
 * code = $sct#395507008
 * code MS

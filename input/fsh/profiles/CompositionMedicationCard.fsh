@@ -3,6 +3,9 @@ Parent: CHEMEDCompositionMedicationCard
 Id: chmed20af-card-composition
 Title: "Medication Card Composition"
 Description: "Profile for the Composition resource of the Medication Card document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Card Composition"
 * language MS
 * extension[informationRecipient] MS

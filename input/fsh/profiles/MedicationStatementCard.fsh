@@ -3,6 +3,9 @@ Parent: CHEMEDMedicationStatementCard
 Id: chmed20af-card-medicationstatement
 Title: "MedicationStatement (Card)"
 Description: "Profile for the MedicationStatement resource of the Medication Card document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF MedicationStatement (Card)"
 * contained MS
 * extension contains ExtPrivateField named privatefield 0..* MS

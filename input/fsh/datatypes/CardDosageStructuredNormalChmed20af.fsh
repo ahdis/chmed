@@ -3,6 +3,9 @@ Parent: CHEMEDDosageStructuredNormal
 Id: chmed20af-card-dosage-structured-normal
 Title: "Dosage Structured Normal (Card)"
 Description: "Dosage structured normal of Medication Card document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Dosage Structured Normal (Card)"
 * timing MS
 * timing.repeat MS

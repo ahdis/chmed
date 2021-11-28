@@ -10,6 +10,9 @@ publisher:
   name: IG eMediplan
   url: http://www.emediplan.ch
 
+parameters:
+  apply-publisher: false
+
 title: eMediplan CHMED20AF Implementation Guide
 description: FHIR IG for eMediplan
 license: CC-BY-SA-4.0

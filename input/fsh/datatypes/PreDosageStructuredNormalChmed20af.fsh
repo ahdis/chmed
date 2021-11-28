@@ -3,6 +3,9 @@ Parent: CHEMEDDosageStructuredNormalMedicationRequest
 Id: chmed20af-pre-dosage-structured-normal
 Title: "Dosage Structured Normal (Pre)"
 Description: "Dosage structured normal of Medication Prescription document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Dosage Structured Normal (Pre)"
 * timing MS
 * timing.repeat MS

@@ -3,6 +3,9 @@ Parent: CHEMEDDocumentMedicationCard
 Id: chmed20af-card-bundle
 Title: "Medication Card Document"
 Description: "Profile for the Bundle resource to represent the entire, current medication of a patient"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Card Document"
 * identifier MS
 * identifier.system MS

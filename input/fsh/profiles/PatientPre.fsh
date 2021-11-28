@@ -3,6 +3,9 @@ Parent: CHCorePatientEPR
 Id: chmed20af-pre-patient
 Title: "Patient (Pre)"
 Description: "Profile for the Patient resource of the Medication Prescription document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Patient (Pre)"
 * extension contains ExtPrivateField named privatefield 0..* MS
 * extension[privatefield] ^short = "Private fields for patient"

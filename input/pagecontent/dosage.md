@@ -16,7 +16,7 @@ See [EventTiming](https://www.hl7.org/fhir/valueset-event-timing.html), the simp
 #### Normal Dosing
 If the doses are the same, the can be mapped as follows:
 
-1-0-1-0: extract from [example](MedicationStatement-chmed20af-card-medicationstatement-s01-3.html)
+1-0-1-0: extract from [example](MedicationStatement-card-medicationstatement-s01-3-beloczok.html)
 
 ```xml
 	<dosage>
@@ -49,7 +49,7 @@ If the doses are the same, the can be mapped as follows:
 
 
 #### Split Dosing
-For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatement-chmed20af-card-medicationstatement-s02-3.html)
+For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatement-card-medicationstatement-s02-3-beloczok.html)
 
 ```xml
 	<dosage>
@@ -110,7 +110,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 * The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
 * The offset (in seconds) of taking time after cycle start in CHMED16A has to represented with timeOfDay.
 
-[Example](MedicationStatement-chmed20af-card-medicationstatement-tt-2-multiple-meronem.html) for a dosage for a product 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks
+[Example](MedicationStatement-card-medicationstatement-tt-2-multiple-meronem.html) for a dosage for a product 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks
 
 ```xml
 	<dosage>
@@ -154,7 +154,7 @@ For 1-0-0.5-0 two dosage elements have to be created, [example](MedicationStatem
 	</dosage> 
 ```
 
-Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-chmed20af-card-medicationstatement-tt-1-diffrates-mathbera.html), [tapered dosing](MedicationStatement-chmed20af-card-medicationstatement-tt-4-spiricort.html).
+Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html), [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).
 
 An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (example increase form 50ml to 200 ml):
 

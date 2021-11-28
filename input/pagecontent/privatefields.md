@@ -23,7 +23,7 @@ can be added to Patient, Composition (CHMED16A: Medication) and MedicationStatem
   ]
 ```
 
-The name of the field can be indicated with the **extension name** in attribute `valueString`, the value of the field with the **extension value** and attribute `valueString`. See sample for [Patient](Patient-chmed20af-card-patient-ext.html).
+The name of the field can be indicated with the **extension name** in attribute `valueString`, the value of the field with the **extension value** and attribute `valueString`. See sample for [Patient](Patient-card-patient-ext.html).
 
 ### Caveat
 

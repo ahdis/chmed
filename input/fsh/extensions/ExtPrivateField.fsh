@@ -2,6 +2,9 @@ Extension: ExtPrivateField
 Id: chmed20af-privatefield
 Title: "Private Field"
 Description: "Extension for private fields defined in Mediplan"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * ^context[0].type = #element
 * ^context[=].expression = "Patient"
 * ^context[+].type = #element

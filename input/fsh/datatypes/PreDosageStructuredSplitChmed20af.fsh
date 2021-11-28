@@ -3,6 +3,9 @@ Parent: CHEMEDDosageStructuredSplitMedicationRequest
 Id: chmed20af-pre-dosage-structured-split
 Title: "Dosage Structured Split (Pre)"
 Description: "Dosage structured split of Medication Prescription document"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED 20AF Dosage Structured Split (Pre)"
 * sequence MS
 * timing MS

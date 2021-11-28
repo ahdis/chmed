@@ -3,6 +3,9 @@ Parent: CHEMEDDocumentMedicationPrescription
 Id: chmed20af-pre-bundle
 Title: "Medication Prescription Document"
 Description: "Profile for the Bundle resource to represent the prescribed medication of a patient"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Prescription Document"
 * identifier MS
 * identifier.system MS

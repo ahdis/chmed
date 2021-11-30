@@ -3,7 +3,7 @@
 This github repository provides holds the source for the eMediplan CHMED20AF Implementation Guide, for the published version see 
 [eMediplan CHMED20AF Implementation Guide: Home](http://chmed20af.emediplan.ch/).
 
-The Implemenation Guide is based on FHIR. [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability Ressources. 
+The Implemenation Guide is based on FHIR. [FHIR](http://www.hl7.org/fhir) is a standard in development from [HL7](http://www.hl7.org/). FHIR consists of a RESTFul API and a set of interoperability resources. 
 
 Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the following advantages:
 * CHMED20AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined 

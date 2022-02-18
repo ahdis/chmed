@@ -1,10 +1,10 @@
 Instance: RiskCategories-to-Risks
 InstanceOf: ConceptMap
 Usage: #definition
-* publisher = "IG eMediplan"
-* contact.name = "IG eMediplan"
-* contact.telecom.system = #url
-* contact.telecom.value = "http://www.emediplan.ch"
+* publisher = "HCI Solutions AG"
+* contact.name = "Hotline"
+* contact.telecom.system = #email
+* contact.telecom.value = "hotline@hcisolutions.ch"
 
 * name = "RisksMap"
 * title = "Risk Categories to Risks"

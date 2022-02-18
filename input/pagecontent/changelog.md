@@ -3,9 +3,15 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 
 ### v3.0.0 (2022)
- 
+
+Work in progress -> GitHub Issues:
+* [Issue #13](https://github.com/ahdis/chmed20af/issues/13): Mapping 'AppInstr'
+* [Issue #12](https://github.com/ahdis/chmed20af/issues/12): Missing Risks in CodeSystem
+* [Issue #9](https://github.com/ahdis/chmed20af/issues/9): Medicament.Rep
+* [Issue #8](https://github.com/ahdis/chmed20af/issues/8): where is inRes (inReserve) mapped?
+
 #### Added
-* TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport).
+* TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed20af/issues/10)).
 
 #### Changed / Updated
 * TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
@@ -23,6 +29,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v2.0.0 (2021-06-30)
 * Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md)).
    * Depending on [CH EMED v1.0.0](http://fhir.ch/ig/ch-emed/1.0.0/index.html)
+* Fix code for 'Time of Gestation' ([Issue #5](https://github.com/ahdis/chmed20af/issues/5)). 
 
 
 
@@ -32,6 +39,8 @@ All significant changes to this FHIR implementation guide will be documented on 
    * Renaming the implementation guide: CHMED16AF -> CHMED20AF
    * Changing the canonical url: http://chmed16af.emediplan.ch -> http://chmed20af.emediplan.ch
 * Remove the QR Code in the FHIR specification of CHMED16A.
+* Fix Loinc code for 'History of medication use' ([Issue #1](https://github.com/ahdis/chmed20af/issues/1)).
+* Fix package id ([Issue #3](https://github.com/ahdis/chmed20af/issues/3)).
 
 
 

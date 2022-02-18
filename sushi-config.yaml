@@ -46,3 +46,5 @@ pages:
     title: Terminology
   dosage.md:
     title: Dosage
+  changelog.md:
+    title: Change Log

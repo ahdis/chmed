@@ -4,6 +4,21 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 
 {% include img.html img="mediplan_example.png" caption="Fig.: Example Mediplan" %}
 
+### About this Implementation Guide
+
+#### Scope
+* [Introduction](intro.html) - TBD
+* [Profiles](profiles.html) - TBD
+* [Private Fields](privatefields.html) - TBD
+* [Terminologies](terminology.html) - TBD
+* [Dosage](dosage.html) - TBD
+
+#### Download
+You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
+
+#### Change Log
+[Significant changes](changelog.html) to this specification since its initial version.
+
 ### CHMED16A
 
 CHMED16A describes the  proposed specification and reference implementation of the object model for a medication plan, the so called [CHMED16A](https://emediplan.ch/dbFile/305/u-ce40/dl/eMediplan_CHMED16A_V1.6.pdf).
@@ -43,5 +58,3 @@ This specification includes content from SNOMED CT, which is copyright © 2002+ 
 This specification contains content from LOINC® (<http://loinc.org>). The LOINC table, LOINC codes, and LOINC panels and forms file are copyright © 1995-2014, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and available at no cost under the license at <http://loinc.org/terms-of-use> .
 
 
-### Download
-You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).

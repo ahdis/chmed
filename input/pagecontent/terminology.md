@@ -5,3 +5,6 @@ Within the implementation guide the value sets correspond directly to the code s
 
 ### Code Systems
 {% include list-simple-codesystems.xhtml %}
+
+### Concept Maps
+{% include list-simple-conceptmaps.xhtml %}

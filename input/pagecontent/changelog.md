@@ -11,6 +11,7 @@ Work in progress -> GitHub Issues:
 
 #### Added
 * TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed20af/issues/10)).
+* Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
 * TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).

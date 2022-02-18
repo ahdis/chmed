@@ -7,41 +7,41 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Prescription Composition"
-* language MS
-* extension[informationRecipient] MS
-* extension contains ExtPrivateField named privatefield 0..* MS
+* language
+* extension[informationRecipient]
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier.system MS
-* identifier.value MS
-* status MS
-* type MS
+* identifier
+* identifier.system
+* identifier.value
+* status
+* type
 * subject only Reference(PatientPre)
-* subject MS
-* date MS
+* subject
+* date
 * author only Reference(Practitioner or CHCorePractitionerRoleEpr or Device or PatientPre or RelatedPerson or CHCoreOrganizationEPR)
-* author MS
-* title MS
-* confidentiality MS
-* confidentiality.extension[confidentialityCode] MS
-* custodian MS
-* section MS
-* section[originalRepresentation] MS
-* section[originalRepresentation].title MS
-* section[originalRepresentation].code MS
-* section[originalRepresentation].text MS
-* section[originalRepresentation].entry MS
+* author
+* title
+* confidentiality
+* confidentiality.extension[confidentialityCode]
+* custodian
+* section
+* section[originalRepresentation]
+* section[originalRepresentation].title
+* section[originalRepresentation].code
+* section[originalRepresentation].text
+* section[originalRepresentation].entry
 
-* section[prescription] MS
-* section[prescription].title MS
-* section[prescription].code MS
+* section[prescription]
+* section[prescription].title
+* section[prescription].code
 * section[prescription].entry only Reference(MedicationRequestPre)
-* section[prescription].entry MS
+* section[prescription].entry
 
-* section[annotation] MS
-* section[annotation].title MS
-* section[annotation].code MS
-* section[annotation].text MS
+* section[annotation]
+* section[annotation].title
+* section[annotation].code
+* section[annotation].text
 * section[annotation].text ^short = "General comments"
 
 

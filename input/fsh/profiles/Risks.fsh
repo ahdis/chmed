@@ -7,19 +7,19 @@ Description: "Profile for the Condition resource to represent the risks"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Risks"
-* identifier MS
+* identifier
 * clinicalStatus = $condition-clinical#active
-* clinicalStatus MS
-* category 1..1 MS
+* clinicalStatus
+* category 1..1
 * category from RiskCategories (required)
 * category ^binding.description = "A category assigned to the condition."
-* code MS
+* code
 * code from Risks (required)
 * code ^short = "Identification of the risk for that category."
 * code ^binding.description = "Identification of risk"
 * subject only Reference(PatientCard)
-* subject MS
-* recordedDate MS
+* subject
+* recordedDate
 
 
 Mapping: CHMED16A-for-Risks

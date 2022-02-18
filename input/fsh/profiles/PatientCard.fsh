@@ -7,28 +7,28 @@ Description: "Profile for the Patient resource of the Medication Card document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Patient (Card)"
-* extension contains ExtPrivateField named privatefield 0..* MS
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier[LocalPid] MS
-* identifier[LocalPid].system MS
-* identifier[LocalPid].value MS
-* name MS
-* telecom MS
-* gender MS
-* birthDate MS
-* address MS
-* communication ..1 MS
+* identifier
+* identifier[LocalPid]
+* identifier[LocalPid].system
+* identifier[LocalPid].value
+* name
+* telecom
+* gender
+* birthDate
+* address
+* communication ..1
 * communication ^slicing.discriminator.type = #value
 * communication ^slicing.discriminator.path = "preferred"
 * communication ^slicing.ordered = false
 * communication ^slicing.rules = #open
-* communication[languageOfCorrespondance] 1.. MS
-* communication[languageOfCorrespondance].language MS
+* communication[languageOfCorrespondance] 1..
+* communication[languageOfCorrespondance].language
 * communication[languageOfCorrespondance].language from CommonLanguages (extensible)
 * communication[languageOfCorrespondance].language ^short = "The language which can be used to communicate with the patient about his or her health"
 * communication[languageOfCorrespondance].language ^binding.description = "A human language."
-* communication[languageOfCorrespondance].preferred MS
+* communication[languageOfCorrespondance].preferred
 * communication[languageOfCorrespondance].preferred ^short = "Language preference indicator"
 
 

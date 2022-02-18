@@ -7,15 +7,15 @@ Description: "Profile for the Bundle resource to represent the entire, current m
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Card Document"
-* identifier MS
-* identifier.system MS
-* identifier.value MS
-* type MS
-* timestamp MS
-* entry MS
-* entry[Composition] MS
+* identifier
+* identifier.system
+* identifier.value
+* type
+* timestamp
+* entry
+* entry[Composition]
 * entry[Composition].resource only CompositionMedicationCard
-* entry[Composition].resource MS
+* entry[Composition].resource
 * entry[Composition].resource ^short = "CHMED20AF Medication Card Composition"
 
 

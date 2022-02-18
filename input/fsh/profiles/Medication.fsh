@@ -7,24 +7,24 @@ Description: "Profile for the Medication resource"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication"
-* code MS
-* code.coding MS
-* code.coding[GTIN] MS
-* code.coding[GTIN].system MS
-* code.coding[GTIN].code MS
-* code.coding[GTIN].display MS
-* code.text MS
-* form MS
-* form.coding MS
-* form.coding.system MS
-* form.coding.code MS
-* form.coding.display MS
-* amount MS
-* ingredient MS
-* ingredient.itemCodeableConcept MS
-* ingredient.itemCodeableConcept.coding MS
-* ingredient.itemCodeableConcept.text MS
-* ingredient.strength MS
+* code
+* code.coding
+* code.coding[GTIN]
+* code.coding[GTIN].system
+* code.coding[GTIN].code
+* code.coding[GTIN].display
+* code.text
+* form
+* form.coding
+* form.coding.system
+* form.coding.code
+* form.coding.display
+* amount
+* ingredient
+* ingredient.itemCodeableConcept
+* ingredient.itemCodeableConcept.coding
+* ingredient.itemCodeableConcept.text
+* ingredient.strength
 
 
 Mapping: CHMED16A-for-Medication

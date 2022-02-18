@@ -7,16 +7,16 @@ Description: "Profile for the Practitioner resource to represent a healthcare pr
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Practitioer"
-* identifier MS
-* identifier[GLN] MS
-* identifier[GLN].system MS
-* identifier[GLN].value MS
-* identifier[ZSR] MS
-* identifier[ZSR].system MS
-* identifier[ZSR].value MS
-* name MS
-* telecom MS
-* address MS
+* identifier
+* identifier[GLN]
+* identifier[GLN].system
+* identifier[GLN].value
+* identifier[ZSR]
+* identifier[ZSR].system
+* identifier[ZSR].value
+* name
+* telecom
+* address
 
 
 

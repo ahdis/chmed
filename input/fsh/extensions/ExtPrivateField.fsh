@@ -13,21 +13,21 @@ Description: "Extension for private fields defined in Mediplan"
 * . ^short = "Extension for Private Field"
 * . ^definition = "Extension for Private Field."
 * extension contains
-    name 1..1 MS and
-    value 1..1 MS
+    name 1..1 and
+    value 1..1
 * extension[name] only Extension
 * extension[name] ^short = "Name of the private field"
 * extension[name] ^definition = "Name of the private field."
 * extension[name].url only uri
-* extension[name].url MS
+* extension[name].url
 * extension[name].valueString only string
-* extension[name].valueString MS
+* extension[name].valueString
 * extension[value] only Extension
 * extension[value] ^short = "Value of the private field."
 * extension[value] ^definition = "Value of the private field."
 * extension[value].url only uri
-* extension[value].url MS
+* extension[value].url
 * extension[value].valueString only string
-* extension[value].valueString MS
+* extension[value].valueString
 * url only uri
-* url MS
+* url

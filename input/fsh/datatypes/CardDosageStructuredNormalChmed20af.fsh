@@ -7,19 +7,19 @@ Description: "Dosage structured normal of Medication Card document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Dosage Structured Normal (Card)"
-* timing MS
-* timing.repeat MS
-* timing.repeat.bounds[x] MS
-* timing.repeat.when MS
-* route MS
-* route.coding MS
-* route.coding.system MS
-* route.coding.code MS
-* route.coding.display MS
-* doseAndRate MS
-* doseAndRate.dose[x] MS
+* timing
+* timing.repeat
+* timing.repeat.bounds[x]
+* timing.repeat.when
+* route
+* route.coding
+* route.coding.system
+* route.coding.code
+* route.coding.display
+* doseAndRate
+* doseAndRate.dose[x]
 * maxDosePerPeriod only CHEMEDRatioWithEmedUnits
-* maxDosePerPeriod MS
+* maxDosePerPeriod
 * maxDosePerPeriod ^short = "Upper limit on medication per unit of time"
 
 

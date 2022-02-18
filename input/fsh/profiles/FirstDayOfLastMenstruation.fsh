@@ -8,9 +8,9 @@ Description: "Profile for the Observation resource to represent the first day of
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF First Day of Last Menstruation"
 * code = $sct#161713000
-* code MS
+* code
 * code ^short = "First day of last menstruation"
-* valueDateTime 1.. MS
+* valueDateTime 1..
 * valueDateTime only dateTime
 
 

@@ -7,17 +7,17 @@ Description: "Profile for the Patient resource of the Medication Prescription do
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Patient (Pre)"
-* extension contains ExtPrivateField named privatefield 0..* MS
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier[LocalPid] MS
-* identifier[LocalPid].system MS
-* identifier[LocalPid].value MS
-* name MS
-* telecom MS
-* gender MS
-* birthDate MS
-* address MS
+* identifier
+* identifier[LocalPid]
+* identifier[LocalPid].system
+* identifier[LocalPid].value
+* name
+* telecom
+* gender
+* birthDate
+* address
 
 
 

@@ -7,11 +7,14 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 ### About this Implementation Guide
 
 #### Scope
-* [Introduction](intro.html) - TBD
+* [Introduction](intro.html) - explains the structures for the different formats/values.
 * [Profiles](profiles.html) - TBD
 * [Private Fields](privatefields.html) - TBD
 * [Terminologies](terminology.html) - TBD
 * [Dosage](dosage.html) - TBD
+
+#### MustSupport
+TBD (see also [CH EMED](https://fhir.ch/ig/ch-emed/index.html#mustsupport))
 
 #### Download
 You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
@@ -49,12 +52,8 @@ Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the fol
 
 The CHEMD20AF format can bei either in XML or JSON format. 
 
-In the section [Introduction](intro.html) the structures for the different formats/values are explained.
-
 ### Copyright
 This specification includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation ([IHTSDO](http://snomed.org/)) and distributed by agreement between IHTSDO and HL7. Implementers of these specification must have the appropriate SNOMED CT Affiliate license - for more information contact 
 <https://www.snomed.org/snomed-ct/getsnomed> or <info@snomed.org>.
 
 This specification contains content from LOINC® (<http://loinc.org>). The LOINC table, LOINC codes, and LOINC panels and forms file are copyright © 1995-2014, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and available at no cost under the license at <http://loinc.org/terms-of-use> .
-
-

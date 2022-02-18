@@ -8,9 +8,9 @@ Description: "Profile for the Observation resource to represent a premature baby
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Premature Baby"
 * code = $sct#395507008
-* code MS
+* code
 * code ^short = "Premature infant"
-* valueBoolean 1.. MS
+* valueBoolean 1..
 * valueBoolean only boolean
 * valueBoolean ^short = "premature baby true only if age <= 18 months"
 

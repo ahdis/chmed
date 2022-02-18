@@ -7,29 +7,29 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF MedicationRequest (Pre)"
-* contained MS
-* extension contains ExtPrivateField named privatefield 0..* MS
+* contained
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier.system MS
-* identifier.value MS
-* status MS
+* identifier
+* identifier.system
+* identifier.value
+* status
 * medicationReference only Reference(Medication)
-* medicationReference MS
+* medicationReference
 * subject only Reference(PatientPre)
-* subject MS
-* note MS
-* dosageInstruction MS
-* dosageInstruction[nonstructured] MS
+* subject
+* note
+* dosageInstruction
+* dosageInstruction[nonstructured]
 * dosageInstruction[structurednormal] only PreDosageStructuredNormalChmed20af
-* dosageInstruction[structurednormal] MS
+* dosageInstruction[structurednormal]
 * dosageInstruction[structuredsplit] only PreDosageStructuredSplitChmed20af
-* dosageInstruction[structuredsplit] MS
-* dispenseRequest MS
-* dispenseRequest.numberOfRepeatsAllowed MS
-* dispenseRequest.quantity MS
-* substitution MS
-* substitution.allowedCodeableConcept MS
+* dosageInstruction[structuredsplit]
+* dispenseRequest
+* dispenseRequest.numberOfRepeatsAllowed
+* dispenseRequest.quantity
+* substitution
+* substitution.allowedCodeableConcept
 
 
 

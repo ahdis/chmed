@@ -7,72 +7,72 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Medication Card Composition"
-* language MS
-* extension[informationRecipient] MS
-* extension contains ExtPrivateField named privatefield 0..* MS
+* language
+* extension[informationRecipient]
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier.system MS
-* identifier.value MS
-* status MS
-* type MS
+* identifier
+* identifier.system
+* identifier.value
+* status
+* type
 * subject only Reference(PatientCard)
-* subject MS
-* date MS
+* subject
+* date
 * author only Reference(Practitioner or CHCorePractitionerRoleEpr or Device or PatientCard or RelatedPerson or CHCoreOrganizationEPR)
-* author MS
-* title MS
-* confidentiality MS
-* confidentiality.extension[confidentialityCode] MS
-* attester MS
+* author
+* title
+* confidentiality
+* confidentiality.extension[confidentialityCode]
+* attester
 * attester ^slicing.discriminator.type = #value
 * attester ^slicing.discriminator.path = "mode"
 * attester ^slicing.rules = #open
-* attester contains professionalAuthenticator 0..* MS
+* attester contains professionalAuthenticator 0..*
 * attester[professionalAuthenticator] ^short = "The professional authenticator of the document (person)"
 * attester[professionalAuthenticator].mode = #professional (exactly)
-* attester[professionalAuthenticator].mode MS
-* attester[professionalAuthenticator].time MS
+* attester[professionalAuthenticator].mode
+* attester[professionalAuthenticator].time
 * attester[professionalAuthenticator].time ^short = "When composition was attested by the party, Validate date: Date of validation"
 * attester[professionalAuthenticator].party only Reference(Practitioner)
-* attester[professionalAuthenticator].party MS
+* attester[professionalAuthenticator].party
 * attester[professionalAuthenticator].party ^short = "Validated by: The Gln of the pharmacist who has validated the medication card"
-* custodian MS
-* section MS
+* custodian
+* section
 
-* section[originalRepresentation] MS
-* section[originalRepresentation].title MS
-* section[originalRepresentation].code MS
-* section[originalRepresentation].text MS
-* section[originalRepresentation].entry MS
+* section[originalRepresentation]
+* section[originalRepresentation].title
+* section[originalRepresentation].code
+* section[originalRepresentation].text
+* section[originalRepresentation].entry
 
-* section[card] MS
-* section[card].title MS
-* section[card].code MS
+* section[card]
+* section[card].title
+* section[card].code
 * section[card].entry only Reference(MedicationStatementCard)
-* section[card].entry MS
+* section[card].entry
 
-* section[annotation] MS
-* section[annotation].title MS
-* section[annotation].code MS
-* section[annotation].text MS
+* section[annotation]
+* section[annotation].title
+* section[annotation].code
+* section[annotation].text
 * section[annotation].text ^short = "General comments"
 
-* section contains healthconcerns 0..1 MS
-* section[healthconcerns].code 1.. MS
+* section contains healthconcerns 0..1
+* section[healthconcerns].code 1..
 * section[healthconcerns].code = $loinc#75310-3 "Health Concerns"
-* section[healthconcerns].entry MS
+* section[healthconcerns].entry
 * section[healthconcerns].entry ^slicing.discriminator.type = #profile
 * section[healthconcerns].entry ^slicing.discriminator.path = "resolve()"
 * section[healthconcerns].entry ^slicing.ordered = false
 * section[healthconcerns].entry ^slicing.rules = #open
 * section[healthconcerns].entry contains
-    bodyweight 0..1 MS and
-    bodyheight 0..1 MS and
-    dlstmen 0..1 MS and
-    prematurebaby 0..1 MS and
-    timeofgestation 0..1 MS and
-    risks 0..6 MS
+    bodyweight 0..1 and
+    bodyheight 0..1 and
+    dlstmen 0..1 and
+    prematurebaby 0..1 and
+    timeofgestation 0..1 and
+    risks 0..6
 * section[healthconcerns].entry[bodyweight] only Reference($bodyweight)
 * section[healthconcerns].entry[bodyweight] ^short = "Body Weight (kg)"
 * section[healthconcerns].entry[bodyheight] only Reference($bodyheight)

@@ -7,41 +7,41 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF MedicationStatement (Card)"
-* contained MS
-* extension contains ExtPrivateField named privatefield 0..* MS
+* contained
+* extension contains ExtPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
-* identifier MS
-* identifier.system MS
-* identifier.value MS
-* status MS
-* category MS
-* category.coding MS
+* identifier
+* identifier.system
+* identifier.value
+* status
+* category
+* category.coding
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "system"
 * category.coding ^slicing.rules = #open
-* category.coding contains ATC 0..* MS
+* category.coding contains ATC 0..*
 * category.coding[ATC] ^short = "ATC code (Level 1) if possible"
-* category.coding[ATC].system 1..1 MS
+* category.coding[ATC].system 1..1
 * category.coding[ATC].system = "http://www.whocc.no/atc" (exactly)
-* category.coding[ATC].code 1..1 MS
-* category.coding[ATC].display 0..1 MS
-* category.text MS
+* category.coding[ATC].code 1..1
+* category.coding[ATC].display 0..1
+* category.text
 * category.text ^short = "Note that no ATC Code is applied"
 * medicationReference only Reference(Medication)
-* medicationReference MS
+* medicationReference
 * subject only Reference(PatientCard)
-* subject MS
+* subject
 * informationSource only Reference(Practitioner or PatientCard)
-* informationSource MS
-* reasonCode MS
-* reasonCode.text MS
-* note MS
-* dosage MS
-* dosage[nonstructured] MS
+* informationSource
+* reasonCode
+* reasonCode.text
+* note
+* dosage
+* dosage[nonstructured]
 * dosage[structurednormal] only CardDosageStructuredNormalChmed20af
-* dosage[structurednormal] MS
+* dosage[structurednormal]
 * dosage[structuredsplit] only CardDosageStructuredSplitChmed20af
-* dosage[structuredsplit] MS
+* dosage[structuredsplit]
 
 
 Mapping: CHMED16A-for-MedicationStatementCard

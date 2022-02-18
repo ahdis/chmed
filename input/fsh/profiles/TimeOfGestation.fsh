@@ -8,14 +8,14 @@ Description: "Profile for the Observation resource to represent the time of gest
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Time of Gestation"
 * code = $loinc#49052-4
-* code MS
+* code
 * code ^short = "Gestational age in days"
-* valueQuantity 1.. MS
-* valueQuantity.value 1.. MS
-* valueQuantity.unit 1.. MS
-* valueQuantity.system 1.. MS
+* valueQuantity 1..
+* valueQuantity.value 1..
+* valueQuantity.unit 1..
+* valueQuantity.system 1..
 * valueQuantity.system = "http://unitsofmeasure.org" (exactly)
-* valueQuantity.code 1.. MS
+* valueQuantity.code 1..
 * valueQuantity.code = #d (exactly)
 
 

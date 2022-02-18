@@ -5,11 +5,12 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v3.0.0 (2022)
  
 #### Added
+* TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport).
 
 #### Changed / Updated
-* TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html))
+* TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
-* TBD: Update to the specification [CHMED21A (Vx.x)]()
+* TBD: Update to the specification [CHMED21A (Vx.x)]().
    * Renaming the implementation guide: CHMED20AF -> CHMED21AF
    * Changing the canonical url: http://chmed20af.emediplan.ch -> http://chmed21af.emediplan.ch
 * Switch to the new [IG template](https://github.com/ahdis/chmed20af/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
@@ -20,17 +21,17 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 
 ### v2.0.0 (2021-06-30)
-* Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md))
+* Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md)).
    * Depending on [CH EMED v1.0.0](http://fhir.ch/ig/ch-emed/1.0.0/index.html)
 
 
 
 ### v1.0.0 (2020-06-03)
-* Integration of the Swiss EPR context
+* Integration of the Swiss EPR context.
    * Depending on [CH EMED v0.1.0](http://fhir.ch/ig/ch-emed/0.1.0/index.html)
    * Renaming the implementation guide: CHMED16AF -> CHMED20AF
    * Changing the canonical url: http://chmed16af.emediplan.ch -> http://chmed20af.emediplan.ch
-* Remove the QR Code in the FHIR specification of CHMED16A
+* Remove the QR Code in the FHIR specification of CHMED16A.
 
 
 

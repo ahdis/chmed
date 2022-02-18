@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-s01-4-zocor
-InstanceOf: MedicationStatementCard
+InstanceOf: CHMED20AFMedicationStatementCard
 Title: "MedicationStatement - ZOCOR"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

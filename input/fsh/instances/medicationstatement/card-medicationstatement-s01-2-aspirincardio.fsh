@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-s01-2-aspirincardio
-InstanceOf: MedicationStatementCard
+InstanceOf: CHMED20AFMedicationStatementCard
 Title: "MedicationStatement - ASPIRIN CARDIO"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

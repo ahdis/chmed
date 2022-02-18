@@ -1,6 +1,6 @@
-Extension: ExtensionDoseQuantityTo
+Extension: CHMED20AFExtensionDoseQuantityTo
 Id: chmed20af-dosequantityto
-Title: "Change Dose Quantity"
+Title: "CHMED20AF Change Dose Quantity"
 Description: "Extension for representing the change of dose quantity"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url

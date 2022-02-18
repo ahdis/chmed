@@ -1,5 +1,5 @@
 Instance: pre-bundle-s01
-InstanceOf: MedicationPrescriptionDocument
+InstanceOf: CHMED20AFMedicationPrescriptionDocument
 Title: "Medication Prescription Document - Sample 01"
 Description: "Example for a Medication Prescription document (Bundle)"
 Usage: #example

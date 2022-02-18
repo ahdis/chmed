@@ -1,5 +1,5 @@
 Instance: card-condition-s01-2-liverinsufficiency
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Liver Insufficiency - Excluded"
 Description: "Example for a Risk (Condition)"
 Usage: #example

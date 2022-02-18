@@ -1,5 +1,5 @@
 Instance: s01-3-beloczok
-InstanceOf: Medication
+InstanceOf: CHMED20AFMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680521101573 "BELOC ZOK Ret Tabl 25 mg 30 Stk"
 * code.text = "BELOC ZOK Ret Tabl 25 mg 30 Stk"

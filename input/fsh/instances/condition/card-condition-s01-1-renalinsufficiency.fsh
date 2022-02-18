@@ -1,5 +1,5 @@
 Instance: card-condition-s01-1-renalinsufficiency
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Reneal Insufficiency - Light"
 Description: "Example for a Risk (Condition)"
 Usage: #example

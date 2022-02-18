@@ -1,7 +1,7 @@
-Profile: Medication
+Profile: CHMED20AFMedication
 Parent: CHEMEDMedication
 Id: chmed20af-medication
-Title: "Medication"
+Title: "CHMED20AF Medication"
 Description: "Profile for the Medication resource"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
@@ -27,9 +27,9 @@ Description: "Profile for the Medication resource"
 * ingredient.strength
 
 
-Mapping: CHMED16A-for-Medication
+Mapping: CHMED16A-for-CHMED20AFMedication
 Id: CHMED16A
 Title: "Mapping to CHMED16A"
-Source: Medication
+Source: CHMED20AFMedication
 Target: "http://emediplan.ch/chmed16a"
 * code.coding[GTIN] -> "Medicament.Id with Medicament.IdType 2 (GTIN)"

@@ -1,5 +1,5 @@
 Instance: tt-4-spiricort
-InstanceOf: Medication
+InstanceOf: CHMED20AFMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680388400291 "SPIRICORT Filmtabl 20 mg"
 * code.text = "SPIRICORT Filmtabl 20 mg"

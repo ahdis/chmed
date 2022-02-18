@@ -1,5 +1,5 @@
 Instance: card-patient-ext
-InstanceOf: PatientCard
+InstanceOf: CHMED20AFPatientCard
 Title: "Maxima Matter (Ext)"
 Description: "Example for a Patient (Card) with the private field extension included"
 Usage: #example

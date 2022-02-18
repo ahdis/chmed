@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-1-diffrates-mabthera
-InstanceOf: MedicationStatementCard
+InstanceOf: CHMED20AFMedicationStatementCard
 Title: "MedicationStatement - MABTHERA"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

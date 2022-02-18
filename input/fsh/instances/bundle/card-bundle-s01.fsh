@@ -1,5 +1,5 @@
 Instance: card-bundle-s01
-InstanceOf: MedicationCardDocument
+InstanceOf: CHMED20AFMedicationCardDocument
 Title: "Medication Card Document - Sample 01"
 Description: "Example for a Medication Card document (Bundle) with all specified health concerns included"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: card-condition-s01-5-driver
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Driver - Excluded"
 Description: "Example for a Risk (Condition)"
 Usage: #example

@@ -1,7 +1,7 @@
-Profile: FirstDayOfLastMenstruation
+Profile: CHMED20AFFirstDayOfLastMenstruation
 Parent: Observation
 Id: chmed20af-obs-dateoflastmenstruation
-Title: "First Day of Last Menstruation"
+Title: "CHMED20AF First Day of Last Menstruation"
 Description: "Profile for the Observation resource to represent the first day of the last menstruation"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
@@ -15,9 +15,9 @@ Description: "Profile for the Observation resource to represent the first day of
 
 
 
-Mapping: CHMED16A-for-FirstDayOfLastMenstruation
+Mapping: CHMED16A-for-CHMED20AFFirstDayOfLastMenstruation
 Id: CHMED16A
 Title: "Mapping to CHMED16A"
-Source: FirstDayOfLastMenstruation
+Source: CHMED20AFFirstDayOfLastMenstruation
 Target: "http://emediplan.ch/chmed16a"
 * valueDateTime -> "MedicalData.DLstMen"

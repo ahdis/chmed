@@ -1,6 +1,6 @@
-Extension: ExtPrivateField
+Extension: CHMED20AFExtPrivateField
 Id: chmed20af-privatefield
-Title: "Private Field"
+Title: "CHMED20AF Private Field"
 Description: "Extension for private fields defined in Mediplan"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url

@@ -14,11 +14,19 @@ Work in progress -> GitHub Issues:
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
-* TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
-   * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
 * TBD: Update to the specification [CHMED21A (Vx.x)]().
    * Renaming the implementation guide: CHMED20AF -> CHMED21AF
    * Changing the canonical url: http://chmed20af.emediplan.ch -> http://chmed21af.emediplan.ch
+
+* TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
+   * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
+   * Change one reference of Composition.author in [CHMED20AF Medication Card Composition](StructureDefinition-chmed20af-card-composition.html) and [CHMED20AF Medication Prescription Composition](StructureDefinition-chmed20af-pre-composition.html).   
+      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole (the ohters do not change)  
+   * Change parent profile of [CHMED20AF Practitioner](StructureDefinition-chmed20af-practitioner.html)
+      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole  
+         * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
+
+* Add 'CHMED20AF' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED20AF Practitioner' from the FHIR basis Practitioner.
 * Switch to the new [IG template](https://github.com/ahdis/chmed20af/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
 * Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed20af/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 

@@ -1,5 +1,5 @@
 Instance: card-condition-s01-6-allergies
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Allergies - Betablocker/Penicillin"
 Description: "Example for a Risk (Condition)"
 Usage: #example

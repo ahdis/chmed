@@ -1,5 +1,5 @@
 Instance: card-patient-s01
-InstanceOf: PatientCard
+InstanceOf: CHMED20AFPatientCard
 Title: "Maxima Matter (Card)"
 Description: "Example for a Patient (Card)"
 Usage: #example

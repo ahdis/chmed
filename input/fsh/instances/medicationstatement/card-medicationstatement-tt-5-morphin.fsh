@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-5-morphin
-InstanceOf: MedicationStatementCard
+InstanceOf: CHMED20AFMedicationStatementCard
 Title: "MedicationStatement - MORPHIN"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-3-clexane
-InstanceOf: MedicationStatementCard
+InstanceOf: CHMED20AFMedicationStatementCard
 Title: "MedicationStatement - CLEXANE"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

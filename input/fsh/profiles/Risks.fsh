@@ -1,7 +1,7 @@
-Profile: Risks
+Profile: CHMED20AFRisks
 Parent: Condition
 Id: chmed20af-condition-risks
-Title: "Risks"
+Title: "CHMED20AF Risks"
 Description: "Profile for the Condition resource to represent the risks"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
@@ -17,15 +17,15 @@ Description: "Profile for the Condition resource to represent the risks"
 * code from Risks (required)
 * code ^short = "Identification of the risk for that category."
 * code ^binding.description = "Identification of risk"
-* subject only Reference(PatientCard)
+* subject only Reference(CHMED20AFPatientCard)
 * subject
 * recordedDate
 
 
-Mapping: CHMED16A-for-Risks
+Mapping: CHMED16A-for-CHMED20AFRisks
 Id: CHMED16A
 Title: "Mapping to CHMED16A"
-Source: Risks
+Source: CHMED20AFRisks
 Target: "http://emediplan.ch/chmed16a"
 * -> "MedicalData.RG (RiskCategory)"
 * category -> "RiskCatgory"

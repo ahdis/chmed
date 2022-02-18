@@ -1,5 +1,5 @@
 Instance: tt-2-multiple-meronem
-InstanceOf: Medication
+InstanceOf: CHMED20AFMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680531050328 "MERONEM i.v. Trockensub 1 g"
 * code.text = "MERONEM i.v. Trockensub 1 g"

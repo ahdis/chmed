@@ -1,5 +1,5 @@
 Instance: card-condition-s01-3-reproduction
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Reproduction - Women of Childbearing Age"
 Description: "Example for a Risk (Condition)"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: pre-medicationrequest-s01-1-roaccutan
-InstanceOf: MedicationRequestPre
+InstanceOf: CHMED20AFMedicationRequestPre
 Title: "MedicationRequest - ROACCUTAN"
 Description: "Example for a MedicationRequest (Pre)"
 Usage: #example

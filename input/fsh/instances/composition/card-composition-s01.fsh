@@ -1,5 +1,5 @@
 Instance: card-composition-s01
-InstanceOf: CompositionMedicationCard
+InstanceOf: CHMED20AFCompositionMedicationCard
 Title: "Medication Card Composition - Sample 01"
 Description: "Example for a  Composition (Card)"
 Usage: #example

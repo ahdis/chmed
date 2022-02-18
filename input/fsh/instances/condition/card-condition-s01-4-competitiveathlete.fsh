@@ -1,5 +1,5 @@
 Instance: card-condition-s01-4-competitiveathlete
-InstanceOf: Risks
+InstanceOf: CHMED20AFRisks
 Title: "Risk Competitive Athlete - Excluded"
 Description: "Example for a Risk (Condition)"
 Usage: #example

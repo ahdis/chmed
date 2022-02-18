@@ -1,5 +1,5 @@
 Instance: card-observation-s01-dateoflastmenstruation
-InstanceOf: FirstDayOfLastMenstruation
+InstanceOf: CHMED20AFFirstDayOfLastMenstruation
 Title: "First Day of Last Menstruation - 2016-09-01"
 Description: "Example for a first day of last menstruation (Observation)"
 Usage: #example

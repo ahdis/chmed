@@ -1,5 +1,5 @@
 Instance: s01-4-zocor
-InstanceOf: Medication
+InstanceOf: CHMED20AFMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680497420456 "ZOCOR Filmtabl 20 mg 28 Stk"
 * code.text = "ZOCOR Filmtabl 20 mg 28 Stk"

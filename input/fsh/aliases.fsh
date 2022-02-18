@@ -13,3 +13,7 @@ Alias: $bodyweight =                            http://hl7.org/fhir/StructureDef
 
 Alias: $chmed20af-codesystem-risks-category =   http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-category
 Alias: $chmed20af-codesystem-risks-cdscode =    http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-cdscode
+
+// CH EMED
+Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
+Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole

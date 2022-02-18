@@ -1,12 +1,12 @@
-Profile: Practitioner
-Parent: CHCorePractitionerEPR
+Profile: CHMED20AFPractitioner
+Parent: $ch-emed-practitioner
 Id: chmed20af-practitioner
-Title: "Practitioner"
+Title: "CHMED20AF Practitioner"
 Description: "Profile for the Practitioner resource to represent a healthcare professional"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Practitioer"
+* . ^short = "CHMED20AF Practitioner"
 * identifier
 * identifier[GLN]
 * identifier[GLN].system
@@ -20,10 +20,10 @@ Description: "Profile for the Practitioner resource to represent a healthcare pr
 
 
 
-Mapping: CHMED16A-for-Practitioner
+Mapping: CHMED16A-for-CHMED20AFPractitioner
 Id: CHMED16A
 Title: "Mapping to CHMED16A"
-Source: Practitioner
+Source: CHMED20AFPractitioner
 Target: "http://emediplan.ch/chmed16a"
 * -> "Auth"
 * identifier[GLN].value -> "Auth.Gln"

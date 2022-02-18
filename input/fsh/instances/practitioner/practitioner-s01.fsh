@@ -1,5 +1,5 @@
 Instance: practitioner-s01
-InstanceOf: Practitioner
+InstanceOf: CHMED20AFPractitioner
 Title: "Dr. Thomas Wälti"
 Description: "Example for a Practitioner"
 Usage: #example
@@ -11,3 +11,7 @@ Usage: #example
 * identifier[=].value = "ZSR"
 * name.family = "Wälti"
 * name.given = "Thomas"
+* address.line = "Apothekerstrasse 3"
+* address.city = "Bern"
+* address.postalCode = "3000"
+* address.country = "Schweiz"

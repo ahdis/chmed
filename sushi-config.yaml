@@ -21,7 +21,7 @@ copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 
 dependencies:
-  ch.fhir.ig.ch-emed: 1.0.0
+  ch.fhir.ig.ch-emed: 2.0.0
   ch.fhir.ig.ch-core: 2.0.0
 
 

@@ -6,7 +6,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 Work in progress -> GitHub Issues:
 * [Issue #13](https://github.com/ahdis/chmed20af/issues/13): Mapping 'AppInstr'
-* [Issue #12](https://github.com/ahdis/chmed20af/issues/12): Missing Risks in CodeSystem
 * [Issue #9](https://github.com/ahdis/chmed20af/issues/9): Medicament.Rep
 * [Issue #8](https://github.com/ahdis/chmed20af/issues/8): where is inRes (inReserve) mapped?
 
@@ -23,7 +22,10 @@ Work in progress -> GitHub Issues:
 * Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed20af/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 
 #### Fixed
-
+* Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed20af/issues/12)):
+   * CodeSystem [Risk Categories](CodeSystem-chmed20af-codesystem-risks-category.html): 7 Diabetes
+   * CodeSystem [Risks](CodeSystem-chmed20af-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   
+   
 
 
 ### v2.0.0 (2021-06-30)

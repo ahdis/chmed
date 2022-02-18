@@ -12,7 +12,7 @@ Description: "Value set for possible risks"
 CodeSystem: Risks
 Id: chmed20af-codesystem-risks-cdscode
 Title: "Risks"
-Description: "Code system for possible risks (Release 2011-11)"
+Description: "Code system for possible risks (Release 2012-11)"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "risks-cdscode"
 * ^publisher = "HCI Solutions AG"
@@ -21,71 +21,97 @@ Description: "Code system for possible risks (Release 2011-11)"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+
 * #597 "Niereninsuffizienz, terminale (Clcr <15 ml/min)"
 * #597 ^designation[0].language = #de-CH
 * #597 ^designation[=].value = "Niereninsuffizienz, terminale (Clcr <15 ml/min)"
 * #597 ^designation[+].language = #fr-CH
 * #597 ^designation[=].value = "Insuffisance rénale, terminale (Clcr <15 ml/min)"
+
 * #575 "Niereninsuffizienz, schwere (Clcr 15–30 ml/min)"
 * #575 ^designation[0].language = #de-CH
 * #575 ^designation[=].value = "Niereninsuffizienz, schwere (Clcr 15–30 ml/min)"
 * #575 ^designation[+].language = #fr-CH
 * #575 ^designation[=].value = "Insuffisance rénale, sévère (Clcr 15–30 ml/min)"
+
 * #576 "Niereninsuffizienz, mittelschwere (Clcr 30–60 ml/min)"
 * #576 ^designation[0].language = #de-CH
 * #576 ^designation[=].value = "Niereninsuffizienz, mittelschwere (Clcr 30–60 ml/min)"
 * #576 ^designation[+].language = #fr-CH
 * #576 ^designation[=].value = "Insuffisance rénale, modérée (Clcr 30–60 ml/min)"
+
 * #577 "Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"
 * #577 ^designation[0].language = #de-CH
 * #577 ^designation[=].value = "Niereninsuffizienz, leichte (Clcr 60–90 ml/min)"
 * #577 ^designation[+].language = #fr-CH
 * #577 ^designation[=].value = "Insuffisance rénale, légère (Clcr 60–90 ml/min)"
+
 * #572 "Leberinsuffizienz, schwere (Child-Pugh C)"
 * #572 ^designation[0].language = #de-CH
 * #572 ^designation[=].value = "Leberinsuffizienz, schwere (Child-Pugh C)"
 * #572 ^designation[+].language = #fr-CH
 * #572 ^designation[=].value = "insuffisance hépatique, sévère (Child-Pugh C)"
+
 * #573 "Leberinsuffizienz, mittelschwere (Child-Pugh B)"
 * #573 ^designation[0].language = #de-CH
 * #573 ^designation[=].value = "Leberinsuffizienz, mittelschwere (Child-Pugh B)"
 * #573 ^designation[+].language = #fr-CH
 * #573 ^designation[=].value = "Insuffisance hépatique, modérée (Child-Pugh B)"
+
 * #574 "Leberinsuffizienz, leichte (Child-Pugh A)"
 * #574 ^designation[0].language = #de-CH
 * #574 ^designation[=].value = "Leberinsuffizienz, leichte (Child-Pugh A))"
 * #574 ^designation[+].language = #fr-CH
 * #574 ^designation[=].value = "Insuffisance hépatique, légère (Child-Pugh A)"
+
 * #78 "Schwangerschaft"
 * #78 ^designation[0].language = #de-CH
 * #78 ^designation[=].value = "Schwangerschaft"
 * #78 ^designation[+].language = #fr-CH
 * #78 ^designation[=].value = "Grossesse"
+
 * #77 "Stillzeit"
 * #77 ^designation[0].language = #de-CH
 * #77 ^designation[=].value = "Stillzeit"
 * #77 ^designation[+].language = #fr-CH
 * #77 ^designation[=].value = "Allaitement"
+
 * #612 "Frauen im gebärfähigen Alter"
 * #612 ^designation[0].language = #de-CH
 * #612 ^designation[=].value = "Frauen im gebärfähigen Alter"
 * #612 ^designation[+].language = #fr-CH
 * #612 ^designation[=].value = "Femmes en âge de procréer"
+
 * #613 "Zeugungsfähige Männer"
 * #613 ^designation[0].language = #de-CH
 * #613 ^designation[=].value = "Zeugungsfähige Männer"
 * #613 ^designation[+].language = #fr-CH
 * #613 ^designation[=].value = "Hommes en âge de procréer"
+
 * #580 "Leistungssportler"
 * #580 ^designation[0].language = #de-CH
 * #580 ^designation[=].value = "Leistungssportler"
 * #580 ^designation[+].language = #fr-CH
 * #580 ^designation[=].value = "Sportifs de compétition"
+
 * #615 "Potenziell gefährlichen Situationen ausgesetzt, wie beispielsweise dem Führen von Fahrzeugen, dem Bedienen von Maschinen oder dem Arbeiten in grossen Höhen"
 * #615 ^designation[0].language = #de-CH
 * #615 ^designation[=].value = "Potenziell gefährlichen Situationen ausgesetzt, wie beispielsweise dem Führen von Fahrzeugen, dem Bedienen von Maschinen oder dem Arbeiten in grossen Höhen"
 * #615 ^designation[+].language = #fr-CH
 * #615 ^designation[=].value = "Potenziell gefährlichen Situationen ausgesetzt, wie beispielsweise dem Führen von Fahrzeugen, dem Bedienen von Maschinen oder dem Arbeiten in grossen Höhen"
+
+* #779 "Diabetes mellitus Typ 1"
+* #779 ^designation[0].language = #de-CH
+* #779 ^designation[=].value = "Diabetes mellitus Typ 1"
+* #779 ^designation[+].language = #fr-CH
+* #779 ^designation[=].value = "Diabète de type 1"
+
+* #780 "Diabetes mellitus Typ 2"
+* #780 ^designation[0].language = #de-CH
+* #780 ^designation[=].value = "Diabetes mellitus Typ 2"
+* #780 ^designation[+].language = #fr-CH
+* #780 ^designation[=].value = "Diabète de type 2"
+
 * #1 "Penicillin-Kreuzallergie"
 * #1 ^designation[0].language = #de-CH
 * #1 ^designation[=].value = "Penicillin-Kreuzallergie"

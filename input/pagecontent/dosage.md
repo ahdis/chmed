@@ -504,16 +504,265 @@ FHIR format for dosage structured normal:
 Different types of timed dosage objects are defined in CHMED21A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
 
 #### DosageOnly
+Specifies a dosage without specifying a precise taking moment.
+
+**Example:** Take 1.
+
+CHMED21A format for DosageOnly:
+```
+{ 
+	"T": 1, // DosageOnly timed dosage object 
+	"D": { 
+		"T": 1, // Simple dosage dosage object 
+		"A": 1.0 // Amount of 1 
+	} 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 
 #### Times
+Specifies precise times when a medicament must be applied.
+
+**Example:** Take 1 at 08:00.
+
+CHMED21A format for Times:
+```
+{ 
+	"T": 2, // Times timed dosage object 
+	"Ts": [ 
+		{ 
+			"OffU": 3, // Offset unit is hours 
+			"Off": 8, // Offset of 8 (hours) 
+			"D": { 
+				"T": 1, // Simple dosage dosage object 
+				"A": 1.0 // Amount of 1 
+			} 
+		} 
+	] 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "timing": {
+            "repeat": {
+                "timeOfDay": "08:00:00"
+            }
+        },
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 
 #### DaySegments
+Specifies the day segment (morning, noon, evening, night) when a medicament must be applied.
+
+**Example:** Take 1 in the evening.
+
+CHMED21A format for DaySegments:
+```
+{ 
+	"T": 3, // DaySegments timed dosage object 
+	"Ts": [ 
+		{ 
+			"S": 3, // Evening segment 
+			"D": { 
+				"T": 1, // Simple dosage dosage object 
+				"A": 1.0 // Amount of 1 
+			} 
+		} 
+	] 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "timing": {
+            "repeat": {
+                "when": [
+                    "EVE"
+                ]
+            }
+        },
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 
 #### WeekDays
+Specifies on which days of the week a medicament must be applied.
+
+**Example:** Take 1 on Monday, Wednesday and Friday.
+
+CHMED21A format for WeekDays:
+```
+{ 
+	"T": 4, // Weekdays timed dosage object 
+	"WDs": [ 1, 3, 5 ], // Days of week Monday, Wednesday, Friday 
+	"TD": { 
+		"T": 1, // Dosage only timed dosage 
+		"D": { 
+			"T": 1, // Simple dosage dosage type 
+			"A": 1.0 // Amount of 1 
+		} 
+	} 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "timing": {
+            "repeat": {
+                "dayOfWeek": [
+                    "mon",
+                    "wed",
+                    "fri"
+                ]
+            }
+        },
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 
 #### DaysOfMonth
+Specifies on which days of the month a medicament must be applied.
+
+**Example:** Take 1 on the 1st and 15th of the month.
+
+CHMED21A format for DaysOfMonth:
+```
+{ 
+	"T": 5, // DaysOfMonth timed dosage 
+	"Ds": [ 1, 15 ], // Specified days in month 
+	"TD": { 
+		"T": 1, // DosageOnly timed dosage 
+		"D": { 
+			"T": 1, // Simple dosage dosage object 
+			"A": 1.0 // Amount of 1 
+		} 
+	} 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "timing": {
+            "repeat": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
+                        "valuePositiveInt": 1
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
+                        "valuePositiveInt": 15
+                    }
+                ],
+            }
+        },
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 
 #### Interval
+Specifies the application of a medicament with a minimal interval between two applications.
+
+**Example:** Apply medication with a minimal interval of 6 hours between two applications.
+
+CHMED21A format for Interval:
+```
+{ 
+	"T": 6, // Interval timed dosage 
+	"D": { … }, 
+	"MIDU": 3, // Min interval duration unit in hours 
+	"MID": 6 // Min interval of 6 (hours)
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "maxDosePerPeriod": {
+            "numerator": {
+                "value": 1,
+                "unit": "Piece",
+                "system": "http://unitsofmeasure.org",
+                "code": "{Piece}"
+            },
+            "denominator": {
+                "value": 6,
+                "unit": "Hour",
+                "system": "http://unitsofmeasure.org",
+                "code": "h"
+            }
+        }
+    }
+]
+```
 
 
 *********

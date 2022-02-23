@@ -765,9 +765,36 @@ FHIR format for dosage structured normal:
 ```
 
 
+### Dosage Objects
+Dosage objects are specified in CHMED21A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
+
+#### DosageSimple
+
+#### DosageFromTo
+
+#### DosageRange
+
+
+### Sequence Objects
+Sequence objects are defined in CHMED21A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
+
+#### PosologySequence
+
+#### Pause
+
+
+### Taking Objects
+Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
+
+#### TakingAtTime
+
+#### TakingInSegment
+
+
+
 *********
 
-### Taking times
+**Taking times**
 * The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
 * The offset (in seconds) of taking time after cycle start in CHMED16A has to represented with timeOfDay.
 

@@ -769,77 +769,49 @@ FHIR format for dosage structured normal:
 Dosage objects are specified in CHMED21A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
 
 #### DosageSimple
+Specifies a simple amount. E.g., 1 (pill) or 10 (ml).
 
+**Example:** Take 1.
+
+CHMED21A format for DosageSimple:
+```
+{ 
+	"T": 1, // Simple dosage 
+	"A": 1.0 // Amount of 1 
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "doseAndRate": [
+            {
+                "doseQuantity": {
+                    "value": 1,
+                    "unit": "Piece",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{Piece}"
+                }
+            }
+        ]
+    }
+]
+```
 #### DosageFromTo
+Specifies how a dosage changes during time. This can be e.g., used for infusions.
 
-#### DosageRange
+**Example:** Start with a dosage of 5, end with a dosage of 10 during a time interval of 45 minutes.
 
-
-### Sequence Objects
-Sequence objects are defined in CHMED21A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
-
-#### PosologySequence
-
-#### Pause
-
-
-### Taking Objects
-Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
-
-#### TakingAtTime
-
-#### TakingInSegment
-
-
-
-*********
-
-**Taking times**
-* The [Timing](https://www.hl7.org/fhir/datatypes.html#Timing) elements in FHIR differ in that the unit times can be specified not only in seconds but also in different units see [UnitsOfTime](https://www.hl7.org/fhir/valueset-units-of-time.html).
-* The offset (in seconds) of taking time after cycle start in CHMED16A has to represented with timeOfDay.
-
-[Example](MedicationStatement-card-medicationstatement-tt-2-multiple-meronem.html) for a dosage for a product 2 gr, 3 times daily, (08:00-12:00-18:00), iv, for 30 minutes every tuesday for three weeks
-
-```xml
-	<dosage>
-		<timing>
-			<repeat>
-				<boundsPeriod>
-					<start value="2017-09-05"/> <!-- DtFrom -->
-					<end value="2020-09-26"/> <!-- DtTo, inclusive -->
-				</boundsPeriod>
-
-				<duration value="1800"/> <!-- DU -->
-				<durationUnit value="s"/> <!-- DU -->
-
-				<frequency value="3"/>
-
-				<period value="1"/> <!-- CyDu -->
-				<periodUnit value="wk"/> <!-- CyDu -->
-
-				<dayOfWeek value="tue"/> <!-- implied by date, optional -->
-
-				<timeOfDay value="08:00:00"/> <!-- Off, but relative to timeOfDay -->
-				<timeOfDay value="12:00:00"/> <!-- Off, but relative to timeOfDay -->
-				<timeOfDay value="18:00:00"/> <!-- Off, but relative to timeOfDay -->
-			</repeat>
-		</timing>
-		<route>
-			<coding>
-				<system value="urn:oid:0.4.0.127.0.16.1.1.2.1"/>
-				<code value="20045000"/>
-				<display value="Intravenous use"/>
-			</coding>
-		</route>
-		<doseAndRate>
-			<doseQuantity>
-				<value value="2"/>
-				<unit value="gram"/>
-				<system value="http://unitsofmeasure.org"/>
-				<code value="g"/>
-			</doseQuantity>
-		</doseAndRate>
-	</dosage> 
+CHMED21A format for DosageFromTo:
+```
+{ 
+	"T": 2, // DosageFromTo 
+	"AFrom": 5.0, // Start amount is 5 
+	"ATo": 10.0, // End amount is 10 
+	"DuU": 2, // Duration unit is minutes 
+	"Du": 45 // Duration is 45 (minutes) 
+}
 ```
 
 Like in simplified times, if the dosage changes, multiple dosage elements have to be defined: See example [increasing dosage very hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html), [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).
@@ -862,4 +834,61 @@ An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defin
 		<fhir:code value="mL"/>
 	</fhir:doseQuantity>
 ```
+
+
+#### DosageRange
+With a dosage range a min and must amount must be specified.
+
+**Example:** Take 1 in the evening.
+
+CHMED21A format for DosageRange:
+```
+{ 
+	"T": 3, // DosageRange dosage 
+	"AMin": 1.0, // Minimum amount of 1 
+	"AMax": 3.0 // Maximum amount of 3
+}
+```
+
+FHIR format for dosage structured normal:
+```json
+"dosage": [
+    {
+        "doseAndRate": [
+            {
+                "doseRange": {
+                    "low": {
+                        "value": 1,
+                        "unit": "Piece",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{Piece}"
+                    },
+                    "high": {
+                        "value": 3,
+                        "unit": "Piece",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "{Piece}"
+                    }
+                }
+            }
+        ]
+    }
+]
+```
+
+### Sequence Objects
+Sequence objects are defined in CHMED21A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
+
+#### PosologySequence
+
+#### Pause
+
+
+### Taking Objects
+Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
+
+#### TakingAtTime
+
+#### TakingInSegment
+
 

@@ -202,11 +202,11 @@ CHMED21A format for Free Text:
 
 FHIR format for Dosage (non-structured) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.2.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "text": "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
+      "text" : "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
     }
-]
+  ]
 ```
 
 

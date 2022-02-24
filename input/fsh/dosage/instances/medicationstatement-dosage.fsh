@@ -1,9 +1,9 @@
 /*
 
-Instance: medicationstatement-dosage
-InstanceOf: CHMEDMedicationStatementDosage
-Title: "MedicationStatement Dosage"
-Description: "Example for a MedicationStatement"
+Instance: card-medicationstatement-dosage-4
+InstanceOf: CHMED20AFMedicationStatementCard
+Title: "MedicationStatement - Dosage Posology"
+Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
 * contained = med01
 * identifier.system = "urn:ietf:rfc:3986"
@@ -11,13 +11,16 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
+
+* dosage[structurednormal][+].additionalInstruction = $sct#307165006 "Before meal (qualifier value)"
+* dosage[structurednormal][=].timing.repeat.boundsPeriod.start = "2021-10-07"
+* dosage[structurednormal][=].timing.repeat.boundsPeriod.end = "2021-10-07"
+* dosage[structurednormal][=].asNeededBoolean = false
+
 */
 
 
 
-// 5. Posology objects
-// 5.1. Daily
-// 5.2. FreeText
 // 5.3. Single
 // 5.4. Cyclic
 // 5.5. Sequence
@@ -45,15 +48,3 @@ Usage: #example
 // 9. Taking objects
 // 9.1. TakingAtTime
 // 9.2. TakingInSegment
-
-
-
-
-
-
-
-
-
-
-
-

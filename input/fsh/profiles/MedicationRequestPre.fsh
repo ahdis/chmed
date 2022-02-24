@@ -44,10 +44,10 @@ Target: "http://emediplan.ch/chmed16a"
 //* extension[privatefield] -> "Medicament.PFields"
 //* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
 //* subject -> "Patient"
-//* dosageInstruction[nonstructured] -> "Medicament.AppInstr"
+
 * dosageInstruction -> "Medicament.Pos"
-//* dosageInstruction[structurednormal] -> "Medicament.Pos"
-//* dosageInstruction[structuredsplit] -> "Medicament.Pos"
+* dosageInstruction[nonstructured] -> "Posology.PO.Text"
+
 //* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
 //* dispenseRequest.quantity -> "Medicament.NbPack"
 //* substitution.allowedCodeableConcept -> "Medicament.Subs"

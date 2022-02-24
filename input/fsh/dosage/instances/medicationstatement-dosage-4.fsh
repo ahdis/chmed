@@ -1,7 +1,7 @@
-Instance: medicationstatement-card-dosage-4
+Instance: card-medicationstatement-dosage-4
 InstanceOf: CHMED20AFMedicationStatementCard
-Title: "4. MedicationStatement (Card) Dosage Posology"
-Description: "Example for a MedicationStatement (Card)"
+Title: "MedicationStatement - Dosage Posology"
+Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
 * contained = med01
 * identifier.system = "urn:ietf:rfc:3986"

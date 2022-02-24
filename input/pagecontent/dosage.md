@@ -23,7 +23,7 @@ CHMED21A format for Posology:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
   "dosage" : [
     {

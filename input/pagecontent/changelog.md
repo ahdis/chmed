@@ -9,6 +9,12 @@ Work in progress -> GitHub Issues:
 * [Issue #9](https://github.com/ahdis/chmed20af/issues/9): Medicament.Rep
 * [Issue #8](https://github.com/ahdis/chmed20af/issues/8): where is inRes (inReserve) mapped?
 
+#### Open Issues
+The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
+* [Issue #15](https://github.com/ahdis/chmed20af/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
+
+See also open issues on [GitHub](https://github.com/ahdis/chmed20af/issues?q=is%3Aopen+is%3Aissue).
+
 #### Added
 * TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed20af/issues/10)).
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).

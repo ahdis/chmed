@@ -1,5 +1,5 @@
-The model of dosages between CHMED21A and the CHMED21AF (FHIR version) differ sligthly due to the FHIR dosage model.
-This has an effect on how to map the different attributes form CHMED21A to CHMED21AF.
+The model of dosages between CHMED21A and the CHMED (FHIR version) differ sligthly due to the FHIR dosage model.
+This has an effect on how to map the different attributes form CHMED21A to CHMED.
 
 ### Posology and Dosage
 
@@ -442,7 +442,7 @@ FHIR format for Dosage:
             {
                 "coding": [
                     {
-                        "system": "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed21af-even-odd-days",
+                        "system": "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-even-odd-days",
                         "code": "even",
                         "display": "Even days"
                     }

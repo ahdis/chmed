@@ -19,12 +19,14 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * subject only Reference(CHMED20AFPatientPre)
 * subject
 * note
-* dosageInstruction
-* dosageInstruction[nonstructured]
-* dosageInstruction[structurednormal] only PreDosageStructuredNormalChmed20af
-* dosageInstruction[structurednormal]
-* dosageInstruction[structuredsplit] only PreDosageStructuredSplitChmed20af
-* dosageInstruction[structuredsplit]
+
+* dosageInstruction MS
+* dosageInstruction[nonstructured] MS
+//* dosageInstruction[structurednormal] only CHMEDDosageStructuredNormalPre
+* dosageInstruction[structurednormal] MS
+//* dosageInstruction[structuredsplit] only CHMEDDosageStructuredSplitPre
+* dosageInstruction[structuredsplit] MS
+
 * dispenseRequest
 * dispenseRequest.numberOfRepeatsAllowed
 * dispenseRequest.quantity

@@ -1,3 +1,6 @@
+* [CHMED MedicationStatement Dosage](StructureDefinition-chmed-medicationstatement-dosage.html)   
+Profile for the MedicationStatement resource to define the dosage according to the 'Posology' in CHMED21A
+
 The model of dosages between CHMED21A and the CHMED21AF (FHIR version) differ sligthly due to the FHIR dosage model.
 This has an effect on how to map the different attributes form CHMED21A to CHMED21AF.
 
@@ -23,32 +26,32 @@ CHMED21A format for Posology:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-medicationstatement-dosage-4.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "additionalInstruction": [
+      "additionalInstruction" : [
+        {
+          "coding" : [
             {
-                "coding": [
-                    {
-                        "system": "http://snomed.info/sct",
-                        "code": "307165006",
-                        "display": "Before meal (qualifier value)"
-                    }
-                ]
+              "system" : "http://snomed.info/sct",
+              "code" : "307165006",
+              "display" : "Before meal (qualifier value)"
             }
-        ],
-        "timing": {
-            "repeat": {
-                "boundsPeriod": {
-                    "start": "2021-10-07",
-                    "end": "2021-10-07"
-                }
-            }
-        },
-        "asNeededBoolean": false
+          ]
+        }
+      ],
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2021-10-07",
+            "end" : "2021-10-07"
+          }
+        }
+      },
+      "asNeededBoolean" : false
     }
-]
+  ]
 ```
 
 <span style="color:red">**CAVE:**</span>   
@@ -528,25 +531,27 @@ CHMED21A format for Times:
 
 FHIR format for Dosage:
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "timing": {
-            "repeat": {
-                "timeOfDay": "08:00:00"
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "timing" : {
+        "repeat" : {
+          "timeOfDay" : [
+            "08:00:00"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### DaySegments

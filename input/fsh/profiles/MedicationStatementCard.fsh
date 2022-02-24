@@ -36,25 +36,25 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * reasonCode
 * reasonCode.text
 * note
-* dosage
-* dosage[nonstructured]
-* dosage[structurednormal] only CardDosageStructuredNormalChmed20af
-* dosage[structurednormal]
-* dosage[structuredsplit] only CardDosageStructuredSplitChmed20af
-* dosage[structuredsplit]
+
+* dosage MS
+* dosage[nonstructured] MS
+//* dosage[structurednormal] only CHMEDDosageStructuredNormalCard
+* dosage[structurednormal] MS
+//* dosage[structuredsplit] only CHMEDDosageStructuredSplitCard
+* dosage[structuredsplit] MS
 
 
-Mapping: CHMED16A-for-CHMED20AFMedicationStatementCard
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
+Mapping: CHMED21A-for-CHMED20AFMedicationStatementCard
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
 Source: CHMED20AFMedicationStatementCard
-Target: "http://emediplan.ch/chmed16a"
+Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"
-* extension[privatefield] -> "Medicament.PFields"
-* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
-* subject -> "Patient"
-* informationSource -> "Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"
-* reasonCode -> "Medicament.TkgRsn"
-* dosage[nonstructured] -> "Medicament.AppInstr"
-* dosage[structurednormal] -> "Medicament.Pos"
-* dosage[structuredsplit] -> "Medicament.Pos"
+//* extension[privatefield] -> "Medicament.PFields"
+//* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
+//* subject -> "Patient"
+//* informationSource -> "Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"
+//* reasonCode -> "Medicament.TkgRsn"
+* dosage -> "Medicament.Pos"
+//* dosage[nonstructured] -> "Medicament.AppInstr"

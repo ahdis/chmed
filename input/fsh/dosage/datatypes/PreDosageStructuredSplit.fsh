@@ -1,12 +1,15 @@
-Profile: CardDosageStructuredNormalChmed20af
-Parent: CHEMEDDosageStructuredNormal
-Id: chmed20af-card-dosage-structured-normal
-Title: "Dosage Structured Normal (Card)"
-Description: "Dosage structured normal of Medication Card document"
+Profile: CHMEDDosageStructuredSplitPre
+Parent: CHEMEDDosageStructuredSplitMedicationRequest
+// Parent: CHMEDDosage
+Id: chmed-dosage-structured-split-pre
+Title: "CHMED Dosage Structured Split (Pre)"
+Description: "Dosage structured split of Medication Prescription document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Dosage Structured Normal (Card)"
+* . ^short = "CHMED Dosage Structured Split (Pre)"
+/*
+* sequence
 * timing
 * timing.repeat
 * timing.repeat.bounds[x]
@@ -21,15 +24,17 @@ Description: "Dosage structured normal of Medication Card document"
 * maxDosePerPeriod only CHEMEDRatioWithEmedUnits
 * maxDosePerPeriod
 * maxDosePerPeriod ^short = "Upper limit on medication per unit of time"
+*/
 
-
-Mapping: CHMED16A-for-CardDosageStructuredNormalChmed20af
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CardDosageStructuredNormalChmed20af
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDDosageStructuredSplitPre
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDDosageStructuredSplitPre
+Target: "http://emediplan.ch/chmed21a"
 * -> "Posology"
+/*
 * timing -> "Posology.DtFrom, Posology.DtTo, Posology.CyDu, Posology.InRes, SimpliedVersion of taking times onlys"
 * route -> "Medicament.Roa"
 * doseAndRate.dose[x] -> "doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo"
 * maxDosePerPeriod -> "TakingTime.MA"
+*/

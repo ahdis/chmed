@@ -96,30 +96,30 @@ CHMED21A format for Daily:
 }
 ```
 
-FHIR format for Dosage (structured normal):
+FHIR format for Dosage (structured normal) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.1-normal.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "timing": {
-            "repeat": {
-                "when": [
-                    "MORN",
-                    "EVE"
-                ]
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "timing" : {
+        "repeat" : {
+          "when" : [
+            "MORN",
+            "EVE"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
    
 
@@ -138,53 +138,51 @@ CHMED21A format for Daily:
 }
 ```
 
-FHIR format for Dosage (structured split):
+FHIR format for Dosage (structured split) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.1-split.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "sequence": 0,
-        "timing": {
-            "repeat": {
-                "when": [
-                    "MORN"
-                ]
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "sequence" : 0,
+      "timing" : {
+        "repeat" : {
+          "when" : [
+            "MORN"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     },
     {
-        "sequence": 0,
-        "timing": {
-            "repeat": {
-                "when": [
-                    "EVE"
-                ]
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 2,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "sequence" : 0,
+      "timing" : {
+        "repeat" : {
+          "when" : [
+            "EVE"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 2,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```  
-
-
 
 
 #### Free Text
@@ -202,7 +200,7 @@ CHMED21A format for Free Text:
 }
 ```
 
-FHIR format for Dosage (non-structured):
+FHIR format for Dosage (non-structured) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.2.json.html)):
 ```json
 "dosage": [
     {
@@ -231,7 +229,7 @@ CHMED21A format for Single:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -272,7 +270,7 @@ CHMED21A format for Cyclic:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -346,7 +344,7 @@ CHMED21A format for Sequence:
 }
 ```
 
-FHIR format for dosage structured split:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -434,7 +432,7 @@ CHMED21A format for Even/Odd days:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -493,7 +491,7 @@ CHMED21A format for DosageOnly:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -533,7 +531,7 @@ CHMED21A format for Times:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
   "dosage" : [
     {
@@ -579,7 +577,7 @@ CHMED21A format for DaySegments:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -624,7 +622,7 @@ CHMED21A format for WeekDays:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -671,7 +669,7 @@ CHMED21A format for DaysOfMonth:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -718,7 +716,7 @@ CHMED21A format for Interval:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -759,7 +757,7 @@ CHMED21A format for DosageSimple:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {
@@ -833,7 +831,7 @@ CHMED21A format for DosageRange:
 }
 ```
 
-FHIR format for Dosage:
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
 ```json
 "dosage": [
     {

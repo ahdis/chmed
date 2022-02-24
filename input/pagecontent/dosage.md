@@ -1,6 +1,3 @@
-* [CHMED MedicationStatement Dosage](StructureDefinition-chmed-medicationstatement-dosage.html)   
-Profile for the MedicationStatement resource to define the dosage according to the 'Posology' in CHMED21A
-
 The model of dosages between CHMED21A and the CHMED21AF (FHIR version) differ sligthly due to the FHIR dosage model.
 This has an effect on how to map the different attributes form CHMED21A to CHMED21AF.
 
@@ -54,8 +51,15 @@ FHIR format for Dosage (see also [example](MedicationStatement-medicationstateme
   ]
 ```
 
+**CHMED Dosage:** 
+* [Data Type Profile](StructureDefinition-chmed-dosage.html) to define the FHIR representation of the dosage according tho the 'Posology' in CHMED21A.
+* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) to represent the relationship of FHIR to CHMED21A.
+
+#### Relation to CH EMED
 <span style="color:red">**CAVE:**</span>   
-This Posology element mapping shown above is compatible with the [CH EMED MedicationStatement](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationstatement-card.html) (MP), not necessarily with the [CH EMED MedicationRequest](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationrequest.html) (Rx). In the MedicationRequest of the exchange format, the following elements are required for structured dosing: Dosage.timing.repeat.boundsPeriod, Dosage.timing.repeat.when, Dosage.doseAndRate.
+This Posology element mapping shown above is compatible with the [CH EMED MedicationStatement](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationstatement-card.html) (MP), not necessarily with the [CH EMED MedicationRequest](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationrequest.html) (Rx). In the MedicationRequest of the Swiss exchange format, the following elements are currently required for structured dosing: Dosage.timing.repeat.boundsPeriod, Dosage.timing.repeat.when, Dosage.doseAndRate.
+
+[CHMED profiles](artifacts.html#structures-data-type-profiles) have been created for the different types of dosages, which are derived from the [C]H EMED dosage profiles](http://fhir.ch/ig/ch-emed/dosage.html#profiles). This ensures that the requirements of the Swiss exchange format are verified. To ensure compatibility with [CHMED Dosage](StructureDefinition-chmed-dosage.html), a constraint has been introduced in these CHMED dosing profiles to check this conformity. 
 
 #### Timing Event
 The code for the time of adminstration has to come from the [ValueSet EventTiming](http://hl7.org/fhir/R4/valueset-event-timing.html).   

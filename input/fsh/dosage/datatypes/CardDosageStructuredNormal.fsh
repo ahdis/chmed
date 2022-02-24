@@ -1,6 +1,5 @@
 Profile: CHMEDDosageStructuredNormalCard
 Parent: CHEMEDDosageStructuredNormal
-// Parent: CHMEDDosage
 Id: chmed-dosage-structured-normal-card
 Title: "CHMED Dosage Structured Normal (Card)"
 Description: "Dosage structured normal of Medication Card document"
@@ -8,6 +7,8 @@ Description: "Dosage structured normal of Medication Card document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage Structured Normal (Card)"
+
+* obeys chmed-dosage
 
 /*
 * additionalInstruction from RelativeToMeal (preferred)

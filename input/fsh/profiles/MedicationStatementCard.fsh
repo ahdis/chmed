@@ -39,9 +39,9 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 
 * dosage MS
 * dosage[nonstructured] MS
-//* dosage[structurednormal] only CHMEDDosageStructuredNormalCard
+* dosage[structurednormal] only CHMEDDosageStructuredNormalCard
 * dosage[structurednormal] MS
-//* dosage[structuredsplit] only CHMEDDosageStructuredSplitCard
+* dosage[structuredsplit] only CHMEDDosageStructuredSplitCard
 * dosage[structuredsplit] MS
 
 

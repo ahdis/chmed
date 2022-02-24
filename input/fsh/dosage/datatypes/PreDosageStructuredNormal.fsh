@@ -8,6 +8,9 @@ Description: "Dosage structured normal of Medication Prescription document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage Structured Normal (Pre)"
+
+* obeys chmed-dosage
+
 /*
 * timing
 * timing.repeat

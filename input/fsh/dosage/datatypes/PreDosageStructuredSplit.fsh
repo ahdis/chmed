@@ -8,6 +8,9 @@ Description: "Dosage structured split of Medication Prescription document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage Structured Split (Pre)"
+
+* obeys chmed-dosage 
+
 /*
 * sequence
 * timing

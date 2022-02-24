@@ -22,9 +22,9 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 * dosageInstruction MS
 * dosageInstruction[nonstructured] MS
-//* dosageInstruction[structurednormal] only CHMEDDosageStructuredNormalPre
+* dosageInstruction[structurednormal] only CHMEDDosageStructuredNormalPre
 * dosageInstruction[structurednormal] MS
-//* dosageInstruction[structuredsplit] only CHMEDDosageStructuredSplitPre
+* dosageInstruction[structuredsplit] only CHMEDDosageStructuredSplitPre
 * dosageInstruction[structuredsplit] MS
 
 * dispenseRequest

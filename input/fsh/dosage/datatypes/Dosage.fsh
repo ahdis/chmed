@@ -58,14 +58,14 @@ Target: "http://emediplan.ch/chmed21a"
 
 * timing.repeat.boundsPeriod.start -> "Posology.DtFrom"
 * timing.repeat.boundsPeriod.end -> "Posology.DtTo"
-* timing.repeat.when -> "Posology.PO.xx"
+* timing.repeat.when -> "Posology.PO[Type1].Ds"
 //* timing -> "Posology.CyDu, , SimpliedVersion of taking times onlys"
 
 * asNeededBoolean -> "Posology.InRes"
 
 //* route -> "Medicament.Roa"
 
-* doseAndRate.doseQuantity.value -> "Posology.PO.Ds"
+* doseAndRate.doseQuantity.value -> "Posology.PO[Type1].Ds, Posology.PO[Type3].TD[Type1].T[Type1].A"
 * doseAndRate.doseQuantity.unit -> "Medicament.Unit"
 * doseAndRate.doseQuantity.system -> "Medicament.Unit"
 * doseAndRate.doseQuantity.code -> "Medicament.Unit"

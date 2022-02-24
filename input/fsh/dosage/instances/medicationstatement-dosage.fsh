@@ -20,8 +20,6 @@ Usage: #example
 */
 
 
-
-// 5.3. Single
 // 5.4. Cyclic
 // 5.5. Sequence
 // 5.6. Even/odd days

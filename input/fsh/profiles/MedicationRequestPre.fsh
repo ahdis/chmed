@@ -46,7 +46,7 @@ Target: "http://emediplan.ch/chmed16a"
 //* subject -> "Patient"
 
 * dosageInstruction -> "Medicament.Pos"
-* dosageInstruction[nonstructured] -> "Posology.PO.Text"
+* dosageInstruction[nonstructured] -> "Posology.PO[Type2].Text"
 
 //* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
 //* dispenseRequest.quantity -> "Medicament.NbPack"

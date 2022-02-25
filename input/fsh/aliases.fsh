@@ -18,3 +18,6 @@ Alias: $chmed-cs-evenodddays =                  http://chmed20af.emediplan.ch/fh
 // CH EMED
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
+
+
+Alias: $ext-dayOfMonth =                        http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth

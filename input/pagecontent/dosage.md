@@ -663,36 +663,36 @@ CHMED21A format for DaysOfMonth:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.5.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "timing": {
-            "repeat": {
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
-                        "valuePositiveInt": 1
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
-                        "valuePositiveInt": 15
-                    }
-                ],
-            }
-        },
-        "doseAndRate": [
+      "timing" : {
+        "repeat" : {
+          "extension" : [
             {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
+              "url" : "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
+              "valuePositiveInt" : 1
+            },
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth",
+              "valuePositiveInt" : 15
             }
-        ]
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### Interval

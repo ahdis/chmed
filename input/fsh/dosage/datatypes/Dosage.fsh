@@ -22,6 +22,9 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * additionalInstruction[evenOddDays]. ^short = "The medicament is be applied on even or odd days"
 * additionalInstruction[evenOddDays] from EvenOddDays (required)
 
+* timing.repeat.extension contains $ext-dayOfMonth named dayOfMonth 0..*
+
+
 * timing.repeat.boundsPeriod.start MS
 * timing.repeat.boundsPeriod.start. ^short = "When the dosage starts to be valid"
 * timing.repeat.boundsPeriod.end MS
@@ -75,6 +78,8 @@ Target: "http://emediplan.ch/chmed21a"
 
 * additionalInstruction[relativeToMeal] -> "Posology.RM"
 * additionalInstruction[evenOddDays] -> "Posology.E"
+
+* timing.repeat.extension[dayOfMonth] -> "6.5"
 
 * timing.repeat.boundsPeriod.start -> "Posology.DtFrom"
 * timing.repeat.boundsPeriod.end -> "Posology.DtTo"

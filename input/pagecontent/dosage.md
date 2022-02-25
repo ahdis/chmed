@@ -866,9 +866,105 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 Sequence objects are defined in CHMED21A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
 
 #### PosologySequence
+Wraps any type of posology object in order to create a sequence.
 
+**Example:** Take 1 daily for 21 days.
+
+CHMED21A format for PosologySequence:
+```
+{ 
+  "T": 1, // Posology sequence sequence object 
+  "PO": { 
+    "T": 4, // Cyclic posology object 
+    "CyDuU": 4, // Day unit 
+    "CyDu": 1, // Cycle lasts 1 (day) 
+    "TD": { 
+      "T": 1, // Dosage only timed dosage 
+      "D": { 
+        "T": 1, // Simple dosage 
+        "A": 1.0 // Amount of 1 
+      } 
+    } 
+  }, 
+  "DuU": 4, // Day unit 
+  "Du": 21 // Sequence lasts 21 (days) 
+}
+```
+
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html)):
+```json
+  "dosage" : [
+    {
+      "sequence" : 0,
+      "timing" : {
+        "repeat" : {
+          "count" : 21,
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Tablet (unit of presentation)",
+            "system" : "http://snomed.info/sct",
+            "code" : "732936001"
+          }
+        }
+      ]
+    },
+    {
+      "sequence" : 1,
+      ...
+    }
+  ]
+```
 #### Pause
+Specifies a duration of a break where the medication doesn’t have to be applied.
 
+**Example:** Break of 7 days.
+
+CHMED21A format for Pause:
+```
+{ 
+  "T": 2, // Pause sequence object 
+  "DuU": 4, // Day unit 
+  "Du": 7 // Pause lasts 7 (days) 
+}
+```
+
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html)):
+```json
+  "dosage" : [
+    {
+      "sequence" : 0,
+      ...
+    },
+    {
+      "sequence" : 1,
+      "timing" : {
+        "repeat" : {
+          "count" : 7,
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 0,
+            "unit" : "Tablet (unit of presentation)",
+            "system" : "http://snomed.info/sct",
+            "code" : "732936001"
+          }
+        }
+      ]
+    }
+  ]
+```
 
 ### Taking Objects
 Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.

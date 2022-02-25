@@ -20,9 +20,7 @@ Usage: #example
 */
 
 
-// 8. Sequence objects
-// 8.1. PosologySequence
-// 8.2. Pause
+
 // 9. Taking objects
 // 9.1. TakingAtTime
 // 9.2. TakingInSegment

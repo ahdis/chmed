@@ -39,7 +39,7 @@ Profile for the Composition resource of the Medication Prescription document
 Profile for the MedicationRequest resource of the Medication Prescription document
 * [CHMED Dosage Structured Normal (Pre)](StructureDefinition-chmed-dosage-structured-normal-pre.html)   
 Dosage structured normal of Medication Prescription document
-* [CHMED Dosage Structured Split (Pre)](StructureDefinition-chmed-dosage-structured-split-pre.html)   	
+* [CHMED Dosage Structured Split (Pre)](StructureDefinition-chmed-dosage-structured-split-pre.html)   
 Dosage structured split of Medication Prescription document
 
 * [CHMED20AF Patient (Pre)](StructureDefinition-chmed20af-pre-patient.html)   

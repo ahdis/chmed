@@ -19,7 +19,6 @@ Usage: #example
 
 */
 
-// 6.6. Interval
 // 7. Dosage Objects
 // 7.1. DosageSimple
 // 7.2. DosageFromTo

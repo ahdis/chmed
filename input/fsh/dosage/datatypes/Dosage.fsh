@@ -61,9 +61,11 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * doseAndRate.doseQuantity. ^short = "The amount of the medicament to be applied"
 * doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits
 
-//* maxDosePerPeriod only CHEMEDRatioWithEmedUnits
-//* maxDosePerPeriod
-//* maxDosePerPeriod ^short = "Upper limit on medication per unit of time"
+* maxDosePerPeriod MS
+* maxDosePerPeriod ^short = "TBD"
+* maxDosePerPeriod only CHEMEDRatioWithEmedUnits
+
+
 
 
 
@@ -106,4 +108,4 @@ Target: "http://emediplan.ch/chmed21a"
 * doseAndRate.doseQuantity.system -> "Medicament.Unit"
 * doseAndRate.doseQuantity.code -> "Medicament.Unit"
 
-//* maxDosePerPeriod -> "TakingTime.MA"
+* maxDosePerPeriod -> "6.6"

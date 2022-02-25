@@ -710,26 +710,26 @@ CHMED21A format for Interval:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.6.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "maxDosePerPeriod": {
-            "numerator": {
-                "value": 1,
-                "unit": "Piece",
-                "system": "http://unitsofmeasure.org",
-                "code": "{Piece}"
-            },
-            "denominator": {
-                "value": 6,
-                "unit": "Hour",
-                "system": "http://unitsofmeasure.org",
-                "code": "h"
-            }
+      "maxDosePerPeriod" : {
+        "numerator" : {
+          "value" : 1,
+          "unit" : "Piece",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "{Piece}"
+        },
+        "denominator" : {
+          "value" : 6,
+          "unit" : "Hour",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "h"
         }
+      }
     }
-]
+  ]
 ```
 
 

@@ -33,6 +33,9 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * timing.repeat.count MS
 * timing.repeat.count. ^short = ""
 
+* timing.repeat.duration MS
+* timing.repeat.durationUnit MS
+
 * timing.repeat.frequency MS
 * timing.repeat.frequency. ^short = "How often the timed dosage must be repeated within the cycle"
 * timing.repeat.period MS
@@ -57,9 +60,13 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * route.coding.display
 */
 
+* doseAndRate.doseRange MS
+
 * doseAndRate.doseQuantity MS
 * doseAndRate.doseQuantity. ^short = "The amount of the medicament to be applied"
 * doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits
+
+* doseAndRate.doseQuantity.extension contains CHMEDExtensionDoseQuantityTo named doseQuantityTo 0..1
 
 * maxDosePerPeriod MS
 * maxDosePerPeriod ^short = "TBD"
@@ -88,6 +95,9 @@ Target: "http://emediplan.ch/chmed21a"
 
 * timing.repeat.count -> "Du"
 
+* timing.repeat.duration -> "7.2"
+* timing.repeat.durationUnit -> "7.2"
+
 * timing.repeat.frequency -> "Posology.PO[Type4].TDpC"
 * timing.repeat.period -> "Posology.PO[Type4].CyDu"
 * timing.repeat.periodUnit -> "Posology.PO[Type4].DyDuU"
@@ -100,6 +110,11 @@ Target: "http://emediplan.ch/chmed21a"
 * asNeededBoolean -> "Posology.InRes"
 
 //* route -> "Medicament.Roa"
+
+* doseAndRate.doseRange -> "7.3"
+
+* doseAndRate.doseQuantity.extension[doseQuantityTo] -> "7.2"
+
 
 * doseAndRate.doseQuantity.value -> "Posology.PO[Type1].Ds, 
                                      Posology.PO[Type3].TD[Type1].T[Type1].A, 

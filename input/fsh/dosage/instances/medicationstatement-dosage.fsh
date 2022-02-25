@@ -19,10 +19,7 @@ Usage: #example
 
 */
 
-// 7. Dosage Objects
-// 7.1. DosageSimple
-// 7.2. DosageFromTo
-// 7.3. DosageRange
+
 // 8. Sequence objects
 // 8.1. PosologySequence
 // 8.2. Pause

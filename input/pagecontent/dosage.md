@@ -751,30 +751,28 @@ CHMED21A format for DosageSimple:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.1.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 #### DosageFromTo
 Specifies how a dosage changes during time. This can be e.g., used for infusions.
 
-<span style="color:red">TBD: Work in progress!</span>
-
-If the dosage changes, multiple dosage elements have to be defined in FHIR: See example [increasing dosage every hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html), [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).   
-An [extension](StructureDefinition-chmed20af-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (example increase from 50 ml to 200 ml):
+If the dosage changes, multiple dosage elements have to be defined in FHIR; see example [increasing dosage every hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html) or [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).   
+An [extension](StructureDefinition-chmed-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (see example below):
 
 **Example:** Start with a dosage of 5, end with a dosage of 10 during a time interval of 45 minutes.
 
@@ -789,27 +787,40 @@ CHMED21A format for DosageFromTo:
 }
 ```
 
-
-
-
-
-```xml
-	<fhir:doseQuantity>
-		<fhir:extension url="http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto">
-			<fhir:valueQuantity>
-				<fhir:value value="200"/>
-				<fhir:unit value="milliliter"/>
-				<fhir:system value="http://unitsofmeasure.org"/>
-				<fhir:code value="mL"/>
-			</fhir:valueQuantity>
-		</fhir:extension>
-		<fhir:value value="50"/>
-		<fhir:unit value="milliliter"/>
-		<fhir:system value="http://unitsofmeasure.org"/>
-		<fhir:code value="mL"/>
-	</fhir:doseQuantity>
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.2.json.html)):
+```json
+  "dosage" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "duration" : 45,
+          "durationUnit" : "min"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "extension" : [
+              {
+                "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dosequantityto",
+                "valueQuantity" : {
+                  "value" : 10,
+                  "unit" : "milliliter",
+                  "system" : "http://unitsofmeasure.org",
+                  "code" : "mL"
+                }
+              }
+            ],
+            "value" : 5,
+            "unit" : "milliliter",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mL"
+          }
+        }
+      ]
+    }
+  ]
 ```
-
 
 #### DosageRange
 With a dosage range a min and must amount must be specified.
@@ -825,30 +836,30 @@ CHMED21A format for DosageRange:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.3.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "doseAndRate": [
-            {
-                "doseRange": {
-                    "low": {
-                        "value": 1,
-                        "unit": "Piece",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "{Piece}"
-                    },
-                    "high": {
-                        "value": 3,
-                        "unit": "Piece",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "{Piece}"
-                    }
-                }
+      "doseAndRate" : [
+        {
+          "doseRange" : {
+            "low" : {
+              "value" : 1,
+              "unit" : "Piece",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "{Piece}"
+            },
+            "high" : {
+              "value" : 3,
+              "unit" : "Piece",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "{Piece}"
             }
-        ]
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 ### Sequence Objects

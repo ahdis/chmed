@@ -35,7 +35,8 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * informationSource
 * reasonCode
 * reasonCode.text
-* note
+
+* note.text MS
 
 * dosage MS
 * dosage[nonstructured] MS
@@ -56,5 +57,7 @@ Target: "http://emediplan.ch/chmed21a"
 //* subject -> "Patient"
 //* informationSource -> "Medicament.AutoMed (Selfmedication) if Patient, Medicament.PrscbBy if Practitioner"
 //* reasonCode -> "Medicament.TkgRsn"
-* dosage -> "Medicament.Pos"
-* dosage[nonstructured] -> "Posology.PO[Type2].Text"
+* note.text -> "AppInstr"
+
+* dosage -> "Pos"
+* dosage[nonstructured] -> "Pos -> Posology.PO.Text"

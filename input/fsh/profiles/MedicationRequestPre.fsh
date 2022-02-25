@@ -18,7 +18,8 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * medicationReference
 * subject only Reference(CHMED20AFPatientPre)
 * subject
-* note
+
+* note.text MS
 
 * dosageInstruction MS
 * dosageInstruction[nonstructured] MS
@@ -45,8 +46,10 @@ Target: "http://emediplan.ch/chmed16a"
 //* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
 //* subject -> "Patient"
 
-* dosageInstruction -> "Medicament.Pos"
-* dosageInstruction[nonstructured] -> "Posology.PO[Type2].Text"
+* note.text -> "AppInstr"
+
+* dosageInstruction -> "Pos"
+* dosageInstruction[nonstructured] -> "Pos -> Posology.PO.Text"
 
 //* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
 //* dispenseRequest.quantity -> "Medicament.NbPack"

@@ -5,9 +5,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v3.0.0 (2022)
 
 Work in progress -> GitHub Issues:
-* [Issue #13](https://github.com/ahdis/chmed20af/issues/13): Mapping 'AppInstr'
 * [Issue #9](https://github.com/ahdis/chmed20af/issues/9): Medicament.Rep
-* [Issue #8](https://github.com/ahdis/chmed20af/issues/8): where is inRes (inReserve) mapped?
+
 
 #### Open Issues
 The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
@@ -20,17 +19,21 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed20af/issues?q=is%
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
-* TBD: Update to the specification [CHMED21A (Vx.x)]().
+* TBD: Update to the specification [CHMED21A (Vx.x)](tbd).
    * Renaming the implementation guide: CHMED20AF -> CHMED21AF
    * Changing the canonical url: http://chmed20af.emediplan.ch -> http://chmed21af.emediplan.ch
 
-* TBD: Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
+* Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
    * Change one reference of Composition.author in [CHMED20AF Medication Card Composition](StructureDefinition-chmed20af-card-composition.html) and [CHMED20AF Medication Prescription Composition](StructureDefinition-chmed20af-pre-composition.html).   
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole (the ohters do not change)  
    * Change parent profile of [CHMED20AF Practitioner](StructureDefinition-chmed20af-practitioner.html)
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole  
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
+
+* Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](tbd). For details see tab [Dosage](dosage.html).
+   * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed20af/issues/8)).
+   * Change [mapping](StructureDefinition-chmed20af-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed20af/issues/13)).
 
 * Add 'CHMED20AF' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED20AF Practitioner' from the FHIR basis Practitioner.
 * Switch to the new [IG template](https://github.com/ahdis/chmed20af/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.

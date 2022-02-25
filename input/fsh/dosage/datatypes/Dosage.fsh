@@ -15,10 +15,12 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * additionalInstruction ^slicing.discriminator.path = "$this"
 * additionalInstruction ^slicing.rules = #open
 * additionalInstruction contains 
-    relativeToMeal 0..1 MS
-
+    relativeToMeal 0..1 MS and 
+    evenOddDays 0..1 MS
 * additionalInstruction[relativeToMeal]. ^short = "When the medicament must be applied relative to a meal (before, during or after)"
 * additionalInstruction[relativeToMeal] from RelativeToMeal (required)
+* additionalInstruction[evenOddDays]. ^short = "The medicament is be applied on even or odd days"
+* additionalInstruction[evenOddDays] from EvenOddDays (required)
 
 * timing.repeat.boundsPeriod.start MS
 * timing.repeat.boundsPeriod.start. ^short = "When the dosage starts to be valid"
@@ -69,6 +71,7 @@ Target: "http://emediplan.ch/chmed21a"
 * sequence -> "SOs"
 
 * additionalInstruction[relativeToMeal] -> "Posology.RM"
+* additionalInstruction[evenOddDays] -> "Posology.E"
 
 * timing.repeat.boundsPeriod.start -> "Posology.DtFrom"
 * timing.repeat.boundsPeriod.end -> "Posology.DtTo"

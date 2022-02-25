@@ -426,43 +426,43 @@ CHMED21A format for Even/Odd days:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.6.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "additionalInstruction": [
+      "additionalInstruction" : [
+        {
+          "coding" : [
             {
-                "coding": [
-                    {
-                        "system": "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-even-odd-days",
-                        "code": "even",
-                        "display": "Even days"
-                    }
-                ]
+              "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-even-odd-days",
+              "code" : "even",
+              "display" : "Even days"
             }
-        ],
-        "timing": {
-            "repeat": {
-                "boundsPeriod": {
-                    "start": "2021-01-02"
-                },
-                "frequency": 1,
-                "period": 2,
-                "periodUnit": "d"
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Tablet (unit of presentation)",
-                    "system": "http://snomed.info/sct",
-                    "code": "732936001"
-                }
-            }
-        ]
+          ]
+        }
+      ],
+      "timing" : {
+        "repeat" : {
+          "boundsPeriod" : {
+            "start" : "2021-01-02"
+          },
+          "frequency" : 1,
+          "period" : 2,
+          "periodUnit" : "d"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Tablet (unit of presentation)",
+            "system" : "http://snomed.info/sct",
+            "code" : "732936001"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 

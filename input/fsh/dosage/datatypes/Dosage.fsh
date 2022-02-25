@@ -37,6 +37,7 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * timing.repeat.periodUnit MS
 * timing.repeat.periodUnit. ^short = "The cycle duration unit specifies the time unit (hours, days etc.)"
 
+* timing.repeat.dayOfWeek MS
 * timing.repeat.timeOfDay MS
 
 * timing.repeat.when MS
@@ -84,6 +85,7 @@ Target: "http://emediplan.ch/chmed21a"
 * timing.repeat.period -> "Posology.PO[Type4].CyDu"
 * timing.repeat.periodUnit -> "Posology.PO[Type4].DyDuU"
 
+* timing.repeat.dayOfWeek -> "6.4"
 * timing.repeat.timeOfDay -> "6.2"
 
 * timing.repeat.when -> "Posology.PO[Type1].Ds"

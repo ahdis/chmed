@@ -19,7 +19,6 @@ Usage: #example
 
 */
 
-// 6.4. WeekDays
 // 6.5. DaysOfMonth
 // 6.6. Interval
 // 7. Dosage Objects

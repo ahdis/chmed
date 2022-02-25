@@ -616,31 +616,31 @@ CHMED21A format for WeekDays:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.4.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "timing": {
-            "repeat": {
-                "dayOfWeek": [
-                    "mon",
-                    "wed",
-                    "fri"
-                ]
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "timing" : {
+        "repeat" : {
+          "dayOfWeek" : [
+            "mon",
+            "wed",
+            "fri"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### DaysOfMonth

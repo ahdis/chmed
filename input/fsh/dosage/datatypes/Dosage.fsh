@@ -8,7 +8,8 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage"
 
-// * sequence
+* sequence MS
+* sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"
 
 * additionalInstruction ^slicing.discriminator.type = #pattern
 * additionalInstruction ^slicing.discriminator.path = "$this"
@@ -23,6 +24,9 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * timing.repeat.boundsPeriod.start. ^short = "When the dosage starts to be valid"
 * timing.repeat.boundsPeriod.end MS
 * timing.repeat.boundsPeriod.end. ^short = "When the dosage’s validity ends"
+
+* timing.repeat.count MS
+* timing.repeat.count. ^short = ""
 
 * timing.repeat.frequency MS
 * timing.repeat.frequency. ^short = "How often the timed dosage must be repeated within the cycle"
@@ -61,17 +65,21 @@ Title: "Mapping to CHMED21A"
 Source: CHMEDDosage
 Target: "http://emediplan.ch/chmed21a"
 * -> "Posology"
+
+* sequence -> "SOs"
+
 * additionalInstruction[relativeToMeal] -> "Posology.RM"
 
 * timing.repeat.boundsPeriod.start -> "Posology.DtFrom"
 * timing.repeat.boundsPeriod.end -> "Posology.DtTo"
+
+* timing.repeat.count -> "Du"
 
 * timing.repeat.frequency -> "Posology.PO[Type4].TDpC"
 * timing.repeat.period -> "Posology.PO[Type4].CyDu"
 * timing.repeat.periodUnit -> "Posology.PO[Type4].DyDuU"
 
 * timing.repeat.when -> "Posology.PO[Type1].Ds"
-//* timing -> "Posology.CyDu, , SimpliedVersion of taking times onlys"
 
 * asNeededBoolean -> "Posology.InRes"
 
@@ -83,6 +91,5 @@ Target: "http://emediplan.ch/chmed21a"
 * doseAndRate.doseQuantity.unit -> "Medicament.Unit"
 * doseAndRate.doseQuantity.system -> "Medicament.Unit"
 * doseAndRate.doseQuantity.code -> "Medicament.Unit"
-//* doseAndRate.dose[x] -> "doseQuantity: TakingTime.A"
 
 //* maxDosePerPeriod -> "TakingTime.MA"

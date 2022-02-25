@@ -295,7 +295,8 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
   ]
 ```
 
-#### Sequence
+#### Sequence 
+-> TBD!
 Allows to combine multiple posologies with a pause as a sequence.
 
 **Example:** Take daily 1 for 21 days, then take a break of 7 days.
@@ -344,59 +345,52 @@ CHMED21A format for Sequence:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "sequence": 0,
-        "timing": {
-            "repeat": {
-                "boundsDuration": {
-                    "value": 21,
-                    "unit": "Day",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "d"
-                },
-                "frequency": 1,
-                "period": 1,
-                "periodUnit": "d"
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Tablet (unit of presentation)",
-                    "system": "http://snomed.info/sct",
-                    "code": "732936001"
-                }
-            }
-        ]
+      "sequence" : 0,
+      "timing" : {
+        "repeat" : {
+          "count" : 21,
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Tablet (unit of presentation)",
+            "system" : "http://snomed.info/sct",
+            "code" : "732936001"
+          }
+        }
+      ]
     },
     {
-        "sequence": 1,
-        "timing": {
-            "repeat": {
-                "boundsDuration": {
-                    "value": 7,
-                    "unit": "Day",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "d"
-                }
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 0,
-                    "unit": "Tablet (unit of presentation)",
-                    "system": "http://snomed.info/sct",
-                    "code": "732936001"
-                }
-            }
-        ]
+      "sequence" : 1,
+      "timing" : {
+        "repeat" : {
+          "count" : 7,
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 0,
+            "unit" : "Tablet (unit of presentation)",
+            "system" : "http://snomed.info/sct",
+            "code" : "732936001"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### Even/Odd Days

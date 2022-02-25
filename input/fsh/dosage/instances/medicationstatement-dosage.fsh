@@ -20,7 +20,6 @@ Usage: #example
 */
 
 
-// 5.5. Sequence
 // 5.6. Even/odd days
 // 6. Timed dosage objects
 // 6.1. DosageOnly

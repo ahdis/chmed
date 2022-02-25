@@ -19,14 +19,6 @@ Usage: #example
 
 */
 
-
-
-// 6.2. Times: Take 1 at 08:00.
-/*
-* dosage[structurednormal][+].timing.repeat.timeOfDay = "08:00:00"
-* dosage[structurednormal][=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
-*/
-
 // 6.3. DaySegments
 // 6.4. WeekDays
 // 6.5. DaysOfMonth

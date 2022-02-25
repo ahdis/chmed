@@ -270,29 +270,29 @@ CHMED21A format for Cyclic:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.4.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "timing": {
-            "repeat": {
-                "frequency": 2,
-                "period": 1,
-                "periodUnit": "wk"
-            }
-        },
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "timing" : {
+        "repeat" : {
+          "frequency" : 2,
+          "period" : 1,
+          "periodUnit" : "wk"
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### Sequence

@@ -24,6 +24,13 @@ Description: "Dosage according to the 'Posology' in CHMED21A"
 * timing.repeat.boundsPeriod.end MS
 * timing.repeat.boundsPeriod.end. ^short = "When the dosage’s validity ends"
 
+* timing.repeat.frequency MS
+* timing.repeat.frequency. ^short = "How often the timed dosage must be repeated within the cycle"
+* timing.repeat.period MS
+* timing.repeat.period. ^short = "The duration of a cycle"
+* timing.repeat.periodUnit MS
+* timing.repeat.periodUnit. ^short = "The cycle duration unit specifies the time unit (hours, days etc.)"
+
 * timing.repeat.when MS
 * timing.repeat.when. ^short = "When a medicament must be taken"
 
@@ -58,6 +65,11 @@ Target: "http://emediplan.ch/chmed21a"
 
 * timing.repeat.boundsPeriod.start -> "Posology.DtFrom"
 * timing.repeat.boundsPeriod.end -> "Posology.DtTo"
+
+* timing.repeat.frequency -> "Posology.PO[Type4].TDpC"
+* timing.repeat.period -> "Posology.PO[Type4].CyDu"
+* timing.repeat.periodUnit -> "Posology.PO[Type4].DyDuU"
+
 * timing.repeat.when -> "Posology.PO[Type1].Ds"
 //* timing -> "Posology.CyDu, , SimpliedVersion of taking times onlys"
 
@@ -65,7 +77,9 @@ Target: "http://emediplan.ch/chmed21a"
 
 //* route -> "Medicament.Roa"
 
-* doseAndRate.doseQuantity.value -> "Posology.PO[Type1].Ds, Posology.PO[Type3].TD[Type1].T[Type1].A"
+* doseAndRate.doseQuantity.value -> "Posology.PO[Type1].Ds, 
+                                     Posology.PO[Type3].TD[Type1].T[Type1].A, 
+                                     Posology.PO[Type4].TD[Type1].T[Type1].A"
 * doseAndRate.doseQuantity.unit -> "Medicament.Unit"
 * doseAndRate.doseQuantity.system -> "Medicament.Unit"
 * doseAndRate.doseQuantity.code -> "Medicament.Unit"

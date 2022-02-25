@@ -485,22 +485,22 @@ CHMED21A format for DosageOnly:
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.1.json.html)):
 ```json
-"dosage": [
+  "dosage" : [
     {
-        "doseAndRate": [
-            {
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "Piece",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "{Piece}"
-                }
-            }
-        ]
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
     }
-]
+  ]
 ```
 
 #### Times

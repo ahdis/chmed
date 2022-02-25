@@ -20,8 +20,6 @@ Usage: #example
 */
 
 
-// 6. Timed dosage objects
-// 6.1. DosageOnly
 
 // 6.2. Times: Take 1 at 08:00.
 /*

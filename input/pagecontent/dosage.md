@@ -970,7 +970,85 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
 
 #### TakingAtTime
+Specifies a precise moment in time when a medicament must be applied.
+
+**Example:** Take 1 at 08:00.
+
+CHMED21A format for TakingAtTime:
+```
+{ 
+  "OffU": 3, // Offset in hours 
+  "Off": 8, // Offset of 8 (hours) 
+  "D": { 
+    "T": 1, // Simple dosage dosage type 
+    "A": 1.0 // Amount of 1 
+  } 
+}
+```
+
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.2.json.html)):
+```json
+  "dosage" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "timeOfDay" : [
+            "08:00:00"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
+    }
+  ]
+```
+
 
 #### TakingInSegment
+Specifies a day segment (morning, noon, evening or night) when a medicament must be applied.
 
+**Example:** Take 1 in the evening.
 
+CHMED21A format for TakingInSegment:
+```
+{ 
+  "S": 3, // Evening day segment 
+  "D": { 
+    "T": 1, // Simple dosage dosage type 
+    "A": 1.0 // Amount of 1 
+  } 
+}
+```
+
+FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.3.json.html)):
+```json
+  "dosage" : [
+    {
+      "timing" : {
+        "repeat" : {
+          "when" : [
+            "EVE"
+          ]
+        }
+      },
+      "doseAndRate" : [
+        {
+          "doseQuantity" : {
+            "value" : 1,
+            "unit" : "Piece",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{Piece}"
+          }
+        }
+      ]
+    }
+  ]
+```

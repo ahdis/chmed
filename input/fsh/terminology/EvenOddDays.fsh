@@ -16,5 +16,7 @@ Description: "Code system for medicament application on even or odd days"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 
+* ^caseSensitive = true
+
 * #even "Even Days" "Medicament must be applied on even days"
 * #odd "Odd Days" "Medicament must be applied on odd days"

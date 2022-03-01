@@ -10,6 +10,9 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].timing.repeat.when[+] = #MORN
+* dosage[structurednormal][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
+
+* dosage[structurednormal][=].timing.repeat.when[+] = #MORN
 * dosage[structurednormal][=].timing.repeat.when[+] = #EVE
-* dosage[structurednormal][=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+* dosage[structurednormal][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"

@@ -8,7 +8,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage"
 
-* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..1 // TBD: 1..1
+* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* 
 * extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1
 
 * sequence MS
@@ -32,7 +32,6 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * timing.repeat.boundsPeriod.end MS
 
 * timing.repeat.count MS
-* timing.repeat.count. ^short = "TBD"
 
 * timing.repeat.duration MS
 * timing.repeat.durationUnit MS

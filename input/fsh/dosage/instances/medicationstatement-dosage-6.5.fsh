@@ -10,7 +10,10 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].timing.repeat.extension[+].url = "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth"
+* dosage[structurednormal][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#5 "DaysOfMonth"
+
+* dosage[structurednormal][=].timing.repeat.extension[+].url = "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth"
 * dosage[structurednormal][=].timing.repeat.extension[=].valuePositiveInt = 1
 
 * dosage[structurednormal][=].timing.repeat.extension[+].url = "http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth"

@@ -9,6 +9,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * . ^short = "CHMED Dosage"
 
 * extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..1 // TBD: 1..1
+* extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1
 
 * sequence MS
 * sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"
@@ -72,43 +73,50 @@ Source: CHMEDDosage
 Target: "http://emediplan.ch/chmed21a"
 * -> "Posology"
 
-* sequence -> "TBD"
+* extension[posologyObjectType] -> "PO.T" // 5.
+* extension[timedDosageObjectType] -> "PO.TD.T" // (5.3/5.4/5.5/5.6 ->) 6. 
 
-* additionalInstruction[relativeToMeal] -> "RM"
-* additionalInstruction[evenOddDays] -> "TBD"
+* sequence -> "PO with split/tapered dosing, PO.SOs" // div, 5.5
 
-* timing.repeat.extension[dayOfMonth] -> "6.5"
+* additionalInstruction[relativeToMeal] -> "RM" // 4.
+* additionalInstruction[evenOddDays] -> "PO.E" // 5.6
 
-* timing.repeat.boundsPeriod.start -> "DtFrom"
-* timing.repeat.boundsPeriod.end -> "DtTo"
+* timing.repeat.extension[dayOfMonth] -> "PO.Ds (DaysOfMonth)" // 6.5
 
-* timing.repeat.count -> "TBD"
+* timing.repeat.boundsPeriod.start -> "DtFrom" // 4.
+* timing.repeat.boundsPeriod.end -> "DtTo" // 4.
 
-* timing.repeat.duration -> "7.2"
-* timing.repeat.durationUnit -> "7.2"
+* timing.repeat.count -> "PO.D/DU" // 8.1 and 8.2
 
-* timing.repeat.frequency -> "TBD"
-* timing.repeat.period -> "TBD"
-* timing.repeat.periodUnit -> "TBD"
+* timing.repeat.duration -> "D.Du" // 7.2
+* timing.repeat.durationUnit -> "D.DuU" // 7.2
 
-* timing.repeat.dayOfWeek -> "6.4"
-* timing.repeat.timeOfDay -> "6.2"
+* timing.repeat.frequency -> "PO.TDpC" // 5.4
+* timing.repeat.period -> "PO.CyDu" // 5.4
+* timing.repeat.periodUnit -> "PO.CyDuU" // 5.4
 
-* timing.repeat.when -> "TBD"
+* timing.repeat.dayOfWeek -> "PO.WDs" // 6.4
+* timing.repeat.timeOfDay -> "PO.Ts.Off/OffU" // 6.2 and 9.1
 
-* asNeededBoolean -> "InRes"
+* timing.repeat.when -> "PO.Ds (Daily), PO.Ts.S" // 5.1, 6.3 and 9.2
+
+* asNeededBoolean -> "InRes" // 4.
 
 * route -> "Medicament.ROA"
 * method -> "Medicament.MOA"
 
-* doseAndRate.doseRange -> "7.3"
+* doseAndRate.doseRange.low -> "D.AMin" // 7.3
+* doseAndRate.doseRange.high -> "D.AMax" // 7.3
 
-* doseAndRate.doseQuantity.extension[doseQuantityTo] -> "7.2"
+* doseAndRate.doseQuantity.extension[doseQuantityTo] -> "D.ATo" // 7.2
 
-
-* doseAndRate.doseQuantity.value -> "TBD"
+* doseAndRate.doseQuantity.value -> "D.A, D.AFrom" // 7.1, 7.2
 * doseAndRate.doseQuantity.unit -> "Medicament.Unit"
 * doseAndRate.doseQuantity.system -> "Medicament.Unit"
 * doseAndRate.doseQuantity.code -> "Medicament.Unit"
 
-* maxDosePerPeriod -> "6.6"
+* maxDosePerPeriod.numerator -> "PO.D" // 6.6
+* maxDosePerPeriod.denominator.value -> "PO.MID" // 6.6
+* maxDosePerPeriod.denominator.unit -> "PO.MIDU" // 6.6
+* maxDosePerPeriod.denominator.system -> "PO.MIDU" // 6.6
+* maxDosePerPeriod.denominator.code -> "PO.MIDU" // 6.6

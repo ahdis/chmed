@@ -60,4 +60,4 @@ Target: "http://emediplan.ch/chmed21a"
 * note.text -> "AppInstr"
 
 * dosage -> "Pos"
-* dosage[nonstructured] -> "Pos -> Posology.PO.Text"
+* dosage[nonstructured] -> "Pos -> PO.Text"

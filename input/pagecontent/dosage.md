@@ -57,9 +57,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 #### Relation to CH EMED
 <span style="color:red">**CAVE:**</span>   
-This Posology element mapping shown above is compatible with the [CH EMED MedicationStatement](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationstatement-card.html) (MP), not necessarily with the [CH EMED MedicationRequest](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationrequest.html) (Rx). In the MedicationRequest of the Swiss exchange format, the following elements are currently required for structured dosing: Dosage.timing.repeat.boundsPeriod, Dosage.timing.repeat.when, Dosage.doseAndRate.
+This Posology element mapping shown above is compatible with the [CH EMED MedicationStatement](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationstatement-card.html) (MP), not necessarily with the [CH EMED MedicationRequest](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-medicationrequest.html) (Rx). In the MedicationRequest of the Swiss exchange format, the following elements are currently required for structured dosing: `Dosage.timing.repeat.boundsPeriod`, `Dosage.timing.repeat.when`, `Dosage.doseAndRate`.
 
-[CHMED profiles](artifacts.html#structures-data-type-profiles) have been created for the different types of dosages, which are derived from the [C]H EMED dosage profiles](http://fhir.ch/ig/ch-emed/dosage.html#profiles). This ensures that the requirements of the Swiss exchange format are verified. To ensure compatibility with [CHMED Dosage](StructureDefinition-chmed-dosage.html), a constraint has been introduced in these CHMED dosing profiles to check this conformity. 
+[CHMED profiles](artifacts.html#structures-data-type-profiles) have been created for the different types of dosages, which are derived from the [CH EMED dosage profiles](http://fhir.ch/ig/ch-emed/dosage.html#profiles). This ensures that the requirements of the Swiss exchange format are verified. To ensure compatibility with [CHMED Dosage](StructureDefinition-chmed-dosage.html), a constraint has been introduced in these CHMED dosing profiles to check this conformity. 
 
 #### Timing Event
 The code for the time of adminstration has to come from the [ValueSet EventTiming](http://hl7.org/fhir/R4/valueset-event-timing.html).   
@@ -74,10 +74,16 @@ The mapping to [CDTYP9](TBD) can be found in this [ConceptMap](TBD).
 *The CH EMED exchange format requires the structured specification of units when defining [quantity](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-quantity.html) and [range](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-range.html). In CHMED21A is the Unit element (not always shown in the CHMED21A examples) on the same level as the Posology element and mandatory if Posology is defined.*
 
 ### Posology Objects
-Different types of posology objects are specified in CHMED21A. Details and examples for the 6 types ([Daily](#daily), [FreeText](#free-text), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence), [Even/odd days](#evenodd-days)) are described in the following sections.
+Different [types of posology objects](ValueSet-chmed-valueset-posology-object-type.html) are specified in CHMED21A. Details and examples for the 6 types ([Daily](#daily), [FreeText](#free-text), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence), [Even/odd days](#evenodd-days)) are described in the following sections.
 
 #### Daily
-Describes when (morning, noon, evening, night) and how much of a medicament must be taken daily, using a simple structure.
+Describes when (morning, noon, evening, night) and how much of a medicament must be taken daily, using a simple structure. 
+
+Day segments:
+1. Morning -> [MORN](http://hl7.org/fhir/R4/valueset-event-timing.html)
+2. Noon -> [NOON](http://hl7.org/fhir/R4/valueset-event-timing.html)
+3. Evening -> [EVE](http://hl7.org/fhir/R4/valueset-event-timing.html)
+4. Night -> [NIGHT](http://hl7.org/fhir/R4/valueset-event-timing.html)
 
 In the exchange format CH EMED is with structured dosing the format 1-1-1-1, meaning the administration time in the morning, at noon, in the evening, at night, supported. An additional differentiation is made whether it is a normal or split dosing. For [normal dosing](http://fhir.ch/ig/ch-emed/dosage.html#normal-dosing-incl-dosage-non-structured), the dose quantity is the same at the defined administration times (e.g. 1-0-1-0, 1-0-1-0). For [split dosing](http://fhir.ch/ig/ch-emed/dosage.html#split-dosing-incl-dosage-non-structured), the dose quantity varies depending on the administration time (e.g. 1-0-2-0, 2-1-2-0).
 
@@ -251,6 +257,15 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 #### Cyclic
 Describes the application of a medicament at constant intervals.
 
+Time units:
+1. Second -> [s](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+2. Minute -> [min](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+3. Hour -> [h](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+4. Day -> [d](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+5. Week -> [wk](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+6. Month -> [mo](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+7. Year -> [a](http://hl7.org/fhir/R4/valueset-units-of-time.html)
+
 **Example:** 1 pill twice a week.
 
 CHMED21A format for Cyclic:
@@ -296,7 +311,6 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 #### Sequence 
--> TBD!
 Allows to combine multiple posologies with a pause as a sequence.
 
 **Example:** Take daily 1 for 21 days, then take a break of 7 days.
@@ -467,7 +481,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 
 ### Timed Dosage Objects
-Different types of timed dosage objects are defined in CHMED21A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
+Different [types of timed dosage objects](ValueSet-chmed-valueset-timed-dosage-object-type.html) are defined in CHMED21A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
 
 #### DosageOnly
 Specifies a dosage without specifying a precise taking moment.
@@ -505,6 +519,8 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 #### Times
 Specifies precise times when a medicament must be applied.
+
+The FHIR mapping of 'Times' is in the `Dosage.timing.repeat.timeOfDay` element from data type [time](http://hl7.org/fhir/R4/datatypes.html#time). This allows to specify a time of day in the format hh:mm:ss.
 
 **Example:** Take 1 at 08:00.
 
@@ -598,6 +614,15 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 #### WeekDays
 Specifies on which days of the week a medicament must be applied.
+
+Days of week:
+1. Monday -> [mon](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+2. Tuesday -> [tue](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+3. Wednesday -> [wed](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+4. Thursday -> [thu](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+5. Friday -> [fri](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+6. Saturday -> [sat](http://hl7.org/fhir/R4/valueset-days-of-week.html)
+7. Sunday  -> [sun](http://hl7.org/fhir/R4/valueset-days-of-week.html)
 
 **Example:** Take 1 on Monday, Wednesday and Friday.
 

@@ -49,7 +49,7 @@ Target: "http://emediplan.ch/chmed16a"
 * note.text -> "AppInstr"
 
 * dosageInstruction -> "Pos"
-* dosageInstruction[nonstructured] -> "Pos -> Posology.PO.Text"
+* dosageInstruction[nonstructured] -> "Pos -> PO.Text"
 
 //* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
 //* dispenseRequest.quantity -> "Medicament.NbPack"

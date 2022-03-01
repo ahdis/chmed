@@ -2,11 +2,13 @@ Profile: CHMEDDosage
 Parent: Dosage
 Id: chmed-dosage
 Title: "CHMED Dosage"
-Description: "Dosage according to the 'Posology' in CHMED21A"
+Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage"
+
+* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..1 // TBD: 1..1
 
 * sequence MS
 * sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"

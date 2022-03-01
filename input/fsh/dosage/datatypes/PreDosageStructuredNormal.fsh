@@ -3,7 +3,7 @@ Parent: CHEMEDDosageStructuredNormalMedicationRequest
 // Parent: CHMEDDosage
 Id: chmed-dosage-structured-normal-pre
 Title: "CHMED Dosage Structured Normal (Pre)"
-Description: "Dosage structured normal of Medication Prescription document"
+Description: "Dosage structured normal of a Medication Prescription document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"

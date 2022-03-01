@@ -3,7 +3,7 @@ Parent: CHEMEDDosageStructuredSplit
 // Parent: CHMEDDosage
 Id: chmed-dosage-structured-split-card
 Title: "CHMED Dosage Structured Split (Card)"
-Description: "Dosage structured split of Medication Card document"
+Description: "Dosage structured split of a Medication Card document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"

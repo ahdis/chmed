@@ -1,6 +1,6 @@
 ValueSet: RelativeToMeal
 Id: chmed-valueset-relative-to-meal
-Title: "Relative to Meal"
+Title: "CHMED Relative to Meal"
 Description: "Value set for specifying when a medicament must be applied, relative to a meal"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url

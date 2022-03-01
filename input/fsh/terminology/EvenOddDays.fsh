@@ -1,5 +1,6 @@
 ValueSet: EvenOddDays
 Id: chmed-valueset-even-odd-days
+Title: "CHMED Even/Odd Days"
 Description: "Value set for medicament application on even or odd days"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
@@ -10,7 +11,7 @@ Description: "Value set for medicament application on even or odd days"
 
 CodeSystem: EvenOddDays
 Id: chmed-codesystem-even-odd-days
-Title: "Even/Odd Days"
+Title: "CHMED Even/Odd Days"
 Description: "Code system for medicament application on even or odd days"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url

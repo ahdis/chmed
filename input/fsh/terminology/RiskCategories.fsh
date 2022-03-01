@@ -1,6 +1,6 @@
 ValueSet: RiskCategories
 Id: chmed20af-valueset-risks-category
-Title: "Risk Categories"
+Title: "CHMED Risk Categories"
 Description: "Value set for possible risk categories"
 * ^publisher = "HCI Solutions AG"
 * ^contact.name = "Hotline"
@@ -11,7 +11,7 @@ Description: "Value set for possible risk categories"
 
 CodeSystem: RiskCategories
 Id: chmed20af-codesystem-risks-category
-Title: "Risk Categories"
+Title: "CHMED Risk Categories"
 Description: "Code system for possible risk categories"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "risks-category"

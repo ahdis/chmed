@@ -1,5 +1,6 @@
 ValueSet: PosologyObjectType
 Id: chmed-valueset-posology-object-type
+Title: "CHMED Posology Object Type"
 Description: "Value set for defining the type of the posology object"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
@@ -10,7 +11,7 @@ Description: "Value set for defining the type of the posology object"
 
 CodeSystem: PosologyObjectType
 Id: chmed-codesystem-posology-object-type
-Title: "Even/Odd Days"
+Title: "CHMED Posology Object Type"
 Description: "Code system for defining the type of the posology object"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url

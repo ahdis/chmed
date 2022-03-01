@@ -11,7 +11,7 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 
 * dosage[structurednormal][+].doseAndRate.doseQuantity[+] = 5.0 'mL' "milliliter"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dosequantityto"
+* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
 * dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[=].valueQuantity = 10.0 'mL' "milliliter"
 
 * dosage[structurednormal][=].timing.repeat.duration = 45

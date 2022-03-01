@@ -10,7 +10,7 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].additionalInstruction = $chmed-cs-evenodddays#even "Even days"
+* dosage[structurednormal][+].additionalInstruction = $chmed-cs-even-odd-days#even "Even days"
 * dosage[structurednormal][=].timing.repeat.boundsPeriod.start = "2021-01-02"
 * dosage[structurednormal][=].timing.repeat.frequency = 1
 * dosage[structurednormal][=].timing.repeat.period = 2

@@ -772,7 +772,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 Specifies how a dosage changes during time. This can be e.g., used for infusions.
 
 If the dosage changes, multiple dosage elements have to be defined in FHIR; see example [increasing dosage every hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html) or [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).   
-An [extension](StructureDefinition-chmed-dosequantityto.html) has been defined to change the quantity from the starting quantity continously to the final quantity (see example below):
+An [extension](StructureDefinition-chmed-dose-quantity-to.html) has been defined to change the quantity from the starting quantity continously to the final quantity (see example below):
 
 **Example:** Start with a dosage of 5, end with a dosage of 10 during a time interval of 45 minutes.
 
@@ -802,7 +802,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
           "doseQuantity" : {
             "extension" : [
               {
-                "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dosequantityto",
+                "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to",
                 "valueQuantity" : {
                   "value" : 10,
                   "unit" : "milliliter",

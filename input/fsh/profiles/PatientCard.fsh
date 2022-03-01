@@ -7,7 +7,7 @@ Description: "Profile for the Patient resource of the Medication Card document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF Patient (Card)"
-* extension contains CHMED20AFExtPrivateField named privatefield 0..*
+* extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
 * identifier
 * identifier[LocalPid]

@@ -9,7 +9,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * . ^short = "CHMED20AF Medication Prescription Composition"
 * language
 * extension[informationRecipient]
-* extension contains CHMED20AFExtPrivateField named privatefield 0..*
+* extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
 * identifier
 * identifier.system

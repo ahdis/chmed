@@ -51,7 +51,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * route 
 * method 
 
-* doseAndRate.doseRange 
+* doseAndRate.doseRange only CHEMEDRangeWithEmedUnits
 
 * doseAndRate.doseQuantity 
 * doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits

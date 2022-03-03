@@ -11,7 +11,6 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
-* dosage[0].text = "Marcumar-Therapie"
 * dosage[+].timing.repeat.boundsPeriod.start = "2017-09-07"
 * dosage[=].timing.repeat.duration = 1
 * dosage[=].timing.repeat.durationUnit = #d

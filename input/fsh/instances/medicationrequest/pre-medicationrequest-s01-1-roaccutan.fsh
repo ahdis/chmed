@@ -10,7 +10,7 @@ Usage: #example
 * intent = #order
 * medicationReference.reference = "#s01-roaccutan"
 * subject.reference = "Patient/card-patient-s01"
-* dosageInstruction[0].text = "1 x ROACCUTAN Kaps 10 mg 30 Stk substitituion alllowed, 2x repeatable"
+* dosageInstruction[0].text = "1 x ROACCUTAN Kaps 10 mg 30 Stk substitution allowed, 2x repeatable"
 * dosageInstruction[+].timing.repeat.boundsPeriod.start = "2016-09-12"
 * dosageInstruction[=].timing.repeat.boundsPeriod.end = "2020-09-12"
 * dosageInstruction[=].timing.repeat.when = #MORN

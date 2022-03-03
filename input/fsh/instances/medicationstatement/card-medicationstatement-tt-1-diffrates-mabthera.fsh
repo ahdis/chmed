@@ -11,7 +11,7 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Krebsleiden"
-* dosage[0].text = "einschleichend"
+* note.text = "einschleichend"
 
 * dosage[+].sequence = 1
 * dosage[=].timing.repeat.count = 1

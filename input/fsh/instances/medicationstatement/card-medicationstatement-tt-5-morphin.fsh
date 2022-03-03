@@ -11,8 +11,8 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
-* dosage[0].text = "Dosis jede Stunde 50 ml erhöhen"
-* dosage[=].timing.repeat.count = 1
+* note.text = "Dosis jede Stunde 50 ml erhöhen"
+* dosage[+].timing.repeat.count = 1
 * dosage[=].timing.repeat.duration = 14400
 * dosage[=].timing.repeat.durationUnit = #s
 * dosage[=].timing.repeat.timeOfDay = "08:00:00"

@@ -8,8 +8,8 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage"
 
-* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* 
-* extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1
+* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* MS
+* extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1 MS
 
 * sequence 
 * sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"

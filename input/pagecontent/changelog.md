@@ -16,6 +16,8 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 
 #### Added
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
+   * Removing the flags that were tentatively introduced in v2.0.0 before introducing the CH EMED definition for it.
+   * Set flags were they correlate with the described meaning.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated

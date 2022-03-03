@@ -82,11 +82,13 @@ Description: "Code system for possible risks (Release 2012-11)"
 * #612 ^designation[+].language = #fr-CH
 * #612 ^designation[=].value = "Femmes en âge de procréer"
 
+/*
 * #613 "Zeugungsfähige Männer"
 * #613 ^designation[0].language = #de-CH
 * #613 ^designation[=].value = "Zeugungsfähige Männer"
 * #613 ^designation[+].language = #fr-CH
 * #613 ^designation[=].value = "Hommes en âge de procréer"
+*/
 
 * #580 "Leistungssportler"
 * #580 ^designation[0].language = #de-CH

@@ -45,6 +45,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed/issues/12)):
    * CodeSystem [Risk Categories](CodeSystem-chmed-codesystem-risks-category.html): 7 Diabetes
    * CodeSystem [Risks](CodeSystem-chmed-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   
+* Remove unused (but in INDEX published) code '613 Zeugungsunfähige Männer' from [CodeSystem CHMED Risks](CodeSystem-chmed-codesystem-risks-cdscode.html).
    
 
 

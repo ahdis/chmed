@@ -26,7 +26,7 @@ HCI Solutions AG has built a **converter** for all software houses that have int
 * [Artifacts](artifacts.html) - provides a list of the FHIR artifacts included in this implementation guide.
 
 #### MustSupport
-TBD (see also [CH EMED](https://fhir.ch/ig/ch-emed/index.html#mustsupport))
+The meaning of the flag [mustSupport](https://www.hl7.org/fhir/profiling.html#mustsupport) for this implementation guide follows the [definition of CH EMED](https://fhir.ch/ig/ch-emed/index.html#mustsupport), the Swiss eMedication IG from which CHMED is derived.
 
 #### Download
 You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).

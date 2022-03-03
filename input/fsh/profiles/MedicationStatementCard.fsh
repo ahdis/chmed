@@ -35,14 +35,14 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * reasonCode
 * reasonCode.text
 
-* note.text MS
+* note.text
 
-* dosage MS
-* dosage[nonstructured] MS
+* dosage
+* dosage[nonstructured]
 * dosage[structurednormal] only CHMEDDosageStructuredNormalCard
-* dosage[structurednormal] MS
+* dosage[structurednormal]
 * dosage[structuredsplit] only CHMEDDosageStructuredSplitCard
-* dosage[structuredsplit] MS
+* dosage[structuredsplit]
 
 
 Mapping: CHMED21A-for-CHMEDMedicationStatementCard

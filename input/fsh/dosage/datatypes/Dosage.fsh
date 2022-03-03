@@ -11,15 +11,15 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* 
 * extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1
 
-* sequence MS
+* sequence 
 * sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"
 
 * additionalInstruction ^slicing.discriminator.type = #pattern
 * additionalInstruction ^slicing.discriminator.path = "$this"
 * additionalInstruction ^slicing.rules = #open
 * additionalInstruction contains 
-    relativeToMeal 0..1 MS and 
-    evenOddDays 0..1 MS
+    relativeToMeal 0..1 and 
+    evenOddDays 0..1 
 * additionalInstruction[relativeToMeal]. ^short = "When the medicament must be applied relative to a meal (before, during or after)"
 * additionalInstruction[relativeToMeal] from RelativeToMeal (required)
 * additionalInstruction[evenOddDays]. ^short = "The medicament is be applied on even or odd days"
@@ -28,37 +28,37 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * timing.repeat.extension contains $ext-dayOfMonth named dayOfMonth 0..*
 
 
-* timing.repeat.boundsPeriod.start MS
-* timing.repeat.boundsPeriod.end MS
+* timing.repeat.boundsPeriod.start 
+* timing.repeat.boundsPeriod.end 
 
-* timing.repeat.count MS
+* timing.repeat.count 
 
-* timing.repeat.duration MS
-* timing.repeat.durationUnit MS
+* timing.repeat.duration 
+* timing.repeat.durationUnit 
 
-* timing.repeat.frequency MS
-* timing.repeat.period MS
-* timing.repeat.periodUnit MS
+* timing.repeat.frequency 
+* timing.repeat.period 
+* timing.repeat.periodUnit 
 
-* timing.repeat.dayOfWeek MS
-* timing.repeat.timeOfDay MS
+* timing.repeat.dayOfWeek 
+* timing.repeat.timeOfDay 
 
-* timing.repeat.when MS
+* timing.repeat.when 
 
-* asNeededBoolean MS
+* asNeededBoolean 
 * asNeededBoolean. ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
 
-* route MS
-* method MS
+* route 
+* method 
 
-* doseAndRate.doseRange MS
+* doseAndRate.doseRange 
 
-* doseAndRate.doseQuantity MS
+* doseAndRate.doseQuantity 
 * doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits
 
 * doseAndRate.doseQuantity.extension contains CHMEDExtensionDoseQuantityTo named doseQuantityTo 0..1
 
-* maxDosePerPeriod MS
+* maxDosePerPeriod 
 * maxDosePerPeriod only CHEMEDRatioWithEmedUnits
 
 

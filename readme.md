@@ -9,4 +9,4 @@ Extending the CHMED21A format to a FHIR based definition (CHMED) has the followi
 * CHMED formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined. 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 
-The CHMED format can be either in XML or JSON format. However both are too big in size to be exchange in a QR code. 
+The CHMED format can be either in XML or JSON format. However, both are too big in size to be exchanged in a QR code. 

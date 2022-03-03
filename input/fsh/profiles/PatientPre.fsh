@@ -7,8 +7,7 @@ Description: "Profile for the Patient resource of the Medication Prescription do
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Patient (Pre)"
-* extension contains CHMEDExtensionPrivateField named privatefield 0..*
-* extension[privatefield] ^short = "Private fields for patient"
+* extension contains CHMEDExtensionPrivateField named privateField 0..*
 * identifier
 * identifier[LocalPid]
 * identifier[LocalPid].system
@@ -27,7 +26,7 @@ Title: "Mapping to CHMED21A"
 Source: CHMEDPatientPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"
-* extension[privatefield] -> "Patient.PFields"
+* extension[privateField] -> "Patient.PFields"
 * identifier -> "Patient.Id with PatientId.Type (LocalPatientIdentifier = 2)"
 * name -> "name.given = Patient.FName, name.family = Patient.LName"
 * telecom -> "Patient.Phone"

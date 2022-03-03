@@ -9,8 +9,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * . ^short = "CHMED Medication Prescription Composition"
 * language
 * extension[informationRecipient]
-* extension contains CHMEDExtensionPrivateField named privatefield 0..*
-* extension[privatefield] ^short = "Private fields for patient"
+* extension contains CHMEDExtensionPrivateField named privateField 0..*
 * identifier
 * identifier.system
 * identifier.value
@@ -52,7 +51,7 @@ Source: CHMEDCompositionMedicationPrescription
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
 * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
-* extension[privatefield] -> "PFields"
+* extension[privateField] -> "PFields"
 * identifier -> "Id"
 * type -> "MedType"
 * subject -> "Patient"

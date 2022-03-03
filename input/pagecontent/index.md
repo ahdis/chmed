@@ -9,9 +9,10 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 #### Scope
 * [Introduction](intro.html) - explains the structures for the different formats/values.
 * [Profiles](profiles.html) - TBD
-* [Private Fields](privatefields.html) - TBD
+* [Extensions](extensions.html) - TBD
 * [Terminologies](terminology.html) - TBD
 * [Dosage](dosage.html) - TBD
+* [Artifacts](artifacts.html) - TBD
 
 #### MustSupport
 TBD (see also [CH EMED](https://fhir.ch/ig/ch-emed/index.html#mustsupport))

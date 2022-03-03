@@ -8,8 +8,7 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED MedicationRequest (Pre)"
 * contained
-* extension contains CHMEDExtensionPrivateField named privatefield 0..*
-* extension[privatefield] ^short = "Private fields for patient"
+* extension contains CHMEDExtensionPrivateField named privateField 0..*
 * identifier
 * identifier.system
 * identifier.value
@@ -42,7 +41,7 @@ Title: "Mapping to CHMED21A"
 Source: CHMEDMedicationRequestPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"
-//* extension[privatefield] -> "Medicament.PFields"
+//* extension[privateField] -> "Medicament.PFields"
 //* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
 //* subject -> "Patient"
 

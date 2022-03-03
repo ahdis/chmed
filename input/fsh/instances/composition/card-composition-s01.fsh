@@ -5,9 +5,9 @@ Description: "Example for a  Composition (Card)"
 Usage: #example
 * language = #de-CH
 * extension[0].extension[0].url = "name"
-* extension[=].extension[=].valueString = "PrivateFieldNameSample1"
+* extension[=].extension[=].valueString = "Private Field Name Sample 1"
 * extension[=].extension[+].url = "value"
-* extension[=].extension[=].valueString = "PrivateFieldValueSample1"
+* extension[=].extension[=].valueString = "Private Field Value Sample 1"
 * extension[=].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
 * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber"
 * extension[=].valueUnsignedInt = 1

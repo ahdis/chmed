@@ -30,7 +30,7 @@ menu:
   Home: index.html
   Introduction: intro.html
   Profiles: profiles.html
-  Private Fields: privatefields.html
+  Extensions: extensions.html
   Terminology: terminology.html
   Dosage: dosage.html
   Artifacts: artifacts.html
@@ -43,8 +43,8 @@ pages:
     title: Introduction
   profiles.md:
     title: Profiles
-  privatefields.md:
-    title: Private Fields
+  extensions.md:
+    title: Extensions
   terminology.md:
     title: Terminology
   dosage.md:

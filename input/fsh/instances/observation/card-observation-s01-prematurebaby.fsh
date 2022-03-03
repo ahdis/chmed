@@ -1,6 +1,6 @@
 Instance: card-observation-s01-prematurebaby
 InstanceOf: CHMEDPrematureBaby
-Title: "Premature Baby - yes (<=18 months)"
+Title: "Premature Baby - yes (age <=18 months)"
 Description: "Example for a premature baby (Observation)"
 Usage: #example
 * status = #final

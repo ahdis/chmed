@@ -12,7 +12,7 @@ Description: "Profile for the Observation resource to represent a premature baby
 * code ^short = "Premature infant"
 * valueBoolean 1..
 * valueBoolean only boolean
-* valueBoolean ^short = "premature baby true only if age <= 18 months"
+* valueBoolean ^short = "'True' if patient is a premature baby, otherwise 'false' (only if age <= 18 months)"
 
 
 Mapping: CHMED21A-for-CHMEDPrematureBaby

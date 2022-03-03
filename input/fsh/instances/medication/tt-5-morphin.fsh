@@ -1,5 +1,5 @@
 Instance: tt-5-morphin
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680565130034 "MORPHIN HCL Amino Inj Lös 20 mg/ml"
 * code.text = "MORPHIN HCL Amino Inj Lös 20 mg/ml"

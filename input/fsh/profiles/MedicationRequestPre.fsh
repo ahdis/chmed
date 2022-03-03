@@ -1,12 +1,12 @@
-Profile: CHMED20AFMedicationRequestPre
+Profile: CHMEDMedicationRequestPre
 Parent: CHEMEDMedicationRequest
-Id: chmed20af-pre-medicationrequest
-Title: "CHMED20AF MedicationRequest (Pre)"
+Id: chmed-pre-medicationrequest
+Title: "CHMED MedicationRequest (Pre)"
 Description: "Profile for the MedicationRequest resource of the Medication Prescription document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF MedicationRequest (Pre)"
+* . ^short = "CHMED MedicationRequest (Pre)"
 * contained
 * extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
@@ -14,9 +14,9 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * identifier.system
 * identifier.value
 * status
-* medicationReference only Reference(CHMED20AFMedication)
+* medicationReference only Reference(CHMEDMedication)
 * medicationReference
-* subject only Reference(CHMED20AFPatientPre)
+* subject only Reference(CHMEDPatientPre)
 * subject
 
 * note.text MS
@@ -36,11 +36,11 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 
 
-Mapping: CHMED16A-for-CHMED20AFMedicationRequestPre
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFMedicationRequestPre
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDMedicationRequestPre
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDMedicationRequestPre
+Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"
 //* extension[privatefield] -> "Medicament.PFields"
 //* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"

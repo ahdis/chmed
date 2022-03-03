@@ -1,5 +1,5 @@
 Instance: tt-1-diffrates-mabthera
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680543780176 "MABTHERA Inf Konz 100 mg/10ml"
 * code.text = "MABTHERA Inf Konz 100 mg/10ml"

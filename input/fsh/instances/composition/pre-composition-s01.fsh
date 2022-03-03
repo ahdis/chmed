@@ -1,5 +1,5 @@
 Instance: pre-composition-s01
-InstanceOf: CHMED20AFCompositionMedicationPrescription
+InstanceOf: CHMEDCompositionMedicationPrescription
 Title: "Medication Prescription Composition"
 Description: "Example for a Composition (Pre)"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: tt-3-marcoumar
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680193950141 "MARCOUMAR Tabl 3 mg"
 * code.text = "MARCOUMAR Tabl 3 mg"

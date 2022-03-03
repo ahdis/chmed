@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-s02-3-beloczok
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatment - BELOC ZOK (Split Dosage)"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

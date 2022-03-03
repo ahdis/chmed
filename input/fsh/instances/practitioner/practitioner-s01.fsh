@@ -1,5 +1,5 @@
 Instance: practitioner-s01
-InstanceOf: CHMED20AFPractitioner
+InstanceOf: CHMEDPractitioner
 Title: "Dr. Thomas Wälti"
 Description: "Example for a Practitioner"
 Usage: #example

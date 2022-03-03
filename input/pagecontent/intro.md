@@ -11,9 +11,9 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/do
 
 {% include img.html img="bundle_medicationplan.png" caption="Fig.: Bundle Medication Card document" width="35%" %}
 
-CHMED20AF Medication Card document: 
-[Profile](StructureDefinition-chmed20af-card-bundle.html), 
-[Examples](StructureDefinition-chmed20af-card-bundle-examples.html)
+CHMED Medication Card document: 
+[Profile](StructureDefinition-chmed-card-bundle.html), 
+[Examples](StructureDefinition-chmed-card-bundle-examples.html)
 
 
 #### Composition
@@ -34,9 +34,9 @@ The [Composition](http://www.hl7.org/fhir/composition.html) resource defines the
 | section:annotation | text | Remark |  Medication.Rmk |  
 | section:healthconcerns | Reference (Observation and Condition) | Health data of the patient | MedicalData |
 
-CHMED20AF Medication Card Composition: 
-[Profile](StructureDefinition-chmed20af-card-composition.html), 
-[Examples](StructureDefinition-chmed20af-card-composition-examples.html)
+CHMED Medication Card Composition: 
+[Profile](StructureDefinition-chmed-card-composition.html), 
+[Examples](StructureDefinition-chmed-card-composition-examples.html)
 
 
 #### Patient
@@ -59,9 +59,9 @@ The [Patient](https://www.hl7.org/fhir/patient.html) resource defines the follow
 | address  | Address for the patient  | Address  | address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 | communication.language  | Language of the patient  | CodeableConcept  | Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary" |
 
-CHMED20AF Patient (Card): 
-[Profile](StructureDefinition-chmed20af-card-patient.html), 
-[Examples](StructureDefinition-chmed20af-card-patient-examples.html)
+CHMED Patient (Card): 
+[Profile](StructureDefinition-chmed-card-patient.html), 
+[Examples](StructureDefinition-chmed-card-patient-examples.html)
 
 
 #### Practitioner
@@ -77,9 +77,9 @@ CHMED20AF Patient (Card):
 | identifier  | GLN for this practitioner  | Identifier  | Auth.Gln |
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName |
 
-CHMED20AF Practitioner: 
-[Profile](StructureDefinition-chmed20af-practitioner.html), 
-[Examples](StructureDefinition-chmed20af-practitioner-examples.html)
+CHMED Practitioner: 
+[Profile](StructureDefinition-chmed-practitioner.html), 
+[Examples](StructureDefinition-chmed-practitioner-examples.html)
 
 
 #### Medication Section 
@@ -105,9 +105,9 @@ The medication section contains the entries for the current medication for a pat
 | Dosage.doseAndRate.dose[x] | Amount of medication per dose | SimpleQuantity, Range | doseQuantity: TakingTime.A, doseRange: TakingTime.DoFrom, TakingTime.DoTo |
 | Dosage.maxDosePerPeriod  | Amount of medication per dose | Ratio  | TakingTime.MA |
 
-CHMED20AF MedicationStatement: 
-[Profile](StructureDefinition-chmed20af-card-medicationstatement.html), 
-[Examples](StructureDefinition-chmed20af-card-medicationstatement-examples.html)
+CHMED MedicationStatement: 
+[Profile](StructureDefinition-chmed-card-medicationstatement.html), 
+[Examples](StructureDefinition-chmed-card-medicationstatement-examples.html)
 
 
 #### Health Concerns Section 
@@ -123,15 +123,15 @@ The health concern section contains the medical data for the patient and the pos
 | ------------- | ------------- | -------------  | ------------- |
 | Body Weight  | [Weight measurement for patient in kg](Observation-card-observation-s01-bodyweight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyweight)  | MedicalData.Meas.Weight |
 | Body Height  | [Height measurement for patient in cm](Observation-card-observation-s01-bodyheight.html) | [Observation](http://hl7.org/fhir/StructureDefinition/bodyheight)  | MedicalData.Meas.Height | 
-| First day of last menstruation  | [First day of last menstruation](Observation-card-observation-s01-dateoflastmenstruation.html) | [Observation](StructureDefinition-chmed20af-obs-dateoflastmenstruation.html)  | MedicalData.DLstMen |
-| Premature baby  | [Premature baby true only if age &lt;= 18 months](Observation-card-observation-s01-prematurebaby.html) | [Observation](StructureDefinition-chmed20af-obs-prematurebaby.html)  | MedicalData.Prem| 
-| Time of gestation  | [Time of gestation only if Premature Baby](Observation-card-observation-s01-timeofgestation.html) | [Observation](StructureDefinition-chmed20af-obs-timeofgestation.html)  | MedicalData.ToG.Weeks + MedicalData.ToG.Day | 
-| Risks per group  |   [Renal Insufficiency](Condition-card-condition-s01-1-renalinsufficiency.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Liver Insufficiency](Condition-card-condition-s01-2-liverinsufficiency.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Reproduction](Condition-card-condition-s01-3-reproduction.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Competitive athlete](Condition-card-condition-s01-4-competitiveathlete.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Driver](Condition-card-condition-s01-5-driver.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
-| Risks per group  |   [Allergies](Condition-card-condition-s01-6-allergies.html)  | [Condition](StructureDefinition-chmed20af-condition-risks.html)  | MedicalData.RC|
+| First day of last menstruation  | [First day of last menstruation](Observation-card-observation-s01-dateoflastmenstruation.html) | [Observation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)  | MedicalData.DLstMen |
+| Premature baby  | [Premature baby true only if age &lt;= 18 months](Observation-card-observation-s01-prematurebaby.html) | [Observation](StructureDefinition-chmed-obs-prematurebaby.html)  | MedicalData.Prem| 
+| Time of gestation  | [Time of gestation only if Premature Baby](Observation-card-observation-s01-timeofgestation.html) | [Observation](StructureDefinition-chmed-obs-timeofgestation.html)  | MedicalData.ToG.Weeks + MedicalData.ToG.Day | 
+| Risks per group  |   [Renal Insufficiency](Condition-card-condition-s01-1-renalinsufficiency.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Liver Insufficiency](Condition-card-condition-s01-2-liverinsufficiency.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Reproduction](Condition-card-condition-s01-3-reproduction.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Competitive athlete](Condition-card-condition-s01-4-competitiveathlete.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Driver](Condition-card-condition-s01-5-driver.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
+| Risks per group  |   [Allergies](Condition-card-condition-s01-6-allergies.html)  | [Condition](StructureDefinition-chmed-condition-risks.html)  | MedicalData.RC|
 
 
 
@@ -143,9 +143,9 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/do
 
 {% include img.html img="bundle_prescription.png" caption="Fig.: Bundle Medication Prescription document" width="35%" %}
 
-CHMED20AF Medication Prescription document: 
-[Profile](StructureDefinition-chmed20af-pre-bundle.html), 
-Examples(StructureDefinition-chmed20af-pre-bundle-examples.html)
+CHMED Medication Prescription document: 
+[Profile](StructureDefinition-chmed-pre-bundle.html), 
+Examples(StructureDefinition-chmed-pre-bundle-examples.html)
 
 
 #### Composition
@@ -170,9 +170,9 @@ The [Composition](http://www.hl7.org/fhir/composition.html) resource defines the
 | section:prescription | List of medicaments |  MedicationRequest | Medicaments |
 | section:annotation | Notes |  text | Rmk |
 
-CHMED20AF Medication Prescription Composition: 
-[Profile](StructureDefinition-chmed20af-pre-composition.html), 
-[Examples](StructureDefinition-chmed20af-pre-composition-examples.html)
+CHMED Medication Prescription Composition: 
+[Profile](StructureDefinition-chmed-pre-composition.html), 
+[Examples](StructureDefinition-chmed-pre-composition-examples.html)
 
 
 #### Patient
@@ -195,9 +195,9 @@ The [Patient](https://www.hl7.org/fhir/patient.html) resource defines the follow
 | birthDate  | Date of birth  | date  | Patient.BDt | 
 | address  | Address for the patient  | Address |address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City |
 
-CHMED20AF Patient (Pre): 
-[Profile](StructureDefinition-chmed20af-pre-patient.html), 
-Examples(StructureDefinition-chmed20af-pre-patient-examples.html)
+CHMED Patient (Pre): 
+[Profile](StructureDefinition-chmed-pre-patient.html), 
+Examples(StructureDefinition-chmed-pre-patient-examples.html)
 
 
 #### Practitioner
@@ -214,9 +214,9 @@ Examples(StructureDefinition-chmed20af-pre-patient-examples.html)
 | identifier  | ZSR for this practitioner  | Identifier  | ZSR-Number of the organisation | 
 | name  | Name for this practitioner  | HumanName  | name.given = Auth.FName, name.family = Auth.LName | 
 
-CHMED20AF Practitioner: 
-[Profile](StructureDefinition-chmed20af-practitioner.html), 
-[Examples](StructureDefinition-chmed20af-practitioner-examples.html)
+CHMED Practitioner: 
+[Profile](StructureDefinition-chmed-practitioner.html), 
+[Examples](StructureDefinition-chmed-practitioner-examples.html)
 
 
 #### Medication Prescribed Section 
@@ -243,6 +243,6 @@ The medication section contains the entries for the prescriped medications for a
 | dispenseRequest.quantity  | Number of package to be delivered  | 	SimpleQuantity  | Medicament.NbPack |
 | substitution.allowedCodeableConcept |  Medication is substitutable  | CodeableConcept  | Medicament.Subs | 
 
-CHMED20AF MedicationRequest: 
-[Profile](StructureDefinition-chmed20af-pre-medicationrequest.html), 
-[Examples](StructureDefinition-chmed20af-pre-medicationrequest-examples.html)
+CHMED MedicationRequest: 
+[Profile](StructureDefinition-chmed-pre-medicationrequest.html), 
+[Examples](StructureDefinition-chmed-pre-medicationrequest-examples.html)

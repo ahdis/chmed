@@ -1,5 +1,5 @@
 Instance: card-observation-s01-timeofgestation
-InstanceOf: CHMED20AFTimeOfGestation
+InstanceOf: CHMEDTimeOfGestation
 Title: "Time of Gestation - Week 30, Day 5"
 Description: "Example for a time of gestation (Observation)"
 Usage: #example

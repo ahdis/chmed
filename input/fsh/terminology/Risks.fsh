@@ -1,5 +1,5 @@
 ValueSet: Risks
-Id: chmed20af-valueset-risks-cdscode
+Id: chmed-valueset-risks-cdscode
 Title: "CHMED Risks"
 Description: "Value set for possible risks"
 * ^publisher = "HCI Solutions AG"
@@ -10,7 +10,7 @@ Description: "Value set for possible risks"
 
 
 CodeSystem: Risks
-Id: chmed20af-codesystem-risks-cdscode
+Id: chmed-codesystem-risks-cdscode
 Title: "CHMED Risks"
 Description: "Code system for possible risks (Release 2012-11)"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"

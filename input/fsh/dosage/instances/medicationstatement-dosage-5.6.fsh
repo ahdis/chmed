@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-5.6
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage Even/odd days"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
@@ -10,10 +10,10 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-posology-object-type#6 "Even/odd days"
 
-* dosage[structurednormal][=].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[structurednormal][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
 * dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
 
 * dosage[structurednormal][=].additionalInstruction = $chmed-cs-even-odd-days#even "Even days"

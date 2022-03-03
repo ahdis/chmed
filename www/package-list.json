@@ -1,14 +1,14 @@
 {
-    "package-id": "ch.chmed20af.emediplan",
-    "title": "eMediplan CHMED20AF FHIR IG (R4)",
+    "package-id": "ch.chmed.emediplan",
+    "title": "eMediplan CHMED FHIR IG (R4)",
     "category": "Medications / Immunizations",
-    "canonical": "http://chmed20af.emediplan.ch/fhir",
-    "introduction": "CHMED20AF is the FHIR Implementation Guide to represent the eMediplan in FHIR",
+    "canonical": "http://chmed.emediplan.ch/fhir",
+    "introduction": "CHMED is the FHIR Implementation Guide to represent the eMediplan in FHIR",
     "list": [
         {
             "version": "current",
             "desc": "Continuous Integration Build (latest in version control)",
-            "path": "http://build.fhir.org/ig/ahdis/chmed20af",
+            "path": "http://build.fhir.org/ig/ahdis/chmed",
             "status": "ci-build",
             "current": true
         },

@@ -40,17 +40,17 @@ GRUZAh1SGwBUASyYTqC8oSSnHgVe4HZM7z1UqF6WcqwkhxjCKdhcJkWc650GIlcXZq8sXDvSEJtHGZpT
 
 In addition, the layout specification for the print-based layouts makes recognition of and work with medication plans easier for medical professionals and patients, as the documents will come in a universal layout, independent of the individual IT systems. [Details](https://emediplan.ch/dbFile/305/u-ce40/dl/eMediplan_CHMED16A_V1.6.pdf).
 
-### CHMED20AF
+### CHMED
 
 <mark>Disclaimer July 2020: HCI Solutions AG has built a converter for all software houses that have integrated the CHMED16A. The converter will be published here as soon as it is available. If you have any questions, please contact hotline@hcisolutions.ch directly.</mark> 
 
 [FHIR®](http://www.hl7.org/fhir) is a standard in development from [HL7®](http://www.hl7.org/). FHIR consists of a RESTful API and a set of interoperability resources. 
 
-Extending the CHMED16A format to a FHIR based definition (CHMED20AF) has the following advantages:
-* CHMED20AF formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined. 
+Extending the CHMED16A format to a FHIR based definition (CHMED) has the following advantages:
+* CHMED formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined. 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 
-The CHEMD20AF format can bei either in XML or JSON format. 
+The CHEMD format can be either in XML or JSON format. 
 
 ### Copyright
 This specification includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation ([IHTSDO](http://snomed.org/)) and distributed by agreement between IHTSDO and HL7. Implementers of these specification must have the appropriate SNOMED CT Affiliate license - for more information contact 

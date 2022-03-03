@@ -11,10 +11,10 @@ Usage: #definition
 * status = #active
 * description = "Mapping to describe the relationships between risk categories and risks"
 
-* sourceUri = "http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-risks-category"
-* targetUri = "http://chmed20af.emediplan.ch/fhir/ValueSet/chmed20af-valueset-risks-cdscode"
-* group.source = "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-category"
-* group.target = "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-cdscode"
+* sourceUri = "http://chmed.emediplan.ch/fhir/ValueSet/chmed-valueset-risks-category"
+* targetUri = "http://chmed.emediplan.ch/fhir/ValueSet/chmed-valueset-risks-cdscode"
+* group.source = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category"
+* group.target = "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-cdscode"
 
 // 1: Renal insufficiency 
 * group.element[+].code = #1 

@@ -1,12 +1,12 @@
-Profile: CHMED20AFTimeOfGestation
+Profile: CHMEDTimeOfGestation
 Parent: Observation
-Id: chmed20af-obs-timeofgestation
-Title: "CHMED20AF Time of Gestation"
+Id: chmed-obs-timeofgestation
+Title: "CHMED Time of Gestation"
 Description: "Profile for the Observation resource to represent the time of gestation"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Time of Gestation"
+* . ^short = "CHMED Time of Gestation"
 * code = $loinc#49052-4
 * code
 * code ^short = "Gestational age in days"
@@ -19,10 +19,10 @@ Description: "Profile for the Observation resource to represent the time of gest
 * valueQuantity.code = #d (exactly)
 
 
-Mapping: CHMED16A-for-CHMED20AFTimeOfGestation
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFTimeOfGestation
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDTimeOfGestation
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDTimeOfGestation
+Target: "http://emediplan.ch/chmed21a"
 * -> "ToG"
 * code -> "ToG.Days + ToG.Weeks"

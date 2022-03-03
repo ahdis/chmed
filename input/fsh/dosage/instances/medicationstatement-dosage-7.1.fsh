@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-7.1
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage DosageSimple"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example

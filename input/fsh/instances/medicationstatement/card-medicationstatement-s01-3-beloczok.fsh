@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-s01-3-beloczok
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatment - BELOC ZOK (Normal Dosage)"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

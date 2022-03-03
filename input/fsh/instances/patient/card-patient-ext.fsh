@@ -1,5 +1,5 @@
 Instance: card-patient-ext
-InstanceOf: CHMED20AFPatientCard
+InstanceOf: CHMEDPatientCard
 Title: "Maxima Matter (Ext)"
 Description: "Example for a Patient (Card) with the private field extension included"
 Usage: #example
@@ -7,7 +7,7 @@ Usage: #example
 * extension.extension[=].valueString = "Private Field Name Sample"
 * extension.extension[+].url = "value"
 * extension.extension[=].valueString = "Private Field Value Sample"
-* extension.url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
+* extension.url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.999.1"
 * identifier.value = "12345678"

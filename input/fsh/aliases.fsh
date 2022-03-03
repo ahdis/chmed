@@ -11,11 +11,11 @@ Alias: $v3-substanceAdminSubstitution =         http://terminology.hl7.org/CodeS
 Alias: $bodyheight =                            http://hl7.org/fhir/StructureDefinition/bodyheight
 Alias: $bodyweight =                            http://hl7.org/fhir/StructureDefinition/bodyweight
 
-Alias: $chmed20af-codesystem-risks-category =   http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-category
-Alias: $chmed20af-codesystem-risks-cdscode =    http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-cdscode
-Alias: $chmed-cs-even-odd-days =                http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days
-Alias: $chmed-cs-posology-object-type =         http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type
-Alias: $chmed-cs-timed-dosage-object-type =     http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
+Alias: $chmed-codesystem-risks-category =       http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category
+Alias: $chmed-codesystem-risks-cdscode =        http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-cdscode
+Alias: $chmed-cs-even-odd-days =                http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days
+Alias: $chmed-cs-posology-object-type =         http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type
+Alias: $chmed-cs-timed-dosage-object-type =     http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
 
 // CH EMED
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner

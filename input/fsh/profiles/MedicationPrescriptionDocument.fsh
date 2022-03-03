@@ -1,12 +1,12 @@
-Profile: CHMED20AFMedicationPrescriptionDocument
+Profile: CHMEDMedicationPrescriptionDocument
 Parent: CHEMEDDocumentMedicationPrescription
-Id: chmed20af-pre-bundle
-Title: "CHMED20AF Medication Prescription Document"
+Id: chmed-pre-bundle
+Title: "CHMED Medication Prescription Document"
 Description: "Profile for the Bundle resource to represent the prescribed medication of a patient"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Medication Prescription Document"
+* . ^short = "CHMED Medication Prescription Document"
 * identifier
 * identifier.system
 * identifier.value
@@ -14,15 +14,15 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 * timestamp
 * entry
 * entry[Composition]
-* entry[Composition].resource only CHMED20AFCompositionMedicationPrescription
+* entry[Composition].resource only CHMEDCompositionMedicationPrescription
 * entry[Composition].resource
-* entry[Composition].resource ^short = "CHMED20AF Medication Prescription Composition"
+* entry[Composition].resource ^short = "CHMED Medication Prescription Composition"
 
 
 
-Mapping: CHMED16A-for-CHMED20AFMedicationPrescriptionDocument
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFMedicationPrescriptionDocument
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDMedicationPrescriptionDocument
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDMedicationPrescriptionDocument
+Target: "http://emediplan.ch/chmed21a"
 * identifier -> "Id"

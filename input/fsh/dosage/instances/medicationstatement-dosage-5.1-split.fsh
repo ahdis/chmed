@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-5.1-split
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage Daily"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
@@ -10,13 +10,13 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structuredsplit][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[structuredsplit][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[structuredsplit][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
 * dosage[structuredsplit][=].sequence = 0
 * dosage[structuredsplit][=].timing.repeat.when = #MORN
 * dosage[structuredsplit][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"
 
-* dosage[structuredsplit][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[structuredsplit][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[structuredsplit][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
 * dosage[structuredsplit][=].sequence = 0
 * dosage[structuredsplit][=].timing.repeat.when = #EVE

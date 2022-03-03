@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-2-multiple-meronem
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MERONEM"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

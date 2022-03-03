@@ -1,12 +1,12 @@
-Profile: CHMED20AFPatientPre
+Profile: CHMEDPatientPre
 Parent: CHCorePatientEPR
-Id: chmed20af-pre-patient
-Title: "CHMED20AF Patient (Pre)"
+Id: chmed-pre-patient
+Title: "CHMED Patient (Pre)"
 Description: "Profile for the Patient resource of the Medication Prescription document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Patient (Pre)"
+* . ^short = "CHMED Patient (Pre)"
 * extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
 * identifier
@@ -21,11 +21,11 @@ Description: "Profile for the Patient resource of the Medication Prescription do
 
 
 
-Mapping: CHMED16A-for-CHMED20AFPatientPre
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFPatientPre
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDPatientPre
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDPatientPre
+Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"
 * extension[privatefield] -> "Patient.PFields"
 * identifier -> "Patient.Id with PatientId.Type (LocalPatientIdentifier = 2)"

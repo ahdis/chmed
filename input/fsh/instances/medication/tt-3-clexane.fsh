@@ -1,5 +1,5 @@
 Instance: tt-3-clexane
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680494563859 "CLEXANE Inj Lös 40 mg/0.4ml"
 * code.text = "CLEXANE Inj Lös 40 mg/0.4ml"

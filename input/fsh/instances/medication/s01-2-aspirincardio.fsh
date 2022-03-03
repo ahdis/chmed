@@ -1,5 +1,5 @@
 Instance: s01-2-aspirincardio
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680517950680 "ASPIRIN CARDIO Filmtabl 100 mg 28 Stk"
 * code.text = "ASPIRIN CARDIO Filmtabl 100 mg 28 Stk"

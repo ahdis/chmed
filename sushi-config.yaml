@@ -1,6 +1,6 @@
-id: ch.chmed20af.emediplan
-canonical: http://chmed20af.emediplan.ch/fhir
-name: IgChMED20AF
+id: ch.chmed.emediplan
+canonical: http://chmed.emediplan.ch/fhir
+name: CHMED
 status: active
 version: 3.0.0
 date: 2022-02-18
@@ -14,7 +14,7 @@ publisher:
 parameters:
   apply-publisher: false
 
-title: eMediplan CHMED20AF Implementation Guide
+title: eMediplan CHMED Implementation Guide
 description: FHIR IG for eMediplan
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0

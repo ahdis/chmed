@@ -1,12 +1,12 @@
-Profile: CHMED20AFPrematureBaby
+Profile: CHMEDPrematureBaby
 Parent: Observation
-Id: chmed20af-obs-prematurebaby
-Title: "CHMED20AF Premature Baby"
+Id: chmed-obs-prematurebaby
+Title: "CHMED Premature Baby"
 Description: "Profile for the Observation resource to represent a premature baby"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Premature Baby"
+* . ^short = "CHMED Premature Baby"
 * code = $sct#395507008
 * code
 * code ^short = "Premature infant"
@@ -15,9 +15,9 @@ Description: "Profile for the Observation resource to represent a premature baby
 * valueBoolean ^short = "premature baby true only if age <= 18 months"
 
 
-Mapping: CHMED16A-for-CHMED20AFPrematureBaby
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFPrematureBaby
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDPrematureBaby
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDPrematureBaby
+Target: "http://emediplan.ch/chmed21a"
 * valueBoolean -> "MedicalData.Prem"

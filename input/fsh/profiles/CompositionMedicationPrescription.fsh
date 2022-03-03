@@ -1,12 +1,12 @@
-Profile: CHMED20AFCompositionMedicationPrescription
+Profile: CHMEDCompositionMedicationPrescription
 Parent: CHEMEDCompositionMedicationPrescription
-Id: chmed20af-pre-composition
-Title: "CHMED20AF Medication Prescription Composition"
+Id: chmed-pre-composition
+Title: "CHMED Medication Prescription Composition"
 Description: "Profile for the Composition resource of the Medication Prescription document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Medication Prescription Composition"
+* . ^short = "CHMED Medication Prescription Composition"
 * language
 * extension[informationRecipient]
 * extension contains CHMEDExtensionPrivateField named privatefield 0..*
@@ -16,10 +16,10 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * identifier.value
 * status
 * type
-* subject only Reference(CHMED20AFPatientPre)
+* subject only Reference(CHMEDPatientPre)
 * subject
 * date
-* author only Reference(CHMED20AFPractitioner or $ch-emed-practitionerrole or Device or CHMED20AFPatientCard or RelatedPerson or CHCoreOrganizationEPR)
+* author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 * title
 * confidentiality
 * confidentiality.extension[confidentialityCode]
@@ -34,7 +34,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * section[prescription]
 * section[prescription].title
 * section[prescription].code
-* section[prescription].entry only Reference(CHMED20AFMedicationRequestPre)
+* section[prescription].entry only Reference(CHMEDMedicationRequestPre)
 * section[prescription].entry
 
 * section[annotation]
@@ -45,11 +45,11 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 
 
 
-Mapping: CHMED16A-for-CHMED20AFCompositionMedicationPrescription
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFCompositionMedicationPrescription
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDCompositionMedicationPrescription
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDCompositionMedicationPrescription
+Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
 * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
 * extension[privatefield] -> "PFields"

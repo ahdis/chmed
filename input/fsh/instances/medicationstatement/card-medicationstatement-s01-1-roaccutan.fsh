@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-s01-1-roaccutan
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - ROACCUTAN"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

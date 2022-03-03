@@ -5,51 +5,51 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v3.0.0 (2022)
 
 Work in progress -> GitHub Issues:
-* [Issue #9](https://github.com/ahdis/chmed20af/issues/9): Medicament.Rep
+* [Issue #9](https://github.com/ahdis/chmed/issues/9): Medicament.Rep
 
 
 #### Open Issues
 The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
-* [Issue #15](https://github.com/ahdis/chmed20af/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
+* [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
 
-See also open issues on [GitHub](https://github.com/ahdis/chmed20af/issues?q=is%3Aopen+is%3Aissue).
+See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
 
 #### Added
-* TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed20af/issues/10)).
+* TBD: Description of the use of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
 * TBD: Update to the specification [CHMED21A (Vx.x)](tbd).
-   * Renaming the implementation guide: CHMED20AF -> CHMED21AF
-   * Changing the canonical url: http://chmed20af.emediplan.ch -> http://chmed21af.emediplan.ch
+   * Renaming the implementation guide (verion independence): CHMED20AF -> CHMED
+   * Changing the canonical url (verion independence): http://chmed20af.emediplan.ch -> http://chmed.emediplan.ch
 
 * Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
-   * Change one reference of Composition.author in [CHMED20AF Medication Card Composition](StructureDefinition-chmed20af-card-composition.html) and [CHMED20AF Medication Prescription Composition](StructureDefinition-chmed20af-pre-composition.html).   
+   * Change one reference of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html).   
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole (the ohters do not change)  
-   * Change parent profile of [CHMED20AF Practitioner](StructureDefinition-chmed20af-practitioner.html)
+   * Change parent profile of [CHMED Practitioner](StructureDefinition-chmed-practitioner.html)
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole  
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
 
 * Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](tbd). For details see tab [Dosage](dosage.html).
-   * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed20af/issues/8)).
-   * Change [mapping](StructureDefinition-chmed20af-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed20af/issues/13)).
+   * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
+   * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).
 
-* Add 'CHMED20AF' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED20AF Practitioner' from the FHIR basis Practitioner.
-* Switch to the new [IG template](https://github.com/ahdis/chmed20af/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
-* Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed20af/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
+* Add 'CHMED' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED Practitioner' from the FHIR basis Practitioner.
+* Switch to the new [IG template](https://github.com/ahdis/chmed/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
+* Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 
 #### Fixed
-* Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed20af/issues/12)):
-   * CodeSystem [Risk Categories](CodeSystem-chmed20af-codesystem-risks-category.html): 7 Diabetes
-   * CodeSystem [Risks](CodeSystem-chmed20af-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   
+* Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed/issues/12)):
+   * CodeSystem [Risk Categories](CodeSystem-chmed-codesystem-risks-category.html): 7 Diabetes
+   * CodeSystem [Risks](CodeSystem-chmed-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   
    
 
 
 ### v2.0.0 (2021-06-30)
 * Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md)).
    * Depending on [CH EMED v1.0.0](http://fhir.ch/ig/ch-emed/1.0.0/index.html)
-* Fix code for 'Time of Gestation' ([Issue #5](https://github.com/ahdis/chmed20af/issues/5)). 
+* Fix code for 'Time of Gestation' ([Issue #5](https://github.com/ahdis/chmed/issues/5)). 
 
 
 
@@ -59,8 +59,8 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed20af/issues?q=is%
    * Renaming the implementation guide: CHMED16AF -> CHMED20AF
    * Changing the canonical url: http://chmed16af.emediplan.ch -> http://chmed20af.emediplan.ch
 * Remove the QR Code in the FHIR specification of CHMED16A.
-* Fix Loinc code for 'History of medication use' ([Issue #1](https://github.com/ahdis/chmed20af/issues/1)).
-* Fix package id ([Issue #3](https://github.com/ahdis/chmed20af/issues/3)).
+* Fix Loinc code for 'History of medication use' ([Issue #1](https://github.com/ahdis/chmed/issues/1)).
+* Fix package id ([Issue #3](https://github.com/ahdis/chmed/issues/3)).
 
 
 

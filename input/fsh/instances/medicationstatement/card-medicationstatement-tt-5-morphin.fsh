@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-5-morphin
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MORPHIN"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example
@@ -18,6 +18,6 @@ Usage: #example
 * dosage[=].timing.repeat.durationUnit = #s
 * dosage[=].timing.repeat.timeOfDay = "08:00:00"
 * dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20045000 "Intravenous use"
-* dosage[=].doseAndRate.doseQuantity.extension.url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-dosequantityto"
+* dosage[=].doseAndRate.doseQuantity.extension.url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
 * dosage[=].doseAndRate.doseQuantity.extension.valueQuantity = 200 'mL' "milliliter"
 * dosage[=].doseAndRate.doseQuantity = 50 'mL' "milliliter"

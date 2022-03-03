@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-4
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage Posology"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example

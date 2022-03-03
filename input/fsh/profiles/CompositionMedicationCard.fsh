@@ -1,12 +1,12 @@
-Profile: CHMED20AFCompositionMedicationCard
+Profile: CHMEDCompositionMedicationCard
 Parent: CHEMEDCompositionMedicationCard
-Id: chmed20af-card-composition
-Title: "CHMED20AF Medication Card Composition"
+Id: chmed-card-composition
+Title: "CHMED Medication Card Composition"
 Description: "Profile for the Composition resource of the Medication Card document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Medication Card Composition"
+* . ^short = "CHMED Medication Card Composition"
 * language
 * extension[informationRecipient]
 * extension contains CHMEDExtensionPrivateField named privatefield 0..*
@@ -16,10 +16,10 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * identifier.value
 * status
 * type
-* subject only Reference(CHMED20AFPatientCard)
+* subject only Reference(CHMEDPatientCard)
 * subject
 * date
-* author only Reference(CHMED20AFPractitioner or $ch-emed-practitionerrole or Device or CHMED20AFPatientCard or RelatedPerson or CHCoreOrganizationEPR)
+* author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 * title
 * confidentiality
 * confidentiality.extension[confidentialityCode]
@@ -33,7 +33,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * attester[professionalAuthenticator].mode
 * attester[professionalAuthenticator].time
 * attester[professionalAuthenticator].time ^short = "When composition was attested by the party, Validate date: Date of validation"
-* attester[professionalAuthenticator].party only Reference(CHMED20AFPractitioner)
+* attester[professionalAuthenticator].party only Reference(CHMEDPractitioner)
 * attester[professionalAuthenticator].party
 * attester[professionalAuthenticator].party ^short = "Validated by: The Gln of the pharmacist who has validated the medication card"
 * custodian
@@ -48,7 +48,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[card]
 * section[card].title
 * section[card].code
-* section[card].entry only Reference(CHMED20AFMedicationStatementCard)
+* section[card].entry only Reference(CHMEDMedicationStatementCard)
 * section[card].entry
 
 * section[annotation]
@@ -76,26 +76,26 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[healthconcerns].entry[bodyweight] ^short = "Body Weight (kg)"
 * section[healthconcerns].entry[bodyheight] only Reference($bodyheight)
 * section[healthconcerns].entry[bodyheight] ^short = "Body height (cm)"
-* section[healthconcerns].entry[dlstmen] only Reference(CHMED20AFFirstDayOfLastMenstruation)
+* section[healthconcerns].entry[dlstmen] only Reference(CHMEDFirstDayOfLastMenstruation)
 * section[healthconcerns].entry[dlstmen] ^short = "First day of last menstruation"
 * section[healthconcerns].entry[dlstmen] ^definition = "First day of last menstruation, Only if risks Id 74,75,76 in risk group 3"
-* section[healthconcerns].entry[prematurebaby] only Reference(CHMED20AFPrematureBaby)
+* section[healthconcerns].entry[prematurebaby] only Reference(CHMEDPrematureBaby)
 * section[healthconcerns].entry[prematurebaby] ^short = "Premature Baby"
 * section[healthconcerns].entry[prematurebaby] ^definition = "Premature Baby if age <=18 months"
-* section[healthconcerns].entry[timeofgestation] only Reference(CHMED20AFTimeOfGestation)
+* section[healthconcerns].entry[timeofgestation] only Reference(CHMEDTimeOfGestation)
 * section[healthconcerns].entry[timeofgestation] ^short = "Time of gestation"
 * section[healthconcerns].entry[timeofgestation] ^definition = "Time of Gestation in days"
-* section[healthconcerns].entry[risks] only Reference(CHMED20AFRisks)
+* section[healthconcerns].entry[risks] only Reference(CHMEDRisks)
 * section[healthconcerns].entry[risks] ^short = "Risks"
 * section[healthconcerns].entry[risks] ^definition = "Possible risks for a patient"
 * section[healthconcerns].section 0..0
 
 
-Mapping: CHMED16A-for-CHMED20AFCompositionMedicationCard
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFCompositionMedicationCard
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDCompositionMedicationCard
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDCompositionMedicationCard
+Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
 * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
 * extension[privatefield] -> "PFields"

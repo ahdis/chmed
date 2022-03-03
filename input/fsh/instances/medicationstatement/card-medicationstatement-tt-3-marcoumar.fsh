@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-3-marcoumar
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MARCOUMAR"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: s01-roaccutan
-InstanceOf: CHMED20AFMedication
+InstanceOf: CHMEDMedication
 Usage: #inline
 * code = urn:oid:2.51.1.1#7680453070343 "ROACCUTAN Kaps 10 mg 30 Stk"
 * code.text = "ROACCUTAN Kaps 10 mg 30 Stk"

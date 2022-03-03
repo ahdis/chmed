@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-tt-4-spiricort
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - SPIRICORT"
 Description: "Example for a MedicationStatement (Card)"
 Usage: #example

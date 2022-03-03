@@ -1,5 +1,5 @@
 Instance: pre-patient-s01
-InstanceOf: CHMED20AFPatientPre
+InstanceOf: CHMEDPatientPre
 Title: "Maxima Matter (Pre)"
 Description: "Example for a Patient (Pre)"
 Usage: #example

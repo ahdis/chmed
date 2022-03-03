@@ -1,5 +1,5 @@
 {
-  "name": "ch.chmed20af.emediplan.template",
+  "name": "ch.chmed.emediplan.template",
   "version": "0.1.0",
   "type": "fhir.template",
   "license": "CC-BY-SA-4.0",

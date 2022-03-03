@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-6.4
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage WeekDays"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
@@ -10,7 +10,7 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
 * dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#4 "WeekDays"
 
 * dosage[structurednormal][=].timing.repeat.dayOfWeek[+] = #mon

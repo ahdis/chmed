@@ -1,5 +1,5 @@
 Instance: card-medicationstatement-dosage-7.2
-InstanceOf: CHMED20AFMedicationStatementCard
+InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage DosageFromTo"
 Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
 Usage: #example
@@ -11,7 +11,7 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 
 * dosage[structurednormal][+].doseAndRate.doseQuantity[+] = 5.0 'mL' "milliliter"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
+* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
 * dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[=].valueQuantity = 10.0 'mL' "milliliter"
 
 * dosage[structurednormal][=].timing.repeat.duration = 45

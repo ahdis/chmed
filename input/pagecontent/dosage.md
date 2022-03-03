@@ -108,9 +108,9 @@ FHIR format for Dosage (structured normal) (see also [example](MedicationStateme
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "1",
             "display" : "Daily"
           }
@@ -160,9 +160,9 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "1",
             "display" : "Daily"
           }
@@ -190,9 +190,9 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "1",
             "display" : "Daily"
           }
@@ -242,9 +242,9 @@ FHIR format for Dosage (non-structured) (see also [example](MedicationStatement-
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "2",
             "display" : "FreeText"
           }
@@ -281,17 +281,17 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "3",
             "display" : "Single"
           }
         },
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "1",
             "display" : "DosageOnly"
           }
@@ -349,17 +349,17 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "4",
             "display" : "Cyclic"
           }
         },
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "1",
             "display" : "DosageOnly"
           }
@@ -445,25 +445,25 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "5",
             "display" : "Sequence"
           }
         },
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "4",
             "display" : "Cyclic"
           }
         },
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "1",
             "display" : "DosageOnly"
           }
@@ -492,9 +492,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "5",
             "display" : "Sequence"
           }
@@ -562,17 +562,17 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
             "code" : "6",
             "display" : "Even/odd days"
           }
         },
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "1",
             "display" : "DosageOnly"
           }
@@ -582,7 +582,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
         {
           "coding" : [
             {
-              "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days",
+              "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days",
               "code" : "even",
               "display" : "Even days"
             }
@@ -639,9 +639,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "1",
             "display" : "DosageOnly"
           }
@@ -692,9 +692,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "2",
             "display" : "Times"
           }
@@ -748,9 +748,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "3",
             "display" : "DaySegments"
           }
@@ -812,9 +812,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "4",
             "display" : "WeekDays"
           }
@@ -869,9 +869,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "5",
             "display" : "DaysOfMonth"
           }
@@ -926,9 +926,9 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     {
       "extension" : [
         {
-          "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
           "valueCoding" : {
-            "system" : "http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
             "code" : "6",
             "display" : "Interval"
           }
@@ -955,8 +955,6 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 ### Dosage Objects
 Dosage objects are specified in CHMED21A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
-
-TBD: If their is a dosage change within the posology in CHMED16A different dosage elements have to be created in FHIR (CHMED20AF).
 
 #### DosageSimple
 Specifies a simple amount. E.g., 1 (pill) or 10 (ml).
@@ -1022,7 +1020,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
           "doseQuantity" : {
             "extension" : [
               {
-                "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to",
+                "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to",
                 "valueQuantity" : {
                   "value" : 10.0,
                   "unit" : "milliliter",

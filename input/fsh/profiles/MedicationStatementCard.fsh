@@ -1,12 +1,12 @@
-Profile: CHMED20AFMedicationStatementCard
+Profile: CHMEDMedicationStatementCard
 Parent: CHEMEDMedicationStatementCard
-Id: chmed20af-card-medicationstatement
-Title: "CHMED20AF MedicationStatement (Card)"
+Id: chmed-card-medicationstatement
+Title: "CHMED MedicationStatement (Card)"
 Description: "Profile for the MedicationStatement resource of the Medication Card document"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF MedicationStatement (Card)"
+* . ^short = "CHMED MedicationStatement (Card)"
 * contained
 * extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
@@ -27,11 +27,11 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * category.coding[ATC].display 0..1
 * category.text
 * category.text ^short = "Note that no ATC Code is applied"
-* medicationReference only Reference(CHMED20AFMedication)
+* medicationReference only Reference(CHMEDMedication)
 * medicationReference
-* subject only Reference(CHMED20AFPatientCard)
+* subject only Reference(CHMEDPatientCard)
 * subject
-* informationSource only Reference(CHMED20AFPractitioner or CHMED20AFPatientCard)
+* informationSource only Reference(CHMEDPractitioner or CHMEDPatientCard)
 * informationSource
 * reasonCode
 * reasonCode.text
@@ -46,10 +46,10 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * dosage[structuredsplit] MS
 
 
-Mapping: CHMED21A-for-CHMED20AFMedicationStatementCard
+Mapping: CHMED21A-for-CHMEDMedicationStatementCard
 Id: CHMED21A
 Title: "Mapping to CHMED21A"
-Source: CHMED20AFMedicationStatementCard
+Source: CHMEDMedicationStatementCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"
 //* extension[privatefield] -> "Medicament.PFields"

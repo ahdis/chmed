@@ -1,12 +1,12 @@
-Profile: CHMED20AFMedication
+Profile: CHMEDMedication
 Parent: CHEMEDMedication
-Id: chmed20af-medication
-Title: "CHMED20AF Medication"
+Id: chmed-medication
+Title: "CHMED Medication"
 Description: "Profile for the Medication resource"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED20AF Medication"
+* . ^short = "CHMED Medication"
 * code
 * code.coding
 * code.coding[GTIN]
@@ -27,9 +27,9 @@ Description: "Profile for the Medication resource"
 * ingredient.strength
 
 
-Mapping: CHMED16A-for-CHMED20AFMedication
-Id: CHMED16A
-Title: "Mapping to CHMED16A"
-Source: CHMED20AFMedication
-Target: "http://emediplan.ch/chmed16a"
+Mapping: CHMED21A-for-CHMEDMedication
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDMedication
+Target: "http://emediplan.ch/chmed21a"
 * code.coding[GTIN] -> "Medicament.Id with Medicament.IdType 2 (GTIN)"

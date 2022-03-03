@@ -18,13 +18,13 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
    * Removing the flags that were tentatively introduced in v2.0.0 before introducing the CH EMED definition for it.
    * Set flags were they correlate with the described meaning.
+* Add [terminologies](terminology.html): value sets, code systems and concept maps of ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
-* TBD: Update to the specification [CHMED21A (Vx.x)](TBD).
+* Update to the specification [CHMED21A (Vx.x)](TBD).
    * Renaming the implementation guide (verion independence): CHMED20AF -> CHMED
    * Changing the canonical url (verion independence): http://chmed20af.emediplan.ch -> http://chmed.emediplan.ch
-
 * Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
    * Change one reference of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html).   

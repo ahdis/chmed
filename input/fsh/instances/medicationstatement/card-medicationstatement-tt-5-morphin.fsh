@@ -12,7 +12,6 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
 * dosage[0].text = "Dosis jede Stunde 50 ml erhöhen"
-* dosage[+].sequence = 1
 * dosage[=].timing.repeat.count = 1
 * dosage[=].timing.repeat.duration = 14400
 * dosage[=].timing.repeat.durationUnit = #s

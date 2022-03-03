@@ -1,0 +1,121 @@
+Profile: CHMEDDosage
+Parent: Dosage
+Id: chmed-dosage
+Title: "CHMED Dosage"
+Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
+* ^publisher = "IG eMediplan"
+* ^contact.telecom.system = #url
+* ^contact.telecom.value = "http://www.emediplan.ch"
+* . ^short = "CHMED Dosage"
+
+* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* 
+* extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1
+
+* sequence MS
+* sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"
+
+* additionalInstruction ^slicing.discriminator.type = #pattern
+* additionalInstruction ^slicing.discriminator.path = "$this"
+* additionalInstruction ^slicing.rules = #open
+* additionalInstruction contains 
+    relativeToMeal 0..1 MS and 
+    evenOddDays 0..1 MS
+* additionalInstruction[relativeToMeal]. ^short = "When the medicament must be applied relative to a meal (before, during or after)"
+* additionalInstruction[relativeToMeal] from RelativeToMeal (required)
+* additionalInstruction[evenOddDays]. ^short = "The medicament is be applied on even or odd days"
+* additionalInstruction[evenOddDays] from EvenOddDays (required)
+
+* timing.repeat.extension contains $ext-dayOfMonth named dayOfMonth 0..*
+
+
+* timing.repeat.boundsPeriod.start MS
+* timing.repeat.boundsPeriod.end MS
+
+* timing.repeat.count MS
+
+* timing.repeat.duration MS
+* timing.repeat.durationUnit MS
+
+* timing.repeat.frequency MS
+* timing.repeat.period MS
+* timing.repeat.periodUnit MS
+
+* timing.repeat.dayOfWeek MS
+* timing.repeat.timeOfDay MS
+
+* timing.repeat.when MS
+
+* asNeededBoolean MS
+* asNeededBoolean. ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
+
+* route MS
+* method MS
+
+* doseAndRate.doseRange MS
+
+* doseAndRate.doseQuantity MS
+* doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits
+
+* doseAndRate.doseQuantity.extension contains CHMEDExtensionDoseQuantityTo named doseQuantityTo 0..1
+
+* maxDosePerPeriod MS
+* maxDosePerPeriod only CHEMEDRatioWithEmedUnits
+
+
+
+
+
+Mapping: CHMED21A-for-CHMEDDosage
+Id: CHMED21A
+Title: "Mapping to CHMED21A"
+Source: CHMEDDosage
+Target: "http://emediplan.ch/chmed21a"
+* -> "Posology"
+
+* extension[posologyObjectType] -> "PO.T" // 5.
+* extension[timedDosageObjectType] -> "PO.TD.T" // (5.3/5.4/5.5/5.6 ->) 6. 
+
+* sequence -> "PO with split/tapered dosing, PO.SOs" // div, 5.5
+
+* additionalInstruction[relativeToMeal] -> "RM" // 4.
+* additionalInstruction[evenOddDays] -> "PO.E" // 5.6
+
+* timing.repeat.extension[dayOfMonth] -> "PO.Ds (DaysOfMonth)" // 6.5
+
+* timing.repeat.boundsPeriod.start -> "DtFrom" // 4.
+* timing.repeat.boundsPeriod.end -> "DtTo" // 4.
+
+* timing.repeat.count -> "PO.D/DU" // 8.1 and 8.2
+
+* timing.repeat.duration -> "D.Du" // 7.2
+* timing.repeat.durationUnit -> "D.DuU" // 7.2
+
+* timing.repeat.frequency -> "PO.TDpC" // 5.4
+* timing.repeat.period -> "PO.CyDu" // 5.4
+* timing.repeat.periodUnit -> "PO.CyDuU" // 5.4
+
+* timing.repeat.dayOfWeek -> "PO.WDs" // 6.4
+* timing.repeat.timeOfDay -> "PO.Ts.Off/OffU" // 6.2 and 9.1
+
+* timing.repeat.when -> "PO.Ds (Daily), PO.Ts.S" // 5.1, 6.3 and 9.2
+
+* asNeededBoolean -> "InRes" // 4.
+
+* route -> "Medicament.ROA"
+* method -> "Medicament.MOA"
+
+* doseAndRate.doseRange.low -> "D.AMin" // 7.3
+* doseAndRate.doseRange.high -> "D.AMax" // 7.3
+
+* doseAndRate.doseQuantity.extension[doseQuantityTo] -> "D.ATo" // 7.2
+
+* doseAndRate.doseQuantity.value -> "D.A, D.AFrom" // 7.1, 7.2
+* doseAndRate.doseQuantity.unit -> "Medicament.Unit"
+* doseAndRate.doseQuantity.system -> "Medicament.Unit"
+* doseAndRate.doseQuantity.code -> "Medicament.Unit"
+
+* maxDosePerPeriod.numerator -> "PO.D" // 6.6
+* maxDosePerPeriod.denominator.value -> "PO.MID" // 6.6
+* maxDosePerPeriod.denominator.unit -> "PO.MIDU" // 6.6
+* maxDosePerPeriod.denominator.system -> "PO.MIDU" // 6.6
+* maxDosePerPeriod.denominator.code -> "PO.MIDU" // 6.6

@@ -8,15 +8,15 @@ can be added to Patient, Composition (CHMED16A: Medication) and MedicationStatem
 ```json
   "extension" : [
     {
-      "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield",
+      "url" : "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-private-field",
       "extension" : [
         {
           "url" : "name",
-          "valueString" : "PrivateFieldNameSample"
+          "valueString" : "Private Field Name Sample"
         },
         {
           "url" : "value",
-          "valueString" : "PrivateFieldValueSample"
+          "valueString" : "Private Field Value Sample"
         }
       ]
     }

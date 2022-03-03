@@ -4,10 +4,10 @@ Title: "Maxima Matter (Ext)"
 Description: "Example for a Patient (Card) with the private field extension included"
 Usage: #example
 * extension.extension[0].url = "name"
-* extension.extension[=].valueString = "PrivateFieldNameSample"
+* extension.extension[=].valueString = "Private Field Name Sample"
 * extension.extension[+].url = "value"
-* extension.extension[=].valueString = "PrivateFieldValueSample"
-* extension.url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield"
+* extension.extension[=].valueString = "Private Field Value Sample"
+* extension.url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.999.1"
 * identifier.value = "12345678"

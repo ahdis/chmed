@@ -8,7 +8,7 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED20AF MedicationRequest (Pre)"
 * contained
-* extension contains CHMED20AFExtPrivateField named privatefield 0..*
+* extension contains CHMEDExtensionPrivateField named privatefield 0..*
 * extension[privatefield] ^short = "Private fields for patient"
 * identifier
 * identifier.system
@@ -18,13 +18,16 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * medicationReference
 * subject only Reference(CHMED20AFPatientPre)
 * subject
-* note
-* dosageInstruction
-* dosageInstruction[nonstructured]
-* dosageInstruction[structurednormal] only PreDosageStructuredNormalChmed20af
-* dosageInstruction[structurednormal]
-* dosageInstruction[structuredsplit] only PreDosageStructuredSplitChmed20af
-* dosageInstruction[structuredsplit]
+
+* note.text MS
+
+* dosageInstruction MS
+* dosageInstruction[nonstructured] MS
+* dosageInstruction[structurednormal] only CHMEDDosageStructuredNormalPre
+* dosageInstruction[structurednormal] MS
+* dosageInstruction[structuredsplit] only CHMEDDosageStructuredSplitPre
+* dosageInstruction[structuredsplit] MS
+
 * dispenseRequest
 * dispenseRequest.numberOfRepeatsAllowed
 * dispenseRequest.quantity
@@ -39,12 +42,15 @@ Title: "Mapping to CHMED16A"
 Source: CHMED20AFMedicationRequestPre
 Target: "http://emediplan.ch/chmed16a"
 * -> "Medicament"
-* extension[privatefield] -> "Medicament.PFields"
-* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
-* subject -> "Patient"
-* dosageInstruction[nonstructured] -> "Medicament.AppInstr"
-* dosageInstruction[structurednormal] -> "Medicament.Pos"
-* dosageInstruction[structuredsplit] -> "Medicament.Pos"
-* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
-* dispenseRequest.quantity -> "Medicament.NbPack"
-* substitution.allowedCodeableConcept -> "Medicament.Subs"
+//* extension[privatefield] -> "Medicament.PFields"
+//* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
+//* subject -> "Patient"
+
+* note.text -> "AppInstr"
+
+* dosageInstruction -> "Pos"
+* dosageInstruction[nonstructured] -> "Pos -> PO.Text"
+
+//* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
+//* dispenseRequest.quantity -> "Medicament.NbPack"
+//* substitution.allowedCodeableConcept -> "Medicament.Subs"

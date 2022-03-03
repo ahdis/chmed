@@ -8,7 +8,7 @@ Usage: #example
 * extension[=].extension[=].valueString = "PrivateFieldNameSample1"
 * extension[=].extension[+].url = "value"
 * extension[=].extension[=].valueString = "PrivateFieldValueSample1"
-* extension[=].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed20af-privatefield"
+* extension[=].url = "http://chmed20af.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
 * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber"
 * extension[=].valueUnsignedInt = 1
 * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"

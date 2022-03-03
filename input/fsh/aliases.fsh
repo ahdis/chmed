@@ -13,7 +13,13 @@ Alias: $bodyweight =                            http://hl7.org/fhir/StructureDef
 
 Alias: $chmed20af-codesystem-risks-category =   http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-category
 Alias: $chmed20af-codesystem-risks-cdscode =    http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed20af-codesystem-risks-cdscode
+Alias: $chmed-cs-even-odd-days =                http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days
+Alias: $chmed-cs-posology-object-type =         http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type
+Alias: $chmed-cs-timed-dosage-object-type =     http://chmed20af.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
 
 // CH EMED
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
+
+
+Alias: $ext-dayOfMonth =                        http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth

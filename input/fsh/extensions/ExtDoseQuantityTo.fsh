@@ -1,17 +1,18 @@
-Extension: CHMED20AFExtensionDoseQuantityTo
-Id: chmed20af-dosequantityto
-Title: "CHMED20AF Change Dose Quantity"
-Description: "Extension for representing the change of dose quantity"
+Extension: CHMEDExtensionDoseQuantityTo
+Id: chmed-dose-quantity-to
+Title: "CHMED Dose Quantity To"
+Description: "Extension for representing the change of a dose quantity (from a starting quantity continously) to this final quantity"
+
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
+
 * ^context[0].type = #extension
 * ^context[=].expression = "Quantity"
 * ^context[+].type = #element
-* ^context[=].expression = "Dosage.doseAndRate.dose"
-* . ^short = "if during the period the dose has to changed linearly to this quantity"
-* . ^definition = "if during the period the dose has to changed linearly to this quantity"
-* url only uri
-* url
+* ^context[=].expression = "Dosage.doseAndRate.doseQuantity"
+
+* . ^short = "CHMED Dose Quantity To"
+
 * valueQuantity only CHEMEDQuantityWithEmedUnits
-* valueQuantity
+* valueQuantity 1..

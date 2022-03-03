@@ -22,7 +22,7 @@ Description: "Profile for the Practitioner resource to represent a healthcare pr
 
 Mapping: CHMED21A-for-CHMEDPractitioner
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDPractitioner
 Target: "http://emediplan.ch/chmed21a"
 * -> "Auth"

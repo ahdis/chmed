@@ -28,7 +28,7 @@ dependencies:
 # ----- Define IG tabs (page content) -----
 menu:
   Home: index.html
-  Introduction: intro.html
+  Documents: documents.html
   Profiles: profiles.html
   Extensions: extensions.html
   Terminology: terminology.html
@@ -39,8 +39,8 @@ menu:
 pages:
   index.md:
     title: Home
-  intro.md:
-    title: Introduction
+  documents.md:
+    title: FHIR Documents
   profiles.md:
     title: Profiles
   extensions.md:

@@ -17,7 +17,7 @@ Description: "Profile for the Observation resource to represent a premature baby
 
 Mapping: CHMED21A-for-CHMEDPrematureBaby
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDPrematureBaby
 Target: "http://emediplan.ch/chmed21a"
 * valueBoolean -> "MedicalData.Prem"

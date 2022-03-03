@@ -67,7 +67,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 
 Mapping: CHMED21A-for-CHMEDDosage
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDDosage
 Target: "http://emediplan.ch/chmed21a"
 * -> "Posology"

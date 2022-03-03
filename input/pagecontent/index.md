@@ -7,7 +7,7 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 ### About this Implementation Guide
 
 #### Scope
-* [Introduction](intro.html) - explains the structures for the different formats/values.
+* [Documents](documents.html) - TBD
 * [Profiles](profiles.html) - TBD
 * [Extensions](extensions.html) - TBD
 * [Terminologies](terminology.html) - TBD

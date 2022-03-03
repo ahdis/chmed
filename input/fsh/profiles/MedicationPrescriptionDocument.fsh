@@ -22,7 +22,7 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 
 Mapping: CHMED21A-for-CHMEDMedicationPrescriptionDocument
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDMedicationPrescriptionDocument
 Target: "http://emediplan.ch/chmed21a"
 * identifier -> "Id"

@@ -19,7 +19,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 
 #### Changed / Updated
-* TBD: Update to the specification [CHMED21A (Vx.x)](tbd).
+* TBD: Update to the specification [CHMED21A (Vx.x)](TBD).
    * Renaming the implementation guide (verion independence): CHMED20AF -> CHMED
    * Changing the canonical url (verion independence): http://chmed20af.emediplan.ch -> http://chmed.emediplan.ch
 
@@ -30,12 +30,11 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
    * Change parent profile of [CHMED Practitioner](StructureDefinition-chmed-practitioner.html)
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole  
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
-
-* Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](tbd). For details see tab [Dosage](dosage.html).
+* Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](TBD). For details see tab [Dosage](dosage.html).
    * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
    * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).
-* Rename tab 'Private Fields' to [Extension](extensions.html) and list all extensions included in the IG. 
-
+* Rename tab 'Private Fields' to [Extension](extensions.html) and list all extensions (not only the private field one) included in the IG. 
+* Rename tab 'Introduction' to [Documents](documents.html) and adjustment of the display of the mapping. Link to the profile's mapping table, instead of the duplicated, manually created table on this page.
 * Add 'CHMED' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED Practitioner' from the FHIR basis Practitioner.
 * Switch to the new [IG template](https://github.com/ahdis/chmed/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
 * Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.

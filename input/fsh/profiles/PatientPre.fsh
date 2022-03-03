@@ -22,7 +22,7 @@ Description: "Profile for the Patient resource of the Medication Prescription do
 
 Mapping: CHMED21A-for-CHMEDPatientPre
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDPatientPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"

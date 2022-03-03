@@ -29,7 +29,7 @@ Description: "Profile for the Medication resource"
 
 Mapping: CHMED21A-for-CHMEDMedication
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDMedication
 Target: "http://emediplan.ch/chmed21a"
 * code.coding[GTIN] -> "Medicament.Id with Medicament.IdType 2 (GTIN)"

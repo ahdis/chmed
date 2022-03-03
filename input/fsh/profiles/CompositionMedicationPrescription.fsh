@@ -46,7 +46,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 
 Mapping: CHMED21A-for-CHMEDCompositionMedicationPrescription
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDCompositionMedicationPrescription
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"

@@ -47,7 +47,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 
 Mapping: CHMED21A-for-CHMEDMedicationStatementCard
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDMedicationStatementCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"

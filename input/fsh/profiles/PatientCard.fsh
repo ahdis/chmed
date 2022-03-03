@@ -34,7 +34,7 @@ Description: "Profile for the Patient resource of the Medication Card document"
 
 Mapping: CHMED21A-for-CHMEDPatientCard
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDPatientCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"

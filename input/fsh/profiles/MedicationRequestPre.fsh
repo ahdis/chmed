@@ -37,7 +37,7 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 Mapping: CHMED21A-for-CHMEDMedicationRequestPre
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDMedicationRequestPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"

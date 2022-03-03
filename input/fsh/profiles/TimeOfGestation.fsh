@@ -21,7 +21,7 @@ Description: "Profile for the Observation resource to represent the time of gest
 
 Mapping: CHMED21A-for-CHMEDTimeOfGestation
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDTimeOfGestation
 Target: "http://emediplan.ch/chmed21a"
 * -> "ToG"

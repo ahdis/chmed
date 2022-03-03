@@ -24,7 +24,7 @@ Description: "Profile for the Condition resource to represent the risks"
 
 Mapping: CHMED21A-for-CHMEDRisks
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDRisks
 Target: "http://emediplan.ch/chmed21a"
 * -> "MedicalData.RG (RiskCategory)"

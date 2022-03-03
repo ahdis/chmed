@@ -79,8 +79,8 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[healthconcerns].entry[dlstmen] ^short = "First day of last menstruation"
 * section[healthconcerns].entry[dlstmen] ^definition = "First day of last menstruation, Only if risks Id 74,75,76 in risk group 3"
 * section[healthconcerns].entry[prematurebaby] only Reference(CHMEDPrematureBaby)
-* section[healthconcerns].entry[prematurebaby] ^short = "Premature Baby"
-* section[healthconcerns].entry[prematurebaby] ^definition = "Premature Baby if age <=18 months"
+* section[healthconcerns].entry[prematurebaby] ^short = "Premature baby"
+* section[healthconcerns].entry[prematurebaby] ^definition = "Premature baby if age <=18 months"
 * section[healthconcerns].entry[timeofgestation] only Reference(CHMEDTimeOfGestation)
 * section[healthconcerns].entry[timeofgestation] ^short = "Time of gestation"
 * section[healthconcerns].entry[timeofgestation] ^definition = "Time of Gestation in days"
@@ -92,7 +92,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 
 Mapping: CHMED21A-for-CHMEDCompositionMedicationCard
 Id: CHMED21A
-Title: "Mapping to CHMED21A"
+Title: "CHMED21A"
 Source: CHMEDCompositionMedicationCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"

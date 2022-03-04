@@ -17,10 +17,11 @@ Alias: $chmed-cs-even-odd-days =                http://chmed.emediplan.ch/fhir/C
 Alias: $chmed-cs-posology-object-type =         http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type
 Alias: $chmed-cs-timed-dosage-object-type =     http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
 
-// CH EMED
+// CH EMED & CH EPR Term
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
 Alias: $ch-emed-ext-substitution =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-substitution
+Alias: $ch-epr-term-authorRole =                http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.authorRole
 
 
 Alias: $ext-dayOfMonth =                        http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth

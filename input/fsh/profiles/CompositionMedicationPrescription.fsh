@@ -8,7 +8,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Prescription Composition"
 
-* extension[informationRecipient]
+* extension[informationRecipient] ^short = "Receiver"
 
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
@@ -19,10 +19,12 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * date ^short = "Date of creation"
 
 * author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
-* title
-* confidentiality
-* confidentiality.extension[confidentialityCode]
-* custodian
+
+// TBD: https://github.com/ahdis/chmed/issues/17
+* author.extension contains CHMEDExtensionAuthorRole named authorRole 0..1 // TBD: Change to 1..1
+* author.extension[authorRole] ^short = "Role of the author"
+* author.extension[authorRole] ^definition = "Role of the author"
+* author.extension[authorRole] ^type.profile = http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role
 
 * section[prescription].entry only Reference(CHMEDMedicationRequestPre)
 * section[prescription].entry ^short = "Medicament"
@@ -43,7 +45,8 @@ Target: "http://emediplan.ch/chmed21a"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-// * author -> "Auth"
+* author -> "Auth"
+* author.extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"

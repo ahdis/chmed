@@ -67,7 +67,7 @@ Title: "CHMED21A"
 Source: CHMEDPatientPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"
-* extension[privateField] -> "PFs -> Private Field"
+* extension[privateField] -> "PFs -> PrivateField"
 
 * identifier[LocalPid] -> "Ids -> PatientId"
 * identifier[LocalPid].system -> "PatientId.SId"

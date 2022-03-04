@@ -38,7 +38,7 @@ Source: CHMEDCompositionMedicationPrescription
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
 // * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
-* extension[privateField] -> "PFs -> Private Field"
+* extension[privateField] -> "PFs -> PrivateField"
 * identifier -> "Id"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"

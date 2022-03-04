@@ -18,7 +18,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 
 * date ^short = "Date of creation"
 
-* author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
+* author only Reference($ch-emed-practitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 
 // TBD: https://github.com/ahdis/chmed/issues/17
 * author.extension contains CHMEDExtensionAuthorRole named authorRole 0..1 // TBD: Change to 1..1
@@ -45,7 +45,7 @@ Target: "http://emediplan.ch/chmed21a"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-* author -> "Auth"
+* author -> "Auth, Zsr"
 * author.extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"

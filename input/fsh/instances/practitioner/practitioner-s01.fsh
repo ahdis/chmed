@@ -1,5 +1,5 @@
 Instance: practitioner-s01
-InstanceOf: CHMEDPractitioner
+InstanceOf: $ch-emed-practitioner
 Title: "Dr. Thomas Wälti"
 Description: "Example for a Practitioner"
 Usage: #example

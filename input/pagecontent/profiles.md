@@ -1,9 +1,8 @@
 ### General Profiles for Medication Documents
 * [CHMED Medication](StructureDefinition-chmed-medication.html)   
 Profile for the Medication resource
-
-* [CHMED Practitioner](StructureDefinition-chmed-practitioner.html)   
-Profile for the Practitioner resource to represent a healthcare professional
+* [CHMED Dosage](StructureDefinition-chmed-dosage.html)   
+Dosage according to the ‘eMedication Plan CHMED Posology’
 
 ### Specific Profiles for Medication Card document
 * [CHMED Medication Card Document](StructureDefinition-chmed-card-bundle.html)   

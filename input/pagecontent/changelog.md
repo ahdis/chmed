@@ -27,11 +27,11 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
    * Update mappings of the profiles.
 * Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
-   * Change one reference of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html).   
-      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole (the ohters do not change)  
-   * Change parent profile of [CHMED Practitioner](StructureDefinition-chmed-practitioner.html)
-      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole  
+   * Change two references of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html) (the other references do not change) .   
+      * CHMED Practitioner -> CH EMED Practitioner
+         * Remove profile CHMED Practitioner and use the new profile [CH EMED Practitioner](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-practitioner.html) instead, because there are no differences.
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
+      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole         
 * Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](TBD). For details see tab [Dosage](dosage.html).
    * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
    * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).

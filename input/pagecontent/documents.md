@@ -27,12 +27,6 @@ The Patient resource defines the information about the patient involved in the m
 * [Mapping to CHMED21A](StructureDefinition-chmed-card-patient-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
 * [Examples](StructureDefinition-chmed-card-patient-examples.html)
 
-#### Practitioner (Card)
-The Practitioner resource defines the information about the individual who are engaged in the medication activity as part of his/her formal responsibilities.
-* [Profile](StructureDefinition-chmed-practitioner.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-practitioner-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
-* [Examples](StructureDefinition-chmed-practitioner-examples.html)
-
 #### Medication Card Section (Card)
 The medication card section contains the entries for the current medication of a patient. A medication consumed by a patient is recorded as MedicationStatement resource.
 * [Profile](StructureDefinition-chmed-card-medicationstatement.html)
@@ -86,13 +80,9 @@ The Patient resource defines the information about the patient involved in the m
 * [Mapping to CHMED21A](StructureDefinition-chmed-pre-patient-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
 * [Examples](StructureDefinition-chmed-pre-patient-examples.html)
 
-
-#### Practitioner (Pre)
-The same as in Medication Card document, see description in the [practitioner section above](#practitioner-card).
-
 #### Medication Prescription Section (Pre)
 The medication prescription section contains the entries for the prescriped medications of a patient. An order or request of the medication to a patient is represented as MedicationRequest resource.
-* [Profile](StructureDefinition-chmed-pre-medicationrequest.html), 
+* [Profile](StructureDefinition-chmed-pre-medicationrequest.html) 
 * [Mapping to CHMED21A](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
 * [Examples](StructureDefinition-chmed-pre-medicationrequest-examples.html)
 

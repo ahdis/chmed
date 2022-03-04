@@ -7,10 +7,16 @@ Description: "Extension for private fields defined in 'eMedication Plan CHMED'"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 
-* ^context[0].type = #element
-* ^context[=].expression = "Patient"
 * ^context[+].type = #element
 * ^context[=].expression = "Composition"
+* ^context[+].type = #element
+* ^context[=].expression = "Composition.section"
+* ^context[+].type = #element
+* ^context[=].expression = "Patient"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationStatement"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationRequest"
 
 * . ^short = "CHMED Private Field"
 

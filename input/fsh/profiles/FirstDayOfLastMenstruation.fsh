@@ -7,11 +7,17 @@ Description: "Profile for the Observation resource to represent the first day of
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED First Day of Last Menstruation"
+
 * code = $sct#161713000
-* code
-* code ^short = "First day of last menstruation"
+* code ^short = "Last menstrual period -1st day"
+
 * valueDateTime 1..
+* valueDateTime ^short = "First day of last menstruation"
 * valueDateTime only dateTime
+
+* subject 1..
+* subject only Reference(CHMEDPatientCard)
+* subject ^short = "Patient"
 
 
 
@@ -20,4 +26,5 @@ Id: CHMED21A
 Title: "CHMED21A"
 Source: CHMEDFirstDayOfLastMenstruation
 Target: "http://emediplan.ch/chmed21a"
+* subject -> "Patient.MData -> MedicalData"
 * valueDateTime -> "MedicalData.DLstMen"

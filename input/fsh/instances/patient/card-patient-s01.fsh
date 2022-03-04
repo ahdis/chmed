@@ -8,9 +8,19 @@ Usage: #example
 * identifier.value = "12345678"
 * name.family = "Matter"
 * name.given = "Maxima"
-* telecom.system = #phone
-* telecom.value = "+41588512600"
-* telecom.use = #home
+
+* telecom[phone].system = #phone
+* telecom[phone].value = "+41588512600"
+* telecom[phone].use = #home
+
+* telecom[mobile].system = #phone
+* telecom[mobile].value = "079 851 26 00"
+* telecom[mobile].use = #mobile
+
+* telecom[email].system = #email   
+* telecom[email].value = "maxima.matter@example.ch"
+* telecom[email].use = #home
+
 * gender = #female
 * birthDate = "1981-01-12"
 * address.line = "Untermattweg 8"

@@ -7,28 +7,62 @@ Description: "Profile for the Patient resource of the Medication Card document"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Patient (Card)"
+
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
-* identifier
-* identifier[LocalPid]
-* identifier[LocalPid].system
-* identifier[LocalPid].value
-* name
-* telecom
-* gender
-* birthDate
-* address
+* extension[privateField] ^short = "Private Field"
+
+* identifier[LocalPid] ^short = "Patient Id"
+* identifier[LocalPid].system ^short = "The system allowing to identify the patient"
+* identifier[LocalPid].value ^short = "The value identifying the patient"
+
+* name.family ^short = "Last name"
+* name.given ^short = "First name"
+
+* telecom ^short = "Contact"
+// Unsupported fixed pattern type for discriminator ($this) for slice Patient.telecom:phone: ContactPoint
+// https://build.fhir.org/profiling-examples.html
+* telecom ^slicing.discriminator[+].type = #value
+* telecom ^slicing.discriminator[=].path = "system"
+* telecom ^slicing.discriminator[+].type = #value
+* telecom ^slicing.discriminator[=].path = "use"
+* telecom ^slicing.rules = #open
+* telecom contains 
+    phone 0..* and
+    mobile 0..* and
+    email 0..*
+
+* telecom[phone] ^short = "Phone number"
+* telecom[phone].system ^fixedCode = #phone
+* telecom[phone].system 1..
+* telecom[phone].value 1..
+* telecom[phone].use ^fixedCode = #home
+* telecom[phone].use 1..
+
+* telecom[mobile] ^short = "Mobile number"
+* telecom[mobile].system ^fixedCode = #phone
+* telecom[mobile].system 1..
+* telecom[mobile].value 1..
+* telecom[mobile].use ^fixedCode = #mobile
+* telecom[mobile].use 1..
+
+* telecom[email] ^short = "Email address"
+* telecom[email].system ^fixedCode = #email  
+* telecom[email].system 1.. 
+* telecom[email].value 1..
+* telecom[email].use ^fixedCode = #home
+* telecom[email].use 1..
+
+* gender ^short = "Gender of the patient"
+* birthDate ^short = "Date of birth"
+
+* address.line ^short = "Street"
+* address.city ^short = "City"
+* address.postalCode ^short = "Zip Code"
+
 * communication ..1
-* communication ^slicing.discriminator.type = #value
-* communication ^slicing.discriminator.path = "preferred"
-* communication ^slicing.ordered = false
-* communication ^slicing.rules = #open
 * communication[languageOfCorrespondance] 1..
-* communication[languageOfCorrespondance].language
-* communication[languageOfCorrespondance].language from CommonLanguages (extensible)
-* communication[languageOfCorrespondance].language ^short = "The language which can be used to communicate with the patient about his or her health"
-* communication[languageOfCorrespondance].language ^binding.description = "A human language."
-* communication[languageOfCorrespondance].preferred
-* communication[languageOfCorrespondance].preferred ^short = "Language preference indicator"
+* communication[languageOfCorrespondance] ^short = "Language of the patient"
+
 
 
 
@@ -38,11 +72,23 @@ Title: "CHMED21A"
 Source: CHMEDPatientCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"
-* extension[privateField] -> "Patient.PFields"
-* identifier -> "Patient.Id with PatientId.Type (LocalPatientIdentifier = 2)"
-* name -> "name.given = Patient.FName, name.family = Patient.LName"
-* telecom -> "Patient.Phone"
-* gender -> "Patient.Gender, Male = 1, Female = 2"
-* birthDate -> "Patient.BDt"
-* address -> "address.line = Patient.Street, address.postalCode = Patient.Zip, address.city = Patient.City"
-* communication[languageOfCorrespondance].language -> "Patient.Lng conversion between ISO 639-1 (de) to urn:ietf:cbp:47 (de_CH) necessary"
+* extension[privateField] -> "PFs -> Private Field"
+
+* identifier[LocalPid] -> "Ids -> PatientId"
+* identifier[LocalPid].system -> "PatientId.SId"
+* identifier[LocalPid].value -> "PatientId.Val"
+
+* name.family -> "LName"
+* name.given -> "FName"
+
+* telecom -> "Cs -> Contact"
+* telecom[phone] -> "Contact.Phone"
+* telecom[mobile] -> "Contact.Mobile"
+* telecom[email] -> "Contact.Email"
+
+* gender -> "Gender (1: Male, 2: Female, 3: Other)"
+* birthDate -> "BDt"
+* address.line -> "Street"
+* address.city -> "City"
+* address.postalCode -> "Zip"
+* communication[languageOfCorrespondance] -> "Lng (conversion between ISO 639-1 (ex. de) to urn:ietf:bcp:47 (ex. de-CH) necessary)"

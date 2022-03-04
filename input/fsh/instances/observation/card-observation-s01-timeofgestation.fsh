@@ -6,4 +6,4 @@ Usage: #example
 * status = #final
 * code = $loinc#49052-4 "Gestational age in days"
 * subject.reference = "Patient/card-patient-s01"
-* valueQuantity = 215 'd' "Day"
+* valueQuantity = 215 'd' "day"

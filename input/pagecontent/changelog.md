@@ -20,11 +20,13 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
    * Set flags were they correlate with the described meaning.
 * Add [terminologies](terminology.html): value sets, code systems and concept maps of ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
+* Add CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
 
 #### Changed / Updated
 * Update to the specification [CHMED21A (Vx.x)](TBD).
    * Renaming the implementation guide (verion independence): CHMED20AF -> CHMED
    * Changing the canonical url (verion independence): http://chmed20af.emediplan.ch -> http://chmed.emediplan.ch
+   * Update mappings of the profiles.
 * Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
    * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
    * Change one reference of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html).   

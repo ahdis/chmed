@@ -23,3 +23,13 @@ Description: "Extension for private fields defined in 'eMedication Plan CHMED'"
 
 * extension[value] ^short = "Value of the private field"
 * extension[value].valueString 1..
+
+
+Mapping: CHMED21A-for-CHMEDExtensionPrivateField
+Id: CHMED21A
+Title: "CHMED21A"
+Source: CHMEDExtensionPrivateField
+Target: "http://emediplan.ch/chmed21a"
+* -> "PrivateField" 
+* extension[name] -> "Nm"
+* extension[value] -> "Val"

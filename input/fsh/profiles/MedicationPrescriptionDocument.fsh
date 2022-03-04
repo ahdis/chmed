@@ -7,15 +7,8 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Prescription Document"
-* identifier
-* identifier.system
-* identifier.value
-* type
-* timestamp
-* entry
-* entry[Composition]
+
 * entry[Composition].resource only CHMEDCompositionMedicationPrescription
-* entry[Composition].resource
 * entry[Composition].resource ^short = "CHMED Medication Prescription Composition"
 
 
@@ -25,4 +18,4 @@ Id: CHMED21A
 Title: "CHMED21A"
 Source: CHMEDMedicationPrescriptionDocument
 Target: "http://emediplan.ch/chmed21a"
-* identifier -> "Id"
+* identifier -> "Medication.Id"

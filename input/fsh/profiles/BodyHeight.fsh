@@ -14,7 +14,7 @@ Description: "Profile for the Observation resource to represent the body height"
 * valueQuantity only Quantity
 * valueQuantity.value ^short = "Height (centimetre)"
 * valueQuantity.unit = "cm"
-* valueQuantity.system = $ucum
+* valueQuantity.system ^short = "UCUM"
 * valueQuantity.code = #cm
 
 * subject 1..

@@ -14,7 +14,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
    * Removing the flags that were tentatively introduced in v2.0.0 before introducing the CH EMED definition for it.
    * Set flags were they correlate with the described meaning.
-* [Terminologies](terminology.html): add value sets, code systems and concept maps for ROA, MOA and units.
+* [Terminologies](terminology.html): add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 * Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
 * Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html).
@@ -77,7 +77,7 @@ Updated draft version of the implementation guide for the FHIR based definition 
 - Adjust problems in differentials in StructureDefinitions 
 - CodeSystem: just minor updates (designation values are not displayed: this is due to the ig publisher, need to do a feature reqeust to add support) 
 - ValueSets: just minor updates
-- Observation: conversion of Code System Url
+- Observation: conversion of CodeSystem Url
 - Condition: clinicalStatus changed to Coding with terminology clinicalStatus, fixed errors in snapshot generation
 - TimeOfGestation: changed profile that validation is supported (http://chmed16af.emediplan.ch/fhir/StructureDefinition/chmed16af-obs-timeofgestation), needs pull request [gf#21240](https://github.com/hapifhir/org.hl7.fhir.core/pull/21), is now integrated
 - Questionnaire PMC example fixed for validation error (wrong order) and warning

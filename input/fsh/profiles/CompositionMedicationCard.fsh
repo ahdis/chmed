@@ -7,7 +7,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Card Composition"
-* language
+
 * extension[informationRecipient]
 
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
@@ -19,9 +19,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * date ^short = "Date of creation"
 
 * author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
-* title
-* confidentiality
-* confidentiality.extension[confidentialityCode]
+
 * attester
 * attester ^slicing.discriminator.type = #value
 * attester ^slicing.discriminator.path = "mode"
@@ -84,7 +82,7 @@ Title: "CHMED21A"
 Source: CHMEDCompositionMedicationCard
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
-// * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
+* extension[informationRecipient] -> "Rcv"
 * extension[privateField] -> "PFs -> PrivateField"
 * identifier -> "Id"
 * type -> "MedType (Type 1: MedicationPlan (MP))"

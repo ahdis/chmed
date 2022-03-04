@@ -7,7 +7,7 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Prescription Composition"
-* language
+
 * extension[informationRecipient]
 
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
@@ -37,7 +37,7 @@ Title: "CHMED21A"
 Source: CHMEDCompositionMedicationPrescription
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medication"
-// * extension[informationRecipient] -> "Patient or Patient.Rcv (Gln of receiver)"
+* extension[informationRecipient] -> "Rcv"
 * extension[privateField] -> "PFs -> PrivateField"
 * identifier -> "Id"
 * type -> "MedType (Type 2: Prescription (Rx))"

@@ -24,9 +24,7 @@ Usage: #example
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
 * confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
 * confidentiality = #N
-* attester.mode = #professional
-* attester.time = "2016-09-12T11:46:09+02:00"
-* attester.party.reference = "Practitioner/practitioner-s01"
+
 * custodian.reference = "Organization/custodian-s01"
 
 * section[card].title = "Medikamentenliste"

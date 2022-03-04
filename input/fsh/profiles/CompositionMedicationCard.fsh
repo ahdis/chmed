@@ -20,19 +20,6 @@ Description: "Profile for the Composition resource of the Medication Card docume
 
 * author only Reference(CHMEDPractitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 
-* attester
-* attester ^slicing.discriminator.type = #value
-* attester ^slicing.discriminator.path = "mode"
-* attester ^slicing.rules = #open
-* attester contains professionalAuthenticator 0..*
-* attester[professionalAuthenticator] ^short = "The professional authenticator of the document (person)"
-* attester[professionalAuthenticator].mode = #professional (exactly)
-* attester[professionalAuthenticator].mode
-* attester[professionalAuthenticator].time
-* attester[professionalAuthenticator].time ^short = "When composition was attested by the party, Validate date: Date of validation"
-* attester[professionalAuthenticator].party only Reference(CHMEDPractitioner)
-* attester[professionalAuthenticator].party
-* attester[professionalAuthenticator].party ^short = "Validated by: The Gln of the pharmacist who has validated the medication card"
 * custodian
 
 
@@ -89,8 +76,6 @@ Target: "http://emediplan.ch/chmed21a"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
 // * author -> "Auth"
-// * attester[professionalAuthenticator].time -> "ValDt (Validate date: Date of validation)"
-// * attester[professionalAuthenticator].party -> "ValBy (Validate by: The Gln of the pharmacist who has validated the medication card)"
 
 * section[card] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"

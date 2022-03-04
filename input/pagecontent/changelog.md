@@ -4,10 +4,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 ### v3.0.0 (2022)
 
-Work in progress -> GitHub Issues:
-* [Issue #9](https://github.com/ahdis/chmed/issues/9): Medicament.Rep
-
-
 #### Open Issues
 The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
 * [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
@@ -46,6 +42,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 
 #### Fixed
+* Include missing [mapping](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a) of 'Medicament.Rep' ([Issue #9](https://github.com/ahdis/chmed/issues/9)).
 * Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed/issues/12)):
    * CodeSystem [Risk Categories](CodeSystem-chmed-codesystem-risks-category.html): 7 Diabetes
    * CodeSystem [Risks](CodeSystem-chmed-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   

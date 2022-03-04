@@ -7,15 +7,10 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED MedicationRequest (Pre)"
-* contained
 
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
-* identifier
-* identifier.system
-* identifier.value
-* status
 * medicationReference only Reference(CHMEDMedication)
 * medicationReference
 * subject only Reference(CHMEDPatientPre)
@@ -30,9 +25,9 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * dosageInstruction[structuredsplit] only CHMEDDosageStructuredSplitPre
 * dosageInstruction[structuredsplit]
 
-* dispenseRequest
-* dispenseRequest.numberOfRepeatsAllowed
-* dispenseRequest.quantity
+* dispenseRequest.validityPeriod ^short = "In which period the prescription can be redeemed"
+* dispenseRequest.numberOfRepeatsAllowed ^short = "Number of repetitions"
+* dispenseRequest.quantity ^short = "Number of packages to be delivered"
 
 * substitution.allowedCodeableConcept ^short = "'True' if medicament is not substitutable, otherwise 'false'" // TBD
 
@@ -45,7 +40,7 @@ Source: CHMEDMedicationRequestPre
 Target: "http://emediplan.ch/chmed21a"
 * -> "Medicament"
 * extension[privateField] -> "PFs -> PrivateField"
-//* medicationReference -> "Medicament.Id with Medicament.IdType 2 (GTIN)"
+* medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
 * subject -> "Patient"
 
 * note.text -> "AppInstr"
@@ -53,6 +48,9 @@ Target: "http://emediplan.ch/chmed21a"
 * dosageInstruction -> "Pos -> Posology"
 * dosageInstruction[nonstructured] -> "Posology -> PO.Text"
 
-//* dispenseRequest.numberOfRepeatsAllowed -> "Medicament.Rep"
-//* dispenseRequest.quantity -> "Medicament.NbPack"
+* dispenseRequest -> "Reps -> RepetitionObject"
+* dispenseRequest.validityPeriod -> "RepetitionObject.Duration"
+* dispenseRequest.numberOfRepeatsAllowed -> "RepetitionObject.Number.V"
+* dispenseRequest.quantity -> "NbPack"
+
 * substitution.allowedCodeableConcept -> "Sub"

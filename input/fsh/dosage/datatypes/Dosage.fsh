@@ -48,8 +48,8 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * asNeededBoolean 
 * asNeededBoolean. ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
 
-* route 
-* method 
+* route ^short = "Route of administration"
+* method ^short = "Method of administration"
 
 * doseAndRate.doseRange only CHEMEDRangeWithEmedUnits
 
@@ -101,8 +101,8 @@ Target: "http://emediplan.ch/chmed21a"
 
 * asNeededBoolean -> "InRes" // 4.
 
-* route -> "Medicament.ROA"
-* method -> "Medicament.MOA"
+* route -> "Medicament.Roa"
+* method -> "Medicament.Moa"
 
 * doseAndRate.doseRange.low -> "D.AMin" // 7.3
 * doseAndRate.doseRange.high -> "D.AMax" // 7.3

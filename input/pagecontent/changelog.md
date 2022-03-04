@@ -18,9 +18,11 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
    * Removing the flags that were tentatively introduced in v2.0.0 before introducing the CH EMED definition for it.
    * Set flags were they correlate with the described meaning.
-* Add [terminologies](terminology.html): value sets, code systems and concept maps of ROA, MOA and units.
+* [Terminologies](terminology.html): add value sets, code systems and concept maps for ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
-* Add CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
+* Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
+* Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html).
+   * See also [CH EMED Issue #91](https://github.com/hl7ch/ch-emed/issues/91). 
 
 #### Changed / Updated
 * Update to the specification [CHMED21A (Vx.x)](TBD).

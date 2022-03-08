@@ -1,12 +1,12 @@
-Profile: CHMEDPatientCard
-Parent: CHCorePatientEPR
-Id: chmed-card-patient
-Title: "CHMED Patient (Card)"
-Description: "Profile for the Patient resource (derived from CH Core Patient EPR), referenced in the CHMED Medication Card Composition"
+Profile: CHMEDPatient
+Parent: CHCorePatient
+Id: chmed-patient
+Title: "CHMED Patient"
+Description: "Profile for the Patient resource (derived from CH Core Patient)"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-* . ^short = "CHMED Patient (Card)"
+* . ^short = "CHMED Patient"
 
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
@@ -59,17 +59,12 @@ Description: "Profile for the Patient resource (derived from CH Core Patient EPR
 * address.city ^short = "City"
 * address.postalCode ^short = "Zip Code"
 
-* communication ..1
-* communication[languageOfCorrespondance] 1..
-* communication[languageOfCorrespondance] ^short = "Language of the patient"
 
 
-
-
-Mapping: CHMED21A-for-CHMEDPatientCard
+Mapping: CHMED21A-for-CHMEDPatient
 Id: CHMED21A
 Title: "CHMED21A"
-Source: CHMEDPatientCard
+Source: CHMEDPatient
 Target: "http://emediplan.ch/chmed21a"
 * -> "Patient"
 * extension[privateField] -> "PFs -> PrivateField"
@@ -91,4 +86,3 @@ Target: "http://emediplan.ch/chmed21a"
 * address.line -> "Street"
 * address.city -> "City"
 * address.postalCode -> "Zip"
-* communication[languageOfCorrespondance] -> "Lng (conversion between ISO 639-1 (ex. de) to urn:ietf:bcp:47 (ex. de-CH) necessary)"

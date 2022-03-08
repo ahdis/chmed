@@ -2,7 +2,7 @@ Profile: CHMEDPatientPre
 Parent: CHCorePatientEPR
 Id: chmed-pre-patient
 Title: "CHMED Patient (Pre)"
-Description: "Profile for the Patient resource of the Medication Prescription document"
+Description: "Profile for the Patient resource (derived from CH Core Patient EPR), referenced in the CHMED Medication Prescription Composition"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"

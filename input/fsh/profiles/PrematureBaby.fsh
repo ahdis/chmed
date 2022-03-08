@@ -16,7 +16,7 @@ Description: "Profile for the Observation resource to represent a premature baby
 * valueBoolean ^short = "'True' if patient is a premature baby, otherwise 'false' (only if age <= 18 months)"
 
 * subject 1..
-* subject only Reference(CHMEDPatientCard)
+* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 

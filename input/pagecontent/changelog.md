@@ -17,6 +17,9 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * [Terminologies](terminology.html): add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 * Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
+* Addition of [CHMED Patient](StructureDefinition-chmed-patient.html) profile for general use to existing CHMED Patient (Card) and [CHMED Patient (Pre) profiles referenced in Compositions.
+   * CHMED Patient is derived from CH Core Patient (general)
+   * CHMED Patient Card/Pre are derived form CH Core Patient EPR (Composition)
 * Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html).
    * See also [CH EMED Issue #91](https://github.com/hl7ch/ch-emed/issues/91). 
 
@@ -31,7 +34,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
       * CHMED Practitioner -> CH EMED Practitioner
          * Remove profile CHMED Practitioner and use the new profile [CH EMED Practitioner](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-practitioner.html) instead, because there are no differences.
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
-      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole         
+      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole      
 * Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](TBD). For details see tab [Dosage](dosage.html).
    * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
    * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).

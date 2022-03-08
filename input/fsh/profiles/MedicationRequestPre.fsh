@@ -13,7 +13,7 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 * medicationReference only Reference(CHMEDMedication)
 * medicationReference
-* subject only Reference(CHMEDPatientPre)
+* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 * note.text ^short = "Application instruction"

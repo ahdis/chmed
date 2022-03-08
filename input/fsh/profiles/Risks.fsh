@@ -20,7 +20,7 @@ Description: "Profile for the Condition resource to represent the risks"
 * code ^binding.description = "Identification of risk"
 
 * subject 1..
-* subject only Reference(CHMEDPatientCard)
+* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 

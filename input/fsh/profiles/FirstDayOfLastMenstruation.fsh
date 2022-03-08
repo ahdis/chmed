@@ -16,7 +16,7 @@ Description: "Profile for the Observation resource to represent the first day of
 * valueDateTime only dateTime
 
 * subject 1..
-* subject only Reference(CHMEDPatientCard)
+* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 

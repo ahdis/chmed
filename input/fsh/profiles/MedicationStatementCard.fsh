@@ -17,7 +17,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 
 * medicationReference only Reference(CHMEDMedication)
 
-* subject only Reference(CHMEDPatientCard)
+* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 * informationSource only Reference($ch-emed-practitioner or CHMEDPatientCard)

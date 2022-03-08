@@ -21,12 +21,6 @@ The Composition resource defines the healthcare-related information that is asse
 * [Mapping to CHMED21A](StructureDefinition-chmed-card-composition-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
 * [Examples](StructureDefinition-chmed-card-composition-examples.html)
 
-#### Patient (Card)
-The Patient resource defines the information about the patient involved in the medication activity.
-* [Profile](StructureDefinition-chmed-card-patient.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-card-patient-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
-* [Examples](StructureDefinition-chmed-card-patient-examples.html)
-
 #### Medication Card Section (Card)
 The medication card section contains the entries for the current medication of a patient. A medication consumed by a patient is recorded as MedicationStatement resource.
 * [Profile](StructureDefinition-chmed-card-medicationstatement.html)
@@ -73,12 +67,6 @@ The Composition resource defines the healthcare-related information that is asse
 * [Profile](StructureDefinition-chmed-pre-composition.html)
 * [Mapping to CHMED21A](StructureDefinition-chmed-pre-composition-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
 * [Examples](StructureDefinition-chmed-pre-composition-examples.html)
-
-#### Patient (Pre)
-The Patient resource defines the information about the patient involved in the medication activity.
-* [Profile](StructureDefinition-chmed-pre-patient.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-pre-patient-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
-* [Examples](StructureDefinition-chmed-pre-patient-examples.html)
 
 #### Medication Prescription Section (Pre)
 The medication prescription section contains the entries for the prescriped medications of a patient. An order or request of the medication to a patient is represented as MedicationRequest resource.

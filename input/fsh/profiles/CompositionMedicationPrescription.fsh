@@ -20,11 +20,9 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 
 * author only Reference($ch-emed-practitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 
-// TBD: https://github.com/ahdis/chmed/issues/17
-* author.extension contains CHMEDExtensionAuthorRole named authorRole 0..1 // TBD: Change to 1..1
-* author.extension[authorRole] ^short = "Role of the author"
-* author.extension[authorRole] ^definition = "Role of the author"
-* author.extension[authorRole] ^type.profile = http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role
+// TBD next release: https://github.com/ahdis/chmed/issues/17
+// * author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
+// * author.extension[authorRole] ^short = "Role of the author"
 
 * section[prescription].entry only Reference(CHMEDMedicationRequestPre)
 * section[prescription].entry ^short = "Medicament"
@@ -46,7 +44,8 @@ Target: "http://emediplan.ch/chmed21a"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
 * author -> "Auth, Zsr"
-* author.extension[authorRole] -> "AuthR"
+// TBD next release: https://github.com/ahdis/chmed/issues/17
+// * author.extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"

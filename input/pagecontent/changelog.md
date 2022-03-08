@@ -6,6 +6,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Open Issues
 The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
+* [Issue #17](https://github.com/ahdis/chmed/issues/17): Currently, the extension [CHMED Author Role](StructureDefinition-chmed-author-role.html) cannot be used on the Composition.author element because there is a [slicing error](https://github.com/hl7ch/ch-core/issues/129) in the CH Core parent profile.
 * [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
 
 See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).

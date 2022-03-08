@@ -15,7 +15,7 @@ Usage: #example
 * subject.reference = "Patient/pre-patient-s01"
 * date = "2017-05-27T11:46:09+02:00"
 * author.reference = "Practitioner/practitioner-s01"
-// TBD: https://github.com/ahdis/chmed/issues/17
+// TBD next release: https://github.com/ahdis/chmed/issues/17
 // * author.extension[authorRole].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role"
 // * author.extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
 * title = "Rezept"

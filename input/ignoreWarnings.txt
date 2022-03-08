@@ -3,8 +3,11 @@
 # The following code systems are external and not supported by terminology server
 Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
 
-# All important examples are contained
+# Examples are contained resources
 INFORMATION: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-medication'): The Implementation Guide contains no explicitly linked examples for this profile
+
+# No example because of https://github.com/ahdis/chmed/issues/17
+WARNING: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role'): The Implementation Guide contains no examples for this extension
 
 # The following display values are specific in the Swiss context
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ['Medicinal prescription record', 'Medicinal prescription', 'Medicinal prescription record (record artifact)', 'Drug prescription record'] (from http://tx.fhir.org/r4)

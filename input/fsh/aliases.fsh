@@ -22,6 +22,7 @@ Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/Struct
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
 Alias: $ch-emed-ext-substitution =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-substitution
 Alias: $ch-epr-term-authorRole =                http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.authorRole
+Alias: $edqm-routeofadministration =            http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration
 
 
 // CH Core

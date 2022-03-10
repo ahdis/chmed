@@ -49,7 +49,10 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * asNeededBoolean. ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
 
 * route ^short = "Route of administration"
+* route from $edqm-routeofadministration (required)
+
 * method ^short = "Method of administration"
+// TBD route from (required)
 
 * doseAndRate.doseRange only CHEMEDRangeWithEmedUnits
 

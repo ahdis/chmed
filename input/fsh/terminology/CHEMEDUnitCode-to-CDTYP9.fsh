@@ -1,4 +1,4 @@
-Instance: CHEMEDUnits-to-CDTYP9
+Instance: CHEMEDUnitCode-to-CDTYP9
 InstanceOf: ConceptMap
 Usage: #definition
 * publisher = "HCI Solutions AG"
@@ -6,13 +6,13 @@ Usage: #definition
 * contact.telecom.system = #email
 * contact.telecom.value = "hotline@hcisolutions.ch"
 
-* name = "UnitsMap"
-* title = "CH EMED Units to CDTYP9"
+* name = "UnitCodeMap"
+* title = "CH EMED UnitCode to CDTYP9"
 * status = #active
-* description = "Mapping to describe the relationships between CH EMED units to CDTYP9"
+* description = "Mapping to describe the relationships between CH EMED UnitCode and CDTYP9"
 
 * sourceUri = "http://fhir.ch/ig/ch-emed/ValueSet/UnitCode"
-* targetUri = "http://chmed.emediplan.ch/fhir/ValueSet/chmed-valueset-cdtyp9"
+//* targetUri = "http://chmed.emediplan.ch/fhir/ValueSet/chmed-valueset-cdtyp9"
 
 // SCT
 * group[+].source = "http://snomed.info/sct"

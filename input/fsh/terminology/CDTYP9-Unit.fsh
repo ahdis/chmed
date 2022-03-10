@@ -1,3 +1,4 @@
+/*
 ValueSet: UnitCodes
 Id: chmed-valueset-cdtyp9
 Title: "CHMED Unit Codes"
@@ -7,11 +8,12 @@ Description: "Value set for unit codes"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * include codes from system UnitCodes
+*/
 
 
-CodeSystem: UnitCodes
+CodeSystem: CDTYP9
 Id: chmed-codesystem-cdtyp9
-Title: "CHMED Unit Codes"
+Title: "CDTYP9"
 Description: "Code system for unit codes (Release 2012-11)"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "cdtyp9"

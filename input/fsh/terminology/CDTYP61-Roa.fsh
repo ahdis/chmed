@@ -1,4 +1,4 @@
-
+/*
 ValueSet: RouteOfAdministration
 Id: chmed-valueset-cdtyp61
 Title: "CHMED Route of Administration"
@@ -8,14 +8,15 @@ Description: "Value set for ROA codes"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * include codes from system RouteOfAdministration
+*/
 
 
-CodeSystem: RouteOfAdministration
+CodeSystem: CDTYP61
 Id: chmed-codesystem-cdtyp61
 Title: "CHMED Route of Administration"
 Description: "Code system for ROA codes (Release 2011-11)"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
-* ^identifier.value = "cdtyp26"
+* ^identifier.value = "cdtyp61"
 * ^publisher = "HCI Solutions AG"
 * ^contact.name = "Hotline"
 * ^contact.telecom.system = #email

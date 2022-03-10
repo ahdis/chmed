@@ -20,7 +20,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* informationSource only Reference($ch-emed-practitioner or CHMEDPatientCard)
+* informationSource only Reference($ch-core-practitioner or CHMEDPatient)
 
 * reasonCode.text ^short = "Taking reason"
 

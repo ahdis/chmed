@@ -24,4 +24,7 @@ Alias: $ch-emed-ext-substitution =              http://fhir.ch/ig/ch-emed/Struct
 Alias: $ch-epr-term-authorRole =                http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.authorRole
 
 
+// CH Core
+Alias: $ch-core-practitioner =                  http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner
+
 Alias: $ext-dayOfMonth =                        http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth

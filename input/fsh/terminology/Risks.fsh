@@ -12,7 +12,7 @@ Description: "Value set for possible risks"
 CodeSystem: Risks
 Id: chmed-codesystem-risks-cdscode
 Title: "CHMED Risks"
-Description: "Code system for possible risks (Release 2012-11)"
+Description: "Code system for possible risks"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "risks-cdscode"
 * ^publisher = "HCI Solutions AG"

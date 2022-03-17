@@ -67,7 +67,7 @@ For the representation according to the 1-1-1-1 scheme, the values MORN-NOON-EVE
 
 #### Dose and Rate
 The amount of medication administered is represented with SNOMED CT or UCUM codes, which are defined in the [ValueSet UnitCode](http://fhir.ch/ig/ch-emed/ValueSet-UnitCode.html) (see also [CH EMED](http://fhir.ch/ig/ch-emed/dosage.html#dose-and-rate)).   
-The mapping to [CDTYP9](TBD) can be found in this [ConceptMap](TBD).
+The mapping to [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html) can be found in this [ConceptMap](ConceptMap-CHEMEDUnitCode-to-CDTYP9.html).
 
 
 *Note for the following FHIR examples:*   

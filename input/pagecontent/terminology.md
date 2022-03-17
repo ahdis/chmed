@@ -12,10 +12,10 @@ The codes for risks are defined in the specification 'eMedication Plan CHMED'.
 
 ### Terminology for Medicament
 The codes for medicament are defined in the specification 'eMedication Plan CHMED'.
-* CH EMED ValueSet [UnitCode](http://fhir.ch/ig/ch-emed/ValueSet/UnitCode) (**TBD**: more values as CHMED)
+* CH EMED ValueSet [UnitCode](http://fhir.ch/ig/ch-emed/ValueSet/UnitCode)
    * includes codes from CodeSystem [`http://snomed.info/sct`](http://www.snomed.org/) and [`http://unitsofmeasure.org`](http://unitsofmeasure.org/)
    * binded to data type [CH EMED Quantity with units](http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-quantity)
-   * ConceptMap [CHEMEDUnitCode-to-CDTYP9](ConceptMap-CHEMEDUnitCode-to-CDTYP9.html) to describe the relationship between CH EMED UnitCode and [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html) (**TBD**: where the mapping is published)
+   * ConceptMap [CHEMEDUnitCode-to-CDTYP9](ConceptMap-CHEMEDUnitCode-to-CDTYP9.html) to describe the relationship between CH EMED UnitCode and [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html)
    * source: [CDTYP9](https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=9) in INDEX database by HCI Solutions AG
 * CH EMED ValueSet [EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration) (**TBD**: more values as CHMED)
    * includes codes from CH EMED CodeSystem [EDQM - Standard Terms](http://fhir.ch/ig/ch-emed/CodeSystem/edqm-standardterms)

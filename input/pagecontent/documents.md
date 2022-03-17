@@ -30,8 +30,8 @@ The medication card section contains the entries for the current medication of a
 #### Health Concerns Section (Card)
 The health concerns section contains the patient's medical data (Observation resources) and possible risks (Condition resources).   
 * Profiles
-   * [Body weight](http://hl7.org/fhir/R4/bodyweight.html)
-   * [Body height](http://hl7.org/fhir/R4/bodyheight.html)
+   * [Body weight](StructureDefinition-chmed-obs-bodyweight.html)
+   * [Body height](StructureDefinition-chmed-obs-bodyheight.html)
    * [First day of last menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)
    * [Premature baby](StructureDefinition-chmed-obs-prematurebaby.html)
    * [Time of gestation](StructureDefinition-chmed-obs-timeofgestation.html)

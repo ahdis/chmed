@@ -1,7 +1,9 @@
 CodeSystem: CDTYP61
 Id: chmed-codesystem-cdtyp61
 Title: "CHMED Route of Administration"
-Description: "Code system for route of administration (ROA) codes"
+Description: "Code system for route of administration (ROA) codes, 
+based on the route of administration codes of the 'EDQM Standard Terms' codes system, 
+which is accessible over https://standardterms.edqm.eu"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "cdtyp61"
 * ^publisher = "HCI Solutions AG"

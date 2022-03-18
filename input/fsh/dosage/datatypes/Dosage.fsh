@@ -52,7 +52,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * route from $edqm-routeofadministration (required)
 
 * method ^short = "Method of administration"
-// TBD route from (required)
+* method from CDTYP62 (required)
 
 * doseAndRate.doseRange only CHEMEDRangeWithEmedUnits
 

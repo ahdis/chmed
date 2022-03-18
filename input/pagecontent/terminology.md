@@ -22,8 +22,8 @@ The codes for medicament are defined in the specification 'eMedication Plan CHME
    * binded to element Dosage.route of [CHMED Dosage](StructureDefinition-chmed-dosage.html)
    * ConceptMap [EDQMRouteOfAdministration-to-CDTYP61](ConceptMap-CHEMEDEDQMROA-to-CDTYP61.html) to describe the relationship between EDQM - RouteOfAdminstration and [CDTYP61](CodeSystem-chmed-codesystem-cdtyp61.html)
    * source: [CDTYP61](https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=61&xsl=table.xslt) in INDEX database by HCI Solutions AG
-* ValueSet [EDQM - MethodOfAdministration](ValueSet-edqm-methodofadministration.html) (**TBD**: create VS)
-   * includes codes from CHMED CodeSystem [EDQM - Standard Terms](CodeSystem-edqm-standardterms.html) (**TBD**: create CS)
+* ValueSet [CHMED Method of Administration](ValueSet-chmed-valueset-cdtyp62.html)
+   * includes codes from CodeSystem [CHMED Method of Administration](CodeSystem-chmed-codesystem-cdtyp62.html)
    * binded to element Dosage.method of [CHMED Dosage](StructureDefinition-chmed-dosage.html)
    * source: [CDTYP62](https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=62&xsl=table.xslt) in INDEX database by HCI Solutions AG
 

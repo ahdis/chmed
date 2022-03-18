@@ -16,6 +16,7 @@ Alias: $chmed-codesystem-risks-cdscode =        http://chmed.emediplan.ch/fhir/C
 Alias: $chmed-cs-even-odd-days =                http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days
 Alias: $chmed-cs-posology-object-type =         http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type
 Alias: $chmed-cs-timed-dosage-object-type =     http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
+Alias: $chmed-cs-cdtyp62 =                      http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp62
 
 // CH EMED & CH EPR Term
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner

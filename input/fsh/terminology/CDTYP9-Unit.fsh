@@ -1,6 +1,6 @@
 CodeSystem: CDTYP9
 Id: chmed-codesystem-cdtyp9
-Title: "CDTYP9"
+Title: "CHMED Unit"
 Description: "Code system for unit codes"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "cdtyp9"

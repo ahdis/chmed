@@ -1,20 +1,7 @@
-/*
-ValueSet: RouteOfAdministration
-Id: chmed-valueset-cdtyp61
-Title: "CHMED Route of Administration"
-Description: "Value set for ROA codes"
-* ^publisher = "HCI Solutions AG"
-* ^contact.name = "Hotline"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "hotline@hcisolutions.ch"
-* include codes from system RouteOfAdministration
-*/
-
-
 CodeSystem: CDTYP61
 Id: chmed-codesystem-cdtyp61
 Title: "CHMED Route of Administration"
-Description: "Code system for ROA codes (Release 2011-11)"
+Description: "Code system for route of administration (ROA) codes"
 * ^identifier.system = "https://index.hcisolutions.ch/codes/"
 * ^identifier.value = "cdtyp61"
 * ^publisher = "HCI Solutions AG"
@@ -24,380 +11,326 @@ Description: "Code system for ROA codes (Release 2011-11)"
 * ^caseSensitive = true
 * ^content = #complete
 
-* #BLADINJ "intravesikal (Injektion)"
-* #BLADINJ ^designation[0].language = #de-CH
-* #BLADINJ ^designation[=].value = "intravesikal (Injektion)"
-* #BLADINJ ^designation[+].language = #fr-CH
-* #BLADINJ ^designation[=].value = "intravésicale (injection)"
+* #20001000 "Anwendung am Ohr"
+* #20001000 ^designation[0].language = #de-CH
+* #20001000 ^designation[=].value = "Anwendung am Ohr"
+* #20001000 ^designation[+].language = #fr-CH
+* #20001000 ^designation[=].value = "Voie auriculaire"
 
-* #BUC "buccal"
-* #BUC ^designation[0].language = #de-CH
-* #BUC ^designation[=].value = "buccal"
-* #BUC ^designation[+].language = #fr-CH
-* #BUC ^designation[=].value = "buccal"
+* #20002500 "buccale Anwendung"
+* #20002500 ^designation[0].language = #de-CH
+* #20002500 ^designation[=].value = "buccale Anwendung"
+* #20002500 ^designation[+].language = #fr-CH
+* #20002500 ^designation[=].value = "Voie buccogingivale"
 
-* #EPI "epidural (Infusion)"
-* #EPI ^designation[0].language = #de-CH
-* #EPI ^designation[=].value = "epidural (Infusion)"
-* #EPI ^designation[+].language = #fr-CH
-* #EPI ^designation[=].value = "épidurale (perfusion)"
+* #20003000 "Anwendung auf der Haut"
+* #20003000 ^designation[0].language = #de-CH
+* #20003000 ^designation[=].value = "Anwendung auf der Haut"
+* #20003000 ^designation[+].language = #fr-CH
+* #20003000 ^designation[=].value = "Voie cutanée"
 
-* #EPIDURINJ "epidural (Injektion)"
-* #EPIDURINJ ^designation[0].language = #de-CH
-* #EPIDURINJ ^designation[=].value = "epidural (Injektion)"
-* #EPIDURINJ ^designation[+].language = #fr-CH
-* #EPIDURINJ ^designation[=].value = "épidurale (injection)"
+* #20004000 "dentale Anwendung"
+* #20004000 ^designation[0].language = #de-CH
+* #20004000 ^designation[=].value = "dentale Anwendung"
+* #20004000 ^designation[+].language = #fr-CH
+* #20004000 ^designation[=].value = "Voie dentaire"
 
-* #ETINSTL "endotracheal (Instillation)"
-* #ETINSTL ^designation[0].language = #de-CH
-* #ETINSTL ^designation[=].value = "endotracheal (Instillation)"
-* #ETINSTL ^designation[+].language = #fr-CH
-* #ETINSTL ^designation[=].value = "endotrachéale (instillation)"
+* #20008000 "endotracheopulmonale Anwendung"
+* #20008000 ^designation[0].language = #de-CH
+* #20008000 ^designation[=].value = "endotracheopulmonale Anwendung"
+* #20008000 ^designation[+].language = #fr-CH
+* #20008000 ^designation[=].value = "Voie endotrachéobronchique"
+		
+* #20009000 "epidurale Anwendung"
+* #20009000 ^designation[0].language = #de-CH
+* #20009000 ^designation[=].value = "epidurale Anwendung"
+* #20009000 ^designation[+].language = #fr-CH
+* #20009000 ^designation[=].value = "Voie péridurale"
 
-* #IAINJ "intraarteriel (Injektion)"
-* #IAINJ ^designation[0].language = #de-CH
-* #IAINJ ^designation[=].value = "intraarteriel (Injektion)"
-* #IAINJ ^designation[+].language = #fr-CH
-* #IAINJ ^designation[=].value = "intra-artérielle (injection)"
+* #20011500 "extrakorporale Anwendung"
+* #20011500 ^designation[0].language = #de-CH
+* #20011500 ^designation[=].value = "extrakorporale Anwendung"
+* #20011500 ^designation[+].language = #fr-CH
+* #20011500 ^designation[=].value = "Voie extracorporelle"
+	
+* #20013000 "gastrointestinale Anwendung"
+* #20013000 ^designation[0].language = #de-CH
+* #20013000 ^designation[=].value = "gastrointestinale Anwendung"
+* #20013000 ^designation[+].language = #fr-CH
+* #20013000 ^designation[=].value = "Voie gastro-entérale"
 
-* #IARTINJ "intraartikulär"
-* #IARTINJ ^designation[0].language = #de-CH
-* #IARTINJ ^designation[=].value = "intraartikulär"
-* #IARTINJ ^designation[+].language = #fr-CH
-* #IARTINJ ^designation[=].value = "intra-articulaire"
+* #20013500 "zur Anwendung mittels Magensonde"
+* #20013500 ^designation[0].language = #de-CH
+* #20013500 ^designation[=].value = "zur Anwendung mittels Magensonde"
+* #20013500 ^designation[+].language = #fr-CH
+* #20013500 ^designation[=].value = "Voie gastrique"
 
-* #IBURSINJ "intrabursal"
-* #IBURSINJ ^designation[0].language = #de-CH
-* #IBURSINJ ^designation[=].value = "intrabursal"
-* #IBURSINJ ^designation[+].language = #fr-CH
-* #IBURSINJ ^designation[=].value = "intrabursique"
+* #20014000 "Anwendung am Zahnfleisch"
+* #20014000 ^designation[0].language = #de-CH
+* #20014000 ^designation[=].value = "Anwendung am Zahnfleisch"
+* #20014000 ^designation[+].language = #fr-CH
+* #20014000 ^designation[=].value = "Voie gingivale"
 
-* #ICORPCAVINJ "In Corpus cavernosum"
-* #ICORPCAVINJ ^designation[0].language = #de-CH
-* #ICORPCAVINJ ^designation[=].value = "In Corpus cavernosum"
-* #ICORPCAVINJ ^designation[+].language = #fr-CH
-* #ICORPCAVINJ ^designation[=].value = "intracaverneuse"
+* #20015000 "Hämodialyse"
+* #20015000 ^designation[0].language = #de-CH
+* #20015000 ^designation[=].value = "Hämodialyse"
+* #20015000 ^designation[+].language = #fr-CH
+* #20015000 ^designation[=].value = "Hémodialyse"
 
-* #IDINJ "intracutan (injektion)"
-* #IDINJ ^designation[0].language = #de-CH
-* #IDINJ ^designation[=].value = "intracutan (injektion)"
-* #IDINJ ^designation[+].language = #fr-CH
-* #IDINJ ^designation[=].value = "intracutanée (injection)"
+* #20020000 "zur Inhalation"
+* #20020000 ^designation[0].language = #de-CH
+* #20020000 ^designation[=].value = "zur Inhalation"
+* #20020000 ^designation[+].language = #fr-CH
+* #20020000 ^designation[=].value = "Voie inhalée"
 
-* #ILESINJ "intraläsional (Injektion)"
-* #ILESINJ ^designation[0].language = #de-CH
-* #ILESINJ ^designation[=].value = "intraläsional (Injektion)"
-* #ILESINJ ^designation[+].language = #fr-CH
-* #ILESINJ ^designation[=].value = "intralésionnelle (injection)"
+* #20021000 "intestinale Anwendung"
+* #20021000 ^designation[0].language = #de-CH
+* #20021000 ^designation[=].value = "intestinale Anwendung"
+* #20021000 ^designation[+].language = #fr-CH
+* #20021000 ^designation[=].value = "Voie intestinale"
+		
+* #20023000 "intraarterielle Anwendung"
+* #20023000 ^designation[0].language = #de-CH
+* #20023000 ^designation[=].value = "intraarterielle Anwendung"
+* #20023000 ^designation[+].language = #fr-CH
+* #20023000 ^designation[=].value = "Voie intraartérielle"
 
-* #IM "intramuskulär"
-* #IM ^designation[0].language = #de-CH
-* #IM ^designation[=].value = "intramuskulär"
-* #IM ^designation[+].language = #fr-CH
-* #IM ^designation[=].value = "intramusculaire"
+* #20024000 "intraartikuläre Anwendung"
+* #20024000 ^designation[0].language = #de-CH
+* #20024000 ^designation[=].value = "intraartikuläre Anwendung"
+* #20024000 ^designation[+].language = #fr-CH
+* #20024000 ^designation[=].value = "Voie intraarticulaire"
 
-* #IOINJ "intraokulär (Injektion)"
-* #IOINJ ^designation[0].language = #de-CH
-* #IOINJ ^designation[=].value = "intraokulär (Injektion)"
-* #IOINJ ^designation[+].language = #fr-CH
-* #IOINJ ^designation[=].value = "intraoculaire (injection)"
+* #20025000 "intrabursale Anwendung"
+* #20025000 ^designation[0].language = #de-CH
+* #20025000 ^designation[=].value = "intrabursale Anwendung"
+* #20025000 ^designation[+].language = #fr-CH
+* #20025000 ^designation[=].value = "Voie intrabursale"
 
-* #IPLRINJ "intrapleural"
-* #IPLRINJ ^designation[0].language = #de-CH
-* #IPLRINJ ^designation[=].value = "intrapleural"
-* #IPLRINJ ^designation[+].language = #fr-CH
-* #IPLRINJ ^designation[=].value = "intrapleural"
+* #20027000 "intrakavernöse Anwendung"
+* #20027000 ^designation[0].language = #de-CH
+* #20027000 ^designation[=].value = "intrakavernöse Anwendung"
+* #20027000 ^designation[+].language = #fr-CH
+* #20027000 ^designation[=].value = "Voie intracaverneuse"
 
-* #IT "intrathekal (Infusion)"
-* #IT ^designation[0].language = #de-CH
-* #IT ^designation[=].value = "intrathekal (Infusion)"
-* #IT ^designation[+].language = #fr-CH
-* #IT ^designation[=].value = "intrathécale (perfusion)"
+* #20030000 "intradermale Anwendung"
+* #20030000 ^designation[0].language = #de-CH
+* #20030000 ^designation[=].value = "intradermale Anwendung"
+* #20030000 ^designation[+].language = #fr-CH
+* #20030000 ^designation[=].value = "Voie intradermique"
 
-* #ITINJ "intrathekal (Injektion)"
-* #ITINJ ^designation[0].language = #de-CH
-* #ITINJ ^designation[=].value = "intrathekal (Injektion)"
-* #ITINJ ^designation[+].language = #fr-CH
-* #ITINJ ^designation[=].value = "intrathécale (injection)"
+* #20031700 "intraglanduläre Anwendung"
+* #20031700 ^designation[0].language = #de-CH
+* #20031700 ^designation[=].value = "intraglanduläre Anwendung"
+* #20031700 ^designation[+].language = #fr-CH
+* #20031700 ^designation[=].value = "Voie intraglandulaire"
 
-* #ITUMINJ "intratumoral"
-* #ITUMINJ ^designation[0].language = #de-CH
-* #ITUMINJ ^designation[=].value = "intratumoral"
-* #ITUMINJ ^designation[+].language = #fr-CH
-* #ITUMINJ ^designation[=].value = "intratumoral"
+* #20032000 "intraläsionale Anwendung"
+* #20032000 ^designation[0].language = #de-CH
+* #20032000 ^designation[=].value = "intraläsionale Anwendung"
+* #20032000 ^designation[+].language = #fr-CH
+* #20032000 ^designation[=].value = "Voie intralésionnelle"
 
-* #IV "intravenös (Infusion)"
-* #IV ^designation[0].language = #de-CH
-* #IV ^designation[=].value = "intravenös (Infusion)"
-* #IV ^designation[+].language = #fr-CH
-* #IV ^designation[=].value = "intraveineuse (perfusion)"
+* #20033000 "intralymphatische Anwendung"
+* #20033000 ^designation[0].language = #de-CH
+* #20033000 ^designation[=].value = "intralymphatische Anwendung"
+* #20033000 ^designation[+].language = #fr-CH
+* #20033000 ^designation[=].value = "Voie intralymphatique"
 
-* #IVENTINJ "intraventrikulär"
-* #IVENTINJ ^designation[0].language = #de-CH
-* #IVENTINJ ^designation[=].value = "intraventrikulär"
-* #IVENTINJ ^designation[+].language = #fr-CH
-* #IVENTINJ ^designation[=].value = "intraventriculaire"
+* #20035000 "intramuskuläre Anwendung"
+* #20035000 ^designation[0].language = #de-CH
+* #20035000 ^designation[=].value = "intramuskuläre Anwendung"
+* #20035000 ^designation[+].language = #fr-CH
+* #20035000 ^designation[=].value = "Voie intramusculaire"
 
-* #IVINJ "intravenös (Injektion)"
-* #IVINJ ^designation[0].language = #de-CH
-* #IVINJ ^designation[=].value = "intravenös (Injektion)"
-* #IVINJ ^designation[+].language = #fr-CH
-* #IVINJ ^designation[=].value = "intraveineuse (injection)"
+* #20036000 "intraokulare Anwendung"
+* #20036000 ^designation[0].language = #de-CH
+* #20036000 ^designation[=].value = "intraokulare Anwendung"
+* #20036000 ^designation[+].language = #fr-CH
+* #20036000 ^designation[=].value = "Voie intraoculaire"
 
-* #IVITINJ "intravitreal (Injektion)"
-* #IVITINJ ^designation[0].language = #de-CH
-* #IVITINJ ^designation[=].value = "intravitreal (Injektion)"
-* #IVITINJ ^designation[+].language = #fr-CH
-* #IVITINJ ^designation[=].value = "intravitréenne (injection)"
+* #20036500 "intraossäre Anwendung"
+* #20036500 ^designation[0].language = #de-CH
+* #20036500 ^designation[=].value = "intraossäre Anwendung"
+* #20036500 ^designation[+].language = #fr-CH
+* #20036500 ^designation[=].value = "Voie intraosseuse"
 
-* #NASAL "nasal"
-* #NASAL ^designation[0].language = #de-CH
-* #NASAL ^designation[=].value = "nasal"
-* #NASAL ^designation[+].language = #fr-CH
-* #NASAL ^designation[=].value = "nasal"
+* #20038000 "intraperitoneale Anwendung"
+* #20038000 ^designation[0].language = #de-CH
+* #20038000 ^designation[=].value = "intraperitoneale Anwendung"
+* #20038000 ^designation[+].language = #fr-CH
+* #20038000 ^designation[=].value = "Voie intrapéritonéale"
 
-* #OPTHALTA "ophthalmologisch"
-* #OPTHALTA ^designation[0].language = #de-CH
-* #OPTHALTA ^designation[=].value = "ophthalmologisch"
-* #OPTHALTA ^designation[+].language = #fr-CH
-* #OPTHALTA ^designation[=].value = "ophtalmologique"
+* #20039000 "intrapleurale Anwendung"
+* #20039000 ^designation[0].language = #de-CH
+* #20039000 ^designation[=].value = "intrapleurale Anwendung"
+* #20039000 ^designation[+].language = #fr-CH
+* #20039000 ^designation[=].value = "Voie intrapleurale"
 
-* #ORINHL "inhalation oral"
-* #ORINHL ^designation[0].language = #de-CH
-* #ORINHL ^designation[=].value = "inhalation oral"
-* #ORINHL ^designation[+].language = #fr-CH
-* #ORINHL ^designation[=].value = "inhalation orale"
+* #20042000 "intrathekale Anwendung"
+* #20042000 ^designation[0].language = #de-CH
+* #20042000 ^designation[=].value = "intrathekale Anwendung"
+* #20042000 ^designation[+].language = #fr-CH
+* #20042000 ^designation[=].value = "Voie intrathécale"
 
-* #PAINJ "periartikulär"
-* #PAINJ ^designation[0].language = #de-CH
-* #PAINJ ^designation[=].value = "periartikulär"
-* #PAINJ ^designation[+].language = #fr-CH
-* #PAINJ ^designation[=].value = "périarticulaire"
+* #20043000 "intratumorale Anwendung"
+* #20043000 ^designation[0].language = #de-CH
+* #20043000 ^designation[=].value = "intratumorale Anwendung"
+* #20043000 ^designation[+].language = #fr-CH
+* #20043000 ^designation[=].value = "Voie intratumorale"
 
-* #PDPINJ "peritoneal (Injektion)"
-* #PDPINJ ^designation[0].language = #de-CH
-* #PDPINJ ^designation[=].value = "peritoneal (Injektion)"
-* #PDPINJ ^designation[+].language = #fr-CH
-* #PDPINJ ^designation[=].value = "péritonéale (injection)"
+* #20044000 "intrauterine Anwendung"
+* #20044000 ^designation[0].language = #de-CH
+* #20044000 ^designation[=].value = "intrauterine Anwendung"
+* #20044000 ^designation[+].language = #fr-CH
+* #20044000 ^designation[=].value = "Voie intra-utérine"
 
-* #PDPINSTL "peritoneal (Instillation)"
-* #PDPINSTL ^designation[0].language = #de-CH
-* #PDPINSTL ^designation[=].value = "peritoneal (Instillation)"
-* #PDPINSTL ^designation[+].language = #fr-CH
-* #PDPINSTL ^designation[=].value = "péritonéale (instillation)"
+* #20045000 "intravenöse Anwendung"
+* #20045000 ^designation[0].language = #de-CH
+* #20045000 ^designation[=].value = "intravenöse Anwendung"
+* #20045000 ^designation[+].language = #fr-CH
+* #20045000 ^designation[=].value = "Voie intraveineuse"
+	
+* #20046000 "intravesikale Anwendung"
+* #20046000 ^designation[0].language = #de-CH
+* #20046000 ^designation[=].value = "intravesikale Anwendung"
+* #20046000 ^designation[+].language = #fr-CH
+* #20046000 ^designation[=].value = "Voie intravésicale"
 
-* #PO "per oral"
-* #PO ^designation[0].language = #de-CH
-* #PO ^designation[=].value = "per oral"
-* #PO ^designation[+].language = #fr-CH
-* #PO ^designation[=].value = "per oral"
+* #20047000 "intravitreal"
+* #20047000 ^designation[0].language = #de-CH
+* #20047000 ^designation[=].value = "intravitreal"
+* #20047000 ^designation[+].language = #fr-CH
+* #20047000 ^designation[=].value = "Voie intravitréenne"
 
-* #RECTAL "rektal"
-* #RECTAL ^designation[0].language = #de-CH
-* #RECTAL ^designation[=].value = "rektal"
-* #RECTAL ^designation[+].language = #fr-CH
-* #RECTAL ^designation[=].value = "rectal"
+* #20049000 "nasale Anwendung"
+* #20049000 ^designation[0].language = #de-CH
+* #20049000 ^designation[=].value = "nasale Anwendung"
+* #20049000 ^designation[+].language = #fr-CH
+* #20049000 ^designation[=].value = "Voie nasale"
 
-* #SCINJ "subkonjunktival (Injektion)"
-* #SCINJ ^designation[0].language = #de-CH
-* #SCINJ ^designation[=].value = "subkonjunktival (Injektion)"
-* #SCINJ ^designation[+].language = #fr-CH
-* #SCINJ ^designation[=].value = "sous-conjonctivale (injection)"
+* #20051000 "Anwendung am Auge"
+* #20051000 ^designation[0].language = #de-CH
+* #20051000 ^designation[=].value = "Anwendung am Auge"
+* #20051000 ^designation[+].language = #fr-CH
+* #20051000 ^designation[=].value = "Voie ophtalmique"
 
-* #SKIN "topisch"
-* #SKIN ^designation[0].language = #de-CH
-* #SKIN ^designation[=].value = "topisch"
-* #SKIN ^designation[+].language = #fr-CH
-* #SKIN ^designation[=].value = "topique"
+* #20053000 "zum Einnehmen"
+* #20053000 ^designation[0].language = #de-CH
+* #20053000 ^designation[=].value = "zum Einnehmen"
+* #20053000 ^designation[+].language = #fr-CH
+* #20053000 ^designation[=].value = "Voie orale"
 
-* #SL "sublingual"
-* #SL ^designation[0].language = #de-CH
-* #SL ^designation[=].value = "sublingual"
-* #SL ^designation[+].language = #fr-CH
-* #SL ^designation[=].value = "sublingual"
+* #20054000 "Anwendung in der Mundhöhle"
+* #20054000 ^designation[0].language = #de-CH
+* #20054000 ^designation[=].value = "Anwendung in der Mundhöhle"
+* #20054000 ^designation[+].language = #fr-CH
+* #20054000 ^designation[=].value = "Voie buccale"
 
-* #SQ "subcutan (Injektion)"
-* #SQ ^designation[0].language = #de-CH
-* #SQ ^designation[=].value = "subcutan (Injektion)"
-* #SQ ^designation[+].language = #fr-CH
-* #SQ ^designation[=].value = "sous-cutanée (injection)"
+* #20055000 "Anwendung im Mund- und Rachenraum"
+* #20055000 ^designation[0].language = #de-CH
+* #20055000 ^designation[=].value = "Anwendung im Mund- und Rachenraum"
+* #20055000 ^designation[+].language = #fr-CH
+* #20055000 ^designation[=].value = "Voie oropharyngée"
 
-* #SQINFUS "subcutan (Infusion)"
-* #SQINFUS ^designation[0].language = #de-CH
-* #SQINFUS ^designation[=].value = "subcutan (Infusion)"
-* #SQINFUS ^designation[+].language = #fr-CH
-* #SQINFUS ^designation[=].value = "sous-cutanée (perfusion)"
+* #20057000 "periartikuläre Anwendung"
+* #20057000 ^designation[0].language = #de-CH
+* #20057000 ^designation[=].value = "periartikuläre Anwendung"
+* #20057000 ^designation[+].language = #fr-CH
+* #20057000 ^designation[=].value = "Voie périarticulaire"
 
-* #VAGINS "vaginal"
-* #VAGINS ^designation[0].language = #de-CH
-* #VAGINS ^designation[=].value = "vaginal"
-* #VAGINS ^designation[+].language = #fr-CH
-* #VAGINS ^designation[=].value = "vaginal"
+* #20058000 "perineurale Anwendung"
+* #20058000 ^designation[0].language = #de-CH
+* #20058000 ^designation[=].value = "perineurale Anwendung"
+* #20058000 ^designation[+].language = #fr-CH
+* #20058000 ^designation[=].value = "Voie périneurale"
 
-* #HEMODIFF "Hämodialyse (Diffusion)"
-* #HEMODIFF ^designation[0].language = #de-CH
-* #HEMODIFF ^designation[=].value = "Hämodialyse (Diffusion)"
-* #HEMODIFF ^designation[+].language = #fr-CH
-* #HEMODIFF ^designation[=].value = "hémodialyse (diffusion)"
+* #20059000 "zur periodontalen Anwendung"
+* #20059000 ^designation[0].language = #de-CH
+* #20059000 ^designation[=].value = "zur periodontalen Anwendung"
+* #20059000 ^designation[+].language = #fr-CH
+* #20059000 ^designation[=].value = "Voie périodontale"
 
-* #PNINJ "perineural (Injektion)"
-* #PNINJ ^designation[0].language = #de-CH
-* #PNINJ ^designation[=].value = "perineural (Injektion)"
-* #PNINJ ^designation[+].language = #fr-CH
-* #PNINJ ^designation[=].value = "périneurale (injection)"
+* #20059400 "peritumorale Anwendung"
+* #20059400 ^designation[0].language = #de-CH
+* #20059400 ^designation[=].value = "peritumorale Anwendung"
+* #20059400 ^designation[+].language = #fr-CH
+* #20059400 ^designation[=].value = "Voie péritumorale"
 
-* #BLADINSTL "intravesikal (Instillation)"
-* #BLADINSTL ^designation[0].language = #de-CH
-* #BLADINSTL ^designation[=].value = "intravesikal (Instillation)"
-* #BLADINSTL ^designation[+].language = #fr-CH
-* #BLADINSTL ^designation[=].value = "intravésicale (instillation)"
+* #20061000 "rektale Anwendung"
+* #20061000 ^designation[0].language = #de-CH
+* #20061000 ^designation[=].value = "rektale Anwendung"
+* #20061000 ^designation[+].language = #fr-CH
+* #20061000 ^designation[=].value = "Voie rectale"
 
-* #IVFLUSH "intravenös Katheter (Flush)"
-* #IVFLUSH ^designation[0].language = #de-CH
-* #IVFLUSH ^designation[=].value = "intravenös Katheter (Flush)"
-* #IVFLUSH ^designation[+].language = #fr-CH
-* #IVFLUSH ^designation[=].value = "intraveineuse cathéter (flush)"
+* #20061500 "retrobulbäre Anwendung"
+* #20061500 ^designation[0].language = #de-CH
+* #20061500 ^designation[=].value = "retrobulbäre Anwendung"
+* #20061500 ^designation[+].language = #fr-CH
+* #20061500 ^designation[=].value = "Voie rétrobulbaire"
 
-* #SQIMPLNT "subcutan (Implantation)"
-* #SQIMPLNT ^designation[0].language = #de-CH
-* #SQIMPLNT ^designation[=].value = "subcutan (Implantation)"
-* #SQIMPLNT ^designation[+].language = #fr-CH
-* #SQIMPLNT ^designation[=].value = "sous-cutanée (implantation)"
+* #20062000 "Art der Anwendung nicht spezifizierbar"
+* #20062000 ^designation[0].language = #de-CH
+* #20062000 ^designation[=].value = "Art der Anwendung nicht spezifizierbar"
+* #20062000 ^designation[+].language = #fr-CH
+* #20062000 ^designation[=].value = "Autre(s)"
 
-* #URETHINSTL "urethral (Instillation)"
-* #URETHINSTL ^designation[0].language = #de-CH
-* #URETHINSTL ^designation[=].value = "urethral (Instillation)"
-* #URETHINSTL ^designation[+].language = #fr-CH
-* #URETHINSTL ^designation[=].value = "uréthrale (instillation)"
+* #20065000 "subkonjunktivale Anwendung"
+* #20065000 ^designation[0].language = #de-CH
+* #20065000 ^designation[=].value = "subkonjunktivale Anwendung"
+* #20065000 ^designation[+].language = #fr-CH
+* #20065000 ^designation[=].value = "Voie sous-conjonctivale"
 
-* #TRNSDERMD "transdermal"
-* #TRNSDERMD ^designation[0].language = #de-CH
-* #TRNSDERMD ^designation[=].value = "transdermal"
-* #TRNSDERMD ^designation[+].language = #fr-CH
-* #TRNSDERMD ^designation[=].value = "transdermal"
+* #20066000 "subkutane Anwendung"
+* #20066000 ^designation[0].language = #de-CH
+* #20066000 ^designation[=].value = "subkutane Anwendung"
+* #20066000 ^designation[+].language = #fr-CH
+* #20066000 ^designation[=].value = "Voie sous-cutanée"
 
-* #IA "intraarteriel (Infusion)"
-* #IA ^designation[0].language = #de-CH
-* #IA ^designation[=].value = "intraarteriel (Infusion)"
-* #IA ^designation[+].language = #fr-CH
-* #IA ^designation[=].value = "intra-artérielle (perfusion)"
+* #20067000 "sublingual"
+* #20067000 ^designation[0].language = #de-CH
+* #20067000 ^designation[=].value = "sublingual"
+* #20067000 ^designation[+].language = #fr-CH
+* #20067000 ^designation[=].value = "Voie sublinguale"
 
-* #GINGINJ "gingival (Injektion)"
-* #GINGINJ ^designation[0].language = #de-CH
-* #GINGINJ ^designation[=].value = "gingival (Injektion)"
-* #GINGINJ ^designation[+].language = #fr-CH
-* #GINGINJ ^designation[=].value = "gingival (injection)"
+* #20067500 "submuköse Anwendung"
+* #20067500 ^designation[0].language = #de-CH
+* #20067500 ^designation[=].value = "submuköse Anwendung"
+* #20067500 ^designation[+].language = #fr-CH
+* #20067500 ^designation[=].value = "Voie sous-muqueuse"
 
-* #URETHINJ "urethral (Injektion)"
-* #URETHINJ ^designation[0].language = #de-CH
-* #URETHINJ ^designation[=].value = "urethral (Injektion)"
-* #URETHINJ ^designation[+].language = #fr-CH
-* #URETHINJ ^designation[=].value = "uréthrale (injection)"
+* #20070000 "transdermale Anwendung"
+* #20070000 ^designation[0].language = #de-CH
+* #20070000 ^designation[=].value = "transdermale Anwendung"
+* #20070000 ^designation[+].language = #fr-CH
+* #20070000 ^designation[=].value = "Voie transdermique"
 
-* #IUINJ "intrauterin (Injektion)"
-* #IUINJ ^designation[0].language = #de-CH
-* #IUINJ ^designation[=].value = "intrauterin (Injektion)"
-* #IUINJ ^designation[+].language = #fr-CH
-* #IUINJ ^designation[=].value = "intra-utérine (injection)"
+* #20071000 "Anwendung in der Harnröhre"
+* #20071000 ^designation[0].language = #de-CH
+* #20071000 ^designation[=].value = "Anwendung in der Harnröhre"
+* #20071000 ^designation[+].language = #fr-CH
+* #20071000 ^designation[=].value = "Voie urétrale"
 
-* #SUBMUCINJ "submucosal (Injektion)"
-* #SUBMUCINJ ^designation[0].language = #de-CH
-* #SUBMUCINJ ^designation[=].value = "submucosal (Injektion)"
-* #SUBMUCINJ ^designation[+].language = #fr-CH
-* #SUBMUCINJ ^designation[=].value = "sous-muqueuse (injection)"
+* #20072000 "vaginale Anwendung"
+* #20072000 ^designation[0].language = #de-CH
+* #20072000 ^designation[=].value = "vaginale Anwendung"
+* #20072000 ^designation[+].language = #fr-CH
+* #20072000 ^designation[=].value = "Voie vaginale"
 
-* #ICAVITINJ "intrakavitär (Injektion)"
-* #ICAVITINJ ^designation[0].language = #de-CH
-* #ICAVITINJ ^designation[=].value = "intrakavitär (Injektion)"
-* #ICAVITINJ ^designation[+].language = #fr-CH
-* #ICAVITINJ ^designation[=].value = "intracavitaire (injection)"
+* #20080000 "intracerebroventrikuläre Anwendung"
+* #20080000 ^designation[0].language = #de-CH
+* #20080000 ^designation[=].value = "intracerebroventrikuläre Anwendung"
+* #20080000 ^designation[+].language = #fr-CH
+* #20080000 ^designation[=].value = "Voie intracérébroventriculaire"
 
-* #NASALINSTIL "nasal (Instillation)"
-* #NASALINSTIL ^designation[0].language = #de-CH
-* #NASALINSTIL ^designation[=].value = "nasal (Instillation)"
-* #NASALINSTIL ^designation[+].language = #fr-CH
-* #NASALINSTIL ^designation[=].value = "nasale (instillation)"
+* #20081000 "subretinale Anwendung"
+* #20081000 ^designation[0].language = #de-CH
+* #20081000 ^designation[=].value = "subretinale Anwendung"
+* #20081000 ^designation[+].language = #fr-CH
+* #20081000 ^designation[=].value = "voie subrétinale"
 
-* #OT "Ohr (Instillation)"
-* #OT ^designation[0].language = #de-CH
-* #OT ^designation[=].value = "Ohr (Instillation)"
-* #OT ^designation[+].language = #fr-CH
-* #OT ^designation[=].value = "auriculaire (instillation)"
-
-* #GARGLE "gurgeln"
-* #GARGLE ^designation[0].language = #de-CH
-* #GARGLE ^designation[=].value = "gurgeln"
-* #GARGLE ^designation[+].language = #fr-CH
-* #GARGLE ^designation[=].value = "se gargariser"
-
-* #ILYMPJINJ "intralymphatisch"
-* #ILYMPJINJ ^designation[0].language = #de-CH
-* #ILYMPJINJ ^designation[=].value = "intralymphatisch"
-* #ILYMPJINJ ^designation[+].language = #fr-CH
-* #ILYMPJINJ ^designation[=].value = "intralymphatique"
-
-* #OROPHARTA "oropharyngeal"
-* #OROPHARTA ^designation[0].language = #de-CH
-* #OROPHARTA ^designation[=].value = "oropharyngeal"
-* #OROPHARTA ^designation[+].language = #fr-CH
-* #OROPHARTA ^designation[=].value = "application oropharyngée"
-
-* #ISINJ "intraspinal (Injektion)"
-* #ISINJ ^designation[0].language = #de-CH
-* #ISINJ ^designation[=].value = "intraspinal (Injektion)"
-* #ISINJ ^designation[+].language = #fr-CH
-* #ISINJ ^designation[=].value = "intrarachidienne (injection)"
-
-* #EXTCORPINJ "extrakorporal (Injektion)"
-* #EXTCORPINJ ^designation[0].language = #de-CH
-* #EXTCORPINJ ^designation[=].value = "extrakorporal (Injektion)"
-* #EXTCORPINJ ^designation[+].language = #fr-CH
-* #EXTCORPINJ ^designation[=].value = "extracorporelle (injection)"
-
-* #DISSOLVE "löslich, oral"
-* #DISSOLVE ^designation[0].language = #de-CH
-* #DISSOLVE ^designation[=].value = "löslich, oral"
-* #DISSOLVE ^designation[+].language = #fr-CH
-* #DISSOLVE ^designation[=].value = "orodispersible"
-
-* #SUCK "lutschen (oromukosal)"
-* #SUCK ^designation[0].language = #de-CH
-* #SUCK ^designation[=].value = "lutschen (oromukosal)"
-* #SUCK ^designation[+].language = #fr-CH
-* #SUCK ^designation[=].value = "sucer (muqueuse buccale)"
-
-* #CHEW "kauen, oral"
-* #CHEW ^designation[0].language = #de-CH
-* #CHEW ^designation[=].value = "kauen, oral"
-* #CHEW ^designation[+].language = #fr-CH
-* #CHEW ^designation[=].value = "mâcher (oral)"
-
-* #IDUODINSTIL "intraduodenal (Instillation)"
-* #IDUODINSTIL ^designation[0].language = #de-CH
-* #IDUODINSTIL ^designation[=].value = "intraduodenal (Instillation)"
-* #IDUODINSTIL ^designation[+].language = #fr-CH
-* #IDUODINSTIL ^designation[=].value = "intraduodénale (instillation)"
-
-* #RBINJ "retrobulbär (Injektion)"
-* #RBINJ ^designation[0].language = #de-CH
-* #RBINJ ^designation[=].value = "retrobulbär (Injektion)"
-* #RBINJ ^designation[+].language = #fr-CH
-* #RBINJ ^designation[=].value = "rétrobulbaire (injection)"
-
-* #NASINHL "nasal (Inhalation)"
-* #NASINHL ^designation[0].language = #de-CH
-* #NASINHL ^designation[=].value = "nasal (Inhalation)"
-* #NASINHL ^designation[+].language = #fr-CH
-* #NASINHL ^designation[=].value = "nasale (inhalation)"
-
-* #IU "intrauterin (Insertion)"
-* #IU ^designation[0].language = #de-CH
-* #IU ^designation[=].value = "intrauterin (Insertion)"
-* #IU ^designation[+].language = #fr-CH
-* #IU ^designation[=].value = "intra-utérine (insertion)"
-
-* #PNINFUS "perineural (Infusion)"
-* #PNINFUS ^designation[0].language = #de-CH
-* #PNINFUS ^designation[=].value = "perineural (Infusion)"
-* #PNINFUS ^designation[+].language = #fr-CH
-* #PNINFUS ^designation[=].value = "périneurale (perfusion)"
+* #20087000 "extrapleurale Anwendung"
+* #20087000 ^designation[0].language = #de-CH
+* #20087000 ^designation[=].value = "extrapleurale Anwendung"
+* #20087000 ^designation[+].language = #fr-CH
+* #20087000 ^designation[=].value = "Voie extrapleurale"

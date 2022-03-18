@@ -17,10 +17,10 @@ The codes for medicament are defined in the specification 'eMedication Plan CHME
    * binded to data type [CH EMED Quantity with units](http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-quantity)
    * ConceptMap [CHEMEDUnitCode-to-CDTYP9](ConceptMap-CHEMEDUnitCode-to-CDTYP9.html) to describe the relationship between CH EMED UnitCode and [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html)
    * source: [CDTYP9](https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=9) in INDEX database by HCI Solutions AG
-* CH EMED ValueSet [EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration) (**TBD**: more values as CHMED)
+* CH EMED ValueSet [EDQM - RouteOfAdministration](http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration)
    * includes codes from CH EMED CodeSystem [EDQM - Standard Terms](http://fhir.ch/ig/ch-emed/CodeSystem/edqm-standardterms)
    * binded to element Dosage.route of [CHMED Dosage](StructureDefinition-chmed-dosage.html)
-   * ConceptMap [EDQMRouteOfAdministration-to-CDTYP61](tbd) to describe the relationship between EDQM - RouteOfAdminstration and [CDTYP61](CodeSystem-chmed-codesystem-cdtyp61.html) (**TBD**: where the mapping is published)
+   * ConceptMap [EDQMRouteOfAdministration-to-CDTYP61](ConceptMap-CHEMEDEDQMROA-to-CDTYP61.html) to describe the relationship between EDQM - RouteOfAdminstration and [CDTYP61](CodeSystem-chmed-codesystem-cdtyp61.html)
    * source: [CDTYP61](https://index.hcisolutions.ch/index/current/get.aspx?schema=CODE&keytype=CDTYP&key=61&xsl=table.xslt) in INDEX database by HCI Solutions AG
 * ValueSet [EDQM - MethodOfAdministration](ValueSet-edqm-methodofadministration.html) (**TBD**: create VS)
    * includes codes from CHMED CodeSystem [EDQM - Standard Terms](CodeSystem-edqm-standardterms.html) (**TBD**: create CS)

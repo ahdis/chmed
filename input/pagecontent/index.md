@@ -35,7 +35,7 @@ You can download this implementation guide in [NPM format](https://confluence.hl
 [Significant changes](changelog.html) to this specification since its initial version.
 
 ### CHMED21A
-The ['eMedication Plan CHMED21'](TBD) paper describes the specification and reference implementation of the object model for a medication plan, the so-called CHMED21A.
+The ['eMedication Plan CHMED21A'](TBD) paper describes the specification and reference implementation of the object model for a medication plan, the so-called CHMED21A.
 
 The reference consists of:
 * The content and layout specification for the electronic document, a JSON file including a medication (Med) for which the format (MedF) and compression (IsCompressed) is being specified.

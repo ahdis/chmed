@@ -18,7 +18,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * [Terminologies](terminology.html): add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 * Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
-* Addition of [CHMED Patient](StructureDefinition-chmed-patient.html) profile for general use to existing CHMED Patient (Card) and [CHMED Patient (Pre) profiles referenced in Compositions.
+* Addition of [CHMED Patient](StructureDefinition-chmed-patient.html) profile for general use to existing CHMED Patient (Card) and CHMED Patient (Pre) profiles referenced in Compositions.
    * CHMED Patient is derived from CH Core Patient (general)
    * CHMED Patient Card/Pre are derived form CH Core Patient EPR (Composition)
 * Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html).

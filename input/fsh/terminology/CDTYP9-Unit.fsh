@@ -17,12 +17,6 @@ Description: "Code system for unit codes"
 * #% ^designation[=].value = "Prozent"
 * #% ^designation[+].language = #fr-CH
 * #% ^designation[=].value = "pour cent"
-	
-* #‰ "Promille"
-* #‰ ^designation[0].language = #de-CH
-* #‰ ^designation[=].value = "Promille"
-* #‰ ^designation[+].language = #fr-CH
-* #‰ ^designation[=].value = "pour mille"
 
 * #Appl "Applikation"
 * #Appl ^designation[0].language = #de-CH
@@ -47,18 +41,6 @@ Description: "Code system for unit codes"
 * #Btl ^designation[=].value = "Beutel"
 * #Btl ^designation[+].language = #fr-CH
 * #Btl ^designation[=].value = "sachet"
-
-* #cl "Centiliter"
-* #cl ^designation[0].language = #de-CH
-* #cl ^designation[=].value = "Centiliter"
-* #cl ^designation[+].language = #fr-CH
-* #cl ^designation[=].value = "Centilitre"
-
-* #dl "Deziliter"
-* #dl ^designation[0].language = #de-CH
-* #dl ^designation[=].value = "Deziliter"
-* #dl ^designation[+].language = #fr-CH
-* #dl ^designation[=].value = "Décilitre"
 
 * #Dos "Dosis"
 * #Dos ^designation[0].language = #de-CH
@@ -108,12 +90,6 @@ Description: "Code system for unit codes"
 * #GBq ^designation[+].language = #fr-CH
 * #GBq ^designation[=].value = "gigabecquerel"
 
-* #gML "Messlöffel gross"
-* #gML ^designation[0].language = #de-CH
-* #gML ^designation[=].value = "Messlöffel gross"
-* #gML ^designation[+].language = #fr-CH
-* #gML ^designation[=].value = "grande cuillère graduée"
-
 * #gtt "Tropfen"
 * #gtt ^designation[0].language = #de-CH
 * #gtt ^designation[=].value = "Tropfen"
@@ -125,12 +101,6 @@ Description: "Code system for unit codes"
 * #h ^designation[=].value = "Stunde"
 * #h ^designation[+].language = #fr-CH
 * #h ^designation[=].value = "heure"
-
-* #hl "Hektoliter"
-* #hl ^designation[0].language = #de-CH
-* #hl ^designation[=].value = "Hektoliter"
-* #hl ^designation[+].language = #fr-CH
-* #hl ^designation[=].value = "hectolitre"
 
 * #Hub "Hub"
 * #Hub ^designation[0].language = #de-CH
@@ -168,35 +138,11 @@ Description: "Code system for unit codes"
 * #kJ ^designation[+].language = #fr-CH
 * #kJ ^designation[=].value = "kilojoule"
 
-* #KL "Kaffeelöffel"
-* #KL ^designation[0].language = #de-CH
-* #KL ^designation[=].value = "Kaffeelöffel"
-* #KL ^designation[+].language = #fr-CH
-* #KL ^designation[=].value = "cuillère à café"
-
-* #kML "Messlöffel klein"
-* #kML ^designation[0].language = #de-CH
-* #kML ^designation[=].value = "Messlöffel klein"
-* #kML ^designation[+].language = #fr-CH
-* #kML ^designation[=].value = "petite cuillère graduée"
-
 * #L "Liter"
 * #L ^designation[0].language = #de-CH
 * #L ^designation[=].value = "Liter"
 * #L ^designation[+].language = #fr-CH
 * #L ^designation[=].value = "Liter"
-
-* #LA "Lamelle"
-* #LA ^designation[0].language = #de-CH
-* #LA ^designation[=].value = "Lamelle"
-* #LA ^designation[+].language = #fr-CH
-* #LA ^designation[=].value = "Lamelle"
-
-* #LS "Lipoprotein-Lipase-Rel.Einheit"
-* #LS ^designation[0].language = #de-CH
-* #LS ^designation[=].value = "Lipoprotein-Lipase-Rel.Einheit"
-* #LS ^designation[+].language = #fr-CH
-* #LS ^designation[=].value = "Lipoproteine-Lipase-Rel.Unité"
 
 * #LSU "LSU"
 * #LSU ^designation[0].language = #de-CH
@@ -252,12 +198,6 @@ Description: "Code system for unit codes"
 * #"Mio UI" ^designation[+].language = #fr-CH
 * #"Mio UI" ^designation[=].value = "mio UI"
 
-* #MK "Messkappe"
-* #MK ^designation[0].language = #de-CH
-* #MK ^designation[=].value = "Messkappe"
-* #MK ^designation[+].language = #fr-CH
-* #MK ^designation[=].value = "mesurette"
-
 * #ml "Milliliter"
 * #ml ^designation[0].language = #de-CH
 * #ml ^designation[=].value = "Milliliter"
@@ -276,24 +216,18 @@ Description: "Code system for unit codes"
 * #mol ^designation[+].language = #fr-CH
 * #mol ^designation[=].value = "mol"
 
-* #Monat "Monat"
-* #Monat ^designation[0].language = #de-CH
-* #Monat ^designation[=].value = "Monat"
-* #Monat ^designation[+].language = #fr-CH
-* #Monat ^designation[=].value = "mois"
-
 * #MU "Millionen Einheiten"
 * #MU ^designation[0].language = #de-CH
 * #MU ^designation[=].value = "Millionen Einheiten"
 * #MU ^designation[+].language = #fr-CH
 * #MU ^designation[=].value = "Millions d'unités"
 
+// kein Mapping dafür
 * #N/A "Unbekannt"
 * #N/A ^designation[0].language = #de-CH
 * #N/A ^designation[=].value = "Unbekannt"
 * #N/A ^designation[+].language = #fr-CH
 * #N/A ^designation[=].value = "inconnu"
-
 * #ng "Nanogramm"
 * #ng ^designation[0].language = #de-CH
 * #ng ^designation[=].value = "Nanogramm"
@@ -305,12 +239,6 @@ Description: "Code system for unit codes"
 * #nML ^designation[=].value = "Messlöffel"
 * #nML ^designation[+].language = #fr-CH
 * #nML ^designation[=].value = "cuillère graduée"
-
-* #nmol "Nanomol"
-* #nmol ^designation[0].language = #de-CH
-* #nmol ^designation[=].value = "Nanomol"
-* #nmol ^designation[+].language = #fr-CH
-* #nmol ^designation[=].value = "nanomol"
 
 * #Patr "Patrone"
 * #Patr ^designation[0].language = #de-CH
@@ -330,29 +258,11 @@ Description: "Code system for unit codes"
 * #Pfl ^designation[+].language = #fr-CH
 * #Pfl ^designation[=].value = "patch"
 
-* #Pip "Pipette"
-* #Pip ^designation[0].language = #de-CH
-* #Pip ^designation[=].value = "Pipette"
-* #Pip ^designation[+].language = #fr-CH
-* #Pip ^designation[=].value = "pipette"
-
-* #SDU "Single Dose Unit"
-* #SDU ^designation[0].language = #de-CH
-* #SDU ^designation[=].value = "Single Dose Unit"
-* #SDU ^designation[+].language = #fr-CH
-* #SDU ^designation[=].value = "Single Dose Unit"
-
 * #Stk "Stück"
 * #Stk ^designation[0].language = #de-CH
 * #Stk ^designation[=].value = "Stück"
 * #Stk ^designation[+].language = #fr-CH
 * #Stk ^designation[=].value = "pièce"
-
-* #t "Tonne"
-* #t ^designation[0].language = #de-CH
-* #t ^designation[=].value = "Tonne"
-* #t ^designation[+].language = #fr-CH
-* #t ^designation[=].value = "tonne"
 
 * #tablet "Tablette"
 * #tablet ^designation[0].language = #de-CH
@@ -383,12 +293,6 @@ Description: "Code system for unit codes"
 * #TL ^designation[=].value = "Teelöffel"
 * #TL ^designation[+].language = #fr-CH
 * #TL ^designation[=].value = "cuillère à café"
-
-* #Topf "Topf"
-* #Topf ^designation[0].language = #de-CH
-* #Topf ^designation[=].value = "Topf"
-* #Topf ^designation[+].language = #fr-CH
-* #Topf ^designation[=].value = "pot"
 
 * #TU "Tausend Einheiten"
 * #TU ^designation[0].language = #de-CH

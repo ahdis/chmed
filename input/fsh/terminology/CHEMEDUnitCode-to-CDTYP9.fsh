@@ -104,8 +104,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched
 
 * group[=].element[+].code = #733005001
-* group[=].element[=].target.code = #Pfl
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
 
 * group[=].element[+].code = #733006000
 * group[=].element[=].target.equivalence = #unmatched
@@ -117,13 +116,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched
 
 * group[=].element[+].code = #733009007
-* group[=].element[=].target[+].code = #Dosierpip // TBD: Dosierpip and/or Pip?
+* group[=].element[=].target[+].code = #Dosierpip
 * group[=].element[=].target[=].equivalence = #equivalent
-//* group[=].element[=].target[+].code = #Pip // TBD: Dosierpip and/or Pip?
-//* group[=].element[=].target[=].equivalence = #equivalent
 
 * group[=].element[+].code = #733010002
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target[+].code = #Pfl
+* group[=].element[=].target[=].equivalence = #equivalent
 
 * group[=].element[+].code = #733011003
 * group[=].element[=].target.equivalence = #unmatched
@@ -298,8 +296,10 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #10*6.{Unit}
-* group[=].element[=].target.code = #"Mio U" // TBD: Mio U und/oder MU?
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target[+].code = #"Mio U"
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #MU
+* group[=].element[=].target[=].equivalence = #equivalent
 
 * group[=].element[+].code = #10*6.[iU]
 * group[=].element[=].target.code = #"Mio UI"
@@ -325,8 +325,10 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 * group[=].element[+].code = #{Unit} 
-* group[=].element[=].target.code = #U // TBD: U und/oder E?
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target[+].code = #U
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #E
+* group[=].element[=].target[=].equivalence = #equivalent
 
 * group[=].element[+].code = #[iU]
 * group[=].element[=].target.code = #UI
@@ -334,3 +336,6 @@ Usage: #definition
 
 * group[=].element[+].code = #[CFU]
 * group[=].element[=].target.equivalence = #unmatched
+
+// TBD
+// CH EMED: Jahr, LSU (lipoprotein lipase releasing units)?, Teilpck?

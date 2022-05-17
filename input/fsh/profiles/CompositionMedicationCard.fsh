@@ -20,9 +20,8 @@ Description: "Profile for the Composition resource of the Medication Card docume
 
 * author only Reference($ch-emed-practitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
 
-// TBD next release: https://github.com/ahdis/chmed/issues/17
-// * author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
-// * author.extension[authorRole] ^short = "Role of the author"
+* author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
+* author.extension[authorRole] ^short = "Role of the author"
 
 * section[card].entry only Reference(CHMEDMedicationStatementCard)
 * section[card].entry ^short = "Medicament"
@@ -77,8 +76,7 @@ Target: "http://emediplan.ch/chmed21a"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
 * author -> "Auth, Zsr"
-// TBD next release: https://github.com/ahdis/chmed/issues/17
-// * author.extension[authorRole] -> "AuthR"
+* author.extension[authorRole] -> "AuthR"
 
 * section[card] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"

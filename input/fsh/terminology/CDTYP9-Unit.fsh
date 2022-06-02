@@ -144,12 +144,6 @@ Description: "Code system for unit codes"
 * #L ^designation[+].language = #fr-CH
 * #L ^designation[=].value = "Liter"
 
-* #LSU "LSU"
-* #LSU ^designation[0].language = #de-CH
-* #LSU ^designation[=].value = "LSU"
-* #LSU ^designation[+].language = #fr-CH
-* #LSU ^designation[=].value = "LSU"
-
 * #MB "Messbecher"
 * #MB ^designation[0].language = #de-CH
 * #MB ^designation[=].value = "Messbecher"

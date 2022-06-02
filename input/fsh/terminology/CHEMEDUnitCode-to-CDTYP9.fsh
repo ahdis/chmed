@@ -338,4 +338,4 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched
 
 // TBD
-// CH EMED: Jahr, LSU (lipoprotein lipase releasing units)?, Teilpck?
+// CH EMED: Jahr, Teilpck

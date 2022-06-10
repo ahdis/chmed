@@ -60,8 +60,8 @@ Description: "Profile for the Patient resource (derived from CH Core Patient EPR
 * address.postalCode ^short = "Zip Code"
 
 * communication ..1
-* communication[languageOfCorrespondance] 1..
-* communication[languageOfCorrespondance] ^short = "Language of the patient"
+* communication[languageOfCorrespondence] 1..
+* communication[languageOfCorrespondence] ^short = "Language of the patient"
 
 
 
@@ -91,4 +91,4 @@ Target: "http://emediplan.ch/chmed21a"
 * address.line -> "Street"
 * address.city -> "City"
 * address.postalCode -> "Zip"
-* communication[languageOfCorrespondance] -> "Lng (conversion between ISO 639-1 (ex. de) to urn:ietf:bcp:47 (ex. de-CH) necessary)"
+* communication[languageOfCorrespondence] -> "Lng (conversion between ISO 639-1 (ex. de) to urn:ietf:bcp:47 (ex. de-CH) necessary)"

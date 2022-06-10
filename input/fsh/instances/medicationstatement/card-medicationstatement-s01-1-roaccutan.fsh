@@ -12,9 +12,9 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Akne"
 * note.text = "1x morgens, bei Bedarf"
-* dosage[+].timing.repeat.boundsPeriod.start = "2016-09-12"
-* dosage[=].timing.repeat.boundsPeriod.end = "2020-09-12"
-* dosage[=].timing.repeat.when = #MORN
-* dosage[=].asNeededBoolean = true
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+* dosage[structurednormal].timing.repeat.boundsPeriod.start = "2016-09-12"
+* dosage[structurednormal].timing.repeat.boundsPeriod.end = "2020-09-12"
+* dosage[structurednormal].timing.repeat.when = #MORN
+* dosage[structurednormal].asNeededBoolean = true
+* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structurednormal].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"

@@ -21,5 +21,5 @@ Usage: #example
 * address.line = "Untermattweg 8"
 * address.city = "Bern"
 * address.postalCode = "3027"
-* communication.language = urn:ietf:bcp:47#de-CH "German (Region=Switzerland)"
-* communication.preferred = true
+* communication[languageOfCorrespondence].language = urn:ietf:bcp:47#de-CH "German (Region=Switzerland)"
+* communication[languageOfCorrespondence].preferred = true

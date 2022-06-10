@@ -12,27 +12,30 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "ausschleichend"
-* dosage[+].sequence = 0
-* dosage[=].timing.repeat.boundsPeriod.start = "2017-09-05"
-* dosage[=].timing.repeat.boundsPeriod.end = "2017-09-06"
-* dosage[=].timing.repeat.duration = 1
-* dosage[=].timing.repeat.durationUnit = #d
-* dosage[=].timing.repeat.frequency = 1
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 40 'mg' "milligram"
-* dosage[+].sequence = 1
-* dosage[=].timing.repeat.boundsPeriod.start = "2017-09-07"
-* dosage[=].timing.repeat.boundsPeriod.end = "2017-09-15"
-* dosage[=].timing.repeat.duration = 1
-* dosage[=].timing.repeat.durationUnit = #d
-* dosage[=].timing.repeat.frequency = 1
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 30 'mg' "milligram"
-* dosage[+].sequence = 3
-* dosage[=].timing.repeat.boundsPeriod.start = "2017-09-16"
-* dosage[=].timing.repeat.boundsPeriod.end = "2017-09-21"
-* dosage[=].timing.repeat.duration = 1
-* dosage[=].timing.repeat.durationUnit = #d
-* dosage[=].timing.repeat.frequency = 1
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 25 'mg' "milligram"
+
+* dosage[structuredsplit][+].sequence = 0
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.start = "2017-09-05"
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.end = "2017-09-06"
+* dosage[structuredsplit][=].timing.repeat.duration = 1
+* dosage[structuredsplit][=].timing.repeat.durationUnit = #d
+* dosage[structuredsplit][=].timing.repeat.frequency = 1
+* dosage[structuredsplit][=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structuredsplit][=].doseAndRate.doseQuantity = 40 'mg' "milligram"
+
+* dosage[structuredsplit][+].sequence = 1
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.start = "2017-09-07"
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.end = "2017-09-15"
+* dosage[structuredsplit][=].timing.repeat.duration = 1
+* dosage[structuredsplit][=].timing.repeat.durationUnit = #d
+* dosage[structuredsplit][=].timing.repeat.frequency = 1
+* dosage[structuredsplit][=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structuredsplit][=].doseAndRate.doseQuantity = 30 'mg' "milligram"
+
+* dosage[structuredsplit][+].sequence = 3
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.start = "2017-09-16"
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.end = "2017-09-21"
+* dosage[structuredsplit][=].timing.repeat.duration = 1
+* dosage[structuredsplit][=].timing.repeat.durationUnit = #d
+* dosage[structuredsplit][=].timing.repeat.frequency = 1
+* dosage[structuredsplit][=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structuredsplit][=].doseAndRate.doseQuantity = 25 'mg' "milligram"

@@ -12,13 +12,15 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Bluthochdruck/Herz"
 * note.text = "1 Tablette morgens, 1/2 Tablette abends"
-* dosage[+].sequence = 1
-* dosage[=].timing.repeat.boundsPeriod.start = "2016-02-10"
-* dosage[=].timing.repeat.when = #MORN
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
-* dosage[+].sequence = 1
-* dosage[=].timing.repeat.boundsPeriod.start = "2016-02-10"
-* dosage[=].timing.repeat.when = #EVE
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 0.5 '{Piece}' "Piece"
+
+* dosage[structuredsplit][+].sequence = 1
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.start = "2016-02-10"
+* dosage[structuredsplit][=].timing.repeat.when = #MORN
+* dosage[structuredsplit][=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structuredsplit][=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+
+* dosage[structuredsplit][+].sequence = 1
+* dosage[structuredsplit][=].timing.repeat.boundsPeriod.start = "2016-02-10"
+* dosage[structuredsplit][=].timing.repeat.when = #EVE
+* dosage[structuredsplit][=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structuredsplit][=].doseAndRate.doseQuantity = 0.5 '{Piece}' "Piece"

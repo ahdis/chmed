@@ -12,7 +12,7 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Cholesterinsenker"
 * note.text = "1 Tablette abends"
-* dosage[+].timing.repeat.boundsPeriod.start = "2016-02-10"
-* dosage[=].timing.repeat.when = #EVE
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+* dosage[structurednormal].timing.repeat.boundsPeriod.start = "2016-02-10"
+* dosage[structurednormal].timing.repeat.when = #EVE
+* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structurednormal].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"

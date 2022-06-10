@@ -11,10 +11,10 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
-* dosage[+].timing.repeat.boundsPeriod.start = "2017-09-07"
-* dosage[=].timing.repeat.duration = 1
-* dosage[=].timing.repeat.durationUnit = #d
-* dosage[=].timing.repeat.frequency = 1
-* dosage[=].timing.repeat.timeOfDay = "08:00:00"
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[=].doseAndRate.doseQuantity = 40 'mg' "milligram"
+* dosage[structurednormal].timing.repeat.boundsPeriod.start = "2017-09-07"
+* dosage[structurednormal].timing.repeat.duration = 1
+* dosage[structurednormal].timing.repeat.durationUnit = #d
+* dosage[structurednormal].timing.repeat.frequency = 1
+* dosage[structurednormal].timing.repeat.timeOfDay = "08:00:00"
+* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[structurednormal].doseAndRate.doseQuantity = 40 'mg' "milligram"

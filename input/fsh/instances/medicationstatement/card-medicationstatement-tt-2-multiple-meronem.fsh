@@ -12,16 +12,16 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Infektion"
 * note.text = "Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen"
-* dosage[+].timing.repeat.boundsPeriod.start = "2017-09-05"
-* dosage[=].timing.repeat.boundsPeriod.end = "2020-09-26"
-* dosage[=].timing.repeat.duration = 1800
-* dosage[=].timing.repeat.durationUnit = #s
-* dosage[=].timing.repeat.frequency = 3
-* dosage[=].timing.repeat.period = 1
-* dosage[=].timing.repeat.periodUnit = #wk
-* dosage[=].timing.repeat.dayOfWeek = #tue
-* dosage[=].timing.repeat.timeOfDay[0] = "08:00:00"
-* dosage[=].timing.repeat.timeOfDay[+] = "12:00:00"
-* dosage[=].timing.repeat.timeOfDay[+] = "18:00:00"
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20045000 "Intravenous use"
-* dosage[=].doseAndRate.doseQuantity = 2 'g' "gram"
+* dosage[structurednormal].timing.repeat.boundsPeriod.start = "2017-09-05"
+* dosage[structurednormal].timing.repeat.boundsPeriod.end = "2020-09-26"
+* dosage[structurednormal].timing.repeat.duration = 1800
+* dosage[structurednormal].timing.repeat.durationUnit = #s
+* dosage[structurednormal].timing.repeat.frequency = 3
+* dosage[structurednormal].timing.repeat.period = 1
+* dosage[structurednormal].timing.repeat.periodUnit = #wk
+* dosage[structurednormal].timing.repeat.dayOfWeek = #tue
+* dosage[structurednormal].timing.repeat.timeOfDay[0] = "08:00:00"
+* dosage[structurednormal].timing.repeat.timeOfDay[+] = "12:00:00"
+* dosage[structurednormal].timing.repeat.timeOfDay[+] = "18:00:00"
+* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20045000 "Intravenous use"
+* dosage[structurednormal].doseAndRate.doseQuantity = 2 'g' "gram"

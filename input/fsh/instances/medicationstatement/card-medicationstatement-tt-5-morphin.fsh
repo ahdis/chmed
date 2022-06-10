@@ -12,11 +12,11 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "Dosis jede Stunde 50 ml erhöhen"
-* dosage[+].timing.repeat.count = 1
-* dosage[=].timing.repeat.duration = 14400
-* dosage[=].timing.repeat.durationUnit = #s
-* dosage[=].timing.repeat.timeOfDay = "08:00:00"
-* dosage[=].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20045000 "Intravenous use"
-* dosage[=].doseAndRate.doseQuantity.extension.url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
-* dosage[=].doseAndRate.doseQuantity.extension.valueQuantity = 200 'mL' "milliliter"
-* dosage[=].doseAndRate.doseQuantity = 50 'mL' "milliliter"
+* dosage[structurednormal].timing.repeat.count = 1
+* dosage[structurednormal].timing.repeat.duration = 14400
+* dosage[structurednormal].timing.repeat.durationUnit = #s
+* dosage[structurednormal].timing.repeat.timeOfDay = "08:00:00"
+* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20045000 "Intravenous use"
+* dosage[structurednormal].doseAndRate.doseQuantity.extension.url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
+* dosage[structurednormal].doseAndRate.doseQuantity.extension.valueQuantity = 200 'mL' "milliliter"
+* dosage[structurednormal].doseAndRate.doseQuantity = 50 'mL' "milliliter"

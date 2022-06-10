@@ -13,9 +13,9 @@ Description: "Dosage structured normal of a Medication Prescription document"
 
 
 
-Mapping: CHMED21A-for-CHMEDDosageStructuredNormalPre
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDDosageStructuredNormalPre
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDDosageStructuredNormalPre
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Posology"

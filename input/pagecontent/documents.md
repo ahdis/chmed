@@ -1,6 +1,6 @@
-CHMED21A and CHMED (FHIR version) define two different exchange formats:
-1. [Medication Card document](#medication-card-document) (CHMED21A: MedicationPlan (MP))
-2. [Medication Prescription document](#medication-prescription-document) (CHMED21A: Prescription (Rx))
+CHMED23A and CHMED (FHIR version) define two different exchange formats:
+1. [Medication Card document](#medication-card-document) (CHMED23A: MedicationPlan (MP))
+2. [Medication Prescription document](#medication-prescription-document) (CHMED23A: Prescription (Rx))
 
 These exchange formats are defined as a [document type](https://www.hl7.org/fhir/documents.html) that corresponds to a [Bundle](https://www.hl7.org/fhir/bundle.html) as a FHIR resource. A Bundle has a list of entries. The first entry is the [Composition](https://www.hl7.org/fhir/composition.html), in which all contained entries are then referenced.
 
@@ -12,19 +12,19 @@ The Medication Card document describes the **current medication** of a patient, 
 #### Bundle (Card)
 The Bundle resource defines the Medication Card document and its content, which are contained as entries.
 * [Profile](StructureDefinition-chmed-card-bundle.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-card-bundle-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-card-bundle-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-card-bundle-examples.html)
 
 #### Composition (Card)
 The Composition resource defines the healthcare-related information that is assembled together into a single Medication Card document. The Composition resource provides the basic structure of a FHIR document.
 * [Profile](StructureDefinition-chmed-card-composition.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-card-composition-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-card-composition-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-card-composition-examples.html)
 
 #### Medication Card Section (Card)
 The medication card section contains the entries for the current medication of a patient. A medication consumed by a patient is recorded as MedicationStatement resource.
 * [Profile](StructureDefinition-chmed-card-medicationstatement.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-card-medicationstatement-examples.html)
 
 #### Health Concerns Section (Card)
@@ -36,7 +36,7 @@ The health concerns section contains the patient's medical data (Observation res
    * [Premature baby](StructureDefinition-chmed-obs-prematurebaby.html)
    * [Time of gestation](StructureDefinition-chmed-obs-timeofgestation.html)
    * [Risks](StructureDefinition-chmed-condition-risks.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-card-composition-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-card-composition-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * Examples
    * [First day of last menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation-examples.html)
    * [Premature baby](StructureDefinition-chmed-obs-prematurebaby-examples.html)
@@ -59,19 +59,19 @@ The Medication Prescription document describes the content and format of a presc
 #### Bundle (Pre)
 The Bundle resource defines the Medication Prescription document and its content, which are contained as entries.
 * [Profile](StructureDefinition-chmed-pre-bundle.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-pre-bundle-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-pre-bundle-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-pre-bundle-examples.html)
 
 #### Composition (Pre)
 The Composition resource defines the healthcare-related information that is assembled together into a single Medication Prescription document. The Composition resource provides the basic structure of a FHIR document.
 * [Profile](StructureDefinition-chmed-pre-composition.html)
-* [Mapping to CHMED21A](StructureDefinition-chmed-pre-composition-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-pre-composition-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-pre-composition-examples.html)
 
 #### Medication Prescription Section (Pre)
 The medication prescription section contains the entries for the prescriped medications of a patient. An order or request of the medication to a patient is represented as MedicationRequest resource.
 * [Profile](StructureDefinition-chmed-pre-medicationrequest.html) 
-* [Mapping to CHMED21A](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a)
+* [Mapping to CHMED23A](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a)
 * [Examples](StructureDefinition-chmed-pre-medicationrequest-examples.html)
 
 #### Annotation Section (Pre)

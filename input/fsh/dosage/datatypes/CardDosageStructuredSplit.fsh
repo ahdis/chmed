@@ -13,9 +13,9 @@ Description: "Dosage structured split of a Medication Card document"
 
 
 
-Mapping: CHMED21A-for-CHMEDDosageStructuredSplitCard
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDDosageStructuredSplitCard
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDDosageStructuredSplitCard
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Posology"

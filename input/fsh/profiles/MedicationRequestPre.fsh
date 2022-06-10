@@ -33,11 +33,11 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 
 
-Mapping: CHMED21A-for-CHMEDMedicationRequestPre
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDMedicationRequestPre
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDMedicationRequestPre
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Medicament"
 * extension[privateField] -> "PFs -> PrivateField"
 * medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"

@@ -21,10 +21,10 @@ Description: "Profile for the Observation resource to represent the first day of
 
 
 
-Mapping: CHMED21A-for-CHMEDFirstDayOfLastMenstruation
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDFirstDayOfLastMenstruation
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDFirstDayOfLastMenstruation
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * subject -> "Patient.MData -> MedicalData"
 * valueDateTime -> "MedicalData.DLstMen"

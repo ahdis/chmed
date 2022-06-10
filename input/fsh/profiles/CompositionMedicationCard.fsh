@@ -63,11 +63,11 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[healthconcerns].section 0..0
 
 
-Mapping: CHMED21A-for-CHMEDCompositionMedicationCard
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDCompositionMedicationCard
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDCompositionMedicationCard
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Medication"
 * extension[informationRecipient] -> "Rcv"
 * extension[privateField] -> "PFs -> PrivateField"

@@ -25,10 +25,10 @@ Description: "Profile for the Observation resource to represent the time of gest
 * subject ^short = "Patient"
 
 
-Mapping: CHMED21A-for-CHMEDTimeOfGestation
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDTimeOfGestation
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDTimeOfGestation
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * subject -> "Patient.MData -> MedicalData"
 * valueQuantity -> "MedicalData.ToG (format conversion between {week}-{day} to 'days' necessary)"

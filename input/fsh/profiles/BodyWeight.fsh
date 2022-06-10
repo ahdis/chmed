@@ -23,10 +23,10 @@ Description: "Profile for the Observation resource to represent the body weight"
 
 
 
-Mapping: CHMED21A-for-CHMEDBodyWeight
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDBodyWeight
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDBodyWeight
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * subject -> "Patient.MData -> MedicalData"
 * valueQuantity -> "MedicalData.W"

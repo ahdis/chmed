@@ -61,11 +61,11 @@ Description: "Profile for the Patient resource (derived from CH Core Patient)"
 
 
 
-Mapping: CHMED21A-for-CHMEDPatient
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDPatient
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDPatient
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Patient"
 * extension[privateField] -> "PFs -> PrivateField"
 

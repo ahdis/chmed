@@ -13,9 +13,9 @@ Description: "Dosage structured split of a Medication Prescription document"
 
 
 
-Mapping: CHMED21A-for-CHMEDDosageStructuredSplitPre
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDDosageStructuredSplitPre
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDDosageStructuredSplitPre
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Posology"

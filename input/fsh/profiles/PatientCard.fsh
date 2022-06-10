@@ -66,11 +66,11 @@ Description: "Profile for the Patient resource (derived from CH Core Patient EPR
 
 
 
-Mapping: CHMED21A-for-CHMEDPatientCard
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDPatientCard
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDPatientCard
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Patient"
 * extension[privateField] -> "PFs -> PrivateField"
 

@@ -23,10 +23,10 @@ Description: "Profile for the Observation resource to represent the body height"
 
 
 
-Mapping: CHMED21A-for-CHMEDBodyHeight
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDBodyHeight
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDBodyHeight
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * subject -> "Patient.MData -> MedicalData"
 * valueQuantity -> "MedicalData.H"

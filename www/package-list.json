@@ -13,14 +13,23 @@
             "current": true
         },
         {
-            "version": "2.0.0",
-            "date": "2021-06-30",
-            "desc": "eMediplan CHMED20AF Implementation Guide (R4)",
-            "path": "http://chmed20af.emediplan.ch/fhir",
+            "version": "2.1.0",
+            "date": "2022-xx-xx",
+            "desc": "eMediplan CHMED Implementation Guide (R4)",
+            "path": "http://chmed.emediplan.ch/fhir",
             "status": "trial-use",
             "sequence": "STU 1",
             "fhirversion": "4.0.1",
             "current": true
+        },
+        {
+            "version": "2.0.0",
+            "date": "2021-06-30",
+            "desc": "eMediplan CHMED20AF Implementation Guide (R4)",
+            "path": "http://chmed20af.emediplan.ch/fhir/2.0.0",
+            "status": "trial-use",
+            "sequence": "STU 1",
+            "fhirversion": "4.0.1"
         },
         {
             "version": "1.0.0",

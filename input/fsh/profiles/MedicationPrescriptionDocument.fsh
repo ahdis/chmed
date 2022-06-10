@@ -13,9 +13,9 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 
 
 
-Mapping: CHMED21A-for-CHMEDMedicationPrescriptionDocument
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDMedicationPrescriptionDocument
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDMedicationPrescriptionDocument
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * identifier -> "Medication.Id"

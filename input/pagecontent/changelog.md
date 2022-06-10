@@ -2,11 +2,11 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 
-### v3.0.0 (2022)
+### v2.1.0 (2022)
 
 #### Open Issues
 The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
-* [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED21A.
+* [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED23A.
 
 See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
 
@@ -16,7 +16,7 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
    * Set flags were they correlate with the described meaning.
 * [Terminologies](terminology.html): add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
 * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
-* Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED21A.
+* Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED23A.
 * Addition of [CHMED Patient](StructureDefinition-chmed-patient.html) profile for general use to existing CHMED Patient (Card) and CHMED Patient (Pre) profiles referenced in Compositions.
    * CHMED Patient is derived from CH Core Patient (general)
    * CHMED Patient Card/Pre are derived form CH Core Patient EPR (Composition)
@@ -24,22 +24,22 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
    * See also [CH EMED Issue #91](https://github.com/hl7ch/ch-emed/issues/91). 
 
 #### Changed / Updated
-* Update to the specification [CHMED21A (Vx.x)](TBD).
+* Update to the draft specification 'CHMED23A'.
    * Renaming the implementation guide (verion independence): CHMED20AF -> CHMED
    * Changing the canonical url (verion independence): http://chmed20af.emediplan.ch -> http://chmed.emediplan.ch
    * Update mappings of the profiles.
-* Adjustments to the current status of CH EMED (after its [ballot STU 2](https://fhir.ch/ig/ch-emed/2.0.0/changelog.html)).
-   * Depending on [CH EMED v2.0.0](https://fhir.ch/ig/ch-emed/2.0.0/index.html)
+* Adjustments to the current status of CH EMED (v2.1.0).
    * Change two references of Composition.author in [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html) and [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html) (the other references do not change) .   
       * CHMED Practitioner -> CH EMED Practitioner
          * Remove profile CHMED Practitioner and use the new profile [CH EMED Practitioner](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-practitioner.html) instead, because there are no differences.
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
       * CH Core PractitionerRole Epr -> CH EMED PractitionerRole      
-* Update Dosage according to the specification [eMedication Plan CHMED21A Posology (Vx.x)](TBD). For details see tab [Dosage](dosage.html).
-   * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
-   * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).
-* Remove definition for Composition.attester:professionalAuthenticator because the fields Medication.ValBy and Medication.ValDt doesn't exist anymore in the CHMED21A specification.
-* Add additional reference PractitionerRole to [MedicationStatement.informationSource](StructureDefinition-chmed-card-medicationstatement.html) and update corresponding [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a). 
+* Update Dosage according to the draft specification 'eMedication Plan CHMED23A Posology'. For details see tab [Dosage](dosage.html).
+   * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
+   * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).
+* Remove unstructured dosage if there is a normal or split dosage ([Issue #19](https://github.com/ahdis/chmed/issues/19)).
+* Remove definition for Composition.attester:professionalAuthenticator because the fields Medication.ValBy and Medication.ValDt doesn't exist anymore in CHMED23A.
+* Add additional reference PractitionerRole to [MedicationStatement.informationSource](StructureDefinition-chmed-card-medicationstatement.html) and update corresponding [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a). 
 * Rename tab 'Private Fields' to [Extension](extensions.html) and list all extensions (not only the private field one) included in the IG. 
 * Rename tab 'Introduction' to [Documents](documents.html) and adjustment of the display of the mapping. Link to the profile's mapping table, instead of the duplicated, manually created table on this page.
 * Add 'CHMED' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED Practitioner' from the FHIR basis Practitioner.
@@ -47,13 +47,13 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
 * Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 
 #### Fixed
-* Include missing [mapping](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed21a-http-emediplan-ch-chmed21a) of 'Medicament.Rep' ([Issue #9](https://github.com/ahdis/chmed/issues/9)).
+* Include missing [mapping](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a) of 'Medicament.Rep' ([Issue #9](https://github.com/ahdis/chmed/issues/9)).
 * Add missing codes for Diabetes mellitus type 1 and 2 ([Issue #12](https://github.com/ahdis/chmed/issues/12)):
    * CodeSystem [Risk Categories](CodeSystem-chmed-codesystem-risks-category.html): 7 Diabetes
    * CodeSystem [Risks](CodeSystem-chmed-codesystem-risks-cdscode.html): 779 Diabetes mellitus Typ 1, 780 Diabetes mellitus Typ 2   
 * Remove unused (but in INDEX published) code '613 Zeugungsunfähige Männer' from [CodeSystem CHMED Risks](CodeSystem-chmed-codesystem-risks-cdscode.html).
+* Typos: [Issue #20](https://github.com/ahdis/chmed/issues/20)
    
-
 
 ### v2.0.0 (2021-06-30)
 * Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md)).

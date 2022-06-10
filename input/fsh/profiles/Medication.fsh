@@ -11,11 +11,11 @@ Description: "Profile for the Medication resource"
 
 
 
-Mapping: CHMED21A-for-CHMEDMedication
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDMedication
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDMedication
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Medicament"
 * code.coding[GTIN] -> "Id with IdType 2 (GTIN)"
 * code.text -> "Id with IdType 1 (None)"

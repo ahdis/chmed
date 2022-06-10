@@ -34,11 +34,11 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * dosage[structuredsplit]
 
 
-Mapping: CHMED21A-for-CHMEDMedicationStatementCard
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDMedicationStatementCard
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDMedicationStatementCard
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "Medicament"
 * extension[privateField] -> "PFs -> PrivateField"
 * extension[substitution] -> "Sub"

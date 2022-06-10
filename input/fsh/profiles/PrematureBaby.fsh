@@ -20,10 +20,10 @@ Description: "Profile for the Observation resource to represent a premature baby
 * subject ^short = "Patient"
 
 
-Mapping: CHMED21A-for-CHMEDPrematureBaby
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDPrematureBaby
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDPrematureBaby
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * subject -> "Patient.MData -> MedicalData"
 * valueBoolean -> "MedicalData.Prem"

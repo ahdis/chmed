@@ -13,9 +13,9 @@ Description: "Profile for the Bundle resource to represent the entire, current m
 
 
 
-Mapping: CHMED21A-for-CHMEDMedicationCardDocument
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDMedicationCardDocument
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDMedicationCardDocument
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * identifier -> "Medication.Id"

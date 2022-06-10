@@ -1,16 +1,16 @@
-The model of dosages between CHMED21A and the CHMED (FHIR version) differ sligthly due to the FHIR dosage model.
-This has an effect on how to map the different attributes form CHMED21A to CHMED.
+The model of dosages between CHMED23A and the CHMED (FHIR version) differ sligthly due to the FHIR dosage model.
+This has an effect on how to map the different attributes form CHMED23A to CHMED.
 
 ### Posology and Dosage
 
-* The CHMED21A model defines for a *Medicament* n *Posologies*. The posology of a medicament describes **when**, which **quantity** of the medicament must be applied. Different types of *Posology objects* can be specified to define different dosages.
+* The CHMED23A model defines for a *Medicament* n *Posologies*. The posology of a medicament describes **when**, which **quantity** of the medicament must be applied. Different types of *Posology objects* can be specified to define different dosages.
 * In FHIR a *[MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)/[MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)* can have n *[Dosages](https://www.hl7.org/fhir/dosage.html)* with one *[Timing](https://www.hl7.org/fhir/datatypes.html#Timing)* (which can have repeating timing defintions).
 
 
 
 **Example:**
 
-CHMED21A format for Posology:
+CHMED23A format for Posology:
 ```
 { 
 	"DtFrom": "2021-10-07", // Taking must occur on this date (DtFrom and DtTo are equal) 
@@ -52,8 +52,8 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 **CHMED Dosage:** 
-* [Data Type Profile](StructureDefinition-chmed-dosage.html) to define the FHIR representation of the dosage according tho the 'Posology' in CHMED21A.
-* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed21a-http-emediplan-ch-chmed21a) to represent the relationship of FHIR to CHMED21A.
+* [Data Type Profile](StructureDefinition-chmed-dosage.html) to define the FHIR representation of the dosage according tho the 'Posology' in CHMED23A.
+* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) to represent the relationship of FHIR to CHMED23A.
 
 #### Relation to CH EMED
 <span style="color:red">CAVE:</span>
@@ -71,10 +71,10 @@ The mapping to [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html) can be found in
 
 
 *Note for the following FHIR examples:*   
-*The CH EMED exchange format requires the structured specification of units when defining [quantity](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-quantity.html) and [range](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-range.html). In CHMED21A is the Unit element (not always shown in the CHMED21A examples) on the same level as the Posology element and mandatory if Posology is defined.*
+*The CH EMED exchange format requires the structured specification of units when defining [quantity](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-quantity.html) and [range](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-range.html). In CHMED23A is the Unit element (not always shown in the CHMED23A examples) on the same level as the Posology element and mandatory if Posology is defined.*
 
 ### Posology Objects
-Different [types of posology objects](ValueSet-chmed-valueset-posology-object-type.html) are specified in CHMED21A. Details and examples for the 6 types ([Daily](#daily), [FreeText](#free-text), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence), [Even/odd days](#evenodd-days)) are described in the following sections.
+Different [types of posology objects](ValueSet-chmed-valueset-posology-object-type.html) are specified in CHMED23A. Details and examples for the 6 types ([Daily](#daily), [FreeText](#free-text), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence), [Even/odd days](#evenodd-days)) are described in the following sections.
 
 #### Daily
 Describes when (morning, noon, evening, night) and how much of a medicament must be taken daily, using a simple structure. 
@@ -89,7 +89,7 @@ In the exchange format CH EMED is with structured dosing the format 1-1-1-1, mea
 
 **Example 1-0-1-0:** Take daily 1 in the morning and 1 in the evening.
 
-CHMED21A format for Daily:
+CHMED23A format for Daily:
 ```
 {
 	"T": 1, // Daily posology object 
@@ -141,7 +141,7 @@ FHIR format for Dosage (structured normal) (see also [example](MedicationStateme
 
 **Example 1-0-2-0:** Take daily 1 in the morning and 2 in the evening.
 
-CHMED21A format for Daily:
+CHMED23A format for Daily:
 ```
 {
 	"T": 1, // Daily posology object 
@@ -228,7 +228,7 @@ In the exchange format CH EMED, the dosage is given as free text for the unstruc
 
 **Example:** Free text.
 
-CHMED21A format for Free Text:
+CHMED23A format for Free Text:
 ```
 { 
 	"T": 2, // Free text posology object 
@@ -261,7 +261,7 @@ Describes a single application of a medicament. With the single field being a ti
 
 **Example:** Take 1.
 
-CHMED21A format for Single:
+CHMED23A format for Single:
 ```
 { 
 	"T": 3, // Single taking posology object 
@@ -326,7 +326,7 @@ Describes the application of a medicament at constant intervals.
 
 **Example:** 1 pill twice a week.
 
-CHMED21A format for Cyclic:
+CHMED23A format for Cyclic:
 ```
 { 
 	"T": 4, // Cyclic posology object 
@@ -395,7 +395,7 @@ The FHIR mapping of the 'duration (incl. duration unit)' is in the `Dosage.timin
 
 **Example:** Take daily 1 for 21 days, then take a break of 7 days.
 
-CHMED21A format for Sequence:
+CHMED23A format for Sequence:
 ```
 { 
 	"Meds": [ 
@@ -528,7 +528,7 @@ Allows to specify a posology that must be applied on even or odd days.
 
 **Example:** Take 1 on even days, starting 02.01.2021.
 
-CHMED21A format for Even/Odd days:
+CHMED23A format for Even/Odd days:
 ```
 { 
 	"Meds": [ 
@@ -615,14 +615,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 
 ### Timed Dosage Objects
-Different [types of timed dosage objects](ValueSet-chmed-valueset-timed-dosage-object-type.html) are defined in CHMED21A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
+Different [types of timed dosage objects](ValueSet-chmed-valueset-timed-dosage-object-type.html) are defined in CHMED23A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
 
 #### DosageOnly
 Specifies a dosage without specifying a precise taking moment.
 
 **Example:** Take 1.
 
-CHMED21A format for DosageOnly:
+CHMED23A format for DosageOnly:
 ```
 { 
 	"T": 1, // DosageOnly timed dosage object 
@@ -669,7 +669,7 @@ The FHIR mapping of 'Times' is in the `Dosage.timing.repeat.timeOfDay` element f
 
 **Example:** Take 1 at 08:00.
 
-CHMED21A format for Times:
+CHMED23A format for Times:
 ```
 { 
 	"T": 2, // Times timed dosage object 
@@ -726,7 +726,7 @@ Specifies the [day segment](#day-segments) (morning, noon, evening, night) when 
 
 **Example:** Take 1 in the evening.
 
-CHMED21A format for DaySegments:
+CHMED23A format for DaySegments:
 ```
 { 
 	"T": 3, // DaySegments timed dosage object 
@@ -791,7 +791,7 @@ Specifies on which days of the week a medicament must be applied.
 
 **Example:** Take 1 on Monday, Wednesday and Friday.
 
-CHMED21A format for WeekDays:
+CHMED23A format for WeekDays:
 ```
 { 
 	"T": 4, // Weekdays timed dosage object 
@@ -848,7 +848,7 @@ Specifies on which days of the month a medicament must be applied.
 
 **Example:** Take 1 on the 1st and 15th of the month.
 
-CHMED21A format for DaysOfMonth:
+CHMED23A format for DaysOfMonth:
 ```
 { 
 	"T": 5, // DaysOfMonth timed dosage 
@@ -910,7 +910,7 @@ Specifies the application of a medicament with a minimal interval between two ap
 
 **Example:** Apply medication with a minimal interval of 6 hours between two applications.
 
-CHMED21A format for Interval:
+CHMED23A format for Interval:
 ```
 { 
 	"T": 6, // Interval timed dosage 
@@ -954,14 +954,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 
 ### Dosage Objects
-Dosage objects are specified in CHMED21A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
+Dosage objects are specified in CHMED23A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
 
 #### DosageSimple
 Specifies a simple amount. E.g., 1 (pill) or 10 (ml).
 
 **Example:** Take 1.
 
-CHMED21A format for DosageSimple:
+CHMED23A format for DosageSimple:
 ```
 { 
 	"T": 1, // Simple dosage 
@@ -994,7 +994,7 @@ An [extension](StructureDefinition-chmed-dose-quantity-to.html) has been defined
 
 **Example:** Start with a dosage of 5, end with a dosage of 10 during a time interval of 45 minutes.
 
-CHMED21A format for DosageFromTo:
+CHMED23A format for DosageFromTo:
 ```
 { 
 	"T": 2, // DosageFromTo 
@@ -1045,7 +1045,7 @@ With a dosage range a min and must amount must be specified.
 
 **Example:** Take 1 in the evening.
 
-CHMED21A format for DosageRange:
+CHMED23A format for DosageRange:
 ```
 { 
 	"T": 3, // DosageRange dosage 
@@ -1081,14 +1081,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 ### Sequence Objects
-Sequence objects are defined in CHMED21A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
+Sequence objects are defined in CHMED23A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
 
 #### PosologySequence
 Wraps any type of posology object in order to create a [sequence](#sequence).
 
 **Example:** Take 1 daily for 21 days.
 
-CHMED21A format for PosologySequence:
+CHMED23A format for PosologySequence:
 ```
 { 
   "T": 1, // Posology sequence sequence object 
@@ -1116,7 +1116,7 @@ Specifies a duration of a break [sequence](#sequence) where the medication doesn
 
 **Example:** Break of 7 days.
 
-CHMED21A format for Pause:
+CHMED23A format for Pause:
 ```
 { 
   "T": 2, // Pause sequence object 
@@ -1128,14 +1128,14 @@ CHMED21A format for Pause:
 FHIR format for Dosage; see *sequence 1* in this [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html).
 
 ### Taking Objects
-Taking objects are defined in CHMED21A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
+Taking objects are defined in CHMED23A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
 
 #### TakingAtTime
 Specifies a precise moment in [time](#times) when a medicament must be applied.
 
 **Example:** Take 1 at 08:00.
 
-CHMED21A format for TakingAtTime:
+CHMED23A format for TakingAtTime:
 ```
 { 
   "OffU": 3, // Offset in hours 
@@ -1155,7 +1155,7 @@ Specifies a [day segment](#day-segments) (morning, noon, evening or night) when 
 
 **Example:** Take 1 in the evening.
 
-CHMED21A format for TakingInSegment:
+CHMED23A format for TakingInSegment:
 ```
 { 
   "S": 3, // Evening day segment 

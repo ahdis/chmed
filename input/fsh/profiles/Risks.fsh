@@ -25,11 +25,11 @@ Description: "Profile for the Condition resource to represent the risks"
 
 
 
-Mapping: CHMED21A-for-CHMEDRisks
-Id: CHMED21A
-Title: "CHMED21A"
+Mapping: CHMED23A-for-CHMEDRisks
+Id: CHMED23A
+Title: "CHMED23A"
 Source: CHMEDRisks
-Target: "http://emediplan.ch/chmed21a"
+Target: "http://emediplan.ch/chmed23a"
 * -> "MedicalData.RCs -> RiskCategory"
 * category -> "RiskCategory.Id (RC Id)"
 * code -> "RiskCategory.RCs (Risk Id)"

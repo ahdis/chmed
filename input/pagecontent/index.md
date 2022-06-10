@@ -9,13 +9,13 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 #### CHMED
 The purpose of this implementation guide is to specify the medication plan exchange formats based on the [FHIR®](https://www.hl7.org/fhir/) standard from [HL7®](https://www.hl7.org/).
 
-Extending the CHMED21A format to a FHIR based definition (CHMED) has the following advantages:
+Extending the CHMED23A format to a FHIR based definition (CHMED) has the following advantages:
 * CHMED formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined. 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 
 The CHEMD format can be either in XML or JSON format. However, both are too big in size to be exchanged in a QR code.
 
-HCI Solutions AG has built a **converter** for all software houses that have integrated the CHMED16A/CHMED21A. If you have questions or want more information please contact <hotline@hcisolutions.ch> directly.
+HCI Solutions AG has built a **converter** for all software houses that have integrated the CHMED16A/CHMED23A. If you have questions or want more information please contact <hotline@hcisolutions.ch> directly.
 
 #### Scope
 * [Documents](documents.html) - in FHIR format to exchange the eMedication information.
@@ -34,8 +34,8 @@ You can download this implementation guide in [NPM format](https://confluence.hl
 #### Change Log
 [Significant changes](changelog.html) to this specification since its initial version.
 
-### CHMED21A
-The ['eMedication Plan CHMED21A'](TBD) paper describes the specification and reference implementation of the object model for a medication plan, the so-called CHMED21A.
+### CHMED23A
+The 'eMedication Plan CHMED23A' paper describes the specification and reference implementation of the object model for a medication plan, the so-called CHMED23A.
 
 The reference consists of:
 * The content and layout specification for the electronic document, a JSON file including a medication (Med) for which the format (MedF) and compression (IsCompressed) is being specified.
@@ -47,10 +47,10 @@ The content and layout specification for a paper-based layout used in Print/PDF 
 
 This allows IT systems to store and transmit electronic medication plans as JSON file in UTF-8. It also makes it possible to transmit the mediplan print-based using QR barcodes. Therefore, the mediplan is readable by users and systems alike. This is necessary to guarantee a simple handling.
 
-A typical compressed CHMED21A object would look like this:
+A typical compressed CHMED23A object would look like this:
 ```
 { 
-    "MedF": "ChMed21A", 
+    "MedF": "ChMed23A", 
     "IsCompressed": true, 
     "Med": 
     "H4sIAAAAAAAACq2OOw4CMQxE7zIt2ZUTAmzcLZsGiU+KUCEKYKlokIACRbk7jkLBAWisZz/NyAmb6/g
@@ -58,7 +58,7 @@ A typical compressed CHMED21A object would look like this:
     KmId1oHcnxtGM7a+28c9YtJqSZCPkD+iD8fPQAAAA=" 
 }
 ```
-It is recommended to use the compressed CHMED21A object to minimize data size.
+It is recommended to use the compressed CHMED23A object to minimize data size.
 
 ### Copyright
 This implementation guide includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation ([IHTSDO](http://snomed.org/)) and distributed by agreement between IHTSDO and HL7. Implementers of these specification must have the appropriate SNOMED CT Affiliate license - for more information contact 

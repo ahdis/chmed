@@ -11,7 +11,7 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Infektion"
-* dosage[0].text = "Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen"
+* note.text = "Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen"
 * dosage[+].timing.repeat.boundsPeriod.start = "2017-09-05"
 * dosage[=].timing.repeat.boundsPeriod.end = "2020-09-26"
 * dosage[=].timing.repeat.duration = 1800

@@ -11,7 +11,7 @@ Usage: #example
 * subject.reference = "Patient/card-patient-s01"
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Bluthochdruck/Herz"
-* dosage[0].text = "Morgens und abends je 1 Tablette"
+* note.text = "Morgens und abends je 1 Tablette"
 * dosage[+].timing.repeat.boundsPeriod.start = "2016-02-10"
 * dosage[=].timing.repeat.when[0] = #MORN
 * dosage[=].timing.repeat.when[+] = #EVE

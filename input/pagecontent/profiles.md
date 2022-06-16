@@ -13,11 +13,6 @@ Profile for the Bundle resource to represent the entire, current medication of a
 Profile for the Composition resource of the Medication Card document
 * [CHMED MedicationStatement (Card)](StructureDefinition-chmed-card-medicationstatement.html)   
 Profile for the MedicationStatement resource of the Medication Card document
-* [CHMED Dosage Structured Split (Card)](StructureDefinition-chmed-dosage-structured-split-card.html)   
-Dosage structured split of Medication Card document
-* [CHMED Dosage Structured Normal (Card)](StructureDefinition-chmed-dosage-structured-normal-card.html)   
-Dosage structured normal of Medication Card document
-
 
 * [CHMED First Day of Last Menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)   
 Profile for the Observation resource to represent the first day of the last menstruation
@@ -38,10 +33,6 @@ Profile for the Bundle resource to represent the prescribed medication of a pati
 Profile for the Composition resource of the Medication Prescription document
 * [CHMED MedicationRequest (Pre)](StructureDefinition-chmed-pre-medicationrequest.html)   
 Profile for the MedicationRequest resource of the Medication Prescription document
-* [CHMED Dosage Structured Normal (Pre)](StructureDefinition-chmed-dosage-structured-normal-pre.html)   
-Dosage structured normal of Medication Prescription document
-* [CHMED Dosage Structured Split (Pre)](StructureDefinition-chmed-dosage-structured-split-pre.html)   
-Dosage structured split of Medication Prescription document
 
 * [CHMED Patient (Pre)](StructureDefinition-chmed-pre-patient.html)   
 Profile for the Patient resource (derived from CH Core Patient EPR), referenced in the CHMED Medication Prescription Composition

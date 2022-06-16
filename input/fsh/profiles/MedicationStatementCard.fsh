@@ -28,9 +28,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 
 * dosage ^short = "Posology"
 * dosage[nonstructured]
-* dosage[structurednormal] only CHMEDDosageStructuredNormalCard
 * dosage[structurednormal]
-* dosage[structuredsplit] only CHMEDDosageStructuredSplitCard
 * dosage[structuredsplit]
 
 
@@ -50,3 +48,5 @@ Target: "http://emediplan.ch/chmed23a"
 
 * dosage -> "Pos -> Posology"
 * dosage[nonstructured] -> "Posology -> PO.Text"
+* dosage[structurednormal] -> "Posology"
+* dosage[structuredsplit] -> "Posology"

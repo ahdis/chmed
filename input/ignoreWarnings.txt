@@ -9,6 +9,9 @@ INFORMATION: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/Str
 # No example because it is a basic profile with derived profiles, which include examples
 INFORMATION: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-patient'): The Implementation Guide contains no explicitly linked examples for this profile
 
+# It's a data type profile, examples in MedStat/MedReq
+WARNING: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dosage'): The Implementation Guide contains no examples for this data type profile
+
 # The following display values are specific in the Swiss context
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ['Medicinal prescription record', 'Medicinal prescription', 'Medicinal prescription record (record artifact)', 'Drug prescription record'] (from http://tx.fhir.org/r4)
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ['Medicinal prescription record', 'Medicinal prescription', 'Medicinal prescription record (record artifact)', 'Drug prescription record'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#761938008'

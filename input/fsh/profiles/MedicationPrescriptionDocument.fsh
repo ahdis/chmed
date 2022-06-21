@@ -10,6 +10,8 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 
 * entry[Composition].resource only CHMEDCompositionMedicationPrescription
 * entry[Composition].resource ^short = "CHMED Medication Prescription Composition"
+* entry[MedicationRequest].resource only CHMEDMedicationRequestPre
+* entry[MedicationRequest].resource ^short = "CHMED Medication Prescription MedicationRequest"
 
 
 

@@ -33,7 +33,8 @@ See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aop
       * CHMED Practitioner -> CH EMED Practitioner
          * Remove profile CHMED Practitioner and use the new profile [CH EMED Practitioner](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-practitioner.html) instead, because there are no differences.
          * Update example [Dr. Thomas Wälti](Practitioner-practitioner-s01.html) -> address required 
-      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole      
+      * CH Core PractitionerRole Epr -> CH EMED PractitionerRole 
+   * Improve slicing that info entry[x] warnings in QA are not shown ([Issue #21](https://github.com/ahdis/chmed/issues/21)).
 * Update Dosage according to the draft specification 'eMedication Plan CHMED23A Posology'. For details see tab [Dosage](dosage.html).
    * Add [mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) of 'InRes - Reserve medication' to Dosage.asNeededBoolean ([Issue #8](https://github.com/ahdis/chmed/issues/8)).
    * Change [mapping](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) of 'AppInstr - Application instruction' from unstructured Dosage.text to MedicationStatement/MedicationRequest.note.text ([Issue #13](https://github.com/ahdis/chmed/issues/13)).

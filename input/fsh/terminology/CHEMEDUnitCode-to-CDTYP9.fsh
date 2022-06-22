@@ -287,6 +287,10 @@ Usage: #definition
 * group[=].element[=].target.code = #Tag
 * group[=].element[=].target.equivalence = #equivalent
 
+* group[=].element[+].code = #a
+* group[=].element[=].target.code = #Jahr
+* group[=].element[=].target.equivalence = #equivalent
+
 * group[=].element[+].code = #{Dose}
 * group[=].element[=].target.code = #Dos
 * group[=].element[=].target.equivalence = #equivalent
@@ -336,6 +340,3 @@ Usage: #definition
 
 * group[=].element[+].code = #[CFU]
 * group[=].element[=].target.equivalence = #unmatched
-
-// TBD
-// CH EMED: Jahr, Teilpck

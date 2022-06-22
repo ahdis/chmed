@@ -56,6 +56,10 @@ Usage: #definition
 * group[=].element[+].code = #20011500
 * group[=].element[=].target.code = #20011500
 * group[=].element[=].target.equivalence = #equivalent
+
+* group[=].element[+].code = #20087000
+* group[=].element[=].target.code = #20087000
+* group[=].element[=].target.equivalence = #equivalent
 	
 * group[=].element[+].code = #20013000
 * group[=].element[=].target.code = #20013000
@@ -313,5 +317,3 @@ Usage: #definition
 * group[=].element[+].code = #20086000
 * group[=].element[=].target.equivalence = #unmatched
 
-// TBD 
-// 20087000	extrapleurale Anwendung: in CDTYP61, nicht in CH EMED

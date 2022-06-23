@@ -5,23 +5,20 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v2.1.0 (2022)
 
 #### Open Issues
-The following issues cannot currently be resolved, e.g. due to dependencies, but will be addressed again during further development: 
-* [Issue #15](https://github.com/ahdis/chmed/issues/15): CH EMED Dosage for Prescription too strict to map with the posology of CHMED23A.
-
-See also open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
+See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
 
 #### Added
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
    * Removing the flags that were tentatively introduced in v2.0.0 before introducing the CH EMED definition for it.
    * Set flags were they correlate with the described meaning.
-* [Terminologies](terminology.html): add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
-* Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
+* [Terminologies](terminology.html)
+   * Add ValueSets, CodeSystems and ConceptMaps for ROA, MOA and units.
+   * Add ConceptMap [Risk Categories to Risks](ConceptMap-RiskCategories-to-Risks.html).
 * Define CHMED profiles for [Body Weight](StructureDefinition-chmed-obs-bodyweight.html) and [Body Height](StructureDefinition-chmed-obs-bodyheight.html) to specify the requested units and add the mapping to CHMED23A.
 * Addition of [CHMED Patient](StructureDefinition-chmed-patient.html) profile for general use to existing CHMED Patient (Card) and CHMED Patient (Pre) profiles referenced in Compositions.
    * CHMED Patient is derived from CH Core Patient (general)
    * CHMED Patient Card/Pre are derived form CH Core Patient EPR (Composition)
-* Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html).
-   * See also [CH EMED Issue #91](https://github.com/hl7ch/ch-emed/issues/91). 
+* Integrate the [CH EMED Extension Substitution](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ext-substitution.html) in the [MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html) ([CH EMED Issue #91](https://github.com/hl7ch/ch-emed/issues/91)). 
 
 #### Changed / Updated
 * Update to the draft specification 'CHMED23A'.

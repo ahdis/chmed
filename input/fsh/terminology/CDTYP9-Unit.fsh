@@ -210,6 +210,12 @@ Description: "Code system for unit codes"
 * #mol ^designation[+].language = #fr-CH
 * #mol ^designation[=].value = "mol"
 
+* #Monat "Monat"
+* #Monat ^designation[0].language = #de-CH
+* #Monat ^designation[=].value = "Monat"
+* #Monat ^designation[+].language = #fr-CH
+* #Monat ^designation[=].value = "mois"
+
 * #MU "Millionen Einheiten"
 * #MU ^designation[0].language = #de-CH
 * #MU ^designation[=].value = "Millionen Einheiten"

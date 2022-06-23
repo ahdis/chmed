@@ -287,6 +287,10 @@ Usage: #definition
 * group[=].element[=].target.code = #Tag
 * group[=].element[=].target.equivalence = #equivalent
 
+* group[=].element[+].code = #mo
+* group[=].element[=].target.code = #Monat
+* group[=].element[=].target.equivalence = #equivalent
+
 * group[=].element[+].code = #a
 * group[=].element[=].target.code = #Jahr
 * group[=].element[=].target.equivalence = #equivalent

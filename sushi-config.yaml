@@ -21,8 +21,8 @@ copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 
 dependencies:
-  ch.fhir.ig.ch-emed: current
-  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-emed: 2.1.0
+  ch.fhir.ig.ch-core: 2.1.0
 
 
 # ----- Define IG tabs (page content) -----

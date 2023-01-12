@@ -19,9 +19,8 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * note.text ^short = "Application instruction"
 
 * dosageInstruction ^short = "Posology"
-* dosageInstruction[nonstructured]
-* dosageInstruction[structurednormal]
-* dosageInstruction[structuredsplit]
+* dosageInstruction[baseEntry]
+* dosageInstruction[additionalEntry]
 
 * dispenseRequest.validityPeriod ^short = "In which period the prescription can be redeemed"
 * dispenseRequest.numberOfRepeatsAllowed ^short = "Number of repetitions"
@@ -44,9 +43,8 @@ Target: "http://emediplan.ch/chmed23a"
 * note.text -> "AppInstr"
 
 * dosageInstruction -> "Pos -> Posology"
-* dosageInstruction[nonstructured] -> "Posology -> PO.Text"
-* dosageInstruction[structurednormal] -> "Posology"
-* dosageInstruction[structuredsplit] -> "Posology"
+* dosageInstruction[baseEntry] -> "Posology"
+* dosageInstruction[additionalEntry] -> "Posology"
 
 * dispenseRequest -> "Reps -> RepetitionObject"
 * dispenseRequest.validityPeriod -> "RepetitionObject.Duration"

@@ -11,7 +11,6 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
-* extension contains $ch-emed-ext-substitution named substitution 0..1
 * extension[substitution] ^short = "'equivalent': Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product." 
 * extension[substitution].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#E
 

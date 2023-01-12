@@ -10,12 +10,15 @@ See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is
 * [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to the current status of [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
    * Update dosage
       * Split dosing: remove elements from the 'additionalEntry', which are already included in the 'baseEntry' (`text`, `patientInstruction`, `asNeeded`, `route`)
-   * Change the possible references of the element 'MedicationStatement.informationSource' (incl. removing mapping to 'AutoMed' and adapting examples): 
-     '~~Practitioner~~ | PractitionerRole | ~~Patient~~' 
+   * Change the possible references of the element 'MedicationStatement.informationSource' (incl. removing mapping to 'AutoMed' and adapting examples):   
+     ~~Practitioner~~ | PractitionerRole | ~~Patient~~
    * Change the possible references of the element 'Composition.author' (incl. adapting examples): 
-      * CARD: ~~Practitioner~~ | PractitionerRole | Device | Patient | RelatedPerson | ~~Organization~~ 
-      * PRE: ~~Practitioner~~ | PractitionerRole | ~~Device~~ | Patient | RelatedPerson | ~~Organization~~ 
+      * CARD: ~~Practitioner~~ &#0124; PractitionerRole &#0124; Device &#0124; Patient &#0124; RelatedPerson &#0124; ~~Organization~~
+      * PRE: ~~Practitioner~~ &#0124; PractitionerRole &#0124; ~~Device~~ &#0124; Patient &#0124; RelatedPerson &#0124; ~~Organization~~
       * Note: PractitionerRole.organization -> Organization.**address** required
+
+#### Fixed
+* [#27](https://github.com/ahdis/chmed/issues/27): Added the experimental element to CodeSystems/ValueSets
 
 
 

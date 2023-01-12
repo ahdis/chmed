@@ -12,6 +12,11 @@ INFORMATION: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/Str
 # It's a data type profile, examples in MedStat/MedReq
 WARNING: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dosage'): The Implementation Guide contains no examples for this data type profile
 
+# Caused by the underlaying profile
+INFORMATION: StructureDefinition/chmed-patient: StructureDefinition.snapshot.element[25].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/chmed-card-patient: StructureDefinition.snapshot.element[25].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/chmed-pre-patient: StructureDefinition.snapshot.element[25].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
 # The following display values are specific in the Swiss context
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ['Medicinal prescription record', 'Medicinal prescription', 'Medicinal prescription record (record artifact)', 'Drug prescription record'] (from http://tx.fhir.org/r4)
 The display "Medical Prescription record (record artifact)" is not a valid display for the code {http://snomed.info/sct}761938008 - should be one of ['Medicinal prescription record', 'Medicinal prescription', 'Medicinal prescription record (record artifact)', 'Drug prescription record'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#761938008'

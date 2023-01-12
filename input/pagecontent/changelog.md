@@ -6,6 +6,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Open Issues
 See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
 
+#### Added
+* [#28](https://github.com/ahdis/chmed/issues/28): Adding new IG fragments on 'Home' (IP Statements, Cross Version Analysis, Dependency Table, Globals Table)
+
 #### Changed / Updated
 * [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to the current status of [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
    * Update dosage

@@ -1,11 +1,25 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-
-### v2.1.0 (2022)
+### v2.2.0 (2023)
 
 #### Open Issues
 See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
+
+#### Changed / Updated
+* [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to the current status of [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
+   * Update dosage
+      * Split dosing: remove elements from the 'additionalEntry', which are already included in the 'baseEntry' (`text`, `patientInstruction`, `asNeeded`, `route`)
+   * Change the possible references of the element 'MedicationStatement.informationSource' (incl. removing mapping to 'AutoMed' and adapting examples): 
+     '~~Practitioner~~ | PractitionerRole | ~~Patient~~' 
+   * Change the possible references of the element 'Composition.author' (incl. adapting examples): 
+      * CARD: ~~Practitioner~~ | PractitionerRole | Device | Patient | RelatedPerson | ~~Organization~~ 
+      * PRE: ~~Practitioner~~ | PractitionerRole | ~~Device~~ | Patient | RelatedPerson | ~~Organization~~ 
+      * Note: PractitionerRole.organization -> Organization.**address** required
+
+
+
+### v2.1.0 (2022 - not published)
 
 #### Added
 * Description of the meaning of the flag ['mustSupport'](index.html#mustsupport) ([Issue #10](https://github.com/ahdis/chmed/issues/10)).
@@ -42,7 +56,7 @@ See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is
 * Rename tab 'Introduction' to [Documents](documents.html) and adjustment of the display of the mapping. Link to the profile's mapping table, instead of the duplicated, manually created table on this page.
 * Add 'CHMED' to the profile titles and names. This has no effect on implementations, but significantly improves the readability of the IG. For example, the Practitioner profile can be clearly differentiated as a 'CHMED Practitioner' from the FHIR basis Practitioner.
 * Switch to the new [IG template](https://github.com/ahdis/chmed/tree/master/emediplan-template) and adaptations to its new requiremenst. This adaptation only slightly changes the appearance of the IG.
-* Transformation of the raw source (IG input) into [FHIR Shorthand](http://build.fhir.org/ig/HL7/fhir-shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
+* Transformation of the raw source (IG input) into [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) files ([.fsh](https://github.com/ahdis/chmed/tree/master/input/fsh)). This change has no impact on the IG published as a web page, it just makes it easier to author the FHIR artifacts for the IG.
 
 #### Fixed
 * Include missing [mapping](StructureDefinition-chmed-pre-medicationrequest-mappings.html#mappings-for-chmed23a-http-emediplan-ch-chmed23a) of 'Medicament.Rep' ([Issue #9](https://github.com/ahdis/chmed/issues/9)).
@@ -53,8 +67,9 @@ See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is
 * Typos: [Issue #20](https://github.com/ahdis/chmed/issues/20)
    
 
+
 ### v2.0.0 (2021-06-30)
-* Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/0.2.0_STU1-informative-ballot.md)).
+* Adjustments to the current status of CH EMED (after its [informative ballot STU 1](https://github.com/hl7ch/ch-emed/blob/master/ballots/0.2.0_STU1-informative-ballot.md)).
    * Depending on [CH EMED v1.0.0](http://fhir.ch/ig/ch-emed/1.0.0/index.html)
 * Fix code for 'Time of Gestation' ([Issue #5](https://github.com/ahdis/chmed/issues/5)). 
 

@@ -10,14 +10,14 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-posology-object-type#4 "Cyclic"
+* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#4 "Cyclic"
 
-* dosage[structurednormal][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
+* dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
 
-* dosage[structurednormal][=].timing.repeat.frequency = 2
-* dosage[structurednormal][=].timing.repeat.period = 1
-* dosage[structurednormal][=].timing.repeat.periodUnit = #wk
+* dosage[baseEntry][=].timing.repeat.frequency = 2
+* dosage[baseEntry][=].timing.repeat.period = 1
+* dosage[baseEntry][=].timing.repeat.periodUnit = #wk
 
-* dosage[structurednormal][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"
+* dosage[baseEntry][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"

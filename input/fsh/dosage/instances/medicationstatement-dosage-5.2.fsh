@@ -10,8 +10,8 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[nonstructured][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
-* dosage[nonstructured][=].extension[=].valueCoding = $chmed-cs-posology-object-type#2 "FreeText"
+* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#2 "FreeText"
 
-* dosage[nonstructured][=].text = "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
+* dosage[baseEntry][=].text = "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
 

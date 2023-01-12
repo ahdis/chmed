@@ -10,9 +10,9 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].doseAndRate.doseQuantity[+] = 5.0 'mL' "milliliter"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].extension[=].valueQuantity = 10.0 'mL' "milliliter"
+* dosage[baseEntry][+].doseAndRate.doseQuantity[+] = 5.0 'mL' "milliliter"
+* dosage[baseEntry][=].doseAndRate.doseQuantity[=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to"
+* dosage[baseEntry][=].doseAndRate.doseQuantity[=].extension[=].valueQuantity = 10.0 'mL' "milliliter"
 
-* dosage[structurednormal][=].timing.repeat.duration = 45
-* dosage[structurednormal][=].timing.repeat.durationUnit = #min
+* dosage[baseEntry][=].timing.repeat.duration = 45
+* dosage[baseEntry][=].timing.repeat.durationUnit = #min

@@ -10,4 +10,4 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+* dosage[baseEntry][+].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"

@@ -10,7 +10,7 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].additionalInstruction = $sct#307165006 "Before meal (qualifier value)"
-* dosage[structurednormal][=].timing.repeat.boundsPeriod.start = "2021-10-07"
-* dosage[structurednormal][=].timing.repeat.boundsPeriod.end = "2021-10-07"
-* dosage[structurednormal][=].asNeededBoolean = false
+* dosage[baseEntry][+].additionalInstruction = $sct#307165006 "Before meal (qualifier value)"
+* dosage[baseEntry][=].timing.repeat.boundsPeriod.start = "2021-10-07"
+* dosage[baseEntry][=].timing.repeat.boundsPeriod.end = "2021-10-07"
+* dosage[baseEntry][=].asNeededBoolean = false

@@ -10,6 +10,7 @@ Description: "Code system for unit codes"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+* ^experimental = false
 
 
 * #% "Prozent"

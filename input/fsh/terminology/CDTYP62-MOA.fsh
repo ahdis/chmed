@@ -6,6 +6,7 @@ Description: "Value set for methods of administration (MOA)"
 * ^contact.name = "Hotline"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
+* ^experimental = false
 
 * include codes from system CDTYP62
 
@@ -24,6 +25,7 @@ which is accessible over https://standardterms.edqm.eu"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+* ^experimental = false
 
 * #10 "Inhalation"
 * #10 ^designation[0].language = #de-CH

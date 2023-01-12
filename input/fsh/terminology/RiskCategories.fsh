@@ -6,6 +6,8 @@ Description: "Value set for possible risk categories"
 * ^contact.name = "Hotline"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
+* ^experimental = false
+
 * include codes from system RiskCategories
 
 
@@ -21,6 +23,7 @@ Description: "Code system for possible risk categories"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+* ^experimental = false
 
 * #1 "Renal Insufficiency"
 * #1 ^designation[0].language = #de-CH

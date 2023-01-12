@@ -5,6 +5,7 @@ Description: "Value set for medicament application on even or odd days"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
+* ^experimental = false
 
 * include codes from system EvenOddDays
 
@@ -16,7 +17,7 @@ Description: "Code system for medicament application on even or odd days"
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
-
+* ^experimental = false
 * ^caseSensitive = true
 
 * #even "Even Days" "Medicament must be applied on even days"

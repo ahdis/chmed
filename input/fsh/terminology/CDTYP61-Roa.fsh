@@ -12,6 +12,7 @@ which is accessible over https://standardterms.edqm.eu"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+* ^experimental = false
 
 * #20001000 "Anwendung am Ohr"
 * #20001000 ^designation[0].language = #de-CH

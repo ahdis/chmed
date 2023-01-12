@@ -6,6 +6,8 @@ Description: "Value set for possible risks"
 * ^contact.name = "Hotline"
 * ^contact.telecom.system = #email
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
+* ^experimental = false
+
 * include codes from system Risks
 
 
@@ -21,6 +23,7 @@ Description: "Code system for possible risks"
 * ^contact.telecom.value = "hotline@hcisolutions.ch"
 * ^caseSensitive = true
 * ^content = #complete
+* ^experimental = false
 
 * #597 "Niereninsuffizienz, terminale (Clcr <15 ml/min)"
 * #597 ^designation[0].language = #de-CH

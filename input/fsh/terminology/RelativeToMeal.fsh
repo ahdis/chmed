@@ -5,6 +5,7 @@ Description: "Value set for specifying when a medicament must be applied, relati
 * ^publisher = "IG eMediplan"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.emediplan.ch"
+* ^experimental = false
 
 * $sct#307165006 "Before meal (qualifier value)" // 1: Before
 * $sct#309612007 "During meal (qualifier value)" // 2: During

@@ -13,10 +13,12 @@ Usage: #example
 
 * entry[+].fullUrl = "http://example.com/Patient/card-patient-s01"
 * entry[=].resource = card-patient-s01
+* entry[+].fullUrl = "http://example.com/PractitionerRole/practitionerrole-s01"
+* entry[=].resource = practitionerrole-s01
 * entry[+].fullUrl = "http://example.com/Practitioner/practitioner-s01"
 * entry[=].resource = practitioner-s01
-* entry[+].fullUrl = "http://example.com/Organization/custodian-s01"
-* entry[=].resource = custodian-s01
+* entry[+].fullUrl = "http://example.com/Organization/organization-s01"
+* entry[=].resource = organization-s01
 
 * entry[+].fullUrl = "http://example.com/MedicationStatement/card-medicationstatement-s01-1-roaccutan"
 * entry[=].resource = card-medicationstatement-s01-1-roaccutan

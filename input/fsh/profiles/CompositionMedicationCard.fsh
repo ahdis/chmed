@@ -18,7 +18,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 
 * date ^short = "Date of creation"
 
-* author only Reference($ch-emed-practitioner or $ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson or CHCoreOrganizationEPR)
+* author only Reference($ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson)
 
 * author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
 * author.extension[authorRole] ^short = "Role of the author"

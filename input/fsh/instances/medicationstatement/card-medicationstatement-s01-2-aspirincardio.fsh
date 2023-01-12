@@ -12,8 +12,8 @@ Usage: #example
 * informationSource.reference = "Practitioner/practitioner-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "1 Tablette morgens"
-* dosage[structurednormal].timing.repeat.boundsPeriod.start = "2016-09-12"
-* dosage[structurednormal].timing.repeat.boundsPeriod.end = "2020-09-12"
-* dosage[structurednormal].timing.repeat.when = #MORN
-* dosage[structurednormal].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
-* dosage[structurednormal].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"
+* dosage[baseEntry].timing.repeat.boundsPeriod.start = "2016-09-12"
+* dosage[baseEntry].timing.repeat.boundsPeriod.end = "2020-09-12"
+* dosage[baseEntry].timing.repeat.when = #MORN
+* dosage[baseEntry].route = urn:oid:0.4.0.127.0.16.1.1.2.1#20053000 "Oral use"
+* dosage[baseEntry].doseAndRate.doseQuantity = 1 '{Piece}' "Piece"

@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#s01-3-beloczok"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Bluthochdruck/Herz"
 * note.text = "1 Tablette morgens, 1/2 Tablette abends"
 

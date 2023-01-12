@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#s01-4-zocor"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Cholesterinsenker"
 * note.text = "1 Tablette abends"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2016-02-10"

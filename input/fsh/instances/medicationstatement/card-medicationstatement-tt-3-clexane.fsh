@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#tt-3-clexane"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Blutverdünnung"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2017-09-07"
 * dosage[baseEntry].timing.repeat.duration = 1

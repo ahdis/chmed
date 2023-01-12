@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#tt-2-multiple-meronem"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Infektion"
 * note.text = "Gabe von 2g 3x täglich (08:00-12:00-18:00), i.v. für 30 Minuten, jeden Dienstag während 3 Wochen"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2017-09-05"

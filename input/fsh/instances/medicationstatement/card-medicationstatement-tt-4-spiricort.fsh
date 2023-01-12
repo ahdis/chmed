@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#tt-4-spiricort"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "ausschleichend (1. Tag 40 mg | 2. Tag 40 mg | 3.-9. Tag 30 mg | 10.-16. Tag 25 mg)"
 

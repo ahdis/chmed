@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#tt-3-marcoumar"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "Marcumar-Therapie"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2017-09-05"

@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#tt-5-morphin"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Blutverdünnung"
 * note.text = "Dosis jede Stunde 50 ml erhöhen"
 * dosage[baseEntry].timing.repeat.count = 1

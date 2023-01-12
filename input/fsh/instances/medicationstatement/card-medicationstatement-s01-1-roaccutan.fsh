@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "#s01-roaccutan"
 * subject.reference = "Patient/card-patient-s01"
-* informationSource.reference = "Practitioner/practitioner-s01"
+* informationSource.reference = "PractitionerRole/practitionerrole-s01"
 * reasonCode.text = "Akne"
 * note.text = "1x morgens, bei Bedarf"
 * dosage[baseEntry].timing.repeat.boundsPeriod.start = "2016-09-12"

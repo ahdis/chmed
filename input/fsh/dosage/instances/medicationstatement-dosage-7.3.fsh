@@ -10,6 +10,6 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].doseAndRate.doseRange.low = 1 '{Piece}' "Piece"
-* dosage[structurednormal][=].doseAndRate.doseRange.high = 3 '{Piece}' "Piece"
+* dosage[baseEntry][+].doseAndRate.doseRange.low = 1 '{Piece}' "Piece"
+* dosage[baseEntry][=].doseAndRate.doseRange.high = 3 '{Piece}' "Piece"
 

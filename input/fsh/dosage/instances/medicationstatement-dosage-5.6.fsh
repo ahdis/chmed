@@ -10,19 +10,19 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-posology-object-type#6 "Even/odd days"
+* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#6 "Even/odd days"
 
-* dosage[structurednormal][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
+* dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
 
-* dosage[structurednormal][=].additionalInstruction = $chmed-cs-even-odd-days#even "Even days"
-* dosage[structurednormal][=].timing.repeat.boundsPeriod.start = "2021-01-02"
-* dosage[structurednormal][=].timing.repeat.frequency = 1
-* dosage[structurednormal][=].timing.repeat.period = 2
-* dosage[structurednormal][=].timing.repeat.periodUnit = #d
-* dosage[structurednormal][=].doseAndRate.doseQuantity[+].value = 1
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].unit = "Tablet (unit of presentation)"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].system = "http://snomed.info/sct"
-* dosage[structurednormal][=].doseAndRate.doseQuantity[=].code = #732936001
+* dosage[baseEntry][=].additionalInstruction = $chmed-cs-even-odd-days#even "Even days"
+* dosage[baseEntry][=].timing.repeat.boundsPeriod.start = "2021-01-02"
+* dosage[baseEntry][=].timing.repeat.frequency = 1
+* dosage[baseEntry][=].timing.repeat.period = 2
+* dosage[baseEntry][=].timing.repeat.periodUnit = #d
+* dosage[baseEntry][=].doseAndRate.doseQuantity[+].value = 1
+* dosage[baseEntry][=].doseAndRate.doseQuantity[=].unit = "Tablet (unit of presentation)"
+* dosage[baseEntry][=].doseAndRate.doseQuantity[=].system = "http://snomed.info/sct"
+* dosage[baseEntry][=].doseAndRate.doseQuantity[=].code = #732936001
 

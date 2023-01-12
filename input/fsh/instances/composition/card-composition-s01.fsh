@@ -19,7 +19,7 @@ Usage: #example
 * type = $sct#721912009 "Medication summary document (record artifact)"
 * subject.reference = "Patient/card-patient-s01"
 * date = "2016-09-12T11:46:09+02:00"
-* author.reference = "Practitioner/practitioner-s01"
+* author.reference = "PractitionerRole/practitionerrole-s01"
 * author.extension[authorRole].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role"
 * author.extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
 * title = "Medikationsplan"
@@ -27,7 +27,7 @@ Usage: #example
 * confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
 * confidentiality = #N
 
-* custodian.reference = "Organization/custodian-s01"
+* custodian.reference = "Organization/organization-s01"
 
 * section[card].title = "Medikamentenliste"
 * section[card].code = $loinc#10160-0 "History of medication use"

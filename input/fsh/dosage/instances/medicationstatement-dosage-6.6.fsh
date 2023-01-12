@@ -10,8 +10,8 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#6 "Interval"
+* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#6 "Interval"
 
-* dosage[structurednormal][=].maxDosePerPeriod.numerator = 1.0 '{Piece}' "Piece"
-* dosage[structurednormal][=].maxDosePerPeriod.denominator = 6 'h' "Hour"
+* dosage[baseEntry][=].maxDosePerPeriod.numerator = 1.0 '{Piece}' "Piece"
+* dosage[baseEntry][=].maxDosePerPeriod.denominator = 6 'h' "Hour"

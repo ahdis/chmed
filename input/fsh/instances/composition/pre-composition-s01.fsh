@@ -14,14 +14,14 @@ Usage: #example
 * type = $sct#761938008 "Medical Prescription record (record artifact)"
 * subject.reference = "Patient/pre-patient-s01"
 * date = "2017-05-27T11:46:09+02:00"
-* author.reference = "Practitioner/practitioner-s01"
+* author.reference = "PractitionerRole/practitionerrole-s01"
 * author.extension[authorRole].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role"
 * author.extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
 * title = "Rezept"
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
 * confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
 * confidentiality = #N
-* custodian.reference = "Organization/custodian-s01"
+* custodian.reference = "Organization/organization-s01"
 
 * section[prescription].title = "Arzneimittelverordnung"
 * section[prescription].code = $loinc#57828-6 "PRESCRIPTIONS"

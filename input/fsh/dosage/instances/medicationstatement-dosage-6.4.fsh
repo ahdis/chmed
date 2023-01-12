@@ -10,10 +10,10 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[structurednormal][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
-* dosage[structurednormal][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#4 "WeekDays"
+* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
+* dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#4 "WeekDays"
 
-* dosage[structurednormal][=].timing.repeat.dayOfWeek[+] = #mon
-* dosage[structurednormal][=].timing.repeat.dayOfWeek[+] = #wed
-* dosage[structurednormal][=].timing.repeat.dayOfWeek[+] = #fri
-* dosage[structurednormal][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"
+* dosage[baseEntry][=].timing.repeat.dayOfWeek[+] = #mon
+* dosage[baseEntry][=].timing.repeat.dayOfWeek[+] = #wed
+* dosage[baseEntry][=].timing.repeat.dayOfWeek[+] = #fri
+* dosage[baseEntry][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"

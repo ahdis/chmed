@@ -26,8 +26,6 @@ Alias: $ch-epr-term-authorRole =                http://fhir.ch/ig/ch-epr-term/Va
 Alias: $edqm-routeofadministration =            http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration
 
 
-// CH Core
-Alias: $ch-core-practitioner =                  http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner
-Alias: $ch-core-practitionerrole =              http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole
+// Others
 
 Alias: $ext-dayOfMonth =                        http://hl7.org/fhir/StructureDefinition/timing-dayOfMonth

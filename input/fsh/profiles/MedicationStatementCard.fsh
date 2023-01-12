@@ -11,7 +11,6 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
-* extension contains $ch-emed-ext-substitution named substitution 0..1
 * extension[substitution] ^short = "'equivalent': Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product." 
 * extension[substitution].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#E
 
@@ -20,16 +19,15 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* informationSource only Reference($ch-core-practitioner or $ch-core-practitionerrole or CHMEDPatient)
+* informationSource
 
 * reasonCode.text ^short = "Taking reason"
 
 * note.text ^short = "Application instruction"
 
 * dosage ^short = "Posology"
-* dosage[nonstructured]
-* dosage[structurednormal]
-* dosage[structuredsplit]
+* dosage[baseEntry]
+* dosage[additionalEntry]
 
 
 Mapping: CHMED23A-for-CHMEDMedicationStatementCard
@@ -42,11 +40,10 @@ Target: "http://emediplan.ch/chmed23a"
 * extension[substitution] -> "Sub"
 * medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
 * subject -> "Patient"
-* informationSource -> "AutoMed if Patient, PrscbBy if Practitioner/PractitionerRole"
+* informationSource -> "PrscbBy"
 * reasonCode.text -> "TkgRsn"
 * note.text -> "AppInstr"
 
 * dosage -> "Pos -> Posology"
-* dosage[nonstructured] -> "Posology -> PO.Text"
-* dosage[structurednormal] -> "Posology"
-* dosage[structuredsplit] -> "Posology"
+* dosage[baseEntry] -> "Posology"
+* dosage[additionalEntry] -> "Posology"

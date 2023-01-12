@@ -19,7 +19,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* informationSource only Reference($ch-core-practitioner or $ch-core-practitionerrole or CHMEDPatient)
+* informationSource
 
 * reasonCode.text ^short = "Taking reason"
 
@@ -40,7 +40,7 @@ Target: "http://emediplan.ch/chmed23a"
 * extension[substitution] -> "Sub"
 * medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
 * subject -> "Patient"
-* informationSource -> "AutoMed if Patient, PrscbBy if Practitioner/PractitionerRole"
+* informationSource -> "PrscbBy"
 * reasonCode.text -> "TkgRsn"
 * note.text -> "AppInstr"
 

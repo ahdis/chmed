@@ -36,6 +36,16 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDExtensionPrivateField
 Target: "http://emediplan.ch/chmed23a"
-* -> "PrivateField" 
+* -> "Private Field" 
+* extension[name] -> "Nm"
+* extension[value] -> "Val"
+
+
+Mapping: CHMED16A-for-CHMEDExtensionPrivateField
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDExtensionPrivateField
+Target: "http://emediplan.ch/chmed16a"
+* -> "Private Field" 
 * extension[name] -> "Nm"
 * extension[value] -> "Val"

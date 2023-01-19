@@ -26,5 +26,14 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDFirstDayOfLastMenstruation
 Target: "http://emediplan.ch/chmed23a"
-* subject -> "Patient.MData -> MedicalData"
+* subject -> "Patient.MData -> MedicalData (MData)"
+* valueDateTime -> "MedicalData (MData).DLstMen"
+
+
+Mapping: CHMED16A-for-CHMEDFirstDayOfLastMenstruation
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDFirstDayOfLastMenstruation
+Target: "http://emediplan.ch/chmed16a"
+* subject -> "Patient.Med -> MedicalData"
 * valueDateTime -> "MedicalData.DLstMen"

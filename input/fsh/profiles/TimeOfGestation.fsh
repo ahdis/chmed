@@ -30,5 +30,14 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDTimeOfGestation
 Target: "http://emediplan.ch/chmed23a"
-* subject -> "Patient.MData -> MedicalData"
+* subject -> "Patient.MData -> MedicalData (MData)"
+* valueQuantity -> "MedicalData (MData).ToG (format conversion between {week}-{day} to 'days' necessary)"
+
+
+Mapping: CHMED16A-for-CHMEDTimeOfGestation
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDTimeOfGestation
+Target: "http://emediplan.ch/chmed16a"
+* subject -> "Patient.Med -> MedicalData"
 * valueQuantity -> "MedicalData.ToG (format conversion between {week}-{day} to 'days' necessary)"

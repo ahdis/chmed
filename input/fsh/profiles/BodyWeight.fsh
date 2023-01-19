@@ -28,5 +28,17 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDBodyWeight
 Target: "http://emediplan.ch/chmed23a"
-* subject -> "Patient.MData -> MedicalData"
-* valueQuantity -> "MedicalData.W"
+* subject -> "Patient.MData -> MedicalData (MData)"
+* valueQuantity -> "MedicalData (MData).W"
+
+
+Mapping: CHMED16A-for-CHMEDBodyWeight
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDBodyWeight
+Target: "http://emediplan.ch/chmed16a"
+* -> "MedicalData.Meas -> Measurement"
+* subject -> "Patient.Med -> MedicalData"
+* code -> "Measurement.Type (1: Weight)"
+* valueQuantity.value -> "Measurement.Val"
+* valueQuantity.unit -> "Measurement.Unit"

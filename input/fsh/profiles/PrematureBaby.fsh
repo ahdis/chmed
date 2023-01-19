@@ -25,5 +25,14 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDPrematureBaby
 Target: "http://emediplan.ch/chmed23a"
-* subject -> "Patient.MData -> MedicalData"
+* subject -> "Patient.MData -> MedicalData (MData)"
+* valueBoolean -> "MedicalData (MData).Prem"
+
+
+Mapping: CHMED16A-for-CHMEDPrematureBaby
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDPrematureBaby
+Target: "http://emediplan.ch/chmed16a"
+* subject -> "Patient.Med -> MedicalData"
 * valueBoolean -> "MedicalData.Prem"

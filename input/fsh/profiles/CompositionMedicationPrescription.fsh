@@ -37,13 +37,31 @@ Source: CHMEDCompositionMedicationPrescription
 Target: "http://emediplan.ch/chmed23a"
 * -> "Medication"
 * extension[informationRecipient] -> "Rcv"
-* extension[privateField] -> "PFs -> PrivateField"
+* extension[privateField] -> "PFs -> Private Field"
 * identifier -> "Id"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-* author -> "Auth, Zsr"
+* author -> "Auth, Zsr (Organization.identifier)"
 * author.extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"
+* section[annotation] -> "Rmk"
+
+
+Mapping: CHMED16A-for-CHMEDCompositionMedicationPrescription
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDCompositionMedicationPrescription
+Target: "http://emediplan.ch/chmed16a"
+* -> "Medication"
+* extension[informationRecipient] -> "Patient.Rcv"
+* extension[privateField] -> "PFields -> Private Field"
+* identifier -> "Id"
+* type -> "MedType (Type 2: Prescription (Rx))"
+* subject -> "Patient -> Patient"
+* date -> "Dt"
+* author -> "Auth, Zsr (Organization.identifier)"
+
+* section[prescription] -> "Medicaments -> Medicament"
 * section[annotation] -> "Rmk"

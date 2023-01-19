@@ -23,6 +23,21 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
 * author.extension[authorRole] ^short = "Role of the author"
 
+* attester
+* attester ^slicing.discriminator.type = #value
+* attester ^slicing.discriminator.path = "mode"
+* attester ^slicing.rules = #open
+* attester contains 
+    professionalAuthenticator 0..1
+* attester[professionalAuthenticator] ^short = "The professional authenticator of the document (person)"
+* attester[professionalAuthenticator].mode = #professional (exactly)
+* attester[professionalAuthenticator].mode
+* attester[professionalAuthenticator].time
+* attester[professionalAuthenticator].time ^short = "When composition was attested by the party, Validate date: Date of validation"
+* attester[professionalAuthenticator].party only Reference($ch-emed-practitioner)
+* attester[professionalAuthenticator].party
+* attester[professionalAuthenticator].party ^short = "Validated by: The Gln of the pharmacist who has validated the medication card"
+
 * section[card].entry only Reference(CHMEDMedicationStatementCard)
 * section[card].entry ^short = "Medicament"
 
@@ -70,21 +85,52 @@ Source: CHMEDCompositionMedicationCard
 Target: "http://emediplan.ch/chmed23a"
 * -> "Medication"
 * extension[informationRecipient] -> "Rcv"
-* extension[privateField] -> "PFs -> PrivateField"
+* extension[privateField] -> "PFs -> Private Field"
 * identifier -> "Id"
 * type -> "MedType (Type 1: MedicationPlan (MP))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-* author -> "Auth, Zsr"
+* author -> "Auth, Zsr (Organization.identifier)"
 * author.extension[authorRole] -> "AuthR"
 
 * section[card] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"
 
-* section[healthconcerns].extension[privateField] -> "MedicalData.PFs -> PrivateField"
-* section[healthconcerns].entry[bodyweight] -> "MedicalData.W"
-* section[healthconcerns].entry[bodyheight] -> "MedicalData.H"
+* section[healthconcerns] -> "Patient.MData -> MedicalData (MData)"
+* section[healthconcerns].extension[privateField] -> "MedicalData (MData).PFs -> Private Field"
+* section[healthconcerns].entry[bodyweight] -> "MedicalData (MData).W"
+* section[healthconcerns].entry[bodyheight] -> "MedicalData (MData).H"
+* section[healthconcerns].entry[dlstmen] -> "MedicalData (MData).DLstMen"
+* section[healthconcerns].entry[prematurebaby] -> "MedicalData (MData).Prem"
+* section[healthconcerns].entry[timeofgestation] -> "MedicalData (MData).ToG"
+* section[healthconcerns].entry[risks] -> "MedicalData (MData).RCs -> Risk"
+
+
+Mapping: CHMED16A-for-CHMEDCompositionMedicationCard
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDCompositionMedicationCard
+Target: "http://emediplan.ch/chmed16a"
+* -> "Medication"
+* extension[informationRecipient] -> "Patient.Rcv"
+* extension[privateField] -> "PFields -> Private Field"
+* identifier -> "Id"
+* type -> "MedType (Type 1: MedicationPlan (MP))"
+* subject -> "Patient -> Patient"
+* date -> "Dt"
+* author -> "Auth, Zsr (Organization.identifier)"
+
+* attester[professionalAuthenticator].time -> "ValDt"
+* attester[professionalAuthenticator].party -> "ValBy"
+
+* section[card] -> "Medicaments -> Medicament"
+* section[annotation] -> "Rmk"
+
+* section[healthconcerns] -> "Patient.Med -> MedicalData"
+* section[healthconcerns].extension[privateField] -> "MedicalData.PFields -> Private Field"
+* section[healthconcerns].entry[bodyweight] -> "MedicalData.Meas -> Measurement"
+* section[healthconcerns].entry[bodyheight] -> "MedicalData.Meas -> Measurement"
 * section[healthconcerns].entry[dlstmen] -> "MedicalData.DLstMen"
 * section[healthconcerns].entry[prematurebaby] -> "MedicalData.Prem"
 * section[healthconcerns].entry[timeofgestation] -> "MedicalData.ToG"
-* section[healthconcerns].entry[risks] -> "MedicalData.RCs -> Risk"
+* section[healthconcerns].entry[risks] -> "MedicalData.Rc -> Risk"

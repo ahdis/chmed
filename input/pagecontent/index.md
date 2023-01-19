@@ -1,6 +1,6 @@
 ### Background
 
-Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, the organization ['IG eMediplan'](http://emediplan.ch/de/home) was founded in 2016. Its aim is to support and provide public, open source, medication plan formats supported by a broad group of stakeholders from the public and private sectors.
+Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, the organization [IG eMediplan](http://emediplan.ch/de/home) was founded in 2016. Its aim is to support and provide public, open source, medication plan formats supported by a broad group of stakeholders from the public and private sectors.
 
 {% include img.html img="mediplan_example.png" caption="Fig.: Example of a Mediplan" %}
 
@@ -9,11 +9,11 @@ Medication plans are a central pillar of any eHealth solution. To enable interop
 #### CHMED
 The purpose of this implementation guide is to specify the medication plan exchange formats based on the [FHIR®](https://www.hl7.org/fhir/) standard from [HL7®](https://www.hl7.org/).
 
-Extending the CHMED23A format to a FHIR based definition (CHMED) has the following advantages:
-* CHMED formats can be [validated](http://build.fhir.org/validation.html) for correctness, data types are well defined. 
+Extending the CHMED16A/CHMED23A format to a FHIR based definition (CHMED) has the following advantages:
+* CHMED formats can be [validated](https://www.hl7.org/fhir/validation.html) for correctness, data types are well defined. 
 * Base interoperabilty for other projects based on medications, e.g. mappings will be provided for the exchange formats for medication with the [EPR in Switzerland](http://e-health-wiki.ch/index.php/Ehscda:CDA-CH-EMED_(specification)).
 
-The CHEMD format can be either in XML or JSON format. However, both are too big in size to be exchanged in a QR code.
+The CHMED format can be either in XML or JSON format. However, both are too big in size to be exchanged in a QR code.
 
 HCI Solutions AG has built a **converter** for all software houses that have integrated the CHMED16A/CHMED23A. If you have questions or want more information please contact <hotline@hcisolutions.ch> directly.
 
@@ -34,16 +34,28 @@ You can download this implementation guide in [NPM format](https://confluence.hl
 #### Change Log
 [Significant changes](changelog.html) to this specification since its initial version.
 
-### CHMED23A
-The 'eMedication Plan CHMED23A' paper describes the specification and reference implementation of the object model for a medication plan, the so-called CHMED23A.
+### eMedication Plan
+The [eMedication Plan CHMED16A](https://emediplan.ch/wp-content/uploads/2022/04/eMediplan_CHMED16A_V1.6.pdf) and 'eMedication Plan CHMED23A' papers describe the specification and reference implementation of the object model for a medication plan, the so-called CHMED16A and CHMED23A, respectively.
 
+#### CHMED16A
+The reference consists of two major parts:
+* The content and layout specification for the electronic document, a string / text file containing a header such as 'CHMED16A1' and the (compressed, encoded) medication plan as a JSON object in UTF-8
+* The content and layout specification for a paper-based layout used in Print/PDF scenarios
+
+This allows IT systems to store and transmit electronic medication plans as simple strings or text files in UTF-8. It also makes it possible to transmit the mediplan print-based through the use of QR barcodes. Therefore, the mediplan is readable by users and systems alike. This is necessary to guarantee a simple handling.
+
+A typical CHMED16A object would look like this:
+```
+CHMED16A1H4sIAAAAAAAEAMVU3W7TMBR+lcq3S4SPHdtx7raVAaKFqutAAnoREreJ2jpT4gKj6ptxx4txnCwVSKQSu0GVqvPX7+fIpwdyuXcFSYiSFCjloGKtNQnI2GGRUZAh1SGwBUASyYTqC8oSSnHgVe4HZM7z1UqF6WcqwkhxjCKdhcJkWc650GIlcXZq8sXDvSEJtHGZpTtjXUOSj4cORyuIpWpRu0EekFnVDYzxmwbtZ+l13dTV7g9t5Ij1eZVicfYWMRab9byxmF1urMH8zpbezO3iNTkGj4RRJIHH7Bwj/J2RhUAHGa+2e/fF1PnPH9bu7XqAnHEhZHzGrqeGJ5EXVVbk9T7bfHr20tTfBwRAxCQHen7f/y7guqi2pnGmLm1j7MbUA/Qx1VLz8/aftvvf7L9Pm2ZQAQgBTEX/QwL+dJa6Et8/SQ7kqr0z0DGEFPxbDsh16R48lqktZjdv8FYwnabfyl2KhRfG5giasIBMTj3nWp4JPrmEjJ93J+fxx5PGTY3X1tbSzuHpGDthCPUu3eKM4O2Kujbr29C3QcSd9ex0udibYyKUWvbLZX3Au54EdupFfSD6QD4CCBEIBcsjjpJZUVnv6yJCxlEsYMRk+59z62pj/MLuLBreoe2vZj2KsfOhvMcyp0yhAzLfbbzj4y8tzloh3gQAAA==
+```
+
+#### CHMED23A
 The reference consists of:
 * The content and layout specification for the electronic document, a JSON file including a medication (Med) for which the format (MedF) and compression (IsCompressed) is being specified.
    * Med will be a string if compressed or a JSON object otherwise
    * The JSON file must be encoded in UTF-8
 
 The content and layout specification for a paper-based layout used in Print/PDF scenarios is described in the document 'eMediplan_Paper-based_Layout'.
-
 
 This allows IT systems to store and transmit electronic medication plans as JSON file in UTF-8. It also makes it possible to transmit the mediplan print-based using QR barcodes. Therefore, the mediplan is readable by users and systems alike. This is necessary to guarantee a simple handling.
 

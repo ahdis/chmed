@@ -41,3 +41,10 @@ Title: "CHMED23A"
 Source: CHMEDMedicationCardDocument
 Target: "http://emediplan.ch/chmed23a"
 * identifier -> "Medication.Id"
+
+Mapping: CHMED16A-for-CHMEDMedicationCardDocument
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDMedicationCardDocument
+Target: "http://emediplan.ch/chmed16a"
+* identifier -> "Medication.Id"

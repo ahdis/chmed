@@ -11,11 +11,22 @@ Description: "Profile for the Patient resource (derived from CH Core Patient EPR
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
-* identifier[LocalPid] ^short = "Patient Id"
-* identifier[LocalPid].system ^short = "The system allowing to identify the patient"
-* identifier[LocalPid].value ^short = "The value identifying the patient"
+* identifier ^short = "Patient Id"
+* identifier.system ^short = "The system allowing to identify the patient"
+* identifier.value ^short = "The value identifying the patient"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open
+* identifier contains
+    VeKa 0..1
+* identifier[LocalPid] ^short = "Local Patient Id"
+* identifier[VeKa] ^short = "Insurance Card Number"
+* identifier[VeKa] ^patternIdentifier.system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[VeKa].value 1..
 
+* name.family 1..
 * name.family ^short = "Last name"
+* name.given 1..
 * name.given ^short = "First name"
 
 * telecom ^short = "Contact"
@@ -67,18 +78,45 @@ Title: "CHMED23A"
 Source: CHMEDPatientPre
 Target: "http://emediplan.ch/chmed23a"
 * -> "Patient"
-* extension[privateField] -> "PFs -> PrivateField"
+* extension[privateField] -> "PFs -> Private Field"
 
-* identifier[LocalPid] -> "Ids -> PatientId"
-* identifier[LocalPid].system -> "PatientId.SId"
-* identifier[LocalPid].value -> "PatientId.Val"
+* identifier -> "Ids -> PatientId"
+* identifier.system -> "PatientId.SId"
+* identifier.value -> "PatientId.Val"
 
 * name.family -> "LName"
 * name.given -> "FName"
+
+* telecom -> "Cs -> Contact"
 * telecom[phone] -> "Contact.Phone"
 * telecom[mobile] -> "Contact.Mobile"
 * telecom[email] -> "Contact.Email"
+
 * gender -> "Gender (1: Male, 2: Female, 3: Other)"
+* birthDate -> "BDt"
+* address.line -> "Street"
+* address.city -> "City"
+* address.postalCode -> "Zip"
+
+
+Mapping: CHMED16A-for-CHMEDPatientPre
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDPatientPre
+Target: "http://emediplan.ch/chmed23a"
+* -> "Patient"
+* extension[privateField] -> "PFields -> Private Field"
+
+* identifier -> "Ids -> PatientId"
+* identifier[VeKa].system -> "PatientId.Type (1: InsuranceCardNumber)"
+* identifier[VeKa].value -> "PatientId.Val"
+
+* name.family -> "LName"
+* name.given -> "FName"
+
+* telecom[phone] -> "Phone"
+
+* gender -> "Gender (1: Male, 2: Female)"
 * birthDate -> "BDt"
 * address.line -> "Street"
 * address.city -> "City"

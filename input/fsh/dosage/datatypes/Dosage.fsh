@@ -25,6 +25,8 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * additionalInstruction[evenOddDays]. ^short = "The medicament is be applied on even or odd days"
 * additionalInstruction[evenOddDays] from EvenOddDays (required)
 
+* patientInstruction ^short = "Application instruction"
+
 * timing.repeat.extension contains $ext-dayOfMonth named dayOfMonth 0..*
 
 
@@ -46,7 +48,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * timing.repeat.when 
 
 * asNeededBoolean 
-* asNeededBoolean. ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
+* asNeededBoolean ^short = "Reserve medication ('true' if in reserve, 'false' otherwise)"
 
 * route ^short = "Route of administration"
 * route from $edqm-routeofadministration (required)
@@ -82,6 +84,8 @@ Target: "http://emediplan.ch/chmed23a"
 
 * additionalInstruction[relativeToMeal] -> "RM" // 4.
 * additionalInstruction[evenOddDays] -> "PO.E" // 5.6
+
+* patientInstruction -> "AppInstr"
 
 * timing.repeat.extension[dayOfMonth] -> "PO.Ds (DaysOfMonth)" // 6.5
 
@@ -122,3 +126,23 @@ Target: "http://emediplan.ch/chmed23a"
 * maxDosePerPeriod.denominator.unit -> "PO.MIDU" // 6.6
 * maxDosePerPeriod.denominator.system -> "PO.MIDU" // 6.6
 * maxDosePerPeriod.denominator.code -> "PO.MIDU" // 6.6
+
+
+
+
+Mapping: CHMED16A-for-CHMEDDosage
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDDosage
+Target: "http://emediplan.ch/chmed16a"
+* -> "Posology"
+* patientInstruction -> "AppInstr"
+* timing.repeat.boundsPeriod.start -> "DtFrom"
+* timing.repeat.boundsPeriod.end -> "DtTo"
+* timing.repeat.when -> "D (morning, midday, evening, night)"
+* asNeededBoolean -> "InRes"
+* route -> "Medicament.Roa"
+//* doseAndRate.doseQuantity.value -> ""
+* doseAndRate.doseQuantity.unit -> "Medicament.Unit"
+* doseAndRate.doseQuantity.system -> "Medicament.Unit"
+* doseAndRate.doseQuantity.code -> "Medicament.Unit"

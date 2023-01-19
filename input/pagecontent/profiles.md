@@ -14,6 +14,10 @@ Profile for the Composition resource of the Medication Card document
 * [CHMED MedicationStatement (Card)](StructureDefinition-chmed-card-medicationstatement.html)   
 Profile for the MedicationStatement resource of the Medication Card document
 
+* [CHMED Body Weight](StructureDefinition-chmed-obs-bodyweight.html)   
+Profile for the Observation resource to represent the body weight
+* [CHMED Body Height](StructureDefinition-chmed-obs-bodyheight.html)   
+Profile for the Observation resource to represent the body height
 * [CHMED First Day of Last Menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)   
 Profile for the Observation resource to represent the first day of the last menstruation
 * [CHMED Premature Baby](StructureDefinition-chmed-obs-prematurebaby.html)   

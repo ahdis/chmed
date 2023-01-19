@@ -30,7 +30,18 @@ Id: CHMED23A
 Title: "CHMED23A"
 Source: CHMEDRisks
 Target: "http://emediplan.ch/chmed23a"
-* -> "MedicalData.RCs -> RiskCategory"
+* -> "MedicalData (MData).RCs -> RiskCategory"
 * category -> "RiskCategory.Id (RC Id)"
 * code -> "RiskCategory.RCs (Risk Id)"
-* subject -> "Patient.MData -> MedicalData"
+* subject -> "Patient.MData -> MedicalData (MData)"
+
+
+Mapping: CHMED16A-for-CHMEDRisks
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDRisks
+Target: "http://emediplan.ch/chmed16a"
+* -> "MedicalData.Rc -> RiskCategory"
+* category -> "RiskCategory.Id (Rc Id)"
+* code -> "RiskCategory.R (Risk Id)"
+* subject -> "Patient.Med -> MedicalData"

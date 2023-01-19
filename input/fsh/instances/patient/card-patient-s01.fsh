@@ -3,9 +3,16 @@ InstanceOf: CHMEDPatientCard
 Title: "Maxima Matter (Card)"
 Description: "Example for a Patient (Card)"
 Usage: #example
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.999.1"
-* identifier.value = "12345678"
+
+// Local PID
+* identifier[LocalPid][+].type = $v2-0203#MR
+* identifier[LocalPid][=].system = "urn:oid:2.999.1"
+* identifier[LocalPid][=].value = "12345678"
+
+// Versichertenkartennummer
+//* identifier[VeKa][+].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+//* identifier[VeKa][=].value = "80756012340245213019"
+
 * name.family = "Matter"
 * name.given = "Maxima"
 

@@ -16,8 +16,6 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* note.text ^short = "Application instruction"
-
 * dosageInstruction ^short = "Posology"
 * dosageInstruction[baseEntry]
 * dosageInstruction[additionalEntry]
@@ -36,19 +34,37 @@ Title: "CHMED23A"
 Source: CHMEDMedicationRequestPre
 Target: "http://emediplan.ch/chmed23a"
 * -> "Medicament"
-* extension[privateField] -> "PFs -> PrivateField"
+* extension[privateField] -> "PFs -> Private Field"
 * medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
 * subject -> "Patient"
-
-* note.text -> "AppInstr"
 
 * dosageInstruction -> "Pos -> Posology"
 * dosageInstruction[baseEntry] -> "Posology"
 * dosageInstruction[additionalEntry] -> "Posology"
 
-* dispenseRequest -> "Reps -> RepetitionObject"
-* dispenseRequest.validityPeriod -> "RepetitionObject.Duration"
-* dispenseRequest.numberOfRepeatsAllowed -> "RepetitionObject.Number.V"
+* dispenseRequest -> "Reps -> Repetition object"
+* dispenseRequest.validityPeriod -> "Repetition object.Duration"
+* dispenseRequest.numberOfRepeatsAllowed -> "Repetition object.Number.V"
 * dispenseRequest.quantity -> "NbPack"
 
 * substitution.allowedCodeableConcept -> "Sub"
+
+
+Mapping: CHMED16A-for-CHMEDMedicationRequestPre
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDMedicationRequestPre
+Target: "http://emediplan.ch/chmed16a"
+* -> "Medicament"
+* extension[privateField] -> "PFields -> Private Field"
+* medicationReference -> "Id with IdType"
+* subject -> "Patient"
+
+* dosageInstruction -> "Pos -> Posology"
+* dosageInstruction[baseEntry] -> "Posology"
+* dosageInstruction[additionalEntry] -> "Posology"
+
+* dispenseRequest.numberOfRepeatsAllowed -> "Rep"
+* dispenseRequest.quantity -> "NbPack"
+
+* substitution.allowedCodeableConcept -> "Subs"

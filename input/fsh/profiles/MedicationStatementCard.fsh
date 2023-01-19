@@ -19,11 +19,9 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* informationSource
+* informationSource 
 
 * reasonCode.text ^short = "Taking reason"
-
-* note.text ^short = "Application instruction"
 
 * dosage ^short = "Posology"
 * dosage[baseEntry]
@@ -36,13 +34,30 @@ Title: "CHMED23A"
 Source: CHMEDMedicationStatementCard
 Target: "http://emediplan.ch/chmed23a"
 * -> "Medicament"
-* extension[privateField] -> "PFs -> PrivateField"
+* extension[privateField] -> "PFs -> Private Field"
 * extension[substitution] -> "Sub"
-* medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
+* medicationReference -> "Id with IdType"
 * subject -> "Patient"
 * informationSource -> "PrscbBy"
 * reasonCode.text -> "TkgRsn"
-* note.text -> "AppInstr"
+
+* dosage -> "Pos -> Posology"
+* dosage[baseEntry] -> "Posology"
+* dosage[additionalEntry] -> "Posology"
+
+
+Mapping: CHMED16A-for-CHMEDMedicationStatementCard
+Id: CHMED16A
+Title: "CHMED16A"
+Source: CHMEDMedicationStatementCard
+Target: "http://emediplan.ch/chmed16a"
+* -> "Medicament"
+* extension[privateField] -> "PFields -> Private Field"
+* extension[substitution] -> "Subs"
+* medicationReference -> "Id with IdType"
+* subject -> "Patient"
+* informationSource -> "PrscbBy"
+* reasonCode.text -> "TkgRsn"
 
 * dosage -> "Pos -> Posology"
 * dosage[baseEntry] -> "Posology"

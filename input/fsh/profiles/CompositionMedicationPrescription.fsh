@@ -18,10 +18,10 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 
 * date ^short = "Date of creation"
 
-* author only Reference($ch-emed-practitionerrole or CHMEDPatientCard or RelatedPerson)
+* author[person] only Reference($ch-emed-practitionerrole or CHMEDPatientCard or RelatedPerson)
 
-* author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
-* author.extension[authorRole] ^short = "Role of the author"
+* author[person].extension contains CHMEDExtensionAuthorRole named authorRole 1..1
+* author[person].extension[authorRole] ^short = "Role of the author"
 
 * section[prescription].entry only Reference(CHMEDMedicationRequestPre)
 * section[prescription].entry ^short = "Medicament"
@@ -42,8 +42,8 @@ Target: "http://emediplan.ch/chmed23a"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-* author -> "Auth, Zsr (Organization.identifier)"
-* author.extension[authorRole] -> "AuthR"
+* author[person] -> "Auth, Zsr (Organization.identifier)"
+* author[person].extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"
@@ -61,7 +61,7 @@ Target: "http://emediplan.ch/chmed16a"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
-* author -> "Auth, Zsr (Organization.identifier)"
+* author[person] -> "Auth, Zsr (Organization.identifier)"
 
 * section[prescription] -> "Medicaments -> Medicament"
 * section[annotation] -> "Rmk"

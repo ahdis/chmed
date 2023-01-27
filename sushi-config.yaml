@@ -3,7 +3,7 @@ canonical: http://chmed.emediplan.ch/fhir
 name: CHMED
 status: active
 version: 2.2.0
-date: 2023-10-01
+date: 2023-01-27
 fhirVersion: 4.0.1
 copyrightYear: 2017+
 releaseLabel: CI Build
@@ -21,8 +21,8 @@ copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 
 dependencies:
-  ch.fhir.ig.ch-emed: 3.0.0
-  ch.fhir.ig.ch-core: 3.0.0
+  ch.fhir.ig.ch-emed: current
+  ch.fhir.ig.ch-core: current
 
 
 # ----- Define IG tabs (page content) -----

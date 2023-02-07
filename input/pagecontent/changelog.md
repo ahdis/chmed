@@ -10,7 +10,7 @@ See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is
 * [#28](https://github.com/ahdis/chmed/issues/28): Adding new IG fragments on 'Home' (IP Statements, Cross Version Analysis, Dependency Table, Globals Table)
 
 #### Changed / Updated
-* [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to the current status of [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
+* [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
    * Update dosage
       * Split dosing: remove elements from the 'additionalEntry', which are already included in the 'baseEntry' (`text`, `patientInstruction`, `asNeeded`, `route`)
       * Mapping of 'AppInstr' to Dosage.patientInstruction (before: MedicationStatment/MedicationRequest.note.text)
@@ -20,6 +20,8 @@ See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is
       * CARD: ~~Practitioner~~ &#0124; PractitionerRole &#0124; Device &#0124; Patient &#0124; RelatedPerson &#0124; ~~Organization~~
       * PRE: ~~Practitioner~~ &#0124; PractitionerRole &#0124; ~~Device~~ &#0124; Patient &#0124; RelatedPerson &#0124; ~~Organization~~
       * Note: PractitionerRole.organization -> Organization.**address** required
+* Adjustments to the current status of CH EMED v3.1.0.
+   * Update display values (see [commit](https://github.com/ahdis/chmed/commit/438db05d4dcf97e90c4d3d9e1c90d52eb2d8671d) for details) 
 
 #### Fixed
 * [#27](https://github.com/ahdis/chmed/issues/27): Added the experimental element to CodeSystems/ValueSets

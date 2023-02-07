@@ -47,7 +47,7 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[healthconcerns].extension contains CHMEDExtensionPrivateField named privateField 0..*
 * section[healthconcerns].extension[privateField] ^short = "Private Field"
 * section[healthconcerns].code 1..
-* section[healthconcerns].code = $loinc#75310-3 "Health Concerns"
+* section[healthconcerns].code = $loinc#75310-3 "Health concerns Document"
 * section[healthconcerns].entry ^slicing.discriminator.type = #profile
 * section[healthconcerns].entry ^slicing.discriminator.path = "resolve()"
 * section[healthconcerns].entry ^slicing.ordered = false

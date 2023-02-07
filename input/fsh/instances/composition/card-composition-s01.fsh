@@ -24,13 +24,13 @@ Usage: #example
 * author.extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
 * title = "Medikationsplan"
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
-* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normally accessible"
+* confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"
 * confidentiality = #N
 
 * custodian.reference = "Organization/organization-s01"
 
 * section[card].title = "Medikamentenliste"
-* section[card].code = $loinc#10160-0 "History of medication use"
+* section[card].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[card].entry[0].reference = "MedicationStatement/card-medicationstatement-s01-1-roaccutan"
 * section[card].entry[+].reference = "MedicationStatement/card-medicationstatement-s01-2-aspirincardio"
 * section[card].entry[+].reference = "MedicationStatement/card-medicationstatement-s01-3-beloczok"
@@ -38,7 +38,7 @@ Usage: #example
 * section[card].entry[+].reference = "MedicationStatement/card-medicationstatement-tt-5-morphin"
 
 * section[healthconcerns].title = "Gesundheitsbelange"
-* section[healthconcerns].code = $loinc#75310-3 "Health Concerns"
+* section[healthconcerns].code = $loinc#75310-3 "Health concerns Document"
 * section[healthconcerns].entry[bodyweight].reference = "Observation/card-observation-s01-bodyweight"
 * section[healthconcerns].entry[bodyheight].reference = "Observation/card-observation-s01-bodyheight"
 * section[healthconcerns].entry[dlstmen].reference = "Observation/card-observation-s01-dateoflastmenstruation"
@@ -52,12 +52,12 @@ Usage: #example
 * section[healthconcerns].entry[risks][+].reference = "Condition/card-condition-s01-6-allergies"
 
 * section[annotation].title = "Kommentar"
-* section[annotation].code = $loinc#48767-8 "Annotation comment"
+* section[annotation].code = $loinc#48767-8 "Annotation comment [Interpretation] Narrative"
 * section[annotation].text.status = #additional
 * section[annotation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Kommentar </div>"
 
 * section[originalRepresentation].title = "Original Darstellung"
-* section[originalRepresentation].code = $loinc#55108-5 "Clinical presentation"
+* section[originalRepresentation].code = $loinc#55108-5 "Clinical presentation Document"
 * section[originalRepresentation].text.status = #generated
 * section[originalRepresentation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a href=\"Binary/binary-pdf-example\">Representation of the original view</a></div>"
 * section[originalRepresentation].entry.reference = "Binary/binary-pdf-example"

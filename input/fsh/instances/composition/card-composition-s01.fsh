@@ -9,19 +9,14 @@ Usage: #example
 * extension[=].extension[+].url = "value"
 * extension[=].extension[=].valueString = "Private Field Value Sample 1"
 * extension[=].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-private-field"
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber"
-* extension[=].valueUnsignedInt = 1
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
-* extension[=].valueReference.reference = "Practitioner/practitioner-s01"
+
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f6"
 * status = #final
 * type = $sct#721912009 "Medication summary document (record artifact)"
 * subject.reference = "Patient/card-patient-s01"
 * date = "2016-09-12T11:46:09+02:00"
-* author.reference = "PractitionerRole/practitionerrole-s01"
-* author.extension[authorRole].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role"
-* author.extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
+* author[person].reference = "PractitionerRole/practitionerrole-s01"
 * title = "Medikationsplan"
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
 * confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"

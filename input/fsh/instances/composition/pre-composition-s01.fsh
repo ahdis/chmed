@@ -4,10 +4,9 @@ Title: "Medication Prescription Composition"
 Description: "Example for a Composition (Pre)"
 Usage: #example
 * language = #de-CH
-* extension[0].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-versionnumber"
-* extension[=].valueUnsignedInt = 1
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient"
-* extension[=].valueReference.reference = "Practitioner/practitioner-s01"
+
+* extension[receiver].valueString = "7601003178999"
+
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"
 * status = #final
@@ -15,8 +14,6 @@ Usage: #example
 * subject.reference = "Patient/pre-patient-s01"
 * date = "2017-05-27T11:46:09+02:00"
 * author[person].reference = "PractitionerRole/practitionerrole-s01"
-* author[person].extension[authorRole].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-author-role"
-* author[person].extension[authorRole].valueCoding = urn:oid:2.16.756.5.30.1.127.3.10.6#HCP "Healthcare professional"
 * title = "Rezept"
 * confidentiality.extension.url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode"
 * confidentiality.extension.valueCodeableConcept = $sct#17621005 "Normal (qualifier value)"

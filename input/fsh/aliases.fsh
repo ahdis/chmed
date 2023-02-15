@@ -21,8 +21,8 @@ Alias: $chmed-cs-cdtyp62 =                      http://chmed.emediplan.ch/fhir/C
 // CH EMED & CH EPR Term
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
+Alias: $ch-emed-organization =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-organization
 Alias: $ch-emed-ext-substitution =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-substitution
-Alias: $ch-epr-term-authorRole =                http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.authorRole
 Alias: $edqm-routeofadministration =            http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration
 
 

@@ -8,8 +8,6 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Card Composition"
 
-* extension[informationRecipient] ^short = "Receiver"
-
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
@@ -18,25 +16,13 @@ Description: "Profile for the Composition resource of the Medication Card docume
 
 * date ^short = "Date of creation"
 
-* author only Reference($ch-emed-practitionerrole or Device or CHMEDPatientCard or RelatedPerson)
-
-* author.extension contains CHMEDExtensionAuthorRole named authorRole 1..1
-* author.extension[authorRole] ^short = "Role of the author"
-
-* attester
-* attester ^slicing.discriminator.type = #value
-* attester ^slicing.discriminator.path = "mode"
-* attester ^slicing.rules = #open
-* attester contains 
-    professionalAuthenticator 0..1
-* attester[professionalAuthenticator] ^short = "The professional authenticator of the document (person)"
-* attester[professionalAuthenticator].mode = #professional (exactly)
-* attester[professionalAuthenticator].mode
-* attester[professionalAuthenticator].time
-* attester[professionalAuthenticator].time ^short = "When composition was attested by the party, Validate date: Date of validation"
-* attester[professionalAuthenticator].party only Reference($ch-emed-practitioner)
-* attester[professionalAuthenticator].party
-* attester[professionalAuthenticator].party ^short = "Validated by: The Gln of the pharmacist who has validated the medication card"
+* author ^slicing.discriminator.type = #profile
+* author ^slicing.discriminator.path = "resolve()"
+* author ^slicing.rules = #open
+* author contains
+    person 1..1 
+* author[person] only Reference(CHMEDPractitionerRole or CHMEDPatientCard)
+* author[person] ^short = "Author of the document (person)"
 
 * section[card].entry only Reference(CHMEDMedicationStatementCard)
 * section[card].entry ^short = "Medicament"
@@ -78,20 +64,18 @@ Description: "Profile for the Composition resource of the Medication Card docume
 * section[healthconcerns].section 0..0
 
 
-Mapping: CHMED23A-for-CHMEDCompositionMedicationCard
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDCompositionMedicationCard
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDCompositionMedicationCard
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medication"
-* extension[informationRecipient] -> "Rcv"
 * extension[privateField] -> "PFs -> Private Field"
 * identifier -> "Id"
 * type -> "MedType (Type 1: MedicationPlan (MP))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
 * author -> "Auth, Zsr (Organization.identifier)"
-* author.extension[authorRole] -> "AuthR"
 
 * section[card] -> "Meds -> Medicament"
 * section[annotation] -> "Rmk"
@@ -104,33 +88,3 @@ Target: "http://emediplan.ch/chmed23a"
 * section[healthconcerns].entry[prematurebaby] -> "MedicalData (MData).Prem"
 * section[healthconcerns].entry[timeofgestation] -> "MedicalData (MData).ToG"
 * section[healthconcerns].entry[risks] -> "MedicalData (MData).RCs -> Risk"
-
-
-Mapping: CHMED16A-for-CHMEDCompositionMedicationCard
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDCompositionMedicationCard
-Target: "http://emediplan.ch/chmed16a"
-* -> "Medication"
-* extension[informationRecipient] -> "Patient.Rcv"
-* extension[privateField] -> "PFields -> Private Field"
-* identifier -> "Id"
-* type -> "MedType (Type 1: MedicationPlan (MP))"
-* subject -> "Patient -> Patient"
-* date -> "Dt"
-* author -> "Auth, Zsr (Organization.identifier)"
-
-* attester[professionalAuthenticator].time -> "ValDt"
-* attester[professionalAuthenticator].party -> "ValBy"
-
-* section[card] -> "Medicaments -> Medicament"
-* section[annotation] -> "Rmk"
-
-* section[healthconcerns] -> "Patient.Med -> MedicalData"
-* section[healthconcerns].extension[privateField] -> "MedicalData.PFields -> Private Field"
-* section[healthconcerns].entry[bodyweight] -> "MedicalData.Meas -> Measurement"
-* section[healthconcerns].entry[bodyheight] -> "MedicalData.Meas -> Measurement"
-* section[healthconcerns].entry[dlstmen] -> "MedicalData.DLstMen"
-* section[healthconcerns].entry[prematurebaby] -> "MedicalData.Prem"
-* section[healthconcerns].entry[timeofgestation] -> "MedicalData.ToG"
-* section[healthconcerns].entry[risks] -> "MedicalData.Rc -> Risk"

@@ -35,16 +35,9 @@ Description: "Profile for the Bundle resource to represent the entire, current m
 * entry[CondRisks].resource ^short = "CHMED Risks Condition"
 
 
-Mapping: CHMED23A-for-CHMEDMedicationCardDocument
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDMedicationCardDocument
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDMedicationCardDocument
-Target: "http://emediplan.ch/chmed23a"
-* identifier -> "Medication.Id"
-
-Mapping: CHMED16A-for-CHMEDMedicationCardDocument
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDMedicationCardDocument
-Target: "http://emediplan.ch/chmed16a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * identifier -> "Medication.Id"

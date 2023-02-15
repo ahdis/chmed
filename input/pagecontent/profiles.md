@@ -1,6 +1,11 @@
 ### General Profiles for Medication Documents
-* [CHMED Patient](StructureDefinition-chmed-patient.html)   
-Profile for the Patient resource (derived from CH Core Patient)
+* [CHMED PractitionerRole](StructureDefinition-chmed-practitionerrole.html)   
+Profile for the PractitionerRole resource
+* [CHMED Practitioner](StructureDefinition-chmed-practitioner.html)   
+Profile for the Practitioner resource
+* [CHMED Organization](StructureDefinition-chmed-organization.html)   
+Profile for the Organization resource
+
 * [CHMED Medication](StructureDefinition-chmed-medication.html)   
 Profile for the Medication resource
 * [CHMED Dosage](StructureDefinition-chmed-dosage.html)   
@@ -28,7 +33,7 @@ Profile for the Observation resource to represent the time of gestation
 Profile for the Condition resource to represent the risks
 
 * [CHMED Patient (Card)](StructureDefinition-chmed-card-patient.html)   
-Profile for the Patient resource (derived from CH Core Patient EPR), referenced in the CHMED Medication Card Composition
+Profile for the Patient resource, referenced in the CHMED Medication Card Composition
 
 ### Specific Profiles for Medication Prescription document
 * [CHMED Medication Prescription Document](StructureDefinition-chmed-pre-bundle.html)   
@@ -39,5 +44,5 @@ Profile for the Composition resource of the Medication Prescription document
 Profile for the MedicationRequest resource of the Medication Prescription document
 
 * [CHMED Patient (Pre)](StructureDefinition-chmed-pre-patient.html)   
-Profile for the Patient resource (derived from CH Core Patient EPR), referenced in the CHMED Medication Prescription Composition
+Profile for the Patient resource, referenced in the CHMED Medication Prescription Composition
 

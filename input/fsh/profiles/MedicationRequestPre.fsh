@@ -13,8 +13,10 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 
 * medicationReference only Reference(CHMEDMedication)
 * medicationReference
-* subject only Reference(CHMEDPatient)
+
 * subject ^short = "Patient"
+
+* reasonCode.text ^short = "Taking reason"
 
 * dosageInstruction ^short = "Posology"
 * dosageInstruction[baseEntry]
@@ -24,19 +26,20 @@ Description: "Profile for the MedicationRequest resource of the Medication Presc
 * dispenseRequest.numberOfRepeatsAllowed ^short = "Number of repetitions"
 * dispenseRequest.quantity ^short = "Number of packages to be delivered"
 
-* substitution.allowedCodeableConcept ^short = "'True' if medicament is not substitutable, otherwise 'false'" // TBD
+* substitution.allowedCodeableConcept ^short = "'E (equivalent)': Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product."
 
 
 
-Mapping: CHMED23A-for-CHMEDMedicationRequestPre
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDMedicationRequestPre
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDMedicationRequestPre
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medicament"
 * extension[privateField] -> "PFs -> Private Field"
 * medicationReference -> "Id with IdType 1 (None) or IdType 2 (GTIN)"
 * subject -> "Patient"
+* reasonCode.text -> "TkgRsn"
 
 * dosageInstruction -> "Pos -> Posology"
 * dosageInstruction[baseEntry] -> "Posology"
@@ -49,22 +52,3 @@ Target: "http://emediplan.ch/chmed23a"
 
 * substitution.allowedCodeableConcept -> "Sub"
 
-
-Mapping: CHMED16A-for-CHMEDMedicationRequestPre
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDMedicationRequestPre
-Target: "http://emediplan.ch/chmed16a"
-* -> "Medicament"
-* extension[privateField] -> "PFields -> Private Field"
-* medicationReference -> "Id with IdType"
-* subject -> "Patient"
-
-* dosageInstruction -> "Pos -> Posology"
-* dosageInstruction[baseEntry] -> "Posology"
-* dosageInstruction[additionalEntry] -> "Posology"
-
-* dispenseRequest.numberOfRepeatsAllowed -> "Rep"
-* dispenseRequest.quantity -> "NbPack"
-
-* substitution.allowedCodeableConcept -> "Subs"

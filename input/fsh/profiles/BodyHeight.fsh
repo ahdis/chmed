@@ -17,28 +17,15 @@ Description: "Profile for the Observation resource to represent the body height"
 * valueQuantity.system ^short = "UCUM"
 * valueQuantity.code = #cm
 
-* subject 1..
-* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 
 
-Mapping: CHMED23A-for-CHMEDBodyHeight
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDBodyHeight
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDBodyHeight
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * subject -> "Patient.MData -> MedicalData (MData)"
 * valueQuantity -> "MedicalData (MData).H"
 
-
-Mapping: CHMED16A-for-CHMEDBodyHeight
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDBodyHeight
-Target: "http://emediplan.ch/chmed16a"
-* -> "MedicalData.Meas -> Measurement"
-* subject -> "Patient.Med -> MedicalData"
-* code -> "Measurement.Type (2: Height)"
-* valueQuantity.value -> "Measurement.Val"
-* valueQuantity.unit -> "Measurement.Unit"

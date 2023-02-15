@@ -11,25 +11,14 @@ Description: "Profile for the Medication resource"
 
 
 
-Mapping: CHMED23A-for-CHMEDMedication
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDMedication
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDMedication
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medicament"
 * code -> "Id"
 * code.coding.system -> "IdType"
 * code.coding[GTIN] -> "Id with IdType 2 (GTIN)"
 * code.text -> "Id with IdType 1 (None)"
 
-
-Mapping: CHMED16A-for-CHMEDMedication
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDMedication
-Target: "http://emediplan.ch/chmed16a"
-* -> "Medicament"
-* code -> "Id"
-* code.coding.system -> "IdType"
-* code.coding[GTIN] -> "Id with IdType 2 (GTIN)"
-* code.text -> "Id with IdType 1 (None)"

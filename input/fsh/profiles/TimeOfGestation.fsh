@@ -21,23 +21,15 @@ Description: "Profile for the Observation resource to represent the time of gest
 * valueQuantity.code = #d (exactly)
 
 * subject 1..
-* subject only Reference(CHMEDPatient)
+* subject only Reference(Patient)
 * subject ^short = "Patient"
 
 
-Mapping: CHMED23A-for-CHMEDTimeOfGestation
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDTimeOfGestation
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDTimeOfGestation
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * subject -> "Patient.MData -> MedicalData (MData)"
 * valueQuantity -> "MedicalData (MData).ToG (format conversion between {week}-{day} to 'days' necessary)"
 
-
-Mapping: CHMED16A-for-CHMEDTimeOfGestation
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDTimeOfGestation
-Target: "http://emediplan.ch/chmed16a"
-* subject -> "Patient.Med -> MedicalData"
-* valueQuantity -> "MedicalData.ToG (format conversion between {week}-{day} to 'days' necessary)"

@@ -20,28 +20,17 @@ Description: "Profile for the Condition resource to represent the risks"
 * code ^binding.description = "Identification of risk"
 
 * subject 1..
-* subject only Reference(CHMEDPatient)
+* subject only Reference(Patient)
 * subject ^short = "Patient"
 
 
 
-Mapping: CHMED23A-for-CHMEDRisks
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDRisks
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDRisks
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "MedicalData (MData).RCs -> RiskCategory"
 * category -> "RiskCategory.Id (RC Id)"
 * code -> "RiskCategory.RCs (Risk Id)"
 * subject -> "Patient.MData -> MedicalData (MData)"
-
-
-Mapping: CHMED16A-for-CHMEDRisks
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDRisks
-Target: "http://emediplan.ch/chmed16a"
-* -> "MedicalData.Rc -> RiskCategory"
-* category -> "RiskCategory.Id (Rc Id)"
-* code -> "RiskCategory.R (Risk Id)"
-* subject -> "Patient.Med -> MedicalData"

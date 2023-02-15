@@ -53,7 +53,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 **CHMED Dosage:** 
 * [Data Type Profile](StructureDefinition-chmed-dosage.html) to define the FHIR representation of the dosage according tho the 'Posology' in CHMED23A.
-* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-mapping-to-chmed23a-http-emediplan-ch-chmed23a) to represent the relationship of FHIR to CHMED23A.
+* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-emediplan-https-emediplan-ch-software-anbieter-spez) to represent the relationship of FHIR to CHMED23A.
 
 #### Relation to CH EMED
 <span style="color:red">CAVE:</span>

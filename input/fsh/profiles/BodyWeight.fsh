@@ -17,28 +17,14 @@ Description: "Profile for the Observation resource to represent the body weight"
 * valueQuantity.system ^short = "UCUM"
 * valueQuantity.code = #kg
 
-* subject 1..
-* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
 
 
-Mapping: CHMED23A-for-CHMEDBodyWeight
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDBodyWeight
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDBodyWeight
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * subject -> "Patient.MData -> MedicalData (MData)"
 * valueQuantity -> "MedicalData (MData).W"
-
-
-Mapping: CHMED16A-for-CHMEDBodyWeight
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDBodyWeight
-Target: "http://emediplan.ch/chmed16a"
-* -> "MedicalData.Meas -> Measurement"
-* subject -> "Patient.Med -> MedicalData"
-* code -> "Measurement.Type (1: Weight)"
-* valueQuantity.value -> "Measurement.Val"
-* valueQuantity.unit -> "Measurement.Unit"

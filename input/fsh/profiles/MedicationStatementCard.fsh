@@ -11,15 +11,14 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * extension contains CHMEDExtensionPrivateField named privateField 0..*
 * extension[privateField] ^short = "Private Field"
 
-* extension[substitution] ^short = "'equivalent': Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product." 
-* extension[substitution].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#E
+* extension[substitution] ^short = "'E (equivalent)': Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product." 
 
 * medicationReference only Reference(CHMEDMedication)
 
-* subject only Reference(CHMEDPatient)
 * subject ^short = "Patient"
 
-* informationSource 
+* informationSource only Reference(CHMEDPractitionerRole or CHMEDPatientCard)
+* informationSource ^short = "PractitionerRole for 'Automed' or Patient for 'PrscbBy'"
 
 * reasonCode.text ^short = "Taking reason"
 
@@ -28,32 +27,14 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * dosage[additionalEntry]
 
 
-Mapping: CHMED23A-for-CHMEDMedicationStatementCard
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDMedicationStatementCard
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDMedicationStatementCard
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medicament"
 * extension[privateField] -> "PFs -> Private Field"
 * extension[substitution] -> "Sub"
-* medicationReference -> "Id with IdType"
-* subject -> "Patient"
-* informationSource -> "PrscbBy"
-* reasonCode.text -> "TkgRsn"
-
-* dosage -> "Pos -> Posology"
-* dosage[baseEntry] -> "Posology"
-* dosage[additionalEntry] -> "Posology"
-
-
-Mapping: CHMED16A-for-CHMEDMedicationStatementCard
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDMedicationStatementCard
-Target: "http://emediplan.ch/chmed16a"
-* -> "Medicament"
-* extension[privateField] -> "PFields -> Private Field"
-* extension[substitution] -> "Subs"
 * medicationReference -> "Id with IdType"
 * subject -> "Patient"
 * informationSource -> "PrscbBy"

@@ -10,21 +10,15 @@ Description: "Profile for the Bundle resource to represent the prescribed medica
 
 * entry[Composition].resource only CHMEDCompositionMedicationPrescription
 * entry[Composition].resource ^short = "CHMED Medication Prescription Composition"
+* entry[MedicationRequest] 1..
 * entry[MedicationRequest].resource only CHMEDMedicationRequestPre
 * entry[MedicationRequest].resource ^short = "CHMED Medication Prescription MedicationRequest"
 
 
 
-Mapping: CHMED23A-for-CHMEDMedicationPrescriptionDocument
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDMedicationPrescriptionDocument
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDMedicationPrescriptionDocument
-Target: "http://emediplan.ch/chmed23a"
-* identifier -> "Medication.Id"
-
-Mapping: CHMED16A-for-CHMEDMedicationPrescriptionDocument
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDMedicationPrescriptionDocument
-Target: "http://emediplan.ch/chmed16a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * identifier -> "Medication.Id"

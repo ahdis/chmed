@@ -70,11 +70,11 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 
 
 
-Mapping: CHMED23A-for-CHMEDDosage
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDDosage
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDDosage
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Posology"
 
 * extension[posologyObjectType] -> "PO.T" // 5.
@@ -127,22 +127,3 @@ Target: "http://emediplan.ch/chmed23a"
 * maxDosePerPeriod.denominator.system -> "PO.MIDU" // 6.6
 * maxDosePerPeriod.denominator.code -> "PO.MIDU" // 6.6
 
-
-
-
-Mapping: CHMED16A-for-CHMEDDosage
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDDosage
-Target: "http://emediplan.ch/chmed16a"
-* -> "Posology"
-* patientInstruction -> "AppInstr"
-* timing.repeat.boundsPeriod.start -> "DtFrom"
-* timing.repeat.boundsPeriod.end -> "DtTo"
-* timing.repeat.when -> "D (morning, midday, evening, night)"
-* asNeededBoolean -> "InRes"
-* route -> "Medicament.Roa"
-//* doseAndRate.doseQuantity.value -> ""
-* doseAndRate.doseQuantity.unit -> "Medicament.Unit"
-* doseAndRate.doseQuantity.system -> "Medicament.Unit"
-* doseAndRate.doseQuantity.code -> "Medicament.Unit"

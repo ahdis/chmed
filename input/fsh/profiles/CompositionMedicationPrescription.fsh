@@ -8,60 +8,43 @@ Description: "Profile for the Composition resource of the Medication Prescriptio
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication Prescription Composition"
 
-* extension[informationRecipient] ^short = "Receiver"
-
-* extension contains CHMEDExtensionPrivateField named privateField 0..*
+* extension contains 
+    CHMEDExtensionPrivateField named privateField 0..* and
+    CHMEDExtensionReceiver named receiver 0..1
 * extension[privateField] ^short = "Private Field"
+* extension[receiver] ^short = "Receiver"
 
 * subject only Reference(CHMEDPatientPre)
 * subject ^short = "Patient"
 
 * date ^short = "Date of creation"
 
-* author[person] only Reference($ch-emed-practitionerrole or CHMEDPatientCard or RelatedPerson)
-
-* author[person].extension contains CHMEDExtensionAuthorRole named authorRole 1..1
-* author[person].extension[authorRole] ^short = "Role of the author"
+* author[person] only Reference(CHMEDPractitionerRole)
+* author[person] ..1
+* author[person] ^short = "Author of the document (person)"
 
 * section[prescription].entry only Reference(CHMEDMedicationRequestPre)
 * section[prescription].entry ^short = "Medicament"
+* section[prescription].author ..1
+* section[prescription].author only Reference(CHMEDPractitionerRole)
 
 * section[annotation].text ^short = "Remark"
 
 
 
-Mapping: CHMED23A-for-CHMEDCompositionMedicationPrescription
-Id: CHMED23A
-Title: "CHMED23A"
+Mapping: eMediplan-for-CHMEDCompositionMedicationPrescription
+Id: eMediplan
+Title: "eMediplan"
 Source: CHMEDCompositionMedicationPrescription
-Target: "http://emediplan.ch/chmed23a"
+Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medication"
-* extension[informationRecipient] -> "Rcv"
+* extension[receiver] -> "Rcv"
 * extension[privateField] -> "PFs -> Private Field"
 * identifier -> "Id"
 * type -> "MedType (Type 2: Prescription (Rx))"
 * subject -> "Patient -> Patient"
 * date -> "Dt"
 * author[person] -> "Auth, Zsr (Organization.identifier)"
-* author[person].extension[authorRole] -> "AuthR"
 
 * section[prescription] -> "Meds -> Medicament"
-* section[annotation] -> "Rmk"
-
-
-Mapping: CHMED16A-for-CHMEDCompositionMedicationPrescription
-Id: CHMED16A
-Title: "CHMED16A"
-Source: CHMEDCompositionMedicationPrescription
-Target: "http://emediplan.ch/chmed16a"
-* -> "Medication"
-* extension[informationRecipient] -> "Patient.Rcv"
-* extension[privateField] -> "PFields -> Private Field"
-* identifier -> "Id"
-* type -> "MedType (Type 2: Prescription (Rx))"
-* subject -> "Patient -> Patient"
-* date -> "Dt"
-* author[person] -> "Auth, Zsr (Organization.identifier)"
-
-* section[prescription] -> "Medicaments -> Medicament"
 * section[annotation] -> "Rmk"

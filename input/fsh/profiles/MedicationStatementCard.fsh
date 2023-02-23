@@ -17,8 +17,8 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 
 * subject ^short = "Patient"
 
-* informationSource only Reference(CHMEDPractitionerRole or CHMEDPatientCard)
-* informationSource ^short = "PractitionerRole for 'Automed' or Patient for 'PrscbBy'"
+* informationSource only Reference(CHMEDPractitionerRole or CHMEDPatientCard or RelatedPerson)
+* informationSource ^short = "PractitionerRole for 'PrscbBy' or Patient for 'Automed'"
 
 * reasonCode.text ^short = "Taking reason"
 

@@ -10,7 +10,8 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"
 * status = #final
-* type = $sct#761938008 "Medicinal prescription record (record artifact)"
+* type.coding[0] = $loinc#57833-6 "Prescription for medication"
+* type.coding[+] = $sct#761938008 "Medicinal prescription record (record artifact)"
 * subject.reference = "Patient/pre-patient-s01"
 * date = "2017-05-27T11:46:09+02:00"
 * author[person].reference = "PractitionerRole/practitionerrole-s01"

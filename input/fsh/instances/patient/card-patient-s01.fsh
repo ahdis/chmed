@@ -4,14 +4,11 @@ Title: "Maxima Matter (Card)"
 Description: "Example for a Patient (Card)"
 Usage: #example
 
-// Local PID
 * identifier[LocalPid][+].type = $v2-0203#MR
 * identifier[LocalPid][=].system = "urn:oid:2.999.1"
 * identifier[LocalPid][=].value = "12345678"
-
-// Versichertenkartennummer
-//* identifier[VeKa][+].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-//* identifier[VeKa][=].value = "80756012340245213019"
+* identifier[insuranceCardNumber][+].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber][=].value = "80756012340245213019"
 
 * name.family = "Matter"
 * name.given = "Maxima"

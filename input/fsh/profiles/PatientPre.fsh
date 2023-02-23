@@ -61,8 +61,11 @@ Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * extension[privateField] -> "PFs -> Private Field"
 
 * identifier -> "Ids -> PatientId"
+* identifier.type -> "PatientId.Type"
 * identifier.system -> "PatientId.SId"
 * identifier.value -> "PatientId.Val"
+* identifier[LocalPid] -> "Type 1: InsuranceCardNumber"
+* identifier[insuranceCardNumber] -> "Type 2: LocalPID"
 
 * name.family -> "LName"
 * name.given -> "FName"

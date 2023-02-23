@@ -17,8 +17,9 @@ Title: "eMediplan"
 Source: CHMEDMedication
 Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 * -> "Medicament"
-* code -> "Id"
+* code.coding.code -> "Id"
 * code.coding.system -> "IdType"
 * code.coding[GTIN] -> "Id with IdType 2 (GTIN)"
+* code.coding[ATC] -> "Id with IdType 5 (ATC)"
 * code.text -> "Id with IdType 1 (None)"
 

@@ -16,17 +16,12 @@ Usage: #example
 * name.family = "Matter"
 * name.given = "Maxima"
 
-* telecom[phone].system = #phone
-* telecom[phone].value = "+41588512600"
-* telecom[phone].use = #home
-
-* telecom[mobile].system = #phone
-* telecom[mobile].value = "079 851 26 00"
-* telecom[mobile].use = #mobile
-
-* telecom[email].system = #email   
-* telecom[email].value = "maxima.matter@example.ch"
-* telecom[email].use = #home
+* telecom[phone][0].system = #phone
+* telecom[phone][=].value = "+41588512600"
+* telecom[phone][+].system = #phone
+* telecom[phone][=].value = "079 851 26 00"
+* telecom[email][+].system = #email
+* telecom[email][=].value = "maxima.matter@example.ch"
 
 * gender = #female
 * birthDate = "1981-01-12"

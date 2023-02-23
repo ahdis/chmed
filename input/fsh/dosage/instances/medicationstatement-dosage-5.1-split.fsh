@@ -10,14 +10,15 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[baseEntry][+].sequence = 0
+* dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
-* dosage[baseEntry][=].sequence = 1
+
 * dosage[baseEntry][=].timing.repeat.when = #MORN
 * dosage[baseEntry][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"
 
-* dosage[additionalEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
-* dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
-* dosage[additionalEntry][=].sequence = 2
+* dosage[additionalEntry][+].sequence = 0
+//* dosage[additionalEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+//* dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
 * dosage[additionalEntry][=].timing.repeat.when = #EVE
 * dosage[additionalEntry][=].doseAndRate.doseQuantity = 2.0 '{Piece}' "Piece"

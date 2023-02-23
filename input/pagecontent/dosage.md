@@ -1,5 +1,5 @@
 The model of dosages between CHMED23A and the CHMED (FHIR version) differ sligthly due to the FHIR dosage model.
-This has an effect on how to map the different attributes form CHMED23A to CHMED.
+This has an effect on how to map the different attributes from CHMED23A to CHMED.
 
 ### Posology and Dosage
 
@@ -57,11 +57,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 #### Relation to CH EMED
 <span style="color:red">CAVE:</span>
-<span style="color:red">This Posology element mapping shown above is limited compatible with the [CH EMED dosage](https://fhir.ch/ig/ch-emed/dosage.html). In the Swiss exchange format, structured dosage (normal/split) is currently defined for the 1-1-1-1 scheme in addition to unstructured dosage for complex dosage.</span>
+<span style="color:red">This Posology element mapping shown above is limited compatible with the [CH EMED dosage](https://fhir.ch/ig/ch-emed/dosage.html). In the Swiss exchange format the normal dosing can be given in a structured form and/or as narrative text. If possiblie, the structured form should be provided. In case structured dosage instructions are not provided or for complex dosages, the dosage can be represendted using narrative text.</span>
 * In order to be able to map the scheme 1-1-1-1, the elements `Dosage.timing.repeat.when` and `Dosage.doseAndRate` are required in the structured dosage of CH EMED. 
-* An important difference is the numbering of the `Dosage.sequence` element:
+* An important difference is the numbering of the `Dosage.sequence` element (causes <span style="color:red">incompatibility</span>):
    * CH EMED: For the split dosage, the dosage sequences are numbered in ascending order (starting with 1).
-   * CHMED: In order to be able to map the Posology Object Sequence as well, the element is defined as follows: *The order of the dosage instructions (number is identical -> concurrent, number is different -> sequential)*
+   * CHMED: In order to be able to map the Posology Object Sequence as well, the element is defined as follows:   
+     _The order of the dosage instructions:_   
+      - _number (0) is identical -> concurrent_
+      - _number is different (0, 1 etc.) -> sequential_
 
 #### Timing Event
 The code for the time of adminstration has to come from the [ValueSet EventTiming](http://hl7.org/fhir/R4/valueset-event-timing.html).   

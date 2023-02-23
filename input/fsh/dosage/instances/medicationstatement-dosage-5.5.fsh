@@ -10,8 +10,8 @@ Usage: #example
 * medicationReference.reference = "#med01"
 * subject.reference = "Patient/card-patient-s01"
 
-
-* dosage[baseEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[baseEntry][+].sequence = 0
+* dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#5 "Sequence"
 * dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#4 "Cyclic"
@@ -19,7 +19,6 @@ Usage: #example
 * dosage[baseEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type"
 * dosage[baseEntry][=].extension[=].valueCoding = $chmed-cs-timed-dosage-object-type#1 "DosageOnly"
 
-//* dosage[baseEntry][=].sequence = 1
 * dosage[baseEntry][=].timing.repeat.count = 21
 * dosage[baseEntry][=].timing.repeat.frequency = 1
 * dosage[baseEntry][=].timing.repeat.period = 1
@@ -29,11 +28,11 @@ Usage: #example
 * dosage[baseEntry][=].doseAndRate.doseQuantity[=].system = "http://snomed.info/sct"
 * dosage[baseEntry][=].doseAndRate.doseQuantity[=].code = #732936001
 
-/* TODO
-* dosage[additionalEntry][+].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+
+* dosage[additionalEntry][+].sequence = 1
+* dosage[additionalEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#5 "Sequence"
 
-* dosage[additionalEntry][=].sequence = 2
 * dosage[additionalEntry][=].timing.repeat.count = 7
 * dosage[additionalEntry][=].timing.repeat.frequency = 1
 * dosage[additionalEntry][=].timing.repeat.period = 1
@@ -42,4 +41,3 @@ Usage: #example
 * dosage[additionalEntry][=].doseAndRate.doseQuantity[=].unit = "Tablet (unit of presentation)"
 * dosage[additionalEntry][=].doseAndRate.doseQuantity[=].system = "http://snomed.info/sct"
 * dosage[additionalEntry][=].doseAndRate.doseQuantity[=].code = #732936001
-*/

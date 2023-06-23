@@ -25,12 +25,6 @@ Description: "Profile for the Patient resource, referenced in the CHMED Medicati
 * name.given ^short = "First name"
 
 * telecom ^short = "Contact"
-* telecom ^slicing.discriminator[+].type = #value
-* telecom ^slicing.discriminator[=].path = "system"
-* telecom ^slicing.rules = #open
-* telecom contains 
-    phone 0..* and
-    email 0..*
 
 * telecom[phone] ^short = "Phone number"
 * telecom[phone].system ^fixedCode = #phone

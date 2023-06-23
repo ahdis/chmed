@@ -1,4 +1,4 @@
-# Implementation Guide for eMediplan based on HL7 FHIR R4
+# Implementation Guide for eMediplan based on HL7 FHIR R4 
 
 This github repository provides holds the source for the **eMediplan CHMED Implementation Guide**, for the published version see 
 [eMediplan CHMED Implementation Guide: Home](http://chmed.emediplan.ch/). 

@@ -1,6 +1,6 @@
 Two different exchange formats are defined:
-1. [Medication Card document](#medication-card-document) (MedicationPlan (MP))
-2. [Medication Prescription document](#medication-prescription-document) (Prescription (Rx))
+1. [Medication Card document (CARD)](#medication-card-document) (MedicationPlan (MP))
+2. [Medication Prescription document (PRE)](#medication-prescription-document) (Prescription (Rx))
 
 These exchange formats are defined as a [document type](https://www.hl7.org/fhir/documents.html) that corresponds to a [Bundle](https://www.hl7.org/fhir/bundle.html) as a FHIR resource. A Bundle has a list of entries. The first entry is the [Composition](https://www.hl7.org/fhir/composition.html), in which all contained entries are then referenced.
 

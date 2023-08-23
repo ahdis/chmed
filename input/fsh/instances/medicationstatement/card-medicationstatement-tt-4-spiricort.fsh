@@ -26,6 +26,7 @@ Usage: #example
 
 // 3.-9. Tag (7d)
 * dosage[additionalEntry][+].sequence = 2
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 7
 * dosage[additionalEntry][=].timing.repeat.frequency = 1
 * dosage[additionalEntry][=].timing.repeat.period = 1
@@ -34,6 +35,7 @@ Usage: #example
 
 // 10.-16. Tag (7d)
 * dosage[additionalEntry][+].sequence = 3
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 7
 * dosage[additionalEntry][=].timing.repeat.frequency = 1
 * dosage[additionalEntry][=].timing.repeat.period = 1

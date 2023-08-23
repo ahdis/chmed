@@ -31,7 +31,7 @@ The meaning of the flag [mustSupport](https://www.hl7.org/fhir/profiling.html#mu
 #### Download
 You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 
-#### Change Log
+#### Changelog
 [Significant changes](changelog.html) to this specification since its initial version.
 
 ### eMediplan

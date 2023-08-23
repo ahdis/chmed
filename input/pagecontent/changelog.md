@@ -7,28 +7,27 @@ All significant changes to this FHIR implementation guide will be documented on 
 See open issues on [GitHub](https://github.com/ahdis/chmed/issues?q=is%3Aopen+is%3Aissue).
 
 #### Added
-* [Extension Receiver] to map Medication.Rcv (informationRecipient isn't used anymore)
+* [Extension Receiver](TODO) to map Medication.Rcv (informationRecipient isn't used anymore)
 * [#28](https://github.com/ahdis/chmed/issues/28): Adding new IG fragments on 'Home' (IP Statements, Cross Version Analysis, Dependency Table, Globals Table)
 
 #### Changed / Updated
-* [#26](https://github.com/ahdis/chmed/issues/26): Adjustments to [CH EMED v3.0.0](http://fhir.ch/ig/ch-emed/3.0.0/index.html) (after its [ballot STU 3](https://github.com/hl7ch/ch-emed/blob/master/ballots/2.1.0_STU3-ballot.md), see [change log](http://fhir.ch/ig/ch-emed/changelog.html#stu3---v300-2022-12-21)).
+* Adjustments to current version of CH EMED (see [changelog](http://fhir.ch/ig/ch-emed/changelog.html))
+   * Depending on [CH EMED v4.0.0-ballot](https://fhir.ch/ig/ch-emed/4.0.0-ballot/index.html)
    * Update dosage
       * Split dosing: remove elements from the 'additionalEntry', which are already included in the 'baseEntry' (`text`, `patientInstruction`, `asNeeded`, `route`)
       * Mapping of 'AppInstr' to Dosage.patientInstruction (before: MedicationStatment/MedicationRequest.note.text)
-   * Update the possible references of the element 'MedicationStatement.informationSource'
-   * Change the possible references of the element 'Composition.author' (incl. adapting examples): 
-      * CARD: PractitionerRole &#0124; Device &#0124; Patient &#0124; RelatedPerson 
-      * PRE: PractitionerRole 
+   * Update the possible references of the element MedicationStatement.informationSource
+   * Change the possible references of the element Composition.author (incl. adapting examples)
       * Note: PractitionerRole.organization -> Organization.**address** required
-* Adjustments to the current status of CH EMED v3.1.0.
-   * Update display values (see [commit](https://github.com/ahdis/chmed/commit/438db05d4dcf97e90c4d3d9e1c90d52eb2d8671d) for details) 
-* Adjustments to new eMediplan specification:
+   * Update display values (see [commit](https://github.com/ahdis/chmed/commit/438db05d4dcf97e90c4d3d9e1c90d52eb2d8671d) for details)
+   * CARD: Composition.type: New SNOMED CT code in Swiss Extension: 736378000 "Medication management plan (record artifact)"
+* Adjustments to new eMediplan specification: (TODO)
    * Change Mapping of Medication.Zsr to Composition.author -> PractitionerRole.identifier:ZSR
    * New type (VEKA) for Patient.identifier
    * New type (ATC) for Medicament.IdType
 
 #### Fixed
-* [#27](https://github.com/ahdis/chmed/issues/27): Added the experimental element to CodeSystems/ValueSets
+* [#27](https://github.com/ahdis/chmed/issues/27): Added the experimental element to CodeSystems/ValueSets/ConceptMaps
 
 
 

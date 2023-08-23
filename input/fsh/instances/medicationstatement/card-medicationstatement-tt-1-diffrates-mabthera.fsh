@@ -22,6 +22,7 @@ Usage: #example
 * dosage[baseEntry][=].doseAndRate.doseQuantity = 10 'mL' "milliliter"
 
 * dosage[additionalEntry][+].sequence = 2
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 1
 * dosage[additionalEntry][=].timing.repeat.duration = 3600
 * dosage[additionalEntry][=].timing.repeat.durationUnit = #s
@@ -29,6 +30,7 @@ Usage: #example
 * dosage[additionalEntry][=].doseAndRate.doseQuantity = 20 'mL' "milliliter"
 
 * dosage[additionalEntry][+].sequence = 3
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 1
 * dosage[additionalEntry][=].timing.repeat.duration = 3600
 * dosage[additionalEntry][=].timing.repeat.durationUnit = #s
@@ -36,6 +38,7 @@ Usage: #example
 * dosage[additionalEntry][=].doseAndRate.doseQuantity = 30 'mL' "milliliter"
 
 * dosage[additionalEntry][+].sequence = 4
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 1
 * dosage[additionalEntry][=].timing.repeat.duration = 3600
 * dosage[additionalEntry][=].timing.repeat.durationUnit = #s

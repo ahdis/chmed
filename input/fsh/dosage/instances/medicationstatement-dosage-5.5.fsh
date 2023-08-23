@@ -33,6 +33,7 @@ Usage: #example
 * dosage[additionalEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
 * dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#5 "Sequence"
 
+* dosage[additionalEntry][=].timing.repeat.when = #MORN // TODO: placeholder for running ig
 * dosage[additionalEntry][=].timing.repeat.count = 7
 * dosage[additionalEntry][=].timing.repeat.frequency = 1
 * dosage[additionalEntry][=].timing.repeat.period = 1

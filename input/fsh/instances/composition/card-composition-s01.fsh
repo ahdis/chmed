@@ -13,7 +13,8 @@ Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:26d3dff7-ab05-4737-a49c-5eccd33595f6"
 * status = #final
-* type.coding[0] = $sct#721912009 "Medication summary document (record artifact)"
+* type.coding[0] = $sct#736378000 "Medication management plan (record artifact)"
+* type.coding[=].version = "http://snomed.info/sct/2011000195101"
 * type.coding[+] = $loinc#56445-0 "Medication summary Document"
 * subject.reference = "Patient/card-patient-s01"
 * date = "2016-09-12T11:46:09+02:00"

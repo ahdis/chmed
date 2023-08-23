@@ -5,6 +5,7 @@ Usage: #definition
 * contact.name = "Hotline"
 * contact.telecom.system = #email
 * contact.telecom.value = "hotline@hcisolutions.ch"
+* experimental = false
 
 * name = "UnitCodeMap"
 * title = "CH EMED UnitCode to CDTYP9"

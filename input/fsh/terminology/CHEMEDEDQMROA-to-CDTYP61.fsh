@@ -5,6 +5,7 @@ Usage: #definition
 * contact.name = "Hotline"
 * contact.telecom.system = #email
 * contact.telecom.value = "hotline@hcisolutions.ch"
+* experimental = false
 
 * name = "EDQMROAMap"
 * title = "CH EMED EDQM RouteOfAdministration to CDTYP61"

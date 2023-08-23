@@ -3,21 +3,22 @@ canonical: http://chmed.emediplan.ch/fhir
 name: CHMED
 status: active
 version: 2.2.0
-date: 2023-01-27
+date: 2023-08-23
 fhirVersion: 4.0.1
 copyrightYear: 2017+
-releaseLabel: CI Build
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: IG eMediplan
   url: http://www.emediplan.ch
 
 parameters:
   apply-publisher: false
+  allow-extensible-warnings: true
 
 title: eMediplan CHMED Implementation Guide
 description: FHIR IG for eMediplan
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 
 dependencies:

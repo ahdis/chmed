@@ -21,8 +21,8 @@ copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 
 dependencies:
-  ch.fhir.ig.ch-emed: current
-  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-emed: 4.0.0-ballot
+  ch.fhir.ig.ch-core: 4.0.0-ballot
 
 
 # ----- Define IG tabs (page content) -----
@@ -50,4 +50,4 @@ pages:
   dosage.md:
     title: Dosage
   changelog.md:
-    title: Change Log
+    title: Changelog

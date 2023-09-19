@@ -1,25 +1,26 @@
 ### Background
 
-Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, the organization [IG eMediplan](http://emediplan.ch/de/home) was founded in 2016. Its aim is to support and provide public, open source, medication plan formats supported by a broad group of stakeholders from the public and private sectors.
+Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, the organisation [IG eMediplan](https://emediplan.ch/) was founded in 2016. Its aim is to support and provide public, open-source, medication plan formats used by a broad group of stakeholders from the public and private sectors.
 
-{% include img.html img="mediplan_example.png" caption="Fig.: Example of a Mediplan" %}
+{% include img.html img="mediplan_example.jpg" caption="Fig.: eMediplan Example" %}
 
-### About this IG and CHMED
+### eMediplan on FHIR
 
-#### CHMED
-The purpose of this implementation guide is to specify the medication exchange formats based on the [FHIR®](https://www.hl7.org/fhir/) standard from [HL7®](https://www.hl7.org/).
+#### CHMED Implementation Guide
+The purpose of this implementation guide (IG) is to specify the medication exchange formats given by eMediplan based on the [FHIR® (R4)](http://hl7.org/fhir/R4/index.html) standard from [HL7®](https://www.hl7.org/).
 
-Extending the eMediplan format to a FHIR based definition (CHMED) has the following advantages:
-* CHMED formats can be [validated](https://www.hl7.org/fhir/validation.html) for correctness, data types are well defined. 
-* Base interoperability for other projects based on medications, e.g. mappings will be provided for the exchange format for medication in the context of the EPR in Switzerland ([CH EMED](http://fhir.ch/ig/ch-emed/index.html)).
+Extending the eMediplan format to a FHIR-based definition (CHMED) has the following advantages:
+* CHMED formats can be [validated](https://www.hl7.org/fhir/validation.html) for correctness and data types are well defined. 
+* Foundation for base interoperability for other medication projects. For example, a mapping is provided for the medication exchange format in the context of the EPR in Switzerland ([CH EMED](http://fhir.ch/ig/ch-emed/index.html)).
 
-The CHMED format can be either in XML or JSON format. However, both are too big in size to be exchanged in a QR code.
+The CHMED format can be either in JSON or XML format. However, both formats are too large in size to be exchanged in a QR code as defined by eMediplan.   
+HCI Solutions AG has built a **converter** for all software houses that have integrated the eMediplan format. It transforms the eMediplan format to the CHMED format and back. If you have any questions or require further information, please contact <hotline@hcisolutions.ch>.
 
-HCI Solutions AG has built a **converter** for all software houses that have integrated the eMediplan format. If you have questions or want more information please contact <hotline@hcisolutions.ch> directly.
+{% include img.html img="formats.png" caption="Fig.: Format Overview" width="80%" %}
 
-#### Scope
-* [Documents](documents.html) - in FHIR format to exchange the eMedication information.
-* [Profiles](profiles.html) - are constraints of FHIR resources and data types for the context of CHMED.
+#### IG Scope
+* [Documents](documents.html) - in FHIR format to exchange the medication information.
+* [Profiles](profiles.html) - are constraints of FHIR resources and data types for the CHMED format.
 * [Extensions](extensions.html) - are FHIR extensions that are added to be able to represent the complete CHMED context.
 * [Terminologies](terminology.html) - were defined and represented to allow exchange of coded data.
 * [Dosage](dosage.html) - describes the posology of a medicament in more detail.
@@ -29,44 +30,37 @@ HCI Solutions AG has built a **converter** for all software houses that have int
 The meaning of the flag [mustSupport](https://www.hl7.org/fhir/profiling.html#mustsupport) for this implementation guide follows the [definition of CH EMED](https://fhir.ch/ig/ch-emed/index.html#mustsupport), the Swiss eMedication IG from which CHMED is derived.
 
 #### Download
-You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
+You can download this implementation guide in [npm format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 
 #### Changelog
 [Significant changes](changelog.html) to this specification since its initial version.
 
-### eMediplan
-The [eMediplan papers](https://emediplan.ch/software-anbieter/spezifikationen/) describe the specification and reference implementation of the object model for a medication plan, the so-called CHMED16B/CHMED23A.
+### eMedication Plan ChMed23A
+The [eMedication Plan ChMed23A](https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf) describes the specification and reference implementation of the object model for a medication plan, the so-called ChMed23A.
 
-#### CHMED23A
-The reference consists of:
-* The content and layout specification for the electronic document, a JSON file including a medication (Med) for which the format (MedF) and compression (IsCompressed) is being specified.
-   * Med will be a string if compressed or a JSON object otherwise
-   * The JSON file must be encoded in UTF-8
+The reference consists of the content and layout specification for the electronic document, a JSON file containing a medication.
 
 The content and layout specification for a paper-based layout used in Print/PDF scenarios is described in the document 'eMediplan_Paper-based_Layout'.
 
-This allows IT systems to store and transmit electronic medication plans as JSON file in UTF-8. It also makes it possible to transmit the mediplan print-based using QR barcodes. Therefore, the mediplan is readable by users and systems alike. This is necessary to guarantee a simple handling.
+A ChMed23A can be transmitted using the so called ChTransmissionFormat, which specifies the type of the content and includes the compressed and Base64 encoded content.
 
-A typical compressed CHMED23A object would look like this:
-```
-{ 
-    "MedF": "ChMed23A", 
-    "IsCompressed": true, 
-    "Med": 
-    "H4sIAAAAAAAACq2OOw4CMQxE7zIt2ZUTAmzcLZsGiU+KUCEKYKlokIACRbk7jkLBAWisZz/NyAmb6/g
-    AHxJWI7hsGgqhnsIOnBDBRmF4+9cebCuBtUL0Xy38g73MnIu+DxX/1nRUkCRiv1zLl9tzOF1uIloqxj9FGT
-    KmId1oHcnxtGM7a+28c9YtJqSZCPkD+iD8fPQAAAA=" 
-}
-```
-It is recommended to use the compressed CHMED23A object to minimize data size.
+ChFormat: <span style="color:blue;">{inputType}</span>.<span style="color:lightgreen;">{compressed-base64-payload}</span>     
+Example: <span style="color:blue;">ChMed23A</span>.    
+<span style="color:lightgreen;">H4sIAAAAAAAACq2OOw4CMQxE7zIt2ZUTAmzcLZsGiU+KUCEKYKlokIACRbk7jkLBAWisZz/NyAmb6/gAHxJ</span>      
+<span style="color:lightgreen;">WI7hsGgqhnsIOnBDBRmF4+9cebCuBtUL0Xy38g73MnIu+DxX/1nRUkCRiv1zLl9tzOF1uIloqxj9FGTKmId1oHcn</span>      
+<span style="color:lightgreen;">xtGM7a+28c9YtJqSZCPkD+iD8fPQAAAA=</span>      
+
+This allows IT systems to store and transmit electronic medication plans in the form of a JSON file in UTF-8. It also enables the medication plan to be transmitted in a print-based form by using QR barcodes. Therefore, the medication plan is readable by users and systems alike. This is necessary to guarantee simple handling.
+
+The possibility to transmit and store the compressed and Base64 encoded chunked payload (mainly to not exceed the maximum character size supported by a QR code), will be considered in the future.   
+Here is an example which describes how to create chunks that fit on one line in this document:   
+Chunk 1: ChMed23A.1/4.H4sIAAAAAAAACq2OOw4CMQxE7zIt2ZUTAmzcLZsGiU+KUCEKYKlokIACRbk7jk   
+Chunk 2: ChMed23A.2/4.LBAWisZz/NyAmb6/gAHxJWI7hsGgqhnsIOnBDBRmF4+9cebCuBtUL0Xy38g73MnI   
+Chunk 3: ChMed23A.3/4.u+DxX/1nRUkCRiv1zLl9tzOF1uIloqxj9FGTKmId1oHcnxtGM7a+28c9YtJqSZCPkD+   
+Chunk 4: ChMed23A.4/4.iD8fPQAAAA=   
 
 
 ### IP Statements
-This document is licensed under Creative Commons "No Rights Reserved" ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)).
-
-HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR <img src="icon-fhir-16.png" style="float: none; margin: 0px; padding: 0px; vertical-align: bottom"/>&reg; are trademarks owned by Health Level Seven International, registered with the United States Patent and Trademark Office.
-
-This implementation guide contains and references intellectual property owned by third parties ("Third Party IP"). Acceptance of these License Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize Third Party IP in connection with the specification or otherwise.
 
 {% include ip-statements.xhtml %}
 

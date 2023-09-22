@@ -18,12 +18,13 @@ Alias: $chmed-cs-posology-object-type =         http://chmed.emediplan.ch/fhir/C
 Alias: $chmed-cs-timed-dosage-object-type =     http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type
 Alias: $chmed-cs-cdtyp62 =                      http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-cdtyp62
 
-// CH EMED & CH EPR Term
+// CH EMED & CH EPR Term & CH Core
 Alias: $ch-emed-practitioner =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitioner
 Alias: $ch-emed-practitionerrole =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-practitionerrole
 Alias: $ch-emed-organization =                  http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-organization
 Alias: $ch-emed-ext-substitution =              http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-substitution
 Alias: $edqm-routeofadministration =            http://fhir.ch/ig/ch-emed/ValueSet/edqm-routeofadministration
+Alias: $ch-core-gln-identifier =                http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-gln-identifier
 
 
 // Others

@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-s01-2-aspirincardio
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - ASPIRIN CARDIO"
-Description: "Example for a MedicationStatement (Card)"
+Description: "Example for a MedicationStatement (CARD)"
 Usage: #example
 * contained = s01-2-aspirincardio
 * identifier.system = "urn:ietf:rfc:3986"

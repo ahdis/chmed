@@ -1,7 +1,7 @@
 Instance: card-patient-s01
 InstanceOf: CHMEDPatientCard
-Title: "Maxima Matter (Card)"
-Description: "Example for a Patient (Card)"
+Title: "Maxima Matter (CARD)"
+Description: "Example for a Patient (CARD)"
 Usage: #example
 
 * identifier[LocalPid][+].type = $v2-0203#MR

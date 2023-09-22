@@ -1,7 +1,7 @@
 Instance: card-patient-ext
 InstanceOf: CHMEDPatientCard
 Title: "Maxima Matter (Ext)"
-Description: "Example for a Patient (Card) with the private field extension included"
+Description: "Example for a Patient (CARD) with the private field extension included"
 Usage: #example
 * extension.extension[0].url = "name"
 * extension.extension[=].valueString = "Private Field Name Sample"

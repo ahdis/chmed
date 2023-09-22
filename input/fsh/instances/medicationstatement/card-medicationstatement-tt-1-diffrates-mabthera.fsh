@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-1-diffrates-mabthera
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MABTHERA"
-Description: "Example for a MedicationStatement (Card)"
+Description: "Example for a MedicationStatement (CARD)"
 Usage: #example
 * contained = tt-1-diffrates-mabthera
 * identifier.system = "urn:ietf:rfc:3986"

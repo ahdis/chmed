@@ -8,8 +8,8 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Dosage"
 
-* extension contains CHMEDExtensionPosologyObjectType named posologyObjectType 0..* MS
-* extension contains CHMEDExtensionTimedDosageObjectType named timedDosageObjectType 0..1 MS
+* extension contains CHMEDPosologyObjectType named posologyObjectType 0..* MS
+* extension contains CHMEDTimedDosageObjectType named timedDosageObjectType 0..1 MS
 
 * sequence 
 * sequence. ^short = "The order of the dosage instructions (number is identical -> concurrent,  number is different -> sequential)"
@@ -61,7 +61,7 @@ Description: "Dosage according to the 'eMedication Plan CHMED Posology'"
 * doseAndRate.doseQuantity 
 * doseAndRate.doseQuantity only CHEMEDQuantityWithEmedUnits
 
-* doseAndRate.doseQuantity.extension contains CHMEDExtensionDoseQuantityTo named doseQuantityTo 0..1
+* doseAndRate.doseQuantity.extension contains CHMEDDoseQuantityTo named doseQuantityTo 0..1
 
 * maxDosePerPeriod 
 * maxDosePerPeriod only CHEMEDRatioWithEmedUnits
@@ -74,7 +74,7 @@ Mapping: eMediplan-for-CHMEDDosage
 Id: eMediplan
 Title: "eMediplan"
 Source: CHMEDDosage
-Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
+Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf"
 * -> "Posology"
 
 * extension[posologyObjectType] -> "PO.T" // 5.
@@ -108,8 +108,8 @@ Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
 
 * asNeededBoolean -> "InRes" // 4.
 
-* route -> "Medicament.Roa"
-* method -> "Medicament.Moa"
+* route -> "Medicament.roa"
+* method -> "Medicament.moa"
 
 * doseAndRate.doseRange.low -> "D.AMin" // 7.3
 * doseAndRate.doseRange.high -> "D.AMax" // 7.3

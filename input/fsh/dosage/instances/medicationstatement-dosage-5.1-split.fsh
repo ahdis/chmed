@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-dosage-5.1-split
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage Daily"
-Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
+Description: "Example for a MedicationStatement (CARD) to illustrate the dosage"
 Usage: #example
 * contained = med01
 * identifier.system = "urn:ietf:rfc:3986"
@@ -18,7 +18,7 @@ Usage: #example
 * dosage[baseEntry][=].doseAndRate.doseQuantity = 1.0 '{Piece}' "Piece"
 
 * dosage[additionalEntry][+].sequence = 0
-//* dosage[additionalEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
-//* dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
+* dosage[additionalEntry][=].extension[+].url = "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type"
+* dosage[additionalEntry][=].extension[=].valueCoding = $chmed-cs-posology-object-type#1 "Daily"
 * dosage[additionalEntry][=].timing.repeat.when = #EVE
 * dosage[additionalEntry][=].doseAndRate.doseQuantity = 2.0 '{Piece}' "Piece"

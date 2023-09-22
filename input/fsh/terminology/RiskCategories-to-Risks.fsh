@@ -51,7 +51,7 @@ Usage: #definition
 * group.element[=].target[+].code = #580
 * group.element[=].target[=].equivalence = #specializes
 
-// 5: Driver 
+// 5: Operating vehicles/machines
 * group.element[+].code = #5
 * group.element[=].target[+].code = #615
 * group.element[=].target[=].equivalence = #specializes

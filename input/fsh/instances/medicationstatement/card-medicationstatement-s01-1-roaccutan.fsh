@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-s01-1-roaccutan
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - ROACCUTAN"
-Description: "Example for a MedicationStatement (Card)"
+Description: "Example for a MedicationStatement (CARD)"
 Usage: #example
 * contained = s01-roaccutan
 * identifier.system = "urn:ietf:rfc:3986"

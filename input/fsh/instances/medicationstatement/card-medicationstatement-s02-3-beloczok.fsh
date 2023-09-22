@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-s02-3-beloczok
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatment - BELOC ZOK (Split Dosage)"
-Description: "Example for a MedicationStatement (Card)"
+Description: "Example for a MedicationStatement (CARD)"
 Usage: #example
 * contained = s01-3-beloczok
 * identifier.system = "urn:ietf:rfc:3986"

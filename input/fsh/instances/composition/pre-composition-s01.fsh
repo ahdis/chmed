@@ -1,11 +1,11 @@
 Instance: pre-composition-s01
 InstanceOf: CHMEDCompositionMedicationPrescription
 Title: "Medication Prescription Composition"
-Description: "Example for a Composition (Pre)"
+Description: "Example for a Composition (PRE)"
 Usage: #example
 * language = #de-CH
 
-* extension[receiver].valueString = "7601003178999"
+//* extension[receiver].valueString = "7601003178999"
 
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:645bb0c3-ff7e-4123-bef5-3852a4784813"

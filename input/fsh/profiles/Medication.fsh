@@ -3,10 +3,11 @@ Parent: CHEMEDMedication
 Id: chmed-medication
 Title: "CHMED Medication"
 Description: "Profile for the Medication resource"
-* ^publisher = "IG eMediplan"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Medication"
+* code ^short = "Medicament"
+* code.coding[GTIN] ^short = "GTIN (Global Trade Item Number)"
+* code.coding[ATC] ^short = "Anatomical Therapeutic Chemical code (ATC)"
+* code.text ^short = "Free text description"
 
 
 
@@ -15,11 +16,11 @@ Mapping: eMediplan-for-CHMEDMedication
 Id: eMediplan
 Title: "eMediplan"
 Source: CHMEDMedication
-Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
+Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf"
 * -> "Medicament"
-* code.coding.code -> "Id"
-* code.coding.system -> "IdType"
-* code.coding[GTIN] -> "Id with IdType 2 (GTIN)"
-* code.coding[ATC] -> "Id with IdType 5 (ATC)"
-* code.text -> "Id with IdType 1 (None)"
+* code.coding.code -> "id"
+* code.coding.system -> "idType (2: GTIN, 3: Pharmacode, 4: Product Number, 5: ATC)"
+* code.coding[GTIN] -> "id with idType 2: GTIN"
+* code.coding[ATC] -> "id with idType 5: ATC"
+* code.text -> "id with idType 1: None"
 

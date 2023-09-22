@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-s01-4-zocor
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - ZOCOR"
-Description: "Example for a MedicationStatement (Card)"
+Description: "Example for a MedicationStatement (CARD)"
 Usage: #example
 * contained = s01-4-zocor
 * identifier.system = "urn:ietf:rfc:3986"

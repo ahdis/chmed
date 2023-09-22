@@ -1,6 +1,6 @@
 Instance: pre-bundle-s01
 InstanceOf: CHMEDMedicationPrescriptionDocument
-Title: "Medication Prescription Document - Sample 01"
+Title: "Medication Prescription document - Sample 01"
 Description: "Example for a Medication Prescription document (Bundle)"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"

@@ -2,11 +2,11 @@
 
 Medication plans are a central pillar of any eHealth solution. To enable interoperability between eHealth systems in Switzerland, the organisation [IG eMediplan](https://emediplan.ch/) was founded in 2016. Its aim is to support and provide public, open-source, medication plan formats used by a broad group of stakeholders from the public and private sectors.
 
-{% include img.html img="mediplan_example.jpg" caption="Fig.: eMediplan Example" %}
+{% include img.html img="mediplan_example.jpg" caption="Fig.: eMediplan example" %}
 
-### eMediplan on FHIR
+### CHMED Implementation Guide
 
-#### CHMED Implementation Guide
+#### eMediplan on FHIR
 The purpose of this implementation guide (IG) is to specify the medication exchange formats given by eMediplan based on the [FHIR® (R4)](http://hl7.org/fhir/R4/index.html) standard from [HL7®](https://www.hl7.org/).
 
 Extending the eMediplan format to a FHIR-based definition (CHMED) has the following advantages:
@@ -14,9 +14,10 @@ Extending the eMediplan format to a FHIR-based definition (CHMED) has the follow
 * Foundation for base interoperability for other medication projects. For example, a mapping is provided for the medication exchange format in the context of the EPR in Switzerland ([CH EMED](http://fhir.ch/ig/ch-emed/index.html)).
 
 The CHMED format can be either in JSON or XML format. However, both formats are too large in size to be exchanged in a QR code as defined by eMediplan.   
+
 HCI Solutions AG has built a **converter** for all software houses that have integrated the eMediplan format. It transforms the eMediplan format to the CHMED format and back. If you have any questions or require further information, please contact <hotline@hcisolutions.ch>.
 
-{% include img.html img="formats.png" caption="Fig.: Format Overview" width="80%" %}
+{% include img.html img="formats.png" caption="Fig.: Format overview" width="90%" %}
 
 #### IG Scope
 * [Documents](documents.html) - in FHIR format to exchange the medication information.

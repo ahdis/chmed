@@ -52,3 +52,5 @@ pages:
     title: Dosage
   changelog.md:
     title: Changelog
+  changelog_v0.2.0.md:
+    title: Changelog v0.2.0 (2019-06-11)

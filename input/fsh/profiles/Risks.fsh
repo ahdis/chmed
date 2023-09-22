@@ -3,25 +3,18 @@ Parent: Condition
 Id: chmed-condition-risks
 Title: "CHMED Risks"
 Description: "Profile for the Condition resource to represent the risks"
-* ^publisher = "IG eMediplan"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.emediplan.ch"
 * . ^short = "CHMED Risks"
-
+* clinicalStatus 1..
 * clinicalStatus = $condition-clinical#active
-
+* clinicalStatus ^short = "The patient is currently experiencing the risk or there is evidence for it"
 * category 1..1
 * category from RiskCategories (required)
-* category ^short = "Identification of risk category"
-* category ^binding.description = "A category assigned to the condition"
-
+* category ^short = "Risk category"
 * code from Risks (required)
-* code ^short = "Identification of the risk for that category"
-* code ^binding.description = "Identification of risk"
-
+* code ^short = "Risk within the risk category"
 * subject 1..
-* subject only Reference(Patient)
-* subject ^short = "Patient"
+* subject only Reference(CHMEDPatientCard)
+* subject ^short = "The patient"
 
 
 
@@ -29,8 +22,7 @@ Mapping: eMediplan-for-CHMEDRisks
 Id: eMediplan
 Title: "eMediplan"
 Source: CHMEDRisks
-Target: "https://emediplan.ch/software-anbieter/spezifikationen/"
-* -> "MedicalData (MData).RCs -> RiskCategory"
-* category -> "RiskCategory.Id (RC Id)"
-* code -> "RiskCategory.RCs (Risk Id)"
-* subject -> "Patient.MData -> MedicalData (MData)"
+Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf"
+* category -> "MedicalData.rcs -> RiskCategory.id (1: Renal insufficiency, 2: Liver insufficiency, 3: Reproduction, 4: Competitive athlete, 5: Operating vehicles/machines, 6: Allergies, 7: Diabetes)"
+* code -> "MedicalData.rcs -> RiskCategory.rIds"
+* subject -> "Patient.mData -> MedicalData"

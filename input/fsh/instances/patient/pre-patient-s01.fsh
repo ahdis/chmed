@@ -1,7 +1,7 @@
 Instance: pre-patient-s01
 InstanceOf: CHMEDPatientPre
-Title: "Maxima Matter (Pre)"
-Description: "Example for a Patient (Pre)"
+Title: "Maxima Matter (PRE)"
+Description: "Example for a Patient (PRE)"
 Usage: #example
 * identifier[LocalPid][+].type = $v2-0203#MR
 * identifier[LocalPid][=].system = "urn:oid:2.999.1"

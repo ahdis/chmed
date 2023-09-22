@@ -1,7 +1,7 @@
 Instance: pre-medicationrequest-s01-1-roaccutan
 InstanceOf: CHMEDMedicationRequestPre
 Title: "MedicationRequest - ROACCUTAN"
-Description: "Example for a MedicationRequest (Pre)"
+Description: "Example for a MedicationRequest (PRE)"
 Usage: #example
 * contained = s01-roaccutan
 * identifier.system = "urn:ietf:rfc:3986"

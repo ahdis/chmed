@@ -1,6 +1,6 @@
 Instance: card-bundle-s01
 InstanceOf: CHMEDMedicationCardDocument
-Title: "Medication Card Document - Sample 01"
+Title: "Medication Card document - Sample 01"
 Description: "Example for a Medication Card document (Bundle) with all specified health concerns included"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"

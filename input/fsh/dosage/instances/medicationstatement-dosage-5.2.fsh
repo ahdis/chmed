@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-dosage-5.2
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage FreeText"
-Description: "Example for a MedicationStatement (Card) to illustrate the dosage"
+Description: "Example for a MedicationStatement (CARD) to illustrate the dosage"
 Usage: #example
 * contained = med01
 * identifier.system = "urn:ietf:rfc:3986"

@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-3-marcoumar
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MARCOUMAR"
-Description: "Example for a MedicationStatement (CARD)"
+Description: "Example of a MedicationStatement"
 Usage: #example
 * contained = tt-3-marcoumar
 * identifier.system = "urn:ietf:rfc:3986"

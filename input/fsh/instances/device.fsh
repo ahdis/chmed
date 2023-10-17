@@ -1,7 +1,7 @@
-Instance: DeviceTest
+Instance: device-testdevice
 InstanceOf: Device
+Title: "Test Device"
+Description: "Example of a Device"
 Usage: #example
-Title: "DeviceTest"
-Description: "Device"
-* deviceName.name = "Test"
+* deviceName.name = "Test Device"
 * deviceName.type = #user-friendly-name

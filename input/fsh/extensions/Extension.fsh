@@ -1,7 +1,7 @@
 Extension: CHMEDExtension
 Id: chmed-extension
 Title: "CHMED Extension"
-Description: "CHMED extension can be used to include additional information."
+Description: "CHMED extension can be used to include additional information. NOTE: The extension can include itself as a nested extension (see linked example below)."
 * ^context[0].type = #element
 * ^context[=].expression = "Composition"
 * ^context[+].type = #element
@@ -18,15 +18,13 @@ Description: "CHMED extension can be used to include additional information."
 * extension contains
     nm 1..1 and
     val 0..1 and 
-    schema 1..1 and
-    CHMEDExtension named exts 0..*
+    schema 1..1
 * extension[nm] ^short = "The name of the field"
 * extension[nm].valueString 1..
 * extension[val] ^short = "The value of the field"
 * extension[val].valueString 1..
 * extension[schema] ^short = "The schema can be any string and can be used to determine how to interpret the extension"
 * extension[schema].valueString 1..
-* extension[exts] ^short = "Nested extensions"
 
 
 
@@ -39,4 +37,4 @@ Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMe
 * extension[nm].valueString -> "nm"
 * extension[val].valueString -> "val"
 * extension[schema].valueString -> "schema"
-* extension[exts] -> "exts"
+//* extension[exts] -> "exts"

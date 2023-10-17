@@ -3,7 +3,7 @@ canonical: http://chmed.emediplan.ch/fhir
 name: CHMED
 status: active
 version: 3.0.0-ci-build
-date: 2023-09-19
+date: 2023-10-17
 fhirVersion: 4.0.1
 copyrightYear: 2017+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -25,11 +25,13 @@ dependencies:
   ch.fhir.ig.ch-emed: 4.0.0-ballot
   ch.fhir.ig.ch-core: 4.0.0-ballot
 
-
 # ----- Define IG tabs (page content) -----
 menu:
   Home: index.html
   Documents: documents.html
+  Use Cases:
+    German: usecases-german.html
+    French: usecases-french.html
   Profiles: profiles.html
   Extensions: extensions.html
   Terminology: terminology.html
@@ -42,6 +44,10 @@ pages:
     title: Home
   documents.md:
     title: FHIR Documents
+  usecases-german.md:
+    title: Anwendungsfälle
+  usecases-french.md:
+    title: Cas d'application 
   profiles.md:
     title: Profiles
   extensions.md:

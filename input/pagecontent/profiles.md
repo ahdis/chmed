@@ -16,7 +16,7 @@ Dosage according to the ‘eMedication Plan CHMED Posology’
 Profile for the Bundle resource to represent the entire, current medication of a patient
 * [CHMED Medication Card Composition](StructureDefinition-chmed-card-composition.html)   
 Profile for the Composition resource of the Medication Card document
-* [CHMED MedicationStatement (CARD)](StructureDefinition-chmed-card-medicationstatement.html)   
+* [CHMED MedicationStatement](StructureDefinition-chmed-card-medicationstatement.html)   
 Profile for the MedicationStatement resource of the Medication Card document
 
 * [CHMED First Day of Last Menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)   
@@ -40,7 +40,7 @@ Profile for the Patient resource, referenced in the CHMED Medication Card Compos
 Profile for the Bundle resource to represent the prescribed medication of a patient
 * [CHMED Medication Prescription Composition](StructureDefinition-chmed-pre-composition.html)   
 Profile for the Composition resource of the Medication Prescription document
-* [CHMED MedicationRequest (PRE)](StructureDefinition-chmed-pre-medicationrequest.html)   
+* [CHMED MedicationRequest](StructureDefinition-chmed-pre-medicationrequest.html)   
 Profile for the MedicationRequest resource of the Medication Prescription document
 
 * [CHMED Patient (PRE)](StructureDefinition-chmed-pre-patient.html)   

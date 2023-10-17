@@ -1,9 +1,9 @@
 Profile: CHMEDMedicationRequestPre
 Parent: CHEMEDMedicationRequest
 Id: chmed-pre-medicationrequest
-Title: "CHMED MedicationRequest (PRE)"
+Title: "CHMED MedicationRequest"
 Description: "Profile for the MedicationRequest resource of the Medication Prescription document"
-* . ^short = "CHMED MedicationRequest (PRE)"
+* . ^short = "CHMED MedicationRequest"
 * extension contains 
     CHMEDExtension named exts 0..* and
     CHMEDSic named sic 0..1

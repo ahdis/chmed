@@ -1,7 +1,7 @@
 Instance: binary-pdf-example
 InstanceOf: Binary
 Title: "PDF Example"
-Description: "Example for a Binary"
+Description: "Example of a Binary"
 Usage: #example
 * language = #de-CH
 * contentType = #application/pdf

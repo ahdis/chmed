@@ -1,4 +1,4 @@
-/* Define colors here */
+/* Define colors here - https://build.fhir.org/ig/FHIR/ig-guidance/colors.html */
 
 :root {
     --ig-status-text-color: #255080; /* Header IG Title and status text color (center) */
@@ -12,7 +12,8 @@
     --footer-bg-color: #8ad0ea; /* Footer background color (sides) */
     --footer-hyperlink-text-color: #255080;
   
-    --btn-hover-color:#8ad0ea;  /* Navbar: Menu button hover color */
+    --btn-hover-color:#8ad0ea;  /* Menu button hover color */
+    --btn-active-color: #255080; /* Menu button active color */
     --btn-text-color: #ffffff; /* Menu button text color */
 
     --link-color:#009dcc; /* Hyperlink text color */

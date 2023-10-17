@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-4-spiricort
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - SPIRICORT"
-Description: "Example for a MedicationStatement (CARD)"
+Description: "Example of a MedicationStatement"
 Usage: #example
 * contained = tt-4-spiricort
 * identifier.system = "urn:ietf:rfc:3986"

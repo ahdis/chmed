@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-2-multiple-meronem
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MERONEM"
-Description: "Example for a MedicationStatement (CARD)"
+Description: "Example of a MedicationStatement"
 Usage: #example
 * contained = tt-2-multiple-meronem
 * identifier.system = "urn:ietf:rfc:3986"

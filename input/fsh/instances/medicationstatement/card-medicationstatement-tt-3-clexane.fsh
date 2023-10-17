@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-3-clexane
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - CLEXANE"
-Description: "Example for a MedicationStatement (CARD)"
+Description: "Example of a MedicationStatement"
 Usage: #example
 * contained = tt-3-clexane
 * identifier.system = "urn:ietf:rfc:3986"

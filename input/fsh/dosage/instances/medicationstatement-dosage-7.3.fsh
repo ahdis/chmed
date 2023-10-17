@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-dosage-7.3
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - Dosage DosageRange"
-Description: "Example for a MedicationStatement (CARD) to illustrate the dosage"
+Description: "Example of a MedicationStatement to illustrate the dosage"
 Usage: #example
 * contained = med01
 * identifier.system = "urn:ietf:rfc:3986"

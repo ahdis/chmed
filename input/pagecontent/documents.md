@@ -4,7 +4,7 @@ Two CHMED exchange formats are defined:
 
 These exchange formats are defined as a [document](https://hl7.org/fhir/R4/documents.html) type that corresponds to a [Bundle](https://hl7.org/fhir/R4/bundle.html) as a FHIR resource. A Bundle has a list of entries. The first entry is the [Composition](https://hl7.org/fhir/R4/composition.html), in which all contained entries are then referenced.
 
-{% include img.html img="documents.png" caption="Fig.: Schematic illustration of the FHIR documents for the exchange formats " width="70%" %}
+{% include img.html img="documents.png" caption="Fig. 3: Schematic illustration of the FHIR documents for the exchange formats " width="70%" %}
 
 ### Medication Card document
 The Medication Card document provides as complete an overview as possible of all **current medications** for a patient at a given point in time (such as the end of a hospitalization or other encounter). The purpose of this document is to inform the patient and clinicians (therapists, etc.) of the current medication information.

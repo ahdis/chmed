@@ -1,7 +1,7 @@
 Instance: card-medicationstatement-tt-5-morphin
 InstanceOf: CHMEDMedicationStatementCard
 Title: "MedicationStatement - MORPHIN"
-Description: "Example for a MedicationStatement (CARD)"
+Description: "Example of a MedicationStatement"
 Usage: #example
 * contained = tt-5-morphin
 * identifier.system = "urn:ietf:rfc:3986"

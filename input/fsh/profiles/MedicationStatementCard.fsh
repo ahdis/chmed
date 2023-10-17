@@ -1,9 +1,9 @@
 Profile: CHMEDMedicationStatementCard
 Parent: CHEMEDMedicationStatementCard
 Id: chmed-card-medicationstatement
-Title: "CHMED MedicationStatement (CARD)"
+Title: "CHMED MedicationStatement"
 Description: "Profile for the MedicationStatement resource of the Medication Card document"
-* . ^short = "CHMED MedicationStatement (CARD)"
+* . ^short = "CHMED MedicationStatement"
 * extension contains CHMEDExtension named exts 0..*
 * extension[exts] ^short = "Extension"
 * extension[substitution] ^short = "Whether substitution is allowed or not" 
@@ -11,7 +11,7 @@ Description: "Profile for the MedicationStatement resource of the Medication Car
 * medicationReference ^short = "Medicament"
 * subject ^short = "The patient"
 * subject only Reference(CHMEDPatientCard)
-* informationSource only Reference(CHMEDPractitionerRole or CHMEDPatientCard or RelatedPerson)
+// * informationSource only Reference(CHMEDPractitionerRole or CHMEDPatientCard or RelatedPerson) zu strenge Adress-Anforderungen
 * informationSource ^short = "PractitionerRole for 'prscbBy' or Patient/RelatedPerson for 'autoMed'"
 * reasonCode.text ^short = "Reason for applying the medication (the reason for the medication treatment)"
 * dosage ^short = "Posology"

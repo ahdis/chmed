@@ -1,7 +1,7 @@
 Instance: card1-binary-emediplan
 InstanceOf: Binary
 Title: "CARD 1 - eMediplan"
-Description: "Example of a Binary - PDF (A1) of the eMediplan sample shown in the IG (Home)."
+Description: "Example of a Binary - PDF (A1) of the eMediplan sample shown in the IG (Home)"
 Usage: #example
 * language = #de-CH
 * contentType = #application/pdf

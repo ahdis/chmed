@@ -1,7 +1,7 @@
 Instance: pre1-bundle-s01
 InstanceOf: CHMEDMedicationPrescriptionDocument
 Title: "PRE 1 - Bundle"
-Description: "Example of a Bundle - Medication Prescription document for the first medication (ANTIBIOTIKUM) in the eMediplan sample shown in the IG (Home)."
+Description: "Example of a Bundle - Medication Prescription document for the first medication (ANTIBIOTIKUM) in the eMediplan sample shown in the IG (Home)"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:17cd3fd9-9ad1-4b2c-998a-c2ad240e84ef"

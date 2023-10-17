@@ -1,7 +1,7 @@
 Instance: card1-bundle
 InstanceOf: CHMEDMedicationCardDocument
 Title: "CARD 1 - Bundle"
-Description: "Example of a Bundle - Medication Card document for the eMediplan sample shown in the IG (Home)."
+Description: "Example of a Bundle - Medication Card document for the eMediplan sample shown in the IG (Home)"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:0b46bccd-f007-46bf-b7ab-5eb642958896"

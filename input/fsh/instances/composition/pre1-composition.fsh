@@ -1,7 +1,7 @@
 Instance: pre1-composition
 InstanceOf: CHMEDCompositionMedicationPrescription
 Title: "PRE 1 - Composition"
-Description: "Example of a Composition - Medication Prescription document for the first medication (ANTIBIOTIKUM) in the eMediplan sample shown in the IG (Home)."
+Description: "Example of a Composition - Medication Prescription document for the first medication (ANTIBIOTIKUM) in the eMediplan sample shown in the IG (Home)"
 Usage: #example
 * language = #de-CH
 * extension[rec].valueIdentifier.system = "urn:oid:2.51.1.3"

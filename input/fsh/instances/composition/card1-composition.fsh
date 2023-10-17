@@ -1,7 +1,7 @@
 Instance: card1-composition
 InstanceOf: CHMEDCompositionMedicationCard
 Title: "CARD 1 - Composition"
-Description: "Example of a Composition - Medication Card document for the eMediplan sample shown in the IG (Home)."
+Description: "Example of a Composition - Medication Card document for the eMediplan sample shown in the IG (Home)"
 Usage: #example
 * language = #de-CH
 * identifier.system = "urn:ietf:rfc:3986"

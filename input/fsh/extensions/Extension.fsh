@@ -12,19 +12,24 @@ Description: "CHMED extension can be used to include additional information. NOT
 * ^context[=].expression = "MedicationStatement"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationRequest"
-* ^context[+].type = #element
-* ^context[=].expression = "Extension"
+* ^context[+].type = #extension
+* ^context[=].expression = Canonical(CHMEDExtension)
 * . ^short = "CHMED Extension"
 * extension contains
     nm 1..1 and
-    val 0..1 and 
-    schema 1..1
+    val 0..1 and
+    schema 1..1 and
+    CHMEDExtension named exts 0..*
 * extension[nm] ^short = "The name of the field"
-* extension[nm].valueString 1..
+* extension[nm].value[x] only string
+* extension[nm].value[x] 1..
 * extension[val] ^short = "The value of the field"
-* extension[val].valueString 1..
+* extension[val].value[x] only string
+* extension[val].value[x] 1..
 * extension[schema] ^short = "The schema can be any string and can be used to determine how to interpret the extension"
-* extension[schema].valueString 1..
+* extension[schema].value[x] only string
+* extension[schema].value[x] 1..
+* extension[exts] ^short = "The list of nested extensions"
 
 
 
@@ -37,4 +42,4 @@ Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMe
 * extension[nm].valueString -> "nm"
 * extension[val].valueString -> "val"
 * extension[schema].valueString -> "schema"
-//* extension[exts] -> "exts"
+* extension[exts] -> "exts"

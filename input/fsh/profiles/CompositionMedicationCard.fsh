@@ -4,8 +4,8 @@ Id: chmed-card-composition
 Title: "CHMED Medication Card Composition"
 Description: "Profile for the Composition resource of the Medication Card document"
 * . ^short = "CHMED Medication Card Composition"
-* extension contains CHMEDExtension named exts 0..*
-* extension[exts] ^short = "Extension"
+//* extension contains CHMEDExtension named exts 0..*
+//* extension[exts] ^short = "Extension"
 * identifier ^short = "The ID"
 * type ^short = "MedicationPlan (MP)"
 * subject only Reference(CHMEDPatientCard)
@@ -60,7 +60,7 @@ Title: "eMediplan"
 Source: CHMEDCompositionMedicationCard
 Target: "https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf"
 * -> "Medication"
-* extension[exts] -> "exts -> Extension"
+//* extension[exts] -> "exts -> Extension"
 * identifier -> "id"
 * type -> "medType (1: MedicationPlan (MP))"
 * subject -> "patient -> Patient"

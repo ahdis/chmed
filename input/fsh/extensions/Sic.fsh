@@ -1,10 +1,10 @@
 Extension: CHMEDSic
 Id: chmed-sic
-Title: "CHMED sic"
+Title: "CHMED Sic"
 Description: "CHMED extension sic erat scriptum (latin) is intended to avoid misunderstandings between the physician and pharmacist and indicates to the pharmacist that the physician has deliberately chosen the prescription and wishes to prescribe the drug in exactly this way and not otherwise."
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest"
-* . ^short = "CHMED sic"
+* . ^short = "CHMED Sic"
 * valueBoolean 1..
 
 

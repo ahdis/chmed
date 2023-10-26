@@ -8,8 +8,6 @@ Profile for the Organization resource
 
 * [CHMED Medication](StructureDefinition-chmed-medication.html)   
 Profile for the Medication resource
-* [CHMED Dosage](StructureDefinition-chmed-dosage.html)   
-Dosage according to the ‘eMedication Plan CHMED Posology’
 
 ### Specific Profiles for Medication Card document
 * [CHMED Medication Card document](StructureDefinition-chmed-card-bundle.html)   

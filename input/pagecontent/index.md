@@ -35,7 +35,7 @@ The purpose of this implementation guide (IG) is to specify the medication excha
 
 Extending the eMediplan format to a FHIR-based definition (CHMED) has the following advantages:
 * CHMED formats can be [validated](https://www.hl7.org/fhir/validation.html) for correctness and data types are well defined. 
-* Foundation for base interoperability for other medication projects. For example, a mapping is provided for the medication exchange format in the context of the EPR in Switzerland ([CH EMED](http://fhir.ch/ig/ch-emed/index.html)).
+* It provides the foundation for base interoperability for other medication projects. For example CHMED depends on [CH EMED](http://fhir.ch/ig/ch-emed/index.html), the medication exchange format in the context of the EPR in Switzerland.
 
 The CHMED format can be either in JSON or XML format. However, both formats are too large in size to be exchanged in a QR code as defined by eMediplan.   
 

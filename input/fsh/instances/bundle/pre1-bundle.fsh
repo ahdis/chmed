@@ -1,4 +1,4 @@
-Instance: pre1-bundle-s01
+Instance: pre1-bundle
 InstanceOf: CHMEDMedicationPrescriptionDocument
 Title: "PRE 1 - Bundle"
 Description: "Example of a Bundle - Medication Prescription document for the first medication (ANTIBIOTIKUM) in the eMediplan sample shown in the IG (Home)"

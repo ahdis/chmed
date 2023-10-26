@@ -1,4 +1,4 @@
-Instance: med01
+Instance: medication
 InstanceOf: CHMEDMedication
 Usage: #inline
-* code.text = "Example used for Dosage"
+* code.text = "Medication example used for dosage examples"

@@ -1,29 +1,23 @@
-The model of dosages between CHMED23A and the CHMED (FHIR version) differ sligthly due to the FHIR dosage model.
-This has an effect on how to map the different attributes from CHMED23A to CHMED.
+The model of the ChMed23A Posology and the CHMED Dosage (FHIR) differ due to the FHIR dosage structure. This has an effect on how to map the different attributes from ChMed23A to CHMED.
 
-### Posology and Dosage
+### ChMed23A Posology and CHMED Dosage (FHIR)
+* The [eMedication Plan ChMed23A Posology](https://emediplan.ch/wp-content/uploads/2023/09/20230815_eMediplan_ChMed23A_1.0-AND-eMediplan_ChMed23A_Posology_1.0.pdf) defines for a *Medicament* object 0-N *Posology* objects. The posology of a medicament describes **when**, **which quantity** of the medicament must be applied. Different kind of posologies can be specified with the available *PosologyDetail* objects.
+* In FHIR a *[MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)/[MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)* can have n *[Dosages](https://www.hl7.org/fhir/R4/dosage.html)* with one *[Timing](https://www.hl7.org/fhir/R4/datatypes.html#Timing)* (which can have repeating timing defintions).
 
-* The CHMED23A model defines for a *Medicament* n *Posologies*. The posology of a medicament describes **when**, which **quantity** of the medicament must be applied. Different types of *Posology objects* can be specified to define different dosages.
-* In FHIR a *[MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)/[MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html)* can have n *[Dosages](https://www.hl7.org/fhir/dosage.html)* with one *[Timing](https://www.hl7.org/fhir/datatypes.html#Timing)* (which can have repeating timing defintions).
+**Example**:
 
-
-
-**Example:**
-
-CHMED23A format for Posology:
+ChMed23A format for Posology:
 ```
-{ 
-	"DtFrom": "2021-10-07", // Taking must occur on this date (DtFrom and DtTo are equal) 
-	"DtTo": "2021-10-07", 
-	"RM": 1, // Before meal 
-	"InRes": false, // The Medicament MUST be taken (not in reserve) 
-	"PO": { 
-		… // The posology object MUST specify the amount to be taken and CAN specify when 
-	} 
+{
+  "dtFrom": "2023-07-13",
+  "dtTo": "2023-08-13",
+  "relMeal": 1,
+  "inRes": false,
+  "po": { … },
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-4.json.html)):
+CHMED format for Dosage (see also [full example](MedicationStatement-dosage-example.json.html)):
 ```json
   "dosage" : [
     {
@@ -41,8 +35,8 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "timing" : {
         "repeat" : {
           "boundsPeriod" : {
-            "start" : "2021-10-07",
-            "end" : "2021-10-07"
+            "start" : "2023-07-13",
+            "end" : "2023-08-13"
           }
         }
       },
@@ -51,38 +45,33 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
   ]
 ```
 
-**CHMED Dosage:** 
-* [Data Type Profile](StructureDefinition-chmed-dosage.html) to define the FHIR representation of the dosage according tho the 'Posology' in CHMED23A.
-* [Mapping](StructureDefinition-chmed-dosage-mappings.html#mappings-for-emediplan-https-emediplan-ch-software-anbieter-spez) to represent the relationship of FHIR to CHMED23A.
+#### CHMED Dosage (FHIR)
+The [CHMED Dosage](StructureDefinition-chmed-dosage.html) data type profile includes additional specification to be able to map the dosage according to the requirements of the eMedication Plan ChMed23A Posology.
 
-#### Relation to CH EMED
-<span style="color:red">CAVE:</span>
-<span style="color:red">This Posology element mapping shown above is limited compatible with the [CH EMED dosage](https://fhir.ch/ig/ch-emed/dosage.html). In the Swiss exchange format the normal dosing can be given in a structured form and/or as narrative text. If possiblie, the structured form should be provided. In case structured dosage instructions are not provided or for complex dosages, the dosage can be represendted using narrative text.</span>
-* In order to be able to map the scheme 1-1-1-1, the elements `Dosage.timing.repeat.when` and `Dosage.doseAndRate` are required in the structured dosage of CH EMED. 
-* An important difference is the numbering of the `Dosage.sequence` element (causes <span style="color:red">incompatibility</span>):
-   * CH EMED: For the split dosage, the dosage sequences are numbered in ascending order (starting with 1).
-   * CHMED: In order to be able to map the Posology Object Sequence as well, the element is defined as follows:   
-     _The order of the dosage instructions:_   
-      - _number (0) is identical -> concurrent_
-      - _number is different (0, 1 etc.) -> sequential_
+<div markdown="5" class="dragon">
+    <p>
+      <b>Relation to CH EMED</b>
+    </p>
+    <p>
+      CHMED is based on CH EMED, the Swiss exchange format that currently does not support complex structured dosing (see details <a href="https://fhir.ch/ig/ch-emed/dosage.html">here</a>). A normal dosage (e.g. according to the 1-1-1-1 scheme) is compatible between all formats (ChMed23A, CHMED, CH EMED). For more complex dosages, as described below, there is only conditional compatibility. The critical points are described in the respective examples below.
+    </p>
+    <p>
+      Please note that the FHIR representations of the CHMED dosage are suggestions. By gaining experience, there may be optimizations to be made. If you have any feedback/input, please use the 'Propose a change' link in the footer of the page.
+    </p>
+</div>
+<p>&nbsp;</p>
 
-#### Timing Event
-The code for the time of adminstration has to come from the [ValueSet EventTiming](http://hl7.org/fhir/R4/valueset-event-timing.html).   
-For the representation according to the 1-1-1-1 scheme, the values MORN-NOON-EVE-NIGHT from this ValueSet are highly recommended for the Swiss use (see also [CH EMED](http://fhir.ch/ig/ch-emed/dosage.html#timing-event)).
+<span style="color:red">NOTE:</span>    
+**CH EMED**: The exchange format requires the structured specification of units when defining [quantity](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-quantity.html), [range](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-range.html) and [ratio](https://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-ratio.html). Therefore the unit is always shown in the CHMED examples below, where quantity or range is given.     
+**ChMed23A**: The unit of the dosage specified is set on the *Medicament* object and also mandatory if the posology is defined. Because of the different level the unit is not shown in each ChMed23 examples below.
 
-#### Dose and Rate
-The amount of medication administered is represented with SNOMED CT or UCUM codes, which are defined in the [ValueSet UnitCode](http://fhir.ch/ig/ch-emed/ValueSet-UnitCode.html) (see also [CH EMED](http://fhir.ch/ig/ch-emed/dosage.html#dose-and-rate)).   
-The mapping to [CDTYP9](CodeSystem-chmed-codesystem-cdtyp9.html) can be found in this [ConceptMap](ConceptMap-CHEMEDUnitCode-to-CDTYP9.html).
+### PosologyDetail Objects
+Different [types of PosologyDetail objects](ValueSet-chmed-valueset-posology-detail-object-type.html) are available. E.g. the daily posology object can be used to easily define daily dosages for morning, noon, evening and night or a sequence can be used to specify a complex posology like ‘take daily for 2 weeks, then take a break of 2 days”.   
 
-
-*Note for the following FHIR examples:*   
-*The CH EMED exchange format requires the structured specification of units when defining [quantity](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-quantity.html) and [range](http://fhir.ch/ig/ch-emed/StructureDefinition-ch-emed-range.html). In CHMED23A is the Unit element (not always shown in the CHMED23A examples) on the same level as the Posology element and mandatory if Posology is defined.*
-
-### Posology Objects
-Different [types of posology objects](ValueSet-chmed-valueset-posology-object-type.html) are specified in CHMED23A. Details and examples for the 6 types ([Daily](#daily), [FreeText](#free-text), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence), [Even/odd days](#evenodd-days)) are described in the following sections.
+Details and examples for the 5 types ([Daily](#daily), [FreeText](#freetext), [Single](#single), [Cyclic](#cyclic), [Sequence](#sequence)) are shown in the following sections.   
 
 #### Daily
-Describes when (morning, noon, evening, night) and how much of a medicament must be taken daily, using a simple structure. 
+Describes when (morning, noon, evening, night) and how much of a medicament must be applied daily, using a simple structure.
 
 ##### Day segments
 1. Morning -> [MORN](http://hl7.org/fhir/R4/valueset-event-timing.html)
@@ -90,32 +79,34 @@ Describes when (morning, noon, evening, night) and how much of a medicament must
 3. Evening -> [EVE](http://hl7.org/fhir/R4/valueset-event-timing.html)
 4. Night -> [NIGHT](http://hl7.org/fhir/R4/valueset-event-timing.html)
 
-In the exchange format CH EMED is with structured dosing the format 1-1-1-1, meaning the administration time in the morning, at noon, in the evening, at night, supported. An additional differentiation is made whether it is a normal or split dosing. For [normal dosing](http://fhir.ch/ig/ch-emed/dosage.html#normal-dosing-incl-dosage-non-structured), the dose quantity is the same at the defined administration times (e.g. 1-0-1-0, 1-0-1-0). For [split dosing](http://fhir.ch/ig/ch-emed/dosage.html#split-dosing-incl-dosage-non-structured), the dose quantity varies depending on the administration time (e.g. 1-0-2-0, 2-1-2-0).
+<span style="color:red">NOTE:</span>     
+**CH EMED**: In the structured form, the format 1-1-1-1, meaning the administration time in the morning, at noon, in the evening, at night, is supported. For [normal dosing](https://fhir.ch/ig/ch-emed/dosage.html#normal-dosing), the dose quantity is the same at the defined administration times (e.g. 1-0-0-0, 1-0-1-0). For [split dosing](https://fhir.ch/ig/ch-emed/dosage.html#normal-dosing), the dose quantity varies depending on the administration time (e.g. 1-0-2-0, 2-1-2-0). For split dosing more than one dosage element is used. The dosage sequences are numbered in ascending order (starting with 1).     
+**CHMED**: To be able to map the posology detail object [sequence](#sequence) as well, the sequence element numbering must be handled differently. If more than one dosage element is used, sequence = 0 in all elements does mean, the dosage is concurrent (see example 1.5-0-2-0 in this section). If the sequence number is different (1, 2 etc.) the dosage is sequential (see example in the sequence section).   
 
 **Example 1-0-1-0:** Take daily 1 in the morning and 1 in the evening.
 
-CHMED23A format for Daily:
+ChMed23A format:
 ```
 {
-	"T": 1, // Daily posology object 
-	"Ds": [ 
-		1.0, // 1 pill in the morning 
-		0.0, 
-		1.0, // 1 pill in the evening 
-		0.0 
+	"t": 1, // Daily
+	"ds": [ 
+		1, // 1 pill in the morning 
+		0 
+		1, // 1 pill in the evening 
+		0 
 	] 
 }
 ```
 
-FHIR format for Dosage (structured normal) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.1-normal.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "1",
             "display" : "Daily"
           }
@@ -132,7 +123,7 @@ FHIR format for Dosage (structured normal) (see also [example](MedicationStateme
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -144,30 +135,30 @@ FHIR format for Dosage (structured normal) (see also [example](MedicationStateme
 ```
    
 
-**Example 1-0-2-0:** Take daily 1 in the morning and 2 in the evening.
+**Example 1.5-0-2-0:** Take daily 1.5 in the morning and 2 in the evening.
 
-CHMED23A format for Daily:
+ChMed23A format:
 ```
 {
-	"T": 1, // Daily posology object 
-	"Ds": [ 
-		1.0, // 1 pill in the morning 
-		0.0, 
-		2.0, // 2 pills in the evening 
-		0.0 
+	"t": 1, // Daily
+	"ds": [ 
+		1.5, // 1.5 (pills) in the morning 
+		0, 
+		2, // 2 (pills) in the evening 
+		0 
 	] 
 }
 ```
 
-FHIR format for Dosage (structured split) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.1-split.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "1",
             "display" : "Daily"
           }
@@ -184,7 +175,7 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1.5,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -193,16 +184,6 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
       ]
     },
     {
-      "extension" : [
-        {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
-          "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
-            "code" : "1",
-            "display" : "Daily"
-          }
-        }
-      ],
       "sequence" : 0,
       "timing" : {
         "repeat" : {
@@ -214,7 +195,7 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 2.0,
+            "value" : 2,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -226,69 +207,70 @@ FHIR format for Dosage (structured split) (see also [example](MedicationStatemen
 ```  
 
 
-#### Free Text
+#### FreeText
 Describes an unstructured posology consisting of free text.
 
-In the exchange format CH EMED, the dosage is given as free text for the unstructured form.
+<span style="color:red">NOTE:</span>     
+**ChMed23A**: Medicament.appInstr (Dosage.patientInstruction) -> _Please note: For unstructured posology we recommend using the Posology object FreeText instead of AppInstr._
 
 **Example:** Free text.
 
-CHMED23A format for Free Text:
+ChMed23A format:
 ```
 { 
-	"T": 2, // Free text posology object 
-	"Text": "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor." // Free text 
+	"t": 2, // Free text 
+	"text": "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
 }
 ```
 
-FHIR format for Dosage (non-structured) (see also [example](MedicationStatement-card-medicationstatement-dosage-5.2.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "2",
             "display" : "FreeText"
           }
         }
       ],
-      "text" : "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
+      "patientInstruction" : "Take one pill. Wait one hour. If symptoms persist, take a second pill and wait 30 minutes. If symptoms persist, contact doctor."
     }
   ]
 ```
 
 
 #### Single
-Describes a single application of a medicament. With the single field being a timing object, there are several possibilities to specify when the single application takes place.
+Describes a single application of a medicament. With the TimedDosage object, there are several possibilities to specify when the single application takes place.
 
 **Example:** Take 1.
 
-CHMED23A format for Single:
+ChMed23A format:
 ```
 { 
-	"T": 3, // Single taking posology object 
-	"TD": { 
-		"T": 1, // Dosage only timed dosage 
-		"D": { 
-			"T": 1, // Amount dosage type 
-			"A": 1.0 // Amount of 1 
+	"t": 3, // Single application
+	"tdo": { 
+		"t": 1, // Dosage only
+		"d": { 
+			"t": 1, // Simple dosage
+			"a": 1 // Amount of 1 
 		} 
 	} 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.3.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "3",
             "display" : "Single"
           }
@@ -305,7 +287,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -331,32 +313,32 @@ Describes the application of a medicament at constant intervals.
 
 **Example:** 1 pill twice a week.
 
-CHMED23A format for Cyclic:
+ChMed23A format:
 ```
 { 
-	"T": 4, // Cyclic posology object 
-	"CyDuU": 5, // weekly duration unit 
-	"CyDu": 1, // 1 (week) 
-	"TD": { 
-		"T": 1, // Doasage only 
-		"D": { 
-			"T": 1, // Dosage only 
-			"A": 1.0 // Amount = 1 (pill) 
+	"t": 4, // Cyclic
+	"cyDuU": 5, // weekly duration unit 
+	"cyDu": 5, // Cycle duration of 5 (week) 
+	"tdo": { 
+		"t": 1, // Doasage only 
+		"d": { 
+			"t": 1, // Simple dosage
+			"a": 1 // Amount of 1
 		} 
 	}, 
-	"TDpC": 2 // take it twice within cycle 
+	"tdpc": 2 // take twice within cycle 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.4.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "4",
             "display" : "Cyclic"
           }
@@ -373,14 +355,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "timing" : {
         "repeat" : {
           "frequency" : 2,
-          "period" : 1,
+          "period" : 5,
           "periodUnit" : "wk"
         }
       },
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -392,75 +374,62 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 #### Sequence 
-Allows to combine multiple posologies with a pause as a sequence.
+Allows multiple posologies to be combined with a pause as a sequence.
 
-<span style="color:red">CAVE:</span>    
-The FHIR mapping of the 'duration (incl. duration unit)' is in the `Dosage.timing.repeat.count` element from data type [positiveInt](http://hl7.org/fhir/R4/datatypes.html#positiveInt). In FHIR it is therefore represented how often the defined timing element is to occur. The mapping of another unit of the duration of the sequence is therefore not possible.
-
+<span style="color:red">NOTE:</span>    
+**CHMED**: It can only be mapped to FHIR if the cycle duration unit (cyDuU) and the unit of the duration (duU) have the same time units.
 
 **Example:** Take daily 1 for 21 days, then take a break of 7 days.
 
-CHMED23A format for Sequence:
+ChMed23A format:
 ```
-{ 
-	"Meds": [ 
-		{ 
-			"Id": "Med1", 
-			"Ps": [ 
-				{ 
-					"PO": { 
-						"T": 5, // Sequence posology object 
-						"SOs": [ 
-							{ 
-								"T": 1, // Posology sequence sequence object 
-								"PO": { 
-									"T": 4, // Cyclic posology object
-									"CyDuU": 4, // Daily cycle duration unit 
-									"CyDu": 1, // Take every 1 (day) 
-									"TD": { 
-										"T": 1, // Dosage only timed dosage 
-										"D": { 
-											"T": 1, // Simple dosage 
-											"A": 1.0 // 1 (pill) 
-										} 
-									}, 
-									"TDpC": 1 // take it once within cycle
-								}, 
-								"DuU": 4, // Daily duration unit for the sequence 
-								"Du": 21 // Duration of 21 (days) for the sequence 
-							}, 
-							{ 
-								"T": 2, // Pause sequence object 
-								"DuU": 4, // Daily duration unit for the sequence 
-								"Du": 7 // Duration of 7 (days) for the pause 
-							} 
-						] 
-					} 
-				} 
-			], 
-			"U": "TABL" // Quantity unit
-		} 
-	] 
+{
+  "t": 5, // Sequence
+  "sos": [
+    {
+      "t": 1, // Posology sequence
+      "po": {
+        "t": 4, // Cyclic
+        "cyDuU": 4, // Daily cycle duration unit
+        "cyDu": 1, // Take every 1 (day)
+        "td": {
+          "t": 1, // Dosage only
+          "d": {
+            "t": 1, // Simple dosage
+            "a": 1 // Amount of 1
+          }
+        },
+        "tdpc": 1 // take once within cycle
+      },
+      "duU": 4, // Daily duration unit
+      "du": 21 // Duration of 21 (days)
+    },
+    {
+      "t": 2, // Pause
+      "duU": 4, // Daily duration unit
+      "du": 7 // Duration of 7 (days) 
+    } 
+  ] 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "extension" : [
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "5",
             "display" : "Sequence"
           }
         },
         {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
+          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-detail-object-type",
           "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
+            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-detail-object-type",
             "code" : "4",
             "display" : "Cyclic"
           }
@@ -474,7 +443,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
           }
         }
       ],
-      "sequence" : 0,
+      "sequence" : 1,
       "timing" : {
         "repeat" : {
           "count" : 21,
@@ -486,7 +455,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Tablet (unit of presentation)",
             "system" : "http://snomed.info/sct",
             "code" : "732936001"
@@ -495,17 +464,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       ]
     },
     {
-      "extension" : [
-        {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
-          "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
-            "code" : "5",
-            "display" : "Sequence"
-          }
-        }
-      ],
-      "sequence" : 1,
+      "sequence" : 2,
       "timing" : {
         "repeat" : {
           "count" : 7,
@@ -517,97 +476,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 0.0,
-            "unit" : "Tablet (unit of presentation)",
-            "system" : "http://snomed.info/sct",
-            "code" : "732936001"
-          }
-        }
-      ]
-    }
-  ]
-```
-
-#### Even/Odd Days
-Allows to specify a posology that must be applied on even or odd days.
-
-**Example:** Take 1 on even days, starting 02.01.2021.
-
-CHMED23A format for Even/Odd days:
-```
-{ 
-	"Meds": [ 
-		{ 
-			"Id": "Med1", 
-			"Ps": [ 
-				{ 
-					"DtFrom": "2021-01-02", // Posology start 
-					"PO": { 
-						"T": 6, // EvenOddDays posology object 
-						"TD": { 
-							"T": 1, // Dosage only timed dosage 
-							"D": { 
-								"T": 1, // Simple dosage 
-								"A": 1.0 // Take 1 (pill) 
-							} 
-						}, 
-						"E": true // Take on even days 
-					} 
-				} 
-			], 
-			"U": "TABL" // Quantity unit
-		} 
-	] 
-}
-```
-
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-5.6.json.html)):
-```json
-  "dosage" : [
-    {
-      "extension" : [
-        {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-posology-object-type",
-          "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-posology-object-type",
-            "code" : "6",
-            "display" : "Even/odd days"
-          }
-        },
-        {
-          "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-timed-dosage-object-type",
-          "valueCoding" : {
-            "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-timed-dosage-object-type",
-            "code" : "1",
-            "display" : "DosageOnly"
-          }
-        }
-      ],
-      "additionalInstruction" : [
-        {
-          "coding" : [
-            {
-              "system" : "http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-even-odd-days",
-              "code" : "even",
-              "display" : "Even days"
-            }
-          ]
-        }
-      ],
-      "timing" : {
-        "repeat" : {
-          "boundsPeriod" : {
-            "start" : "2021-01-02"
-          },
-          "frequency" : 1,
-          "period" : 2,
-          "periodUnit" : "d"
-        }
-      },
-      "doseAndRate" : [
-        {
-          "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 0,
             "unit" : "Tablet (unit of presentation)",
             "system" : "http://snomed.info/sct",
             "code" : "732936001"
@@ -619,26 +488,30 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 
-### Timed Dosage Objects
-Different [types of timed dosage objects](ValueSet-chmed-valueset-timed-dosage-object-type.html) are defined in CHMED23A to specify the moment and amount of an application of a medicament. Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are described in the following sections.
+
+
+### TimedDosage Objects
+Different [types of TimedDosage objects](ValueSet-chmed-valueset-timed-dosage-object-type.html) are available to specify the moment and amount of an application of a medicament. All TimedDosage objects must specify an amount to be applied. It is not mandatory to specify the moment of the application, but it is possible to set them precisely (time of day) or vaguely (day of week or month, day segment etc.).
+
+Details and examples for the 6 types ([DosageOnly](#dosageonly), [Times](#times), [DaySegments](#daysegments), [WeekDays](#weekdays), [DaysOfMonth](#daysofmonth), [Interval](#interval)) are shown in the following sections.
 
 #### DosageOnly
-Specifies a dosage without specifying a precise taking moment.
+Specifies a dosage without specifying a precise moment for taking.
 
 **Example:** Take 1.
 
-CHMED23A format for DosageOnly:
+ChMed23A format:
 ```
 { 
-	"T": 1, // DosageOnly timed dosage object 
-	"D": { 
-		"T": 1, // Simple dosage dosage object 
-		"A": 1.0 // Amount of 1 
+	"t": 1, // Dosage only
+	"do": { 
+		"t": 1, // Simple dosage
+		"a": 1 // Amount of 1 
 	} 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.1.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -655,7 +528,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -669,29 +542,25 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 #### Times
 Specifies precise times when a medicament must be applied.
 
-<span style="color:red">CAVE:</span>    
-The FHIR mapping of 'Times' is in the `Dosage.timing.repeat.timeOfDay` element from data type [time](http://hl7.org/fhir/R4/datatypes.html#time). This allows to specify a time of day in the format **hh:mm:ss**.
-
 **Example:** Take 1 at 08:00.
 
-CHMED23A format for Times:
+ChMed23A format:
 ```
 { 
-	"T": 2, // Times timed dosage object 
-	"Ts": [ 
+	"t": 2, // Times
+	"ts": [ 
 		{ 
-			"OffU": 3, // Offset unit is hours 
-			"Off": 8, // Offset of 8 (hours) 
-			"D": { 
-				"T": 1, // Simple dosage dosage object 
-				"A": 1.0 // Amount of 1 
+			"dt": "08:00:00", // Time of day
+			"do": { 
+				"t": 1, // Simple dosage
+				"a": 1 // Amount of 1 
 			} 
 		} 
 	] 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.2.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -715,7 +584,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -727,27 +596,27 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 #### DaySegments
-Specifies the [day segment](#day-segments) (morning, noon, evening, night) when a medicament must be applied.
+Specifies the day segment (morning, noon, evening, night) when a medicament must be applied.
 
 **Example:** Take 1 in the evening.
 
-CHMED23A format for DaySegments:
+ChMed23A format:
 ```
 { 
-	"T": 3, // DaySegments timed dosage object 
-	"Ts": [ 
+	"t": 3, // day segments 
+	"ss": [ 
 		{ 
-			"S": 3, // Evening segment 
-			"D": { 
-				"T": 1, // Simple dosage dosage object 
-				"A": 1.0 // Amount of 1 
+			"s": 3, // Evening
+			"do": { 
+				"t": 1, // Simple dosage
+				"a": 1 // Amount of 1 
 			} 
 		} 
 	] 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.3.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -771,7 +640,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -796,22 +665,22 @@ Specifies on which days of the week a medicament must be applied.
 
 **Example:** Take 1 on Monday, Wednesday and Friday.
 
-CHMED23A format for WeekDays:
+ChMed23A format:
 ```
 { 
-	"T": 4, // Weekdays timed dosage object 
-	"WDs": [ 1, 3, 5 ], // Days of week Monday, Wednesday, Friday 
-	"TD": { 
-		"T": 1, // Dosage only timed dosage 
-		"D": { 
-			"T": 1, // Simple dosage dosage type 
-			"A": 1.0 // Amount of 1 
+	"t": 4, // Weekdays
+	"wds": [ 1, 3, 5 ], // Monday, Wednesday, Friday 
+	"tdo": { 
+		"t": 1, // Dosage only
+		"do": { 
+			"t": 1, // Simple dosage
+			"a": 1 // Amount of 1 
 		} 
 	} 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.4.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -837,7 +706,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -853,22 +722,22 @@ Specifies on which days of the month a medicament must be applied.
 
 **Example:** Take 1 on the 1st and 15th of the month.
 
-CHMED23A format for DaysOfMonth:
+ChMed23A format:
 ```
 { 
-	"T": 5, // DaysOfMonth timed dosage 
-	"Ds": [ 1, 15 ], // Specified days in month 
-	"TD": { 
-		"T": 1, // DosageOnly timed dosage 
-		"D": { 
-			"T": 1, // Simple dosage dosage object 
-			"A": 1.0 // Amount of 1 
+	"t": 5, // Days of month
+	"doms": [ 1, 15 ], // Specified days in month 
+	"tdo": { 
+		"t": 1, // Dosage only
+		"do": { 
+			"t": 1, // Simple dosage
+			"a": 1 // Amount of 1 
 		} 
 	} 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.5.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -899,7 +768,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -915,17 +784,20 @@ Specifies the application of a medicament with a minimal interval between two ap
 
 **Example:** Apply medication with a minimal interval of 6 hours between two applications.
 
-CHMED23A format for Interval:
+ChMed23A format:
 ```
 { 
-	"T": 6, // Interval timed dosage 
-	"D": { … }, 
-	"MIDU": 3, // Min interval duration unit in hours 
-	"MID": 6 // Min interval of 6 (hours)
+	"t": 6, // Interval 
+	"do": {
+    "t": 1, // Simple dosage
+    "a": 1 // Amount of 1
+  }, 
+	"miDuU": 3, // Hours interval unit
+	"miDu": 6 // Every 6 (hours)
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-6.6.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -941,7 +813,7 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
       ],
       "maxDosePerPeriod" : {
         "numerator" : {
-          "value" : 1.0,
+          "value" : 1,
           "unit" : "Piece",
           "system" : "http://unitsofmeasure.org",
           "code" : "{Piece}"
@@ -959,29 +831,32 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 
 
 ### Dosage Objects
-Dosage objects are specified in CHMED23A and describe the amount of a medication that must be applied. Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are described in the following sections.
+Dosage objects describe the amount of a medication that must be applied.     
+Note that the unit of the amount is specified by the unit set for the Medicament.  
+
+Details and examples for the 3 types ([DosageSimple](#dosagesimple), [DosageFromTo](#dosagefromto), [DosageRange](#dosagerange)) are shown in the following sections.
 
 #### DosageSimple
-Specifies a simple amount. E.g., 1 (pill) or 10 (ml).
+Specifies a simple amount. E.g. 1 (pill) or 10 (ml).
 
 **Example:** Take 1.
 
-CHMED23A format for DosageSimple:
+ChMed23A format:
 ```
 { 
-	"T": 1, // Simple dosage 
-	"A": 1.0 // Amount of 1 
+	"t": 1, // Simple dosage 
+	"a": 1 // Amount of 1 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.1.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
       "doseAndRate" : [
         {
           "doseQuantity" : {
-            "value" : 1.0,
+            "value" : 1,
             "unit" : "Piece",
             "system" : "http://unitsofmeasure.org",
             "code" : "{Piece}"
@@ -991,26 +866,27 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
     }
   ]
 ```
-#### DosageFromTo
-Specifies how a dosage changes during [time](#time-units). This can be e.g., used for infusions.
 
-If the dosage changes, multiple dosage elements have to be defined in FHIR; see example [increasing dosage every hour](MedicationStatement-card-medicationstatement-tt-1-diffrates-mabthera.html) or [tapered dosing](MedicationStatement-card-medicationstatement-tt-4-spiricort.html).   
-An [extension](StructureDefinition-chmed-dose-quantity-to.html) has been defined to change the quantity from the starting quantity continously to the final quantity (see example below):
+#### DosageFromTo
+Specifies how a dosage changes during time. This can be e.g. used for infusions.
+
+<span style="color:red">NOTE:</span>    
+**CHMED**: The extension [CHMED Dose Quantity To](StructureDefinition-chmed-dose-quantity-to.html) has been defined to change the quantity from the starting quantity continously to the final quantity.
 
 **Example:** Start with a dosage of 5, end with a dosage of 10 during a time interval of 45 minutes.
 
-CHMED23A format for DosageFromTo:
+ChMed23A format:
 ```
 { 
-	"T": 2, // DosageFromTo 
-	"AFrom": 5.0, // Start amount is 5 
-	"ATo": 10.0, // End amount is 10 
-	"DuU": 2, // Duration unit is minutes 
-	"Du": 45 // Duration is 45 (minutes) 
+	"t": 2, // From/to dosage
+	"aFrom": 5, // Start amount is 5 
+	"aTo": 10, // End amount is 10 
+	"duU": 2, // Duration unit is minutes 
+	"du": 45 // Duration is 45 (minutes) 
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.2.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -1027,14 +903,14 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
               {
                 "url" : "http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-dose-quantity-to",
                 "valueQuantity" : {
-                  "value" : 10.0,
+                  "value" : 10,
                   "unit" : "milliliter",
                   "system" : "http://unitsofmeasure.org",
                   "code" : "mL"
                 }
               }
             ],
-            "value" : 5.0,
+            "value" : 5,
             "unit" : "milliliter",
             "system" : "http://unitsofmeasure.org",
             "code" : "mL"
@@ -1046,20 +922,20 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 #### DosageRange
-With a dosage range a min and must amount must be specified.
+With a dosage range a minimum and a maximum amount must be specified.
 
-**Example:** Take 1 in the evening.
+**Example:** Take min 1 and max 3.
 
-CHMED23A format for DosageRange:
+ChMed23A format:
 ```
 { 
-	"T": 3, // DosageRange dosage 
-	"AMin": 1.0, // Minimum amount of 1 
-	"AMax": 3.0 // Maximum amount of 3
+	"t": 3, // Dosage range
+	"aMin": 1.0, // Minimum amount of 1 
+	"aMax": 3.0 // Maximum amount of 3
 }
 ```
 
-FHIR format for Dosage (see also [example](MedicationStatement-card-medicationstatement-dosage-7.3.json.html)):
+CHMED format:
 ```json
   "dosage" : [
     {
@@ -1086,89 +962,95 @@ FHIR format for Dosage (see also [example](MedicationStatement-card-medicationst
 ```
 
 ### Sequence Objects
-Sequence objects are defined in CHMED23A to specify a sequence of posologies that have to be respected in the correct order and can possibly be repeated. Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are described in the following sections.
+Sequence objects can be used to specify a sequence of posologies that have to be respected in the correct
+order and can possibly be repeated.   
+Every sequence specifies its duration (including the unit).
+
+Details and examples for the 2 types ([PosologySequence](#posologysequence), [Pause](#pause)) are shown in the following sections.
 
 #### PosologySequence
-Wraps any type of posology object in order to create a [sequence](#sequence).
+Wraps any type of PosologyDetail object in order to create a sequence.
 
 **Example:** Take 1 daily for 21 days.
 
-CHMED23A format for PosologySequence:
+ChMed23A format:
 ```
 { 
-  "T": 1, // Posology sequence sequence object 
-  "PO": { 
-    "T": 4, // Cyclic posology object 
-    "CyDuU": 4, // Day unit 
-    "CyDu": 1, // Cycle lasts 1 (day) 
-    "TD": { 
-      "T": 1, // Dosage only timed dosage 
-      "D": { 
-        "T": 1, // Simple dosage 
-        "A": 1.0 // Amount of 1 
+  "t": 1, // Sequence
+  "po": { 
+    "t": 4, // Cyclic
+    "cyDuU": 4, // Unit is day
+    "cyDu": 1, // Cycle lasts 1 (day) 
+    "tdo": { 
+      "t": 1, // Dosage only
+      "do": { 
+        "t": 1, // Simple dosage 
+        "a": 1 // Amount of 1 
       } 
-    } 
+    },
+    "tdpc": 1 
   }, 
-  "DuU": 4, // Day unit 
-  "Du": 21 // Sequence lasts 21 (days) 
+  "duU": 4, // Unit is day
+  "du": 21 // Sequence lasts 21 (days) 
 }
 ```
 
-FHIR format for Dosage; see *sequence 0* in this [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html).
+CHMED format: see example in section [Sequence](#sequence)
 
 #### Pause
-Specifies a duration of a break [sequence](#sequence) where the medication doesn’t have to be applied.
+Specifies a duration of a break where the medication doesn’t have to be applied.
 
 **Example:** Break of 7 days.
 
-CHMED23A format for Pause:
+ChMed23A format:
 ```
 { 
-  "T": 2, // Pause sequence object 
-  "DuU": 4, // Day unit 
-  "Du": 7 // Pause lasts 7 (days) 
+  "t": 2, // Pause
+  "duU": 4, // Unit is day
+  "du": 7 // Pause lasts 7 (days) 
 }
 ```
 
-FHIR format for Dosage; see *sequence 1* in this [example](MedicationStatement-card-medicationstatement-dosage-5.5.json.html).
+CHMED format: see example in section [Sequence](#sequence)
 
-### Taking Objects
-Taking objects are defined in CHMED23A to specify a dosage that must be applied at certain times; either at a precise time or in a day’s segment (morning, noon, evening or night). Details and examples for the 2 possibilities ([TakingAtTime](#takingattime), [TakingInSegment](#takinginsegment)) are described in the following sections.
+### Application Objects
+Application objects specify a dosage that must be applied at certain times; either at a precise time or in a day’s
+segment (morning, noon, evening or night).
 
-#### TakingAtTime
-Specifies a precise moment in [time](#times) when a medicament must be applied.
+Details and examples for the 2 possibilities ([ApplicationAtTime](#applicationattime), [ApplicationInSegment](#applicationinsegment)) are shown in the following sections.
+
+#### ApplicationAtTime
+Specifies a precise moment in time when a medicament must be applied.
 
 **Example:** Take 1 at 08:00.
 
-CHMED23A format for TakingAtTime:
+ChMed23A format:
 ```
 { 
-  "OffU": 3, // Offset in hours 
-  "Off": 8, // Offset of 8 (hours) 
-  "D": { 
-    "T": 1, // Simple dosage dosage type 
-    "A": 1.0 // Amount of 1 
+  "dt": "08:00:00", // Take at 8 in the morning
+  "do": { 
+    "t": 1, // Simple dosage
+    "a": 1 // Amount of 1 
   } 
 }
 ```
 
-FHIR format for Dosage; see *timing* in this [example](MedicationStatement-card-medicationstatement-dosage-6.2.json.html).
+CHMED format: see example in section [Times](#times)
 
-
-#### TakingInSegment
-Specifies a [day segment](#day-segments) (morning, noon, evening or night) when a medicament must be applied.
+#### ApplicationInSegment
+Specifies a day segment (morning, noon, evening or night) when a medicament must be applied.
 
 **Example:** Take 1 in the evening.
 
-CHMED23A format for TakingInSegment:
+ChMed23A format:
 ```
 { 
-  "S": 3, // Evening day segment 
-  "D": { 
-    "T": 1, // Simple dosage dosage type 
-    "A": 1.0 // Amount of 1 
+  "s": 3, // evening
+  "do": { 
+    "t": 1, // Simple dosage
+    "a": 1 // Amount of 1 
   } 
 }
 ```
 
-FHIR format for Dosage; see *timing* in this [example](MedicationStatement-card-medicationstatement-dosage-6.3.json.html).
+CHMED format: see example in section [DaySegments](#daysegments)

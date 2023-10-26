@@ -29,21 +29,15 @@ The medication card section contains the entries for the current medication of a
 
 #### Health Concerns Section (CARD)
 The health concerns section contains the patient's medical data (Observation resources) and possible risks (Condition resources).   
-* Profiles
-   * [First day of last menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation.html)
-   * [Premature baby](StructureDefinition-chmed-obs-prematurebaby.html)
-   * [Time of gestation](StructureDefinition-chmed-obs-timeofgestation.html)
-   * [Risks](StructureDefinition-chmed-condition-risks.html)
-   * [Body weight](StructureDefinition-chmed-obs-bodyweight.html)
-   * [Body height](StructureDefinition-chmed-obs-bodyheight.html)
-* [Mapping eMediplan](StructureDefinition-chmed-card-medicationstatement-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202)
-* Examples
-   * [First day of last menstruation](StructureDefinition-chmed-obs-dateoflastmenstruation-examples.html)
-   * [Premature baby](StructureDefinition-chmed-obs-prematurebaby-examples.html)
-   * [Time of gestation](StructureDefinition-chmed-obs-timeofgestation-examples.html)
-   * [Risks](StructureDefinition-chmed-condition-risks-examples.html)
 
-*If the [risk category](ValueSet-chmed-valueset-risks-category.html) is specified without any [risk](ValueSet-chmed-valueset-risks-cdscode.html) specified in the code, the entire risk category is considered as explicitly excluded for the current patient. If the risk category does not exist, the risks are considered as unknown for the patient.*
+* First day of last menstruation: [Profile](StructureDefinition-chmed-obs-dateoflastmenstruation.html), [Mapping eMediplan](StructureDefinition-chmed-obs-dateoflastmenstruation-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-obs-dateoflastmenstruation-examples.html)
+* Premature baby: [Profile](StructureDefinition-chmed-obs-prematurebaby.html), [Mapping eMediplan](StructureDefinition-chmed-obs-prematurebaby-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-obs-prematurebaby-examples.html) 
+* Time of gestation: [Profile](StructureDefinition-chmed-obs-timeofgestation.html), [Mapping eMediplan](StructureDefinition-chmed-obs-timeofgestation-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-obs-timeofgestation-examples.html) 
+* Risks: [Profile](StructureDefinition-chmed-condition-risks.html), [Mapping eMediplan](StructureDefinition-chmed-condition-risks-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-condition-risks-examples.html) 
+* Body weight: [Profile](StructureDefinition-chmed-obs-bodyweight.html), [Mapping eMediplan](StructureDefinition-chmed-obs-bodyweight-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-obs-bodyweight-examples.html) 
+* Body height: [Profile](StructureDefinition-chmed-obs-bodyheight.html), [Mapping eMediplan](StructureDefinition-chmed-obs-bodyheight-mappings.html#mappings-for-emediplan-https-emediplan-ch-wp-content-uploads-202), [Examples](StructureDefinition-chmed-obs-bodyheight-examples.html) 
+
+_If the [risk category](ValueSet-chmed-valueset-risks-category.html) is specified without any [risk](ValueSet-chmed-valueset-risks-cdscode.html) being specified in the list of risks, the entire risk category is considered as explicitly excluded for the current patient. If the category does not exist, the risks are considered as unknown for the patient._
 
 #### Annotation Section (CARD)
 The annotation section can be used to provide comments that cannot be declared in any of the other sections in the document. The comments are provided as [narrative](http://hl7.org/fhir/R4/narrative.html#Narrative).

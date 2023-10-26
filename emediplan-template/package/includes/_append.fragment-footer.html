@@ -1,0 +1,3 @@
+{% if site.data.features.feedback.active %}
+| <a style="color: #255080" target="_blank" href="{{site.data.features.feedback.formUrl}}&amp;entry%2E1353807103={{{site.data.fhir.packageId  | uri_escape }}%23{{site.data.fhir.igVer}}%20{{ page.url | uri_escape }}&amp;entry%2E247644557={{site.data.pages[page.path].title | uri_escape }}">Propose a change</a>
+{% endif %}

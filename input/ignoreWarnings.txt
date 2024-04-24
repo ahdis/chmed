@@ -1,7 +1,7 @@
 == Suppressed Messages ==
 
 # The following code systems are external and not supported by terminology server
-Code System URI 'urn:oid:2.51.1.1' is unknown so the code cannot be validated
+A definition for CodeSystem 'urn:oid:2.51.1.1' could not be found, so the code cannot be validated
 
 # Examples are contained resources
 INFORMATION: StructureDefinition.where(url = 'http://chmed.emediplan.ch/fhir/StructureDefinition/chmed-medication'): The Implementation Guide contains no explicitly linked examples for this profile
@@ -20,22 +20,19 @@ None of the codings provided are in the value set 'DocumentEntry.typeCode' (http
 
 # The Condition.category codes are suitable as defined by this IG 
 None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#1)
-None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#2)
-None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#3)
-None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#4)
-None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#5)
 None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://chmed.emediplan.ch/fhir/CodeSystem/chmed-codesystem-risks-category#6)
 
 # https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
 
 # Handling UCUM codes: https://github.com/ahdis/chmed/issues/32
-UCUM Codes that contain human readable annotations like {Piece} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
-UCUM Codes that contain human readable annotations like {Package} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 UCUM Codes that contain human readable annotations like {Piece} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked, and the Quantity.unit 'Stk' SHOULD contain the annotation (it does not)
 
 # Examples on tab dosage
 The Implementation Guide contains no examples for this extension
+
+# Swiss specific values 
+Der Displayname f\u00fcr http://loinc.org#57828-6 sollte einer von ''Prescription list'' anstelle von 'PRESCRIPTIONS' sein.
 
 # Build error
 The link 'Binary/binary-pdf-example' for "Representation of the original view" cannot be resolved

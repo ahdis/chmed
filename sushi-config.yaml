@@ -14,6 +14,7 @@ publisher:
 parameters:
   apply-publisher: false
   allow-extensible-warnings: true
+  display-warnings: true 
 
 title: CHMED Implementation Guide
 description: FHIR Implementation Guide for eMediplan
